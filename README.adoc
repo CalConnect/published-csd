@@ -1,0 +1,25 @@
+= CalConnect Standards Registry: Published CSD documents
+
+image:https://travis-ci.com/CalConnect/published-csd.svg?branch=master[
+	Build Status, link="https://travis-ci.com/CalConnect/published-csd"]
+
+== General
+
+This repository is a submodule to
+https://github.com/CalConnect/standards.calconnect.org[standards.calconnect.org]
+; it is internal.
+
+
+== Usage
+
+* This stores all published CSD files. Please DO NOT add non-CSD files.
+
+* This repository gets pulled by the standards.calconnect.org framework and its documents are built within there.
+
+
+== Adding a document
+
+Just add the CSD file (`{foo}.xml`) to this repo.
+
+If your CSD file has images, please also add them to `images/` here, otherwise the site can't compile.
+
