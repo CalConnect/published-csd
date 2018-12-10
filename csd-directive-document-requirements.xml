@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.calconnect.org/standards/csd">
+<bibdata type="directive">
+  <title language="en" format="text/plain">CalConnect Directive: Standard document requirements</title>
+  <docidentifier type="csd">CC/DIR/FDS 10002:2018</docidentifier>
+  <docnumber>10002</docnumber>
+  <date type="published">
+    <on>2018-11-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <status format="plain">final-draft</status>
+  <copyright>
+    <from>2018</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <editorialgroup>
+    <technical-committee>PUBLISH</technical-committee>
+  </editorialgroup>
+</bibdata><version>
+  <edition>1</edition>
+  <revision-date>2018-11-07</revision-date>
+</version>
+<termdocsource bibitemid="ISODIR1"/><termdocsource bibitemid="ISODIR1C"/><termdocsource bibitemid="ISODIR2"/><termdocsource bibitemid="CCSTD"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_427221a1-a9f3-419e-9c8c-89e9cd4b2331">The Calendaring and Scheduling Consortium ("CalConnect") is global
+non-profit organization with the aim to facilitate interoperability of
+collaborative technologies and tools through open standards.</p>
+<p id="_ac7d406e-bd63-4f55-9523-3d0482cafb77">CalConnect works closely with international and regional partners,
+of which the full list is available on our website
+(<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>
+<p id="_c87cd29f-a94b-468c-ba7b-58e41c9aeea1">The procedures used to develop this document and those intended for its
+further maintenance are described in the CalConnect Directives.</p>
+<p id="_8a06646f-18cd-4369-a1c2-d60c098a627a">In particular the different approval criteria needed for the different
+types of CalConnect documents should be noted. This document was drafted in
+accordance with the editorial rules of the CalConnect Directives.</p>
+<p id="_d8ed484e-c2d7-445a-891b-0ac96eea40ac">Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be
+held responsible for identifying any or all such patent rights. Details
+of any patent rights identified during the development of the document
+will be provided in the Introduction.</p>
+<p id="_56c0f18c-450f-4838-9046-160958cb0f70">Any trade name used in this document is information given for the
+convenience of users and does not constitute an endorsement.</p>
+<p id="_91f64794-d516-4d71-84e1-0dc4a673ea1f">This document was prepared by Technical Committee
+<em>PUBLISH</em>.</p>
+<p id="_75c1fdc8-9c5b-42e6-82f8-665d7493ab38">This document, together with <eref type="inline" bibitemid="CCSTD" citeas="CC/DIR 10001"/>,
+replaces the following documents:</p>
+<ul id="_7fe8744e-6110-4d5e-b0b1-b4bc3bf1523a">
+  <li>
+    <p id="_3c6e052f-399b-487c-bca6-70115e3bfead">I0701 CalConnect Document Public Review and Comment</p>
+  </li>
+  <li>
+    <p id="_79d143ec-9db6-4bdd-b630-a5efeac51db8">I0702 CalConnect Document Classification and Numbering</p>
+  </li>
+  <li>
+    <p id="_b02753ce-012f-451c-a462-42cd1a9ec157">I0703 CalConnect Document Processes and Management</p>
+  </li>
+</ul></foreword><introduction id="_introduction" obligation="informative"><title>Introduction</title><p id="_40e98811-b6c4-4240-a7a9-6c2dfda97bba">CalConnect is committed in expanding the realm of standards
+in collaborative technologies with a focus on interoperability
+across the globe and communities of practice.</p>
+<p id="_fef66cf3-7a9a-42ef-b20a-9de90654633d">To facilitate its mission, the CalConnect Board of Directors has decided
+to align standardization and publication processes with international
+best practices, such as the ISO standardization process
+(<eref type="inline" bibitemid="ISODIR1" citeas="ISO/IEC Directives, Part 1"/>, <eref type="inline" bibitemid="ISODIR1C" citeas="ISO/IEC Directives, Part 1, Consolidated ISO Supplement"/>, <eref type="inline" bibitemid="ISODIR2" citeas="ISO/IEC Directives, Part 2"/>)
+and the <eref type="inline" bibitemid="WTOTBT" citeas="WTO Technical Barriers To Trade Agreements"/>.</p>
+<p id="_d69fdf05-d25d-4d91-b289-c570ef60e51c">This document aims to achieve the said intention.</p>
+<p id="_b86c55af-d925-47c0-a4fe-6a36d8703443">The document describes requirements for CalConnect standard documents.</p></introduction></preface><sections>
+
+<clause id="_scope" obligation="normative"><title>Scope</title><p id="_b2722b3b-e6e3-4998-9d55-5105b7680ad8">This document provides requirements on document structure of the following types of CalConnect publication:</p>
+<ul id="_e2189e4e-a680-471a-83e3-847d04d0d563">
+  <li>
+    <p id="_d285f0f7-1ea5-475f-86a2-c245bf58f950">Directive</p>
+  </li>
+  <li>
+    <p id="_b128a91d-4aea-40ad-a41d-8b58ba4fc1be">Standard</p>
+  </li>
+  <li>
+    <p id="_ba136aec-2a6c-4ff7-b2ad-fc419ef8e348">Guide</p>
+  </li>
+  <li>
+    <p id="_5ba82046-136b-4253-94da-b52875db6468">Specification</p>
+  </li>
+  <li>
+    <p id="_5d533349-0582-4559-b9d6-ec151fb57d8e">Amendment</p>
+  </li>
+  <li>
+    <p id="_3090fdbf-0a1d-45dd-8f1b-d8a8beb2e263">Technical corrigendum</p>
+  </li>
+  <li>
+    <p id="_caf5ae2f-378e-452c-a76a-408d5e8874f3">Report</p>
+  </li>
+</ul>
+<p id="_1f1b50fa-2316-484f-b867-cbb7652d618e">These publication types are described in <eref type="inline" bibitemid="CCSTD" citeas="CC/DIR 10001"/>.</p>
+<p id="_ec807de9-8e67-48cf-af18-f1ce3e955e7a">This document does not apply to the following types of documents
+produced by CalConnect, although processes described in this document
+can be optionally used as guidance:</p>
+<ul id="_8e66b6ac-58e5-47c3-9ed5-5a002837eece">
+  <li>
+    <p id="_14172d83-0599-4da6-b783-69d2020dab31">policy statements;</p>
+  </li>
+  <li>
+    <p id="_4c730f20-d1e7-440a-8b73-045b5b52a685">internal administrative documents; and</p>
+  </li>
+  <li>
+    <p id="_41336ddf-25b3-4a4b-8fb9-8907447f186f">how-to guides.</p>
+  </li>
+</ul></clause>
+
+<clause id="terms" obligation="normative"><title>Terms and definitions</title><terms id="_terms_and_definitions" obligation="normative"><title>Terms and definitions</title><term id="term-std-work-item">
+  <preferred>standardization work item</preferred>
+  <definition><p id="_28f33cbd-3537-4766-a0dc-d62e0647f96f">publishable work item that creates output that relates
+to standardization</p></definition>
+</term>
+<term id="term-std-project">
+  <preferred>standardization project</preferred>
+  <definition><p id="_d80f8c76-b255-4e12-aafc-9ca9dfdd853d">organized process with one or more
+<em>standardization work items</em> (<xref target="term-std-work-item"/>) that
+contributes towards a defined scope of work</p></definition>
+</term>
+<term id="term-project-owner">
+  <preferred>project owner</preferred>
+  <definition><p id="_d15fd337-ba7e-4849-bb3c-b812f2955917">entity with authority in charge of a <em>standardization project</em>
+(<xref target="term-std-project"/>)</p></definition>
+</term>
+<term id="term-document">
+  <preferred>document</preferred>
+  <definition><p id="_0a7df9a3-2e37-4884-8747-26dc28e4f038">written output of a <em>standardization work item</em> (<xref target="term-std-work-item"/>)</p></definition>
+</term>
+<term id="term-cc-deliverable">
+  <preferred>CalConnect deliverable</preferred>
+  <definition><p id="_a4619ecf-9587-4fde-8c5e-c54384713018"><em>document</em> (<xref target="term-document"/>) that could be a CalConnect Standard,
+Guide, Specification, Report</p></definition>
+</term>
+<term id="term-iso-deliverable"><preferred>ISO TC deliverable</preferred><definition><p id="_18e9a21e-5fa8-41ba-b1af-28333bf857ab"><em>document</em> (<xref target="term-document"/>) of an ISO TC as described in <eref type="inline" bibitemid="ISODIR1" citeas="ISO/IEC Directives, Part 1"/></p></definition>
+<termnote id="_ba96341c-2bd2-4f82-991c-65addaaeb41a">
+  <p id="_4a64ab02-ee09-49b9-83e1-081ed5410d42">According to <eref type="inline" bibitemid="ISODIR1" citeas="ISO/IEC Directives, Part 1"/>, ISO TC deliverables include the following types: International Standards, Technical Specifications, Publicly Available Specifications and Technical Reports.</p>
+</termnote></term>
+<term id="term-cc-tc"><preferred>CalConnect technical committee</preferred>
+  <admitted>CalConnect TC</admitted>
+
+<definition><p id="_6736a333-aa1d-4bf5-be56-986fe0e87719">internal committee of CalConnect tasked with a scope of work it
+is responsible for</p></definition></term>
+<term id="term-document-stage">
+  <preferred>document stage</preferred>
+  <definition><p id="_5bffdc80-8dff-47dc-993f-65bea340dadb">stage of <em>document</em> (<xref target="term-document"/>) as specified in the CalConnect stages (as defined in <eref type="inline" bibitemid="CCSTD" citeas="CC/DIR 10001"/>)</p></definition>
+</term>
+<term id="term-std-project-output"><preferred>standardization project output</preferred><definition><p id="_2be690fc-3449-4cf1-9c1d-237b8f564f9e">output of a <em>standardization project</em> (<xref target="term-std-project"/>)</p></definition>
+<termnote id="_308fea93-0cb9-49b6-aefc-54a968d56a37">
+  <p id="_c974431f-d021-48ff-8a38-fe531930d5ca">In this document, this explicitly means any documents and IP rights
+produced by the standardization project.</p>
+</termnote></term>
+<term id="term-sdo"><preferred>standardization body</preferred><admitted>standards-developing organization</admitted>
+<admitted>SDO</admitted>
+<definition><p id="_cbd5fa49-6130-4f69-bf8c-9beb93a0d071">entity that publishes <em>standardization work items</em> (<xref target="term-std-work-item"/>)</p></definition></term>
+<term id="term-std-proposal">
+  <preferred>proposal for standardization</preferred>
+  <definition><p id="_0b18ac8c-a131-447f-b4a7-f1e93d57fe74">proposal for a new <em>work item</em> (<xref target="term-std-work-item"/>) for standardization</p></definition>
+</term>
+<term id="term-co-develop"><preferred>co-develop</preferred>
+  <admitted>collaborative development</admitted>
+
+<definition><p id="_b47cc605-5288-4d71-9a03-02614d76fc4f">act of developing a <em>standardization work item</em> (<xref target="term-std-work-item"/>) by multiple parties from the proposal
+<em>document stage</em> (<xref target="term-document-stage"/>)</p></definition></term>
+<term id="term-co-publish"><preferred>co-publish</preferred>
+  <admitted>collaborative publishing</admitted>
+
+<definition><p id="_47e47230-7b61-4f64-bd51-5425edad32f8">act of publishing <em>documents</em> (<xref target="term-document"/>) of identical content
+by multiple parties</p></definition></term>
+<term id="_joint_work_item">
+  <preferred>joint work item</preferred>
+  <definition><p id="_9297ef69-e5c0-44b1-bc5a-9977bce37367"><em>standarization work item</em> (<xref target="term-std-work-item"/>) <em>co-developed</em> (<xref target="term-co-develop"/>) by both parties</p></definition>
+</term>
+<term id="_joint_publication"><preferred>joint publication</preferred><definition><p id="_d4f141cd-64f6-4571-8a69-8fb9e0363530">publication that is <em>co-published</em> (<xref target="term-co-publish"/>) by CalConnect with
+an external <em>standardization body</em> (<xref target="term-sdo"/>)</p></definition>
+<termnote id="_65d0e99b-094e-4c05-b328-bdefa4baca1b">
+  <p id="_531b90c3-d841-4a63-ba8f-902bbbff2e78">Both parties may jointly hold copyright of the joint publication.</p>
+</termnote></term>
+<term id="term-jcg"><preferred>Joint Coordination Group</preferred>
+  <admitted>JCG</admitted>
+
+<definition><p id="_e24a09a4-6459-45f7-ac48-3f0118bdd0cd">advisory group with representatives from CalConnect and an external
+<em>standardization body</em> (<xref target="term-sdo"/>) on the execution and maintenance of a
+<em>co-publishing</em> (<xref target="term-co-publish"/>) agreement</p></definition></term>
+<term id="term-doc-register">
+  <preferred>co-development document register</preferred>
+  <definition><p id="_f851fe25-68f0-4b62-b5cc-c28803d3bbfd">document register of a list of <em>co-developed</em> (<xref target="term-co-develop"/>)
+<em>documents</em> (<xref target="term-document"/>) developed under this agreement,
+held by the corresponding <em>Joint Coordination Group</em> (<xref target="term-jcg"/>)</p></definition>
+</term></terms>
+<definitions id="_abbreviations">
+  <dl id="_23749e17-984f-428b-9587-068c84beb42a">
+  <dt>IPR</dt>
+  <dd>
+    <p id="_87f830c9-ff5d-4d7a-9d0f-cb1c7ebc9908">Intellectual Property Rights</p>
+  </dd>
+  <dt>TCC</dt>
+  <dd>
+    <p id="_f966f41b-3ac4-411e-a4d5-c99860493a5c">Technical Coordination Committee</p>
+  </dd>
+</dl>
+</definitions></clause>
+<clause id="numbering" obligation="normative"><title>Project/document identifier</title><clause id="_general" obligation="normative">
+  <title>General</title>
+  <p id="_0eeca86b-d4ac-4463-a44a-57b69e5e456c">CalConnect implements a numbering system for projects/documents.</p>
+</clause>
+<clause id="_project_index" obligation="normative">
+  <title>Project index</title>
+  <p id="_fb7b693e-25e7-4fff-b6d2-d2cfc10b9713">A project/document index shall be maintained on the CalConnect
+website with documents listed by number, name, and type.</p>
+</clause>
+<clause id="project-code" obligation="normative">
+  <title>Project code</title>
+  <ol id="_b58555a1-0165-449f-8b78-775801411562" type="arabic">
+  <li>
+    <p id="_87744bc7-8784-4857-a6de-5b39cd376a5a">The project code shall be of the form <tt>[n]</tt>, where <tt>[n]</tt> is any
+selected positive integer of less than 5 digits.</p>
+  </li>
+  <li>
+    <p id="_6da8e11b-519c-440f-b8fa-c259b8a51abf">The numbering system applies across all project types.
+Different project types shall not share an identical project code.</p>
+  </li>
+  <li>
+    <p id="_dba3a54d-bd90-4157-98fa-2a91c222b3a7">The project code shall be assigned on proposal acceptance
+of the project.</p>
+  </li>
+  <li>
+    <p id="_ed0a8714-28c6-40c9-a09f-15920fa79308">Co-published documents shall attempt to use an identical project
+code in both CalConnect and at the collaborative publisher to prevent
+potential ambiguity, if possible.</p>
+  </li>
+</ol>
+</clause>
+<clause id="_document_identifier" obligation="normative"><title>Document identifier</title><clause id="_representation" obligation="normative"><title>Representation</title><p id="_bea08498-683b-4d64-bba6-cadce5a4d899">The document identifier takes the form of <tt>[type][stage] [code][:][y]</tt>, where:</p>
+<ul id="_58a48389-8fb4-4cfc-a675-6e0995bd6617">
+  <li>
+    <p id="_96cd120a-1366-429a-9af6-63b28c85f22d"><tt>[type]</tt> is the document identifier prefix;</p>
+  </li>
+  <li>
+    <p id="_8f8926ce-f72f-481d-8bc5-21cf99efd7ac"><tt>[stage]</tt> is the document stage;</p>
+  </li>
+  <li>
+    <p id="_dbe9b7fb-469f-4979-8141-97397bdd6076"><tt>[code]</tt> is the project code of the project that created the document; and</p>
+  </li>
+  <li>
+    <p id="_0a38b28d-576d-4bfd-a1c0-3da119809fef"><tt>[y]</tt> is the 4-digit edition year.</p>
+  </li>
+</ul></clause>
+<clause id="_edition_year" obligation="normative">
+  <title>Edition year</title>
+  <p id="_3aaf20a9-bc6a-4e92-a067-9391a68a29ce">The edition year is the calendar year in which the document is published.
+On updates, a document will retain the same project code but may be
+assigned a different edition year in which the update is published.</p>
+</clause>
+<clause id="_co_publishing" obligation="normative"><title>Co-publishing</title><p id="_5f0eeba2-9f80-4b15-a419-ed0c8ff9bae8">Co-published documents shall incorporate codes from all collaborative
+publishing parties in the document identifier, joined together via a
+"solidus" sign ("<tt>/</tt>").</p>
+<example id="_188a67c0-8e56-464c-8ec7-264596ef9487">
+  <p id="_8856e877-ce02-46ad-948f-84425eb3f752">CalConnect deliverables co-published with ISO are referenced as as "CC/ISO",
+with IETF as "CC/IETF".</p>
+</example></clause>
+<clause id="document-type" obligation="normative"><title>Document types</title><p id="_82ab6c63-6b05-4a90-bf1e-5ce1e3febf17">Document types shall be represented in the "type" as follows:</p>
+<ol id="_dbdb03fa-5caf-474d-a15c-3ff6a8a4b071" type="arabic">
+  <li>
+    <p id="_834084be-eb4a-43e7-920f-19604b912743">Standard, "CC"</p>
+  </li>
+  <li>
+    <p id="_a477e23f-b2c2-4bb7-9667-f39d3b3a4f0a">Directive, "CC/DIR"</p>
+  </li>
+  <li>
+    <p id="_35de4fdb-cc78-4bd4-912f-59c8fc82f922">Guide, "CC/Guide"</p>
+  </li>
+  <li>
+    <p id="_847081a2-7369-43c3-935e-ac577a3cab44">Specification, "CC/S"</p>
+  </li>
+  <li>
+    <p id="_647ca0e7-5afd-43ce-bbb8-3ea34438e9b9">Report, "CC/R"</p>
+  </li>
+  <li>
+    <p id="_bcf71cff-0e75-47ee-827f-003ceba0f46e">Amendment, "CC/Amd"</p>
+  </li>
+  <li>
+    <p id="_deabe453-c6d2-4dcd-a9d2-630045133846">Technical corrigendum, "CC/Cor"</p>
+  </li>
+  <li>
+    <p id="_38d594e3-6e14-4a82-9738-60f39c829eee">Administrative, "CC/A"</p>
+  </li>
+</ol>
+<example id="_02e0e6f6-3c94-428f-9f86-117af3c47ece">
+  <p id="_54987294-ee53-4277-ba4e-9cb5b5343e98">"CC/Guide/DS 38002:2018" is a CalConnect Guide at DS stage with
+project number 38002, published in 2018.</p>
+</example></clause>
+<clause id="document-stage" obligation="normative"><title>Document stages</title><p id="_f0680412-564d-4327-bd0e-54e8375948a2">Document stages shall be represented in the "stage" as follows:</p>
+<ol id="_4aa1b24a-6ad6-4f77-b1fa-ecd16980291a" type="arabic">
+  <li>
+    <p id="_a008422b-9e19-4c50-b9e4-d755f62118b3">Published, "<tt> </tt>" (blank)</p>
+  </li>
+  <li>
+    <p id="_5d931cf3-9d0c-4c2d-bc1b-aad07aaf73e7">Final draft standard, "<tt>/FDS</tt>"</p>
+  </li>
+  <li>
+    <p id="_8a0bd87b-f839-4ea1-8b5d-e7c81606a8b3">Draft standard, "<tt>/DS</tt>"</p>
+  </li>
+  <li>
+    <p id="_36821408-0976-4cec-a9f7-7f8216f07718">Technical committee draft, "<tt>/CD</tt>"</p>
+  </li>
+  <li>
+    <p id="_98963030-81ff-4a8e-93c2-e37f1fb3d8f3">Project group draft / Working draft, "<tt>/WD</tt>"</p>
+  </li>
+</ol>
+<example id="_4392711b-1c47-45d1-aebd-d0981071cf04">
+  <p id="_6cbb8417-ecb8-4c4f-986d-8813ccb60779">"CC/FDS 10668:2018" is a CalConnect standard document at FDS stage
+with project number 10668, published in 2018.</p>
+</example>
+<example id="_e3324963-772c-407e-9490-4b62f307af3b">
+  <p id="_b1ffbfa5-dea2-4090-96a1-6eb59bc19a73">"CC/Guide/DS 20080:2018" is a CalConnect guide at DS stage with
+project number 20080, published in 2018.</p>
+</example>
+<note id="_56776b15-8019-4568-8d71-369d839cd3b0">
+  <p id="_74e0122a-0f94-4fa1-8e1c-94e25b29c2a9">Existing documents can be retrofitted to the scheme as practical.</p>
+</note></clause></clause></clause>
+<clause id="document-structure" obligation="normative"><title>Document structure</title><clause id="_general_2" obligation="normative">
+  <title>General</title>
+  <p id="_90e2a74f-703c-40cf-9260-017616bd445a">This section describes the document structure and element
+requirements of a CalConnect standard document.</p>
+</clause>
+<clause id="_cover_page" obligation="normative"><title>Cover page</title><p id="_8291ca2c-8245-4552-ad35-ddefb9a6eb8e">The cover page will contain:</p>
+<ol id="_d909ebbb-a3d3-4f64-a697-176bdad7f81c" type="arabic">
+  <li>
+    <p id="_b7ce9943-cf6f-4954-8862-c49d2a2b541c">CalConnect logo</p>
+  </li>
+  <li>
+    <p id="_53160ff1-7cfc-481a-a740-f6b18fa3db04">Document number (<xref target="project-code"/>)</p>
+  </li>
+  <li>
+    <p id="_77cedee0-1556-48e3-9dde-d4788a391b30">Document type (<xref target="document-type"/>)</p>
+  </li>
+  <li>
+    <p id="_e75f0f09-ab10-4924-a91f-209dc4fa868a">Document title</p>
+  </li>
+  <li>
+    <p id="_52f9caa0-9780-4902-af21-47c1a572793b">Document status (<xref target="document-stage"/>)</p>
+  </li>
+  <li>
+    <p id="_47acfdc1-be09-48e6-9ff3-7d262029a6e6">Date of publication</p>
+  </li>
+  <li>
+    <p id="_b0582267-aeca-47eb-8b42-acc09767a4c3">Responsible technical committee</p>
+  </li>
+  <li>
+    <p id="_00939b36-4fe2-4c61-9e3c-e219719720cc">Incorporation by reference and hyperlink of the appropriate
+statements of Intellectual Property Rights, Appropriate Usage,
+Trademarks, and Disclaimer of Warranty</p>
+  </li>
+</ol>
+<p id="_e9327c3e-e240-46e0-a9a1-300c1fcfd7ff">In co-published deliverables, as well as any further adoptions,
+the document shall retain the logographic marks of the
+publishing organizations.</p></clause>
+<clause id="_draft_warning" obligation="normative"><title>Draft warning</title><p id="_1d677048-7b42-4a49-aeb4-159888c9207d">This warning must be shown on the cover page for all draft documents.</p>
+<quote id="_3aa7756d-e886-4940-99d7-1fb6d963210a"><p id="_3de708d6-a27c-489a-9935-31e0729c7ebb">WARNING FOR DRAFTS</p>
+<p id="_f19df935-d224-4871-946b-f072997940e5">This document is not a CalConnect Standard. It is distributed for review and comment, and is subject to change without notice and may not be referred to as a Standard. Recipients of this draft are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p></quote></clause>
+<clause id="_public_review_note" obligation="normative"><title>Public review note</title><p id="_4b70b8ce-5ea3-44e6-98af-81001e780cd4">Certain CalConnect documents are intended for public review, as
+specified in <eref type="inline" bibitemid="CCSTD" citeas="CC/DIR 10001"/>.</p>
+<p id="_0c86de2d-1d20-4bd9-865a-f01c4d0d7f0e">The following note must be shown on the cover page for all documents
+intended for public review.</p>
+<quote id="_899c733e-315d-4ea2-8736-5c9d10a0c389"><p id="_789b81eb-1296-41b2-b3b3-f13fda1dc793">INSTRUCTIONS FOR REVIEW</p>
+<p id="_f4cae723-f428-4874-b4e4-f76efd84a3e3">This draft is intended for public review. Comments shall be submitted to …​</p></quote></clause>
+<clause id="_technical_committee" obligation="normative">
+  <title>Technical committee</title>
+  <p id="_7a6eaed5-a3d5-4e27-a0a9-a15416603fa2">The responsible technical committee shall be shown on the cover page.</p>
+</clause>
+<clause id="_contributor_acknowledgement" obligation="normative">
+  <title>Contributor acknowledgement</title>
+  <p id="_d8eb1f11-2793-4fbc-9827-0581cb6462ee">Contributors to the document, including editors, authors, and the project owner
+(a CalConnect TC) as well as other contributing parties, shall be provided if
+appropriate within the Foreword.</p>
+</clause>
+<clause id="_table_of_contents" obligation="normative"><title>Table of contents</title><p id="_64cba6f4-b521-4b6e-a3ba-c3b58dabb33d">A table of contents shall be provided in any user consumable
+format, including HTML, PDF and Word.</p>
+<p id="_f9e7baeb-b8a1-4661-953a-b4840a20168a">This does not apply to standard definition files (CSD XML)
+intended for machine consumption.</p>
+<p id="_5fa8c0dc-5575-4f9c-9d74-1830f79ed3c6">The table of contents may be omitted if the document is
+to be provided on paper medium with less than five (5) pages.</p></clause>
+<clause id="_sections_and_subsections" obligation="normative">
+  <title>Sections and subsections</title>
+  <p id="_81cdcd54-ec40-45e2-9da6-acfbbb67c530">The body of the document shall have section and subsection identifiers
+to make it easy to refer clearly to specific items in the document.</p>
+</clause>
+<clause id="_referable_document_elements" obligation="normative"><title>Referable document elements</title><p id="_8792bfa7-a295-4867-8e0a-7d39732998de">Document elements including numbered list items, examples, and notes shall be numbered
+uniquely within a clause.
+Such elements shall be cited within the document by their number and containing clause.</p>
+<example id="_b571f604-ce9f-42f7-a032-2326c55a9859">
+  <p id="_8fbad260-6998-43d7-8923-a601fb6dda35">"Clause 3 a)"</p>
+</example>
+<example id="_c301caa3-d09e-45fa-8b7f-98a7130e5d91">
+  <p id="_d20d3c3b-be4a-4eba-8a54-0a4ca236eeb4">"6.3.3 a)"</p>
+</example>
+<example id="_ebd48c50-b66f-4ee9-938a-4dac097dacd3">
+  <p id="_3956c344-300e-42da-ac8a-d34811a87466">"8.2 Note 3"</p>
+</example>
+<example id="_ee9dffab-7ff2-40cd-b72d-4ea297851675">
+  <p id="_8c2cd9ec-ffb7-43a4-9a0d-818bde03c11a">"2.6 Example 9"</p>
+</example>
+<p id="_3eb8c6f9-3d1c-413a-bd79-707dcc6311d5">Tables, figures, formulas shall be numbered uniquely within
+the document.
+Such elements shall be cited within the document by their type and number.</p>
+<example id="_e88696ab-bdd2-4888-bce7-64df66949687">
+  <p id="_0658e176-096a-4349-a92d-0b3d082b649c">"Table 2"</p>
+</example>
+<example id="_cda9e964-d728-438d-a472-940fd688cb75">
+  <p id="_6a40196a-44d4-4dcf-b0f4-331afe57ea66">"Figure 5"</p>
+</example>
+<example id="_aa6085ca-2318-4ffb-9dd7-53d5e2f75dac">
+  <p id="_42b04e9f-f8f4-4b1a-adcd-aed735d1b34f">"Formula 12"</p>
+</example></clause>
+<clause id="spec-foreword" obligation="normative"><title>Foreword</title><p id="_5e68c05e-0538-4de8-a411-f07959cbb86f">The foreword shall be the first section of the document, unnumbered.
+It is a mandatory section.</p>
+<p id="_39406868-09cd-465e-a2cb-60a3eeabdacd">The foreword shall contain a description of the CalConnect organization
+and provide the necessary copyright and trademark statements.</p>
+<p id="_2cc1d72a-17b2-46d2-8950-c163b355cbe1">It is also the place to provide acknowledgements to contributors.</p>
+<p id="_8c6a76e6-d1ff-44e8-843e-44204b1c0e9e">In a revised CalConnect standard, the foreword shall also describe
+a summary of changes from the previous edition.</p></clause>
+<clause id="_introduction_2" obligation="normative"><title>Introduction</title><p id="_3bce7d86-ac9f-48a5-a4a0-42036fdcdaa8">The introduction shall be the second section of the document, unnumbered.
+It is a mandatory section.</p>
+<p id="_8adc3548-7784-468a-8b02-26aef606764b">It shall describe the purpose and intent of the document, as well as
+potential use cases. The document’s relationship with existing CalConnect
+or external standards, if appropriate to be explained,
+shall also be described here.</p></clause>
+<clause id="_scope_2" obligation="normative">
+  <title>Scope</title>
+  <p id="_8a4b2b28-fed4-4151-b26d-58878a199601">The scope shall always be provided as Section 1.</p>
+</clause>
+<clause id="_normative_and_informative_references" obligation="normative"><title>Normative and informative references</title><p id="_5e606514-1626-4754-8495-c34c557dd137">The section for normative references should be placed at Section 2 of the document.</p>
+<p id="_a0a3b5fb-1260-42f3-8022-ff4cf2b0686b">Informative references shall be placed at the Bibliography section
+at the end of the document, unnumbered.</p>
+<p id="_644fbfca-8308-47d4-9725-0bb0347b9280">References in these sections shall be fully cited.</p></clause>
+<clause id="spec-terms-definitions" obligation="normative">
+  <title>Terms and definitions</title>
+  <p id="_fddcd5ef-7c77-4302-8cad-48cf469e62a7">The terms and definitions sections shall be placed beginning at Section 3.</p>
+</clause>
+<clause id="_annexes_and_appendices" obligation="normative"><title>Annexes and appendices</title><p id="_c939be3f-662d-4ccb-8e54-1f37fd18a0b6">Annexes are numbered sections provided after the main body text.
+An annex may be considered informative or normative.</p>
+<p id="_09afc79b-112c-474e-8867-24192c85e12c">Each annex is given a clause identifier of capital Latin letters starting from
+the A to Z (English order).
+The first annex shall be stated as (and referred to) "Annex A",
+the second "Annex B", and so forth.</p>
+<p id="_a0cd1217-15ad-4ef9-b586-6df958819075">Clauses within annexes shall start with the annex identifier, for example,
+the first subclause in Annex A is "A.1".</p>
+<p id="_c72c5977-9a7b-4927-8aed-90dfff40a0f6">Appendixes are "annexes of annexes", and are given a clause identifier
+that incorporate the annex it belongs to, followed by a capital Latin
+letter starting from A to Z (English order).</p>
+<p id="_a2aa3211-82ee-4946-8282-3caa129c1158">For example, the first appendix of Annex A will be "Appendix AA",
+the second appendix of Annex C will be "Annex CB".</p>
+<p id="_04c6c920-f050-4cc8-9b85-7ad0d31d0bb6">Clauses within appendix shall start with the appendix identifier, for example,
+the first subclause in Annex SA is "SA.1".</p></clause>
+<clause id="_change_summary" obligation="normative">
+  <title>Change summary</title>
+  <p id="_ce48e087-5c9a-4562-9f76-4628a2c9315c">Changes to a document from a previous edition shall be described
+in summarized, bullet-point form at the end of the Foreword (<xref target="spec-foreword"/>).</p>
+</clause>
+<clause id="_page_numbers" obligation="normative"><title>Page numbers</title><p id="_68337981-0271-41b1-96c7-a645757e6b93">For documents rendered on paper medium for user consumption,
+page numbers shall be provided on all pages.</p>
+<p id="_e61d355d-cae4-4277-92d5-a1d27cd33375">Page numbers shall use Roman numbers of unnumbered initial sections,
+and Arabic numerals for the main body of text (including appendices).</p></clause>
+<clause id="_trademark_and_copyright_statement" obligation="normative"><title>Trademark and copyright statement</title><p id="_3125f8e2-e247-45c2-8901-1f3a98cc58db">A trademark and copyright statement of the form shown below must
+appear on the cover page and the foreword.</p>
+<p id="_58414703-6aa8-4ce5-87f4-865f14b28a67">Note that "<tt>yyyy</tt>" is the 4-digit year, such as "<tt>2009</tt>".</p>
+<quote id="_3c077c08-8402-4335-a244-44d2848e59d8"><p id="_437ada64-106b-4419-b4c9-bbdc2f6039a8">(c) yyyy The Calendaring and Scheduling Consortium, Inc.</p>
+<p id="_1a80ba9c-a2f8-4859-a433-3aabf21ce9b6">All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission. Permission can be requested from the address below.</p></quote></clause>
+<clause id="_draft_documents" obligation="normative">
+  <title>Draft documents</title>
+  <p id="_59810700-7767-4124-b1fc-cf330e8f8dbc">Draft documents should clearly indicate on the title page and
+every page of the document that they are a draft document.</p>
+</clause>
+<clause id="_canonical_representation" obligation="normative"><title>Canonical representation</title><p id="_6e08e237-564f-40ab-8b45-528d40093970">A CalConnect document shall be digitally represented in canonical form
+using the CSD XML (CalConnect Standard Document XML) syntax, in accordance
+with its defined grammar. This allows the CalConnect document to be
+digitally rendered into any kind of supported format, including HTML,
+PDF and Word.</p>
+<p id="_5ddd8b1d-1feb-4261-9e52-be16633d87ec">CSD XML is an adopted form of Metanorma XML of the Metanorma
+standard document model.</p></clause></clause>
+</sections><bibliography><references id="_normative_references" obligation="informative">
+  <title>Normative References</title>
+  <bibitem id="CCSTD">
+  <formattedref format="application/x-isodoc+xml">
+    <em>CalConnect Directive: Standardization and publication</em>
+  </formattedref>
+  <docidentifier>CC/DIR 10001</docidentifier>
+</bibitem>
+</references><references id="_bibliography" obligation="informative">
+  <title>Bibliography</title>
+  <bibitem id="WTOTBT">
+  <formattedref format="application/x-isodoc+xml">World Trade Organization, <em>The WTO Agreements Series Technical Barriers to Trade</em></formattedref>
+  <docidentifier>WTO Technical Barriers To Trade Agreements</docidentifier>
+</bibitem>
+  <bibitem id="ISODIR1" type="standard">
+  <title format="text/plain">ISO/IEC Directives, Part 1, Procedures for the technical work</title>
+  <docidentifier type="ISO">ISO/IEC Directives, Part 1</docidentifier>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>ISO</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>IEC</name>
+    </organization>
+  </contributor>
+</bibitem>
+  <bibitem id="ISODIR2" type="standard">
+  <title format="text/plain">ISO/IEC Directives, Part 2, Principles and rules for the structure and drafting of ISO and IEC documents</title>
+  <docidentifier type="ISO">ISO/IEC Directives, Part 2</docidentifier>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>ISO</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>IEC</name>
+    </organization>
+  </contributor>
+</bibitem>
+  <bibitem id="ISODIR1C">
+  <formattedref format="application/x-isodoc+xml">
+    <em>ISO/IEC Directives, Part 1, Consolidated ISO Supplement, Procedures specific to ISO</em>
+  </formattedref>
+  <docidentifier type="ISO">ISO/IEC Directives, Part 1, Consolidated ISO Supplement</docidentifier>
+</bibitem>
+</references></bibliography>
+</csd-standard>
