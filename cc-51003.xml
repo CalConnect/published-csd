@@ -1,1491 +1,1512 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="standard">
-  <title language="en" format="text/plain">Calendaring and scheduling — Support for Series in iCalendar</title>
-  <docidentifier type="csd">CC/CD 51003:2018</docidentifier>
-  <docnumber>51003</docnumber>
-  <date type="published">
-    <on>2018-11-30</on>
-  </date>
-  <edition>1</edition>
-  <version>
-    <revision-date>2018-11-30</revision-date>
-    
-  </version>
-  <contributor>
-    <role type="author"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename>Michael Douglass</completename>
-      </name>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <language>en</language>
-  <script>Latn</script>
-  <status format="plain">committee-draft</status>
-  <copyright>
-    <from>2018</from>
-    <owner>
-      <organization>
-        <name>CalConnect</name>
-      </organization>
-    </owner>
-  </copyright>
-  <editorialgroup>
-    <technical-committee>CALENDAR</technical-committee>
-  </editorialgroup>
+<bibdata type="standard"> 
+  <title language="en" format="text/plain">Calendaring and scheduling — Support for Series in iCalendar</title> 
+  <docidentifier type="csd">CC/CD 51003:2018</docidentifier> 
+  <docnumber>51003</docnumber> 
+  <date type="published"> 
+    <on>2018-11-30</on> 
+  </date> 
+  <contributor> 
+    <role type="author"/> 
+    <organization> 
+      <name>CalConnect</name> 
+    </organization> 
+  </contributor> 
+  <contributor> 
+    <role type="author"/> 
+    <person> 
+      <name> 
+        <completename>Michael Douglass</completename> 
+      </name> 
+    </person> 
+  </contributor> 
+  <contributor> 
+    <role type="publisher"/> 
+    <organization> 
+      <name>CalConnect</name> 
+    </organization> 
+  </contributor> 
+  <edition>1</edition> 
+  <version> 
+    <revision-date>2018-11-30</revision-date> 
+     
+  </version> 
+  <language>en</language> 
+  <script>Latn</script> 
+  <status format="plain">committee-draft</status> 
+  <copyright> 
+    <from>2018</from> 
+    <owner> 
+      <organization> 
+        <name>CalConnect</name> 
+      </organization> 
+    </owner> 
+  </copyright> 
+  <editorialgroup> 
+    <technical-committee>CALENDAR</technical-committee> 
+  </editorialgroup> 
 </bibdata>
-<preface><foreword obligation="informative"><title>Foreword</title>
-<p id="_abc9ad2e-3c97-40ea-99af-cbe079617d1e">The Calendaring and Scheduling Consortium (“CalConnect”) is global
-non-profit organization with the aim to facilitate interoperability of
-collaborative technologies and tools through open standards.</p>
-<p id="_458cd158-a190-43ae-adcb-4dcc8c9f527b">CalConnect works closely with international and regional partners,
-of which the full list is available on our website
-(<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>
-<p id="_ce92ab52-e962-4352-bc0f-751654ad711b">The procedures used to develop this document and those intended for its
-further maintenance are described in the CalConnect Directives.</p>
-<p id="_7122fcc9-50e5-4af0-93fc-0e0d9df3c1b8">In particular the different approval criteria needed for the different
-types of CalConnect documents should be noted. This document was drafted in
-accordance with the editorial rules of the CalConnect Directives.</p>
-<p id="_93569367-ca1d-499e-a9e0-2040e1f79ccf">Attention is drawn to the possibility that some of the elements of this
-document may be the subject of patent rights. CalConnect shall not be
-held responsible for identifying any or all such patent rights. Details
-of any patent rights identified during the development of the document
-will be provided in the Introduction.</p>
-<p id="_1dfca140-d2e3-4689-8e6d-22132113735a">Any trade name used in this document is information given for the
-convenience of users and does not constitute an endorsement.</p>
-<p id="_e59b6f0f-c429-411d-bf4f-5f4b53e7db79">This document was prepared by Technical Committee
-<em>CALENDAR</em>.</p></foreword><introduction id="introduction" obligation="informative"><title>Introduction</title><p id="_a5673b53-d4c7-4b40-b4fc-e0b123bc8a8c">Since iCalendar was first defined there has been only one way to
-express a repeating set of events - the recurrence.  This defined a
-master event, a set of rules for computing the instances and a way of
-overriding certain instances.</p>
-<p id="_ac579c79-dbf0-484b-84f6-6b43b27a0473">This approach works well enough in certain situations but has many
-problems which need to be addressed.</p>
-<p id="_2392d7cd-dfed-45e9-87ef-4ba69c9b43cd">This specification introduces a new approach to repeating patterns of
-entities which avoids some of the problems.</p></introduction></preface><sections>
-
-<clause id="scope" obligation="normative">
-  <title>Scope</title>
-  <p id="_479ac2a8-d079-4f3d-843e-5f0b2910f595">This document updates <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> by defining a new repeating set
-of events known as a series.  This differs from recurrences in that
-each instance is a separate entity with a parent relationship to a
-specified template entity.</p>
-</clause>
-
-<terms id="terms" obligation="normative">
-  <title>Terms and definitions</title>
-</terms>
-<clause id="_overrides_and_icalendar_recurrences" obligation="normative"><title>Overrides and iCalendar recurrences</title><p id="_b6b63184-fbd6-4aeb-8097-5603d3beac57">The recurrence rules specify how instances are to be computed.  These
-rules provide a set of keys - the RECURRENCE-ID - and an instance can
-be created with the calculated start date/time and a copy of the
-duration (or calculated end date/time).</p>
-<p id="_4d5b628d-82ff-4583-b913-9612032877a8">The specification allows for overrides.  These are handled by
-supplying a complete replacement for the instance with a RECURRENCE-
-ID property matching that of the instance being overridden.  This may
-change any of the properties (except the UID) - including start, end
-or duration.</p>
-<p id="_3512309b-7756-4e06-aead-a4d2aa1943c4">If a long lived recurrence is heavily overridden it becomes very
-cumbersome.  The master plus overrides is considered a single
-resource in most circumstances (iTip allows the delivery of a single
-instance in certain situations).</p>
-<p id="_11eb4b0e-360c-4c07-8b0b-0bf85a53b6fb">Simple meetings can become heavily modified recurrences through adding
-the weeks agenda to the description, changing of attendees etc.</p>
-<p id="_9475c706-8e9e-4fbd-8bc2-bfe1794dd528">There are approaches being considered to mitigate some of these
-issues which mostly involve only storing changes but recurrences are
-still awkward to deal with.</p>
-<clause id="_changing_the_master_start_or_the_recurrence_rules" obligation="normative"><title>Changing the master start or the recurrence rules</title><p id="_cc126ded-72d3-496f-bc0a-94b61a8285de">This can lead to some very difficult problems to resolve.  In the
-case of a heavily modified meeting it may be difficult to impossible
-to determine which override applies to the newly modified event.</p>
-<p id="_5642914d-f79c-4b3f-97e4-89e8ea7a2e25">For example, a weekly book-reading is moved from Monday to Friday.
-There are weeks of scheduled events in the future.  Do we move them
-all forward to the next instance or skip one and move them back?  If
-it becomes bi-weekly rather than weekly do we drop every other or
-just space them out more?</p>
-<p id="_357a9b5d-089d-4348-b9cc-f43add810fd8">To be sure - some of these problems are not totally resolved by a
-series approach but they become more tractable.</p></clause>
-<clause id="_splitting_recurrences" obligation="normative"><title>Splitting recurrences</title><p id="_9f15060a-e753-4266-b774-db452f3374f6">The <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> THISANDFUTURE range is poorly supported.  Splitting is
-what a number of implementations use to avoid changing overrides in
-the past.</p>
-<p id="_6b6bfdf6-a05b-4d91-87a1-0d8e6aed1c1b">The recurring event is split into 2, one being the truncated original
-the other being a new recurring event starting at the time of the
-THISANDFUTURE override.</p>
-<p id="_71e3c367-599e-4a3b-a546-8a4a5f944dc6">There is left the problem of relating the two, this can be
-accomplished by use of the RELATED-TO property but that is not
-standardized.</p></clause></clause>
-<clause id="series" obligation="normative"><title>Series</title><p id="_eaa608e3-ee41-4c15-b0b9-297170704d91">A series is a, generally regularly, repeating sets of events or tasks
-each instance of which is usually, but not always, different in some
-respect.  Examples may be a library running an after-school reading
-program which usually, takes place at the same time each week but
-always differs in the book or author being studied.</p>
-<p id="_d679f69b-a826-4931-97f7-2f6dd5a72713">In recurrences an instances is a calculated ‘virtual’ object, unless
-overridden.  It has the same UID as the master and a RECURRENCE-ID
-which is always one of the calculated set.</p>
-<p id="_7e17e6e2-a3a2-4914-8d8f-616f15f98803">In a series, a specified number of instances are created ahead of
-time each with their own unique UID.  They are all related to the
-master using a SERIES-MASTER relation type defined in this
-specification.  Each instance acts as an individual component as far
-as retrieval and searching is concerned.</p>
-<p id="_5a95e927-1825-4f51-a1b5-6d2a53d2cee1">Each instance and master is identified as a member of the full series
-by the SERIES-UID property.  The value of this property is the same
-in all members of the series even when splits have occurred.</p>
-<p id="_01fadf83-4b18-43e4-86e2-5be62d095170">As instances are created a LAST-SERIES-ID property is added or
-updated in the master to indicate which instance was last created.
-When there are SXDATE properties this property value may represent an
-instance which cannot be created.  It merely represents the latest
-calculated date.</p>
-<p id="_5eef5e3e-4c0c-4d46-9c7f-6ea2490b3224">This property allows generated instances to be deleted without the
-addition of SXDATE properties to the master.  The SXDATE only
-indicates future instances which MUST NOT be created.</p>
-<p id="_0eaab42b-2327-45f5-b28a-b1bf79e97d72">As time goes on more instances are created either by the server or by
-a client when it inspects the current state of the series.  The
-number of instances may be based on time or a count.</p>
-<p id="_23be3cf0-903b-4d3a-b452-157c4392caa6">For example, an organization may allow rooms to be booked only 4
-weeks ahead.  Thus a series may be set up which has that 4 week set
-of events in the future.  Each will have the room as an attendee
-ensuring that at least the room is booked at the regular time.</p>
-<clause id="_modifying_series_patterns_and_splitting" obligation="normative"><title>Modifying series patterns and splitting</title><p id="_eceff102-cd01-46e0-b8c7-6015b172ccb6">If it becomes necessary to modify the series rules or the master
-start then the series is always split at the point of the
-modification.</p>
-<p id="_72e9adf7-4e6f-4f2a-8a54-981358546366">When a series is split the previous master is modifed to truncate the
-current series at the last generated instance and a parameter
-SPLIT=YES is added to the series rule to indicate that this master is
-now split.</p>
-<p id="_9de0e59b-987d-446d-b857-a91395f060ce">The split may result in a number of instances related to the old
-series but overlapping the new.  It is up to the implementation to
-decide what should be done with these but this usually requires a
-degree of interaction with a human (or very intelligent robot).  The
-application may offer to copy them into the corresponding new
-instances - if these can be easily determined, offer to delete all of
-them or let the user manually copy information and delete.</p>
-<p id="_7cb6e198-ef01-4b08-b294-0058e57495b7">The new series master is related to the old master by the new series
-master having a RELATED-TO property with RELTYPE=SERIES-MASTER
-pointing at the previous master.  In that way a backwards chain of
-series masters may be created</p></clause>
-<clause id="_the_series_master" obligation="normative"><title>The series master</title><p id="_04d5a85a-9916-4176-88f8-c49ec358d700">A series master is identified in much the same way as a recurrence
-master.  It will contain an SRULE and 0 or more SDATE properties or 1
-or more SDATE properties.  Additionally it may contain 0 or more
-SXDATE properties to exclude instances.</p>
-<p id="_e8e66711-79f9-43fa-94e6-ce1cc53a6c11">As noted above, if the series was split it may contain a RELATED-TO
-property with RELTYPE=SERIES-MASTER and a value of the previous
-series master.</p>
-<p id="_3a0871bc-dfcb-470d-861d-5a42b084fcd5">The master will also contain a LAST-SERIES-ID if any instances have
-been calculated and perhaps generated.</p>
-<p id="_cd30abee-b8c4-4ca4-ae5f-4f5c41f1f959">It is important to note that the series master is the first member of
-the series.  Thus the first instance always occurs AFTER the series
-master.</p></clause>
-<clause id="_the_series_instances" obligation="normative"><title>The series instances</title><p id="_403f04b4-320f-4f0c-b88f-26329e70c222">A series instance is identified by having a SERIES-ID property which
-is calculated in the same manner as a RECURRENCE-ID.  It MUST also
-contain a RELATED-TO property with RELTYPE=SERIES-MASTER and a value
-being the UID of the series master.</p>
-<p id="_3c824554-cedb-4253-8a59-a169f9bbafac">As noted above, if the series was split it may contain a RELATED-TO
-property with RELTYPE=SERIES-MASTER and a value being the UID of the
-previous series master.</p></clause></clause>
-<clause id="redefined_relation_type_value" obligation="normative"><title>Redefined Relation Type Value</title><p id="_134cbcb4-afac-4c2e-b164-6b815a8c1cf3">Relationship parameter type values are defined in
-<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.  This specification augments that parameter to include the
-new relationship values SERIES-MASTER.</p>
-<dl id="_67def8dd-858e-4823-ae44-4221b8d28d16">
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-<p id="_5b6ee10e-7245-4b3a-b892-65ea983fcd4f">This property parameter is respecified as follows:</p>
-<sourcecode id="_610b0fa6-8415-4e38-95e1-06c0f40e78d6">reltypeparam = "RELTYPE" "="
-              ("PARENT"    ; Parent relationship - Default
-             / "CHILD"     ; Child relationship
-             / "SIBLING"   ; Sibling relationship
-             / "DEPENDS-ON" ; refers to previous task
-             / "REFID"     ; Relationship based on REFID
-             / "STRUCTURED-CATEGORY"
-                     ; Relationship based on STRUCTURED-CATEGORY
-             / "FINISHTOSTART" ;  Temporal relationship
-             / "FINISHTOFINISH" ;  Temporal relationship
-             / "STARTTOFINISH" ;  Temporal relationship
-             / "STARTTOSTART" ;  Temporal relationship
-             / "SERIES-MASTER" ;  link to the master component
-             / iana-token  ; Some other IANA-registered
-                           ; iCalendar relationship type
-             / x-name)     ; A non-standard, experimental
-                           ; relationship type</sourcecode>
-<dl id="_930b6e69-2865-48f5-a133-101d00fd6a5a">
-  <dt>Description</dt>
-  <dd/>
-</dl>
-<p id="_282d7093-3e0f-47e1-916d-43b33811f8b8">This parameter can be specified on a property that
-references another related calendar component.  The parameter may
-specify the hierarchical relationship type of the calendar
-component referenced by the property when the value is PARENT,
-CHILD or SIBLING.  If this parameter is not specified on an
-allowable property, the default relationship type is PARENT.
-Applications MUST treat x-name and iana-token values they don’t
-recognize the same way as they would the PARENT value.</p>
-<p id="_67007a02-7efc-449b-807c-bd77046fb3b6">This parameter defines the temporal relationship when the value is
-one of the project management standard relationships
-FINISHTOSTART, FINISHTOFINISH, STARTTOFINISH or STARTTOSTART.
-This property will be present in the predecessor entity and will
-refer to the successor entity.  The GAP parameter specifies the
-lead or lag time between the predecessor and the successor.  In
-the description of each temporal relationship below we refer toTask-A which contains and controls the relationship and Task-B the
-target of the relationship.</p>
-<dl id="_6c581c1e-3fed-400a-bab7-aa406356fd0a">
-  <dt>RELTYPE=PARENT</dt>
-  <dd>
-    <p id="_89324087-9936-43b7-888c-48098bae4d70">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.</p>
-  </dd>
-  <dt>RELTYPE=CHILD</dt>
-  <dd>
-    <p id="_bf939d4a-d6c3-4d5a-8ff7-b18f70d767ad">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.</p>
-  </dd>
-  <dt>RELTYPE=SIBLING</dt>
-  <dd>
-    <p id="_afd91832-c3ed-42f2-baed-859010ebb592">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.</p>
-  </dd>
-  <dt>RELTYPE=DEPENDS-ON</dt>
-  <dd>
-    <p id="_b77f9746-5d63-4982-8b52-81f83414d35e">Indicates that the current calendar component
-depends on the referenced calendar component in some manner.  For
-example a task may be blocked waiting on the other, referenced,
-task.</p>
-  </dd>
-  <dt>RELTYPE=REFID</dt>
-  <dd>
-    <p id="_5529b87c-9da5-4fc9-b4c9-7f46ea0c0fd4">Establishes a reference from the current component to
-components with a REFID property which matches the value given in
-the associated RELATED-TO property.</p>
-  </dd>
-  <dt>RELTYPE=SERIES-MASTER</dt>
-  <dd>
-    <p id="_fbe28113-1150-4cc0-a32d-80f6388d7ac2">Indicates that the current calendar component
-is based on the referenced calendar component.  The value is a UID.</p>
-  </dd>
-  <dt>RELTYPE=STRUCTURED-CATEGORY</dt>
-  <dd>
-    <p id="_fccbc21a-9f40-43f9-8e08-721b45589024">Establishes a reference from the
-current component to components with a STRUCTURED-CATEGORY
-property which matches the value given in the associated RELATED-
-TO property.</p>
-  </dd>
-  <dt>RELTYPE=FINISHTOSTART</dt>
-  <dd/>
-</dl>
-<p id="_2e6f60bc-32cb-4fcf-8d15-3d2a34251998">Task-B cannot start until Task-A finishes.
-For example, when sanding is complete, painting can begin.</p>
-<figure id="finishtostart">
-  <name>Finish to start relationship</name>
-  <pre id="_aae319ac-a24f-44ed-be3c-3d2e1e03c1ea">            ============
-            |  Task-A  |--+
-            ============  |
-                          |
-                          V
-                          ============
-                          |  Task-B  |
-                          ============</pre>
-</figure>
-<dl id="_bcf040d1-ec5a-4b7e-a153-01dd3e146d42">
-  <dt>RELTYPE=FINISHTOFINISH</dt>
-  <dd/>
-</dl>
-<p id="_1e192c45-f381-44d3-a62e-17f3960e76be">Task-B cannot finish before Task-A is
-   finished, that is the end of Task-A defines the end of Task-B.
-   For example, we start the potatoes, then the meat then the peas
-   but they should all be cooked at the same time.</p>
-<figure id="finishtofinish">
-  <name>Finish to finish relationship</name>
-  <pre id="_f4c1d7ed-30bd-4fad-ba75-941006b81ef9">                    ============
-                    |  Task-A  |--+
-                    ============  |
-                                  |
-                    ============  |
-                    |  Task-B  |&lt;-+
-                    ============</pre>
-</figure>
-<dl id="_f597dd81-22c3-4ff1-9f03-dc38d17eaafd">
-  <dt>RELTYPE=STARTTOFINISH</dt>
-  <dd/>
-</dl>
-<p id="_6f44bb93-2cfe-42de-94c0-098f2e731201">The start of Task-A (which occurs after Task-B) controls the
-finish of Task-B.  For example, ticket sales
-(Task-B) end when the game starts (Task-A).</p>
-<figure id="starttofinish">
-  <name>Start to finish relationship</name>
-  <pre id="_8af60cc7-32ca-44a4-8fec-e6ed5a42cd25">                                     ============
-                                  +--|  Task-A  |
-                                  |  ============
-                                  |
-                    ============  |
-                    |  Task-B  |&lt;-+
-                    ============</pre>
-</figure>
-<dl id="_90880b70-dc0d-4ec3-836f-84fce88b4753">
-  <dt>RELTYPE=STARTTOSTART</dt>
-  <dd/>
-</dl>
-<p id="_1404fe5f-4ae7-4b9b-816b-d3fa7b1d98ee">The start of Task-A triggers the start of
-Task-B, that is Task-B can start anytime after Task-A starts.</p>
-<figure id="starttostart">
-  <name>Start to start relationship</name>
-  <pre id="_f826a3da-340a-4ec5-8aeb-b4a72b4de300">                    ============
-                 +--|  Task-A  |
-                 |  ============
-                 |
-                 |  ============
-                 +-&gt;|  Task-B  |
-                    ============</pre>
-</figure></clause>
-<clause id="_new_property_parameters" obligation="normative"><title>New Property Parameters</title><clause id="param-split" obligation="normative"><title>Split</title><dl id="_2e99db7c-35cd-42f4-90f4-2c9ca313bafb">
-  <dt>Parameter name</dt>
-  <dd>
-    <p id="_c09f3ce6-bf91-4d2d-9897-5de8856e08aa">SPLIT</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd>
-    <p id="_481d1a97-0e62-4f58-b0c4-cd6929500504">To indicate a series has been split.</p>
-  </dd>
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-<p id="_8e4eacdc-f881-4698-9577-3bd64d3e8a32">This parameter is defined by the following notation:</p>
-<sourcecode id="_db148943-4fb3-4671-9bb3-70a7678932c6">splitparam     = "SPLIT" "="
-              ("YES"      ; The series is split
-              / "NO"      ; The series is not split (default)
-              / x-name        ; Experimental reference type
-              / iana-token)   ; Other IANA registered type</sourcecode>
-<dl id="_ab2ac273-b85c-4186-ac02-a8a66b170822">
-  <dt>Description</dt>
-  <dd>
-    <p id="_bb227862-eb3d-4c84-b101-70d279082bc9">This parameter MAY be specified on the SRULE property
-to indicate that the series has been split with SPLIT=YES.  Once
-split is is probably inappropriate to modify the series further.</p>
-  </dd>
-</dl></clause>
-<clause id="param-lookahead-count" obligation="normative"><title>Lookahead count</title><dl id="_e2408cd2-3380-4c6c-b347-85b53224fd49">
-  <dt>Parameter name</dt>
-  <dd>
-    <p id="_25a91496-56e0-4391-b747-aacef25068b4">LOOKAHEAD-COUNT</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd>
-    <p id="_48e7fc23-e962-448f-a652-963cdafcdffd">To specify the number of series instances that should be
-generated in advance.</p>
-  </dd>
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-<p id="_37ad4019-cea7-407c-8f1f-c1c2083e5254">This parameter is defined by the following notation:</p>
-<sourcecode id="_de84b5de-d69d-42b2-9021-0e45aeb19b5e">lookahead-countparam      = "LOOKAHEAD-COUNT" "=" 1*DIGIT</sourcecode>
-<dl id="_99539da6-21fd-4e9b-8bb8-dd99adb0878d">
-  <dt>Description</dt>
-  <dd/>
-</dl>
-<p id="_afe03fd1-44b6-4674-9b90-7c07c3f99953">This parameter MAY be specified on the SRULE property
-to indicate how many series instances should be generated in
-advance.</p>
-<p id="_dae39225-0794-4e4b-af22-636f545d620a">An implementation is free to apply its own limts but MUST NOT
-generate more than those defined by this parameter and/or the
-LOOKAHEAD-PERIOD parameter.</p>
-<p id="_18820380-58de-43fa-957c-4e5f7b7778be">If both the LOOKAHEAD-PERIOD and LOOKAHEAD-COUNT arameters are
-supplied the result should be limited by both.</p>
-<p id="_a223a2e1-42f4-4276-95cf-b0317f3e91d3">For example, if the LOOKAHEAD-PERIOD parameter would cause 8
-instances to be generated but LOOKAHEAD-COUNT specifies 4 then
-only 4 instances will be generated.</p></clause>
-<clause id="param-lookahead-period" obligation="normative"><title>Lookahead period</title><dl id="_c16541ae-835b-43fd-8475-5b79571eda61">
-  <dt>Parameter name</dt>
-  <dd>
-    <p id="_d0fc91bf-b688-486c-8c85-95cc088f9ff5">LOOKAHEAD-PERIOD</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd>
-    <p id="_84b9b0bc-b885-41d1-bec7-01aab027729f">To specify a maximum period for which series instances
-should be generated in advance.</p>
-  </dd>
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-<p id="_c8c3263f-ff4e-4f5e-be00-c0ccc28864c8">This parameter is defined by the following notation:</p>
-<sourcecode id="_6d051505-f06f-4ebb-bd42-4008c5a2a824">lookahead-periodparam      = "LOOKAHEAD-PERIOD" "="
-                     DQUOTE dur-value DQUOTE</sourcecode>
-<dl id="_a4553fed-9417-4f31-9857-e6a79a634fa3">
-  <dt>Description</dt>
-  <dd/>
-</dl>
-<p id="_e42ed029-8d7f-4d64-bdb8-9346fb214e45">This parameter MAY be specified on the SRULE property
-to indicate how far in advance series instances should be
-generated.</p>
-<p id="_82c08791-3c19-4741-a9f7-71a109b6ba7a">An implementation is free to apply its own limts but MUST NOT
-generate more than those defined by this parameter and/or the
-LOOKAHEAD-COUNT parameter.</p>
-<p id="_aec4975b-acf9-4075-95cf-2d09b179aa90">If both the LOOKAHEAD-PERIOD and LOOKAHEAD-COUNT arameters are
-supplied the result should be limited by both.</p>
-<p id="_4f05602f-e2e4-4f03-bcc2-6e3e26c48a60">For example, if the LOOKAHEAD-PERIOD parameter would cause 8
-instances to be generated but LOOKAHEAD-COUNT specifies 4 then
-only 4 instances will be generated.</p>
-<p id="_76f476bb-17f0-4cfa-87b5-8dd9cfb2289a">The value is a quoted duration.</p></clause></clause>
-<clause id="new_properties" obligation="normative"><title>New Properties</title><clause id="_general" obligation="normative"><title>General</title><p id="_1b3b8949-0e60-40ae-a847-6f1f4ff1989c">The SERIES-ID, LAST-SERIES-ID, SDATE and SXDATE properties are
-identical in form and in the parameters they take.</p>
-<p id="_5117d636-d7f1-486a-8135-4834c60ea1ae">All must conform in form to the DTSTART property of the master
-component.  Only the SDATE may specify a time which is not part of
-the calculated series.</p>
-<p id="_1dc1d047-c5ff-4171-91fe-97f481daa173">The SRULE property value is identical in form to the RRULE property
-defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/>.  The LOOKAHEAD-COUNT and LOOKAHEAD-PERIOD
-parameters indicate how many instances should be generated in
-advance.</p></clause>
-<clause id="generating-series-members" obligation="normative"><title>Generating Series members</title><p id="_0becf14b-9530-4106-9709-cf8f19649d58">An agent, either the server or a client, will periodically extend the
-set of instances.  The number of such generated instances is limited
-by:</p>
-<dl id="_638a8b41-b56b-4dc0-af6d-7807efd49995">
-  <dt>Elements of the rule</dt>
-  <dd>
-    <p id="_f429c862-da7e-4ac4-9500-ee74922159ec">The UNTIL or COUNT parts of the rule define
-when the series terminates.  Thus a COUNT=100 specifies a maximum
-of 100 series members.</p>
-  </dd>
-  <dt>Lookahead count</dt>
-  <dd>
-    <p id="_f4dd0887-4c35-4a52-b259-de0284407d55">This specifies how many series members can exist
-from the current date/time.  Thus a LOOKAHEAD-COUNT=4 means a
-maximum of 4 generated instances.</p>
-  </dd>
-  <dt>Lookahead period</dt>
-  <dd>
-    <p id="_f7521b6e-2863-4469-b775-2d51c032a509">This specifies how far into the future series
-members can be generated.  Thus a LOOKAHEAD-PERIOD=”PT2M” means a
-maximum period of 2 months.</p>
-  </dd>
-  <dt>System limits</dt>
-  <dd>
-    <p id="_62ab3438-d392-4b48-94b2-5494dc2a3749">This client or server SHOULD also apply limits to
-prevent a series from generating an overlarge set of members.</p>
-  </dd>
-</dl>
-<p id="_43c9ebfb-8923-424c-9d32-9225c8bebb81">The starting point for the calculation is the DTSTART of the master
-component or the LAST-SERIES-ID if it exists in the master.  In both
-cases the instance represented by that date is NOT generated as part
-of the instance set and the actual instance may have been excluded by
-an SXDATE property but the starting date is still valid.</p>
-<p id="_cc3aefc2-36af-4120-8090-12e929289baa">The starting date/time property defines the first instance in the
-next batch of series members.  Note that the starting property value
-MUST match the pattern of the series rule, if specified.  For
-example, if the rule specifies every Wednesday the starting date MUST
-be a Wednesday.</p>
-<p id="_962b606c-8602-4f27-b9f9-d5219f2f7568">The end date/time of the set will be provided by the UNTIL part of
-the rule, the LOOKAHEAD-PERIOD or by a system maxima.</p>
-<p id="_fff430b4-6a02-4ced-933b-ad3440a4079d">A set of date/time values can be generated within those contraints.
-As each date/time value is generated it can be ignored if it is one
-of the SXDATE values.</p>
-<p id="_dac40caf-9c1e-4476-bce3-8eea726339b1">Generation of values can terminate when the size of the result
-exceeds that given by the COUNT rule element, the LOOKAHEAD-COUNT
-value or any system limit.</p>
-<p id="_188ab53c-e2c4-4cb6-874e-dbee3a3b9807">Any SDATE values that fall within the current range and are not in
-the set of SXDATE values can be added and the result truncated again
-to match the size limits.</p>
-<p id="_82d1673f-6a2f-4dbd-aca6-1cb8f6fe8110">Finally, any date/time values that have already been generated and
-are present as SERIES-ID values should be removed from the set.  What
-remains is the new set of members to extend the current series.</p>
-<p id="_39861f5e-026d-449e-ad02-ef7f61f76d71">The last of those values becomes the new value for the LAST-SERIES-ID
-property in the series master.</p>
-<p id="_431f5b66-c582-4955-896b-76eae7cff153">As noted above the “SXDATE” property can be used to exclude the value
-specified in the master.  This leads to a complication as the master
-needs to be preserved as a container for the values which define the
-series.  This is flagged by adding a DELETED-MASTER element to the
-SERIES-STATUS property.</p></clause>
-<clause id="prop-series-uid" obligation="normative"><title>Series UID</title><dl id="_6a47b9e7-8528-4dac-b040-4bb039d3b591">
-  <dt>Property name</dt>
-  <dd>
-    <p id="_fb2f7852-62ba-4201-95d9-ce38975ff167">SERIES-UID</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd>
-    <p id="_1c91bffe-835c-47e7-9a2a-dcdfedf2b033">This property defines the persistent, globally unique
-identifier for the full series.</p>
-  </dd>
-  <dt>Value Type</dt>
-  <dd>
-    <p id="_c4af5fa6-db76-41b6-a984-bbc987bfa4b9">TEXT</p>
-  </dd>
-  <dt>Property Parameters</dt>
-  <dd>
-    <p id="_1f036630-8174-4f5a-9a50-9a05e4cea85d">IANA and non-standard property parameters can
-be specified on this property.</p>
-  </dd>
-  <dt>Conformance</dt>
-  <dd>
-    <p id="_0245d0a4-f761-431d-bb86-e8356e98efd1">This property MUST be specified in any “VEVENT”,
-“VTODO”, and “VJOURNAL” calendar components acting as a series
-master or series instance.</p>
-  </dd>
-  <dt>Description</dt>
-  <dd>
-    <p id="_8fb6a83c-a6d3-4cbb-87f6-e1acf581efc5">The SERIES-UID MUST be globally unique.  This value
-SHOULD be generated by following the recommendations in
-<eref type="inline" bibitemid="RFC7986" citeas="RFC 7986"><locality type="section"><referenceFrom>5.3</referenceFrom></locality></eref>.</p>
-    <dl id="_134c9773-1ec2-4bd2-81e5-2d58a3bfe298">
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-  </dd>
-</dl>
-<p id="_86f617a5-d85b-490f-a91c-7d0424ccd427">This property is defined by the following notation:</p>
-<sourcecode id="_407155e4-a899-461c-8822-2c9832ad1c35">seruid        = "SERIES-UID" seruidparam ":" text CRLF
-
-seruidparam   = *(";" other-param)</sourcecode>
-<example id="_54b7156b-f670-43e7-ae51-246445ec61d2"><p id="_3a311b5e-a408-449c-9944-111805f39258">The following is an example of this property:</p>
-<sourcecode id="_2b73efc6-31fb-4713-ae9e-834db20c2375">SERIES-UID:123e4567-e89b-12d3-a456-426655440000</sourcecode></example></clause>
-<clause id="prop-series-exception-date" obligation="normative"><title>Series-exception-date</title><dl id="_82534960-5c3e-4208-83c4-6cceaa2c1082">
-  <dt>Property name</dt>
-  <dd>
-    <p id="_22e91c6a-3d7a-49bf-80db-15d575685441">SXDATE</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd>
-    <p id="_2ca77d2d-ddd8-49be-9080-5a6391ec8876">This property defines the list of DATE-TIME exceptions for
-series of events, to-dos or journal entries.</p>
-  </dd>
-  <dt>Value Type</dt>
-  <dd>
-    <p id="_ef26abbd-bda3-4794-9b61-9e3447789cf7">The default value type for this property is DATE-TIME.
-The value type can be set to DATE.</p>
-  </dd>
-  <dt>Property Parameters</dt>
-  <dd>
-    <p id="_07811de4-af8c-4ca1-9cae-9277751e5749">IANA, non-standard, value data type, and time
-zone identifier property parameters can be specified on this
-property.</p>
-  </dd>
-  <dt>Conformance</dt>
-  <dd>
-    <p id="_a730e7e2-35eb-4903-810d-c2d465049c95">This property can be specified in “VEVENT”, “VTODO”,
-and “VJOURNAL” calendar components acting as the series master.</p>
-  </dd>
-  <dt>Description</dt>
-  <dd>
-    <p id="_e6e6bc57-2a86-45b3-8e32-ec16666ff2bb">The exception dates, if specified, are used when
-computing the instances of the series.  They specify date/time
-values which are to be removed from the set of possible series
-instances.</p>
-  </dd>
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-<p id="_558907d8-1a7b-43da-bd65-c3b912477aaf">This property is defined by the following notation:</p>
-<sourcecode id="_02214c23-3e34-4d74-991a-7758bfcf0624">sxdate     = "SXDATE" sxdtparam ":" sxdtval *("," sxdtval) CRLF
-
-sxdtparam  = *(
-           ;
-           ; The following are OPTIONAL,
-           ; but MUST NOT occur more than once.
-           ;
-           (";" "VALUE" "=" ("DATE-TIME" / "DATE")) /
-           ;
-           (";" tzidparam) /
-           ;
-           ; The following is OPTIONAL,
-           ; and MAY occur more than once.
-           ;
-           (";" other-param)
-           ;
-           )
-
-sxdtval    = date-time / date
-           ;Value MUST match value type</sourcecode>
-<example id="_5decd18e-4852-4503-93c7-f82ebfbb5195"><dl id="_2de0b559-8dcf-4e7e-ab93-ba187f7d02f1">
-  <dt>The following is an example of this property</dt>
-  <dd/>
-</dl>
-<sourcecode id="_d2d9ed2c-9e33-4b6e-9556-4e64e3956b58">SXDATE:19960402T010000Z,19960403T010000Z,19960404T010000Z</sourcecode></example></clause>
-<clause id="prop-series-date" obligation="normative"><title>Series-date</title><dl id="_eee6985a-f71f-46dc-8fbf-3630c7464dcb">
-  <dt>Property name</dt>
-  <dd>
-    <p id="_740e6bf1-02d5-4fd9-b523-23e6908427c4">SDATE</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd>
-    <p id="_1eb062fe-fc88-4885-bc5a-6d0d36dfbeb8">This property defines the list of DATE-TIME values for
-series of events, to-dos or journal entries.</p>
-  </dd>
-  <dt>Value Type</dt>
-  <dd>
-    <p id="_e9838e41-0d0a-42ca-9923-60a40579a3e8">The default value type for this property is DATE-TIME.
-The value type can be set to DATE.</p>
-  </dd>
-  <dt>Property Parameters</dt>
-  <dd>
-    <p id="_c97cdb73-2973-4160-9481-8cb74004c9a7">IANA, non-standard, value data type, and time
-zone identifier property parameters can be specified on this
-property.</p>
-  </dd>
-  <dt>Conformance</dt>
-  <dd>
-    <p id="_3a4fdbf4-8e78-4da2-a52f-024372d42c8d">This property can be specified in “VEVENT”, “VTODO”,
-and “VJOURNAL” calendar components acting as the series master.</p>
-  </dd>
-  <dt>Description</dt>
-  <dd>
-    <p id="_0a9ffde6-e78e-447a-a30f-dbd0c12a11ee">This property can appear along with the “SRULE”
-property to define a extra series occurrences.  When they both
-appear in a series master component, the instances are defined by
-the union of occurrences defined by both the “SDATE” and “SRULE”.</p>
-  </dd>
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-<dl id="_f20c2117-e91a-480a-b124-798b7f45687f">
-  <dt>This property is defined by the following notation</dt>
-  <dd/>
-</dl>
-<sourcecode id="_e52ab279-9e53-42d8-aaab-8e88d1704818"> sdate      = "SDATE" sdtparam ":" sdtval *("," sdtval) CRLF
-
- sdtparam   = *(
-             ;
-             ; The following are OPTIONAL,
-             ; but MUST NOT occur more than once.
-             ;
-             (";" "VALUE" "=" ("DATE-TIME" / "DATE" / "PERIOD")) /
-             (";" tzidparam) /
-             ;
-             ; The following is OPTIONAL,
-             ; and MAY occur more than once.
-             ;
-             (";" other-param)
-             ;
-             )
-
- sdtval     = date-time / date
-             ;Value MUST match value type</sourcecode>
-<example id="_fd665593-3298-4e2a-947e-3004224ab958"><p id="_1bd5643a-c886-460c-9cdc-ffe691f0e4fe">The following are examples of this property:</p>
-<sourcecode id="_cfce3986-6c17-433a-bd0b-2c00b4b6fb8b">SDATE:19970714T123000Z
-SDATE;TZID=America/New_York:19970714T083000
-
-SDATE;VALUE=PERIOD:19960403T020000Z/19960403T040000Z,
- 19960404T010000Z/PT3H
-
-SDATE;VALUE=DATE:19970101,19970120,19970217,19970421
- 19970526,19970704,19970901,19971014,19971128,19971129,19971225</sourcecode></example></clause>
-<clause id="prop-series-id" obligation="normative"><title>Series-id</title><dl id="_94f68170-528a-4edb-bcc3-c6900f7edd22">
-  <dt>Property name</dt>
-  <dd>
-    <p id="_8e4f4e9e-c34e-4989-87ff-7a99ad92d352">SERIES-ID</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd>
-    <p id="_6abf4c74-b658-4834-ab13-e787aca03f04">This property is used in conjunction with the “UID” and
-“SEQUENCE” properties to identify a specific instance of a
-“VEVENT”, “VTODO”, or “VJOURNAL” calendar component in a series.
-The property value is the original value of the “DTSTART” property
-of the series instance before any changes occur.</p>
-  </dd>
-  <dt>Value type</dt>
-  <dd>
-    <p id="_4de7dd5c-085f-4bb5-b906-315bdbb15af0">The default value type is DATE-TIME.  The value type can
-be set to a DATE value type.  This property MUST have the same
-value type as the “DTSTART” property contained within the series
-component.  Furthermore, this property MUST be specified as a date
-with local time if and only if the “DTSTART” property contained
-within the series component is specified as a date with local
-time.</p>
-  </dd>
-  <dt>Property Parameters</dt>
-  <dd>
-    <p id="_4c2754cd-469e-4f2d-bcdc-bb5a0112e2ff">IANA, non-standard, value data type and time
-zone identifier parameters can be specified on this property.</p>
-  </dd>
-  <dt>Conformance</dt>
-  <dd>
-    <p id="_5b60d5a2-4d95-4774-bd86-fcb55ec14689">This property can be specified zero or more times in
-any iCalendar component.</p>
-  </dd>
-  <dt>Description</dt>
-  <dd/>
-</dl>
-<p id="_59691c01-f17a-4ea4-99b7-ef07124ca2eb">The SERIES-ID is the originally calculated value of the
-  DTSTART property based on the master identified by the RELATED-TO
-  property with a RELTYPE=SERIES-MASTER parameter.</p>
-<figure id="_e2e75d16-3a87-4cc1-a0e1-947a5727dec5">
-  <pre id="_215a526f-7cfb-4660-9751-238f7c955c90">The full series of components can only be retrieved by searching
-for all components with a matching RELATED-TO property.</pre>
-</figure>
-<figure id="_bc2c7c8c-7b82-4ecf-82e4-a437b9df2f11">
-  <pre id="_3857899e-20c6-4ecd-a2bb-eb7fcf46be03">If the value of the "DTSTART" property is a DATE type value, then
-the value MUST be the calendar date for the series instance.</pre>
-</figure>
-<figure id="_51ceb9f6-64ba-4d9c-ab3e-f1131ebb068f">
-  <pre id="_faab8148-4ea4-4d0c-9509-a10ca572ced5">The DATE-TIME value is set to the time when the original series
-instance would occur; meaning that if the intent is to change a
-Friday meeting to Thursday, the DATE-TIME is still set to the
-original Friday meeting.</pre>
-</figure>
-<figure id="_1c0120c4-f9ab-4b4d-9b87-1004e529868a">
-  <pre id="_c7f7f97c-ccb1-4793-9bf1-6c8aea1cbf47">The "SERIES-ID" property is used in conjunction with the "UID" and
-"SEQUENCE" properties to identify a particular instance of an
-event, to-do, or journal in the series.  For a given pair of "UID"
-and "SEQUENCE" property values, the "SERIES-ID" value for a series
-instance is fixed.</pre>
-</figure>
-<dl id="_d1640c56-a031-47db-b378-4c508d739e43">
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-<p id="_a0e99934-bf37-4b27-8ea7-cc0361509173">This property is defined by the following notation:</p>
-<sourcecode id="_31611991-1ee0-49df-9a70-b56753aa972e">serid    = "SERIES-ID" sidparam ":" sidval CRLF
-
-sidparam   = *(
-               ;
-               ; The following are OPTIONAL,
-               ; but MUST NOT occur more than once.
-               ;
-               (";" "VALUE" "=" ("DATE-TIME" / "DATE")) /
-               (";" tzidparam) /
-               ;
-               ; The following is OPTIONAL,
-               ; and MAY occur more than once.
-               ;
-               (";" other-param)
-               ;
-               )
-
-sidval     = date-time / date
-               ;Value MUST match value type</sourcecode>
-<example id="_60318dd8-c8f3-4e9f-be52-e3cecff88ebd"><dl id="_fd71d8ad-2324-4258-8682-14d1fc057e1c">
-  <dt>The following are examples of this property</dt>
-  <dd/>
-</dl>
-<sourcecode id="_2a4ccb6e-5da2-4885-9d6a-e6350d563fc8">SERIES-ID;VALUE=DATE:19960401
-
-SERIES-ID;TZID=America/New_York:20170120T120000</sourcecode></example></clause>
-<clause id="prop-last-series-id" obligation="normative"><title>Last series ID</title><dl id="_ecb26fb1-c007-4af2-b730-11d4a2a8d0f7">
-  <dt>Property name</dt>
-  <dd>
-    <p id="_3d89abb1-420d-48a9-b8ea-bd4ff91f15a2">LAST-SERIES-ID</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd/>
-</dl>
-<p id="_e3c4bcd5-52e1-43dc-bd66-1e749c73e8ce">To specify the last calculated instance of the series.
-When new instances are created they MUST have a SERIES-ID after
-the value of this property.</p>
-<p id="_32474e25-1dcb-4095-9045-29391432eb1d">In all respects this property is identical to SERIES-ID and is in
-fact a copy of the SERIES-ID which would be present in the last
-created instance (assuming it is not suppressed by an SXDATE).</p>
-<dl id="_78de1569-3b6e-407f-a0b5-457a7aa53fa3">
-  <dt>Value type</dt>
-  <dd>
-    <p id="_e37f41e4-3adc-4035-a606-1cb8dc1a5152">DATE or DATE_TIME (the default).  This has the same
-requirements as SERIES-ID.</p>
-  </dd>
-  <dt>Property Parameters</dt>
-  <dd>
-    <p id="_5d3ec94c-67d6-4d5d-adc3-50147807e3e9">IANA, non-standard, value data type and time
-zone identifier parameters can be specified on this property.</p>
-  </dd>
-  <dt>Conformance</dt>
-  <dd>
-    <p id="_3057a65e-3432-4f6d-ae99-12477327fbad">This property MAY be specified in any iCalendar
-component.</p>
-  </dd>
-  <dt>Description</dt>
-  <dd>
-    <p id="_4e109c9c-9b73-4160-9c9c-9a28e9ae9c1a">When used in a component the value of this property
-points to additional information related to the component.  For
-example, it may reference the originating web server.</p>
-  </dd>
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-<p id="_481dd26a-b175-4feb-88b2-3ab0193149cf">This property is defined by the following notation:</p>
-<sourcecode id="_bd8177a3-1784-4c45-a7fe-12b0ba418c14">last-series-i   = "LAST-SERIES-ID" lastseriesidparam  /
-                 (
-                   ";" "VALUE" "=" "TEXT"
-                   ":" text
-                 )
-                 (
-                   ";" "VALUE" "=" "REFERENCE"
-                   ":" text
-                 )
-                 (
-                   ";" "VALUE" "=" "URI"
-                   ":" uri
-                 )
-                 CRLF
-
-
-lastseriesidparam = *(
-
-               ; the following is MANDATORY
-               ; and MAY occur more than once
-
-               (";" relparam) /
-
-               ; the following are MANDATORY
-               ; but MUST NOT occur more than once
-
-               (";" fmttypeparam) /
-               (";" labelparam) /
-               ; labelparam is defined in ...
-
-               ; the following is OPTIONAL
-               ; and MAY occur more than once
-
-               (";" xparam)
-
-               )</sourcecode>
-<example id="_d0483b65-4260-49df-b865-4564d7186415"><p id="_8db18a05-2b07-4b79-bb45-e03c153a91cc">The following is an example of this property.  It points to a server
-acting as the source for the calendar object.</p>
-<sourcecode id="_ed5b6dee-fdc3-4ffd-8b85-977db09b91e5">LINK;REL=SOURCE;LABEL=The Egg:http://example.com/events</sourcecode></example></clause>
-<clause id="prop-series-rule" obligation="normative"><title>Series Rule</title><dl id="_3a262666-82e6-4c8e-aa7e-b933e909a757">
-  <dt>Property name</dt>
-  <dd>
-    <p id="_620e50bd-4ba6-444d-9f38-3036882e7b1c">RRULE</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd>
-    <p id="_9ebb701b-fd58-4e5c-8046-4d794de80f92">This property defines a rule or repeating pattern for a
-series of events, to-dos or journal entries.</p>
-  </dd>
-  <dt>Value Type</dt>
-  <dd>
-    <p id="_8fd856e7-d966-4394-8fb9-f8284f0b8832">RECUR</p>
-  </dd>
-  <dt>Property Parameters</dt>
-  <dd>
-    <p id="_b6e513e8-be2d-453d-b8ac-ed9c6668e3b3">IANA, non-standard, look-ahead count or date
-property parameters can be specified on this property.</p>
-  </dd>
-  <dt>Conformance</dt>
-  <dd>
-    <p id="_b0d6a105-389d-40e2-9bec-4d3e81303e92">This property can be specified in any “VEVENT”,
-“VTODO”, and “VJOURNAL” calendar component, but it SHOULD NOT be
-specified more than once.</p>
-  </dd>
-  <dt>Description</dt>
-  <dd/>
-</dl>
-<p id="_053da7f3-d042-468e-b1bc-1437b6e09afe">The series rule, if specified, is used in computing the
-instances to be generated for the series.  These are generated by
-considering the master “DTSTART” property along with the “SRULE”,
-“SDATE”, and “SXDATE” properties contained within the series
-master.  The “DTSTART” property defines the first instance in the
-recurrence set which is represented by that master event.</p>
-<p id="_25a78b3b-74a2-4cf2-8a76-cded03128e20">Unlike the RRULE the “DTSTART” property MUST be synchronized with
-the series rule, if specified.  For example, if the DTSTARTS
-species a date on Wednesday but the SRULE specifies every Tuesday
-then a server or client MUSt reject the component.</p>
-<p id="_28d503ad-497a-4b2f-ba98-21a3b67bf4ac">The final series is represented by gathering all of the start
-DATE-TIME values generated by any of the specified “SRULE” and
-“SDATE” properties, and then excluding any start DATE-TIME values
-specified by “SXDATE” properties.  This implies that start DATE-
-TIME values specified by “SXDATE” properties take precedence over
-those specified by inclusion properties (i.e., “SDATE” and
-“SRULE”).  Where duplicate instances are generated by the “SRULE”
-and “SDATE” properties, only one instance is considered.
-Duplicate instances are ignored.</p>
-<p id="_b8904303-a876-4767-a348-6a70675a4e3e">The “DTSTART” property specified within the master iCalendar
-object defines the first instance of the recurrence.  In most
-cases, a “DTSTART” property of DATE-TIME value type used with a
-series rule, should be specified as a date with local time and
-time zone reference to make sure all the recurrence instances
-start at the same local time regardless of time zone changes.</p>
-<p id="_00096632-a666-4a49-9738-e90da414cca3">If the duration of the series component is specified with the
-“DTEND” or “DUE” property, then the same exact duration will apply
-to all the members of the generated series.  Else, if the duration
-of the series master component is specified with the “DURATION”
-property, then the same nominal duration will apply to all the
-members of the generated series and the exact duration of each
-instance will depend on its specific start time.  For example,
-series instances of a nominal duration of one day will have an
-exact duration of more or less than 24 hours on a day where a time
-zone shift occurs.  The duration of a specific instance may be
-modified in an exception component or simply by using an “SDATE”
-property of PERIOD value type.</p>
-<dl id="_4029c1ad-4479-4ba0-a188-967cea57ae47">
-  <dt>Format Definition</dt>
-  <dd/>
-</dl>
-<p id="_7565901a-1a6b-4d09-b371-88ac739622c6">This property is defined by the following notation:</p>
-<sourcecode id="_6d83f131-b7ac-45a4-90ba-6c3cf441ac34">srule      = "SRULE" srulparam ":" recur CRLF
-
-sruleparam = *(
-             ; the following are OPTIONAL
-             ; but MUST NOT occur more than once
-
-             (";" lookahead-countparam) /
-             (";" lookahead-periodparam) /
-
-             ; the following is OPTIONAL
-             ; and MAY occur more than once
-
-             (";" xparam)
-
-             )</sourcecode>
-<example id="_ddf81348-f54d-4665-8eb4-afc1ca3f95de">
-  <p id="_c07b1abf-2267-4d90-bff4-6aac088c04c2">TODO: Say they are pretty much the same as RRULE but extra params</p>
-</example></clause></clause>
-<clause id="redefined_property_related_to" obligation="normative">
-  <title>Redefined RELATED-TO Property</title>
-  <clause id="related-to" obligation="normative"><title>RELATED-TO</title><dl id="_171b3ae4-c543-45b5-969b-c73a096ec389">
-  <dt>Property name</dt>
-  <dd>
-    <p id="_456d8e7e-feec-49f4-9ee3-45758eaea999">RELATED-TO</p>
-  </dd>
-  <dt>Purpose</dt>
-  <dd>
-    <p id="_175986e1-f758-4fc1-9d71-e2407685048e">This property is used to represent a relationship or
-reference between one calendar component and another.  The
-definition here extends the definition in
-<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.8.4.5</referenceFrom></locality></eref> by including a section on RELTYPE=SERIES-MASTER.</p>
-  </dd>
-  <dt>Value type</dt>
-  <dd>
-    <p id="_4ccbdd4b-20e8-41a4-8b79-ef4a5c38d2d2">URI, UID or TEXT</p>
-  </dd>
-  <dt>Conformance</dt>
-  <dd>
-    <p id="_f7e966bd-dde5-41a4-89f9-45fa497e80e7">This property MAY be specified in any iCalendar
-component.</p>
-  </dd>
-  <dt>Description</dt>
-  <dd><p id="_18fd4a54-ce26-4de4-8b66-57d2d778e42b">By default or when VALUE=UID is specified, the property
-value consists of the persistent, globally unique identifier of
-another calendar component.  This value would be represented in a
-calendar component by the “UID” property.</p><p id="_7c278492-d19e-4c7d-b710-5e60927d4c27">By default, the property value points to another calendar
-   component that has a PARENT relationship to the referencing
-   object.  The “RELTYPE” property parameter is used to either
-   explicitly state the default PARENT relationship type to the
-   referenced calendar component or to override the default PARENT
-   relationship type and specify either a CHILD or SIBLING
-   relationship or a temporal relationship.</p>
-<p id="_bc485f26-9f9c-438d-ac96-2f24dcc38e4b">The PARENT relationship indicates that the calendar component is a
-   subordinate of the referenced calendar component.  The CHILD
-   relationship indicates that the calendar component is a superior
-   of the referenced calendar component.  The SIBLING relationship
-   indicates that the calendar component is a peer of the referenced
-   calendar component.</p>
-<p id="_ee68be6d-dacf-4e4b-8b58-9c1ac3e87d26">The FINISHTOSTART, FINISHTOFINISH, STARTTOFINISH or STARTTOSTART
-   relationships define temporal relationships as specified in the
-   reltype parameter definition.</p>
-<p id="_01554ab3-eb4b-448f-990b-fd0fcbcdcdd8">The SERIES-MASTER relationship when included in a series instance
-  refers to the master of that series.  When included in a series
-  master it refers to a previous master in a chain of spilt series.</p>
-<p id="_dffd25dd-6fc4-44b2-a830-7cad62993fda">Changes to a calendar component referenced by this property can
-   have an implicit impact on the related calendar component.  For
-   example, if a group event changes its start or end date or time,
-   then the related, dependent events will need to have their start
-   and end dates changed in a corresponding way.  Similarly, if a
-   PARENT calendar component is cancelled or deleted, then there is
-   an implied impact to the related CHILD calendar components.  This
-   property is intended only to provide information on the
-   relationship of calendar components.  It is up to the target
-   calendar system to maintain any property implications of this
-   relationship.</p></dd>
-  <dt>Format Definition</dt>
-  <dd><p id="_47a33196-9db8-4536-8ac4-c1c13827b0a8">This property is defined by the following notation:</p>
-<sourcecode id="_c2ca70a4-3259-4ccb-8ae7-b17df528d319">related    = "RELATED-TO" relparam ( ":" text ) /
-             (
-               ";" "VALUE" "=" "UID"
-               ":" uid
-             )
-             (
-               ";" "VALUE" "=" "URI"
-               ":" uri
-             )
-             CRLF
-
-relparam   = *(
-            ;
-            ; The following are OPTIONAL,
-            ; but MUST NOT occur more than once.
-            ;
-            (";" reltypeparam) /
-            (";" gapparam) /
-            ;
-            ; The following is OPTIONAL,
-            ; and MAY occur more than once.
-            ;
-            (";" other-param)
-            ;
-            )</sourcecode></dd>
-</dl>
-<example id="_ed23fef7-c27c-4847-8592-c0ec7c4e0d51"><p id="_c28b9d9f-aa40-4ae7-931f-b99a9f3e1386">The following are examples of this property.</p>
-<sourcecode id="_241ff1a0-4571-4d8e-a2ae-c4062ab10723">RELATED-TO;RELTYPE=SERIES-MASTER:19960401-080045-4000F192713</sourcecode></example></clause>
-</clause>
-<clause id="_backwards_compatibility" obligation="normative"><title>Backwards compatibility</title><p id="_c443a1fc-7926-4e84-965e-2fd6d4efdc16">Any clients following the approach specified in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> are
-expected to ignore any properties or parameters they don’t recognize.</p>
-<p id="_c8da762d-f802-49ca-814f-6106bf257e5e">For such clients the series appears to be an unconnected set of
-components.  They all have their own unique UIDS.  If the client
-updates an instance this should be identical in effect to an update
-carried out by a client aware of the new properties.</p>
-<p id="_11972c92-8e89-4836-ba92-5b20c3125251">Updates MUST preserve the SERIES-ID, LAST-SERIES-ID, SRULE, SDATE and
-SXDATE properties.  A client which does not do so is in violation of
-<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/>.</p>
-<p id="_180b35db-5599-4c74-8b98-8234669965d3">TODO: More text needed here…​</p></clause>
-<clause id="_caldav_extensions" obligation="normative"><title>CalDAV extensions</title><p id="_a3c4a25e-1656-4c12-a91e-20ddc46444c9">This specification may extend Caldav by adding reports to return all
-members of a series given the series master UID.  This could be
-handled by the current query mechanism but it is likely to be
-sufficiently frequently used that a special query is appropriate.</p>
-<p id="_be92f94c-55ab-446e-ae68-5cca6fa3373c">It is also likely we will want a CalDAV operation to split a series
-and generate the additional members of the series as a single atomic
-operation.
-== Security Considerations</p>
-<p id="_4932f836-0233-4017-8f28-4ac48dfd106a">Clients and servers should take care to limit the number of generated
-instances to a reasonable value.  This can be a relatively small
-value.</p></clause>
-<clause id="iana" obligation="normative"><title>IANA Considerations</title><clause id="_icalendar_property_registrations" obligation="normative"><title>iCalendar Property Registrations</title><p id="_b9138ec4-4e83-45b1-ab1a-eee5c1ab7c82">The following iCalendar property names have been added to the
-iCalendar Properties Registry defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.2</referenceFrom></locality></eref>.</p>
-<table id="_a20d2844-1541-41eb-8669-05ca430b306d">
-  <thead>
-    <tr>
-      <th align="left">Property</th>
-      <th align="left">Status</th>
-      <th align="left">Reference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">
-        <p id="_e30e98a3-b855-432f-8173-4987993b2934">LAST-SERIES-ID</p>
-      </td>
-      <td align="left">
-        <p id="_faf9b2d5-b55e-417b-909d-d3db8932895a">Current</p>
-      </td>
-      <td align="left">
-        <p id="_5750f18e-3024-42da-ad44-66ade85e74db">
-  <xref target="prop-last-series-id"/>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <p id="_e5a47ab2-5c58-4e45-b810-0b6673f0ba8e">SERIES-ID</p>
-      </td>
-      <td align="left">
-        <p id="_d5a63e00-649e-4adc-8cdc-b064cc4e42bd">Current</p>
-      </td>
-      <td align="left">
-        <p id="_b245243d-2e87-46b4-b67a-9f258d4069c7">
-  <xref target="prop-series-id"/>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <p id="_20eb667f-4a89-40a5-9807-c7d8bcdcda36">SERIES-UID</p>
-      </td>
-      <td align="left">
-        <p id="_c65b2acb-6509-4e3e-bab2-7b1fbb5f264e">Current</p>
-      </td>
-      <td align="left">
-        <p id="_ee6ab330-1958-44e8-adb0-6b1b78798f8e">
-  <xref target="prop-series-uid"/>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <p id="_d0785c3c-64dc-4aea-9791-6561f8b52ecf">SDATE</p>
-      </td>
-      <td align="left">
-        <p id="_d3af6f06-5488-445c-a7a6-073bdeaaa507">Current</p>
-      </td>
-      <td align="left">
-        <p id="_94765d78-5b99-408c-af11-34eae3d21b6d">
-  <xref target="prop-series-date"/>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <p id="_3d8ba15e-4a4c-42cf-8498-218f3f25514d">SRULE</p>
-      </td>
-      <td align="left">
-        <p id="_2e92e768-8ab7-495f-999d-f395c9d33eff">Current</p>
-      </td>
-      <td align="left">
-        <p id="_9aad97f0-b298-4ae2-a60f-4cda263a47e4">
-  <xref target="prop-series-rule"/>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <p id="_6a60427d-9055-40af-9385-5366e0e5fb9a">SXDATE</p>
-      </td>
-      <td align="left">
-        <p id="_b314d682-4c59-4f35-9865-49a2a0e14097">Current</p>
-      </td>
-      <td align="left">
-        <p id="_2e0fd67f-d2d4-4cdf-b38f-b9022772f359">
-  <xref target="prop-series-exception-date"/>
-</p>
-      </td>
-    </tr>
-  </tbody>
-</table></clause>
-<clause id="_icalendar_property_parameter_registrations" obligation="normative"><title>iCalendar Property Parameter Registrations</title><p id="_eed7e2a5-544c-43a4-af91-3d2f5db75b6e">The following iCalendar property parameter names have been added to
-the iCalendar Parameters Registry defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.3</referenceFrom></locality></eref>.</p>
-<table id="_1c089c55-b91b-4298-9141-587e37b4cae3">
-  <thead>
-    <tr>
-      <th align="left">Parameter</th>
-      <th align="left">Status</th>
-      <th align="left">Reference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">
-        <p id="_994f918b-1d53-4428-970f-d1de2f870dc8">LOOKAHEAD-COUNT</p>
-      </td>
-      <td align="left">
-        <p id="_e8682b49-853a-43b1-ad5e-7bcc2b7c12ef">Current</p>
-      </td>
-      <td align="left">
-        <p id="_84bb81db-466f-4074-b00b-bc2502761316">
-  <xref target="param-lookahead-count"/>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <p id="_5769c576-aacc-4d67-975d-cd25455a7d7e">LOOKAHEAD-PERIOD</p>
-      </td>
-      <td align="left">
-        <p id="_84a96351-b0a6-4f64-9225-a00c19ce0890">Current</p>
-      </td>
-      <td align="left">
-        <p id="_873b8a58-1052-4ab4-a283-c60a48ffd7b3">
-  <xref target="param-lookahead-period"/>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <p id="_37b79e00-f31d-48b7-883f-5fdd6b863fa3">SPLIT</p>
-      </td>
-      <td align="left">
-        <p id="_a0ae371f-264e-4033-b7a6-a18b55060ec1">Current</p>
-      </td>
-      <td align="left">
-        <p id="_9a8e0c66-37f2-4492-a6fa-91b67824f520">
-  <xref target="param-split"/>
-</p>
-      </td>
-    </tr>
-  </tbody>
-</table></clause>
-<clause id="_icalendar_reltype_value_registrations" obligation="normative"><title>iCalendar RELTYPE Value Registrations</title><p id="_d06b9619-2f02-45dc-b4b0-5b4e406b5951">The following iCalendar “RELTYPE” values have been added to the
-iCalendar Relationship Types Registry defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.8</referenceFrom></locality></eref>.</p>
-<table id="_d63cf689-d9a0-406d-b704-ea42f4ae73d5">
-  <thead>
-    <tr>
-      <th align="left">Relationship Type</th>
-      <th align="left">Status</th>
-      <th align="left">Reference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">
-        <p id="_5996fdf8-fec4-4da3-ace7-374056a24491">SERIES-ID</p>
-      </td>
-      <td align="left">
-        <p id="_92433674-8c10-4258-91b9-ea5454c02c91">Current</p>
-      </td>
-      <td align="left">
-        <p id="_ebd1ac18-1566-4bd2-88e7-415b409bcf89">
-  <xref target="series"/>
-</p>
-      </td>
-    </tr>
-  </tbody>
-</table></clause></clause>
-<clause id="acknowledgements" obligation="normative"><title>Acknowledgements</title><p id="_1d248825-c34c-4663-bb51-57b698a50ee5">The author would like to thank the members of the Calendaring and
-Scheduling Consortium technical committees and the following
-individuals for contributing their ideas, support and comments:</p>
-<p id="_6e7570cb-0374-410b-ac56-53af91e12ce9">The author would also like to thank the Calendaring and Scheduling
-Consortium for advice with this specification.</p></clause>
-
-
-</sections><annex id="appendix-a" obligation="informative"><title>Points for discussion</title><clause id="_detecting_changes_from_old_clients" obligation="informative"><title>Detecting changes from old clients</title><p id="_c04c210d-d2b0-4466-9d42-2ce3bcadab99">If such a client updates
-properties in the master …​ what do we say here?  Is there a way
-we can determine that the client doesn’t realize that it’s a
-series?  If it doesn’t then updating the dtstart is a big deal -
-maybe we add a parameter to a dtstart update to indicate the
-client knows it’s a series but wants to do so anyway.</p>
-<p id="_a412f103-7787-4855-bc90-3a6425ad5250">Or perhaps we add a new operation - or extend patch.  Simple
-update returns FORBIDDEN if you try to change any of the important
-properties (should do that for recurrences) and requires an
-explicit flag to say you (think you) know what you’re doing.</p></clause>
-<clause id="_splitting_and_linking" obligation="informative"><title>Splitting and linking</title><p id="_04b29d0f-f2fc-4cc4-829d-dd950592551e">The spec currently only allows for backward
-linking to previous masters.  There is a parameter added to the
-rule SPLIT=YES to indicate that the series was split</p>
-<p id="_f82110db-38c9-4b93-9b82-0eae1396f976">It makes sense to have a forward link to the new(er) series.
-However, a client/server may not know what the UID is until after
-data is stored.  The new chain can be determined vis a query so
-perhaps we can leave it up to the protocols to figure out that
-mechanism.</p></clause>
-<clause id="_caldav_queries" obligation="informative">
-  <title>CalDAV queries</title>
-  <p id="_a48cf5bf-63ba-483d-8ead-c57e8078ab89">If there were a better more generalised query
-language such an extensions might be unnecessary.  Should we
-define a query language specifically for calendaring?</p>
-</clause></annex><annex id="appendix-b" obligation="informative">
-  <title>Change log</title>
-  <p id="_2b045ff4-f29e-47d9-b77a-6d7545f0f68b">2017-02-12 MD Initial version</p>
-</annex><bibliography><references id="_normative_references" obligation="informative"><title>Normative References</title>
-<bibitem id="RFC3986">
-  <fetched>2019-01-16</fetched>
-  <title format="plain" language="en" script="Latn">Uniform Resource Identifier (URI): Generic Syntax</title>
-  <uri type="src">https://www.rfc-editor.org/info/rfc3986</uri>
-  <docidentifier type="IETF">RFC 3986</docidentifier>
-  <docidentifier type="DOI">10.17487/RFC3986</docidentifier>
-  <date type="published">
-    <on>2005</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">T. Berners-Lee</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">R. Fielding</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">L. Masinter</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <language>en</language>
-  <series type="main">
-    <title format="plain" language="en" script="Latn">STD</title>
-    <number>66</number>
-  </series>
-  <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
-    <number>3986</number>
-  </series>
-</bibitem>
-
-<bibitem id="RFC5545">
-  <fetched>2019-01-16</fetched>
-  <title format="plain" language="en" script="Latn">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
-  <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>
-  <docidentifier type="IETF">RFC 5545</docidentifier>
-  <docidentifier type="DOI">10.17487/RFC5545</docidentifier>
-  <date type="published">
-    <on>2009</on>
-  </date>
-  <contributor>
-    <role type="editor"/>
-    <person>
-      <name>
-        <completename language="en">B. Desruisseaux</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <language>en</language>
-  <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
-    <number>5545</number>
-  </series>
-</bibitem>
-
-<bibitem id="RFC5988">
-  <fetched>2019-01-16</fetched>
-  <title format="plain" language="en" script="Latn">Web Linking</title>
-  <uri type="src">https://www.rfc-editor.org/info/rfc5988</uri>
-  <docidentifier type="IETF">RFC 5988</docidentifier>
-  <docidentifier type="DOI">10.17487/RFC5988</docidentifier>
-  <date type="published">
-    <on>2010</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">M. Nottingham</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <language>en</language>
-  <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
-    <number>5988</number>
-  </series>
-</bibitem>
-
-<bibitem id="RFC6638">
-  <fetched>2019-01-16</fetched>
-  <title format="plain" language="en" script="Latn">Scheduling Extensions to CalDAV</title>
-  <uri type="src">https://www.rfc-editor.org/info/rfc6638</uri>
-  <docidentifier type="IETF">RFC 6638</docidentifier>
-  <docidentifier type="DOI">10.17487/RFC6638</docidentifier>
-  <date type="published">
-    <on>2012</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">C. Daboo</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">B. Desruisseaux</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <language>en</language>
-  <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
-    <number>6638</number>
-  </series>
-</bibitem>
-
-<bibitem id="RFC7986">
-  <fetched>2019-01-16</fetched>
-  <title format="plain" language="en" script="Latn">New Properties for iCalendar</title>
-  <uri type="src">https://www.rfc-editor.org/info/rfc7986</uri>
-  <docidentifier type="IETF">RFC 7986</docidentifier>
-  <docidentifier type="DOI">10.17487/RFC7986</docidentifier>
-  <date type="published">
-    <on>2016</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">C. Daboo</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <language>en</language>
-  <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
-    <number>7986</number>
-  </series>
-</bibitem>
-
-<bibitem id="I-D.daboo-caldav-attachments">
-  <fetched>2019-01-16</fetched>
-  <title format="plain" language="en" script="Latn">CalDAV Managed Attachments</title>
-  <uri type="src"/>
-  <docidentifier type="IETF">I-D.daboo-caldav-attachments</docidentifier>
-  <date type="published">
-    <on>2014</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">Cyrus Daboo</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">Arnaud Quillaud</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <language>en</language>
-  <series type="main">
-    <title format="plain" language="en" script="Latn">Internet-Draft</title>
-    <number>draft-daboo-caldav-attachments-03</number>
-  </series>
-</bibitem>
-<bibitem id="W3C.REC-xml-20060816">
-  <formattedref format="application/x-isodoc+xml"><em>World Wide Web Consortium Recommendation REC-xml-20060816: Extensible Markup Language (XML) 1.0 (Fourth Edition)</em>, Bray, T., Paoli, J., Sperberg-McQueen, M., Maler, E., and F. Yergeau, August 2006, <link target="http://www.w3.org/TR/2006/REC-xml-20060816"/>.</formattedref>
-  <docidentifier>W3C REC xml-20060816</docidentifier>
-</bibitem><bibitem id="W3C.WD-xptr-xpointer-20021219">
-  <formattedref format="application/x-isodoc+xml">Steven DeRose, Ron Daniel, Eve Maler. <em>XPointer xpointer() Scheme.</em> 2002. <link target="http://www.w3.org/TR/2002/WD-xptr-xpointer-20021219"/>
-Z</formattedref>
-  <docidentifier>W3C WD xptr-xpointer-20021219</docidentifier>
-</bibitem></references><references id="_bibliography" obligation="informative">
-  <title>Bibliography</title>
+<preface><foreword obligation="informative"><title>Foreword</title>  
+<p id="_0a7808f0-bc74-4536-a61d-b9b5a86828d0">The Calendaring and Scheduling Consortium (“CalConnect”) is a global   
+non-profit organization with the aim to facilitate interoperability of   
+collaborative technologies and tools through open standards.</p>  
+<p id="_ff8dbb44-8eea-4032-b32e-6025ea78f20c">CalConnect works closely with international and regional partners,   
+of which the full list is available on our website   
+(<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>  
+<p id="_a7285f4c-734f-4a17-8fbe-892b6dcbfcdc">The procedures used to develop this document and those intended for its   
+further maintenance are described in the CalConnect Directives.</p>  
+<p id="_26fa9965-7a91-405e-bcce-9cdc1441011f">In particular the different approval criteria needed for the different   
+types of CalConnect documents should be noted. This document was drafted in   
+accordance with the editorial rules of the CalConnect Directives.</p>  
+<p id="_1a0d0981-89b9-4db9-bdf2-1ab6f72ae464">Attention is drawn to the possibility that some of the elements of this   
+document may be the subject of patent rights. CalConnect shall not be   
+held responsible for identifying any or all such patent rights. Details   
+of any patent rights identified during the development of the document   
+will be provided in the Introduction.</p>  
+<p id="_a7a56900-7d80-46d2-bf6d-a0f826ebadca">Any trade name used in this document is information given for the   
+convenience of users and does not constitute an endorsement.</p>  
+<p id="_42970eb2-579a-4099-af78-203fae946d33">This document was prepared by Technical Committee   
+<em>CALENDAR</em>.</p></foreword><introduction id="introduction" obligation="informative"><title>Introduction</title><p id="_3ca83aaf-400c-4331-9e2b-b6fce897ec69">Since iCalendar was first defined there has been only one way to   
+express a repeating set of events - the recurrence.  This defined a   
+master event, a set of rules for computing the instances and a way of   
+overriding certain instances.</p>  
+<p id="_34f0bcfb-38ef-4c7c-bb01-38695d2853f5">This approach works well enough in certain situations but has many   
+problems which need to be addressed.</p>  
+<p id="_82459a89-1272-47ee-a2cc-1efbf4b64417">This specification introduces a new approach to repeating patterns of   
+entities which avoids some of the problems.</p></introduction></preface><sections> 
+ 
+<clause id="scope" obligation="normative">  
+  <title>Scope</title>  
+  <p id="_17ac4f90-d043-4f13-91b0-357a4a136983">This document updates <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> by defining a new repeating set   
+of events known as a series.  This differs from recurrences in that   
+each instance is a separate entity with a parent relationship to a   
+specified template entity.</p>  
+</clause> 
+ 
+<terms id="terms" obligation="normative">  
+  <title>Terms and definitions</title>  
+</terms> 
+<clause id="_overrides_and_icalendar_recurrences" obligation="normative"><title>Overrides and iCalendar recurrences</title><p id="_e2f58274-236e-4551-a1f5-fc535c795e26">The recurrence rules specify how instances are to be computed.  These   
+rules provide a set of keys - the RECURRENCE-ID - and an instance can   
+be created with the calculated start date/time and a copy of the   
+duration (or calculated end date/time).</p>  
+<p id="_ae51a1f4-cd18-4986-9ffa-aa62b1e79348">The specification allows for overrides.  These are handled by   
+supplying a complete replacement for the instance with a RECURRENCE-   
+ID property matching that of the instance being overridden.  This may   
+change any of the properties (except the UID) - including start, end   
+or duration.</p>  
+<p id="_1506a43e-5274-4a2d-ae2c-370bc48b78e5">If a long lived recurrence is heavily overridden it becomes very   
+cumbersome.  The master plus overrides is considered a single   
+resource in most circumstances (iTip allows the delivery of a single   
+instance in certain situations).</p>  
+<p id="_42fb21c7-e777-45f7-af77-0286ffe42f2f">Simple meetings can become heavily modified recurrences through adding   
+the weeks agenda to the description, changing of attendees etc.</p>  
+<p id="_063add9c-bf93-47d4-ac47-b74195848b2e">There are approaches being considered to mitigate some of these   
+issues which mostly involve only storing changes but recurrences are   
+still awkward to deal with.</p>  
+<clause id="_changing_the_master_start_or_the_recurrence_rules" obligation="normative"><title>Changing the master start or the recurrence rules</title><p id="_0aeaffe3-263f-401a-8484-bfb9e9ef70c6">This can lead to some very difficult problems to resolve.  In the    
+case of a heavily modified meeting it may be difficult to impossible    
+to determine which override applies to the newly modified event.</p>   
+<p id="_667efdda-d6d5-41e1-807a-4f99ce6c468f">For example, a weekly book-reading is moved from Monday to Friday.    
+There are weeks of scheduled events in the future.  Do we move them    
+all forward to the next instance or skip one and move them back?  If    
+it becomes bi-weekly rather than weekly do we drop every other or    
+just space them out more?</p>   
+<p id="_c1bded90-2bf1-4e60-a82c-4e89ee850ac5">To be sure - some of these problems are not totally resolved by a    
+series approach but they become more tractable.</p></clause>  
+<clause id="_splitting_recurrences" obligation="normative"><title>Splitting recurrences</title><p id="_f66a3e5f-22a3-4024-ad05-e95e00e69f6b">The <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> THISANDFUTURE range is poorly supported.  Splitting is    
+what a number of implementations use to avoid changing overrides in    
+the past.</p>   
+<p id="_d4b01a99-d74f-4cfe-bfec-77883be46fd5">The recurring event is split into 2, one being the truncated original    
+the other being a new recurring event starting at the time of the    
+THISANDFUTURE override.</p>   
+<p id="_99f5a6bb-7e31-42b1-89a0-9f46a265b322">There is left the problem of relating the two, this can be    
+accomplished by use of the RELATED-TO property but that is not    
+standardized.</p></clause></clause> 
+<clause id="series" obligation="normative"><title>Series</title><p id="_f5d36472-078a-4e8d-ba9a-8452ac7ae26f">A series is a, generally regularly, repeating sets of events or tasks   
+each instance of which is usually, but not always, different in some   
+respect.  Examples may be a library running an after-school reading   
+program which usually, takes place at the same time each week but   
+always differs in the book or author being studied.</p>  
+<p id="_f91bf85d-4b59-4800-bf0f-3e00a8c933fc">In recurrences an instances is a calculated ‘virtual’ object, unless   
+overridden.  It has the same UID as the master and a RECURRENCE-ID   
+which is always one of the calculated set.</p>  
+<p id="_697da2b3-feb4-4970-8c5a-757f00e57a1b">In a series, a specified number of instances are created ahead of   
+time each with their own unique UID.  They are all related to the   
+master using a SERIES-MASTER relation type defined in this   
+specification.  Each instance acts as an individual component as far   
+as retrieval and searching is concerned.</p>  
+<p id="_dec96f29-cfeb-41ae-85de-155ce12aa5b6">Each instance and master is identified as a member of the full series   
+by the SERIES-UID property.  The value of this property is the same   
+in all members of the series even when splits have occurred.</p>  
+<p id="_11ea8b45-0688-4185-979d-ada34794526a">As instances are created a LAST-SERIES-ID property is added or   
+updated in the master to indicate which instance was last created.   
+When there are SXDATE properties this property value may represent an   
+instance which cannot be created.  It merely represents the latest   
+calculated date.</p>  
+<p id="_558e315b-b816-4cd9-9fb4-46a316d4d91e">This property allows generated instances to be deleted without the   
+addition of SXDATE properties to the master.  The SXDATE only   
+indicates future instances which MUST NOT be created.</p>  
+<p id="_40e07a50-1852-45c2-8a0d-ec7d12516df3">As time goes on more instances are created either by the server or by   
+a client when it inspects the current state of the series.  The   
+number of instances may be based on time or a count.</p>  
+<p id="_b844070c-f3c4-4336-a6e2-db515969546b">For example, an organization may allow rooms to be booked only 4   
+weeks ahead.  Thus a series may be set up which has that 4 week set   
+of events in the future.  Each will have the room as an attendee   
+ensuring that at least the room is booked at the regular time.</p>  
+<clause id="_modifying_series_patterns_and_splitting" obligation="normative"><title>Modifying series patterns and splitting</title><p id="_ada48782-80bc-43b0-a267-a0f2b575fb0f">If it becomes necessary to modify the series rules or the master    
+start then the series is always split at the point of the    
+modification.</p>   
+<p id="_6ab963fe-b76e-4d02-ba5e-e8cb921f9960">When a series is split the previous master is modifed to truncate the    
+current series at the last generated instance and a parameter    
+SPLIT=YES is added to the series rule to indicate that this master is    
+now split.</p>   
+<p id="_5bbaf911-df26-452a-b4fd-938a8af142dc">The split may result in a number of instances related to the old    
+series but overlapping the new.  It is up to the implementation to    
+decide what should be done with these but this usually requires a    
+degree of interaction with a human (or very intelligent robot).  The    
+application may offer to copy them into the corresponding new    
+instances - if these can be easily determined, offer to delete all of    
+them or let the user manually copy information and delete.</p>   
+<p id="_33cc4c10-3309-459f-b23a-2b6e905cc35a">The new series master is related to the old master by the new series    
+master having a RELATED-TO property with RELTYPE=SERIES-MASTER    
+pointing at the previous master.  In that way a backwards chain of    
+series masters may be created</p></clause>  
+<clause id="_the_series_master" obligation="normative"><title>The series master</title><p id="_7b0c8d96-3edd-4e80-bd9e-a881affb6544">A series master is identified in much the same way as a recurrence    
+master.  It will contain an SRULE and 0 or more SDATE properties or 1    
+or more SDATE properties.  Additionally it may contain 0 or more    
+SXDATE properties to exclude instances.</p>   
+<p id="_3b946f89-a869-48d5-a5c5-baebd5691551">As noted above, if the series was split it may contain a RELATED-TO    
+property with RELTYPE=SERIES-MASTER and a value of the previous    
+series master.</p>   
+<p id="_4bad125f-e0e8-4a96-96d0-ac5b2134d245">The master will also contain a LAST-SERIES-ID if any instances have    
+been calculated and perhaps generated.</p>   
+<p id="_3f47994b-f49c-47f8-82fa-8ddcb3b9365f">It is important to note that the series master is the first member of    
+the series.  Thus the first instance always occurs AFTER the series    
+master.</p></clause>  
+<clause id="_the_series_instances" obligation="normative"><title>The series instances</title><p id="_f892dc4e-2b4d-44fc-bea5-5a60c1e6c3b7">A series instance is identified by having a SERIES-ID property which    
+is calculated in the same manner as a RECURRENCE-ID.  It MUST also    
+contain a RELATED-TO property with RELTYPE=SERIES-MASTER and a value    
+being the UID of the series master.</p>   
+<p id="_cde8283a-37fe-46d0-ad06-55f5a5bb3c16">As noted above, if the series was split it may contain a RELATED-TO    
+property with RELTYPE=SERIES-MASTER and a value being the UID of the    
+previous series master.</p></clause></clause> 
+<clause id="redefined_relation_type_value" obligation="normative"><title>Redefined Relation Type Value</title><p id="_7fec162e-2744-4fe2-89ec-c7fe663962c0">Relationship parameter type values are defined in   
+<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.  This specification augments that parameter to include the   
+new relationship values SERIES-MASTER.</p>  
+<dl id="_8b8a56f1-2909-4189-bd8a-b957d1118c70">   
+  <dt>Format Definition</dt>   
+  <dd/>   
+</dl>  
+<p id="_c243610f-c73e-427c-a389-f514d5989bf2">This property parameter is respecified as follows:</p>  
+<sourcecode lang="bnf" id="_a4eaa319-35ab-434e-bb62-f4f0b5db83b5">reltypeparam = "RELTYPE" "="  
+              ("PARENT"    ; Parent relationship - Default  
+             / "CHILD"     ; Child relationship  
+             / "SIBLING"   ; Sibling relationship  
+             / "DEPENDS-ON" ; refers to previous task  
+             / "REFID"     ; Relationship based on REFID  
+             / "STRUCTURED-CATEGORY"  
+                     ; Relationship based on STRUCTURED-CATEGORY  
+             / "FINISHTOSTART" ;  Temporal relationship  
+             / "FINISHTOFINISH" ;  Temporal relationship  
+             / "STARTTOFINISH" ;  Temporal relationship  
+             / "STARTTOSTART" ;  Temporal relationship  
+             / "SERIES-MASTER" ;  link to the master component  
+             / iana-token  ; Some other IANA-registered  
+                           ; iCalendar relationship type  
+             / x-name)     ; A non-standard, experimental  
+                           ; relationship type</sourcecode>  
+  
+<dl id="_9ba0960e-ea3d-4a7e-8747-a703c5e94292">   
+  <dt>Description</dt>   
+  <dd/>   
+</dl>  
+<p id="_f46e45f5-ae24-43de-9629-a27e877eff8e">This parameter can be specified on a property that   
+references another related calendar component.  The parameter may   
+specify the hierarchical relationship type of the calendar   
+component referenced by the property when the value is PARENT,   
+CHILD or SIBLING.  If this parameter is not specified on an   
+allowable property, the default relationship type is PARENT.   
+Applications MUST treat x-name and iana-token values they don’t   
+recognize the same way as they would the PARENT value.</p>  
+<p id="_5ab641eb-1a00-47ca-94a5-543b38b01194">This parameter defines the temporal relationship when the value is   
+one of the project management standard relationships   
+FINISHTOSTART, FINISHTOFINISH, STARTTOFINISH or STARTTOSTART.   
+This property will be present in the predecessor entity and will   
+refer to the successor entity.  The GAP parameter specifies the   
+lead or lag time between the predecessor and the successor.  In   
+the description of each temporal relationship below we refer toTask-A which contains and controls the relationship and Task-B the   
+target of the relationship.</p>  
+<dl id="_9696369f-fd43-4297-abab-16e65536233e">   
+  <dt>RELTYPE=PARENT</dt>   
+  <dd>   
+    <p id="_aa32189c-36ee-45cf-a662-dac4bac46139">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.</p>   
+  </dd>   
+  <dt>RELTYPE=CHILD</dt>   
+  <dd>   
+    <p id="_45819bb4-8563-4f73-ba84-57e98adb94e2">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.</p>   
+  </dd>   
+  <dt>RELTYPE=SIBLING</dt>   
+  <dd>   
+    <p id="_67522a9e-b54b-4365-b2c6-1cd59fafb573">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.</p>   
+  </dd>   
+  <dt>RELTYPE=DEPENDS-ON</dt>   
+  <dd>   
+    <p id="_1c2d4e07-5908-4711-835d-a6e206a9a3a0">Indicates that the current calendar component   
+depends on the referenced calendar component in some manner.  For   
+example a task may be blocked waiting on the other, referenced,   
+task.</p>   
+  </dd>   
+  <dt>RELTYPE=REFID</dt>   
+  <dd>   
+    <p id="_34965fd7-cc64-4e72-8bfe-2cc53feb0f58">Establishes a reference from the current component to   
+components with a REFID property which matches the value given in   
+the associated RELATED-TO property.</p>   
+  </dd>   
+  <dt>RELTYPE=SERIES-MASTER</dt>   
+  <dd>   
+    <p id="_a8b45016-3673-471b-b482-cbf68a64502b">Indicates that the current calendar component   
+is based on the referenced calendar component.  The value is a UID.</p>   
+  </dd>   
+  <dt>RELTYPE=STRUCTURED-CATEGORY</dt>   
+  <dd>   
+    <p id="_6f498422-c2a4-413c-8a0b-0c94b66a4038">Establishes a reference from the   
+current component to components with a STRUCTURED-CATEGORY   
+property which matches the value given in the associated RELATED-   
+TO property.</p>   
+  </dd>   
+  <dt>RELTYPE=FINISHTOSTART</dt>   
+  <dd/>   
+</dl>  
+<p id="_1f5992ec-a6ed-4691-9aa9-09e8f3f104c2">Task-B cannot start until Task-A finishes.   
+For example, when sanding is complete, painting can begin.</p>  
+<figure id="finishtostart">   
+  <name>Finish to start relationship</name>   
+  <pre id="_dcd17fc4-a9c0-4309-9ef5-73f6a3e04100">            ============   
+            |  Task-A  |--+   
+            ============  |   
+                          |   
+                          V   
+                          ============   
+                          |  Task-B  |   
+                          ============</pre>   
+</figure>  
+<dl id="_c1bbc9fa-1f0c-4cde-abb4-8cb096257dee">   
+  <dt>RELTYPE=FINISHTOFINISH</dt>   
+  <dd/>   
+</dl>  
+<p id="_50cb11b6-f420-4ec5-aed9-02eda98dd604">Task-B cannot finish before Task-A is   
+   finished, that is the end of Task-A defines the end of Task-B.   
+   For example, we start the potatoes, then the meat then the peas   
+   but they should all be cooked at the same time.</p>  
+<figure id="finishtofinish">   
+  <name>Finish to finish relationship</name>   
+  <pre id="_37f36d98-8f65-4bf3-aaa4-6952d85638c2">                    ============   
+                    |  Task-A  |--+   
+                    ============  |   
+                                  |   
+                    ============  |   
+                    |  Task-B  |&lt;-+   
+                    ============</pre>   
+</figure>  
+<dl id="_94d9dd53-a043-42a3-a2cf-1d412b2ada5c">   
+  <dt>RELTYPE=STARTTOFINISH</dt>   
+  <dd/>   
+</dl>  
+<p id="_0ad6baab-56b6-4944-8835-480e1dd1e158">The start of Task-A (which occurs after Task-B) controls the   
+finish of Task-B.  For example, ticket sales   
+(Task-B) end when the game starts (Task-A).</p>  
+<figure id="starttofinish">   
+  <name>Start to finish relationship</name>   
+  <pre id="_ca364063-a654-49a3-8b78-03e929b2926b">                                     ============   
+                                  +--|  Task-A  |   
+                                  |  ============   
+                                  |   
+                    ============  |   
+                    |  Task-B  |&lt;-+   
+                    ============</pre>   
+</figure>  
+<dl id="_6ca90829-6999-432f-9943-b8ed96b6debd">   
+  <dt>RELTYPE=STARTTOSTART</dt>   
+  <dd/>   
+</dl>  
+<p id="_22ca8c1f-b152-4e83-85ba-4fbcd52c677d">The start of Task-A triggers the start of   
+Task-B, that is Task-B can start anytime after Task-A starts.</p>  
+<figure id="starttostart">   
+  <name>Start to start relationship</name>   
+  <pre id="_6f778759-95a2-4a9d-8318-cade31137e01">                    ============   
+                 +--|  Task-A  |   
+                 |  ============   
+                 |   
+                 |  ============   
+                 +-&gt;|  Task-B  |   
+                    ============</pre>   
+</figure></clause> 
+<clause id="_new_property_parameters" obligation="normative"><title>New Property Parameters</title><clause id="param-split" obligation="normative"><title>Split</title><dl id="_fc4b11ca-f14c-49af-8287-b8cb6f666162">    
+  <dt>Parameter name</dt>    
+  <dd>    
+    <p id="_41b05e3b-701f-4300-9405-3484ba1b28b1">SPLIT</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd>    
+    <p id="_d87b3ccf-2b9f-4fbc-81fa-cdea579af106">To indicate a series has been split.</p>    
+  </dd>    
+  <dt>Format Definition</dt>    
+  <dd/>    
+</dl>   
+<p id="_081d54b3-a257-45c2-8c9d-68928db07efb">This parameter is defined by the following notation:</p>   
+<sourcecode lang="en" id="_eea7eb2c-90e4-4976-8c9b-411302ebcea6">splitparam     = "SPLIT" "="   
+              ("YES"      ; The series is split   
+              / "NO"      ; The series is not split (default)   
+              / x-name        ; Experimental reference type   
+              / iana-token)   ; Other IANA registered type</sourcecode>   
+   
+<dl id="_f051288b-f36e-4dc9-a598-6339e53208d9">    
+  <dt>Description</dt>    
+  <dd>    
+    <p id="_92a55120-b1cf-4941-9d25-a2a037522707">This parameter MAY be specified on the SRULE property    
+to indicate that the series has been split with SPLIT=YES.  Once    
+split is is probably inappropriate to modify the series further.</p>    
+  </dd>    
+</dl></clause>  
+<clause id="param-lookahead-count" obligation="normative"><title>Lookahead count</title><dl id="_e94c769d-2d13-481d-af95-26e01965007c">    
+  <dt>Parameter name</dt>    
+  <dd>    
+    <p id="_306c9d9a-aed3-4e86-8c37-92fe8e8df386">LOOKAHEAD-COUNT</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd>    
+    <p id="_12d01e83-2926-4851-b516-08651ca02a8e">To specify the number of series instances that should be    
+generated in advance.</p>    
+  </dd>    
+  <dt>Format Definition</dt>    
+  <dd/>    
+</dl>   
+<p id="_358acf80-cc67-437b-8237-7c450d2d59f2">This parameter is defined by the following notation:</p>   
+<sourcecode lang="en" id="_7c8730af-dabb-4454-ba67-f907b262dccb">lookahead-countparam      = "LOOKAHEAD-COUNT" "=" 1*DIGIT</sourcecode>   
+   
+<dl id="_215d0030-e5d0-43e5-b49f-830dc67b18b1">    
+  <dt>Description</dt>    
+  <dd/>    
+</dl>   
+<p id="_fa77fe42-974b-4b29-b8e4-f9716c206f7c">This parameter MAY be specified on the SRULE property    
+to indicate how many series instances should be generated in    
+advance.</p>   
+<p id="_8816e054-1ae7-4ff8-bc74-918c0a5dc3ae">An implementation is free to apply its own limts but MUST NOT    
+generate more than those defined by this parameter and/or the    
+LOOKAHEAD-PERIOD parameter.</p>   
+<p id="_d19450b9-0484-4a8c-93f6-ecb6a2407249">If both the LOOKAHEAD-PERIOD and LOOKAHEAD-COUNT arameters are    
+supplied the result should be limited by both.</p>   
+<p id="_c2449cf9-ba5c-4266-beb3-7e6e135b5254">For example, if the LOOKAHEAD-PERIOD parameter would cause 8    
+instances to be generated but LOOKAHEAD-COUNT specifies 4 then    
+only 4 instances will be generated.</p></clause>  
+<clause id="param-lookahead-period" obligation="normative"><title>Lookahead period</title><dl id="_2d222887-110b-4bbd-ba17-a98165fd67f2">    
+  <dt>Parameter name</dt>    
+  <dd>    
+    <p id="_4471ffe8-c8f9-4e94-b933-040380769dfc">LOOKAHEAD-PERIOD</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd>    
+    <p id="_41e8f175-d50b-4428-9cda-6131a10476bf">To specify a maximum period for which series instances    
+should be generated in advance.</p>    
+  </dd>    
+  <dt>Format Definition</dt>    
+  <dd/>    
+</dl>   
+<p id="_9505d68a-4671-4c12-9ac5-1f6bff285e7b">This parameter is defined by the following notation:</p>   
+<sourcecode lang="en" id="_51a1824c-bcf0-4afc-977a-f5a59da74572">lookahead-periodparam      = "LOOKAHEAD-PERIOD" "="   
+                     DQUOTE dur-value DQUOTE</sourcecode>   
+   
+<dl id="_5d9a67d7-8745-4ccd-8cc7-a28b86fa4610">    
+  <dt>Description</dt>    
+  <dd/>    
+</dl>   
+<p id="_d02c978a-ec45-468d-9225-47d352d6e8db">This parameter MAY be specified on the SRULE property    
+to indicate how far in advance series instances should be    
+generated.</p>   
+<p id="_6bcd884e-faa8-44e3-9ff1-b84584c016c2">An implementation is free to apply its own limts but MUST NOT    
+generate more than those defined by this parameter and/or the    
+LOOKAHEAD-COUNT parameter.</p>   
+<p id="_933c11d8-b235-4a83-9ec5-f88278a720a0">If both the LOOKAHEAD-PERIOD and LOOKAHEAD-COUNT arameters are    
+supplied the result should be limited by both.</p>   
+<p id="_9dce88b9-4fe0-46b6-a63b-f1816a35c605">For example, if the LOOKAHEAD-PERIOD parameter would cause 8    
+instances to be generated but LOOKAHEAD-COUNT specifies 4 then    
+only 4 instances will be generated.</p>   
+<p id="_da80dcd4-4b54-496b-8261-82f708291150">The value is a quoted duration.</p></clause></clause> 
+<clause id="new_properties" obligation="normative"><title>New Properties</title><clause id="_general" obligation="normative"><title>General</title><p id="_69e551fb-3297-4109-ae7a-9decf892dd88">The SERIES-ID, LAST-SERIES-ID, SDATE and SXDATE properties are    
+identical in form and in the parameters they take.</p>   
+<p id="_ce779450-c695-4e63-9e81-efb0707d64f5">All must conform in form to the DTSTART property of the master    
+component.  Only the SDATE may specify a time which is not part of    
+the calculated series.</p>   
+<p id="_ec510642-0278-41e0-9911-6a2894f12eae">The SRULE property value is identical in form to the RRULE property    
+defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/>.  The LOOKAHEAD-COUNT and LOOKAHEAD-PERIOD    
+parameters indicate how many instances should be generated in    
+advance.</p></clause>  
+<clause id="generating-series-members" obligation="normative"><title>Generating Series members</title><p id="_a7e757f1-6f54-4a0f-8d61-bca9064038bb">An agent, either the server or a client, will periodically extend the    
+set of instances.  The number of such generated instances is limited    
+by:</p>   
+<dl id="_09e57f06-0585-4962-8622-b0583c3db62a">    
+  <dt>Elements of the rule</dt>    
+  <dd>    
+    <p id="_1af43ac8-b60e-4084-a286-7e82a6734075">The UNTIL or COUNT parts of the rule define    
+when the series terminates.  Thus a COUNT=100 specifies a maximum    
+of 100 series members.</p>    
+  </dd>    
+  <dt>Lookahead count</dt>    
+  <dd>    
+    <p id="_567e8f2c-9c6d-4034-81b5-32b0d5528fd2">This specifies how many series members can exist    
+from the current date/time.  Thus a LOOKAHEAD-COUNT=4 means a    
+maximum of 4 generated instances.</p>    
+  </dd>    
+  <dt>Lookahead period</dt>    
+  <dd>    
+    <p id="_b046d23b-ac50-41cc-b8f4-e52076f45cab">This specifies how far into the future series    
+members can be generated.  Thus a LOOKAHEAD-PERIOD=”PT2M” means a    
+maximum period of 2 months.</p>    
+  </dd>    
+  <dt>System limits</dt>    
+  <dd>    
+    <p id="_b32a21e0-1425-4d8b-b95d-b72f9fe756eb">This client or server SHOULD also apply limits to    
+prevent a series from generating an overlarge set of members.</p>    
+  </dd>    
+</dl>   
+<p id="_ff3e87b4-ad92-47da-a1ce-cb92abee0807">The starting point for the calculation is the DTSTART of the master    
+component or the LAST-SERIES-ID if it exists in the master.  In both    
+cases the instance represented by that date is NOT generated as part    
+of the instance set and the actual instance may have been excluded by    
+an SXDATE property but the starting date is still valid.</p>   
+<p id="_e9911dce-d3af-4a9f-8f5f-660306e9de85">The starting date/time property defines the first instance in the    
+next batch of series members.  Note that the starting property value    
+MUST match the pattern of the series rule, if specified.  For    
+example, if the rule specifies every Wednesday the starting date MUST    
+be a Wednesday.</p>   
+<p id="_1e1797aa-df5a-485c-a397-098ccd8e517e">The end date/time of the set will be provided by the UNTIL part of    
+the rule, the LOOKAHEAD-PERIOD or by a system maxima.</p>   
+<p id="_f83e0541-69b5-4804-aafc-f008b343284f">A set of date/time values can be generated within those contraints.    
+As each date/time value is generated it can be ignored if it is one    
+of the SXDATE values.</p>   
+<p id="_9fe046af-9a09-4997-aa09-d30e267aba1d">Generation of values can terminate when the size of the result    
+exceeds that given by the COUNT rule element, the LOOKAHEAD-COUNT    
+value or any system limit.</p>   
+<p id="_2b9233c6-aa8d-42a1-a899-c87816de77d9">Any SDATE values that fall within the current range and are not in    
+the set of SXDATE values can be added and the result truncated again    
+to match the size limits.</p>   
+<p id="_ffd1ea59-36c1-4694-a755-1958aeb46130">Finally, any date/time values that have already been generated and    
+are present as SERIES-ID values should be removed from the set.  What    
+remains is the new set of members to extend the current series.</p>   
+<p id="_bded6a49-1ebe-4719-a9cf-8d3e31fddfe5">The last of those values becomes the new value for the LAST-SERIES-ID    
+property in the series master.</p>   
+<p id="_adbd5aec-6bf0-42c5-a33c-bd13928df0b0">As noted above the “SXDATE” property can be used to exclude the value    
+specified in the master.  This leads to a complication as the master    
+needs to be preserved as a container for the values which define the    
+series.  This is flagged by adding a DELETED-MASTER element to the    
+SERIES-STATUS property.</p></clause>  
+<clause id="prop-series-uid" obligation="normative"><title>Series UID</title><dl id="_5389dee1-77b4-49d9-a066-4f17b83e8eec">    
+  <dt>Property name</dt>    
+  <dd>    
+    <p id="_b9c7a3d5-a9ba-41db-a885-961baeda675a">SERIES-UID</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd>    
+    <p id="_4eff3aa8-cf19-457e-b256-f3fc1c4f7901">This property defines the persistent, globally unique    
+identifier for the full series.</p>    
+  </dd>    
+  <dt>Value Type</dt>    
+  <dd>    
+    <p id="_a0547ca3-4901-47a9-9b7c-240c08118c1f">TEXT</p>    
+  </dd>    
+  <dt>Property Parameters</dt>    
+  <dd>    
+    <p id="_e8c43610-9b63-4e7c-9e94-a841c1a5204f">IANA and non-standard property parameters can    
+be specified on this property.</p>    
+  </dd>    
+  <dt>Conformance</dt>    
+  <dd>    
+    <p id="_7a92ee8f-4985-4d33-9fc4-02a435dcfe6d">This property MUST be specified in any “VEVENT”,    
+“VTODO”, and “VJOURNAL” calendar components acting as a series    
+master or series instance.</p>    
+  </dd>    
+  <dt>Description</dt>    
+  <dd>    
+    <p id="_6a8382a4-51d9-4e06-a88a-cdadd4d15e3b">The SERIES-UID MUST be globally unique.  This value    
+SHOULD be generated by following the recommendations in    
+<eref type="inline" bibitemid="RFC7986" citeas="RFC 7986"><locality type="section"><referenceFrom>5.3</referenceFrom></locality></eref>.</p>    
+    <dl id="_e736de10-f9ff-4880-adb7-ec7537efc8e4">     
+  <dt>Format Definition</dt>     
+  <dd/>     
+</dl>    
+  </dd>    
+</dl>   
+<p id="_afc7566b-1142-4a84-aeb8-bc638d6a5077">This property is defined by the following notation:</p>   
+<sourcecode lang="en" id="_b6fe620b-7243-44f2-8002-9aac217470eb">seruid        = "SERIES-UID" seruidparam ":" text CRLF   
+   
+seruidparam   = *(";" other-param)</sourcecode>   
+   
+<example id="_7725e1a2-ac6f-45d2-9748-fc18755ac8fd"><p id="_82b774be-02ce-4499-9f7d-82ce8ba0eadc">The following is an example of this property:</p>    
+<sourcecode lang="en" id="_3e2edad6-68c7-4a10-8d15-7e2f182e49b9">SERIES-UID:123e4567-e89b-12d3-a456-426655440000</sourcecode>    
+</example></clause>  
+<clause id="prop-series-exception-date" obligation="normative"><title>Series-exception-date</title><dl id="_c5e80992-592a-4b68-9f0e-af3c30a494e1">    
+  <dt>Property name</dt>    
+  <dd>    
+    <p id="_27c42f90-87e7-4e51-a9f1-b64db4ee6480">SXDATE</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd>    
+    <p id="_62c31b2d-36a3-4cdd-b906-8e9bc8aa0e70">This property defines the list of DATE-TIME exceptions for    
+series of events, to-dos or journal entries.</p>    
+  </dd>    
+  <dt>Value Type</dt>    
+  <dd>    
+    <p id="_7ec82fc2-04a1-46ad-909c-9df3f8edb4e6">The default value type for this property is DATE-TIME.    
+The value type can be set to DATE.</p>    
+  </dd>    
+  <dt>Property Parameters</dt>    
+  <dd>    
+    <p id="_a25544c6-b18b-4a70-8283-8b1c85b29e39">IANA, non-standard, value data type, and time    
+zone identifier property parameters can be specified on this    
+property.</p>    
+  </dd>    
+  <dt>Conformance</dt>    
+  <dd>    
+    <p id="_3614c621-1acf-4b1e-8bb9-64fbc7c7c4bd">This property can be specified in “VEVENT”, “VTODO”,    
+and “VJOURNAL” calendar components acting as the series master.</p>    
+  </dd>    
+  <dt>Description</dt>    
+  <dd>    
+    <p id="_173a5915-ccce-4fec-ae03-6cc50044ca5c">The exception dates, if specified, are used when    
+computing the instances of the series.  They specify date/time    
+values which are to be removed from the set of possible series    
+instances.</p>    
+  </dd>    
+  <dt>Format Definition</dt>    
+  <dd/>    
+</dl>   
+<p id="_f2142087-444d-43f2-ba74-ed9b56c6551c">This property is defined by the following notation:</p>   
+<sourcecode lang="en" id="_621b814f-0c74-4326-bc14-7dedd776d70c">sxdate     = "SXDATE" sxdtparam ":" sxdtval *("," sxdtval) CRLF   
+   
+sxdtparam  = *(   
+           ;   
+           ; The following are OPTIONAL,   
+           ; but MUST NOT occur more than once.   
+           ;   
+           (";" "VALUE" "=" ("DATE-TIME" / "DATE")) /   
+           ;   
+           (";" tzidparam) /   
+           ;   
+           ; The following is OPTIONAL,   
+           ; and MAY occur more than once.   
+           ;   
+           (";" other-param)   
+           ;   
+           )   
+   
+sxdtval    = date-time / date   
+           ;Value MUST match value type</sourcecode>   
+   
+<example id="_86cbda72-f081-4775-a010-aa257994126a"><dl id="_b5d0f0d5-498f-4fb6-bb3c-910de6b80949">     
+  <dt>The following is an example of this property</dt>     
+  <dd/>     
+</dl>    
+<sourcecode lang="en" id="_e2eddaf5-cfc0-4ad0-af6b-d854e31c83d3">SXDATE:19960402T010000Z,19960403T010000Z,19960404T010000Z</sourcecode>    
+</example></clause>  
+<clause id="prop-series-date" obligation="normative"><title>Series-date</title><dl id="_40fa23f2-9d55-478c-b590-ab26a71220c8">    
+  <dt>Property name</dt>    
+  <dd>    
+    <p id="_d9386bf6-b45c-4dfd-8263-7c9df27a1f1b">SDATE</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd>    
+    <p id="_87798442-593b-43b6-bcf2-d9e70c1ba135">This property defines the list of DATE-TIME values for    
+series of events, to-dos or journal entries.</p>    
+  </dd>    
+  <dt>Value Type</dt>    
+  <dd>    
+    <p id="_dd4af09b-626b-46f9-b1cc-8712da7dd787">The default value type for this property is DATE-TIME.    
+The value type can be set to DATE.</p>    
+  </dd>    
+  <dt>Property Parameters</dt>    
+  <dd>    
+    <p id="_c4fc7ab2-8218-4f21-83f0-4c6a269809b1">IANA, non-standard, value data type, and time    
+zone identifier property parameters can be specified on this    
+property.</p>    
+  </dd>    
+  <dt>Conformance</dt>    
+  <dd>    
+    <p id="_1df740b5-e237-429a-8db6-292115be8e28">This property can be specified in “VEVENT”, “VTODO”,    
+and “VJOURNAL” calendar components acting as the series master.</p>    
+  </dd>    
+  <dt>Description</dt>    
+  <dd>    
+    <p id="_0d07ec78-2792-4777-adfd-ea11bd605e20">This property can appear along with the “SRULE”    
+property to define a extra series occurrences.  When they both    
+appear in a series master component, the instances are defined by    
+the union of occurrences defined by both the “SDATE” and “SRULE”.</p>    
+  </dd>    
+  <dt>Format Definition</dt>    
+  <dd/>    
+</dl>   
+<dl id="_4a0dc621-097a-4de6-890b-39642f49d66e">    
+  <dt>This property is defined by the following notation</dt>    
+  <dd/>    
+</dl>   
+<sourcecode lang="en" id="_b239b9fa-4398-4df7-a1c7-ff1a2f9849ce"> sdate      = "SDATE" sdtparam ":" sdtval *("," sdtval) CRLF   
+   
+ sdtparam   = *(   
+             ;   
+             ; The following are OPTIONAL,   
+             ; but MUST NOT occur more than once.   
+             ;   
+             (";" "VALUE" "=" ("DATE-TIME" / "DATE" / "PERIOD")) /   
+             (";" tzidparam) /   
+             ;   
+             ; The following is OPTIONAL,   
+             ; and MAY occur more than once.   
+             ;   
+             (";" other-param)   
+             ;   
+             )   
+   
+ sdtval     = date-time / date   
+             ;Value MUST match value type</sourcecode>   
+   
+<example id="_d60a8e87-2510-45e2-9a82-48140c245442"><p id="_daa1320a-8a58-45d7-9653-dcd741dfa081">The following are examples of this property:</p>    
+<sourcecode lang="en" id="_f67c7e03-e3ab-4f29-8552-3ae0b0e1c9dd">SDATE:19970714T123000Z    
+SDATE;TZID=America/New_York:19970714T083000    
+    
+SDATE;VALUE=PERIOD:19960403T020000Z/19960403T040000Z,    
+ 19960404T010000Z/PT3H    
+    
+SDATE;VALUE=DATE:19970101,19970120,19970217,19970421    
+ 19970526,19970704,19970901,19971014,19971128,19971129,19971225</sourcecode>    
+</example></clause>  
+<clause id="prop-series-id" obligation="normative"><title>Series-id</title><dl id="_3f8c352d-8343-4910-8720-fb68255a5f33">    
+  <dt>Property name</dt>    
+  <dd>    
+    <p id="_9c68d703-24c5-4fa8-973a-da41cf29500a">SERIES-ID</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd>    
+    <p id="_6110b867-961d-492b-93f2-668a67f7f319">This property is used in conjunction with the “UID” and    
+“SEQUENCE” properties to identify a specific instance of a    
+“VEVENT”, “VTODO”, or “VJOURNAL” calendar component in a series.    
+The property value is the original value of the “DTSTART” property    
+of the series instance before any changes occur.</p>    
+  </dd>    
+  <dt>Value type</dt>    
+  <dd>    
+    <p id="_d9f5c1a0-458c-4076-be03-0425604cb321">The default value type is DATE-TIME.  The value type can    
+be set to a DATE value type.  This property MUST have the same    
+value type as the “DTSTART” property contained within the series    
+component.  Furthermore, this property MUST be specified as a date    
+with local time if and only if the “DTSTART” property contained    
+within the series component is specified as a date with local    
+time.</p>    
+  </dd>    
+  <dt>Property Parameters</dt>    
+  <dd>    
+    <p id="_435b1e5d-cdc3-4959-93ca-c0af976721c2">IANA, non-standard, value data type and time    
+zone identifier parameters can be specified on this property.</p>    
+  </dd>    
+  <dt>Conformance</dt>    
+  <dd>    
+    <p id="_86bc3812-5ed0-4bca-9bee-e5a8ce067c54">This property can be specified zero or more times in    
+any iCalendar component.</p>    
+  </dd>    
+  <dt>Description</dt>    
+  <dd/>    
+</dl>   
+<p id="_94a2aad3-7e7a-4ccf-a4b4-8e8ffe930bb0">The SERIES-ID is the originally calculated value of the    
+  DTSTART property based on the master identified by the RELATED-TO    
+  property with a RELTYPE=SERIES-MASTER parameter.</p>   
+<figure id="_4688c9a9-28f0-47c7-8b1b-1078cfb8f829">    
+  <pre id="_8acc3f08-a329-4bc0-9caa-45286cc299ff">The full series of components can only be retrieved by searching    
+for all components with a matching RELATED-TO property.</pre>    
+</figure>   
+<figure id="_f81eb3aa-e0e2-4a65-8e49-9624d1714425">    
+  <pre id="_17556cf3-f441-41f8-acdc-d11c315fea7d">If the value of the "DTSTART" property is a DATE type value, then    
+the value MUST be the calendar date for the series instance.</pre>    
+</figure>   
+<figure id="_e84d1a1e-8bcd-4d0c-b6f0-a6d6a7b1d870">    
+  <pre id="_b9e0a920-6a42-4069-9e83-69389de00861">The DATE-TIME value is set to the time when the original series    
+instance would occur; meaning that if the intent is to change a    
+Friday meeting to Thursday, the DATE-TIME is still set to the    
+original Friday meeting.</pre>    
+</figure>   
+<figure id="_c331e865-6983-4438-9c78-804731bc9ab4">    
+  <pre id="_01bdc82c-dce9-4c91-8fc4-314c8f01e4ca">The "SERIES-ID" property is used in conjunction with the "UID" and    
+"SEQUENCE" properties to identify a particular instance of an    
+event, to-do, or journal in the series.  For a given pair of "UID"    
+and "SEQUENCE" property values, the "SERIES-ID" value for a series    
+instance is fixed.</pre>    
+</figure>   
+<dl id="_32c2e410-c3ee-437f-8b99-ead45b299662">    
+  <dt>Format Definition</dt>    
+  <dd/>    
+</dl>   
+<p id="_f1e80628-7ffa-4338-8cf9-bae1b1260e57">This property is defined by the following notation:</p>   
+<sourcecode lang="en" id="_52f94318-786b-42b9-99c2-061ab3665ced">serid    = "SERIES-ID" sidparam ":" sidval CRLF   
+   
+sidparam   = *(   
+               ;   
+               ; The following are OPTIONAL,   
+               ; but MUST NOT occur more than once.   
+               ;   
+               (";" "VALUE" "=" ("DATE-TIME" / "DATE")) /   
+               (";" tzidparam) /   
+               ;   
+               ; The following is OPTIONAL,   
+               ; and MAY occur more than once.   
+               ;   
+               (";" other-param)   
+               ;   
+               )   
+   
+sidval     = date-time / date   
+               ;Value MUST match value type</sourcecode>   
+   
+<example id="_f0a1fa46-6d4e-4a2a-81b5-83b70d10a68a"><dl id="_abcf1d2b-e0fa-4233-818a-5b6d5089b045">     
+  <dt>The following are examples of this property</dt>     
+  <dd/>     
+</dl>    
+<sourcecode lang="en" id="_5b3977a6-83e9-4f00-b4fa-fd7b0a0f3301">SERIES-ID;VALUE=DATE:19960401    
+    
+SERIES-ID;TZID=America/New_York:20170120T120000</sourcecode>    
+</example></clause>  
+<clause id="prop-last-series-id" obligation="normative"><title>Last series ID</title><dl id="_26b7098c-d781-4d5a-a19f-756ae4f14b1e">    
+  <dt>Property name</dt>    
+  <dd>    
+    <p id="_aea24a83-53eb-4864-9ef9-70a578196a53">LAST-SERIES-ID</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd/>    
+</dl>   
+<p id="_3a7dc392-7292-4636-91dd-dac9664e065e">To specify the last calculated instance of the series.    
+When new instances are created they MUST have a SERIES-ID after    
+the value of this property.</p>   
+<p id="_0b3c5b62-27d5-4f97-b05a-be4156c5f0d5">In all respects this property is identical to SERIES-ID and is in    
+fact a copy of the SERIES-ID which would be present in the last    
+created instance (assuming it is not suppressed by an SXDATE).</p>   
+<dl id="_3cefa270-4cbe-49db-b731-36fa20ec1f81">    
+  <dt>Value type</dt>    
+  <dd>    
+    <p id="_a24c7ce4-9c8e-454f-b4f2-43a8e363a13e">DATE or DATE_TIME (the default).  This has the same    
+requirements as SERIES-ID.</p>    
+  </dd>    
+  <dt>Property Parameters</dt>    
+  <dd>    
+    <p id="_c8aa3999-2c62-4594-9424-418bb3df8189">IANA, non-standard, value data type and time    
+zone identifier parameters can be specified on this property.</p>    
+  </dd>    
+  <dt>Conformance</dt>    
+  <dd>    
+    <p id="_05ffc4cb-b942-426d-bf74-f0591eeca336">This property MAY be specified in any iCalendar    
+component.</p>    
+  </dd>    
+  <dt>Description</dt>    
+  <dd>    
+    <p id="_d71d441b-bc86-48f6-9ecf-d8209f67ff9f">When used in a component the value of this property    
+points to additional information related to the component.  For    
+example, it may reference the originating web server.</p>    
+  </dd>    
+  <dt>Format Definition</dt>    
+  <dd/>    
+</dl>   
+<p id="_31ed012f-91c0-4769-8bf8-c0dae47d20a6">This property is defined by the following notation:</p>   
+<sourcecode lang="en" id="_8e134bd6-7536-4d2c-bdec-90d1dd942068">last-series-i   = "LAST-SERIES-ID" lastseriesidparam  /   
+                 (   
+                   ";" "VALUE" "=" "TEXT"   
+                   ":" text   
+                 )   
+                 (   
+                   ";" "VALUE" "=" "REFERENCE"   
+                   ":" text   
+                 )   
+                 (   
+                   ";" "VALUE" "=" "URI"   
+                   ":" uri   
+                 )   
+                 CRLF   
+   
+   
+lastseriesidparam = *(   
+   
+               ; the following is MANDATORY   
+               ; and MAY occur more than once   
+   
+               (";" relparam) /   
+   
+               ; the following are MANDATORY   
+               ; but MUST NOT occur more than once   
+   
+               (";" fmttypeparam) /   
+               (";" labelparam) /   
+               ; labelparam is defined in ...   
+   
+               ; the following is OPTIONAL   
+               ; and MAY occur more than once   
+   
+               (";" xparam)   
+   
+               )</sourcecode>   
+   
+<example id="_599a0756-33de-4588-81c6-61dd6843cb02"><p id="_87ff6141-ed0b-4523-9146-f92ff2af29cb">The following is an example of this property.  It points to a server     
+acting as the source for the calendar object.</p>    
+<sourcecode lang="en" id="_24ed943c-485e-4d12-b0f6-98cf520ec6ed">LINK;REL=SOURCE;LABEL=The Egg:http://example.com/events</sourcecode>    
+</example></clause>  
+<clause id="prop-series-rule" obligation="normative"><title>Series Rule</title><dl id="_819151be-0945-4bc1-8289-d2291f8fcd78">    
+  <dt>Property name</dt>    
+  <dd>    
+    <p id="_276bb6c8-ad00-4e6c-8e85-d1f773850ad3">RRULE</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd>    
+    <p id="_31cc5139-dbef-4b69-830f-e55c51e16b24">This property defines a rule or repeating pattern for a    
+series of events, to-dos or journal entries.</p>    
+  </dd>    
+  <dt>Value Type</dt>    
+  <dd>    
+    <p id="_272648a7-d30d-4814-acf6-bc3d2048b6f7">RECUR</p>    
+  </dd>    
+  <dt>Property Parameters</dt>    
+  <dd>    
+    <p id="_40de4096-9f04-4428-ba0a-5e11daf9bc1b">IANA, non-standard, look-ahead count or date    
+property parameters can be specified on this property.</p>    
+  </dd>    
+  <dt>Conformance</dt>    
+  <dd>    
+    <p id="_2a7183d1-d0cd-472e-b9a0-a1b798b423a1">This property can be specified in any “VEVENT”,    
+“VTODO”, and “VJOURNAL” calendar component, but it SHOULD NOT be    
+specified more than once.</p>    
+  </dd>    
+  <dt>Description</dt>    
+  <dd/>    
+</dl>   
+<p id="_f1e49e89-38fb-470d-88c4-e92a0c7293f1">The series rule, if specified, is used in computing the    
+instances to be generated for the series.  These are generated by    
+considering the master “DTSTART” property along with the “SRULE”,    
+“SDATE”, and “SXDATE” properties contained within the series    
+master.  The “DTSTART” property defines the first instance in the    
+recurrence set which is represented by that master event.</p>   
+<p id="_1a2247c6-6714-426e-beed-ac68052ca454">Unlike the RRULE the “DTSTART” property MUST be synchronized with    
+the series rule, if specified.  For example, if the DTSTARTS    
+species a date on Wednesday but the SRULE specifies every Tuesday    
+then a server or client MUSt reject the component.</p>   
+<p id="_36bc685a-e236-451b-b94a-caa2c67469b0">The final series is represented by gathering all of the start    
+DATE-TIME values generated by any of the specified “SRULE” and    
+“SDATE” properties, and then excluding any start DATE-TIME values    
+specified by “SXDATE” properties.  This implies that start DATE-    
+TIME values specified by “SXDATE” properties take precedence over    
+those specified by inclusion properties (i.e., “SDATE” and    
+“SRULE”).  Where duplicate instances are generated by the “SRULE”    
+and “SDATE” properties, only one instance is considered.    
+Duplicate instances are ignored.</p>   
+<p id="_5ee1bf12-5e83-45b6-b058-0c0daa788aa4">The “DTSTART” property specified within the master iCalendar    
+object defines the first instance of the recurrence.  In most    
+cases, a “DTSTART” property of DATE-TIME value type used with a    
+series rule, should be specified as a date with local time and    
+time zone reference to make sure all the recurrence instances    
+start at the same local time regardless of time zone changes.</p>   
+<p id="_e9306cdb-5c18-4d26-8aa6-1589799a55ee">If the duration of the series component is specified with the    
+“DTEND” or “DUE” property, then the same exact duration will apply    
+to all the members of the generated series.  Else, if the duration    
+of the series master component is specified with the “DURATION”    
+property, then the same nominal duration will apply to all the    
+members of the generated series and the exact duration of each    
+instance will depend on its specific start time.  For example,    
+series instances of a nominal duration of one day will have an    
+exact duration of more or less than 24 hours on a day where a time    
+zone shift occurs.  The duration of a specific instance may be    
+modified in an exception component or simply by using an “SDATE”    
+property of PERIOD value type.</p>   
+<dl id="_5a559958-1d67-4413-98c9-57ba06f39012">    
+  <dt>Format Definition</dt>    
+  <dd/>    
+</dl>   
+<p id="_c0c71465-c5fc-493b-88e9-51108f52a508">This property is defined by the following notation:</p>   
+<sourcecode lang="en" id="_59e4e715-38e7-4e04-8c29-6d8ae36d02ea">srule      = "SRULE" srulparam ":" recur CRLF   
+   
+sruleparam = *(   
+             ; the following are OPTIONAL   
+             ; but MUST NOT occur more than once   
+   
+             (";" lookahead-countparam) /   
+             (";" lookahead-periodparam) /   
+   
+             ; the following is OPTIONAL   
+             ; and MAY occur more than once   
+   
+             (";" xparam)   
+   
+             )</sourcecode>   
+   
+<example id="_f414714d-d680-4f9c-9eff-972ab9ce2227">    
+  <review reviewer="(Unknown)" id="_d4d957a8-bcc1-4f87-8687-e0de1ef5c251" date="2019-03-16T00:00:00Z">     
+  <p id="_b836e74f-621b-4d29-91bc-6a28b8596879"/>     
+</review>    
+</example></clause></clause> 
+<clause id="redefined_property_related_to" obligation="normative">  
+  <title>Redefined RELATED-TO Property</title>  
+  <clause id="related-to" obligation="normative"><title>RELATED-TO</title><dl id="_aed89644-ed67-4163-a29b-dea7c1918c7c">    
+  <dt>Property name</dt>    
+  <dd>    
+    <p id="_70ad774b-28e6-498d-893f-3aa8c0bbb716">RELATED-TO</p>    
+  </dd>    
+  <dt>Purpose</dt>    
+  <dd>    
+    <p id="_8f91dcc0-b071-43c8-a2f7-c5abcbd324f9">This property is used to represent a relationship or    
+reference between one calendar component and another.  The    
+definition here extends the definition in    
+<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.8.4.5</referenceFrom></locality></eref> by including a section on RELTYPE=SERIES-MASTER.</p>    
+  </dd>    
+  <dt>Value type</dt>    
+  <dd>    
+    <p id="_d7cf7d11-9293-48ad-b78e-cd00786d5af9">URI, UID or TEXT</p>    
+  </dd>    
+  <dt>Conformance</dt>    
+  <dd>    
+    <p id="_a461d407-59e6-4cff-9546-7803d980cdf4">This property MAY be specified in any iCalendar    
+component.</p>    
+  </dd>    
+  <dt>Description</dt>    
+  <dd><p id="_c183b4cb-6745-4d51-83a0-b8fe04303b81">By default or when VALUE=UID is specified, the property    
+value consists of the persistent, globally unique identifier of    
+another calendar component.  This value would be represented in a    
+calendar component by the “UID” property.</p><p id="_bdb58bb8-c925-4b72-b222-027a96d6c2c8">By default, the property value points to another calendar     
+   component that has a PARENT relationship to the referencing     
+   object.  The “RELTYPE” property parameter is used to either     
+   explicitly state the default PARENT relationship type to the     
+   referenced calendar component or to override the default PARENT     
+   relationship type and specify either a CHILD or SIBLING     
+   relationship or a temporal relationship.</p>    
+<p id="_fe2a3a4f-658e-4b66-a5cd-c93824585f7e">The PARENT relationship indicates that the calendar component is a     
+   subordinate of the referenced calendar component.  The CHILD     
+   relationship indicates that the calendar component is a superior     
+   of the referenced calendar component.  The SIBLING relationship     
+   indicates that the calendar component is a peer of the referenced     
+   calendar component.</p>    
+<p id="_7a4f2776-0eaf-4571-8e8d-ef25631bef6f">The FINISHTOSTART, FINISHTOFINISH, STARTTOFINISH or STARTTOSTART     
+   relationships define temporal relationships as specified in the     
+   reltype parameter definition.</p>    
+<p id="_eb697ff8-c464-44cd-9484-f6f651ffbaef">The SERIES-MASTER relationship when included in a series instance     
+  refers to the master of that series.  When included in a series     
+  master it refers to a previous master in a chain of spilt series.</p>    
+<p id="_95701303-edb5-48b0-b660-7e8db5668c02">Changes to a calendar component referenced by this property can     
+   have an implicit impact on the related calendar component.  For     
+   example, if a group event changes its start or end date or time,     
+   then the related, dependent events will need to have their start     
+   and end dates changed in a corresponding way.  Similarly, if a     
+   PARENT calendar component is cancelled or deleted, then there is     
+   an implied impact to the related CHILD calendar components.  This     
+   property is intended only to provide information on the     
+   relationship of calendar components.  It is up to the target     
+   calendar system to maintain any property implications of this     
+   relationship.</p></dd>    
+  <dt>Format Definition</dt>    
+  <dd><p id="_109f0d3b-7285-476f-87fd-d85eabe1c7db">This property is defined by the following notation:</p>    
+<sourcecode lang="bnf" id="_31b14d3d-bcd5-4459-b2e2-39e5b284e8cc">related    = "RELATED-TO" relparam ( ":" text ) /    
+             (    
+               ";" "VALUE" "=" "UID"    
+               ":" uid    
+             )    
+             (    
+               ";" "VALUE" "=" "URI"    
+               ":" uri    
+             )    
+             CRLF    
+    
+relparam   = *(    
+            ;    
+            ; The following are OPTIONAL,    
+            ; but MUST NOT occur more than once.    
+            ;    
+            (";" reltypeparam) /    
+            (";" gapparam) /    
+            ;    
+            ; The following is OPTIONAL,    
+            ; and MAY occur more than once.    
+            ;    
+            (";" other-param)    
+            ;    
+            )</sourcecode>    
+</dd>    
+</dl>   
+<example id="_6258b3d0-bfc4-4ae0-884d-7541d8cccc1b"><p id="_acec79ec-8c2c-4dc4-875f-072da1a9ceb5">The following are examples of this property.</p>    
+<sourcecode lang="en" id="_59fc5bc5-52fa-48e7-84fd-f3902708eb90">RELATED-TO;RELTYPE=SERIES-MASTER:19960401-080045-4000F192713</sourcecode>    
+</example></clause>  
+</clause> 
+<clause id="_backwards_compatibility" obligation="normative"><title>Backwards compatibility</title><p id="_6d11a05f-a933-425c-8e4c-9677ff0097d9">Any clients following the approach specified in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> are   
+expected to ignore any properties or parameters they don’t recognize.</p>  
+<p id="_2807f9bd-5ed6-48e8-a742-e671cd45f6e8">For such clients the series appears to be an unconnected set of   
+components.  They all have their own unique UIDS.  If the client   
+updates an instance this should be identical in effect to an update   
+carried out by a client aware of the new properties.</p>  
+<p id="_fe920272-8257-4896-bbbf-e0c08ab6aead">Updates MUST preserve the SERIES-ID, LAST-SERIES-ID, SRULE, SDATE and   
+SXDATE properties.  A client which does not do so is in violation of   
+<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/>.</p>  
+<review reviewer="(Unknown)" id="_4ec002f8-fda4-451f-a71b-202440884d5f" date="2019-03-16T00:00:00Z">   
+  <p id="_e6875139-df5b-44d6-b1b1-55ea3f18aabd"/>   
+</review></clause> 
+<clause id="_caldav_extensions" obligation="normative"><title>CalDAV extensions</title><p id="_d2fac35e-b682-4c7c-8dbe-84a43eda9c0b">This specification may extend Caldav by adding reports to return all   
+members of a series given the series master UID.  This could be   
+handled by the current query mechanism but it is likely to be   
+sufficiently frequently used that a special query is appropriate.</p>  
+<p id="_37d9cda8-e7b9-42a5-a2ff-d053c5db7f48">It is also likely we will want a CalDAV operation to split a series   
+and generate the additional members of the series as a single atomic   
+operation.   
+== Security Considerations</p>  
+<p id="_f6337dee-afca-4836-b3c7-2e77e0a5efe5">Clients and servers should take care to limit the number of generated   
+instances to a reasonable value.  This can be a relatively small   
+value.</p></clause> 
+<clause id="iana" obligation="normative"><title>IANA Considerations</title><clause id="_icalendar_property_registrations" obligation="normative"><title>iCalendar Property Registrations</title><p id="_ac585cff-85d7-43a0-9ca7-a6ef136df47f">The following iCalendar property names have been added to the    
+iCalendar Properties Registry defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.2</referenceFrom></locality></eref>.</p>   
+<table id="_a39d30ac-cca6-45b0-a73f-a354db96c1a0">    
+  <thead>    
+    <tr>    
+      <th align="left">Property</th>    
+      <th align="left">Status</th>    
+      <th align="left">Reference</th>    
+    </tr>    
+  </thead>    
+  <tbody>    
+    <tr>    
+      <td align="left">    
+        <p id="_7280ee49-5e18-4c26-9e28-11be57bf66fb">LAST-SERIES-ID</p>    
+      </td>    
+      <td align="left">    
+        <p id="_8b9febdb-207d-48c2-966c-8fb0fcf2a593">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_6677b55e-529a-4c6b-9c06-aaedf699d272">     
+  <xref target="prop-last-series-id"/>     
+</p>    
+      </td>    
+    </tr>    
+    <tr>    
+      <td align="left">    
+        <p id="_111e2f07-b112-4ba5-b6d9-9d79d74c892f">SERIES-ID</p>    
+      </td>    
+      <td align="left">    
+        <p id="_137540a7-2602-4404-805f-2e51e575bff9">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_e32bc5f2-f8e2-4390-8979-da9f3a838e61">     
+  <xref target="prop-series-id"/>     
+</p>    
+      </td>    
+    </tr>    
+    <tr>    
+      <td align="left">    
+        <p id="_f33ddd8e-d087-487c-b2b8-2b11e98e0512">SERIES-UID</p>    
+      </td>    
+      <td align="left">    
+        <p id="_275ae81a-8a45-4fae-bb81-99c90e9b3f77">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_c26ddadc-2f46-4134-94e1-b2255ac46a45">     
+  <xref target="prop-series-uid"/>     
+</p>    
+      </td>    
+    </tr>    
+    <tr>    
+      <td align="left">    
+        <p id="_001bf7b2-b5b4-4ae7-bb71-176af54b0d28">SDATE</p>    
+      </td>    
+      <td align="left">    
+        <p id="_70e529fb-45c2-4c8b-a9a1-97dbec6614c9">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_0a12aaa3-f1c9-47f7-861c-15e6bcbf8d1f">     
+  <xref target="prop-series-date"/>     
+</p>    
+      </td>    
+    </tr>    
+    <tr>    
+      <td align="left">    
+        <p id="_54a91b07-7107-4994-b75b-08c86151fce4">SRULE</p>    
+      </td>    
+      <td align="left">    
+        <p id="_7d28a50a-9e83-4a2f-a5ca-75376a8174c4">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_12d0e355-32f6-4efb-8145-186be2d68447">     
+  <xref target="prop-series-rule"/>     
+</p>    
+      </td>    
+    </tr>    
+    <tr>    
+      <td align="left">    
+        <p id="_212e0dd7-d58a-4c15-9b40-99a707a676f8">SXDATE</p>    
+      </td>    
+      <td align="left">    
+        <p id="_bec5eb96-db8b-48b1-832c-d2c27f4f7757">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_221fa032-b062-4476-9267-04d38b6dd90a">     
+  <xref target="prop-series-exception-date"/>     
+</p>    
+      </td>    
+    </tr>    
+  </tbody>    
+</table></clause>  
+<clause id="_icalendar_property_parameter_registrations" obligation="normative"><title>iCalendar Property Parameter Registrations</title><p id="_13553fe8-8f58-44cc-9657-e6e3b46df177">The following iCalendar property parameter names have been added to    
+the iCalendar Parameters Registry defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.3</referenceFrom></locality></eref>.</p>   
+<table id="_e3f04ccb-dbbb-4154-9f4d-54ed44fb7309">    
+  <thead>    
+    <tr>    
+      <th align="left">Parameter</th>    
+      <th align="left">Status</th>    
+      <th align="left">Reference</th>    
+    </tr>    
+  </thead>    
+  <tbody>    
+    <tr>    
+      <td align="left">    
+        <p id="_f7af4a0a-e927-41be-afbc-c5a16e87d7fc">LOOKAHEAD-COUNT</p>    
+      </td>    
+      <td align="left">    
+        <p id="_62862a3b-9c43-4835-a6a1-9a2d439719e1">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_846d177e-65dd-4e7d-aea1-6cf822de59a6">     
+  <xref target="param-lookahead-count"/>     
+</p>    
+      </td>    
+    </tr>    
+    <tr>    
+      <td align="left">    
+        <p id="_b38bfc42-9738-4fef-96c6-4f18286dd56c">LOOKAHEAD-PERIOD</p>    
+      </td>    
+      <td align="left">    
+        <p id="_a7e1f7a9-939d-43df-98df-478727fe40a8">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_7ab63ee4-d149-42e7-9116-187a82b63ea1">     
+  <xref target="param-lookahead-period"/>     
+</p>    
+      </td>    
+    </tr>    
+    <tr>    
+      <td align="left">    
+        <p id="_1436150f-68a3-42e0-afe1-f565686abe5c">SPLIT</p>    
+      </td>    
+      <td align="left">    
+        <p id="_31cc136a-1a61-4aea-9cf1-1b33e4acaf10">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_ea195a56-c4d0-4652-ba17-78ff43a2532f">     
+  <xref target="param-split"/>     
+</p>    
+      </td>    
+    </tr>    
+  </tbody>    
+</table></clause>  
+<clause id="_icalendar_reltype_value_registrations" obligation="normative"><title>iCalendar RELTYPE Value Registrations</title><p id="_1d106fbc-e09b-4383-a102-ceedcc9c449f">The following iCalendar “RELTYPE” values have been added to the    
+iCalendar Relationship Types Registry defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.8</referenceFrom></locality></eref>.</p>   
+<table id="_8207fe2b-c3fb-4e6e-bb1b-92a88a32cd31">    
+  <thead>    
+    <tr>    
+      <th align="left">Relationship Type</th>    
+      <th align="left">Status</th>    
+      <th align="left">Reference</th>    
+    </tr>    
+  </thead>    
+  <tbody>    
+    <tr>    
+      <td align="left">    
+        <p id="_406322c3-bfca-4efb-aa96-4cf31eb91b3d">SERIES-ID</p>    
+      </td>    
+      <td align="left">    
+        <p id="_9bdcaecf-fde8-4c4d-9f5f-247a69afc53f">Current</p>    
+      </td>    
+      <td align="left">    
+        <p id="_6a62eeaf-cd42-4bee-91cd-e066fecdc0ee">     
+  <xref target="series"/>     
+</p>    
+      </td>    
+    </tr>    
+  </tbody>    
+</table></clause></clause> 
+<clause id="acknowledgements" obligation="normative"><title>Acknowledgements</title><p id="_be29e892-b7d9-49e9-b0c2-e99ec6ea0039">The author would like to thank the members of the Calendaring and   
+Scheduling Consortium technical committees and the following   
+individuals for contributing their ideas, support and comments:</p>  
+<p id="_a81c7623-e9f9-4d32-800a-d525e56c9a9e">The author would also like to thank the Calendaring and Scheduling   
+Consortium for advice with this specification.</p></clause> 
+ 
+ 
+</sections><annex id="appendix-a" obligation="informative"><title>Points for discussion</title><clause id="_detecting_changes_from_old_clients" obligation="informative"><title>Detecting changes from old clients</title><p id="_af9ade45-f80a-4e06-9c12-b757f6f35cd7">If such a client updates    
+properties in the master …​ what do we say here?  Is there a way    
+we can determine that the client doesn’t realize that it’s a    
+series?  If it doesn’t then updating the dtstart is a big deal -    
+maybe we add a parameter to a dtstart update to indicate the    
+client knows it’s a series but wants to do so anyway.</p>   
+<p id="_a7a29472-16f3-4965-bb47-e050eccbc167">Or perhaps we add a new operation - or extend patch.  Simple    
+update returns FORBIDDEN if you try to change any of the important    
+properties (should do that for recurrences) and requires an    
+explicit flag to say you (think you) know what you’re doing.</p></clause>  
+<clause id="_splitting_and_linking" obligation="informative"><title>Splitting and linking</title><p id="_cbc598a4-494d-4a64-bb73-47432d777a66">The spec currently only allows for backward    
+linking to previous masters.  There is a parameter added to the    
+rule SPLIT=YES to indicate that the series was split</p>   
+<p id="_b2f6f65e-7234-4170-9cf0-277a16297498">It makes sense to have a forward link to the new(er) series.    
+However, a client/server may not know what the UID is until after    
+data is stored.  The new chain can be determined vis a query so    
+perhaps we can leave it up to the protocols to figure out that    
+mechanism.</p></clause>  
+<clause id="_caldav_queries" obligation="informative">   
+  <title>CalDAV queries</title>   
+  <p id="_7da4e863-baa9-46b3-b90e-f1d58e5d6918">If there were a better more generalised query    
+language such an extensions might be unnecessary.  Should we    
+define a query language specifically for calendaring?</p>   
+</clause></annex><annex id="appendix-b" obligation="informative">  
+  <title>Change log</title>  
+  <p id="_cbb80bd2-fa4c-4eb2-b0b7-29a39baa9fba">2017-02-12 MD Initial version</p>  
+</annex><bibliography><references id="_normative_references" obligation="informative"><title>Normative References</title>   
+<bibitem id="RFC3986">   
+  <fetched>2019-03-16</fetched>   
+  <title format="plain" language="en" script="Latn">Uniform Resource Identifier (URI): Generic Syntax</title>   
+  <uri type="src">https://www.rfc-editor.org/info/rfc3986</uri>   
+  <docidentifier type="IETF">RFC 3986</docidentifier>   
+  <docidentifier type="DOI">10.17487/RFC3986</docidentifier>   
+  <date type="published">   
+    <on>2005</on>   
+  </date>   
+  <contributor>   
+    <role type="author"/>   
+    <person>   
+      <name>   
+        <completename language="en">T. Berners-Lee</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <contributor>   
+    <role type="author"/>   
+    <person>   
+      <name>   
+        <completename language="en">R. Fielding</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <contributor>   
+    <role type="author"/>   
+    <person>   
+      <name>   
+        <completename language="en">L. Masinter</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <language>en</language>   
+  <series type="main">   
+    <title format="plain" language="en" script="Latn">STD</title>   
+    <number>66</number>   
+  </series>   
+  <series type="main">   
+    <title format="plain" language="en" script="Latn">RFC</title>   
+    <number>3986</number>   
+  </series>   
+</bibitem>   
+   
+<bibitem id="RFC5545">   
+  <fetched>2019-03-16</fetched>   
+  <title format="plain" language="en" script="Latn">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>   
+  <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>   
+  <docidentifier type="IETF">RFC 5545</docidentifier>   
+  <docidentifier type="DOI">10.17487/RFC5545</docidentifier>   
+  <date type="published">   
+    <on>2009</on>   
+  </date>   
+  <contributor>   
+    <role type="editor"/>   
+    <person>   
+      <name>   
+        <completename language="en">B. Desruisseaux</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <language>en</language>   
+  <series type="main">   
+    <title format="plain" language="en" script="Latn">RFC</title>   
+    <number>5545</number>   
+  </series>   
+</bibitem>   
+   
+<bibitem id="RFC5988">   
+  <fetched>2019-03-16</fetched>   
+  <title format="plain" language="en" script="Latn">Web Linking</title>   
+  <uri type="src">https://www.rfc-editor.org/info/rfc5988</uri>   
+  <docidentifier type="IETF">RFC 5988</docidentifier>   
+  <docidentifier type="DOI">10.17487/RFC5988</docidentifier>   
+  <date type="published">   
+    <on>2010</on>   
+  </date>   
+  <contributor>   
+    <role type="author"/>   
+    <person>   
+      <name>   
+        <completename language="en">M. Nottingham</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <language>en</language>   
+  <series type="main">   
+    <title format="plain" language="en" script="Latn">RFC</title>   
+    <number>5988</number>   
+  </series>   
+</bibitem>   
+   
+<bibitem id="RFC6638">   
+  <fetched>2019-03-16</fetched>   
+  <title format="plain" language="en" script="Latn">Scheduling Extensions to CalDAV</title>   
+  <uri type="src">https://www.rfc-editor.org/info/rfc6638</uri>   
+  <docidentifier type="IETF">RFC 6638</docidentifier>   
+  <docidentifier type="DOI">10.17487/RFC6638</docidentifier>   
+  <date type="published">   
+    <on>2012</on>   
+  </date>   
+  <contributor>   
+    <role type="author"/>   
+    <person>   
+      <name>   
+        <completename language="en">C. Daboo</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <contributor>   
+    <role type="author"/>   
+    <person>   
+      <name>   
+        <completename language="en">B. Desruisseaux</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <language>en</language>   
+  <series type="main">   
+    <title format="plain" language="en" script="Latn">RFC</title>   
+    <number>6638</number>   
+  </series>   
+</bibitem>   
+   
+<bibitem id="RFC7986">   
+  <fetched>2019-03-16</fetched>   
+  <title format="plain" language="en" script="Latn">New Properties for iCalendar</title>   
+  <uri type="src">https://www.rfc-editor.org/info/rfc7986</uri>   
+  <docidentifier type="IETF">RFC 7986</docidentifier>   
+  <docidentifier type="DOI">10.17487/RFC7986</docidentifier>   
+  <date type="published">   
+    <on>2016</on>   
+  </date>   
+  <contributor>   
+    <role type="author"/>   
+    <person>   
+      <name>   
+        <completename language="en">C. Daboo</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <language>en</language>   
+  <series type="main">   
+    <title format="plain" language="en" script="Latn">RFC</title>   
+    <number>7986</number>   
+  </series>   
+</bibitem>   
+   
+<bibitem id="I-D.daboo-caldav-attachments">   
+  <fetched>2019-03-16</fetched>   
+  <title format="plain" language="en" script="Latn">CalDAV Managed Attachments</title>   
+  <uri type="src"/>   
+  <docidentifier type="IETF">I-D.daboo-caldav-attachments</docidentifier>   
+  <date type="published">   
+    <on>2014</on>   
+  </date>   
+  <contributor>   
+    <role type="author"/>   
+    <person>   
+      <name>   
+        <completename language="en">Cyrus Daboo</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <contributor>   
+    <role type="author"/>   
+    <person>   
+      <name>   
+        <completename language="en">Arnaud Quillaud</completename>   
+      </name>   
+      <affiliation>   
+        <organization>   
+          <name>IETF</name>   
+          <abbreviation>IETF</abbreviation>   
+        </organization>   
+      </affiliation>   
+    </person>   
+  </contributor>   
+  <language>en</language>   
+  <series type="main">   
+    <title format="plain" language="en" script="Latn">Internet-Draft</title>   
+    <number>draft-daboo-caldav-attachments-03</number>   
+  </series>   
+</bibitem>   
+<bibitem id="W3C.REC-xml-20060816">   
+  <formattedref format="application/x-isodoc+xml"><em>World Wide Web Consortium Recommendation REC-xml-20060816: Extensible Markup Language (XML) 1.0 (Fourth Edition)</em>, Bray, T., Paoli, J., Sperberg-McQueen, M., Maler, E., and F. Yergeau, August 2006, <link target="http://www.w3.org/TR/2006/REC-xml-20060816"/>.</formattedref>   
+  <docidentifier>W3C REC xml-20060816</docidentifier>   
+</bibitem><bibitem id="W3C.WD-xptr-xpointer-20021219">   
+  <formattedref format="application/x-isodoc+xml">Steven DeRose, Ron Daniel, Eve Maler. <em>XPointer xpointer() Scheme.</em> 2002. <link target="http://www.w3.org/TR/2002/WD-xptr-xpointer-20021219"/>   
+Z</formattedref>   
+  <docidentifier>W3C WD xptr-xpointer-20021219</docidentifier>   
+</bibitem></references><references id="_bibliography" obligation="informative">  
+  <title>Bibliography</title>  
 </references></bibliography>
 </csd-standard>

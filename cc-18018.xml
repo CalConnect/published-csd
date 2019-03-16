@@ -38,79 +38,79 @@
     <technical-committee>Ad Hoc EU Time</technical-committee> 
   </editorialgroup> 
 </bibdata>
-<sections><clause id="_summary" obligation="normative"><title>Summary</title><p id="_0354bf8f-f5e9-4a5f-8328-b86de8435ffc">The European Commission has proposed, after public consultation, its member states to discontinue daylight savings time (DST), effective October 2019. Its member states have to decide whether to implement the change by March 2019. Several governments and organizations have since expressed concerns on such a tight timeline for the far-reaching change.</p>  
-<p id="_33366e48-4c7a-405b-9089-b789707c448e"><link target="https://calconnect.org">The Calendaring and Scheduling Consortium</link>, a global non-profit organization widely known as <link target="https://calconnect.org">CalConnect</link>, shares these concerns and recommends the European Commission to extend the timelines stated in the proposal.</p>  
-<p id="_7597502b-1a44-4b1d-ab2b-797ba2609341">Specifically, we recommend providing a transition period of at least one year (12 months) after the final decision of the change has been set. CalConnect will host a public workshop at its next conference, and has just launched a public mailing list for the discussion of best practices for planning new time zone changes.</p></clause> 
-<clause id="_the_european_commission_proposal" obligation="normative"><title>The European Commission proposal</title><p id="_715ae523-3353-4f0a-bf25-89ce52a7e124">The European Commission has proposed to require European Union (EU) member states to decide whether to permanently keep summer or winter time, from the date of 1 April 2019 onwards  (<link target="https://ec.europa.eu/commission/sites/beta-political/files/soteu2018-discontinuing-seasonal-changes-time-directive-639_en.pdf">Proposal for discontinuing seasonal changes of time and repealing Directive 2000/84/EC</link>). For countries opting for permanent winter time, the last daylight saving time change will occur in October 2019.</p>  
-<p id="_00e47047-702a-4754-af7d-1f05344c22cb">This proposal was made in response to the corresponding public consultation that ended in August 2018, where the majority of participating EU citizens have voted for the abandonment of daylight savings time in the EU.</p>  
-<p id="_f3a6a19c-d987-4ad2-a2f7-6c92015bec26">Specifically, the timeline specified in this proposal only gives EU member states 6 months of lead time from the decision date of March 2019 (since the adoption date is set to 1 April 2019) to the effective date of October 2019.</p>  
-<clause id="_our_concerns" obligation="normative"><title>Our concerns</title><p id="_3b9e44af-da6d-4124-bbe4-2841cb55c14d">We are concerned about the short notice of the proposed timing of this change. CalConnect is intimately aware of potential repercussions of such a change with short notice. We comprise of technology vendors and end-user organizations focused on the areas of date and time, calendaring, scheduling as well as time zone issues.</p>   
-<p id="_1e3df162-424a-4954-8af9-afbfcb555d62">Practical experience from similar changes in the past indicates that such changes pose serious risks to the accuracy of stored time-related data and schedules (such as meetings, appointments, flights and transit schedules).</p>   
-<p id="_ce4ec174-dfaf-49dc-b02c-47ee722579c0">Users of services and products that depend on correct time zone information — universities, companies of all sizes, and many other types of organizations, as well as their suppliers — will face a major challenge that requires them to assess what software and hardware is affected, what update mechanisms are in place, and the mitigation measures necessary to be put in place.</p>   
-<p id="_e8520bdd-9bff-4964-9d03-aa421dfb531d">While customers need adequate time for budgeting, procurement, and installation of upgrades or replacements for this change, vendors also need time to plan out the necessary product changes and perform sufficient testing, all while being pressured to meet market needs and fulfil regulatory compliance. An ​extended​ timeline will benefit all parties.</p></clause>  
-<clause id="_change_management" obligation="normative"><title>Change management</title><p id="_d19f7fce-03c6-4a47-829b-460200923c2b">Serious technical and operational problems can occur with an insufficient timeline given for time zone changes.</p>   
-<p id="_280d5962-6c55-425c-885f-05c316108846">A number of time zone related changes performed in the past of different jurisdictions, were implemented without consideration of best practices and adequate planning, and have left user organizations, especially small and medium businesses, scrambling and suffering from the effects of using incorrect timezone information.</p>   
-<p id="_86619084-c100-4153-992f-449d4ac7040c">We strongly suggest extending the effective date of October 2019 to allow consumers and technology vendors alike ample time to prepare for the planned change. We recommend a transition period of at least one year according to our experience.</p></clause></clause> 
-<clause id="_what_calconnect_is_doing_to_help_the_transition" obligation="normative"><title>What CalConnect is doing to help the transition</title><p id="_1f0bf425-aa02-4f9a-b605-8f3da5a523fc">CalConnect is pursuing a number of initiatives in order to assist policy makers and IT specialists in implementing the proposed time zone changes.</p>  
-<clause id="_public_workshop" obligation="normative"><title>Public workshop</title><p id="_8560b666-352a-49d9-8c81-e1e2159ed13c">CalConnect is organizing a public workshop dedicated to the EU proposal for abolishment of seasonal time change at our next conference in Zurich (Feb 4-8, 2019).</p>   
-<p id="_23f6a22d-a2e1-4b1f-b742-43eb6d527103">We call on all stakeholders (e.g., vendors, consumers, policymakers) interested in, or affected by this Directive, to    
+<sections><clause id="_summary" obligation="normative"><title>Summary</title><p id="_297d9b22-ebff-40a7-905b-720fb6970176">The European Commission has proposed, after public consultation, its member states to discontinue daylight savings time (DST), effective October 2019. Its member states have to decide whether to implement the change by March 2019. Several governments and organizations have since expressed concerns on such a tight timeline for the far-reaching change.</p>  
+<p id="_9cf99cde-9f1a-45a5-bd01-1525489ae14b"><link target="https://calconnect.org">The Calendaring and Scheduling Consortium</link>, a global non-profit organization widely known as <link target="https://calconnect.org">CalConnect</link>, shares these concerns and recommends the European Commission to extend the timelines stated in the proposal.</p>  
+<p id="_e14199d9-3ece-4312-84e0-135af9f7867b">Specifically, we recommend providing a transition period of at least one year (12 months) after the final decision of the change has been set. CalConnect will host a public workshop at its next conference, and has just launched a public mailing list for the discussion of best practices for planning new time zone changes.</p></clause> 
+<clause id="_the_european_commission_proposal" obligation="normative"><title>The European Commission proposal</title><p id="_84d57e50-3a1b-4217-8ced-32edf608ae8d">The European Commission has proposed to require European Union (EU) member states to decide whether to permanently keep summer or winter time, from the date of 1 April 2019 onwards  (<link target="https://ec.europa.eu/commission/sites/beta-political/files/soteu2018-discontinuing-seasonal-changes-time-directive-639_en.pdf">Proposal for discontinuing seasonal changes of time and repealing Directive 2000/84/EC</link>). For countries opting for permanent winter time, the last daylight saving time change will occur in October 2019.</p>  
+<p id="_9fea311d-22d7-41ae-b63a-5fb6586f35bf">This proposal was made in response to the corresponding public consultation that ended in August 2018, where the majority of participating EU citizens have voted for the abandonment of daylight savings time in the EU.</p>  
+<p id="_cc0a7125-f452-4421-94da-775ac506ff10">Specifically, the timeline specified in this proposal only gives EU member states 6 months of lead time from the decision date of March 2019 (since the adoption date is set to 1 April 2019) to the effective date of October 2019.</p>  
+<clause id="_our_concerns" obligation="normative"><title>Our concerns</title><p id="_45fe3f20-8d97-4e5f-9ab1-02d9edf5730e">We are concerned about the short notice of the proposed timing of this change. CalConnect is intimately aware of potential repercussions of such a change with short notice. We comprise of technology vendors and end-user organizations focused on the areas of date and time, calendaring, scheduling as well as time zone issues.</p>   
+<p id="_cc58a762-97de-48b0-89a0-de39319395f2">Practical experience from similar changes in the past indicates that such changes pose serious risks to the accuracy of stored time-related data and schedules (such as meetings, appointments, flights and transit schedules).</p>   
+<p id="_ce2dfcf3-aa91-4da2-b7a6-a78ecea1d6a6">Users of services and products that depend on correct time zone information — universities, companies of all sizes, and many other types of organizations, as well as their suppliers — will face a major challenge that requires them to assess what software and hardware is affected, what update mechanisms are in place, and the mitigation measures necessary to be put in place.</p>   
+<p id="_afd41696-9937-417b-80e5-e40563e7d15b">While customers need adequate time for budgeting, procurement, and installation of upgrades or replacements for this change, vendors also need time to plan out the necessary product changes and perform sufficient testing, all while being pressured to meet market needs and fulfil regulatory compliance. An ​extended​ timeline will benefit all parties.</p></clause>  
+<clause id="_change_management" obligation="normative"><title>Change management</title><p id="_10690298-b76b-4f12-aeaf-258cb5749163">Serious technical and operational problems can occur with an insufficient timeline given for time zone changes.</p>   
+<p id="_8d5936b4-9b1f-4459-8c1a-4adbad03e717">A number of time zone related changes performed in the past of different jurisdictions, were implemented without consideration of best practices and adequate planning, and have left user organizations, especially small and medium businesses, scrambling and suffering from the effects of using incorrect timezone information.</p>   
+<p id="_0a621c61-dd3a-482b-8d07-48100ab76d9f">We strongly suggest extending the effective date of October 2019 to allow consumers and technology vendors alike ample time to prepare for the planned change. We recommend a transition period of at least one year according to our experience.</p></clause></clause> 
+<clause id="_what_calconnect_is_doing_to_help_the_transition" obligation="normative"><title>What CalConnect is doing to help the transition</title><p id="_a1e1bff8-2fe5-464f-91f0-9260188cc800">CalConnect is pursuing a number of initiatives in order to assist policy makers and IT specialists in implementing the proposed time zone changes.</p>  
+<clause id="_public_workshop" obligation="normative"><title>Public workshop</title><p id="_e71fca88-9e1f-424c-815a-27d50bbb1d87">CalConnect is organizing a public workshop dedicated to the EU proposal for abolishment of seasonal time change at our next conference in Zurich (Feb 4-8, 2019).</p>   
+<p id="_f05eadc5-f252-408e-bd82-3394a3b2ee3a">We call on all stakeholders (e.g., vendors, consumers, policymakers) interested in, or affected by this Directive, to    
 <link target="​http://www.calconnect.org/events/calconnect-xliv-february-4-8-2019">register</link>    
 and participate in the workshop.</p></clause>  
-<clause id="_timezone_distribution_standard" obligation="normative"><title>Timezone distribution standard</title><p id="_cce5eba4-c2a1-42d6-8a83-3e05c3899a3e">Our members have created the standard for <link target="https://tools.ietf.org/html/rfc7808">Time Zone Data Distribution Services (IETF RFC 7808)</link>. Today, most services and devices still rely on patching and manually updating time zone information instead of automated or dynamic updates.</p>   
-<p id="_d4d71e28-3788-44ed-9ffb-f7dd51b04dd1">We recommend the European Commission to strongly a support, collaborate on and call for adoption of of such open standards.</p></clause>  
-<clause id="_coordinated_global_effort_with_isotc_154" obligation="normative"><title>Coordinated global effort with ISO/TC 154</title><p id="_355ec5d0-785d-47b7-8a26-e9a6109ffdb6">We are working closely with other standards-setting organisations (including <link target="https://www.iso.org/committee/53186.html">ISO/TC 154</link> and <link target="https://www.unece.org">UNECE</link>) to harmonize timezone information and distribution internationally.</p>   
-<p id="_d9eadced-0cf8-4c15-8189-ee8d54077162">We recommend regional standardization bodies in the European Union, such as <link target="https://www.cen.eu">CEN</link> and <link target="https://www.cenelec.eu">CENELECT</link>, as well as standardization bodies in its member countries, to participate in this global partnership.</p></clause>  
+<clause id="_timezone_distribution_standard" obligation="normative"><title>Timezone distribution standard</title><p id="_54ef21eb-799c-4f11-9c3a-05e1c0a8829b">Our members have created the standard for <link target="https://tools.ietf.org/html/rfc7808">Time Zone Data Distribution Services (IETF RFC 7808)</link>. Today, most services and devices still rely on patching and manually updating time zone information instead of automated or dynamic updates.</p>   
+<p id="_e5c09c58-ed26-4e80-80a9-8d6ef3fefef0">We recommend the European Commission to strongly a support, collaborate on and call for adoption of of such open standards.</p></clause>  
+<clause id="_coordinated_global_effort_with_isotc_154" obligation="normative"><title>Coordinated global effort with ISO/TC 154</title><p id="_af3e674e-742d-4c14-903d-7a53190c7922">We are working closely with other standards-setting organisations (including <link target="https://www.iso.org/committee/53186.html">ISO/TC 154</link> and <link target="https://www.unece.org">UNECE</link>) to harmonize timezone information and distribution internationally.</p>   
+<p id="_b2b53142-01dd-443a-922e-2ade5ae80ccc">We recommend regional standardization bodies in the European Union, such as <link target="https://www.cen.eu">CEN</link> and <link target="https://www.cenelec.eu">CENELECT</link>, as well as standardization bodies in its member countries, to participate in this global partnership.</p></clause>  
 <clause id="_public_timezone_change_mailing_list" obligation="normative">   
   <title>Public timezone change mailing list</title>   
-  <p id="_2d6015a9-971c-4200-b4ec-9d5ad64339f2">We have set up a public mailing list to discuss the challenges and best practices relating to timezone and DST changes worldwide at: <link target="http://www.calconnect.org/resources/discussion-lists/time-zone-discussion"/>.</p>   
+  <p id="_ce889377-636f-43ef-8a6a-88073eef2210">We have set up a public mailing list to discuss the challenges and best practices relating to timezone and DST changes worldwide at: <link target="http://www.calconnect.org/resources/discussion-lists/time-zone-discussion"/>.</p>   
 </clause></clause> 
-<clause id="_contact" obligation="normative"><title>Contact</title><p id="_ab08ba42-a387-48c7-8a75-ea4982a45f68">For further information or to discuss these issues, please contact:</p>  
-<ul id="_1e8e4964-10be-4078-9dc1-97bb5d75ccfb">   
+<clause id="_contact" obligation="normative"><title>Contact</title><p id="_e0ad808a-3e95-4e1c-9000-3458aa08152b">For further information or to discuss these issues, please contact:</p>  
+<ul id="_9d665676-e6ba-4bf2-a95e-af7282f530b0">   
   <li>   
-    <p id="_4f3be47a-1e64-4f06-bdc7-13bae927f46a">Rutger Geelen, President <link target="mailto:rutger.geelen@calconnect.org"/> ; or</p>   
+    <p id="_4807be2b-eeae-4030-9753-8a95ab6c45d5">Rutger Geelen, President <link target="mailto:rutger.geelen@calconnect.org"/> ; or</p>   
   </li>   
   <li>   
-    <p id="_7b737d26-f98c-43e5-8660-412fa94287ad">Dave Thewlis, Executive Director <link target="mailto:dave.thewlis@calconnect.org"/> .</p>   
+    <p id="_f9d85d9d-5252-4d8a-9685-b32cf7b67463">Dave Thewlis, Executive Director <link target="mailto:dave.thewlis@calconnect.org"/> .</p>   
   </li>   
 </ul></clause> 
 <clause id="_about_calconnect" obligation="normative">  
   <title>About CalConnect</title>  
-  <p id="_f63f0825-2310-4e29-9533-0737b7949d54">   
+  <p id="_825af664-13d2-4487-baf5-2eb11c4ac06a">   
   <em>CalConnect, the Calendaring &amp; Scheduling Consortium, pursues the wide availability of truly interoperable collaboration tools through the use of open standards. We are the authoritative voice of calendaring and scheduling; much of our work touches on, or is applicable to, other collaboration technologies. See more at <link target="https://www.calconnect.org">www.calconnect.org</link>.</em>   
 </p>  
 </clause> 
-<clause id="_references" obligation="normative"><title>References</title><p id="_4fa85d99-f07d-4344-9f39-d7447c9440a1">Articles relating to this proposal</p>  
-<ul id="_45c134a0-d940-4036-9120-e71af628e227">   
+<clause id="_references" obligation="normative"><title>References</title><p id="_a4eed7ed-941f-4805-9119-35d11536890a">Articles relating to this proposal</p>  
+<ul id="_550fb602-beb5-4ea8-b414-917a71a82132">   
   <li>   
-    <p id="_01b165d4-5caa-460a-b107-087152bcbf41"><em>Abschaffung der Zeitumstellung braucht mehr Zeit</em>,  <link target="https://www.stuttgarter-nachrichten.de/inhalt.eu-abschaffung-der-zeitumstellung-braucht-mehr-zeit.7a2c1f71-0dc7-4a3f-a2be-e7653f36948c.html"/></p>   
+    <p id="_f242d5d6-f17f-44cf-86e4-dbc8fb03ffc6"><em>Abschaffung der Zeitumstellung braucht mehr Zeit</em>,  <link target="https://www.stuttgarter-nachrichten.de/inhalt.eu-abschaffung-der-zeitumstellung-braucht-mehr-zeit.7a2c1f71-0dc7-4a3f-a2be-e7653f36948c.html"/></p>   
   </li>   
   <li>   
-    <p id="_0b86fc6b-1e65-46e1-b8d6-92c933d6f132"><em>EU members complain about a lack of detail and a tight timeline</em>, <link target="https://www.politico.eu/article/countries-resist-jean-claude-juncker-daylight-saving-clock-change-plan/"/></p>   
+    <p id="_a8ce8156-0c50-43d5-8f97-b6c9b8a81075"><em>EU members complain about a lack of detail and a tight timeline</em>, <link target="https://www.politico.eu/article/countries-resist-jean-claude-juncker-daylight-saving-clock-change-plan/"/></p>   
   </li>   
   <li>   
-    <p id="_5019ea0b-0b6d-469b-b5f1-2c00e049dee8"><em>IANA statement</em>,   
+    <p id="_e2cc3902-d982-4170-b92f-f8ebf2ab6c93"><em>IANA statement</em>,   
 <link target="https://mm.icann.org/pipermail/tz/2018-July/026705.html">​https://mm.icann.org/pipermail/tz/2018-July/026705.html</link></p>   
   </li>   
   <li>   
-    <p id="_4e223c21-4a7b-4165-bd4d-d3d6751a093b"><em>Mit dem Ende der Zeitumstellung droht ein neues Jahr-2000-Problem</em>,   
+    <p id="_6cb6fd7f-4264-408c-bd8b-071619b4b496"><em>Mit dem Ende der Zeitumstellung droht ein neues Jahr-2000-Problem</em>,   
 <link target="https://newsroom.gmx.net/2018/10/26/ende-der-zeitumstellung-moegliche-folgen-es-droht-ein-neues-jahr-2000-problem/"/></p>   
   </li>   
 </ul>  
-<p id="_81f2797a-1eaf-4820-aab2-e84ad673abd7">Articles relating to past time changes and their challenges</p>  
-<ul id="_b5e0ccc4-1874-4a7f-bb4c-7b43f1f8f961">   
+<p id="_ed73d646-823f-4edd-aed2-237b148e12cb">Articles relating to past time changes and their challenges</p>  
+<ul id="_d17dc39b-aacd-48d1-955b-3af22b101597">   
   <li>   
-    <p id="_e5238242-5c57-4a3b-9c9e-7521ea8dbd7c"><em>What is the daylight saving time (DST) problem?</em>,   
+    <p id="_a51184b1-b8a5-43e0-afa5-6fa83a17600c"><em>What is the daylight saving time (DST) problem?</em>,   
 <link target="https://www.itprotoday.com/management-mobility/what-daylight-saving-time-dst-problem"/></p>   
   </li>   
   <li>   
-    <p id="_0961a9bd-7738-4014-a925-cb908ea7de88"><em>Daylight Saving Time – The Year 2007 Problem</em>,   
+    <p id="_46c26e28-7544-427f-b4a7-e725c2f4ddb6"><em>Daylight Saving Time – The Year 2007 Problem</em>,   
 <link target="http://www.edgeblog.net/2007/daylight-saving-time-the-year-2007-problem/"/></p>   
   </li>   
 </ul>  
-<p id="_a5d51a0c-f47e-48ae-b88c-c947eb8f5bd0">CalConnect Timezone and DST knowledge base</p>  
-<ul id="_38ae1545-b09d-46c5-a84c-709d421eec83">   
+<p id="_46064f48-13c7-402e-a0f9-bf1ba7588647">CalConnect Timezone and DST knowledge base</p>  
+<ul id="_6d3236f2-0a11-4829-bbec-a85821c9af37">   
   <li>   
-    <p id="_d0b82971-7499-4dfe-bbc9-a598fc80f1e5">   
+    <p id="_0d8ead18-0d89-4041-9427-7b6f965a06f3">   
       <link target="https://www.calconnect.org/resources/daylight-saving-time"/>   
     </p>   
   </li>   

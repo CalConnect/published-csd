@@ -38,66 +38,66 @@
     <technical-committee>IOPTEST</technical-committee> 
   </editorialgroup> 
 </bibdata>
-<preface><foreword obligation="informative"><title>Foreword</title><p id="_c1341892-d8a9-4d8d-a64b-9945116abff7">The Calendaring and Scheduling Consortium (“CalConnect”) is global non-profit   
+<preface><foreword obligation="informative"><title>Foreword</title><p id="_6ec4ad38-7210-4677-8b75-2e33ad7746f0">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit   
 organization with the aim to facilitate interoperability of technologies across   
 user-centric systems and applications.</p>  
-<p id="_600e4777-e1d2-469d-9c46-0e9eda3482ec">CalConnect works closely with liaison partners including international   
+<p id="_4599b0e9-3de9-438a-a65b-64e695115913">CalConnect works closely with liaison partners including international   
 organizations such as ISO, OASIS and M3AAWG.</p>  
-<p id="_54f4e5e8-5738-42ff-9125-04f5523b6235">The procedures used to develop this document and those intended for its further   
+<p id="_82368618-9e52-4c70-adfc-ff1df7c7e41c">The procedures used to develop this document and those intended for its further   
 maintenance are described in the CalConnect Directives.</p>  
-<p id="_ce6ca46d-5757-47e5-aaba-c56859d69e6a">In particular the different approval criteria needed for the different types of   
+<p id="_31944359-cc61-4e1b-b565-e7a485beca5f">In particular the different approval criteria needed for the different types of   
 ISO documents should be noted. This document was drafted in accordance with the   
 editorial rules of the CalConnect Directives.</p>  
-<p id="_2a841633-f3b1-47be-b104-60afc4538806">Attention is drawn to the possibility that some of the elements of this   
+<p id="_defe51b9-c0fb-4623-92c7-7e6f872a620b">Attention is drawn to the possibility that some of the elements of this   
 document may be the subject of patent rights. CalConnect shall not be held responsible   
 for identifying any or all such patent rights. Details of any patent rights   
 identified during the development of the document will be in the Introduction   
 and/or on the CalConnect list of patent declarations received (see   
 www.calconnect.com/patents).</p>  
-<p id="_99fc249d-1f15-465c-9559-dbb95f692ec7">Any trade name used in this document is information given for the convenience   
+<p id="_db31c3c6-84ca-4d7b-a1ae-fda6ce959690">Any trade name used in this document is information given for the convenience   
 of users and does not constitute an endorsement.</p>  
-<p id="_e1beeff2-113a-424f-9168-3c01b5b64652">This document was prepared by Technical Committee <em>IOPTEST</em>.</p></foreword></preface><sections> 
-<clause id="_report" obligation="normative"><title>Report</title><p id="_03b7b25a-ad7a-4a60-aec9-66b27e9d2390">The event was hosted by the University of California, Irvine, in Irvine California on February 13-15, 2017</p>  
-<p id="_be769380-17c0-46e8-84cf-b528be2e2e26">The participants in this event were:</p>  
-<ul id="_e8367f67-2035-4d0d-8c55-c95574cee884">   
+<p id="_b46772f0-0ec4-4c54-9112-ec342e3e089c">This document was prepared by Technical Committee <em>IOPTEST</em>.</p></foreword></preface><sections> 
+<clause id="_report" obligation="normative"><title>Report</title><p id="_9e5d8069-8371-4299-b3da-291603580cad">The event was hosted by the University of California, Irvine, in Irvine California on February 13-15, 2017</p>  
+<p id="_081637b0-f3ee-40b9-bd0d-533543c2b5ea">The participants in this event were:</p>  
+<ul id="_2713a55e-b4dc-4b2c-8bb8-044bcbc03a2b">   
   <li>   
-    <p id="_b5a488e1-aa99-4de9-a156-7ac7e8eedbbe">1and1</p>   
+    <p id="_45a8c5f6-0a7f-49c2-a90c-3d3b486c37e1">1and1</p>   
   </li>   
   <li>   
-    <p id="_ed7c193b-43fc-4041-91c1-06733f04662a">AOL</p>   
+    <p id="_9f0edf61-0ac0-40ed-a17e-a9dd0d4f17c5">AOL</p>   
   </li>   
   <li>   
-    <p id="_c9d5b742-a359-4e20-be7e-c460b689d494">Apple</p>   
+    <p id="_c60a43a2-e87f-4c08-b010-bdfc68851f66">Apple</p>   
   </li>   
   <li>   
-    <p id="_9bb7c567-aa3a-484a-aec4-a87dc4db58cb">FastMail</p>   
+    <p id="_8b3c3513-1f77-4ed1-9e45-28f682a16e1b">FastMail</p>   
   </li>   
   <li>   
-    <p id="_8dcc46a5-2471-497c-bdfd-ad6e1ff54cf1">Google</p>   
+    <p id="_5d975acb-fe6e-4f0c-b6fa-5d03691d1210">Google</p>   
   </li>   
   <li>   
-    <p id="_561b3e87-43d3-4406-9bee-5421cfbd8e32">SCG (Bedework)</p>   
+    <p id="_ded28fea-b196-4dc4-88e7-6bee3d14005f">SCG (Bedework)</p>   
   </li>   
   <li>   
-    <p id="_f19ab377-5d7b-45f8-8a7f-e45e06eb9464">Zimbra</p>   
-  </li>   
-</ul>  
-<p id="_a6794343-fa93-41ba-8372-71ea2883a1ef">There were a number of areas some or all of us were interested in pursuing. These included:</p>  
-<ul id="_ea981711-0de0-4255-9eee-4f06d06ac9a8">   
-  <li>   
-    <p id="_ae88ba7b-0421-418b-89e3-c86ad58e1810">For the Java people bringing ourselves up to date with the latest ical4j</p>   
-  </li>   
-  <li>   
-    <p id="_806d7f54-95d2-4356-99de-3f5dad1ae8b2">Coming up with a way of handling updates to the caldav tester suite.</p>   
-  </li>   
-  <li>   
-    <p id="_24b3c96d-640f-43a6-9390-b2c5402e8b9d">Discussions on developer guide directions</p>   
+    <p id="_04ea9ccb-d19d-4a8e-a597-76e620f18567">Zimbra</p>   
   </li>   
 </ul>  
-<p id="_49646577-dfca-4298-a45d-d17f2efb9067">There were the usual crop of issues that attendees wanted to address. iMIP has been a major topic lately and the forum provided an opportunity for some members to deal with problems they had been experiencing.</p>  
-<p id="_8ade3023-f6bc-4cc1-8256-d45e49838efd">Ical4j has been the topic of much discussion for some months. We used this session as an opportunity to work on bringing ourselves up to date with the latest version - or at least investigating how much work it would be. 1&amp;1, Bedework, Zimbra and AOL were present and are users of iCal4j. In the coming months we will discuss what changes we would like to see made to that library.</p>  
-<p id="_548710fd-db49-4291-baf5-b5f668dd342c">At the Dresden meeting we decided to create a CalConnect fork of the Darwin CalDAV tester and work on some of the tests to make them more usable for non-Apple servers. In the intervening period some changes were proposed and we spent some time this meeting discussing how we might get these changes merged back into the CalConnect fork. The intent is to come up with a subset of tests that any server developer should be able to run and expect to get a 100% success rate. A number of us have localized versions of the tester and we would like to merge many of these changes into the CalConnect version so that they can benefit everybody.</p>  
-<p id="_be78b321-8a2d-45fa-aa63-e28640deb2c6">The meeting was a chance to carry out some of the internal changes to the developer guide that had been contemplated. These should make it easier to organize the content in the future.</p>  
-<p id="_2f67ef13-85d5-4772-ae89-3ab9e07b9a86">There was further discussion on the new data model being worked on by TC API and its JSON representation.</p>  
-<p id="_736dee80-5b50-4aab-b1d0-341c9eddbdee">We also spent some time talking over the issue of calendar spam and how this differs, if at all, from email spam. This allowed us to collect our thoughts ready for a wider discussion in the conference that followed. While calendar spam has not been a major ongoing issue it has already caused some problems and we need to be ready to deal with the inevitable.</p></clause></sections>
+<p id="_8fefcd52-ecb5-45e4-8f42-394c13d7026f">There were a number of areas some or all of us were interested in pursuing. These included:</p>  
+<ul id="_95512948-fb0b-41b5-9892-bb5a9a3a970b">   
+  <li>   
+    <p id="_9b5c2a7e-19c7-4118-b624-eec8a8b5816d">For the Java people bringing ourselves up to date with the latest ical4j</p>   
+  </li>   
+  <li>   
+    <p id="_c4b2870a-d09d-444d-9463-5c4da5b0bebf">Coming up with a way of handling updates to the caldav tester suite.</p>   
+  </li>   
+  <li>   
+    <p id="_36c6dfd9-8523-451a-9bf7-6808d5eaa015">Discussions on developer guide directions</p>   
+  </li>   
+</ul>  
+<p id="_11f0a689-6706-4034-ac17-79c47b0e45e4">There were the usual crop of issues that attendees wanted to address. iMIP has been a major topic lately and the forum provided an opportunity for some members to deal with problems they had been experiencing.</p>  
+<p id="_61d87f00-d257-4fad-939e-6285c3f4c805">Ical4j has been the topic of much discussion for some months. We used this session as an opportunity to work on bringing ourselves up to date with the latest version - or at least investigating how much work it would be. 1&amp;1, Bedework, Zimbra and AOL were present and are users of iCal4j. In the coming months we will discuss what changes we would like to see made to that library.</p>  
+<p id="_733aa62c-51c7-4c5f-850b-bf66c191d086">At the Dresden meeting we decided to create a CalConnect fork of the Darwin CalDAV tester and work on some of the tests to make them more usable for non-Apple servers. In the intervening period some changes were proposed and we spent some time this meeting discussing how we might get these changes merged back into the CalConnect fork. The intent is to come up with a subset of tests that any server developer should be able to run and expect to get a 100% success rate. A number of us have localized versions of the tester and we would like to merge many of these changes into the CalConnect version so that they can benefit everybody.</p>  
+<p id="_accc8e93-2d10-48f6-83c6-a0ffd29ce6f3">The meeting was a chance to carry out some of the internal changes to the developer guide that had been contemplated. These should make it easier to organize the content in the future.</p>  
+<p id="_999ac56c-7cc3-4ca7-ac91-6ca89094fb4b">There was further discussion on the new data model being worked on by TC API and its JSON representation.</p>  
+<p id="_495e2710-2a8c-468d-87a3-112805e18839">We also spent some time talking over the issue of calendar spam and how this differs, if at all, from email spam. This allowed us to collect our thoughts ready for a wider discussion in the conference that followed. While calendar spam has not been a major ongoing issue it has already caused some problems and we need to be ready to deal with the inevitable.</p></clause></sections>
 </csd-standard>
