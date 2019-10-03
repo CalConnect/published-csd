@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="advisory"> 
-  <title language="en" format="text/plain">CalConnect calls on EU to reconsider timeline for proposed seasonal time changes: Workshop and mailing list announced to discuss technical impact of planned changes</title> 
-  <docidentifier type="csd">CC/Adv 18018:2018</docidentifier> 
-  <docnumber>18018</docnumber> 
-  <date type="published"> 
-    <on>2018-10-30</on> 
-  </date> 
-  <contributor> 
-    <role type="author"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <contributor> 
-    <role type="publisher"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <edition>1</edition> 
-  <version> 
-    <revision-date>2018-10-30</revision-date> 
-  </version> 
-  <language>en</language> 
-  <script>Latn</script> 
-  <status format="plain">published</status> 
-  <copyright> 
-    <from>2018</from> 
-    <owner> 
-      <organization> 
-        <name>CalConnect</name> 
-      </organization> 
-    </owner> 
-  </copyright> 
-  <editorialgroup> 
-    <technical-committee>Ad Hoc EU Time</technical-committee> 
-  </editorialgroup> 
+<bibdata type="advisory">
+  <title format="text/plain" language="en">CalConnect calls on EU to reconsider timeline for proposed seasonal time changes: Workshop and mailing list announced to discuss technical impact of planned changes</title>
+  <docidentifier type="CC">CC/Adv 18018:2018</docidentifier>
+  <docnumber>18018</docnumber>
+  <date type="published">
+    <on>2018</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2018-10-30</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>published</stage>
+  </status>
+  <copyright>
+    <from>2018</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>advisory</doctype>
+    <editorialgroup>
+      <technical-committee>Ad Hoc EU Time</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <sections><clause id="_summary" obligation="normative"><title>Summary</title><p id="_297d9b22-ebff-40a7-905b-720fb6970176">The European Commission has proposed, after public consultation, its member states to discontinue daylight savings time (DST), effective October 2019. Its member states have to decide whether to implement the change by March 2019. Several governments and organizations have since expressed concerns on such a tight timeline for the far-reaching change.</p>  
 <p id="_9cf99cde-9f1a-45a5-bd01-1525489ae14b"><link target="https://calconnect.org">The Calendaring and Scheduling Consortium</link>, a global non-profit organization widely known as <link target="https://calconnect.org">CalConnect</link>, shares these concerns and recommends the European Commission to extend the timelines stated in the proposal.</p>  

@@ -1,59 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="report"> 
-  <title language="en" format="text/plain">Calendar operator practices — Guidelines to protect against calendar abuse</title> 
-  <docidentifier type="csd">CC/R 18003:2019</docidentifier> 
-  <docnumber>18003</docnumber> 
-  <date type="published"> 
-    <on>2019-01-18</on> 
-  </date> 
-  <contributor> 
-    <role type="author"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <contributor> 
-    <role type="author"/> 
-    <person> 
-      <name> 
-        <completename>Thomas Schäfer, 1&amp;amp;1 Mail&amp;amp;Media Development and Technology GmbH</completename> 
-      </name> 
-    </person> 
-  </contributor> 
-  <contributor> 
-    <role type="author"/> 
-    <person> 
-      <name> 
-        <completename>Jesse Thompson, University of Wisconsin-Madison</completename> 
-      </name> 
-    </person> 
-  </contributor> 
-  <contributor> 
-    <role type="publisher"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <edition>1</edition> 
-  <version> 
-    <revision-date>2019-01-18</revision-date> 
-     
-  </version> 
-  <language>en</language> 
-  <script>Latn</script> 
-  <status format="plain">published</status> 
-  <copyright> 
-    <from>2019</from> 
-    <owner> 
-      <organization> 
-        <name>CalConnect</name> 
-      </organization> 
-    </owner> 
-  </copyright> 
-  <editorialgroup> 
-    <technical-committee>CALSPAM</technical-committee> 
-  </editorialgroup> 
+<bibdata type="report">
+  <title format="text/plain" language="en">Calendar operator practices — Guidelines to protect against calendar abuse</title>
+  <docidentifier type="CC">CC/R 18003:2019</docidentifier>
+  <docnumber>18003</docnumber>
+  <date type="published">
+    <on>2019</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Thomas Schäfer, 1&amp;amp;1 Mail&amp;amp;Media Development and Technology GmbH</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Jesse Thompson, University of Wisconsin-Madison</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2019-01-18</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>published</stage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>report</doctype>
+    <editorialgroup>
+      <technical-committee>CALSPAM</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <preface><foreword obligation="informative"><title>Foreword</title><p id="_99ba5964-95b5-4607-99f7-deea0a65e250">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit   
 organization with the aim of facilitating interoperability of technologies across   

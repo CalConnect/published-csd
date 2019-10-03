@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
 <bibdata type="directive">
-  <title language="en" format="text/plain">Guidelines for the implementation of the CalConnect patent policy</title>
-  <docidentifier type="csd">CC/DIR 10005:2019</docidentifier>
+  <title format="text/plain" language="en">Guidelines for the implementation of the CalConnect patent policy</title>
+  <docidentifier type="CC">CC/DIR 10005:2019</docidentifier>
   <docnumber>10005</docnumber>
   <date type="published">
-    <on>2019-06-05</on>
+    <on>2019</on>
   </date>
   <contributor>
     <role type="author"/>
@@ -22,11 +22,12 @@
   <edition>1</edition>
   <version>
     <revision-date>2019-06-05</revision-date>
-    
   </version>
   <language>en</language>
   <script>Latn</script>
-  <status format="plain">published</status>
+  <status>
+    <stage>published</stage>
+  </status>
   <copyright>
     <from>2019</from>
     <owner>
@@ -35,9 +36,12 @@
       </organization>
     </owner>
   </copyright>
-  <editorialgroup>
-    <technical-committee>PUBLISH</technical-committee>
-  </editorialgroup>
+  <ext>
+    <doctype>directive</doctype>
+    <editorialgroup>
+      <technical-committee>PUBLISH</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <termdocsource bibitemid="CC10001"/><termdocsource bibitemid="CC10002"/><termdocsource bibitemid="CC10003"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_df2e5e62-0607-4628-8462-3d395090150f">The Calendaring and Scheduling Consortium (“CalConnect”) is a global
 non-profit organization with the aim to facilitate interoperability of

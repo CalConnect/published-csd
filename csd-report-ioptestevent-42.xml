@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="administrative"> 
-  <title language="en" format="text/plain">Report on CalConnect Test Event and Developers Forum XLII, June 4-6, 2018</title> 
-  <docidentifier type="csd">CC/A 1804:2018</docidentifier> 
-  <docnumber>1804</docnumber> 
-  <date type="published"> 
-    <on>2018-06-29T00:00:00Z</on> 
-  </date> 
-  <contributor> 
-    <role type="author"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <contributor> 
-    <role type="publisher"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <edition>1</edition> 
-  <version> 
-    <revision-date>2018-06-29T00:00:00Z</revision-date> 
-  </version> 
-  <language>en</language> 
-  <script>Latn</script> 
-  <status format="plain">published</status> 
-  <copyright> 
-    <from>2018</from> 
-    <owner> 
-      <organization> 
-        <name>CalConnect</name> 
-      </organization> 
-    </owner> 
-  </copyright> 
-  <editorialgroup> 
-    <technical-committee>IOPTEST</technical-committee> 
-  </editorialgroup> 
+<bibdata type="administrative">
+  <title format="text/plain" language="en">Report on CalConnect Test Event and Developers Forum XLII, June 4-6, 2018</title>
+  <docidentifier type="CC">CC/A 1804:2018</docidentifier>
+  <docnumber>1804</docnumber>
+  <date type="published">
+    <on>2018</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2018-06-29T00:00:00Z</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>published</stage>
+  </status>
+  <copyright>
+    <from>2018</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>administrative</doctype>
+    <editorialgroup>
+      <technical-committee>IOPTEST</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <preface><foreword obligation="informative"><title>Foreword</title><p id="_60614572-38d1-4f1d-bdfe-33655cf6da3d">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit   
 organization with the aim to facilitate interoperability of technologies across   

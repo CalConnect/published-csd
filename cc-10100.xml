@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="report"> 
-  <title language="en" format="text/plain">Alignment to international principles — WTO TBT principles for the Development of International Standards, Guides and Recommendations</title> 
-  <docidentifier type="csd">CC/R 10100:2019</docidentifier> 
-  <docnumber>10100</docnumber> 
-  <date type="published"> 
-    <on>2019-03-18</on> 
-  </date> 
-  <contributor> 
-    <role type="author"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <contributor> 
-    <role type="publisher"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <edition>1</edition> 
-  <version> 
-    <revision-date>2019-03-18</revision-date> 
-     
-  </version> 
-  <language>en</language> 
-  <script>Latn</script> 
-  <status format="plain">published</status> 
-  <copyright> 
-    <from>2019</from> 
-    <owner> 
-      <organization> 
-        <name>CalConnect</name> 
-      </organization> 
-    </owner> 
-  </copyright> 
-  <editorialgroup> 
-    <technical-committee>PUBLISH</technical-committee> 
-  </editorialgroup> 
+<bibdata type="report">
+  <title format="text/plain" language="en">Alignment to international principles — WTO TBT principles for the Development of International Standards, Guides and Recommendations</title>
+  <docidentifier type="CC">CC/R 10100:2019</docidentifier>
+  <docnumber>10100</docnumber>
+  <date type="published">
+    <on>2019</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2019-03-18</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>published</stage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>report</doctype>
+    <editorialgroup>
+      <technical-committee>PUBLISH</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <preface><foreword obligation="informative"><title>Foreword</title><p id="_590dfddb-7f10-4ebe-a8b9-3defc25318e0">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit   
 organization with the aim of facilitating interoperability of technologies across   

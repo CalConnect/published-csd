@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="directive"> 
-  <title language="en" format="text/plain">CalConnect Directive: Patent policy</title> 
-  <docidentifier type="csd">CC/DIR 10003:2019</docidentifier> 
-  <docnumber>10003</docnumber> 
-  <date type="published"> 
-    <on>2019-01-18</on> 
-  </date> 
-  <contributor> 
-    <role type="author"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <contributor> 
-    <role type="publisher"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <edition>1</edition> 
-  <version> 
-    <revision-date>2019-01-18</revision-date> 
-     
-  </version> 
-  <language>en</language> 
-  <script>Latn</script> 
-  <status format="plain">published</status> 
-  <copyright> 
-    <from>2019</from> 
-    <owner> 
-      <organization> 
-        <name>CalConnect</name> 
-      </organization> 
-    </owner> 
-  </copyright> 
-  <editorialgroup> 
-    <technical-committee>PUBLISH</technical-committee> 
-  </editorialgroup> 
+<bibdata type="directive">
+  <title format="text/plain" language="en">CalConnect Directive: Patent policy</title>
+  <docidentifier type="CC">CC/DIR 10003:2019</docidentifier>
+  <docnumber>10003</docnumber>
+  <date type="published">
+    <on>2019</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2019-01-18</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>published</stage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>directive</doctype>
+    <editorialgroup>
+      <technical-committee>PUBLISH</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <termdocsource bibitemid="CCSTD"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_d67b93ac-3e1d-4b05-ac93-8832c01f5b5d">The Calendaring and Scheduling Consortium (“CalConnect”) is a global   
 non-profit organization with the aim to facilitate interoperability of   
