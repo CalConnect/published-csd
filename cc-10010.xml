@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="standard"> 
-  <title language="en" format="text/plain">ISO/CalConnect Partner Standards Development Organization (PSDO) Cooperation Agreement</title> 
-  <docidentifier type="csd">CC/FDS 10010:2019</docidentifier> 
-  <docnumber>10010</docnumber> 
-  <date type="published"> 
-    <on>2019-01-18</on> 
-  </date> 
-  <contributor> 
-    <role type="author"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <contributor> 
-    <role type="publisher"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <edition>1</edition> 
-  <version> 
-    <revision-date>2019-01-18</revision-date> 
-     
-  </version> 
-  <language>en</language> 
-  <script>Latn</script> 
-  <status format="plain">final-draft</status> 
-  <copyright> 
-    <from>2019</from> 
-    <owner> 
-      <organization> 
-        <name>CalConnect</name> 
-      </organization> 
-    </owner> 
-  </copyright> 
-  <editorialgroup> 
-    <technical-committee>PUBLISH</technical-committee> 
-  </editorialgroup> 
+<bibdata type="standard">
+  <title format="text/plain" language="en">ISO/CalConnect Partner Standards Development Organization (PSDO) Cooperation Agreement</title>
+  <docidentifier type="CC">CC/FDS 10010:2019</docidentifier>
+  <docnumber>10010</docnumber>
+  <date type="published">
+    <on>2019</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2019-01-18</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>final-draft</stage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>standard</doctype>
+    <editorialgroup>
+      <technical-committee>PUBLISH</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <termdocsource bibitemid="ISOGUIDE2"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_e214af5d-efe7-4891-8bcd-6d2ce1511a21">The Calendaring and Scheduling Consortium (“CalConnect”) is a global   
 non-profit organization that pursues the wide availability of truly   

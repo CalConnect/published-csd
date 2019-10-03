@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="standard"> 
-  <title language="en" format="text/plain">Date and time — General recurrence representation</title> 
-  <docidentifier type="csd">CC/FDS 18012:2018</docidentifier> 
-  <docnumber>18012</docnumber> 
-  <date type="published"> 
-    <on>2018-09-10T00:00:00Z</on> 
-  </date> 
-  <contributor> 
-    <role type="author"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <contributor> 
-    <role type="publisher"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <edition>1</edition> 
-  <version> 
-    <revision-date>2018-09-10T00:00:00Z</revision-date> 
-     
-  </version> 
-  <language>en</language> 
-  <script>Latn</script> 
-  <status format="plain">final-draft</status> 
-  <copyright> 
-    <from>2018</from> 
-    <owner> 
-      <organization> 
-        <name>CalConnect</name> 
-      </organization> 
-    </owner> 
-  </copyright> 
-  <editorialgroup> 
-    <technical-committee>VCARD, CALENDAR</technical-committee> 
-  </editorialgroup> 
+<bibdata type="standard">
+  <title format="text/plain" language="en">Date and time — General recurrence representation</title>
+  <docidentifier type="CC">CC/FDS 18012:2018</docidentifier>
+  <docnumber>18012</docnumber>
+  <date type="published">
+    <on>2018</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2018-09-10T00:00:00Z</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>final-draft</stage>
+  </status>
+  <copyright>
+    <from>2018</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>standard</doctype>
+    <editorialgroup>
+      <technical-committee>VCARD, CALENDAR</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <termdocsource bibitemid="CC18011"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_07dc7e94-bce2-4190-bd8d-05f7f0be5233">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit   
 organization with the aim to facilitate interoperability of technologies across   

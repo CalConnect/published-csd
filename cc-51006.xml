@@ -1,67 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="standard"> 
-  <title language="en" format="text/plain">Calendaring and scheduling — Consensus scheduling — iCalendar VPOLL component</title> 
-  <docidentifier type="csd">CC/CD 51006:2018</docidentifier> 
-  <docnumber>51006</docnumber> 
-  <date type="published"> 
-    <on>2018-11-19</on> 
-  </date> 
-  <contributor> 
-    <role type="author"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <contributor> 
-    <role type="author"/> 
-    <person> 
-      <name> 
-        <completename>Eric York</completename> 
-      </name> 
-    </person> 
-  </contributor> 
-  <contributor> 
-    <role type="author"/> 
-    <person> 
-      <name> 
-        <completename>Cyrus Daboo</completename> 
-      </name> 
-    </person> 
-  </contributor> 
-  <contributor> 
-    <role type="author"/> 
-    <person> 
-      <name> 
-        <completename>Michael Douglass</completename> 
-      </name> 
-    </person> 
-  </contributor> 
-  <contributor> 
-    <role type="publisher"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <edition>1</edition> 
-  <version> 
-    <revision-date>2018-11-19</revision-date> 
-     
-  </version> 
-  <language>en</language> 
-  <script>Latn</script> 
-  <status format="plain">committee-draft</status> 
-  <copyright> 
-    <from>2018</from> 
-    <owner> 
-      <organization> 
-        <name>CalConnect</name> 
-      </organization> 
-    </owner> 
-  </copyright> 
-  <editorialgroup> 
-    <technical-committee>FREEBUSY</technical-committee> 
-  </editorialgroup> 
+<bibdata type="standard">
+  <title format="text/plain" language="en">Calendaring and scheduling — Consensus scheduling — iCalendar VPOLL component</title>
+  <docidentifier type="CC">CC/CD 51006:2018</docidentifier>
+  <docnumber>51006</docnumber>
+  <date type="published">
+    <on>2018</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Eric York</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Cyrus Daboo</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Michael Douglass</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2018-11-19</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>committee-draft</stage>
+  </status>
+  <copyright>
+    <from>2018</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>standard</doctype>
+    <editorialgroup>
+      <technical-committee>FREEBUSY</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <preface><foreword obligation="informative"><title>Foreword</title>  
 <p id="_e44f171d-16cf-4a40-b3d1-efcaef6f8708">The Calendaring and Scheduling Consortium (“CalConnect”) is a global   

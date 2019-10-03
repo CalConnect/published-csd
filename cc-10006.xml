@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
 <bibdata type="directive">
-  <title language="en" format="text/plain">CalConnect Directive: Intellectual property rights policy</title>
-  <docidentifier type="csd">CC/DIR 10006:2019</docidentifier>
+  <title format="text/plain" language="en">CalConnect Directive: Intellectual property rights policy</title>
+  <docidentifier type="CC">CC/DIR 10006:2019</docidentifier>
   <docnumber>10006</docnumber>
   <date type="published">
-    <on>2019-03-18</on>
+    <on>2019</on>
   </date>
   <contributor>
     <role type="author"/>
@@ -22,11 +22,12 @@
   <edition>1</edition>
   <version>
     <revision-date>2019-03-18</revision-date>
-    
   </version>
   <language>en</language>
   <script>Latn</script>
-  <status format="plain">published</status>
+  <status>
+    <stage>published</stage>
+  </status>
   <copyright>
     <from>2019</from>
     <owner>
@@ -35,9 +36,12 @@
       </organization>
     </owner>
   </copyright>
-  <editorialgroup>
-    <technical-committee>PUBLISH</technical-committee>
-  </editorialgroup>
+  <ext>
+    <doctype>directive</doctype>
+    <editorialgroup>
+      <technical-committee>PUBLISH</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <termdocsource bibitemid="CCSTD"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_83281155-293a-4588-81b9-97ae10cf115a">The Calendaring and Scheduling Consortium (“CalConnect”) is a global
 non-profit organization with the aim to facilitate interoperability of

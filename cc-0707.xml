@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <csd-standard xmlns="https://www.calconnect.org/standards/csd">
-<bibdata type="advisory"> 
-  <title language="en" format="text/plain">CalConnect EDST (Extended Daylight Savings Time) Reflections and Recommendations</title> 
-  <docidentifier type="csd">CC/Adv 0707:2007</docidentifier> 
-  <docnumber>0707</docnumber> 
-  <date type="published"> 
-    <on>2007-10-04</on> 
-  </date> 
-  <contributor> 
-    <role type="author"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <contributor> 
-    <role type="publisher"/> 
-    <organization> 
-      <name>CalConnect</name> 
-    </organization> 
-  </contributor> 
-  <edition>1</edition> 
-  <version> 
-    <revision-date>2007-10-04T00:00:00Z</revision-date> 
-  </version> 
-  <language>en</language> 
-  <script>Latn</script> 
-  <status format="plain">published</status> 
-  <copyright> 
-    <from>2007</from> 
-    <owner> 
-      <organization> 
-        <name>CalConnect</name> 
-      </organization> 
-    </owner> 
-  </copyright> 
-  <editorialgroup> 
-    <technical-committee>Ad Hoc DST</technical-committee> 
-  </editorialgroup> 
+<bibdata type="advisory">
+  <title format="text/plain" language="en">CalConnect EDST (Extended Daylight Savings Time) Reflections and Recommendations</title>
+  <docidentifier type="CC">CC/Adv 0707:2007</docidentifier>
+  <docnumber>0707</docnumber>
+  <date type="published">
+    <on>2007</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2007-10-04T00:00:00Z</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>published</stage>
+  </status>
+  <copyright>
+    <from>2007</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>advisory</doctype>
+    <editorialgroup>
+      <technical-committee>Ad Hoc DST</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <preface><foreword obligation="informative"><title>Foreword</title><p id="_31378bf3-5fad-411d-aeac-473baa8b0e6f">The Calendaring and Scheduling Consortium (“CalConnect”) is a global   
 non-profit organization with the aim to facilitate interoperability of   
