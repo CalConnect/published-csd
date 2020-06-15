@@ -1,1187 +1,1050 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<csd-standard xmlns="https://www.calconnect.org/standards/csd">
+<csd-standard xmlns="https://www.metanorma.org/ns/csd">
 <bibdata type="standard">
-  <title format="text/plain" language="en">Calendaring and scheduling — Support for iCalendar Relationships</title>
-  <docidentifier type="CC">CC/CD 51004:2018</docidentifier>
-  <docnumber>51004</docnumber>
-  <date type="published">
-    <on>2018</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename>Michael Douglass</completename>
-      </name>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <edition>1</edition>
-  <version>
-    <revision-date>2018-11-30</revision-date>
-  </version>
-  <language>en</language>
-  <script>Latn</script>
-  <status>
-    <stage>committee-draft</stage>
-  </status>
-  <copyright>
-    <from>2018</from>
-    <owner>
-      <organization>
-        <name>CalConnect</name>
-      </organization>
-    </owner>
-  </copyright>
-  <ext>
-    <doctype>standard</doctype>
-    <editorialgroup>
-      <technical-committee>CALENDAR</technical-committee>
-    </editorialgroup>
-  </ext>
+<title language="en" format="text/plain">Calendaring and scheduling — Support for iCalendar Relationships</title>
+<docidentifier type="csd">CC/CD 51004:2018</docidentifier>
+<docnumber>51004</docnumber>
+<date type="published">
+<on>2018-11-30</on>
+</date>
+<contributor>
+<role type="author"/>
+<organization>
+<name>CalConnect</name>
+</organization>
+</contributor>
+<contributor>
+<role type="author"/>
+<person>
+<name>
+<completename>Michael Douglass</completename>
+</name>
+</person>
+</contributor>
+<contributor>
+<role type="publisher"/>
+<organization>
+<name>CalConnect</name>
+</organization>
+</contributor>
+<edition>1</edition>
+<version>
+<revision-date>2018-11-30</revision-date>
+
+</version>
+<language>en</language>
+<script>Latn</script>
+<status>
+<stage>committee-draft</stage>
+</status>
+<copyright>
+<from>2018</from>
+<owner>
+<organization>
+<name>CalConnect</name>
+</organization>
+</owner>
+</copyright>
+<ext>
+<doctype>standard</doctype>
+<editorialgroup>
+<technical-committee>CALENDAR</technical-committee>
+</editorialgroup>
+</ext>
 </bibdata>
-<preface><foreword obligation="informative"><title>Foreword</title>  
-<p id="_59720b60-d634-4278-a1bf-eaf619e3e5d7">The Calendaring and Scheduling Consortium (“CalConnect”) is a global   
-non-profit organization with the aim to facilitate interoperability of   
-collaborative technologies and tools through open standards.</p>  
-<p id="_0f4aeb32-47cd-45e5-926a-5e9b038d569b">CalConnect works closely with international and regional partners,   
-of which the full list is available on our website   
-(<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>  
-<p id="_85ce0c04-f10f-434a-99fb-18159e065297">The procedures used to develop this document and those intended for its   
-further maintenance are described in the CalConnect Directives.</p>  
-<p id="_3bfeedbb-00e5-4c35-8a5b-c71480cf9d5b">In particular the different approval criteria needed for the different   
-types of CalConnect documents should be noted. This document was drafted in   
-accordance with the editorial rules of the CalConnect Directives.</p>  
-<p id="_e84b8138-b771-4e4a-8e94-029e1ae33a12">Attention is drawn to the possibility that some of the elements of this   
-document may be the subject of patent rights. CalConnect shall not be   
-held responsible for identifying any or all such patent rights. Details   
-of any patent rights identified during the development of the document   
-will be provided in the Introduction.</p>  
-<p id="_07dea029-d244-49b2-9a18-ae742da94c15">Any trade name used in this document is information given for the   
-convenience of users and does not constitute an endorsement.</p>  
-<p id="_0be8cb8c-2b07-4ad6-aee7-b8c57974639f">This document was prepared by Technical Committee   
-<em>CALENDAR</em>.</p></foreword><introduction id="introduction" obligation="informative"><title>Introduction</title><clause id="_general" obligation="informative"><title>General</title><p id="_75f6f104-f0e3-479d-a37a-6ec29172d34b">iCalendar entities often need to be related to each other or to    
-associated meta-data.  These relationships can take the following    
-forms</p>   
-<dl id="_db9116a9-ab36-4c7d-9a3e-6765fd3e3ee3">    
-  <dt>Structured iCalendar</dt>    
-  <dd>    
-    <p id="_fa04efe3-707d-4852-a5bd-328f67264a17">iCalendar entities are related to each other    
-in some structured way, for example as parent, sibling, before,    
-after.</p>    
-  </dd>    
-  <dt>Grouped iCalendar</dt>    
-  <dd>    
-    <p id="_6a27cb49-a3a8-4b72-b81f-9eef7d9a663c">iCalendar entities are related to each other as a    
-group.  CATEGORIES are often used for this purpose but are    
-problematic for application developers.</p>    
-  </dd>    
-  <dt>Linked</dt>    
-  <dd>    
-    <p id="_ac704b4d-5d72-44db-82b0-aca19cb71f44">Entities are linked to each other through typed references.</p>    
-  </dd>    
-</dl></clause>  
-<clause id="_structured_icalendar_relationships" obligation="informative"><title>Structured iCalendar relationships</title><p id="_d1295c63-24be-4405-8a86-99869fe47693">The currently existing iCalendar <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> RELATED-TO property has no    
-support for temporal relationships as used by standard project    
-management tools.</p>   
-<p id="_210ed38f-c141-42ca-ad24-15211f0560f6">The RELTYPE parameter is extended to take new values defining    
-temporal relationships, a GAP parameter is defined to provide lead    
-and lag values and RELATED-TO is extended to allow URI values.  These    
-changes allow the RELATED-TO property to define a richer set of    
-relationships useful for project management.</p></clause>  
-<clause id="_grouped_icalendar_relationships" obligation="informative"><title>Grouped iCalendar relationships</title><p id="_19ed1533-4473-495a-828d-ebb2a7d2b5bb">This specification defines a new REFID property which allows    
-arbitrary groups of entities to be associated with the same key    
-value.</p>   
-<p id="_a69d4514-002a-4ecf-971b-a5ead2321498">REFID is used to identify a key allowing the association of    
-components that are related to the same object and retrieval of a    
-component based on this key.  This may be, for example, to identify    
-the tasks associated with a given project without having to    
-communicate the task structure of the project, or, for example, in a    
-package delivery system all tasks associated to a specific package.</p>   
-<p id="_5359c23b-4d16-4253-8b5c-30df3b210a46">As such, the presence of a REFID property imparts no meaning to the    
-component.  It is merely a key to allow retrieval.  This is distinct    
-from categorisation which, while allowing grouping also adds meaning    
-to the component to which it is attached.</p></clause>  
-<clause id="_concept_relationships" obligation="informative"><title>Concept relationships</title><p id="_26c92923-afeb-48f4-af45-635b83fbf72e">The name CONCEPT is used by the Simple Knowledge Organization System    
-defined in <eref type="inline" bibitemid="W3C.CR-skos-reference-20090317" citeas="W3C CR skos-reference-20090317"/>.  This more accurately    
-defines what we mean by a catgeory.  It’s not the words but the    
-meaning.</p>   
-<p id="_c2705f50-3685-4d34-b008-88e82c546e3e">The introduction of CONCEPT allows a more structured approach to    
-categorization, with the possibility of namespaced and path-like    
-values.  Unlike REFID the CONCEPT property imparts some meaning.  It    
-is assumed that the value of this property will reference a well    
-defined category.</p>   
-<p id="_99f49ade-20a4-4dee-aa02-fe9b9f1042bf">The current <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> CATEGORY property is used as a free form    
-‘tagging’ field.  As such it is difficult to establish formal    
-relationships between components based on their category.</p>   
-<p id="_589506f4-7e74-450b-a8d4-99c7b9465781">Rather than attempt to add semantics to the current property it    
-seeems best to continue its usage as an informal tag and establish a    
-new property with more constraints.</p></clause>  
-<clause id="_linked_relationships" obligation="informative"><title>Linked relationships</title><p id="_a01b9955-43e6-49de-b47d-5d60e7a5ad0a">The currently existing iCalendar standard <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> lacks a general    
-purpose method for referencing additional, external information    
-relating to calendar components.</p>   
-<p id="_a814a5aa-94c0-4f04-9685-3fc731ad8d4c">This document proposes a method for referencing typed external    
-information that can provide additional information about an    
-iCalendar component.  This new LINK property is closely aligned to    
-the LINK header defined in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/></p>   
-<p id="_232853fd-df78-4236-815b-4203de573cfe">The LINK property defines a typed reference or relation to external    
-meta-data or related resources.  By providing type and format    
-information as parameters, clients and servers are able to discover    
-interesting references and make use of them, perhaps for indexing or    
-the presentation of interesting links for the user.</p>   
-<p id="_4230c0a6-6387-41a9-8cd5-3b230f02779d">It is often necessary to relate calendar components.  The current    
-RELATED-TO property only allows for a UID which is inadequate for    
-many purposes.  Allowing other value types for that property may help    
-but might raise a number of backward compatibility issues.  The link    
-property can link components in different collections or even on    
-different servers.</p>   
-<p id="_d459eac4-4797-470b-b4ae-22ca9c71453b">When publishing events it is useful to be able to refer back to the    
-source of that information.  The actual event may have been consumed    
-from a feed or an ics file on a web site.  A LINK property can    
-provide a reference to the originator of the event.</p>   
-<p id="_19142cdd-ac8c-4f2c-9ff5-a99620c41ae7">Beyond the need to relate elements temporally, project management    
-tools often need to be able to specify the relationships between the    
-various events and tasks which make up a project.  The LINK property    
-provides such a mechanism.</p>   
-<p id="_2f584607-4168-4365-8762-e6fefafe40d1">The LINK property SHOULD NOT be treated as just another attachment.    
-The ATTACH property is being extended to handle server-side    
-management and stripping of inline data.  Clients may choose to    
-handle attachments differently as they are often an integral part of    
-the message - for example, the agenda.  See    
-<eref type="inline" bibitemid="I-D.daboo-caldav-attachments" citeas="I-D.daboo-caldav-attachments"/></p></clause>  
-<clause id="caching" obligation="informative"><title>Caching and offline use</title><p id="_1e9104c9-5f63-4272-b344-28191bb336e9">To facilitate offline display the link type may identify important    
-pieces of data which should be downloaded in advance.</p>   
-<p id="_0888afcb-59f0-4119-8e15-eb03f5684203">In general, the calendar entity should be self explanatory without    
-the need to download referenced meta-data such as a web page.</p></clause>  
-<clause id="conventions" obligation="informative">   
-  <title>Conventions Used in This Document</title>   
-  <p id="_8d2044c3-5dd3-413f-80eb-48bddcf6560f">The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,    
-“SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “NOT RECOMMENDED”, “MAY”, and    
-“OPTIONAL” in this document are to be interpreted as described in    
-<eref type="inline" bibitemid="RFC2119" citeas="RFC 2119"/>.</p>   
-</clause></introduction></preface><sections> 
- 
-<clause id="scope" obligation="normative">  
-  <title>Scope</title>  
-  <p id="_84276f85-a1db-4e17-89e1-2fc340192b6d">This specification updates RELATED-TO defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> and   
-introduces new iCalendar properties LINK, CONCEPT and REFID to allow   
-better linking and grouping of iCalendar components and related data.</p>  
-</clause> 
- 
-<terms id="terms" obligation="normative">  
-  <title>Terms and definitions</title>  
-</terms> 
-<clause id="reference_types" obligation="normative"><title>Reference Types</title><p id="_8097c897-5ac1-444a-b3cb-41ba5019fc64">The actual reference value can take three forms specified by the type   
-parameter</p>  
-<dl id="_81023e45-d58f-4cf2-8ded-f7ac89284f95">   
-  <dt>URI</dt>   
-  <dd>   
-    <p id="_59f97ad7-5fcd-4bd8-8329-d566081077a3">The default type.  This is a URI referring to the target.</p>   
-  </dd>   
-  <dt>UID</dt>   
-  <dd>   
-    <p id="_7ffde979-f502-4a4c-a22e-0dc95cc700d0">This allows for linking within a single collection and the   
-value is assumed to be another component within that collection.</p>   
-  </dd>   
-  <dt>REFERENCE</dt>   
-  <dd>   
-    <p id="_ae27bd9c-af0b-48e1-b80a-56aa9f191e0e">An xpointer.  In an XML environment it may be necessary   
-to refer to an external XML artifact.  The XPointer is defined in   
-<eref type="inline" bibitemid="W3C.WD-xptr-xpointer-20021219" citeas="W3C WD xptr-xpointer-20021219"/> and allows addressing portions of   
-XML documents.</p>   
-  </dd>   
-</dl></clause> 
-<clause id="link_relation_types" obligation="normative"><title>Link Relation Types</title><p id="_d734792a-1e00-4d7f-b5f5-c8c3cff746fa"><eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/> defines two forms of relation types, registered and   
-extension.  Registered relation types are added to a registry defined   
-by <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/> while extension relation types are specified as unique   
-unregistered URIs, (at least unregistered in the <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/> registry).</p>  
-<p id="_7f580715-de63-47d6-996d-1f4304e6a58b">The relation types defined here will be registered with IANA in   
-accordance with the specifications in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/>.</p></clause> 
-<clause id="redefined_relation_type_value" obligation="normative"><title>Redefined Relation Type Value</title><p id="_d2133da3-adcb-4646-803c-fdf8011af503">Relationship parameter type values are defined in   
-<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.  This specification redefines that type to include the new   
-temporal relationship values FINISHTOSTART, FINISHTOFINISH,   
-STARTTOFINISH and STARTTOSTART.  It also adds the DEPENDS-ON value to   
-provide a link to a component upon which the current component   
-depends.</p>  
-<dl id="_b0caf65e-9e9d-4de5-ab23-f943627170cb">   
-  <dt>Format Definition</dt>   
-  <dd><p id="_80534fdb-cabd-4351-8b54-903d3046e493">This property parameter is defined by the following notation:</p>   
-<sourcecode lang="bnf" id="_ac7893f7-ad5c-4f83-bc58-693faffb868c">reltypeparam   = "RELTYPE" "="   
-                 ("PARENT"    ; Parent relationship - Default   
-                / "CHILD"     ; Child relationship   
-                / "SIBLING"   ; Sibling relationship   
-                / "DEPENDS-ON" ; refers to previous component   
-                / "REFID"     ; Relationship based on REFID   
-                / "CONCEPT"   
-                        ; Relationship based on CONCEPT   
-                / "FINISHTOSTART" ;  Temporal relationship   
-                / "FINISHTOFINISH" ;  Temporal relationship   
-                / "STARTTOFINISH" ;  Temporal relationship   
-                / "STARTTOSTART" ;  Temporal relationship   
-                / iana-token  ; Some other IANA-registered   
-                              ; iCalendar relationship type   
-                / x-name)     ; A non-standard, experimental   
-                              ; relationship type</sourcecode>   
-</dd>   
-  <dt>Description</dt>   
-  <dd>   
-    <p id="_4237f017-3d4b-4bc0-8bf2-9cfe752c348b">This parameter can be specified on a property that   
-references another related calendar component.  The parameter may   
-specify the hierarchical relationship type of the calendar   
-component referenced by the property when the value is PARENT,   
-CHILD or SIBLING.  If this parameter is not specified on an   
-allowable property, the default relationship type is PARENT.   
-Applications MUST treat x-name and iana-token values they don’t   
-recognize the same way as they would the PARENT value.</p>   
-    <p id="_81012d6d-c8cd-460a-833a-3197346af4c5">This parameter defines the temporal relationship when the value is    
-   one of the project management standard relationships    
-   FINISHTOSTART, FINISHTOFINISH, STARTTOFINISH or STARTTOSTART.    
-   This property will be present in the predecessor entity and will    
-   refer to the successor entity.  The GAP parameter specifies the    
-   lead or lag time between the predecessor and the successor.  In    
-   the description of each temporal relationship below we refer to    
-   Task-A which contains and controls the relationship and Task-B the    
-   target of the relationship.</p>   
-  </dd>   
-  <dt>RELTYPE=PARENT</dt>   
-  <dd>   
-    <p id="_859f318b-2c8e-488b-a7ce-1019ded92917">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.</p>   
-  </dd>   
-  <dt>RELTYPE=CHILD</dt>   
-  <dd>   
-    <p id="_c5a43548-a233-4aa8-8ebd-67479691e226">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.</p>   
-  </dd>   
-  <dt>RELTYPE=SIBLING</dt>   
-  <dd>   
-    <p id="_728a147c-fc60-4093-9a71-00c710e579f2">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></eref>.</p>   
-  </dd>   
-  <dt>RELTYPE=DEPENDS-ON</dt>   
-  <dd>   
-    <p id="_0fb2d11b-8079-4464-9c8c-116dff462fb6">Indicates that the current calendar component   
-depends on the referenced calendar component in some manner.  For   
-example a task may be blocked waiting on the other, referenced,   
-task.</p>   
-  </dd>   
-  <dt>RELTYPE=REFID</dt>   
-  <dd>   
-    <p id="_594d24ce-8d1b-489a-8ae8-853e4674deda">Establishes a reference from the current component to   
-components with a REFID property which matches the value given in   
-the associated RELATED-TO property.</p>   
-  </dd>   
-  <dt>RELTYPE=CONCEPT</dt>   
-  <dd>   
-    <p id="_2bff76db-a2b9-401c-b55d-64035b0f1251">Establishes a reference from the current component   
-to components with a CONCEPT property which matches the value   
-given in the associated RELATED-TO property.</p>   
-  </dd>   
-  <dt>RELTYPE=FINISHTOSTART</dt>   
-  <dd>   
-    <p id="_2c43984f-e774-4ddb-96f7-e8e6aaf8f7dc">Task-B cannot start until Task-A finishes.   
-For example, when sanding is complete, painting can begin.</p>   
-  </dd>   
-</dl>  
-<figure id="finishtostart">   
-  <name>Finish to start relationship</name>   
-  <pre id="_5f560a5f-2f04-47d6-9e62-ec0c46c7327c">            ============   
-            |  Task-A  |--+   
-            ============  |   
-                          |   
-                          V   
-                          ============   
-                          |  Task-B  |   
-                          ============</pre>   
-</figure>  
-<dl id="_12801ef2-6327-4638-894f-b4dc79431566">   
-  <dt>RELTYPE=FINISHTOFINISH</dt>   
-  <dd>   
-    <p id="_8cc19ade-e7d0-475f-8203-6b9edb218d64">Task-B cannot finish before Task-A is   
-finished, that is the end of Task-A defines the end of Task-B.   
-For example, we start the potatoes, then the meat then the peas   
-but they should all be cooked at the same time.</p>   
-  </dd>   
-</dl>  
-<figure id="finishtofinish">   
-  <name>Finish to finish relationship</name>   
-  <pre id="_ae9536dc-0be0-431e-87bb-5c4df1b13d9b">                    ============   
-                    |  Task-A  |--+   
-                    ============  |   
-                                  |   
-                    ============  |   
-                    |  Task-B  |&lt;-+   
-                    ============</pre>   
-</figure>  
-<dl id="_f5dba01b-5d3f-40d8-a3f7-4f8f5a7fbd09">   
-  <dt>RELTYPE=STARTTOFINISH</dt>   
-  <dd>   
-    <p id="_be949c6e-47ce-4587-a8c1-2cddf76f8f96">The start of Task-A (which occurs after Task-   
-B) controls the finish of Task-B.  For example, ticket sales   
-(Task-B) end when the game starts (Task-A).</p>   
-  </dd>   
-</dl>  
-<figure id="starttofinish">   
-  <name>Start to finish relationship</name>   
-  <pre id="_4dfb9197-a391-47d6-87df-fe992b098727">                                     ============   
-                                  +--|  Task-A  |   
-                                  |  ============   
-                                  |   
-                    ============  |   
-                    |  Task-B  |&lt;-+   
-                    ============</pre>   
-</figure>  
-<dl id="_d14ca44b-d3f1-4c5d-bfc0-9f514ff9c25f">   
-  <dt>RELTYPE=STARTTOSTART</dt>   
-  <dd>   
-    <p id="_05b68eaf-87a7-4bd6-9484-3cf873570443">The start of Task-A triggers the start of   
-Task-B, that is Task-B can start anytime after Task-A starts.</p>   
-  </dd>   
-</dl>  
-<figure id="starttostart">   
-  <name>Start to start relationship</name>   
-  <pre id="_7b4b554f-1da3-4f19-8c4c-6aba789ab4ab">                    ============   
-                 +--|  Task-A  |   
-                 |  ============   
-                 |   
-                 |  ============   
-                 +-&gt;|  Task-B  |   
-                    ============</pre>   
-</figure></clause> 
-<clause id="new_property_parameters" obligation="normative"><title>New Property Parameters</title><clause id="rel" obligation="normative">   
-  <title>Rel</title>   
-  <dl id="_00e5612d-622e-48cb-8da7-609567ce0b4f">    
-  <dt>Parameter name</dt>    
-  <dd>    
-    <p id="_f4820b45-a79e-4488-ba5b-23386eef9be1">REL</p>    
-  </dd>    
-  <dt>Purpose</dt>    
-  <dd>    
-    <p id="_2cc98718-a407-4ca5-ab57-9ccf97e21808">To specify the relationship of data referenced by a LINK    
-property.</p>    
-  </dd>    
-  <dt>Format Definition</dt>    
-  <dd><p id="_c189cf16-212f-47fd-9c16-6527e607a3e3">This parameter is defined by the following notation:</p>    
-<sourcecode lang="bnf" id="_79661507-aafa-4fd8-921b-18e9fad0452f">relparam     = "REL" "="    
-               ("SOURCE"      ; Link to source of this component    
-               / DQUOTE uri DQUOTE    
-               / x-name        ; Experimental reference type    
-               / iana-token)   ; Other IANA registered type</sourcecode>    
-</dd>    
-  <dt>Description</dt>    
-  <dd>    
-    <p id="_e1566cda-1850-408e-bd24-9a15d569023b">This parameter MUST be specified on all LINK    
-properties, and defines the type of reference.  This allows    
-programs consuming this data to automatically scan for references    
-they support.  In addition to the values defined here any value    
-defined in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/> may be used.  There is no default relation    
-type.</p>    
-  </dd>    
-  <dt>REL=SOURCE</dt>    
-  <dd>    
-    <p id="_05c21c34-2e1d-4dd0-a51a-05f2025dc57f">identifies the source of the event information.</p>    
-  </dd>    
-  <dt>Registration</dt>    
-  <dd>    
-    <p id="_41badbec-14bd-4c49-9ba2-1edea4f3b11c">These relation types are registered in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/></p>    
-  </dd>    
-</dl>   
-</clause>  
-<clause id="gap" obligation="normative">   
-  <title>Gap</title>   
-  <dl id="_95851ee0-b5c3-4fbb-82af-7df2ac1f2ba8">    
-  <dt>Parameter name</dt>    
-  <dd>    
-    <p id="_97027a36-26fa-4ff8-9d7f-0b5ff9562062">GAP</p>    
-  </dd>    
-  <dt>Purpose</dt>    
-  <dd>    
-    <p id="_77fc5f63-7526-4729-afa7-ee7785562f14">To specify the length of the gap, positive or negative    
-between two temporaly related components.</p>    
-  </dd>    
-  <dt>Format Definition</dt>    
-  <dd><p id="_adbb3687-20fa-4b7f-96e5-670718191a18">This parameter is defined by the following notation:</p>    
-<sourcecode lang="bnf" id="_fecfae60-82d6-4eb7-9ca8-0ec9ea3403df">gapparam      = "GAP" "=" dur-value</sourcecode>    
-</dd>    
-  <dt>Description</dt>    
-  <dd><p id="_e0ce9efd-b656-45de-a3c6-b5a52bd8f941">This parameter MAY be specified on the RELATED-TO    
-property, and defines the duration of time between the predecessor    
-and successor in an interval.  When positive it defines the lag    
-time between a task and its logical successor.  When negative it    
-defines the lead time.</p><p id="_adb1e1a5-b715-4a8f-8d2b-7d89a313d741">An example of lag time might be if task A is “paint the room” and     
-   task B is “hang the drapes” then task A may be related to task B     
-   with RELTYPE=FINISHTOSTART with a gap long enough for the paint to     
-   dry.</p>    
-<p id="_0b6f5d90-ef38-4517-bc53-1cff3524aa2e">An example of lead time might be to relate a 1 week task A to the     
-   end of task B with RELTYPE=STARTTOFINISH and a negative gap of 1     
-   week so they finish at the same time.</p></dd>    
-</dl>   
-</clause></clause> 
-<clause id="new_value_data_types" obligation="normative"><title>New Value Data Types</title><p id="_5fa4e235-b902-423c-a237-d1195b76dfac">This specification defines the following new value types to be used   
-   with the VALUE property parameter:</p>  
-<dl id="_d0a9545d-ea47-4815-837c-1350a8582b43">   
-  <dt>UID</dt>   
-  <dd>   
-    <p id="_8061e8ff-de5b-4747-a709-bcb469b2af48">VALUE=UID indicates that the associated value is the UID for a   
-component.</p>   
-  </dd>   
-  <dt>REFERENCE</dt>   
-  <dd>   
-    <p id="_7e5979ab-f21c-4337-9efc-98faebf7a002">VALUE=REFERENCE indicates that the associated value is an   
-xpointer referencing an associated XML artifact.</p>   
-  </dd>   
-</dl></clause> 
-<clause id="new_properties" obligation="normative"><title>New Properties</title><clause id="concept" obligation="normative"><title>Concept</title><dl id="_25d0282c-c10e-4154-a3f6-aeae276578b6">    
-  <dt>Property name</dt>    
-  <dd>    
-    <p id="_a7e347c6-7bef-4c16-b735-bf2d1ed46609">CONCEPT</p>    
-  </dd>    
-  <dt>Purpose</dt>    
-  <dd>    
-    <p id="_bdddca03-75df-4879-8008-7768548675c3">This property defines the formal categories for a calendar    
-component.</p>    
-  </dd>    
-  <dt>Value type</dt>    
-  <dd>    
-    <p id="_d1308cad-da0f-489b-9fbf-46ce20ac00ed">URI</p>    
-  </dd>    
-  <dt>Property Parameters</dt>    
-  <dd>    
-    <p id="_8694f5b9-2f73-44a9-b7a2-c45e3b3baff3">IANA, and non-standard parameters can be    
-specified on this property.</p>    
-  </dd>    
-  <dt>Conformance</dt>    
-  <dd>    
-    <p id="_91bc346e-81d9-4d54-b6bb-b98054091f3d">This property can be specified zero or more times in    
-any iCalendar component.</p>    
-  </dd>    
-  <dt>Description</dt>    
-  <dd><p id="_a7a1fb09-4e3e-473a-93b1-c3fe036db5eb">This property is used to specify formal categories or    
-classifications of the calendar component.  The values are useful    
-in searching for a calendar component of a particular type and    
-category.</p><p id="_04067457-310e-4934-ab97-5dc05869734a">Within the “VEVENT”, “VTODO”, or “VJOURNAL” calendar components,     
-   more than one formal category can be specified by using multiple     
-   CONCEPT properties.</p>    
-<p id="_bbebf6b2-0939-44e0-978e-c8104e9c5621">This categorization is distinct from the more informal “tagging”     
-   of components provided by the existing CATEGORIES property.  It is     
-   expected that the value of the CONCEPT property will reference an     
-   external resource which provides information about the     
-   categorization.</p>    
-<p id="_a4b08021-5cb1-4297-8d1c-a1ca34d5f24c">In addition, a structured URI value allows for hierarchical     
-   categorization of events.</p>    
-<p id="_ead68e4f-be82-4c7e-ba8a-d7f883b9fae1">Possible category resources are the various proprietary systems,     
-   for example Library of Congress, or an open source derived from     
-   something like the dmoz.org data.</p></dd>    
-  <dt>Format Definition</dt>    
-  <dd/>    
-</dl>   
-<p id="_c21bb1ea-e2c3-41af-bf84-767a70a42cd1">This property is defined by the following notation:</p>   
-<sourcecode lang="bnf" id="_42ce6a2c-b771-49c9-9653-99a16cfe97e3">concept        =  "CONCEPT" conceptparam ":"   
-                      uri CRLF   
-   
-conceptparam = *(   
-              ;   
-              ; The following is OPTIONAL,   
-              ; and MAY occur more than once.   
-              ;   
-              (";" other-param)   
-              ;   
-              )</sourcecode>   
-   
-<example id="_1dba73d3-532d-4664-a643-6b2887e21adf"><p id="_72968998-2f44-4ad3-aa9c-ed5b101b059e">The following is an example of this property.  It points to a server     
-acting as the source for the calendar object.</p>    
-<sourcecode lang="en" id="_5c90f7c9-ebb8-4f11-9670-fad1b337a5e2">CONCEPT:http://example.com/event-types/sports    
-CONCEPT:http://example.com/event-types/arts/music    
-CONCEPT:http://example.com/task-types/delivery</sourcecode>    
-</example></clause>  
-<clause id="link" obligation="normative"><title>Link</title><dl id="_9069ce63-4fa7-44a1-b03d-268972742df4">    
-  <dt>Property name</dt>    
-  <dd>    
-    <p id="_a4bc522f-f965-40ac-8040-780e88e8d241">LINK</p>    
-  </dd>    
-  <dt>Purpose</dt>    
-  <dd>    
-    <p id="_48da804f-6e62-49b5-b261-80b8e2934050">This property provides a reference to external information    
-about a component.</p>    
-  </dd>    
-  <dt>Value type</dt>    
-  <dd>    
-    <p id="_914459c3-42be-41a6-973c-3f57ae18067e">URI, TEXT or REFERENCE</p>    
-  </dd>    
-  <dt>Property Parameters</dt>    
-  <dd>    
-    <p id="_435eef90-f32d-43a2-94d8-b20bdd654154">Non-standard, reference type or format type    
-parameters can be specified on this property.</p>    
-  </dd>    
-  <dt>Conformance</dt>    
-  <dd>    
-    <p id="_60cb04dc-56ce-416a-be5e-ce273e6a5c44">This property MAY be specified in any iCalendar    
-component.</p>    
-  </dd>    
-  <dt>Description</dt>    
-  <dd>    
-    <p id="_431d3c4b-1022-459b-b594-48393b537d02">When used in a component the value of this property    
-points to additional information related to the component.  For    
-example, it may reference the originating web server.</p>    
-  </dd>    
-  <dt>Format Definition</dt>    
-  <dd><p id="_7470bcfe-c883-4ebf-9252-7886b5ff0abe">This property is defined by the following notation:</p>    
-<sourcecode lang="bnf" id="_18504351-63d0-43df-94d9-dc6a7f48bf2f">link            = "LINK" linkparam  /    
-                  (    
-                    ";" "VALUE" "=" "TEXT"    
-                    ":" text    
-                  )    
-                  (    
-                    ";" "VALUE" "=" "REFERENCE"    
-                    ":" text    
-                  )    
-                  (    
-                    ";" "VALUE" "=" "URI"    
-                    ":" uri    
-                  )    
-                  CRLF    
-    
-    
-linkparam       = *(    
-    
-                ; the following is MANDATORY    
-                ; and MAY occur more than once    
-    
-                (";" relparam) /    
-    
-                ; the following are MANDATORY    
-                ; but MUST NOT occur more than once    
-    
-                (";" fmttypeparam) /    
-                (";" labelparam) /    
-                ; labelparam is defined in ...    
-    
-                ; the following is OPTIONAL    
-                ; and MAY occur more than once    
-    
-                (";" xparam)    
-    
-                )</sourcecode>    
-</dd>    
-</dl>   
-<example id="_1708814e-3435-4606-bb31-67cd4ba6c508"><p id="_15cebb64-981d-4c4a-9ddd-fd0584b45eb9">The following is an example of this property.  It points to a server     
-acting as the source for the calendar object.</p>    
-<sourcecode lang="en" id="_6277127b-4814-4e8b-b2bd-40220f23c0e0">LINK;REL=SOURCE;LABEL=The Egg:http://example.com/events</sourcecode>    
-</example></clause>  
-<clause id="refid" obligation="normative"><title>Refid</title><dl id="_e3f150f0-9494-454c-84e2-326484d9bdca">    
-  <dt>Property name</dt>    
-  <dd>    
-    <p id="_4fe154e1-c51f-4e16-b328-ef538f638943">REFID</p>    
-  </dd>    
-  <dt>Purpose</dt>    
-  <dd>    
-    <p id="_df982ae0-8d44-4932-877d-cf825130564d">This property value acts as a key for associated iCalendar    
-entities.</p>    
-  </dd>    
-  <dt>Value type</dt>    
-  <dd>    
-    <p id="_21819140-34b2-41ac-bc1d-8b6c02a85ef3">TEXT</p>    
-  </dd>    
-  <dt>Property Parameters</dt>    
-  <dd>    
-    <p id="_7ac255cd-9d42-4b75-ac79-feb11d4a4e5a">Non-standard parameters can be specified on    
-this property.</p>    
-  </dd>    
-  <dt>Conformance</dt>    
-  <dd>    
-    <p id="_f3162016-e5fd-4144-b7ef-84b0253f8e5a">This property MAY be specified multiple times in any    
-iCalendar component.</p>    
-  </dd>    
-  <dt>Description</dt>    
-  <dd>    
-    <p id="_38b94d8f-e22a-4456-bcbe-cb4f50edf28c">The value of this property is a text identifier that    
-allows associated components to be located or retrieved as a    
-whole.  For example all of the events in a travel itinerary would    
-have the same REFID value.</p>    
-  </dd>    
-  <dt>Format Definition</dt>    
-  <dd/>    
-</dl>   
-<p id="_89bbee48-124d-43c3-b4be-8811c4076ae5">This property is defined by the following notation:</p>   
-<sourcecode lang="bnf" id="_cd8ec1d4-023f-499e-9c51-7e37eac83b0e">refid      = "REFID" refidparam ":" text CRLF   
-   
-   
-refidparam      = *(   
-   
-                ; the following is OPTIONAL   
-                ; and MAY occur more than once   
-   
-                (";" xparam)   
-   
-                )</sourcecode>   
-   
-<example id="_4c3a77a7-2417-4b54-92a3-736e5191350b"><p id="_5d7afc6a-542e-4e48-9250-d070daa33b83">The following is an example of this property.</p>    
-<sourcecode lang="en" id="_dfb9e11b-37a2-4fdb-acc3-6f6127759c9d">REFID:itinerary-2014-11-17</sourcecode>    
-</example></clause></clause> 
-<clause id="redefined_property_related_to" obligation="normative">  
-  <title>Redefined RELATED-TO Property</title>  
-  <clause id="related-to" obligation="normative"><title>RELATED-TO</title><dl id="_e323184c-64c2-4cf4-9894-947bd74a4466">    
-  <dt>Property name</dt>    
-  <dd>    
-    <p id="_add2d69a-7c7e-4583-92bc-748932cb315a">RELATED-TO</p>    
-  </dd>    
-  <dt>Purpose</dt>    
-  <dd>    
-    <p id="_009f65f8-dc29-465b-beef-1f522742a21c">This property is used to represent a relationship or    
-reference between one calendar component and another.  The    
-definition here extends the definition in    
-<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>3.8.4.5</referenceFrom></locality></eref> by allowing URI or UID values and a GAP parameter.</p>    
-  </dd>    
-  <dt>Value type</dt>    
-  <dd>    
-    <p id="_562258cb-729d-4ed1-976b-0b80a7ded98c">URI, UID or TEXT</p>    
-  </dd>    
-  <dt>Property Parameters</dt>    
-  <dd>    
-    <p id="_e2e85857-862f-4670-8a0c-9d888d222308">Relationship type, IANA and non-standard    
-property parameters can be specified on this property.</p>    
-  </dd>    
-  <dt>Conformance</dt>    
-  <dd>    
-    <p id="_dcdf2196-db12-43d7-8c63-7476c2c7c0a3">This property MAY be specified in any iCalendar    
-component.</p>    
-  </dd>    
-  <dt>Description</dt>    
-  <dd><p id="_6a74e171-5106-406f-81fc-073a32683a23">By default or when VALUE=UID is specified, the property    
-value consists of the persistent, globally unique identifier of    
-another calendar component.  This value would be represented in a    
-calendar component by the “UID” property.</p><p id="_4933c9a4-c9cf-4083-ab1d-dadfaf2d24ad">By default, the property value points to another calendar     
-   component that has a PARENT relationship to the referencing     
-   object.  The “RELTYPE” property parameter is used to either     
-   explicitly state the default PARENT relationship type to the     
-   referenced calendar component or to override the default PARENT     
-   relationship type and specify either a CHILD or SIBLING     
-   relationship or a temporal relationship.</p>    
-<p id="_17056a3d-c458-4ca4-8078-d8fa73337303">The PARENT relationship indicates that the calendar component is a     
-   subordinate of the referenced calendar component.  The CHILD     
-   relationship indicates that the calendar component is a superior     
-   of the referenced calendar component.  The SIBLING relationship     
-   indicates that the calendar component is a peer of the referenced     
-   calendar component.</p>    
-<p id="_bae77eea-ad1d-46d0-918f-e67d91959092">The FINISHTOSTART, FINISHTOFINISH, STARTTOFINISH or STARTTOSTART     
-   relationships define temporal relationships as specified in the     
-   reltype parameter definition.</p>    
-<p id="_5d4afcd6-9550-4f74-b158-63e51ab7a424">Changes to a calendar component referenced by this property can     
-   have an implicit impact on the related calendar component.  For     
-   example, if a group event changes its start or end date or time,     
-   then the related, dependent events will need to have their start     
-   and end dates changed in a corresponding way.  Similarly, if a     
-   PARENT calendar component is cancelled or deleted, then there is     
-   an implied impact to the related CHILD calendar components.  This     
-   property is intended only to provide information on the     
-   relationship of calendar components.  It is up to the target     
-   calendar system to maintain any property implications of this     
-   relationship.</p></dd>    
-  <dt>Format Definition</dt>    
-  <dd><p id="_ab6a8de6-f61a-4718-b537-77f13b23f588">This property is defined by the following notation:</p>    
-<sourcecode lang="bnf" id="_8f9e9389-0286-43b5-92cf-24f75b244a3e">related    = "RELATED-TO" relparam ( ":" text ) /    
-             (    
-               ";" "VALUE" "=" "UID"    
-               ":" uid    
-             )    
-             (    
-               ";" "VALUE" "=" "URI"    
-               ":" uri    
-             )    
-             CRLF    
-    
-relparam   = *(    
-            ;    
-            ; The following are OPTIONAL,    
-            ; but MUST NOT occur more than once.    
-            ;    
-            (";" reltypeparam) /    
-            (";" gapparam) /    
-            ;    
-            ; The following is OPTIONAL,    
-            ; and MAY occur more than once.    
-            ;    
-            (";" other-param)    
-            ;    
-            )</sourcecode>    
-</dd>    
-</dl>   
-<example id="_17ef4c16-132d-4b90-9317-775550cd8d5f"><p id="_1fbd54ea-a2f6-42a8-b6c4-bef4554532a6">The following are examples of this property.</p>    
-<sourcecode lang="en" id="_67aa491f-3464-4f99-b9cd-03f5b77bd9eb">RELATED-TO:jsmith.part7.19960817T083000.xyzMail@example.com    
-    
-RELATED-TO:19960401-080045-4000F192713-0052@example.com    
-    
-RELATED-TO;VALUE=URI;RELTYPE=STARTTOFINISH:    
-  http://example.com/caldav/user/jb/cal/    
-  19960401-080045-4000F192713.ics</sourcecode>    
-</example></clause>  
-</clause> 
-<clause id="_security_considerations" obligation="normative"><title>Security Considerations</title><p id="_2b35854c-17f7-4db6-ac84-8c6282abd949">Applications using the LINK property need to be aware of the risks   
-entailed in using the URIs provided as values.  See &lt;RFC3986&gt;&gt; for a   
-discussion of the security considerations relating to URIs.</p>  
-<p id="_e5da82cc-5acd-44bb-b042-f9b080a308bd">The CONCEPT and redefined RELATED-TO property have the same issues in   
-that values may be URIs.</p></clause> 
-<clause id="iana" obligation="normative"><title>IANA Considerations</title><clause id="property_registrations" obligation="normative"><title>iCalendar Property Registrations</title><p id="_3bd4f469-f9c5-4405-ac2b-5a7ed29c819d">The following iCalendar property names have been added to the    
-iCalendar Properties Registry defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.2</referenceFrom></locality></eref></p>   
-<table id="_14634e47-c36a-4005-9942-664446a1791d">    
-  <thead>    
-    <tr>    
-      <th align="left">Property</th>    
-      <th align="left">Status</th>    
-      <th align="left">Reference</th>    
-    </tr>    
-  </thead>    
-  <tbody>    
-    <tr>    
-      <td align="left">    
-        <p id="_7b51dbf5-16c6-4d2a-90b9-492683151de8">CONCEPT</p>    
-      </td>    
-      <td align="left">    
-        <p id="_463c1aa8-ce44-4e8a-95c0-ae528737552d">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_c4366d45-c1c2-40cb-b663-a8cd9db13efb">     
-  <xref target="concept"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_527c93b0-3de1-4f60-9baa-8bd237d70f2c">LINK</p>    
-      </td>    
-      <td align="left">    
-        <p id="_fd57b1f7-b71c-4529-9b68-6003fa6529c9">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_b9b74cd2-3ae1-4c13-8697-a7f4297cfff1">     
-  <xref target="link"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_9ec60bb0-9d25-49b9-bdc3-84cc8572fbd6">REFID</p>    
-      </td>    
-      <td align="left">    
-        <p id="_0c51b7e0-6f4e-401f-95a9-3b3f7813c9a8">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_cded66a8-a0a1-4a3f-b476-d66db4745803">     
-  <xref target="refid"/>     
-</p>    
-      </td>    
-    </tr>    
-  </tbody>    
-</table></clause>  
-<clause id="property_parameter_registrations" obligation="normative"><title>iCalendar Property Parameter Registrations</title><p id="_089dcc22-ce85-4a6f-9495-20caf64bcc37">The following iCalendar property parameter names have been added to    
-the iCalendar Parameters Registry defined in    
-<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.3</referenceFrom></locality></eref></p>   
-<table id="_48057d83-08bb-4225-aea4-5ff6dda887f5">    
-  <thead>    
-    <tr>    
-      <th align="left">Parameter</th>    
-      <th align="left">Status</th>    
-      <th align="left">Reference</th>    
-    </tr>    
-  </thead>    
-  <tbody>    
-    <tr>    
-      <td align="left">    
-        <p id="_28c0d52a-d648-488a-a59e-6aa64be04bb2">REL</p>    
-      </td>    
-      <td align="left">    
-        <p id="_25d4f481-137e-45bc-bcdf-9255363e6bd6">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_1793874e-bbb7-4ec0-b7e5-346303c7171c">     
-  <xref target="rel"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_86bb22bb-cdf0-4800-b506-402cfd36f174">GAP</p>    
-      </td>    
-      <td align="left">    
-        <p id="_f341b14d-3ee3-4eba-ae70-5f0f84f2b52c">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_10338d8f-da71-4fa9-be97-30ed027d6196">     
-  <xref target="gap"/>     
-</p>    
-      </td>    
-    </tr>    
-  </tbody>    
-</table></clause>  
-<clause id="value_data_types_registrations" obligation="normative"><title>iCalendar Value Data Type Registrations</title><p id="_651831bf-dfd9-4f33-83e3-aae7fe7e086e">The following iCalendar property parameter names have been added to    
-the iCalendar Value Data Types Registry defined in    
-<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.4</referenceFrom></locality></eref></p>   
-<table id="_93c4110f-7082-4bb6-a199-2815e3ddeb8b">    
-  <thead>    
-    <tr>    
-      <th align="left">Value Data Type</th>    
-      <th align="left">Status</th>    
-      <th align="left">Reference</th>    
-    </tr>    
-  </thead>    
-  <tbody>    
-    <tr>    
-      <td align="left">    
-        <p id="_20afc867-a70a-4b61-8288-3bab42440d16">UID</p>    
-      </td>    
-      <td align="left">    
-        <p id="_71c61491-bcbe-45b3-9650-45498841f1ab">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_4b4f9d0e-4362-4db6-bc5b-55f6187eb7bb">     
-  <xref target="new_value_data_types"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_98831b44-e33b-4400-8f7f-d426d80e6d59">REFERENCE</p>    
-      </td>    
-      <td align="left">    
-        <p id="_913bb91b-e330-4102-a965-a8718634c5cb">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_60a6592d-4aef-45cc-aabd-d7e228bdb8f7">     
-  <xref target="new_value_data_types"/>     
-</p>    
-      </td>    
-    </tr>    
-  </tbody>    
-</table></clause>  
-<clause id="reltype_value_registrations" obligation="normative"><title>iCalendar RELTYPE Value Registrations</title><p id="_d0a8bd80-1bdc-4d76-9140-9a219c412d85">The following iCalendar “RELTYPE” values have been added to the    
-iCalendar Relationship Types Registry defined in    
-<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.3.8</referenceFrom></locality></eref></p>   
-<table id="_8e1fdacd-2b3e-4bba-a6f2-a8797a45eb3b">    
-  <thead>    
-    <tr>    
-      <th align="left">Relationship Type</th>    
-      <th align="left">Status</th>    
-      <th align="left">Reference</th>    
-    </tr>    
-  </thead>    
-  <tbody>    
-    <tr>    
-      <td align="left">    
-        <p id="_cad07623-e7b8-4110-9389-35e88bbf2548">DEPENDS-ON</p>    
-      </td>    
-      <td align="left">    
-        <p id="_70597143-d1db-491d-a56a-eb0f34362197">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_a1dc209d-777b-4dbc-a80d-dbdb01382e0e">     
-  <xref target="redefined_relation_type_value"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_95431170-7d6a-4e5e-8e05-30e9c3131d2b">REFID</p>    
-      </td>    
-      <td align="left">    
-        <p id="_d954fbc8-3090-48d3-828f-12ba2b8a149d">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_01eaa9fe-8244-4b8d-8cc6-be2d19b781b5">     
-  <xref target="redefined_relation_type_value"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_a7ab2602-4b91-4c6a-9a20-e119c6fc8484">CONCEPT</p>    
-      </td>    
-      <td align="left">    
-        <p id="_3e55f096-5984-42ff-b519-e0964d6cf883">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_d72b130d-edc2-45fd-85e2-7774201f5d96">     
-  <xref target="redefined_relation_type_value"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_e2a7c524-cc01-4f88-9206-bdfddf7dd51d">FINISHTOSTART</p>    
-      </td>    
-      <td align="left">    
-        <p id="_f40aa9ac-a6bd-4527-acaf-40a5c940e12d">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_5318693e-dcdd-462d-8351-c53dfc5570f3">     
-  <xref target="redefined_relation_type_value"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_8f33dfca-1e0d-4e1e-8c1f-ee38fe1b5985">FINISHTOFINISH</p>    
-      </td>    
-      <td align="left">    
-        <p id="_8ca0a65d-dc5d-44eb-bdf0-903918e925d9">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_d89b6a55-7375-4008-8af0-0072de9796fa">     
-  <xref target="redefined_relation_type_value"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_01285413-b12e-4695-9ddf-1a7690ac3cce">STARTTOFINISH</p>    
-      </td>    
-      <td align="left">    
-        <p id="_f4c8e8ce-3c68-48d5-ba06-906fc150b2d6">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_e93e74d6-07e7-483f-9d9d-12b38e43180f">     
-  <xref target="redefined_relation_type_value"/>     
-</p>    
-      </td>    
-    </tr>    
-    <tr>    
-      <td align="left">    
-        <p id="_d300d93c-9c2f-4b47-8009-ff2822b61f85">STARTTOSTART</p>    
-      </td>    
-      <td align="left">    
-        <p id="_c6c00846-1d30-4f39-a090-38f635665c01">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_6ecbee45-83cd-467e-baa3-105d47c486f7">     
-  <xref target="redefined_relation_type_value"/>     
-</p>    
-      </td>    
-    </tr>    
-  </tbody>    
-</table></clause>  
-<clause id="new_rel_registration" obligation="normative"><title>New Reference Type Registration</title><p id="_3f95f7ea-2171-4097-8392-31e084edd67b">The following link relation values have been added to the Reference    
-Types Registry defined in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"><locality type="section"><referenceFrom>6.2.2</referenceFrom></locality></eref></p>   
-<table id="_b060788b-ce83-4822-b692-600ea3b89387">    
-  <thead>    
-    <tr>    
-      <th align="left">Name</th>    
-      <th align="left">Status</th>    
-      <th align="left">Reference</th>    
-    </tr>    
-  </thead>    
-  <tbody>    
-    <tr>    
-      <td align="left">    
-        <p id="_1b86c48d-4e31-4a2a-afda-0aaabbdfee97">SOURCE</p>    
-      </td>    
-      <td align="left">    
-        <p id="_13d4b70b-803c-4bd6-a4ce-6cbe005067c7">Current</p>    
-      </td>    
-      <td align="left">    
-        <p id="_3e7df9fa-768f-460f-8809-df14e7819669">     
-  <xref target="rel"/>     
-</p>    
-      </td>    
-    </tr>    
-  </tbody>    
-</table></clause></clause> 
-<clause id="acknowledgements" obligation="normative"><title>Acknowledgements</title><p id="_3fd20ea6-2b40-44b9-83cc-00c71afe6b7e">The author would like to thank the members of the Calendaring and   
-Scheduling Consortium technical committees and the following   
-individuals for contributing their ideas, support and comments:</p>  
-<p id="_9789d2da-a3b1-4dc9-bdc6-f52102354f75">Adrian Apthorp, Cyrus Daboo, Marten Gajda, Ken Murchison</p>  
-<p id="_b7574ec0-52f9-4aaa-9262-2f161afd6815">The author would also like to thank CalConnect, the Calendaring and   
-Scheduling Consortium for advice with this specification.</p></clause> 
-</sections><bibliography><references id="_normative_references" obligation="informative"><title>Normative References</title>   
-<bibitem id="RFC5545">   
-  <fetched>2019-03-16</fetched>   
-  <title format="plain" language="en" script="Latn">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>   
-  <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>   
-  <docidentifier type="IETF">RFC 5545</docidentifier>   
-  <docidentifier type="DOI">10.17487/RFC5545</docidentifier>   
-  <date type="published">   
-    <on>2009</on>   
-  </date>   
-  <contributor>   
-    <role type="editor"/>   
-    <person>   
-      <name>   
-        <completename language="en">B. Desruisseaux</completename>   
-      </name>   
-      <affiliation>   
-        <organization>   
-          <name>IETF</name>   
-          <abbreviation>IETF</abbreviation>   
-        </organization>   
-      </affiliation>   
-    </person>   
-  </contributor>   
-  <language>en</language>   
-  <series type="main">   
-    <title format="plain" language="en" script="Latn">RFC</title>   
-    <number>5545</number>   
-  </series>   
-</bibitem>   
-   
-<bibitem id="RFC5988">   
-  <fetched>2019-03-16</fetched>   
-  <title format="plain" language="en" script="Latn">Web Linking</title>   
-  <uri type="src">https://www.rfc-editor.org/info/rfc5988</uri>   
-  <docidentifier type="IETF">RFC 5988</docidentifier>   
-  <docidentifier type="DOI">10.17487/RFC5988</docidentifier>   
-  <date type="published">   
-    <on>2010</on>   
-  </date>   
-  <contributor>   
-    <role type="author"/>   
-    <person>   
-      <name>   
-        <completename language="en">M. Nottingham</completename>   
-      </name>   
-      <affiliation>   
-        <organization>   
-          <name>IETF</name>   
-          <abbreviation>IETF</abbreviation>   
-        </organization>   
-      </affiliation>   
-    </person>   
-  </contributor>   
-  <language>en</language>   
-  <series type="main">   
-    <title format="plain" language="en" script="Latn">RFC</title>   
-    <number>5988</number>   
-  </series>   
-</bibitem>   
-   
-<bibitem id="RFC6638">   
-  <fetched>2019-03-16</fetched>   
-  <title format="plain" language="en" script="Latn">Scheduling Extensions to CalDAV</title>   
-  <uri type="src">https://www.rfc-editor.org/info/rfc6638</uri>   
-  <docidentifier type="IETF">RFC 6638</docidentifier>   
-  <docidentifier type="DOI">10.17487/RFC6638</docidentifier>   
-  <date type="published">   
-    <on>2012</on>   
-  </date>   
-  <contributor>   
-    <role type="author"/>   
-    <person>   
-      <name>   
-        <completename language="en">C. Daboo</completename>   
-      </name>   
-      <affiliation>   
-        <organization>   
-          <name>IETF</name>   
-          <abbreviation>IETF</abbreviation>   
-        </organization>   
-      </affiliation>   
-    </person>   
-  </contributor>   
-  <contributor>   
-    <role type="author"/>   
-    <person>   
-      <name>   
-        <completename language="en">B. Desruisseaux</completename>   
-      </name>   
-      <affiliation>   
-        <organization>   
-          <name>IETF</name>   
-          <abbreviation>IETF</abbreviation>   
-        </organization>   
-      </affiliation>   
-    </person>   
-  </contributor>   
-  <language>en</language>   
-  <series type="main">   
-    <title format="plain" language="en" script="Latn">RFC</title>   
-    <number>6638</number>   
-  </series>   
-</bibitem>   
-<bibitem id="W3C.CR-skos-reference-20090317">   
-  <formattedref format="application/x-isodoc+xml">Sean Bechhofer, Alistair Miles. <em>SKOS Simple Knowledge Organization System Reference.</em> 2009. <link target="http://www.w3.org/TR/2009/CR-skos-reference-20090317"/></formattedref>   
-  <docidentifier>W3C CR skos-reference-20090317</docidentifier>   
-</bibitem><bibitem id="W3C.WD-xptr-xpointer-20021219">   
-  <formattedref format="application/x-isodoc+xml">Steven DeRose, Ron Daniel, Eve Maler. <em>XPointer xpointer() Scheme.</em> 2002. <link target="http://www.w3.org/TR/2002/WD-xptr-xpointer-20021219"/></formattedref>   
-  <docidentifier>W3C WD xptr-xpointer-20021219</docidentifier>   
-</bibitem>   
-<bibitem id="I-D.daboo-caldav-attachments">   
-  <fetched>2019-03-16</fetched>   
-  <title format="plain" language="en" script="Latn">CalDAV Managed Attachments</title>   
-  <uri type="src"/>   
-  <docidentifier type="IETF">I-D.daboo-caldav-attachments</docidentifier>   
-  <date type="published">   
-    <on>2014</on>   
-  </date>   
-  <contributor>   
-    <role type="author"/>   
-    <person>   
-      <name>   
-        <completename language="en">Cyrus Daboo</completename>   
-      </name>   
-      <affiliation>   
-        <organization>   
-          <name>IETF</name>   
-          <abbreviation>IETF</abbreviation>   
-        </organization>   
-      </affiliation>   
-    </person>   
-  </contributor>   
-  <contributor>   
-    <role type="author"/>   
-    <person>   
-      <name>   
-        <completename language="en">Arnaud Quillaud</completename>   
-      </name>   
-      <affiliation>   
-        <organization>   
-          <name>IETF</name>   
-          <abbreviation>IETF</abbreviation>   
-        </organization>   
-      </affiliation>   
-    </person>   
-  </contributor>   
-  <language>en</language>   
-  <series type="main">   
-    <title format="plain" language="en" script="Latn">Internet-Draft</title>   
-    <number>draft-daboo-caldav-attachments-03</number>   
-  </series>   
-</bibitem> </references><references id="_bibliography" obligation="informative"><title>Bibliography</title>   
-<bibitem id="RFC2119">   
-  <fetched>2019-03-16</fetched>   
-  <title format="plain" language="en" script="Latn">Key words for use in RFCs to Indicate Requirement Levels</title>   
-  <uri type="src">https://www.rfc-editor.org/info/rfc2119</uri>   
-  <docidentifier type="IETF">RFC 2119</docidentifier>   
-  <docidentifier type="DOI">10.17487/RFC2119</docidentifier>   
-  <date type="published">   
-    <on>1997</on>   
-  </date>   
-  <contributor>   
-    <role type="author"/>   
-    <person>   
-      <name>   
-        <completename language="en">S. Bradner</completename>   
-      </name>   
-      <affiliation>   
-        <organization>   
-          <name>IETF</name>   
-          <abbreviation>IETF</abbreviation>   
-        </organization>   
-      </affiliation>   
-    </person>   
-  </contributor>   
-  <language>en</language>   
-  <series type="main">   
-    <title format="plain" language="en" script="Latn">BCP</title>   
-    <number>14</number>   
-  </series>   
-  <series type="main">   
-    <title format="plain" language="en" script="Latn">RFC</title>   
-    <number>2119</number>   
-  </series>   
-</bibitem> </references></bibliography>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <p id="_05ebfff0-3681-4207-9b8e-a8736f78694c">© 2018 The Calendaring and Scheduling Consortium, Inc. </p>
+    </clause>
+  </copyright-statement>
+
+  
+  <license-statement>
+    <clause>
+    <title>Warning for Drafts</title>
+      <p id="_3a0b2e12-3996-4a58-9f49-6c91b449e9d3">This document is not a CalConnect Standard. It is distributed for review and
+        comment, and is subject to change without notice and may not be referred to as
+        a Standard. Recipients of this draft are invited to submit, with their
+        comments, notification of any relevant patent rights of which they are aware
+        and to provide supporting documentation.
+      </p>
+    </clause>
+  </license-statement>
+  
+
+  <legal-statement>
+    <clause>
+      <p id="_89e5644c-89d9-4291-948d-031492344b8b">All rights reserved. Unless otherwise specified, no part of this
+        publication may be reproduced or utilized otherwise in any form or by any
+        means, electronic or mechanical, including photocopying, or posting on the
+        internet or an intranet, without prior written permission. Permission can
+        be requested from the address below.  </p>
+    </clause>
+  </legal-statement>
+
+  <feedback-statement>
+    <clause>
+      <p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+      <p id="boilerplate-address">4390 Chaffin Lane<br/>
+        McKinleyville<br/>
+        California 95519<br/>
+        United States of America<br/>
+        <br/>
+        <link target="mailto:copyright@calconnect.org">copyright@calconnect.org</link><br/>
+        <link target="www.calconnect.org">www.calconnect.org</link>
+      </p>
+    </clause>
+  </feedback-statement>
+</boilerplate>
+
+<preface><foreword id="_ddcc997c-a7a4-4ad0-bef2-1c5a3e11cc5c" obligation="informative"><title>Foreword</title>
+<p id="_24b8d0a2-bf70-4452-b3b9-939a3ce35da2">The Calendaring and Scheduling Consortium (“CalConnect”) is a global
+non-profit organization with the aim to facilitate interoperability of
+collaborative technologies and tools through open standards.</p>
+<p id="_553130bf-d33d-4107-b14d-9c85ff4427dd">CalConnect works closely with international and regional partners,
+of which the full list is available on our website
+(<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>
+<p id="_e0c5b0bf-2cd1-47d0-8116-236402f9fb3b">The procedures used to develop this document and those intended for its
+further maintenance are described in the CalConnect Directives.</p>
+<p id="_50f1e663-492f-4ae0-afe7-5f6684897ec5">In particular the different approval criteria needed for the different
+types of CalConnect documents should be noted. This document was drafted in
+accordance with the editorial rules of the CalConnect Directives.</p>
+<p id="_3276b654-9196-4737-8f32-81c8550c794d">Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be
+held responsible for identifying any or all such patent rights. Details
+of any patent rights identified during the development of the document
+will be provided in the Introduction.</p>
+<p id="_95c02d81-c8f3-498d-a681-e24237701d4d">Any trade name used in this document is information given for the
+convenience of users and does not constitute an endorsement.</p>
+<p id="_85b79cfc-e7f6-46a3-bff5-c6175c3f8eec">This document was prepared by Technical Committee
+<em>CALENDAR</em>.</p></foreword><introduction id="introduction" obligation="informative"><title>Introduction</title><clause id="_general" obligation="informative"><title>General</title><p id="_e45dcb40-a300-4fb9-9fc5-31ecc1e4a2eb">iCalendar entities often need to be related to each other or to
+associated meta-data.  These relationships can take the following
+forms</p>
+<dl id="_dd6c5822-e7e2-4150-bed5-bc3c425726ec">
+<dt>Structured iCalendar</dt>
+<dd>
+<p id="_1939dbb4-33bf-4b0a-8d40-72a0b2ab52cf">iCalendar entities are related to each other
+in some structured way, for example as parent, sibling, before,
+after.</p>
+</dd>
+<dt>Grouped iCalendar</dt>
+<dd>
+<p id="_7847e760-1aba-45ff-a18c-9c16c6a57469">iCalendar entities are related to each other as a
+group.  CATEGORIES are often used for this purpose but are
+problematic for application developers.</p>
+</dd>
+<dt>Linked</dt>
+<dd>
+<p id="_e53b5811-4fa2-431f-bbb4-fa29e655e7fe">Entities are linked to each other through typed references.</p>
+</dd>
+</dl></clause>
+<clause id="_structured_icalendar_relationships" obligation="informative"><title>Structured iCalendar relationships</title><p id="_60bc3c97-771e-40b7-abdd-74bea96f263c">The currently existing iCalendar <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> RELATED-TO property has no
+support for temporal relationships as used by standard project
+management tools.</p>
+<p id="_ca0ef4e9-a6c2-4335-945a-27e5b924feee">The RELTYPE parameter is extended to take new values defining
+temporal relationships, a GAP parameter is defined to provide lead
+and lag values and RELATED-TO is extended to allow URI values.  These
+changes allow the RELATED-TO property to define a richer set of
+relationships useful for project management.</p></clause>
+<clause id="_grouped_icalendar_relationships" obligation="informative"><title>Grouped iCalendar relationships</title><p id="_9b7868f6-cdd3-45a2-87dc-a43a00eed85b">This specification defines a new REFID property which allows
+arbitrary groups of entities to be associated with the same key
+value.</p>
+<p id="_8030ee1a-16e6-4041-bc19-7a6903967e8c">REFID is used to identify a key allowing the association of
+components that are related to the same object and retrieval of a
+component based on this key.  This may be, for example, to identify
+the tasks associated with a given project without having to
+communicate the task structure of the project, or, for example, in a
+package delivery system all tasks associated to a specific package.</p>
+<p id="_5690e6b5-b58f-49e2-b83d-6d5e815ea6ae">As such, the presence of a REFID property imparts no meaning to the
+component.  It is merely a key to allow retrieval.  This is distinct
+from categorisation which, while allowing grouping also adds meaning
+to the component to which it is attached.</p></clause>
+<clause id="_concept_relationships" obligation="informative"><title>Concept relationships</title><p id="_7b12f388-7234-499e-9cbc-c8d27183e3c2">The name CONCEPT is used by the Simple Knowledge Organization System
+defined in <eref type="inline" bibitemid="W3C.CR-skos-reference-20090317" citeas="W3C CR skos-reference-20090317"/>.  This more accurately
+defines what we mean by a catgeory.  It’s not the words but the
+meaning.</p>
+<p id="_7fd930fb-96b8-41f1-97ed-1419600358ee">The introduction of CONCEPT allows a more structured approach to
+categorization, with the possibility of namespaced and path-like
+values.  Unlike REFID the CONCEPT property imparts some meaning.  It
+is assumed that the value of this property will reference a well
+defined category.</p>
+<p id="_3128ff65-0978-4512-a6af-cd16c3ac9624">The current <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> CATEGORY property is used as a free form
+‘tagging’ field.  As such it is difficult to establish formal
+relationships between components based on their category.</p>
+<p id="_04eaae2b-505f-4945-982e-bf62fac46a69">Rather than attempt to add semantics to the current property it
+seeems best to continue its usage as an informal tag and establish a
+new property with more constraints.</p></clause>
+<clause id="_linked_relationships" obligation="informative"><title>Linked relationships</title><p id="_a707f2a1-5bc0-4407-b085-7afbcc792758">The currently existing iCalendar standard <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> lacks a general
+purpose method for referencing additional, external information
+relating to calendar components.</p>
+<p id="_2db66fe8-1e0b-4bd2-9489-543af93550e1">This document proposes a method for referencing typed external
+information that can provide additional information about an
+iCalendar component.  This new LINK property is closely aligned to
+the LINK header defined in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/></p>
+<p id="_c394b918-6780-4f33-b708-4704d0dd2eda">The LINK property defines a typed reference or relation to external
+meta-data or related resources.  By providing type and format
+information as parameters, clients and servers are able to discover
+interesting references and make use of them, perhaps for indexing or
+the presentation of interesting links for the user.</p>
+<p id="_0cdc22a5-70aa-43b5-a7fc-c46684cb48b1">It is often necessary to relate calendar components.  The current
+RELATED-TO property only allows for a UID which is inadequate for
+many purposes.  Allowing other value types for that property may help
+but might raise a number of backward compatibility issues.  The link
+property can link components in different collections or even on
+different servers.</p>
+<p id="_fb9e1077-d0a8-4143-b48f-992a07b4d141">When publishing events it is useful to be able to refer back to the
+source of that information.  The actual event may have been consumed
+from a feed or an ics file on a web site.  A LINK property can
+provide a reference to the originator of the event.</p>
+<p id="_a2819964-4997-49af-9e67-dc3d375cdd39">Beyond the need to relate elements temporally, project management
+tools often need to be able to specify the relationships between the
+various events and tasks which make up a project.  The LINK property
+provides such a mechanism.</p>
+<p id="_1745863b-dbaa-442e-b50c-f51e1e8c6fb2">The LINK property SHOULD NOT be treated as just another attachment.
+The ATTACH property is being extended to handle server-side
+management and stripping of inline data.  Clients may choose to
+handle attachments differently as they are often an integral part of
+the message — for example, the agenda.  See
+<eref type="inline" bibitemid="I-D.daboo-caldav-attachments" citeas="I-D.daboo-caldav-attachments"/></p></clause>
+<clause id="caching" obligation="informative"><title>Caching and offline use</title><p id="_8446717c-092f-46f2-a6e8-c5eed225fb7d">To facilitate offline display the link type may identify important
+pieces of data which should be downloaded in advance.</p>
+<p id="_d4b6b6ba-f9e9-40a1-8fd5-16bd1ba8019a">In general, the calendar entity should be self explanatory without
+the need to download referenced meta-data such as a web page.</p></clause>
+<clause id="conventions" obligation="informative">
+<title>Conventions Used in This Document</title>
+<p id="_3f9d1ea6-b003-4538-a430-4897e64b9177">The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
+“SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “NOT RECOMMENDED”, “MAY”, and
+“OPTIONAL” in this document are to be interpreted as described in
+<eref type="inline" bibitemid="RFC2119" citeas="RFC 2119"/>.</p>
+</clause></introduction><acknowledgements id="acknowledgements" obligation="informative"><title>Acknowledgements</title><p id="_9bdd504c-3e1f-4315-a092-66f55a0d6b45">The author would like to thank the members of the Calendaring and
+Scheduling Consortium technical committees and the following
+individuals for contributing their ideas, support and comments:</p>
+<p id="_f9386222-b792-4bfe-aab5-8370765764b5">Adrian Apthorp, Cyrus Daboo, Marten Gajda, Ken Murchison</p>
+<p id="_3e26d505-84c3-4cf2-8b37-98b0a923f3a6">The author would also like to thank CalConnect, the Calendaring and
+Scheduling Consortium for advice with this specification.</p></acknowledgements></preface><sections>
+
+<clause id="scope" obligation="normative">
+<title>Scope</title>
+<p id="_878f61df-5ae6-49df-8df1-ee32d082a1f3">This specification updates RELATED-TO defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> and
+introduces new iCalendar properties LINK, CONCEPT and REFID to allow
+better linking and grouping of iCalendar components and related data.</p>
+</clause>
+
+<terms id="terms" obligation="normative">
+<title>Terms and definitions</title><p id="_5a7a1fed-031a-42dc-8fb2-ab06819852b5">No terms and definitions are listed in this document.</p>
+
+</terms>
+<clause id="reference_types" obligation="normative"><title>Reference Types</title><p id="_dcaa96a7-c0f0-4206-9410-b6bc9474e0e1">The actual reference value can take three forms specified by the type
+parameter</p>
+<dl id="_56e7ce1e-282d-4177-8bbb-4db1a25ed5fc">
+<dt>URI</dt>
+<dd>
+<p id="_83a64fa8-3a50-4140-b1a5-ddfc1fdcc8ec">The default type.  This is a URI referring to the target.</p>
+</dd>
+<dt>UID</dt>
+<dd>
+<p id="_ac87bd90-1530-42c8-98f4-799e70b1dd63">This allows for linking within a single collection and the
+value is assumed to be another component within that collection.</p>
+</dd>
+<dt>REFERENCE</dt>
+<dd>
+<p id="_e23dafdc-431b-49a7-bb7a-48443e448790">An xpointer.  In an XML environment it may be necessary
+to refer to an external XML artifact.  The XPointer is defined in
+<eref type="inline" bibitemid="W3C.WD-xptr-xpointer-20021219" citeas="W3C WD xptr-xpointer-20021219"/> and allows addressing portions of
+XML documents.</p>
+</dd>
+</dl></clause>
+<clause id="link_relation_types" obligation="normative"><title>Link Relation Types</title><p id="_cb17d2dc-e079-4da8-a2e5-625800f27928"><eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/> defines two forms of relation types, registered and
+extension.  Registered relation types are added to a registry defined
+by <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/> while extension relation types are specified as unique
+unregistered URIs, (at least unregistered in the <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/> registry).</p>
+<p id="_cfdb3410-abf8-4598-9c93-a69aa0230e51">The relation types defined here will be registered with IANA in
+accordance with the specifications in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/>.</p></clause>
+<clause id="redefined_relation_type_value" obligation="normative"><title>Redefined Relation Type Value</title><p id="_5708ec0d-4a3b-4465-bd71-524276fddebc">Relationship parameter type values are defined in
+<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><localityStack><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></localityStack></eref>.  This specification redefines that type to include the new
+temporal relationship values FINISHTOSTART, FINISHTOFINISH,
+STARTTOFINISH and STARTTOSTART.  It also adds the DEPENDS-ON value to
+provide a link to a component upon which the current component
+depends.</p>
+<dl id="_5e32ce7a-9144-4dd8-88ae-1dd5d03db0f0">
+<dt>Format Definition</dt>
+<dd><p id="_88d7f7ce-437b-4b8f-aaba-803a1671dbb8">This property parameter is defined by the following notation:</p>
+<sourcecode lang="bnf" id="_87adb07a-0780-4f21-8828-fec93c55969a">reltypeparam   = "RELTYPE" "="
+                 ("PARENT"    ; Parent relationship - Default
+                / "CHILD"     ; Child relationship
+                / "SIBLING"   ; Sibling relationship
+                / "DEPENDS-ON" ; refers to previous component
+                / "REFID"     ; Relationship based on REFID
+                / "CONCEPT"
+                        ; Relationship based on CONCEPT
+                / "FINISHTOSTART" ;  Temporal relationship
+                / "FINISHTOFINISH" ;  Temporal relationship
+                / "STARTTOFINISH" ;  Temporal relationship
+                / "STARTTOSTART" ;  Temporal relationship
+                / iana-token  ; Some other IANA-registered
+                              ; iCalendar relationship type
+                / x-name)     ; A non-standard, experimental
+                              ; relationship type</sourcecode>
+</dd>
+<dt>Description</dt>
+<dd>
+<p id="_a8c39b84-425f-425e-b075-0a00ed9db0a0">This parameter can be specified on a property that
+references another related calendar component.  The parameter may
+specify the hierarchical relationship type of the calendar
+component referenced by the property when the value is PARENT,
+CHILD or SIBLING.  If this parameter is not specified on an
+allowable property, the default relationship type is PARENT.
+Applications MUST treat x-name and iana-token values they don’t
+recognize the same way as they would the PARENT value.</p>
+<p id="_b444d899-83ac-4253-8a6b-af3f7163202b">This parameter defines the temporal relationship when the value is
+   one of the project management standard relationships
+   FINISHTOSTART, FINISHTOFINISH, STARTTOFINISH or STARTTOSTART.
+   This property will be present in the predecessor entity and will
+   refer to the successor entity.  The GAP parameter specifies the
+   lead or lag time between the predecessor and the successor.  In
+   the description of each temporal relationship below we refer to
+   Task-A which contains and controls the relationship and Task-B the
+   target of the relationship.</p>
+</dd>
+<dt>RELTYPE=PARENT</dt>
+<dd>
+<p id="_250bb329-9c2a-46d8-9338-141022282a7c">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><localityStack><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></localityStack></eref>.</p>
+</dd>
+<dt>RELTYPE=CHILD</dt>
+<dd>
+<p id="_2b2385b4-7364-44fc-b180-20b94327d45a">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><localityStack><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></localityStack></eref>.</p>
+</dd>
+<dt>RELTYPE=SIBLING</dt>
+<dd>
+<p id="_96148533-2188-40c3-ae3f-bf9e63c4e07b">See <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><localityStack><locality type="section"><referenceFrom>3.2.15</referenceFrom></locality></localityStack></eref>.</p>
+</dd>
+<dt>RELTYPE=DEPENDS-ON</dt>
+<dd>
+<p id="_e3fdb0f2-317b-473f-870b-13b8b31f97c3">Indicates that the current calendar component
+depends on the referenced calendar component in some manner.  For
+example a task may be blocked waiting on the other, referenced,
+task.</p>
+</dd>
+<dt>RELTYPE=REFID</dt>
+<dd>
+<p id="_a74aef8f-f6d3-42a6-a50b-7db231d2cb60">Establishes a reference from the current component to
+components with a REFID property which matches the value given in
+the associated RELATED-TO property.</p>
+</dd>
+<dt>RELTYPE=CONCEPT</dt>
+<dd>
+<p id="_34bd6cbe-f72e-4ad3-970c-500cea13393a">Establishes a reference from the current component
+to components with a CONCEPT property which matches the value
+given in the associated RELATED-TO property.</p>
+</dd>
+<dt>RELTYPE=FINISHTOSTART</dt>
+<dd>
+<p id="_9fc16463-31b8-4075-8cbf-e0c53f842db2">Task-B cannot start until Task-A finishes.
+For example, when sanding is complete, painting can begin.</p>
+</dd>
+</dl>
+<figure id="finishtostart">
+<name>Finish to start relationship</name>
+<pre id="_6b1329cb-a41f-486a-bcb7-b5af6c7bc800">            ============
+            |  Task-A  |--+
+            ============  |
+                          |
+                          V
+                          ============
+                          |  Task-B  |
+                          ============</pre>
+</figure>
+<dl id="_83229343-05d1-451c-b09b-3ef9a426aaee">
+<dt>RELTYPE=FINISHTOFINISH</dt>
+<dd>
+<p id="_545ab8fa-cb6d-4c1b-8ab5-4c3e61ae8741">Task-B cannot finish before Task-A is
+finished, that is the end of Task-A defines the end of Task-B.
+For example, we start the potatoes, then the meat then the peas
+but they should all be cooked at the same time.</p>
+</dd>
+</dl>
+<figure id="finishtofinish">
+<name>Finish to finish relationship</name>
+<pre id="_5a9482be-8e61-4059-881f-fdf3d0400b66">                    ============
+                    |  Task-A  |--+
+                    ============  |
+                                  |
+                    ============  |
+                    |  Task-B  |&lt;-+
+                    ============</pre>
+</figure>
+<dl id="_7fd91f41-7725-4973-b800-0a3cf4ca09d7">
+<dt>RELTYPE=STARTTOFINISH</dt>
+<dd>
+<p id="_dd78ca5d-5e6a-45d8-9dbc-efe542edcc4c">The start of Task-A (which occurs after Task-
+B) controls the finish of Task-B.  For example, ticket sales
+(Task-B) end when the game starts (Task-A).</p>
+</dd>
+</dl>
+<figure id="starttofinish">
+<name>Start to finish relationship</name>
+<pre id="_8b4f5892-7200-4862-a29c-ecbebf507da1">                                     ============
+                                  +--|  Task-A  |
+                                  |  ============
+                                  |
+                    ============  |
+                    |  Task-B  |&lt;-+
+                    ============</pre>
+</figure>
+<dl id="_9b5562d4-47fd-4dcc-bbd5-8024ba9fa900">
+<dt>RELTYPE=STARTTOSTART</dt>
+<dd>
+<p id="_791ac41a-1240-499a-b505-cc35cf5d7dc2">The start of Task-A triggers the start of
+Task-B, that is Task-B can start anytime after Task-A starts.</p>
+</dd>
+</dl>
+<figure id="starttostart">
+<name>Start to start relationship</name>
+<pre id="_ecef7433-577d-43b7-91d1-5c8c891f0d61">                    ============
+                 +--|  Task-A  |
+                 |  ============
+                 |
+                 |  ============
+                 +-&gt;|  Task-B  |
+                    ============</pre>
+</figure></clause>
+<clause id="new_property_parameters" obligation="normative"><title>New Property Parameters</title><clause id="rel" obligation="normative">
+<title>Rel</title>
+<dl id="_8ada1474-2a6e-44cb-a46e-ee67aebb334b">
+<dt>Parameter name</dt>
+<dd>
+<p id="_a073f127-1c80-47b4-8e13-5123a9fc7e26">REL</p>
+</dd>
+<dt>Purpose</dt>
+<dd>
+<p id="_60ad9bf5-f2df-440a-82bd-0195cd2bc991">To specify the relationship of data referenced by a LINK
+property.</p>
+</dd>
+<dt>Format Definition</dt>
+<dd><p id="_059b0b5e-4efe-499a-8250-91b820573de5">This parameter is defined by the following notation:</p>
+<sourcecode lang="bnf" id="_4bd1da2d-5026-4c75-a883-a8e101c9bc47">relparam     = "REL" "="
+               ("SOURCE"      ; Link to source of this component
+               / DQUOTE uri DQUOTE
+               / x-name        ; Experimental reference type
+               / iana-token)   ; Other IANA registered type</sourcecode>
+</dd>
+<dt>Description</dt>
+<dd>
+<p id="_2283b2dc-620e-49e3-b4af-0592f104edcb">This parameter MUST be specified on all LINK
+properties, and defines the type of reference.  This allows
+programs consuming this data to automatically scan for references
+they support.  In addition to the values defined here any value
+defined in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/> may be used.  There is no default relation
+type.</p>
+</dd>
+<dt>REL=SOURCE</dt>
+<dd>
+<p id="_3ed218b0-f030-416d-8608-b3f07502cda3">identifies the source of the event information.</p>
+</dd>
+<dt>Registration</dt>
+<dd>
+<p id="_1d456edf-2cc2-4afb-82e3-5734bd35112d">These relation types are registered in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/></p>
+</dd>
+</dl>
+</clause>
+<clause id="gap" obligation="normative">
+<title>Gap</title>
+<dl id="_9c09aa7b-60d0-4d20-8fe7-3141fca131f6">
+<dt>Parameter name</dt>
+<dd>
+<p id="_121b8b12-c649-4108-ab8a-9daddcb40583">GAP</p>
+</dd>
+<dt>Purpose</dt>
+<dd>
+<p id="_1dc04ad9-58ce-4a50-b73f-f9bf1a6d7acb">To specify the length of the gap, positive or negative
+between two temporaly related components.</p>
+</dd>
+<dt>Format Definition</dt>
+<dd><p id="_2d4566cb-1457-45b4-a10b-f7a59bd6322d">This parameter is defined by the following notation:</p>
+<sourcecode lang="bnf" id="_81e28021-91c8-47a5-84e8-c5202e4b65f4">gapparam      = "GAP" "=" dur-value</sourcecode>
+</dd>
+<dt>Description</dt>
+<dd><p id="_bc35febf-0fa8-481d-a9aa-c4666f2336de">This parameter MAY be specified on the RELATED-TO
+property, and defines the duration of time between the predecessor
+and successor in an interval.  When positive it defines the lag
+time between a task and its logical successor.  When negative it
+defines the lead time.</p><p id="_5981ac29-5e45-4c7b-91fb-0b179ff54ab9">An example of lag time might be if task A is “paint the room” and
+   task B is “hang the drapes” then task A may be related to task B
+   with RELTYPE=FINISHTOSTART with a gap long enough for the paint to
+   dry.</p>
+<p id="_263114ae-be2f-4df4-9ffb-cdbea35fd5f0">An example of lead time might be to relate a 1 week task A to the
+   end of task B with RELTYPE=STARTTOFINISH and a negative gap of 1
+   week so they finish at the same time.</p></dd>
+</dl>
+</clause></clause>
+<clause id="new_value_data_types" obligation="normative"><title>New Value Data Types</title><p id="_b207e863-ccfc-4b1b-bdce-9d18facc7d25">This specification defines the following new value types to be used
+   with the VALUE property parameter:</p>
+<dl id="_0f37e36c-7f87-4c7c-974d-3e73e582ef11">
+<dt>UID</dt>
+<dd>
+<p id="_26a11823-c268-4feb-b6f2-cd7fbdcff7c1">VALUE=UID indicates that the associated value is the UID for a
+component.</p>
+</dd>
+<dt>REFERENCE</dt>
+<dd>
+<p id="_881a702c-a86a-428c-95df-5b75c61c4823">VALUE=REFERENCE indicates that the associated value is an
+xpointer referencing an associated XML artifact.</p>
+</dd>
+</dl></clause>
+<clause id="new_properties" obligation="normative"><title>New Properties</title><clause id="concept" obligation="normative"><title>Concept</title><dl id="_356746e1-ed77-4cf1-b307-4fdccd679990">
+<dt>Property name</dt>
+<dd>
+<p id="_004bb854-90aa-4ad2-8fc6-93e1d19f337f">CONCEPT</p>
+</dd>
+<dt>Purpose</dt>
+<dd>
+<p id="_e9a22b6e-e735-4457-99ca-6c0238cbbf13">This property defines the formal categories for a calendar
+component.</p>
+</dd>
+<dt>Value type</dt>
+<dd>
+<p id="_27072ca8-0767-4794-9442-103050f76aa8">URI</p>
+</dd>
+<dt>Property Parameters</dt>
+<dd>
+<p id="_b6b6648c-8436-4eb6-8742-721c3a3d8637">IANA, and non-standard parameters can be
+specified on this property.</p>
+</dd>
+<dt>Conformance</dt>
+<dd>
+<p id="_e48a5e4f-b9ce-4063-b3ab-97e34ba954e7">This property can be specified zero or more times in
+any iCalendar component.</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_32fb2949-fe1b-499b-bab9-3bc5a0ba6bdb">This property is used to specify formal categories or
+classifications of the calendar component.  The values are useful
+in searching for a calendar component of a particular type and
+category.</p><p id="_4e135403-86b1-4d84-8eeb-a6e7a4dc44db">Within the “VEVENT”, “VTODO”, or “VJOURNAL” calendar components,
+   more than one formal category can be specified by using multiple
+   CONCEPT properties.</p>
+<p id="_ab4ef489-0ba7-4159-bb3e-e0c16a9cf139">This categorization is distinct from the more informal “tagging”
+   of components provided by the existing CATEGORIES property.  It is
+   expected that the value of the CONCEPT property will reference an
+   external resource which provides information about the
+   categorization.</p>
+<p id="_7b8ac139-db2b-447a-88fa-df610c91b5c2">In addition, a structured URI value allows for hierarchical
+   categorization of events.</p>
+<p id="_3ce7211c-eaf6-4ff3-b738-8fd0efd7beee">Possible category resources are the various proprietary systems,
+   for example Library of Congress, or an open source derived from
+   something like the dmoz.org data.</p></dd>
+<dt>Format Definition</dt>
+<dd/>
+</dl>
+<p id="_0da77e7f-1929-4301-8c13-2ab6d1d3c160">This property is defined by the following notation:</p>
+<sourcecode lang="bnf" id="_0c60b186-9fe4-49b3-8174-11bad4f1854b">concept        =  "CONCEPT" conceptparam ":"
+                      uri CRLF
+
+conceptparam = *(
+              ;
+              ; The following is OPTIONAL,
+              ; and MAY occur more than once.
+              ;
+              (";" other-param)
+              ;
+              )</sourcecode>
+
+<example id="_8a7ceeb1-7f37-459d-a41d-b76be279825d"><p id="_b6df9da7-98ac-4b7e-af9a-b8a9742306c9">The following is an example of this property.  It points to a server
+acting as the source for the calendar object.</p>
+<sourcecode id="_3bafd236-ae80-4d5d-85f0-3f0a21bc8d16">CONCEPT:http://example.com/event-types/sports
+CONCEPT:http://example.com/event-types/arts/music
+CONCEPT:http://example.com/task-types/delivery</sourcecode>
+</example></clause>
+<clause id="link" obligation="normative"><title>Link</title><dl id="_c710c67c-ee89-4b72-8c99-fea9c74f8f0b">
+<dt>Property name</dt>
+<dd>
+<p id="_d2e973d9-e870-45af-bcd4-e5192c86ef8e">LINK</p>
+</dd>
+<dt>Purpose</dt>
+<dd>
+<p id="_d36c4815-5ff7-425a-94b1-065678f1747b">This property provides a reference to external information
+about a component.</p>
+</dd>
+<dt>Value type</dt>
+<dd>
+<p id="_1aa5632a-9b1b-4585-867a-787a642d507c">URI, TEXT or REFERENCE</p>
+</dd>
+<dt>Property Parameters</dt>
+<dd>
+<p id="_39b9e0fe-fe00-4d34-8411-32e1f4fbcdef">Non-standard, reference type or format type
+parameters can be specified on this property.</p>
+</dd>
+<dt>Conformance</dt>
+<dd>
+<p id="_79868d6a-aaa3-4a0f-8d80-0dd3390005d1">This property MAY be specified in any iCalendar
+component.</p>
+</dd>
+<dt>Description</dt>
+<dd>
+<p id="_5f296793-2d62-4470-86f7-06ef71bd039b">When used in a component the value of this property
+points to additional information related to the component.  For
+example, it may reference the originating web server.</p>
+</dd>
+<dt>Format Definition</dt>
+<dd><p id="_0e44c521-5a0d-47b4-8196-49db4441c2d5">This property is defined by the following notation:</p>
+<sourcecode lang="bnf" id="_c80dfd8a-70e8-4ba6-bc93-f65f3344d670">link            = "LINK" linkparam  /
+                  (
+                    ";" "VALUE" "=" "TEXT"
+                    ":" text
+                  )
+                  (
+                    ";" "VALUE" "=" "REFERENCE"
+                    ":" text
+                  )
+                  (
+                    ";" "VALUE" "=" "URI"
+                    ":" uri
+                  )
+                  CRLF
+
+
+linkparam       = *(
+
+                ; the following is MANDATORY
+                ; and MAY occur more than once
+
+                (";" relparam) /
+
+                ; the following are MANDATORY
+                ; but MUST NOT occur more than once
+
+                (";" fmttypeparam) /
+                (";" labelparam) /
+                ; labelparam is defined in ...
+
+                ; the following is OPTIONAL
+                ; and MAY occur more than once
+
+                (";" xparam)
+
+                )</sourcecode>
+</dd>
+</dl>
+<example id="_0c7562c4-8f10-4302-ad83-38efaa698bb6"><p id="_1f517592-555a-4ea4-9a01-1bdd0b58f2b9">The following is an example of this property.  It points to a server
+acting as the source for the calendar object.</p>
+<sourcecode id="_1c3bf59f-2c11-452b-841b-2eb25f83b1be">LINK;REL=SOURCE;LABEL=The Egg:http://example.com/events</sourcecode>
+</example></clause>
+<clause id="refid" obligation="normative"><title>Refid</title><dl id="_32768da8-4d29-40ce-a874-669271cf9461">
+<dt>Property name</dt>
+<dd>
+<p id="_887edcb5-d4cd-4325-96d6-3d2a7e0cbd52">REFID</p>
+</dd>
+<dt>Purpose</dt>
+<dd>
+<p id="_78557b60-6f4e-44df-86fe-4d7d295f34d8">This property value acts as a key for associated iCalendar
+entities.</p>
+</dd>
+<dt>Value type</dt>
+<dd>
+<p id="_509cdf50-c5df-4df8-8b75-9879e87efea8">TEXT</p>
+</dd>
+<dt>Property Parameters</dt>
+<dd>
+<p id="_e4b5b0fd-5d9c-43b0-8c16-cfd99bae53cb">Non-standard parameters can be specified on
+this property.</p>
+</dd>
+<dt>Conformance</dt>
+<dd>
+<p id="_465f2cb0-6c8e-498a-bdc2-04d6ec872239">This property MAY be specified multiple times in any
+iCalendar component.</p>
+</dd>
+<dt>Description</dt>
+<dd>
+<p id="_bd6bccad-ec27-4c79-8f13-871762d0aa61">The value of this property is a text identifier that
+allows associated components to be located or retrieved as a
+whole.  For example all of the events in a travel itinerary would
+have the same REFID value.</p>
+</dd>
+<dt>Format Definition</dt>
+<dd/>
+</dl>
+<p id="_c13d000e-b7eb-414a-917e-94a2dbd652c7">This property is defined by the following notation:</p>
+<sourcecode lang="bnf" id="_ee5745d6-1960-47a5-b0b5-a06efecfaf69">refid      = "REFID" refidparam ":" text CRLF
+
+
+refidparam      = *(
+
+                ; the following is OPTIONAL
+                ; and MAY occur more than once
+
+                (";" xparam)
+
+                )</sourcecode>
+
+<example id="_fa6d280a-6e2e-4c25-8f1a-02dbd635eda5"><p id="_79d8902f-5aae-4502-a270-d0adc5a46827">The following is an example of this property.</p>
+<sourcecode id="_1ca090c5-8f12-4cd1-bf77-9d91689fec39">REFID:itinerary-2014-11-17</sourcecode>
+</example></clause></clause>
+<clause id="redefined_property_related_to" obligation="normative">
+<title>Redefined RELATED-TO Property</title>
+<clause id="related-to" obligation="normative"><title>RELATED-TO</title><dl id="_cb696b53-7bcb-48e6-aa73-6f015c59f7c6">
+<dt>Property name</dt>
+<dd>
+<p id="_99dfeb29-f147-460c-8e2c-7add587d1b11">RELATED-TO</p>
+</dd>
+<dt>Purpose</dt>
+<dd>
+<p id="_6dc4cce6-9d03-4d9a-9279-72fbbd9a5e2f">This property is used to represent a relationship or
+reference between one calendar component and another.  The
+definition here extends the definition in
+<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><localityStack><locality type="section"><referenceFrom>3.8.4.5</referenceFrom></locality></localityStack></eref> by allowing URI or UID values and a GAP parameter.</p>
+</dd>
+<dt>Value type</dt>
+<dd>
+<p id="_686c83f2-4eb9-45ca-ac98-b596c15e12bd">URI, UID or TEXT</p>
+</dd>
+<dt>Property Parameters</dt>
+<dd>
+<p id="_d2915dc7-c87b-4cd0-8388-d5367a7ed04a">Relationship type, IANA and non-standard
+property parameters can be specified on this property.</p>
+</dd>
+<dt>Conformance</dt>
+<dd>
+<p id="_9f779825-f814-4c0a-9d6b-1aaeb4ac1b6c">This property MAY be specified in any iCalendar
+component.</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_60e46e29-37a4-4aa6-b90a-bc91e77bcf3c">By default or when VALUE=UID is specified, the property
+value consists of the persistent, globally unique identifier of
+another calendar component.  This value would be represented in a
+calendar component by the “UID” property.</p><p id="_952c4713-ef3c-4fd5-81b1-f2d4a0b70ab2">By default, the property value points to another calendar
+   component that has a PARENT relationship to the referencing
+   object.  The “RELTYPE” property parameter is used to either
+   explicitly state the default PARENT relationship type to the
+   referenced calendar component or to override the default PARENT
+   relationship type and specify either a CHILD or SIBLING
+   relationship or a temporal relationship.</p>
+<p id="_4b587910-d5b8-4ba6-88ff-ca110adf60ec">The PARENT relationship indicates that the calendar component is a
+   subordinate of the referenced calendar component.  The CHILD
+   relationship indicates that the calendar component is a superior
+   of the referenced calendar component.  The SIBLING relationship
+   indicates that the calendar component is a peer of the referenced
+   calendar component.</p>
+<p id="_d87a0f22-d0fe-4c49-b568-bbe6b35c99aa">The FINISHTOSTART, FINISHTOFINISH, STARTTOFINISH or STARTTOSTART
+   relationships define temporal relationships as specified in the
+   reltype parameter definition.</p>
+<p id="_3144d437-a6d8-40d0-b204-85c1b11dc503">Changes to a calendar component referenced by this property can
+   have an implicit impact on the related calendar component.  For
+   example, if a group event changes its start or end date or time,
+   then the related, dependent events will need to have their start
+   and end dates changed in a corresponding way.  Similarly, if a
+   PARENT calendar component is cancelled or deleted, then there is
+   an implied impact to the related CHILD calendar components.  This
+   property is intended only to provide information on the
+   relationship of calendar components.  It is up to the target
+   calendar system to maintain any property implications of this
+   relationship.</p></dd>
+<dt>Format Definition</dt>
+<dd><p id="_81328124-61ff-4f58-9bdc-c8bb6f09d31a">This property is defined by the following notation:</p>
+<sourcecode lang="bnf" id="_804a0c9d-e708-4c14-809c-0ddc028fc13a">related    = "RELATED-TO" relparam ( ":" text ) /
+             (
+               ";" "VALUE" "=" "UID"
+               ":" uid
+             )
+             (
+               ";" "VALUE" "=" "URI"
+               ":" uri
+             )
+             CRLF
+
+relparam   = *(
+            ;
+            ; The following are OPTIONAL,
+            ; but MUST NOT occur more than once.
+            ;
+            (";" reltypeparam) /
+            (";" gapparam) /
+            ;
+            ; The following is OPTIONAL,
+            ; and MAY occur more than once.
+            ;
+            (";" other-param)
+            ;
+            )</sourcecode>
+</dd>
+</dl>
+<example id="_b63f52ab-eb3b-492c-a438-5bd9351b841d"><p id="_771f23ed-7b30-42a3-ae05-361738d1c629">The following are examples of this property.</p>
+<sourcecode id="_f019f5ed-ddca-463c-b622-6f89d276c9a4">RELATED-TO:jsmith.part7.19960817T083000.xyzMail@example.com
+
+RELATED-TO:19960401-080045-4000F192713-0052@example.com
+
+RELATED-TO;VALUE=URI;RELTYPE=STARTTOFINISH:
+  http://example.com/caldav/user/jb/cal/
+  19960401-080045-4000F192713.ics</sourcecode>
+</example></clause>
+</clause>
+<clause id="_security_considerations" obligation="normative"><title>Security Considerations</title><p id="_3c4d379a-b756-4ed0-a3ec-60e723494673">Applications using the LINK property need to be aware of the risks
+entailed in using the URIs provided as values.  See &lt;RFC3986&gt;&gt; for a
+discussion of the security considerations relating to URIs.</p>
+<p id="_a23fabda-565a-4eca-a2d4-35d94bb38289">The CONCEPT and redefined RELATED-TO property have the same issues in
+that values may be URIs.</p></clause>
+<clause id="iana" obligation="normative"><title>IANA Considerations</title><clause id="property_registrations" obligation="normative"><title>iCalendar Property Registrations</title><p id="_51d0a993-e480-4938-978e-5abdb4cc8925">The following iCalendar property names have been added to the
+iCalendar Properties Registry defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><localityStack><locality type="section"><referenceFrom>8.3.2</referenceFrom></locality></localityStack></eref></p>
+<table id="_ddd7c589-bd2a-42bb-9af9-2616258a142b">
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="left">Status</th>
+<th align="left">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<p id="_18ef2307-44d7-440b-9794-c565a819c49a">CONCEPT</p>
+</td>
+<td align="left">
+<p id="_ade38f29-c847-4e1e-b80b-892ae09a890f">Current</p>
+</td>
+<td align="left">
+<p id="_10a1c511-f5f7-49a7-985a-a16b02f5972b">
+<xref target="concept"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_157e4744-bf72-4cca-b22c-51f5dd81b40f">LINK</p>
+</td>
+<td align="left">
+<p id="_ef45c383-8ce5-4c4c-bba9-bdd79d5aa873">Current</p>
+</td>
+<td align="left">
+<p id="_de947cb8-0019-4de9-a76b-ae7cbc958048">
+<xref target="link"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_a3f24dd5-a060-4108-a0ad-51e3a06e43d8">REFID</p>
+</td>
+<td align="left">
+<p id="_5d5c5d16-8623-49cb-8ff7-c17cc761073c">Current</p>
+</td>
+<td align="left">
+<p id="_827ae7b5-8cb8-44e1-9de0-7e9301aa073e">
+<xref target="refid"/>
+</p>
+</td>
+</tr>
+</tbody>
+</table></clause>
+<clause id="property_parameter_registrations" obligation="normative"><title>iCalendar Property Parameter Registrations</title><p id="_98ffd799-3007-40e4-a5df-70c3c63887a5">The following iCalendar property parameter names have been added to
+the iCalendar Parameters Registry defined in
+<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><localityStack><locality type="section"><referenceFrom>8.3.3</referenceFrom></locality></localityStack></eref></p>
+<table id="_614bd5a0-1f94-436b-af6c-52bf2e5ba221">
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Status</th>
+<th align="left">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<p id="_838dbf13-2d3f-4097-b1d9-6a1d2841ca13">REL</p>
+</td>
+<td align="left">
+<p id="_71b20141-facb-4b76-a5fd-540e86722fb1">Current</p>
+</td>
+<td align="left">
+<p id="_f8ed549b-8a0c-4db0-81a2-14e708b8d677">
+<xref target="rel"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_248b28c2-e3fd-4ae7-8e13-f984018c12b5">GAP</p>
+</td>
+<td align="left">
+<p id="_5c67eb37-ff3a-4a0e-af6a-56b949fe64df">Current</p>
+</td>
+<td align="left">
+<p id="_11c650ff-234e-4289-a0a7-f7f700d997a5">
+<xref target="gap"/>
+</p>
+</td>
+</tr>
+</tbody>
+</table></clause>
+<clause id="value_data_types_registrations" obligation="normative"><title>iCalendar Value Data Type Registrations</title><p id="_e6cc1e98-112e-4afa-ad0a-90ccb584a52e">The following iCalendar property parameter names have been added to
+the iCalendar Value Data Types Registry defined in
+<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><localityStack><locality type="section"><referenceFrom>8.3.4</referenceFrom></locality></localityStack></eref></p>
+<table id="_199f4332-8ccc-4cf8-ba68-16e08c0a3aad">
+<thead>
+<tr>
+<th align="left">Value Data Type</th>
+<th align="left">Status</th>
+<th align="left">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<p id="_21bdeddc-7f1f-4301-987a-2b5d2b1adae6">UID</p>
+</td>
+<td align="left">
+<p id="_5a865ab3-f3b6-4bb6-b922-a8369a7c1d70">Current</p>
+</td>
+<td align="left">
+<p id="_ceb97b02-f6a8-498a-a438-a1e612d61d7a">
+<xref target="new_value_data_types"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_6a477252-b5cc-4246-956d-7a88d6dd6c6a">REFERENCE</p>
+</td>
+<td align="left">
+<p id="_2e96530e-8646-4556-861c-f2512d60e805">Current</p>
+</td>
+<td align="left">
+<p id="_332680cc-07dc-4e1a-9f71-793bf145246c">
+<xref target="new_value_data_types"/>
+</p>
+</td>
+</tr>
+</tbody>
+</table></clause>
+<clause id="reltype_value_registrations" obligation="normative"><title>iCalendar RELTYPE Value Registrations</title><p id="_f3bf2f3a-8bf5-45fc-b452-769de754870b">The following iCalendar “RELTYPE” values have been added to the
+iCalendar Relationship Types Registry defined in
+<eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><localityStack><locality type="section"><referenceFrom>8.3.8</referenceFrom></locality></localityStack></eref></p>
+<table id="_75f14a48-522a-4d19-ac66-07bfffa35c23">
+<thead>
+<tr>
+<th align="left">Relationship Type</th>
+<th align="left">Status</th>
+<th align="left">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<p id="_425bdbfa-9b67-4c07-a08c-7d18cedc6c8e">DEPENDS-ON</p>
+</td>
+<td align="left">
+<p id="_033e5c3a-75a0-4cc4-9f07-64282df8a77e">Current</p>
+</td>
+<td align="left">
+<p id="_01002906-96e1-4412-9557-fd9162affe64">
+<xref target="redefined_relation_type_value"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_802ea370-d743-452d-ab3d-d6027b8ee2e8">REFID</p>
+</td>
+<td align="left">
+<p id="_4bdecbee-815c-44fb-9ff6-b76ec72c8aa0">Current</p>
+</td>
+<td align="left">
+<p id="_68390750-b749-41d1-be7c-65f5f8a90cbf">
+<xref target="redefined_relation_type_value"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_1bc20670-6ee5-431f-b3c8-f80cd2194e52">CONCEPT</p>
+</td>
+<td align="left">
+<p id="_307a5b6d-2c30-42d9-b1b5-fc0c56fc6fdd">Current</p>
+</td>
+<td align="left">
+<p id="_aa1ff625-ed9b-46b0-881d-afc073101333">
+<xref target="redefined_relation_type_value"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_06b3e9be-25b4-47ff-8846-9a1c5432dff3">FINISHTOSTART</p>
+</td>
+<td align="left">
+<p id="_6a5d7fa4-0ca2-4a09-b888-0301c6972eda">Current</p>
+</td>
+<td align="left">
+<p id="_acc3e83c-ab13-4bc4-94d2-10a0dc32a3de">
+<xref target="redefined_relation_type_value"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_c32acae6-b784-49f0-b578-7b8578a50fe2">FINISHTOFINISH</p>
+</td>
+<td align="left">
+<p id="_5b43b465-87c7-4da7-a877-ed45af1c33bf">Current</p>
+</td>
+<td align="left">
+<p id="_5f535b7b-f230-46a2-a556-6506ce89d0fa">
+<xref target="redefined_relation_type_value"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_390feb76-804f-4f96-95bc-70c74924506d">STARTTOFINISH</p>
+</td>
+<td align="left">
+<p id="_92cbfbf9-ad20-4224-a29a-fbb9a4ff6160">Current</p>
+</td>
+<td align="left">
+<p id="_2dc4a7f0-b05d-464b-95fa-69df8b85bbeb">
+<xref target="redefined_relation_type_value"/>
+</p>
+</td>
+</tr>
+<tr>
+<td align="left">
+<p id="_cabf2c60-7f17-454b-af62-f76f8098a139">STARTTOSTART</p>
+</td>
+<td align="left">
+<p id="_388afb9c-52f3-47ef-9e2c-f09052a8d2ce">Current</p>
+</td>
+<td align="left">
+<p id="_89e02216-4700-4589-afa3-d52e3ce20ad8">
+<xref target="redefined_relation_type_value"/>
+</p>
+</td>
+</tr>
+</tbody>
+</table></clause>
+<clause id="new_rel_registration" obligation="normative"><title>New Reference Type Registration</title><p id="_ebc65189-c017-4e16-abb8-52ff61f6fdb7">The following link relation values have been added to the Reference
+Types Registry defined in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"><localityStack><locality type="section"><referenceFrom>6.2.2</referenceFrom></locality></localityStack></eref></p>
+<table id="_e588efc2-4c95-4c06-8d5a-2ca90fbde9fa">
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Status</th>
+<th align="left">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<p id="_26646901-ae0a-43da-b077-6ac36ef0f870">SOURCE</p>
+</td>
+<td align="left">
+<p id="_0801ff9a-d9d7-4369-82f9-8893f524f660">Current</p>
+</td>
+<td align="left">
+<p id="_b30e2160-87b2-46c6-b2fc-02c6feb8056d">
+<xref target="rel"/>
+</p>
+</td>
+</tr>
+</tbody>
+</table></clause></clause>
+
+</sections><bibliography><references id="_normative_references" normative="true" obligation="informative"><title>Normative References</title><p id="_9c4c7373-940e-4676-b926-ff8e5dc47fab">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p> <bibitem id="RFC5545" type="standard">  <fetched>2020-06-16</fetched>  <title format="text/plain" language="en" script="Latn">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>  <uri type="xml">https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.5545.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>  <docidentifier type="IETF">RFC 5545</docidentifier>  <docidentifier type="rfc-anchor">RFC5545</docidentifier>  <docidentifier type="DOI">10.17487/RFC5545</docidentifier>  <date type="published">    <on>2009-09</on>  </date>  <contributor>    <role type="editor"/>    <person>      <name>        <completename language="en">B. Desruisseaux</completename>      </name>      <affiliation>        <organization>          <name>Internet Engineering Task Force</name>          <abbreviation>IETF</abbreviation>        </organization>      </affiliation>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Internet Engineering Task Force</name>      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This document defines the iCalendar data format for representing and exchanging calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information, independent of any particular calendar service or protocol. [STANDARDS-TRACK]</abstract>  <series type="main">    <title format="text/plain" language="en" script="Latn">RFC</title>    <number>5545</number>  </series>  <place>Fremont, CA</place></bibitem> <bibitem id="RFC5988" type="standard">  <fetched>2020-06-16</fetched>  <title format="text/plain" language="en" script="Latn">Web Linking</title>  <uri type="xml">https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.5988.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc5988</uri>  <docidentifier type="IETF">RFC 5988</docidentifier>  <docidentifier type="rfc-anchor">RFC5988</docidentifier>  <docidentifier type="DOI">10.17487/RFC5988</docidentifier>  <date type="published">    <on>2010-10</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename language="en">M. Nottingham</completename>      </name>      <affiliation>        <organization>          <name>Internet Engineering Task Force</name>          <abbreviation>IETF</abbreviation>        </organization>      </affiliation>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Internet Engineering Task Force</name>      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This document specifies relation types for Web links, and defines a registry for them.  It also defines the use of such links in HTTP headers with the Link header field.  [STANDARDS-TRACK]</abstract>  <series type="main">    <title format="text/plain" language="en" script="Latn">RFC</title>    <number>5988</number>  </series>  <place>Fremont, CA</place></bibitem> <bibitem id="RFC6638" type="standard">  <fetched>2020-06-16</fetched>  <title format="text/plain" language="en" script="Latn">Scheduling Extensions to CalDAV</title>  <uri type="xml">https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6638.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc6638</uri>  <docidentifier type="IETF">RFC 6638</docidentifier>  <docidentifier type="rfc-anchor">RFC6638</docidentifier>  <docidentifier type="DOI">10.17487/RFC6638</docidentifier>  <date type="published">    <on>2012-06</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename language="en">C. Daboo</completename>      </name>      <affiliation>        <organization>          <name>Internet Engineering Task Force</name>          <abbreviation>IETF</abbreviation>        </organization>      </affiliation>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename language="en">B. Desruisseaux</completename>      </name>      <affiliation>        <organization>          <name>Internet Engineering Task Force</name>          <abbreviation>IETF</abbreviation>        </organization>      </affiliation>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Internet Engineering Task Force</name>      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This document defines extensions to the Calendaring Extensions to WebDAV (CalDAV) “calendar-access” feature to specify a standard way of performing scheduling operations with iCalendar-based calendar components.  This document defines the “calendar-auto-schedule” feature of CalDAV.  [STANDARDS-TRACK]</abstract>  <series type="main">    <title format="text/plain" language="en" script="Latn">RFC</title>    <number>6638</number>  </series>  <place>Fremont, CA</place></bibitem><bibitem id="W3C.CR-skos-reference-20090317"><formattedref format="application/x-isodoc+xml">Sean Bechhofer, Alistair Miles. <em>SKOS Simple Knowledge Organization System Reference.</em> 2009. <link target="http://www.w3.org/TR/2009/CR-skos-reference-20090317"/></formattedref><docidentifier type="W3C">W3C CR skos-reference-20090317</docidentifier><docnumber>3C CR skos-reference-20090317</docnumber></bibitem><bibitem id="W3C.WD-xptr-xpointer-20021219"><formattedref format="application/x-isodoc+xml">Steven DeRose, Ron Daniel, Eve Maler. <em>XPointer xpointer() Scheme.</em> 2002. <link target="http://www.w3.org/TR/2002/WD-xptr-xpointer-20021219"/></formattedref><docidentifier type="W3C">W3C WD xptr-xpointer-20021219</docidentifier><docnumber>3C WD xptr-xpointer-20021219</docnumber></bibitem><bibitem id="I-D.daboo-caldav-attachments" type="standard">  <fetched>2020-06-16</fetched>  <title format="text/plain" language="en" script="Latn">CalDAV Managed Attachments</title>  <uri type="xml">https://xml2rfc.tools.ietf.org/public/rfc/bibxml3/reference.I-D.daboo-caldav-attachments.xml</uri>  <uri type="TXT">http://www.ietf.org/internet-drafts/draft-daboo-caldav-attachments-03.txt</uri>  <docidentifier type="IETF">I-D.daboo-caldav-attachments</docidentifier>  <docidentifier type="rfc-anchor">I-D.daboo-caldav-attachments</docidentifier>  <docidentifier type="Internet-Draft">draft-daboo-caldav-attachments-03</docidentifier>  <date type="published">    <on>2014-02</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename language="en">Cyrus Daboo</completename>      </name>      <affiliation>        <organization>          <name>Internet Engineering Task Force</name>          <abbreviation>IETF</abbreviation>        </organization>      </affiliation>    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      <name>        <completename language="en">Arnaud Quillaud</completename>      </name>      <affiliation>        <organization>          <name>Internet Engineering Task Force</name>          <abbreviation>IETF</abbreviation>        </organization>      </affiliation>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Internet Engineering Task Force</name>      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This specification defines an extension to the calendar access protocol (CalDAV) to allow attachments associated with iCalendar data, to be stored and managed on the server.</abstract>  <series type="main">    <title format="text/plain" language="en" script="Latn">Internet-Draft</title>    <number>draft-daboo-caldav-attachments-03</number>  </series>  <place>Fremont, CA</place></bibitem></references><references id="_bibliography" normative="false" obligation="informative"><title>Bibliography</title><bibitem id="RFC2119" type="standard">  <fetched>2020-06-16</fetched>  <title format="text/plain" language="en" script="Latn">Key words for use in RFCs to Indicate Requirement Levels</title>  <uri type="xml">https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc2119</uri>  <docidentifier type="IETF">RFC 2119</docidentifier>  <docidentifier type="rfc-anchor">RFC2119</docidentifier>  <docidentifier type="DOI">10.17487/RFC2119</docidentifier>  <date type="published">    <on>1997-03</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename language="en">S. Bradner</completename>      </name>      <affiliation>        <organization>          <name>Internet Engineering Task Force</name>          <abbreviation>IETF</abbreviation>        </organization>      </affiliation>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Internet Engineering Task Force</name>      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">In many standards track documents several words are used to signify the requirements in the specification.  These words are often capitalized. This document defines these words as they should be interpreted in IETF documents.  This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</abstract>  <series type="main">    <title format="text/plain" language="en" script="Latn">BCP</title>    <number>14</number>  </series>  <series type="main">    <title format="text/plain" language="en" script="Latn">RFC</title>    <number>2119</number>  </series>  <place>Fremont, CA</place></bibitem> </references></bibliography>
 </csd-standard>

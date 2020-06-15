@@ -1,237 +1,271 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<csd-standard xmlns="https://www.calconnect.org/standards/csd">
+<csd-standard xmlns="https://www.metanorma.org/ns/csd">
 <bibdata type="standard">
-  <title format="text/plain" language="en">CalConnect EDST (Extended Daylight Savings Time) Reflections and Recommendations</title>
-  <docidentifier type="CC">CC/Adv 0707:2007</docidentifier>
-  <docnumber>0707</docnumber>
-  <date type="published">
-    <on>2007</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <edition>1</edition>
-  <version>
-    <revision-date>2007-10-04T00:00:00Z</revision-date>
-  </version>
-  <language>en</language>
-  <script>Latn</script>
-  <status>
-    <stage>published</stage>
-  </status>
-  <copyright>
-    <from>2007</from>
-    <owner>
-      <organization>
-        <name>CalConnect</name>
-      </organization>
-    </owner>
-  </copyright>
-  <ext>
-    <doctype>advisory</doctype>
-    <editorialgroup>
-      <technical-committee>Ad Hoc DST</technical-committee>
-    </editorialgroup>
-  </ext>
+<title language="en" format="text/plain">CalConnect EDST (Extended Daylight Savings Time) Reflections and Recommendations</title>
+<docidentifier type="csd">CC/Adv 0707:2007</docidentifier>
+<docnumber>0707</docnumber>
+<date type="published">
+<on>2007-10-04</on>
+</date>
+<contributor>
+<role type="author"/>
+<organization>
+<name>CalConnect</name>
+</organization>
+</contributor>
+<contributor>
+<role type="publisher"/>
+<organization>
+<name>CalConnect</name>
+</organization>
+</contributor>
+<edition>1</edition>
+<version>
+<revision-date>2007-10-04T00:00:00Z</revision-date>
+</version>
+<language>en</language>
+<script>Latn</script>
+<status>
+<stage>published</stage>
+</status>
+<copyright>
+<from>2007</from>
+<owner>
+<organization>
+<name>CalConnect</name>
+</organization>
+</owner>
+</copyright>
+<ext>
+<doctype>advisory</doctype>
+<editorialgroup>
+<technical-committee>Ad Hoc DST</technical-committee>
+</editorialgroup>
+</ext>
 </bibdata>
-<preface><foreword obligation="informative"><title>Foreword</title><p id="_31378bf3-5fad-411d-aeac-473baa8b0e6f">The Calendaring and Scheduling Consortium (“CalConnect”) is a global   
-non-profit organization with the aim to facilitate interoperability of   
-collaborative technologies and tools through open standards.</p>  
-<p id="_a999b202-708a-4f3f-8861-d2e6564afcbb">CalConnect works closely with international and regional partners,   
-of which the full list is available on our website   
-(<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>  
-<p id="_6c88fbd1-26e6-4700-b968-a75592d7130e">The procedures used to develop this document and those intended for its   
-further maintenance are described in the CalConnect Directives.</p>  
-<p id="_03fd3977-8e39-4312-9edc-499d9d3d9820">In particular the different approval criteria needed for the different   
-types of CalConnect documents should be noted. This document was drafted in   
-accordance with the editorial rules of the CalConnect Directives.</p>  
-<p id="_0a9ef383-fd60-4a1e-9c8a-c4225655f016">Attention is drawn to the possibility that some of the elements of this   
-document may be the subject of patent rights. CalConnect shall not be   
-held responsible for identifying any or all such patent rights. Details   
-of any patent rights identified during the development of the document   
-will be provided in the Introduction.</p>  
-<p id="_f9f3b400-5371-4d1e-bb8c-7e5e37a1f8c7">Any trade name used in this document is information given for the   
-convenience of users and does not constitute an endorsement.</p>  
-<p id="_5be2bc93-bb26-4af0-8271-8c25a230e709">This document was prepared by Technical Committee   
-<em>Ad Hoc DST</em>.</p>  
-<p id="_d9699ade-222b-4f9a-8031-adaa02a79345">This document reviews the impact of implementation of Extended Daylight Savings Time, which moved the beginning of DST forward to March 11 in 2007, on the information technology industry and in particular calendaring and scheduling systems, and recommendations for what the industry should do about timezones going forward.</p>  
-<p id="_3549bcbd-561a-4730-be8d-46583bd1632a">This document is a follow-on to the advisories and compendium of fixes which CalConnect collected and published prior to March 11, 2007.</p>  
-<p id="_f7305fb2-dfba-4a2f-b32f-f85e4d066ede">The editors of the document are:</p>  
-<ul id="_858683f7-5568-4d67-9c32-b8573126adc8">   
-  <li>   
-    <p id="_f2fb84e6-1cff-4751-9a8e-e29baf672b08">Mike Mize, California State University Fresno</p>   
-  </li>   
-  <li>   
-    <p id="_0bfda203-a209-45c8-9ee3-3245037a37e3">Gary Schwartz, Rensselaer Polytechnic Institute</p>   
-  </li>   
-</ul></foreword><introduction id="_introduction" obligation="informative"><title>Introduction</title><p id="_4b53427c-4326-4fd1-9386-99d0f1ba35f9">The U.S. Energy Policy Act of 2005 (EPACT 2005), signed by President Bush on August 8, 2005, among its many, many provisions, amends the Uniform Time Act of 1966 by changing the start and end dates of daylight saving time (DST) in the US. DST begins three weeks earlier and ends one week later, effective in 2007. DST now begins the second week of March and ends the first week in November (March 11 and November 4 in 2007). Other areas, including Canada and Bermuda, also choose to follow the new rules.</p>  
-<p id="_0c1f9d68-0ede-408f-a2c7-d0336ec01fe6">CalConnect, the Calendaring and Scheduling Consortium, has been interested and active in timezone and DST issues almost since its inception in December 2004.</p>  
-<p id="_a8840d43-ddbd-40d2-8210-7665d509108b">In June 2005, CalConnect issued a press release, “EDST Change Untimely” and a “DST Advisory Notice”, both of which “…​suggested a simple delay of the effective date (at that point set to March 2006) of the pending legislation to insure that calendar and scheduling vendors and consumers have ample time to prepare for any changes.”</p>  
-<p id="_e535a738-f352-4152-beb8-de1ddbc2257f">In October 2005, CalConnect conducted a timezone survey and issued the “Report on TIMEZONE Questionnaire Results”.</p>  
-<p id="_1f0eb72a-2ba7-4ea5-bfac-f2a90ddca2b4">In May 2006, representatives of CalConnect met with consultants for the Japanese government which was studying a return to DST. DST has not been observed in Japan since 1952.</p>  
-<p id="_74e9b09d-0f74-4c7c-8211-d265408747da">In February 2007, CalConnect issued the press release, “CalConnect Gives Guidance to IT Staff on Impact of DST Change”, published “Extended Daylight Saving Time - Review and Considerations”, and created the “Extended Daylight Saving Time Links, Advisories and Changes” web page to assist system administrators in tracking vendor updates and DST-related news and information.</p>  
-<p id="_3b92f230-eb82-4c8c-b54e-631f3ad27560">In August 2007, CalConnect reactivated its TIMZONE Technical Committee, which was originally convened in June 2005.</p>  
-<p id="_97d7844e-34a8-4890-b9b7-eadf671155da">CalConnect’s “Extended Daylight Saving Time Review and Considerations” promised a future “Lessons Learned and Recommendations for the Future” document based on real-world experiences over the transition time in March to the new DST rules”. This document fulfills that promise.</p></introduction></preface><sections> 
- 
-<clause id="_background" obligation="normative"><title>Background</title><p id="_a4ef63e1-d9b0-4ae2-a13a-969f4e81af2c">The U.S. Energy Policy Act of 2005 amends the Uniform Time Act of 1966 by changing the start and end dates of daylight saving time starting in 2007 as noted previously.</p>  
-<p id="_7c6568c5-b26e-400d-9adc-6b15806353e2">The Uniform Time Act codified daylight saving time (DST) observance within the U.S. Prior to the act, each state set its own policy for DST observance, and in some cases, which parts of the state would be affected. The Act originally set the start of DST to be the last Sunday in April, and was amended in 1986 (effective in 1987) to be the first Sunday in April.</p>  
-<p id="_616ea363-a671-4ae4-9bc0-328ae3b81c09">Whereas this is the first modification to the DST rules in the United States in 20 years, this is not the only recent change to DST around the globe. Western Australia, Brazil, and the state of Indiana, among others, also made their own adjustments to DST start and/or end dates within the last year or so. The things that distinguish the EPACT 2005 changes from the other changes are:</p>  
-<ol id="_de11ddb3-f8ce-45da-9bdd-90cb3f2ac7d8" type="arabic">   
-  <li>   
-    <p id="_f755035e-23e4-4d42-80b7-c95ab4609449">The aforementioned more regional DST changes were problematic and difficult in a number of ways, but the impact of these difficulties was relatively small globally.</p>   
-  </li>   
-  <li>   
-    <p id="_4736e54a-e252-4612-97cb-84ba4acafa85">The scope of the EPACT 2005 change is substantially larger, affecting virtually the entire United States, the third most populous nation in the world, as well Canada and Bermuda.</p>   
-  </li>   
-  <li>   
-    <p id="_490b901c-a660-4aa0-b3d2-8b531893a51f">The role that the United States plays in international commerce and IT development makes this change very significant across the globe.</p>   
-  </li>   
-  <li>   
-    <p id="_d8d419de-2c8d-4ec9-b994-1cea199e6b59">In the words of Thomas Friedman, “the world is flat”, with geo-political borders becoming less relevant with respect to trade and commerce. Virtually, everyone is doing business with everyone else. Agreeing globally on dates and times is now essential.</p>   
-  </li>   
-  <li>   
-    <p id="_907d0540-096d-431b-8a25-5984bc13676a">Mobile devices are pervasive and indispensable today, as are enterprise and web-based calendaring systems connecting people across time zones, and organizational and political boundaries Twenty years ago, when the Uniform Time Act was amended in 1986, these things didn’t exist or they were an inconsequential novelty. Clearly that is not the case today.</p>   
-  </li>   
-  <li>   
-    <p id="_231750a8-ce68-4e60-ab6a-b933985383a1">Computer systems, networks, applications and other electronic devices used by banks, the government and industry are dependent on correct date and time information and are far more widely used than they were when the last change was made in 1986.</p>   
-  </li>   
-  <li>   
-    <p id="_2f4651a2-2f0f-4023-abca-787d8e72c2a3">EPACT 2005 requires the Department of Energy to report to the US Congress on the impact of the DST change on energy usage and/or conservation by the end of 2007. Congress may revert back to the 1986 DST dates if they choose. There is conflicting research as to whether daylight saving results in a net energy saving.</p>   
-  </li>   
-</ol>  
-<p id="_73002ea0-27de-4ef0-baeb-f6059d400c6f">CalConnect’s October 2005 “Report on TIMEZONE Questionnaire Results, observed “`…​ a number of products convert local time information with a supplied timezone into UTC (the ‘standard’ time reference) as a simplification. As a result of this, timezone information is effectively lost. Such products will need to determine how to do any adjustment of the UTC times based on the proposed DST changes.”</p>  
-<p id="_2e283f8a-e5cf-49b5-af62-ca6172ea8d04">CalConnect’s February 2007 publication, “Extended Daylight Saving Time - Review and Considerations” predicted “The impact of the DST changes should be significantly smaller than Year 2000 (Y2K) but is still a concern for those involved in preparing for the change. Many systems will be corrected simply by applying automatic updates from the system vendor in advance of the March 11th deadline. The result of having out of date rules is also smaller, with systems being off by an hour instead of a hundred years (or failing completely). On the other hand, there may be significant impact on computer support organizations, especially in cases where meetings in a calendar system need to be corrected manually.”</p></clause> 
-<clause id="_realworld_experiences" obligation="normative"><title>Real‐world experiences</title><p id="_ef07eed0-9b12-4d23-9d9d-817417ae6ba2">The impact of the earlier DST start date was noticeable but the magnitude of the impact was generally felt more by larger enterprises than small businesses or home computer users. Problems were experienced in a number of areas:</p>  
-<ol id="_ca74222b-e1db-4f2a-88d4-cfaf6a570e04" type="arabic">   
-  <li>   
-    <p id="_297ea8eb-cf02-4393-90dd-cef240b69fda">Small devices or systems did not correctly ascertain and/or display their local time correctly, usually, but not always, being off by an hour.</p>   
-  </li>   
-  <li>   
-    <p id="_a1f27444-9716-4bfd-9c5c-5ae8d7e9fa7e">Some already entered/stored dates/times, such as those in a calendaring system, were no longer correct, again, in most cases being off by an hour.</p>   
-  </li>   
-  <li>   
-    <p id="_d81ab102-1834-4529-9494-4dc774df3ecd">Some already entered/stored all day events, were no longer correct, now spanning more than a single day.</p>   
-  </li>   
-  <li>   
-    <p id="_13f969dc-aaec-4a3d-be96-ef9b465f21b9">Synchronization between devices/systems, such as a smart phone and a calendaring system, resulted in previously correctly stored events now having incorrect times and/or dates.</p>   
-  </li>   
-  <li>   
-    <p id="_672ecc6b-6dcc-4704-9a2d-0060542b1311">Some users “manually” corrected already entered/stored events which later became incorrect after software updates were applied which automatically “re-corrected” these same events.</p>   
-  </li>   
-  <li>   
-    <p id="_5544770e-2e6a-4027-996b-5535a1b1b860">A major utility in one of the Western US states, which could not update all of its electrical meters in time and accepted that there would be some minor accounting discrepancies for the extended DST period.</p>   
-  </li>   
-  <li>   
-    <p id="_98780a25-c677-47bd-8063-b90bdc76bd7d">Some enterprise systems could not be automatically remediated with software patches, requiring end users to “manually” adjust dates/times which were now incorrect.</p>   
-  </li>   
-  <li>   
-    <p id="_a76c3b5a-0fa5-4fbd-9077-a5e63a9e37eb">In some cases, when reviewing remediated systems for correct results, users mistook correct time/dates for incorrect values and changed them yet again.</p>   
-  </li>   
-</ol>  
-<p id="_b426d375-c68e-4ae0-ba23-98d2c6f73baf">While most vendors recognized the seriousness of the problem and responded responsibly by producing patches, conversion tools and workarounds, some problems persisted, and others actually resulted from these remediation efforts:</p>  
-<ol id="_d2be80a1-cbf2-42b6-bbd8-a05e24fcc078" type="arabic">   
-  <li>   
-    <p id="_131a0574-03a1-435e-b23b-8b71673e9bab">Some fixes were not available in time for IT staffs to deploy enterprise-wide before the DST period began.</p>   
-  </li>   
-  <li>   
-    <p id="_6fd3eba9-5d2a-4797-8369-9387d8eec79b">Some initial patches were faulty, requiring later “fixes” to the initial fix.</p>   
-  </li>   
-  <li>   
-    <p id="_86774aea-f685-4356-bb5f-16c1a11f1767">The sequencing of patches, both chronologically as well as with respect to the application of other patches, was not well understood or communicated in some cases.</p>   
-  </li>   
-  <li>   
-    <p id="_31892e7d-1fb9-46e5-abf3-6d00e6e6d52e">Some vendors did a better job than others communicating with their customers about which systems required remediation and how to affect that remediation.</p>   
-  </li>   
-</ol>  
-<p id="_0b48e83e-85d2-4d0d-b0f1-ee68fe7722fd">IT staffs also encountered difficulties, including:</p>  
-<ol id="_f01ea585-ed34-4fcd-b1ed-dbfcf8c6bd59" type="arabic">   
-  <li>   
-    <p id="_e3d84976-a404-43fa-a2c0-ea75e367a096">Help desks being flooded with end user questions and problem reports.</p>   
-  </li>   
-  <li>   
-    <p id="_63f687bc-0a0d-40b1-9049-10164827418c">Being able to locate and obtain information and updates for all their products and devices.</p>   
-  </li>   
-  <li>   
-    <p id="_4a82d253-c80d-4016-8432-806ea951e125">Providing information and instructions to their user communities.</p>   
-  </li>   
-  <li>   
-    <p id="_13072d40-7db9-403e-969d-420082a93b87">Finding adequate resources to do all the required remediation.</p>   
-  </li>   
-  <li>   
-    <p id="_680f49a2-9f49-42ce-a841-93deafde156e">Identifying all the devices and systems requiring remediation.</p>   
-  </li>   
-  <li>   
-    <p id="_48664d53-bd16-4a2d-9fbc-97d00524651a">Remediating systems in the proper sequences and at the correct times.</p>   
-  </li>   
-  <li>   
-    <p id="_fd936f0d-239d-42f1-8ca3-f9b19115f1d8">Remediating locally developed applications and/or systems.</p>   
-  </li>   
-  <li>   
-    <p id="_5383c47a-ee09-4317-9305-3f0f5d92ba14">Deciding what to do about end-of-life or otherwise no longer supported systems for which no remediation was available.</p>   
-  </li>   
-  <li><p id="_9b5a247e-6a9c-44f2-8b03-675cc94d9d31">Inadequate coordination and cooperation between units in larger organizations.</p><figure id="_ff614938-1e3e-4303-9372-cc71b77e6c61">    
-  <pre id="_5a78af9a-0f16-410a-ae6a-670ce26d1523">Generally speaking, the media treated the issue without much hype or hysteria, underplaying the significance if anything, unlike the confusion generated with the Y2K preparations. There were few "`news of the weird`" stories generated by the earlier DST start.</pre>    
-</figure>   
-<figure id="_dc482c06-2798-4668-9f22-5537466dd8f2">    
-  <pre id="_9945b35e-c609-438f-9be1-dd2e602918b3">In most cases, remediation of systems as well as any "`manual`" corrections required, were accomplished shortly after March 11, 2007. There were virtually no reports of additional problems on April 1, 2007 the date which DST would have begun under the 1986 rules.</pre>    
-</figure></li>   
-</ol>  
-<p id="_c02d2822-aedf-4598-a3c2-721625f0e499">Many IT staff and end users resorted to Google searches for vendor and more general information on the DST changes. Although CalConnect did provide a web page, “Extended Daylight Saving Time Links, Advisories and Changes”, there were very few web sites which served as authoritative clearinghouses of DST information.</p>  
-<p id="_dde24757-5405-4729-a6f2-74b92375ffdf">DST-related issues seemed to gain the most traction and awareness within user groups and professional organizations very close the March 11th date, leaving insufficient time in many cases for the necessary tasks.</p></clause> 
-<clause id="_lessons_learned" obligation="normative"><title>Lessons Learned</title><p id="_941e341c-d03a-41f7-93d4-036d41e0f4d1">The actions required to mitigate problems resulting from EPACT 2005 pointed out a number of areas where changes needed to be made both in application development and administrative practice:</p>  
-<ul id="_9879ec5a-3dba-41fa-9a44-1dca999b59c7">   
-  <li>   
-    <p id="_a384b435-ed63-4cb5-a385-deefdb2418e1">Date and time information needs to be stored as completely as possible with as few assumptions about the context as possible. In some cases, incomplete date and time representation made reliable data conversion impossible.</p>   
-  </li>   
-  <li>   
-    <p id="_34d32963-871f-4a5a-b090-d5fada5badc7">Systems and devices need to accommodate timezone and DST changes more easily, automatically, and correctly.</p>   
-  </li>   
-  <li>   
-    <p id="_c7a6a918-6b92-4963-8460-fa400b529735">Conversion tools, patches and documentation need to be easily accessible.</p>   
-  </li>   
-  <li>   
-    <p id="_a72b5891-09ae-4b2b-a13a-78459ec414fc">Conversion tools, patches and documentation need to be available in a timely manner so</p>   
-  </li>   
-</ul>  
-<p id="_729703c9-225b-4dc5-a73a-fe3cd3f0994c">adequate testing can be performed. In many cases, the remediation started too late.</p>  
-<ul id="_23ad6e74-278c-46f5-9afc-fddbcc9c4d92">   
-  <li>   
-    <p id="_61687a33-7fdf-4169-8843-e60e0ac4fcc4">The interaction between patches, as well as the sequencing of patches, needs to be understood and clearly communicated.</p>   
-  </li>   
-  <li>   
-    <p id="_520abea9-859c-451c-afe9-41623f3b522f">System Administrators need to be more familiar with the systems they support and interactions between those systems. This includes locally developed applications and systems, and applications elsewhere within the organization.</p>   
-  </li>   
-  <li>   
-    <p id="_2d1f357c-cbee-4389-a730-74c5775c5c56">Mitigation and remediation need to take place as early as possible using robust tools.</p>   
-  </li>   
-  <li>   
-    <p id="_00f31d20-92e6-482f-8a61-07d1758b7b53">Relevant and complete information needs to be made available in a timely fashion by vendors to their customers, and from IT staff to the people and organizations they support. The information needs to be clear and appropriate for each audience.</p>   
-  </li>   
-  <li>   
-    <p id="_64c58b43-0fa8-48f0-8c97-aff6f8d8a998">End users need to have a better understanding of the tools they use to perform their jobs. Knowing what to look for and expect will help when troubleshooting problems, as well as make them more productive users of these systems. Many users do not use an external source of authoritative time information and some do not even configure their desktop computers to the correct tie zone and/or DST settings. Concomitantly, vendors need to make these things easier to do and to validate.</p>   
-  </li>   
-  <li>   
-    <p id="_01ad0c86-6ec3-4451-ad47-4582d9449feb">Authoritative clearinghouses for situations such as this DST change can be very valuable but do not always exist, nor do they necessarily materialize in a timely fashion.</p>   
-  </li>   
-</ul>  
-<p id="_b060af79-fef5-4eee-99c4-8a37e4393554">CalConnect’s role as a promoter of calendaring and scheduling standards put the consortium in a unique position. By publishing web pages with both informational articles and links to resources on publicly-accessible websites, the consortium was able to act as a clearinghouse of DST- related resources. The consortium also put out informational press releases to both industry and general news providers.</p>  
-<p id="_e3bd3c66-084f-4c80-8340-804b37fad8e7">However, CalConnect could have made a greater contribution. The consortium was very active and visible in the last 6 months of 2005, but did not keep the DST-related issues and concerns in front of the media, the IT profession, or the public again until February 2007. In retrospect, raising IT awareness throughout calendar year 2006 would have been very useful.</p></clause> 
-<clause id="_recommendations_for_the_future" obligation="normative"><title>Recommendations for the Future</title><p id="_52369115-269c-4c01-bb1e-dffed33ffc76">The next DST transition in November 2007 is not expected to cause as many problems as was seen in March 2007, because the remediation already done for March should cover most future transitions with these new rules. However, it is still possible that some calendaring events and systems were not correctly or completely updated, so administrators and users should again check all events due to occur between October 28th and November 4th 2007. These checks should be done sooner rather than later to avoid the last minute rush to do fixes that we experienced in March 2007. It is also important to confirm that DST updates have been applied to systems that were restored to potentially pre-update states or were placed in service after March 2007. Such systems represent increased risk in environments that do not have strong patching practices.</p>  
-<p id="_f7387c89-4c69-4b8a-8db1-6993ccd39497">As was noted before, there is still some chance that the DST rules will be “`rolled-back” to their previous definitions if the U.S. Congress determines there was positive effect on energy usage or conservation. Even if that does not happen, there is no guarantee that it will be another 20 years before the next U.S. changes are mandated, for whatever reasons. As many other countries, update their DST rules more frequently than the U.S., it’s clear that there needs to be a better way to manage changes to DST rules.</p>  
-<p id="_145e19a6-05db-4b34-a04d-4d90b027cc55">To that end, CalConnect’s TC-TIMEZONE is developing a recommendations document for a standard time zone registry that will provide a central, definitive repository of timezone and DST rules. This ad-hoc committee concurs that setting up such a timezone registry is important, and should be acted upon as soon as possible.</p>  
-<p id="_36ea75d6-85a4-4160-b980-ee4869af0358">The benefits of such a registry are clear - vendors adopting this registry as a source for the timezone and DST rules can build updating procedures into their products so that future changes to rules are automatically handled by update processes similar to those already in place. This avoids the need for each vendor to distribute their own set of patches, and significantly lessens the support impact that system administrators have in applying those patches.</p>  
-<p id="_a33fa6e6-0e2c-49df-99f2-77f812df3207">There are several hurdles that need to be overcome before such a registry could be viable, and TC-TIMEZONE’s work will attempt to address all of those. In addition, TC-TIMEZONE will define protocols for a timezone service that can be used as a means to carry out the automatic update process being proposed. This service would provide access to the timezone registry data as well as providing other useful features, such as a mechanism for quickly mapping between earlier timezone identifiers and the new standard form used in the registry. The service could provide a list of periods covering the date ranges where a timezone or DST rule change will impact existing data, providing a fast way to evaluate the changes needed to when an update needs to be applied.</p>  
-<p id="_04fbf87e-03a9-4990-99d4-8e527a2f352a">For significant issues such as timezones, CalConnect should take a more proactive approach including using its public mailing list for system administrators, <link target="http://lists.calconnect.org/mailman/listinfo/caladmin-l"/>, to provide regular updates on timezone changes and timezone processing. CalConnect might also consider providing a RSS feed of news related to calendaring and scheduling.</p></clause> 
-<clause id="_conclusions" obligation="normative"><title>Conclusions</title><p id="_1a60515b-d6b8-4c2c-bb48-f2a0eb904e6a">Timezone processing is intellectually simple but becomes challenging in the context of today’s complex, multi-layered, multi-vendor software environments. It becomes more difficult yet when we factor in timezone changes and the necessity to maintain interoperability across system, organizational, and political boundaries.</p>  
-<p id="_a0ec40f6-8cc0-4ed8-a7c2-8989992c17b6">Whereas we have made significant progress in identifying and understanding timezone processing in this context, we have not made enough progress to implementing timezone processing or accommodating changes to timezones.</p>  
-<p id="_3ba76645-a512-4e22-94aa-7137d26e3ac2">CalConnect believes that establishing an authoritative timezone registry service is the most important step we can take to provide modern, maintainable timezone processing.</p></clause></sections>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <p id="_08494ebd-8885-4468-b4f6-b989ebe0e2b5">© 2007 The Calendaring and Scheduling Consortium, Inc. </p>
+    </clause>
+  </copyright-statement>
+
+  
+
+  <legal-statement>
+    <clause>
+      <p id="_813efb4b-9628-4447-86b1-c406be6bc049">All rights reserved. Unless otherwise specified, no part of this
+        publication may be reproduced or utilized otherwise in any form or by any
+        means, electronic or mechanical, including photocopying, or posting on the
+        internet or an intranet, without prior written permission. Permission can
+        be requested from the address below.  </p>
+    </clause>
+  </legal-statement>
+
+  <feedback-statement>
+    <clause>
+      <p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+      <p id="boilerplate-address">4390 Chaffin Lane<br/>
+        McKinleyville<br/>
+        California 95519<br/>
+        United States of America<br/>
+        <br/>
+        <link target="mailto:copyright@calconnect.org">copyright@calconnect.org</link><br/>
+        <link target="www.calconnect.org">www.calconnect.org</link>
+      </p>
+    </clause>
+  </feedback-statement>
+</boilerplate>
+
+<preface><foreword id="_d91d9530-6646-4106-9365-352bca3f9d35" obligation="informative"><title>Foreword</title><p id="_2d752a03-58d6-44aa-8b74-2fe4457a0553">The Calendaring and Scheduling Consortium (“CalConnect”) is a global
+non-profit organization with the aim to facilitate interoperability of
+collaborative technologies and tools through open standards.</p>
+<p id="_a039eaed-3316-4e70-ba0d-0270eba24274">CalConnect works closely with international and regional partners,
+of which the full list is available on our website
+(<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>
+<p id="_a4537c1a-6a18-4fd2-99f9-14c7f67dcc93">The procedures used to develop this document and those intended for its
+further maintenance are described in the CalConnect Directives.</p>
+<p id="_1a2438d3-90e9-4c64-83e2-5780b6b90f28">In particular the different approval criteria needed for the different
+types of CalConnect documents should be noted. This document was drafted in
+accordance with the editorial rules of the CalConnect Directives.</p>
+<p id="_b0f6dfe0-b94b-46c2-bb17-6a7656f9f456">Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be
+held responsible for identifying any or all such patent rights. Details
+of any patent rights identified during the development of the document
+will be provided in the Introduction.</p>
+<p id="_d0314067-453f-4d53-9137-0e84170aa2e2">Any trade name used in this document is information given for the
+convenience of users and does not constitute an endorsement.</p>
+<p id="_fd12e605-c105-4e82-8669-cd27cc2eb3f7">This document was prepared by Technical Committee
+<em>Ad Hoc DST</em>.</p>
+<p id="_f8ceee3f-cfee-4d1b-b26e-4056b3156053">This document reviews the impact of implementation of Extended Daylight Savings Time, which moved the beginning of DST forward to March 11 in 2007, on the information technology industry and in particular calendaring and scheduling systems, and recommendations for what the industry should do about timezones going forward.</p>
+<p id="_d78081ee-6189-4968-9ff1-6edcf32e87a0">This document is a follow-on to the advisories and compendium of fixes which CalConnect collected and published prior to March 11, 2007.</p>
+<p id="_31c01f0e-db92-4c4c-9574-1b077f4e4a0c">The editors of the document are:</p>
+<ul id="_510b85f9-272d-4cb6-800c-5d0a8230ae0d">
+<li>
+<p id="_0080e988-5c5c-4dce-8490-5791b238c3f1">Mike Mize, California State University Fresno</p>
+</li>
+<li>
+<p id="_edbe491d-2a97-481f-be99-935a2f8ccb0c">Gary Schwartz, Rensselaer Polytechnic Institute</p>
+</li>
+</ul></foreword><introduction id="_introduction" obligation="informative"><title>Introduction</title><p id="_03b3a5d1-b685-43cc-b304-6b060ff16237">The U.S. Energy Policy Act of 2005 (EPACT 2005), signed by President Bush on August 8, 2005, among its many, many provisions, amends the Uniform Time Act of 1966 by changing the start and end dates of daylight saving time (DST) in the US. DST begins three weeks earlier and ends one week later, effective in 2007. DST now begins the second week of March and ends the first week in November (March 11 and November 4 in 2007). Other areas, including Canada and Bermuda, also choose to follow the new rules.</p>
+<p id="_e1bdc95d-a8cf-4bfb-9a7a-508ec4d074fe">CalConnect, the Calendaring and Scheduling Consortium, has been interested and active in timezone and DST issues almost since its inception in December 2004.</p>
+<p id="_053c5d25-1b53-463b-8e35-ef3f49b8b186">In June 2005, CalConnect issued a press release, “EDST Change Untimely” and a “DST Advisory Notice”, both of which “…​suggested a simple delay of the effective date (at that point set to March 2006) of the pending legislation to insure that calendar and scheduling vendors and consumers have ample time to prepare for any changes.”</p>
+<p id="_920f4d44-f676-4eb2-94d8-1d900f01562b">In October 2005, CalConnect conducted a timezone survey and issued the “Report on TIMEZONE Questionnaire Results”.</p>
+<p id="_33da94db-57dc-42fa-9be9-58d376bbf2f9">In May 2006, representatives of CalConnect met with consultants for the Japanese government which was studying a return to DST. DST has not been observed in Japan since 1952.</p>
+<p id="_1d033b38-2f95-4389-95c5-200ce112a509">In February 2007, CalConnect issued the press release, “CalConnect Gives Guidance to IT Staff on Impact of DST Change”, published “Extended Daylight Saving Time — Review and Considerations”, and created the “Extended Daylight Saving Time Links, Advisories and Changes” web page to assist system administrators in tracking vendor updates and DST-related news and information.</p>
+<p id="_616ae45c-2016-4fa7-a08b-6da25faa30f0">In August 2007, CalConnect reactivated its TIMZONE Technical Committee, which was originally convened in June 2005.</p>
+<p id="_c0b58419-a7ce-4722-bb2e-d9ebc365bb13">CalConnect’s “Extended Daylight Saving Time Review and Considerations” promised a future “Lessons Learned and Recommendations for the Future” document based on real-world experiences over the transition time in March to the new DST rules”. This document fulfills that promise.</p></introduction></preface><sections>
+
+<clause id="_background" obligation="normative"><title>Background</title><p id="_95dbcb22-5436-454a-ab18-536a907babaa">The U.S. Energy Policy Act of 2005 amends the Uniform Time Act of 1966 by changing the start and end dates of daylight saving time starting in 2007 as noted previously.</p>
+<p id="_8c615f4a-7a94-4e70-b784-f4b0ee77547e">The Uniform Time Act codified daylight saving time (DST) observance within the U.S. Prior to the act, each state set its own policy for DST observance, and in some cases, which parts of the state would be affected. The Act originally set the start of DST to be the last Sunday in April, and was amended in 1986 (effective in 1987) to be the first Sunday in April.</p>
+<p id="_a8b183e5-ba69-47a4-8b9c-dbcd3147a3d4">Whereas this is the first modification to the DST rules in the United States in 20 years, this is not the only recent change to DST around the globe. Western Australia, Brazil, and the state of Indiana, among others, also made their own adjustments to DST start and/or end dates within the last year or so. The things that distinguish the EPACT 2005 changes from the other changes are:</p>
+<ol id="_5518294b-cdeb-4834-bceb-8b00f23d7097" type="arabic">
+<li>
+<p id="_25a85c43-64be-4cd9-b802-c82eda88e858">The aforementioned more regional DST changes were problematic and difficult in a number of ways, but the impact of these difficulties was relatively small globally.</p>
+</li>
+<li>
+<p id="_16ab82ab-cf92-43fe-b204-e7604a9f8325">The scope of the EPACT 2005 change is substantially larger, affecting virtually the entire United States, the third most populous nation in the world, as well Canada and Bermuda.</p>
+</li>
+<li>
+<p id="_973d4ff3-9ccb-45a4-8ddc-15e50133c6f7">The role that the United States plays in international commerce and IT development makes this change very significant across the globe.</p>
+</li>
+<li>
+<p id="_b81f9ec1-c381-42f5-ab48-943c301c3e67">In the words of Thomas Friedman, “the world is flat”, with geo-political borders becoming less relevant with respect to trade and commerce. Virtually, everyone is doing business with everyone else. Agreeing globally on dates and times is now essential.</p>
+</li>
+<li>
+<p id="_44580a25-19be-4199-a2ca-926d2728b6ab">Mobile devices are pervasive and indispensable today, as are enterprise and web-based calendaring systems connecting people across time zones, and organizational and political boundaries Twenty years ago, when the Uniform Time Act was amended in 1986, these things didn’t exist or they were an inconsequential novelty. Clearly that is not the case today.</p>
+</li>
+<li>
+<p id="_bb850461-a389-42d9-a31a-f200199d064c">Computer systems, networks, applications and other electronic devices used by banks, the government and industry are dependent on correct date and time information and are far more widely used than they were when the last change was made in 1986.</p>
+</li>
+<li>
+<p id="_72495284-4297-4d15-abc4-0ca75e2ee233">EPACT 2005 requires the Department of Energy to report to the US Congress on the impact of the DST change on energy usage and/or conservation by the end of 2007. Congress may revert back to the 1986 DST dates if they choose. There is conflicting research as to whether daylight saving results in a net energy saving.</p>
+</li>
+</ol>
+<p id="_eeb6a9db-a0b2-4aa0-b130-eb4c1c500a80">CalConnect’s October 2005 “Report on TIMEZONE Questionnaire Results, observed “`…​ a number of products convert local time information with a supplied timezone into UTC (the ‘standard’ time reference) as a simplification. As a result of this, timezone information is effectively lost. Such products will need to determine how to do any adjustment of the UTC times based on the proposed DST changes.”</p>
+<p id="_2f5132ef-8f95-4661-a795-f58503ea7e37">CalConnect’s February 2007 publication, “Extended Daylight Saving Time — Review and Considerations” predicted “The impact of the DST changes should be significantly smaller than Year 2000 (Y2K) but is still a concern for those involved in preparing for the change. Many systems will be corrected simply by applying automatic updates from the system vendor in advance of the March 11th deadline. The result of having out of date rules is also smaller, with systems being off by an hour instead of a hundred years (or failing completely). On the other hand, there may be significant impact on computer support organizations, especially in cases where meetings in a calendar system need to be corrected manually.”</p></clause>
+<clause id="_realworld_experiences" obligation="normative"><title>Real‐world experiences</title><p id="_0e725a38-6aa4-4e31-9b11-626317820099">The impact of the earlier DST start date was noticeable but the magnitude of the impact was generally felt more by larger enterprises than small businesses or home computer users. Problems were experienced in a number of areas:</p>
+<ol id="_0f5ba063-1da1-4d8e-8641-fbddb6afb939" type="arabic">
+<li>
+<p id="_42111f5c-71c6-4667-a296-7d2f01ef3322">Small devices or systems did not correctly ascertain and/or display their local time correctly, usually, but not always, being off by an hour.</p>
+</li>
+<li>
+<p id="_9240436a-50bd-40a8-9b00-8bbbfb9bd5a6">Some already entered/stored dates/times, such as those in a calendaring system, were no longer correct, again, in most cases being off by an hour.</p>
+</li>
+<li>
+<p id="_7fdba534-19e1-425f-a954-aa65a6a35e2b">Some already entered/stored all day events, were no longer correct, now spanning more than a single day.</p>
+</li>
+<li>
+<p id="_6202bb8f-7b66-42cd-93e5-857f6134795d">Synchronization between devices/systems, such as a smart phone and a calendaring system, resulted in previously correctly stored events now having incorrect times and/or dates.</p>
+</li>
+<li>
+<p id="_1190d751-fd33-4f34-8d4d-b89c242de998">Some users “manually” corrected already entered/stored events which later became incorrect after software updates were applied which automatically “re-corrected” these same events.</p>
+</li>
+<li>
+<p id="_02791da0-99ab-4e19-b07b-8899dfe67056">A major utility in one of the Western US states, which could not update all of its electrical meters in time and accepted that there would be some minor accounting discrepancies for the extended DST period.</p>
+</li>
+<li>
+<p id="_211e0ced-5484-4bc5-8e36-6626d91ac890">Some enterprise systems could not be automatically remediated with software patches, requiring end users to “manually” adjust dates/times which were now incorrect.</p>
+</li>
+<li>
+<p id="_5fcbdab5-5da3-42eb-ba3c-95901a08d746">In some cases, when reviewing remediated systems for correct results, users mistook correct time/dates for incorrect values and changed them yet again.</p>
+</li>
+</ol>
+<p id="_66b40972-5897-46c0-b204-a1a18cdf1c15">While most vendors recognized the seriousness of the problem and responded responsibly by producing patches, conversion tools and workarounds, some problems persisted, and others actually resulted from these remediation efforts:</p>
+<ol id="_f1fd6df9-30c3-498f-a0d9-e9804a85094f" type="arabic">
+<li>
+<p id="_30306246-ca7a-4ed9-877a-c631c2636f81">Some fixes were not available in time for IT staffs to deploy enterprise-wide before the DST period began.</p>
+</li>
+<li>
+<p id="_516ffa85-38c7-42c5-b4aa-0a54ac5851c3">Some initial patches were faulty, requiring later “fixes” to the initial fix.</p>
+</li>
+<li>
+<p id="_320abeab-b5f2-4f0a-8fbc-7946fb9956f4">The sequencing of patches, both chronologically as well as with respect to the application of other patches, was not well understood or communicated in some cases.</p>
+</li>
+<li>
+<p id="_61d76cc3-1b18-4b5c-bbfd-892ee67988e4">Some vendors did a better job than others communicating with their customers about which systems required remediation and how to affect that remediation.</p>
+</li>
+</ol>
+<p id="_534e6427-4db7-489d-8c82-e445ebfed71e">IT staffs also encountered difficulties, including:</p>
+<ol id="_2203d161-3f62-4516-8f23-56876031c23f" type="arabic">
+<li>
+<p id="_cefc785c-ad19-47dd-9b65-78e03b73ccc5">Help desks being flooded with end user questions and problem reports.</p>
+</li>
+<li>
+<p id="_52f1d5ac-623b-4cca-b8c6-e49aa58406ac">Being able to locate and obtain information and updates for all their products and devices.</p>
+</li>
+<li>
+<p id="_79dd9492-5561-433a-8297-37ce0f833213">Providing information and instructions to their user communities.</p>
+</li>
+<li>
+<p id="_5852c048-6d18-4dec-892e-bd1e2efffa9c">Finding adequate resources to do all the required remediation.</p>
+</li>
+<li>
+<p id="_0e7eaa81-c59f-4da9-9028-bc3d07e5e5fe">Identifying all the devices and systems requiring remediation.</p>
+</li>
+<li>
+<p id="_f1a06f19-c9dc-4345-96ca-7e7e485c437b">Remediating systems in the proper sequences and at the correct times.</p>
+</li>
+<li>
+<p id="_f585de7e-f0e0-469f-83f9-730d498773ce">Remediating locally developed applications and/or systems.</p>
+</li>
+<li>
+<p id="_cd39e52b-4d8d-40f1-8e58-2b82351f29b9">Deciding what to do about end-of-life or otherwise no longer supported systems for which no remediation was available.</p>
+</li>
+<li><p id="_25339cf7-830e-42e3-b45c-c537582c3970">Inadequate coordination and cooperation between units in larger organizations.</p><figure id="_3babef12-4406-400d-b1b7-cc8d3136a341">
+<pre id="_0f816b0d-a7f3-493c-ad25-06fb4771a990">Generally speaking, the media treated the issue without much hype or hysteria, underplaying the significance if anything, unlike the confusion generated with the Y2K preparations. There were few "`news of the weird`" stories generated by the earlier DST start.</pre>
+</figure>
+<figure id="_3dc4734c-7df4-453b-9260-624485e24f6b">
+<pre id="_db120c95-b824-4747-9359-91668252388d">In most cases, remediation of systems as well as any "`manual`" corrections required, were accomplished shortly after March 11, 2007. There were virtually no reports of additional problems on April 1, 2007 the date which DST would have begun under the 1986 rules.</pre>
+</figure></li>
+</ol>
+<p id="_a261c559-049d-4ad8-9f93-a0e4372a990a">Many IT staff and end users resorted to Google searches for vendor and more general information on the DST changes. Although CalConnect did provide a web page, “Extended Daylight Saving Time Links, Advisories and Changes”, there were very few web sites which served as authoritative clearinghouses of DST information.</p>
+<p id="_6c067e50-dbb9-418f-80a1-97dbf38b3f6c">DST-related issues seemed to gain the most traction and awareness within user groups and professional organizations very close the March 11th date, leaving insufficient time in many cases for the necessary tasks.</p></clause>
+<clause id="_lessons_learned" obligation="normative"><title>Lessons Learned</title><p id="_53dca1d6-5b6c-4b4a-894e-a4e9f2bdad79">The actions required to mitigate problems resulting from EPACT 2005 pointed out a number of areas where changes needed to be made both in application development and administrative practice:</p>
+<ul id="_42394a28-6dfd-42ef-b5ea-0fd3aa5fed1e">
+<li>
+<p id="_ee1c7885-566c-471d-857c-911f304500a6">Date and time information needs to be stored as completely as possible with as few assumptions about the context as possible. In some cases, incomplete date and time representation made reliable data conversion impossible.</p>
+</li>
+<li>
+<p id="_b4ba18e0-92dc-4631-b9c8-b3fdcc82a456">Systems and devices need to accommodate timezone and DST changes more easily, automatically, and correctly.</p>
+</li>
+<li>
+<p id="_d6dc9e1b-64a2-477d-96f9-5f8d62a6699f">Conversion tools, patches and documentation need to be easily accessible.</p>
+</li>
+<li>
+<p id="_734e3a35-fc60-402c-b7e6-a2a7f46ef5f9">Conversion tools, patches and documentation need to be available in a timely manner so</p>
+</li>
+</ul>
+<p id="_a2d71be5-3f20-465c-bc9c-6cf1f5d40ff5">adequate testing can be performed. In many cases, the remediation started too late.</p>
+<ul id="_1c46dca6-ab8c-499f-ae5b-6eb39f47e907">
+<li>
+<p id="_95037ad4-67db-4c05-8dee-f1d4091632d7">The interaction between patches, as well as the sequencing of patches, needs to be understood and clearly communicated.</p>
+</li>
+<li>
+<p id="_e2c9cb3e-8ef8-46c8-972d-5aea5d89ad99">System Administrators need to be more familiar with the systems they support and interactions between those systems. This includes locally developed applications and systems, and applications elsewhere within the organization.</p>
+</li>
+<li>
+<p id="_25b6adeb-d2f9-4d08-bec1-6162cdb0de9b">Mitigation and remediation need to take place as early as possible using robust tools.</p>
+</li>
+<li>
+<p id="_8a7b6df1-108d-4391-b0fd-dcf3210d42d3">Relevant and complete information needs to be made available in a timely fashion by vendors to their customers, and from IT staff to the people and organizations they support. The information needs to be clear and appropriate for each audience.</p>
+</li>
+<li>
+<p id="_fb38974a-d71e-41c8-afec-6a3c7931a20f">End users need to have a better understanding of the tools they use to perform their jobs. Knowing what to look for and expect will help when troubleshooting problems, as well as make them more productive users of these systems. Many users do not use an external source of authoritative time information and some do not even configure their desktop computers to the correct tie zone and/or DST settings. Concomitantly, vendors need to make these things easier to do and to validate.</p>
+</li>
+<li>
+<p id="_0123bff7-519b-4c1f-b989-a335b6c2872a">Authoritative clearinghouses for situations such as this DST change can be very valuable but do not always exist, nor do they necessarily materialize in a timely fashion.</p>
+</li>
+</ul>
+<p id="_b1c8aac2-6895-4556-8c65-ef1263d57540">CalConnect’s role as a promoter of calendaring and scheduling standards put the consortium in a unique position. By publishing web pages with both informational articles and links to resources on publicly-accessible websites, the consortium was able to act as a clearinghouse of DST- related resources. The consortium also put out informational press releases to both industry and general news providers.</p>
+<p id="_3e6ef338-46ff-4598-b2d7-1ddcdbb38539">However, CalConnect could have made a greater contribution. The consortium was very active and visible in the last 6 months of 2005, but did not keep the DST-related issues and concerns in front of the media, the IT profession, or the public again until February 2007. In retrospect, raising IT awareness throughout calendar year 2006 would have been very useful.</p></clause>
+<clause id="_recommendations_for_the_future" obligation="normative"><title>Recommendations for the Future</title><p id="_d539acb3-dd64-44da-9a77-72bda32951cd">The next DST transition in November 2007 is not expected to cause as many problems as was seen in March 2007, because the remediation already done for March should cover most future transitions with these new rules. However, it is still possible that some calendaring events and systems were not correctly or completely updated, so administrators and users should again check all events due to occur between October 28th and November 4th 2007. These checks should be done sooner rather than later to avoid the last minute rush to do fixes that we experienced in March 2007. It is also important to confirm that DST updates have been applied to systems that were restored to potentially pre-update states or were placed in service after March 2007. Such systems represent increased risk in environments that do not have strong patching practices.</p>
+<p id="_6c8d0911-13c2-4b63-956d-84b4befe1468">As was noted before, there is still some chance that the DST rules will be “`rolled-back” to their previous definitions if the U.S. Congress determines there was positive effect on energy usage or conservation. Even if that does not happen, there is no guarantee that it will be another 20 years before the next U.S. changes are mandated, for whatever reasons. As many other countries, update their DST rules more frequently than the U.S., it’s clear that there needs to be a better way to manage changes to DST rules.</p>
+<p id="_6ffe829f-a09f-4ac0-8992-18b6adcb0dc9">To that end, CalConnect’s TC-TIMEZONE is developing a recommendations document for a standard time zone registry that will provide a central, definitive repository of timezone and DST rules. This ad-hoc committee concurs that setting up such a timezone registry is important, and should be acted upon as soon as possible.</p>
+<p id="_ef2219a0-8b57-4664-a689-d99b717e56be">The benefits of such a registry are clear — vendors adopting this registry as a source for the timezone and DST rules can build updating procedures into their products so that future changes to rules are automatically handled by update processes similar to those already in place. This avoids the need for each vendor to distribute their own set of patches, and significantly lessens the support impact that system administrators have in applying those patches.</p>
+<p id="_9f4dff9f-c428-4764-819e-e3c62ffaaa5f">There are several hurdles that need to be overcome before such a registry could be viable, and TC-TIMEZONE’s work will attempt to address all of those. In addition, TC-TIMEZONE will define protocols for a timezone service that can be used as a means to carry out the automatic update process being proposed. This service would provide access to the timezone registry data as well as providing other useful features, such as a mechanism for quickly mapping between earlier timezone identifiers and the new standard form used in the registry. The service could provide a list of periods covering the date ranges where a timezone or DST rule change will impact existing data, providing a fast way to evaluate the changes needed to when an update needs to be applied.</p>
+<p id="_04a26174-a47b-4282-8ea2-9564ecb6313d">For significant issues such as timezones, CalConnect should take a more proactive approach including using its public mailing list for system administrators, <link target="http://lists.calconnect.org/mailman/listinfo/caladmin-l"/>, to provide regular updates on timezone changes and timezone processing. CalConnect might also consider providing a RSS feed of news related to calendaring and scheduling.</p></clause>
+<clause id="_conclusions" obligation="normative"><title>Conclusions</title><p id="_5315d159-87fd-4036-a0a6-00bb35873606">Timezone processing is intellectually simple but becomes challenging in the context of today’s complex, multi-layered, multi-vendor software environments. It becomes more difficult yet when we factor in timezone changes and the necessity to maintain interoperability across system, organizational, and political boundaries.</p>
+<p id="_099b4d3c-2074-4c8e-9381-fb06f089dde5">Whereas we have made significant progress in identifying and understanding timezone processing in this context, we have not made enough progress to implementing timezone processing or accommodating changes to timezones.</p>
+<p id="_269fee4a-06de-4804-ad14-9335ff1c6a55">CalConnect believes that establishing an authoritative timezone registry service is the most important step we can take to provide modern, maintainable timezone processing.</p></clause></sections>
 </csd-standard>

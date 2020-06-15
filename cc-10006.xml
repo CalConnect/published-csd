@@ -1,293 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<csd-standard xmlns="https://www.calconnect.org/standards/csd">
+<csd-standard xmlns="https://www.metanorma.org/ns/csd">
 <bibdata type="standard">
-  <title format="text/plain" language="en">CalConnect Directive: Intellectual property rights policy</title>
-  <docidentifier type="CC">CC/DIR 10006:2019</docidentifier>
-  <docnumber>10006</docnumber>
-  <date type="published">
-    <on>2019</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <edition>1</edition>
-  <version>
-    <revision-date>2019-03-18</revision-date>
-  </version>
-  <language>en</language>
-  <script>Latn</script>
-  <status>
-    <stage>published</stage>
-  </status>
-  <copyright>
-    <from>2019</from>
-    <owner>
-      <organization>
-        <name>CalConnect</name>
-      </organization>
-    </owner>
-  </copyright>
-  <ext>
-    <doctype>directive</doctype>
-    <editorialgroup>
-      <technical-committee>PUBLISH</technical-committee>
-    </editorialgroup>
-  </ext>
+<title language="en" format="text/plain">CalConnect Directive: Intellectual property rights policy</title>
+<docidentifier type="csd">CC/DIR 10006:2019</docidentifier>
+<docnumber>10006</docnumber>
+<date type="published">
+<on>2019-03-18</on>
+</date>
+<contributor>
+<role type="author"/>
+<organization>
+<name>CalConnect</name>
+</organization>
+</contributor>
+<contributor>
+<role type="publisher"/>
+<organization>
+<name>CalConnect</name>
+</organization>
+</contributor>
+<edition>1</edition>
+<version>
+<revision-date>2019-03-18</revision-date>
+</version>
+<language>en</language>
+<script>Latn</script>
+<status>
+<stage>published</stage>
+</status>
+<copyright>
+<from>2019</from>
+<owner>
+<organization>
+<name>CalConnect</name>
+</organization>
+</owner>
+</copyright>
+<ext>
+<doctype>directive</doctype>
+<editorialgroup>
+<technical-committee>PUBLISH</technical-committee>
+</editorialgroup>
+</ext>
 </bibdata>
-<termdocsource bibitemid="CCSTD"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_83281155-293a-4588-81b9-97ae10cf115a">The Calendaring and Scheduling Consortium (“CalConnect”) is a global
+<termdocsource bibitemid="CCSTD"/><boilerplate>
+  <copyright-statement>
+    <clause>
+      <p id="_f6562e7a-506a-4074-abf9-ca967333415a">© 2019 The Calendaring and Scheduling Consortium, Inc. </p>
+    </clause>
+  </copyright-statement>
+
+  
+
+  <legal-statement>
+    <clause>
+      <p id="_fbd495c3-4515-4e6b-a0a6-7da820a65832">All rights reserved. Unless otherwise specified, no part of this
+        publication may be reproduced or utilized otherwise in any form or by any
+        means, electronic or mechanical, including photocopying, or posting on the
+        internet or an intranet, without prior written permission. Permission can
+        be requested from the address below.  </p>
+    </clause>
+  </legal-statement>
+
+  <feedback-statement>
+    <clause>
+      <p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+      <p id="boilerplate-address">4390 Chaffin Lane<br/>
+        McKinleyville<br/>
+        California 95519<br/>
+        United States of America<br/>
+        <br/>
+        <link target="mailto:copyright@calconnect.org">copyright@calconnect.org</link><br/>
+        <link target="www.calconnect.org">www.calconnect.org</link>
+      </p>
+    </clause>
+  </feedback-statement>
+</boilerplate>
+
+<preface><foreword id="_38280b9e-25c4-42d9-ae0d-dfef285f3640" obligation="informative"><title>Foreword</title><p id="_98e7af34-3795-46e1-9eed-53d321a99dbc">The Calendaring and Scheduling Consortium (“CalConnect”) is a global
 non-profit organization with the aim to facilitate interoperability of
 collaborative technologies and tools through open standards.</p>
-<p id="_4f8bee9e-ac8d-4c47-b94b-815af41df89e">CalConnect works closely with international and regional partners,
+<p id="_a7734059-7ccd-4e95-a512-a1033be4deb8">CalConnect works closely with international and regional partners,
 of which the full list is available on our website
 (<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>
-<p id="_dadde3d8-4dd5-4dd1-aeaa-1640ada91ed6">The procedures used to develop this document and those intended for its
+<p id="_b2caf7bc-8563-4cea-b064-483637ef151c">The procedures used to develop this document and those intended for its
 further maintenance are described in the CalConnect Directives.</p>
-<p id="_07777bea-c26d-436b-b1ec-dafa92789f52">In particular the different approval criteria needed for the different
+<p id="_e73b5303-065d-4959-bf77-800e41300fa9">In particular the different approval criteria needed for the different
 types of CalConnect documents should be noted. This document was drafted in
 accordance with the editorial rules of the CalConnect Directives.</p>
-<p id="_7dd58386-a792-46d7-af56-847b1385619b">Attention is drawn to the possibility that some of the elements of this
+<p id="_4a5176c1-1fb8-42a6-ac45-6b774ffeac27">Attention is drawn to the possibility that some of the elements of this
 document may be the subject of patent rights. CalConnect shall not be
 held responsible for identifying any or all such patent rights. Details
 of any patent rights identified during the development of the document
 will be provided in the Introduction.</p>
-<p id="_723a7c47-9c91-4bb1-99fb-1979a45db1ba">Any trade name used in this document is information given for the
+<p id="_5b94e1e0-de40-4321-811d-0afcbe400248">Any trade name used in this document is information given for the
 convenience of users and does not constitute an endorsement.</p>
-<p id="_b3db2220-d961-4cca-a296-2d4c4c6bf3c6">This document was prepared by Technical Committee
-<em>PUBLISH</em>.</p></foreword><introduction id="_introduction" obligation="informative"><title>Introduction</title><clause id="_general" obligation="informative"><title>General</title><p id="_a949458e-1542-4363-9a00-642aaf81a013">CalConnect is committed to expanding the realm of standards
+<p id="_4c6a7853-db43-432f-af1d-8b17d631a459">This document was prepared by Technical Committee
+<em>PUBLISH</em>.</p></foreword><introduction id="_introduction" obligation="informative"><title>Introduction</title><clause id="_general" obligation="informative"><title>General</title><p id="_f041377d-263c-49b9-8bf5-f6843c26f6c0">CalConnect is committed to expanding the realm of standards
 in collaborative technologies with a focus on interoperability
 across the globe and communities of practice.</p>
-<p id="_7f1bdce5-1472-4280-a037-55dd6869d8cb">In the CalConnect standardization process described in <eref type="inline" bibitemid="CCSTD" citeas="CC/DIR 10001"/>,
+<p id="_62171f51-1384-446a-bf00-cf85ea4f86e2">In the CalConnect standardization process described in <eref type="inline" bibitemid="CCSTD" citeas="CC/DIR 10001:2019"/>,
 contributions are received from various forms and parties.
 As a proponent of open standards, CalConnect is required to
 address any intellectual property rights in such contributions
 to be able to publish standardization deliverables.</p>
-<p id="_9d015fdb-237d-48fc-a5ec-51b8f1bfdd35">This document details the IPR policy of CalConnect covering
+<p id="_271acd7d-8592-4df4-bf52-8769f57ac783">This document details the IPR policy of CalConnect covering
 all CalConnect standardization activities, covering
 generally the following categories:</p>
-<ul id="_615d9237-5c36-4bdc-8fb2-ffb3478213b6">
-  <li>
-    <p id="_5810d5d7-6a42-4dc9-8851-b536d7c1507c">Copyright</p>
-  </li>
-  <li>
-    <p id="_64033c81-d185-48f7-8f66-015cacbe6ebe">Trademarks</p>
-  </li>
-  <li>
-    <p id="_e0e9d2c9-34ea-4712-be42-b27ff0eee648">Patents</p>
-  </li>
+<ul id="_81f62e16-bd9a-419f-8161-12249b3b6185">
+<li>
+<p id="_da70de74-4597-44f1-bb92-0f533881ca0b">Copyright</p>
+</li>
+<li>
+<p id="_372e0f54-4c0b-4c7f-8e02-ff116f45de71">Trademarks</p>
+</li>
+<li>
+<p id="_b9196a24-b4ec-4d7b-abb4-17a9c067e02d">Patents</p>
+</li>
 </ul></clause>
-<clause id="_purpose" obligation="informative"><title>Purpose</title><p id="_70cd61b3-c887-4502-a9a8-84f4748084ce">This document describes the intellectual property rights policy of
+<clause id="_purpose" obligation="informative"><title>Purpose</title><p id="_970e8197-b019-48b6-ae08-fef4629729e0">This document describes the intellectual property rights policy of
 CalConnect that aims to be simple and straightforward.</p>
-<p id="_07c5fed6-7490-4efb-a8f2-6640499d268e">CalConnect deliverables are drawn up by technical, not IPR, experts,
+<p id="_7bf0e5a4-565f-4aaa-b5b3-f6b90b70fa1c">CalConnect deliverables are drawn up by technical, not IPR, experts,
 who may not be fully aware of all nuances in the complex
 international legal situation of intellectual property rights.</p>
-<p id="_bde13ff1-a45b-41a3-9a9f-19aa7824978b">CalConnect deliverables are non-binding — their objective is to ensure
+<p id="_6fe061c7-c1c8-41b2-a7a9-8803cbeb04cf">CalConnect deliverables are non-binding — their objective is to ensure
 compatibility of technologies and systems on a worldwide basis.</p>
-<p id="_7685027a-548a-4a3d-8cfb-969cda3ef6da">To ensure the applicability and accessibility of CalConnect
+<p id="_3d0b2bca-9199-40e9-a8b1-f38f872eb9a2">To ensure the applicability and accessibility of CalConnect
 deliverables, the implementation and continued usage of content within
 the deliverables must be possible to the worldwide audience without
 discrimination, including any intellectual property rights embodiment
 in such deliverables.</p></clause></introduction></preface><sections>
 
-<clause id="_scope" obligation="normative"><title>Scope</title><p id="_b1f5c7f8-897f-4a67-9037-24a78fdd7a60">This document provides the CalConnect intellectual property rights
+<clause id="_scope" obligation="normative"><title>Scope</title><p id="_e3002a4c-24db-4edd-8673-0adad6205a21">This document provides the CalConnect intellectual property rights
 policy, which governs all standardization activities at CalConnect.</p>
-<p id="_93c109bf-a1df-4842-8788-0ae276ad090f">The CalConnect patent policy is described in <eref type="inline" bibitemid="CCPAT" citeas="CC/DIR 10003"/>.</p></clause>
+<p id="_23926c76-2158-462c-9c40-80128de996bb">The CalConnect patent policy is described in <eref type="inline" bibitemid="CCPAT" citeas="CC/DIR 10003:2019"/>.</p></clause>
 
-<terms id="terms" obligation="normative"><title>Terms and definitions</title><term id="term-contribution"><preferred>contribution</preferred><definition><p id="_10f74474-ef5f-4782-83ff-d8e1eb959977">material provided as input to a CalConnect standardization activity</p></definition>
-<termnote id="_33c4a2c3-6f8e-4a63-b2d0-21bb3bed6d15">
-  <p id="_d440c414-b84d-4750-89bc-b59003440191">a contribution can be provided by a member of CalConnect or an external party</p>
+<terms id="terms" obligation="normative"><title>Terms and definitions</title><p id="_7db67fc3-782c-46fb-93bb-45bb5b0bb5c0">For the purposes of this document, the terms and definitions 
+  given in <eref bibitemid="CCSTD"/> and the following apply.</p>
+<term id="term-contribution"><preferred>contribution</preferred><definition><p id="_1c08723e-4bb9-4b9e-8a7e-bc8beb8eb0b7">material provided as input to a CalConnect standardization activity</p></definition>
+<termnote id="_aca5c48a-ac5d-4afc-bd12-6a8011314a85">
+<p id="_8f4fd417-70e8-47a6-93b7-d7adb55f4620">a contribution can be provided by a member of CalConnect or an external party</p>
 </termnote></term>
 <term id="_contributor">
-  <preferred>contributor</preferred>
-  <definition><p id="_00ae2037-5dd0-4bcd-a141-75405dad3e84">party that provides a <em>contribution</em> (<xref target="term-contribution"/>)</p></definition>
+<preferred>contributor</preferred>
+<definition><p id="_338876c2-1989-428d-a692-170c0577c090">party that provides a <em>contribution</em> (<xref target="term-contribution"/>)</p></definition>
 </term></terms>
-<clause id="standardization-activities" obligation="normative"><title>Standardization activities</title><clause id="confidentiality" obligation="normative"><title>No confidential material</title><p id="_3701c61f-8abd-4445-a8b2-1d8c40f1021d">No confidential material is to be discussed at or during CalConnect standardization activities.</p>
-<p id="_09af5940-801e-449a-ba1f-31081ea0f9dd">All information provided or discussed in CalConnect activities is presumed to be public information and member participants are reminded that they should not discuss or reveal any confidential information of their respective organizations.</p>
-<p id="_cd3fc844-8cb0-4b57-ac2c-7fed016b72ca">While work in progress within CalConnect is not publicly available outside CalConnect, with minor exceptions, completed work products of CalConnect are intended to be publicly and freely available, and will be posted on the CalConnect web site.</p></clause>
-<clause id="_mandatory_disclosure_of_intellectual_property_rights" obligation="normative"><title>Mandatory disclosure of intellectual property rights</title><p id="_31c7c257-a919-480d-916d-7519e5e5c9fe">Discussions that relate to known or potential intellectual property rights during CalConnect standardization activities must be performed under full disclosure of such rights.</p>
-<p id="_0d08b0f3-2e48-474b-9704-5df3c5df2a7d">Individuals participating in the activities of CalConnect are responsible for determining that such rights when known, must be disclosed in accordance with this provision.</p></clause></clause>
+<clause id="standardization-activities" obligation="normative"><title>Standardization activities</title><clause id="confidentiality" obligation="normative"><title>No confidential material</title><p id="_8cd410e3-cac0-4aaf-819e-e37a732a7ef5">No confidential material is to be discussed at or during CalConnect standardization activities.</p>
+<p id="_7a476571-6603-4a8f-bde9-6b248f546ba9">All information provided or discussed in CalConnect activities is presumed to be public information and member participants are reminded that they should not discuss or reveal any confidential information of their respective organizations.</p>
+<p id="_a85fad72-ee2a-4cff-b33c-b1ac155df9a8">While work in progress within CalConnect is not publicly available outside CalConnect, with minor exceptions, completed work products of CalConnect are intended to be publicly and freely available, and will be posted on the CalConnect web site.</p></clause>
+<clause id="_mandatory_disclosure_of_intellectual_property_rights" obligation="normative"><title>Mandatory disclosure of intellectual property rights</title><p id="_94fb0548-216d-4d93-89e5-cca4607b26a7">Discussions that relate to known or potential intellectual property rights during CalConnect standardization activities must be performed under full disclosure of such rights.</p>
+<p id="_6b0aa315-9f47-4bfa-969d-d04a95691db2">Individuals participating in the activities of CalConnect are responsible for determining that such rights when known, must be disclosed in accordance with this provision.</p></clause></clause>
 <clause id="contributions" obligation="normative"><title>Contributions</title><clause id="_no_confidential_material" obligation="normative">
-  <title>No confidential material</title>
-  <p id="_52018bf8-53c3-4f6f-8334-2089fa73f687">Participants in CalConnect standardization activities must avoid providing contributions containing confidential material, regardless whether provided in person or via electronic means.</p>
+<title>No confidential material</title>
+<p id="_24a1d23d-0d20-4aea-81c0-7120468b3756">Participants in CalConnect standardization activities must avoid providing contributions containing confidential material, regardless whether provided in person or via electronic means.</p>
 </clause>
-<clause id="_mandatory_disclosure_of_intellectual_property_rights_2" obligation="normative"><title>Mandatory disclosure of intellectual property rights</title><p id="_a8bdda00-5687-4931-b05f-024948d7e34f">Contributions which contain intellectual property of an organization must be disclosed and are subject to the rules and guidance provided in this document.</p>
-<p id="_530b9b1b-2351-49d6-a0a9-db023b1a5395">Such contributions shall be avoided unless such material can be shown to be, in the judgment of the participants in the activity and the CalConnect Board of Directors, essential to the work.</p>
-<p id="_9795e311-78ef-43f1-ae02-bcc61d823ad6">No material which is subject to any terms of confidentiality or restriction of dissemination on the part of its contributor or the contributor’s organization can be accepted for such use.</p>
-<p id="_08f76dd4-dc94-4264-b784-d2be528bd664">Individuals participating in the activities of CalConnect are responsible for determining that material which they contribute is made available by their organizations in accordance with this provision.</p></clause>
-<clause id="_copyright_provisions" obligation="normative"><title>Copyright provisions</title><p id="_6c042e43-21a2-43ad-a558-6089cd6dfe41">If any part of a contribution is or may be subject to copyright, the contributor and his or her organization, and any other owners of any proprietary rights in the contribution, grant CalConnect a world-wide, non-exclusive, non-sub-licensable license (except for the submission and adoption by other standardization bodies), to use contents of submitted documents to CalConnect, for the development and publishing of the deliverables.</p>
-<p id="_d8149155-bb06-4590-978e-83e97b8df5b9">This license includes the right to copy, publish and distribute the contribution in any way, and to prepare derivative works that are based on or incorporate all or part of the contribution, the license to such derivative works to be of the same scope as the license of the original contribution.</p>
-<note id="_47b56a1e-c135-4307-beba-796b3934f195">
-  <p id="_befe856c-8fed-4c16-9515-f3f4440d8ec4">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><locality type="clause"><referenceFrom>10.3.1.1</referenceFrom></locality></eref>.</p>
+<clause id="_mandatory_disclosure_of_intellectual_property_rights_2" obligation="normative"><title>Mandatory disclosure of intellectual property rights</title><p id="_d24bd771-09ff-4daf-a859-2db7da5b731f">Contributions which contain intellectual property of an organization must be disclosed and are subject to the rules and guidance provided in this document.</p>
+<p id="_b2930d5a-dac2-41d1-98d4-d4776ab53025">Such contributions shall be avoided unless such material can be shown to be, in the judgment of the participants in the activity and the CalConnect Board of Directors, essential to the work.</p>
+<p id="_1a79c39b-b196-4f84-b18b-3e410d27a3a0">No material which is subject to any terms of confidentiality or restriction of dissemination on the part of its contributor or the contributor’s organization can be accepted for such use.</p>
+<p id="_cece75bc-dfbf-4f21-b2fd-0d0c604660d4">Individuals participating in the activities of CalConnect are responsible for determining that material which they contribute is made available by their organizations in accordance with this provision.</p></clause>
+<clause id="_copyright_provisions" obligation="normative"><title>Copyright provisions</title><p id="_6cc2197c-ee6e-44c7-8e1b-9ec62a2385b2">If any part of a contribution is or may be subject to copyright, the contributor and his or her organization, and any other owners of any proprietary rights in the contribution, grant CalConnect a world-wide, non-exclusive, non-sub-licensable license (except for the submission and adoption by other standardization bodies), to use contents of submitted documents to CalConnect, for the development and publishing of the deliverables.</p>
+<p id="_a3109f29-8458-43cb-b638-c57347c1f468">This license includes the right to copy, publish and distribute the contribution in any way, and to prepare derivative works that are based on or incorporate all or part of the contribution, the license to such derivative works to be of the same scope as the license of the original contribution.</p>
+<note id="_2c7a8380-e4c4-4996-8c13-ae941ab0d01f">
+<p id="_95262a24-e0ca-49b0-8279-6b6d50fa72a6">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><localityStack><locality type="clause"><referenceFrom>10.3.1.1</referenceFrom></locality></localityStack></eref>.</p>
 </note></clause>
-<clause id="_admission_and_usage" obligation="normative"><title>Admission and usage</title><p id="_700f9183-3873-4081-bad5-1f9c7c69791d">CalConnect has no duty to admit, publish or otherwise use or disseminate any contribution.</p>
-<note id="_1a527eae-c9ce-4cdf-915e-e93ce4ae93c2">
-  <p id="_b96ceb69-c02e-46b8-8f5f-bb01f2a08d41">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><locality type="clause"><referenceFrom>10.3.1.2</referenceFrom></locality></eref>.</p>
+<clause id="_admission_and_usage" obligation="normative"><title>Admission and usage</title><p id="_17713198-35a8-4bb7-9391-ea12126f0a8a">CalConnect has no duty to admit, publish or otherwise use or disseminate any contribution.</p>
+<note id="_06dfffff-e1c8-4c9a-9c8a-03be0a305fc6">
+<p id="_eb13d08a-1b34-47bb-92b7-467b94a95325">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><localityStack><locality type="clause"><referenceFrom>10.3.1.2</referenceFrom></locality></localityStack></eref>.</p>
 </note></clause>
-<clause id="_reference" obligation="normative"><title>Reference</title><p id="_ad46cc4b-bd53-4729-8a65-57cd5b113d8f">The contributor grants permission to reference the names and
+<clause id="_reference" obligation="normative"><title>Reference</title><p id="_57e429cf-268f-46e1-abed-dbc410990120">The contributor grants permission to reference the names and
 addresses of contributors of a contribution and of the organizations he or she
 represents (if any).</p>
-<note id="_61245e9b-773c-42f2-99e8-8c8d3ba7ff91">
-  <p id="_171c4563-30e6-49f0-849e-8db9c1b21493">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><locality type="clause"><referenceFrom>10.3.1.3</referenceFrom></locality></eref>.</p>
+<note id="_234e167b-632d-4b50-8dfe-74a790f3280b">
+<p id="_2b5505d0-a8ff-4cac-8165-c02ef7b7af66">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><localityStack><locality type="clause"><referenceFrom>10.3.1.3</referenceFrom></locality></localityStack></eref>.</p>
 </note></clause>
-<clause id="_source_disclosure" obligation="normative"><title>Source disclosure</title><p id="_28a00d33-6c03-41af-81fa-0fd91dbd3b8a">A contribution must properly acknowledge all major contributors of that contribution.</p>
-<note id="_ae311a7b-4168-4f22-b1dd-fbca48a2a7e2">
-  <p id="_1859643f-4d63-4a7a-a948-5e5ea7464dc6">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><locality type="clause"><referenceFrom>10.3.1.4</referenceFrom></locality></eref>.</p>
+<clause id="_source_disclosure" obligation="normative"><title>Source disclosure</title><p id="_c49e3f16-449e-4b4b-963d-61cedd90fcd0">A contribution must properly acknowledge all major contributors of that contribution.</p>
+<note id="_18af410f-f25c-4cf4-acd1-be1a2aa50ac5">
+<p id="_579bf5f1-951f-44ea-8137-86c88385aa12">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><localityStack><locality type="clause"><referenceFrom>10.3.1.4</referenceFrom></locality></localityStack></eref>.</p>
 </note></clause>
-<clause id="_ipr_disclosure" obligation="normative"><title>IPR disclosure</title><p id="_4584905c-85e9-4b82-b684-7df858e7ec55">The contributor when submitting a contribution, represents
+<clause id="_ipr_disclosure" obligation="normative"><title>IPR disclosure</title><p id="_c7062ab8-f74b-447f-929d-85edc4dbfcc7">The contributor when submitting a contribution, represents
 that he or she has disclosed the existence of
 any proprietary or intellectual property rights in the
 contribution that are reasonably and personally known to the
 contributor.</p>
-<p id="_7e51ff84-b14d-4f11-b033-208efba2bbee">The contributor does not represent that he or she
+<p id="_5e2ddf69-cfe9-4744-bd1b-617d4406b22d">The contributor does not represent that he or she
 personally knows of all potentially pertinent proprietary and
 intellectual property rights owned or claimed by the organization
 he represents (if any) or third parties.</p>
-<p id="_a4015384-a023-45c6-9751-811c57576cff">For patents, please refer to the CalConnect Patent Policy at <eref type="inline" bibitemid="CCPAT" citeas="CC/DIR 10003"/>.</p>
-<note id="_89da0433-8930-47f1-a1c9-2b3331de6f7e">
-  <p id="_0d9c217e-ad3c-4125-b9a0-167737bb4149">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><locality type="clause"><referenceFrom>10.3.1.5</referenceFrom></locality></eref> and <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><locality type="clause"><referenceFrom>10.3.1.6</referenceFrom></locality></eref>.</p>
+<p id="_60b66627-ca85-4295-be1e-6a158c69e5d9">For patents, please refer to the CalConnect Patent Policy at <eref type="inline" bibitemid="CCPAT" citeas="CC/DIR 10003:2019"/>.</p>
+<note id="_ab581a1b-cd70-490e-8696-ebee17326751">
+<p id="_874d2620-ea8c-4a94-bd7f-77e7721bf446">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><localityStack><locality type="clause"><referenceFrom>10.3.1.5</referenceFrom></locality></localityStack></eref> and <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><localityStack><locality type="clause"><referenceFrom>10.3.1.6</referenceFrom></locality></localityStack></eref>.</p>
 </note></clause>
-<clause id="_warranty" obligation="normative"><title>Warranty</title><p id="_aef7f603-7268-40fd-ac02-7c1d0a046b7b">The contributor is deemed to agree to the terms and conditions
+<clause id="_warranty" obligation="normative"><title>Warranty</title><p id="_bbcae3aa-ae42-4f22-97b8-8c40af123cf1">The contributor is deemed to agree to the terms and conditions
 set in this document when submitting a contribution.</p>
-<p id="_55863d91-81d4-442d-87ab-a2c176513d76">The contributor represents that there are no limits to the
+<p id="_c7ddb43f-7967-4986-9188-1d62ef331e12">The contributor represents that there are no limits to the
 contributor’s ability to make the grants acknowledgments and
 agreements detailed in this document that are reasonably and personally known to the
 contributor.</p>
-<p id="_1c96af0f-18d2-4d95-830d-bbd02a3218c2">This agreement is made on his or her own behalf, on behalf of the organization (if any),
+<p id="_5562444f-58e9-444a-bdd2-44c85a3583e3">This agreement is made on his or her own behalf, on behalf of the organization (if any),
 or on behalf of the owners of any propriety rights in the
 contribution.</p>
-<p id="_7b7cf994-e289-4b5f-8680-b1fa8cc5f13d">Where a contribution identifies contributors in
+<p id="_5bac7317-9432-49b0-b8bc-0f88815282e0">Where a contribution identifies contributors in
 addition to the contributor(s) who provided it, the
 submitter(s) represent that each other named contributor was
 made aware of and agreed to accept the same terms and conditions on
 his own behalf, on behalf of any organization he may represent and
 any known owner of any proprietary rights in the contribution.</p>
-<p id="_c77d9007-65af-4b1e-b98e-98b381f86e3c">This warrant is perpetual and will not be revoked by CalConnect or its
+<p id="_369f278e-851e-42f8-abcf-77ca68629ad3">This warrant is perpetual and will not be revoked by CalConnect or its
 successors or assigns.</p>
-<note id="_3282e653-493d-4cce-8cd9-8310f509eebd">
-  <p id="_bef6112e-4f0b-4a04-a22f-476f7e88d35c">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><locality type="clause"><referenceFrom>10.3.1</referenceFrom></locality></eref>.</p>
+<note id="_9fb22a61-26c7-4e36-8ff2-5aca2d6814a2">
+<p id="_e57280d3-0b42-4440-ad52-68218be46e86">This is in alignment with <eref type="inline" bibitemid="IETFRFC2026" citeas="RFC 2026"><localityStack><locality type="clause"><referenceFrom>10.3.1</referenceFrom></locality></localityStack></eref>.</p>
 </note></clause></clause>
 <clause id="_trademarks" obligation="normative"><title>Trademarks</title><clause id="_general_2" obligation="normative">
-  <title>General</title>
-  <p id="_a8ae2252-fe2b-4f50-bc3c-1b3020568f4c">The requirements listed in this clause aligns with <eref type="inline" bibitemid="ITUMARKS" citeas="ITU-T Marks Guidelines 2.0"/>.</p>
+<title>General</title>
+<p id="_90c0ee6e-35c7-4f03-a33c-c75b2c246c83">The requirements listed in this clause aligns with <eref type="inline" bibitemid="ITUMARKS" citeas="ITU-T Marks Guidelines 2.0"/>.</p>
 </clause>
-<clause id="_impartiality_of_deliverables" obligation="normative"><title>Impartiality of deliverables</title><p id="_4a96d050-da09-4ca8-9b69-d02fb8cd28f3">Proper names, trademarks, service marks or certification marks of specific companies/organizations, products or services should not be included in the text of a CalConnect standardization deliverable if it appears that they might cause any endorsement effect on a reader of the deliverable.</p>
-<note id="_86453680-eff6-4b85-9aa0-936bf44000cb">
-  <p id="_a4cb4ce9-3961-4f81-a810-c1d92e4abef6">CalConnect standardization deliverables generally provide a description
+<clause id="_impartiality_of_deliverables" obligation="normative"><title>Impartiality of deliverables</title><p id="_6719d40a-8935-45b2-8e21-656b33f21b8b">Proper names, trademarks, service marks or certification marks of specific companies/organizations, products or services should not be included in the text of a CalConnect standardization deliverable if it appears that they might cause any endorsement effect on a reader of the deliverable.</p>
+<note id="_f27c7de4-4dab-4405-a2ee-ee6275914915">
+<p id="_de97ebf6-08ad-4e11-9865-406839f4050f">CalConnect standardization deliverables generally provide a description
 of features from which interoperable implementations can be developed.
 As such, the appearance of an endorsement of products, services and
 companies/organizations are not acceptable.</p>
 </note></clause>
-<clause id="_non_endorsement_usage" obligation="normative"><title>Non-endorsement usage</title><p id="_f3e1f5d1-3259-41fd-905f-6a7b27b1f66e">Trademarks, service marks or certification marks may be included in a CalConnect standardization deliverable in order to describe certain technologies or services pertaining to the relevant marks, given that the inclusion does not cause appearance of an endorsement.</p>
-<p id="_81319a88-37f5-466c-8dee-d32cd388cfb8">Here are some situations where this usage is acceptable.</p>
-<ol id="_54e8b365-2567-42d3-88ef-8cd6ee9d803d" type="arabic">
-  <li>
-    <p id="_6155bf21-5d86-4692-bcaa-3da198e374a4">The mark is used to refer to a particular facility that is widely recognized as a sole authorized source.<br/></p>
-    <example id="_31168d29-a7f5-4b53-ba43-5be773487f69">
-  <p id="_bdd21808-01b8-4644-a80d-f4d0e6373d15">A reference to a proprietary service with a trademark associated with a specific protocol identifier allocated by the ITU-T or IANA.</p>
+<clause id="_non_endorsement_usage" obligation="normative"><title>Non-endorsement usage</title><p id="_3bf6f6d9-1b87-419e-84a7-2c679327a28e">Trademarks, service marks or certification marks may be included in a CalConnect standardization deliverable in order to describe certain technologies or services pertaining to the relevant marks, given that the inclusion does not cause appearance of an endorsement.</p>
+<p id="_59bc0af6-c913-46b6-ba41-fab2a73455fa">Here are some situations where this usage is acceptable.</p>
+<ol id="_b9b36e33-3223-4cb3-bc95-3311936e24ff" type="arabic">
+<li>
+<p id="_be3d5a4a-8596-4564-a042-57c62f85dba1">The mark is used to refer to a particular facility that is widely recognized as a sole authorized source.<br/></p>
+<example id="_976fd76b-260b-4223-93ec-f152812a1815">
+<p id="_1d92ab5c-87cd-4acf-a4c9-7ec832bc6d3e">A reference to a proprietary service with a trademark associated with a specific protocol identifier allocated by the ITU-T or IANA.</p>
 </example>
-  </li>
-  <li>
-    <p id="_5c3a9145-34de-4c09-864c-129abdd68c4a">The mark is contained in the designation of a reference.<br/></p>
-    <example id="_e3485ef7-5243-43de-852c-6a2b4f157e65">
-  <p id="_8480cc9e-65ae-435e-9370-a3d228e621e6">Standards bodies often include their name as part of the identifier of their standards. A deliverable may reference “ISO/IEC xxxx”, “ITU-T xxxx”, where “ISO”, “IEC” and “ITU-T” are protected marks.</p>
+</li>
+<li>
+<p id="_3c549ff1-bc23-4964-9481-ddb03ac3b371">The mark is contained in the designation of a reference.<br/></p>
+<example id="_4c9ea8a0-b7ff-402e-bde1-357f1ea97b3d">
+<p id="_6237bf46-19b3-4e23-85f3-1c732c10f3d6">Standards bodies often include their name as part of the identifier of their standards. A deliverable may reference “ISO/IEC xxxx”, “ITU-T xxxx”, where “ISO”, “IEC” and “ITU-T” are protected marks.</p>
 </example>
-  </li>
-  <li>
-    <p id="_f2b82883-4e7a-4494-97c0-6a22eeb7205a">The mark is a well-known reference to a standardized industry approach.<br/></p>
-    <example id="_d754961a-530e-45da-815f-c7ba3891a944">
-  <p id="_7dc9edc3-1deb-4efe-bf28-fb4a3959acca">“WiFi”, “Bluetooth”, “GSM”.</p>
+</li>
+<li>
+<p id="_607285bb-a7bc-4376-a661-73421ca71300">The mark is a well-known reference to a standardized industry approach.<br/></p>
+<example id="_b2a09813-6cf1-4723-9475-dc2206e1c1b5">
+<p id="_0ab681cf-8938-4921-b499-da79905ea71b">“WiFi”, “Bluetooth”, “GSM”.</p>
 </example>
-  </li>
+</li>
 </ol></clause>
-<clause id="_proper_use_references" obligation="normative"><title>Proper use references</title><p id="_6029699a-2edf-49c1-a6ea-544e94432412">With justifiable reasons, it is permissible to make “proper use”
+<clause id="_proper_use_references" obligation="normative"><title>Proper use references</title><p id="_27a2b19b-c335-4304-aa96-aea513ac30f8">With justifiable reasons, it is permissible to make “proper use”
 references to marks owned by an external party in a
 CalConnect standardization deliverable, however the usage
 shall adhere to the following guidelines set below in order to
 avoid infringement of rights relating to such marks.</p>
-<p id="_3bec6c8d-98d6-4007-844d-a68052b190a7">A mark shall only be used as part of accurate, factual statements
+<p id="_7a9debd1-9ee5-422d-b5f8-e12e2ba60227">A mark shall only be used as part of accurate, factual statements
 as a means to identify (but not to endorse) a particular object (such as the designations of referenced standards in the text of a deliverable).</p>
-<p id="_70c05cd1-b849-4445-a681-2059b9a0c3eb">Marks should be used in accordance with the following guidelines:</p>
-<ol id="_a545c975-9ecc-464b-9ab3-3fe37ab8b0f0" type="arabic">
-  <li>
-    <p id="_269ae919-9525-4189-8c6e-c8970dc6084c">a mark should be used as a proper adjective followed by a generic name or noun;<br/></p>
-    <note id="_cb287f29-7e29-40cc-af8a-f227106eeea8">
-  <p id="_26f7eb91-1e75-4e33-aea5-7b2251bb8ec9">Marks are proper adjectives that indicate the source of goods, services or things, and not to be used as a verb or noun.</p>
+<p id="_e8fe8230-c2d1-48e7-9522-648143784f49">Marks should be used in accordance with the following guidelines:</p>
+<ol id="_784a0f6f-bd0f-4050-a663-38f06c31c94f" type="arabic">
+<li>
+<p id="_c2ccec7c-9596-42fa-b82a-2e467b29c139">a mark should be used as a proper adjective followed by a generic name or noun;<br/></p>
+<note id="_326877df-47af-44c5-9da6-95241faef184">
+<p id="_0b87980f-7974-4aa0-9a80-0da8389777c8">Marks are proper adjectives that indicate the source of goods, services or things, and not to be used as a verb or noun.</p>
 </note>
-  </li>
-  <li>
-    <p id="_2df01615-7461-4e02-93d9-741165b9c7f6">marks must not be combined in text;</p>
-  </li>
-  <li>
-    <p id="_def4c062-19fc-4fc1-824f-4f392540f368">marks must not be altered, shortened or abbreviated.</p>
-  </li>
+</li>
+<li>
+<p id="_c051dbbd-130a-4c75-986c-e0515e590b97">marks must not be combined in text;</p>
+</li>
+<li>
+<p id="_df523b18-a6e1-48be-a447-f7edb2f68044">marks must not be altered, shortened or abbreviated.</p>
+</li>
 </ol></clause></clause>
-</sections><bibliography><references id="_normative_references" obligation="informative">
-  <title>Normative References</title>
-  <bibitem id="CCSTD">
-  <formattedref format="application/x-isodoc+xml">
-    <em>CalConnect Directive 10001: Standardization and publication</em>
-  </formattedref>
-  <docidentifier>CC/DIR 10001</docidentifier>
-</bibitem>
-  <bibitem id="CCPAT">
-  <formattedref format="application/x-isodoc+xml">
-    <em>CalConnect Directive 10003: Patent policy</em>
-  </formattedref>
-  <docidentifier>CC/DIR 10003</docidentifier>
-</bibitem>
-</references><references id="_bibliography" obligation="informative"><title>Bibliography</title><bibitem id="CCDOC">
-  <formattedref format="application/x-isodoc+xml">
-    <em>CalConnect Directive 10002: Document requirements</em>
-  </formattedref>
-  <docidentifier>CC/DIR 10002</docidentifier>
-</bibitem>
-<bibitem id="IETFRFC2026">
-  <fetched>2019-06-06</fetched>
-  <title format="plain" language="en" script="Latn">The Internet Standards Process — Revision 3</title>
-  <uri type="src">https://www.rfc-editor.org/info/rfc2026</uri>
-  <docidentifier type="IETF">RFC 2026</docidentifier>
-  <docidentifier type="DOI">10.17487/RFC2026</docidentifier>
-  <date type="published">
-    <on>1996-10</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <completename language="en">S. Bradner</completename>
-      </name>
-      <affiliation>
-        <organization>
-          <name>IETF</name>
-          <abbreviation>IETF</abbreviation>
-        </organization>
-      </affiliation>
-    </person>
-  </contributor>
-  <language>en</language>
-  <script>Latn</script>
-  <series type="main">
-    <title format="plain" language="en" script="Latn">BCP</title>
-    <number>9</number>
-  </series>
-  <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
-    <number>2026</number>
-  </series>
-</bibitem>
-<bibitem id="ITUMARKS">
+</sections><bibliography><references id="_normative_references" normative="true" obligation="informative"><title>Normative References</title><p id="_a8238d55-fe88-457b-a25f-c00e1ec38872">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p> <bibitem id="CCSTD" type="standard">  <title format="text/plain" language="en">CalConnect Directive: Standardization and publication</title>  <uri type="xml">csd/cc-10001.xml</uri>  <uri type="pdf">csd/cc-10001.pdf</uri>  <uri type="doc">csd/cc-10001.doc</uri>  <uri type="html">csd/cc-10001.html</uri>  <uri type="rxl">csd/cc-10001.rxl</uri>  <docidentifier type="CC">CC/DIR 10001:2019</docidentifier>  <docnumber>10001</docnumber>  <date type="published">    <on>2019</on>  </date>  <contributor>    <role type="author"/>    <organization>      <name>CalConnect</name>    </organization>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>CalConnect</name>    </organization>  </contributor>  <edition>1</edition>  <version>    <revision-date>2019-01-18</revision-date>  </version>  <language>en</language>  <script>Latn</script>  <status>    <stage>published</stage>  </status>  <copyright>    <from>2019</from>    <owner>      <organization>        <name>CalConnect</name>      </organization>    </owner>  </copyright></bibitem> <bibitem id="CCPAT" type="standard">  <title format="text/plain" language="en">CalConnect Directive: Patent policy</title>  <uri type="xml">csd/cc-10003.xml</uri>  <uri type="pdf">csd/cc-10003.pdf</uri>  <uri type="doc">csd/cc-10003.doc</uri>  <uri type="html">csd/cc-10003.html</uri>  <uri type="rxl">csd/cc-10003.rxl</uri>  <docidentifier type="CC">CC/DIR 10003:2019</docidentifier>  <docnumber>10003</docnumber>  <date type="published">    <on>2019</on>  </date>  <contributor>    <role type="author"/>    <organization>      <name>CalConnect</name>    </organization>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>CalConnect</name>    </organization>  </contributor>  <edition>1</edition>  <version>    <revision-date>2019-01-18</revision-date>  </version>  <language>en</language>  <script>Latn</script>  <status>    <stage>published</stage>  </status>  <copyright>    <from>2019</from>    <owner>      <organization>        <name>CalConnect</name>      </organization>    </owner>  </copyright></bibitem></references><references id="_bibliography" normative="false" obligation="informative"><title>Bibliography</title><bibitem id="CCDOC" type="standard">  <title format="text/plain" language="en">CalConnect Directive: Standard document requirements</title>  <uri type="xml">csd/cc-10002.xml</uri>  <uri type="pdf">csd/cc-10002.pdf</uri>  <uri type="doc">csd/cc-10002.doc</uri>  <uri type="html">csd/cc-10002.html</uri>  <uri type="rxl">csd/cc-10002.rxl</uri>  <docidentifier type="CC">CC/DIR 10002:2019</docidentifier>  <docnumber>10002</docnumber>  <date type="published">    <on>2019</on>  </date>  <contributor>    <role type="author"/>    <organization>      <name>CalConnect</name>    </organization>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>CalConnect</name>    </organization>  </contributor>  <edition>1</edition>  <version>    <revision-date>2019-01-18</revision-date>  </version>  <language>en</language>  <script>Latn</script>  <status>    <stage>published</stage>  </status>  <copyright>    <from>2019</from>    <owner>      <organization>        <name>CalConnect</name>      </organization>    </owner>  </copyright></bibitem><bibitem id="IETFRFC2026" type="standard">  <fetched>2020-06-16</fetched>  <title format="text/plain" language="en" script="Latn">The Internet Standards Process — Revision 3</title>  <uri type="xml">https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2026.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc2026</uri>  <docidentifier type="IETF">RFC 2026</docidentifier>  <docidentifier type="rfc-anchor">RFC2026</docidentifier>  <docidentifier type="DOI">10.17487/RFC2026</docidentifier>  <date type="published">    <on>1996-10</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename language="en">S. Bradner</completename>      </name>      <affiliation>        <organization>          <name>Internet Engineering Task Force</name>          <abbreviation>IETF</abbreviation>        </organization>      </affiliation>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Internet Engineering Task Force</name>      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This memo documents the process used by the Internet community for the standardization of protocols and procedures.  It defines the stages in the standardization process, the requirements for moving a document between stages and the types of documents used during this process. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</abstract>  <series type="main">    <title format="text/plain" language="en" script="Latn">BCP</title>    <number>9</number>  </series>  <series type="main">    <title format="text/plain" language="en" script="Latn">RFC</title>    <number>2026</number>  </series>  <place>Fremont, CA</place></bibitem><bibitem id="ITUMARKS">
   <formattedref format="application/x-isodoc+xml"><em>ITU-T GUIDELINES RELATED TO THE INCLUSION OF MARKS IN ITU-T RECOMMENDATIONS, Issue 2.0</em>, November 2005.</formattedref>
-  <docidentifier>ITU-T Marks Guidelines 2.0</docidentifier>
+  <docidentifier type="ITU">ITU-T Marks Guidelines 2.0</docidentifier>
+  <docnumber>2.0</docnumber>
 </bibitem><bibitem id="ITUSoftware">
   <formattedref format="application/x-isodoc+xml"><em>ITU Software Copyright Guidelines</em>, 7/12/2011</formattedref>
-  <docidentifier>ITU Software Copyright Guidelines</docidentifier>
-</bibitem></references></bibliography>
+  <docidentifier type="ITU">ITU Software Copyright Guidelines</docidentifier>
+  
+</bibitem>  </references></bibliography>
 </csd-standard>

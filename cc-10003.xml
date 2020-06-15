@@ -1,199 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<csd-standard xmlns="https://www.calconnect.org/standards/csd">
+<csd-standard xmlns="https://www.metanorma.org/ns/csd">
 <bibdata type="standard">
-  <title format="text/plain" language="en">CalConnect Directive: Patent policy</title>
-  <docidentifier type="CC">CC/DIR 10003:2019</docidentifier>
-  <docnumber>10003</docnumber>
-  <date type="published">
-    <on>2019</on>
-  </date>
-  <contributor>
-    <role type="author"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>CalConnect</name>
-    </organization>
-  </contributor>
-  <edition>1</edition>
-  <version>
-    <revision-date>2019-01-18</revision-date>
-  </version>
-  <language>en</language>
-  <script>Latn</script>
-  <status>
-    <stage>published</stage>
-  </status>
-  <copyright>
-    <from>2019</from>
-    <owner>
-      <organization>
-        <name>CalConnect</name>
-      </organization>
-    </owner>
-  </copyright>
-  <ext>
-    <doctype>directive</doctype>
-    <editorialgroup>
-      <technical-committee>PUBLISH</technical-committee>
-    </editorialgroup>
-  </ext>
+<title language="en" format="text/plain">CalConnect Directive: Patent policy</title>
+<docidentifier type="csd">CC/DIR 10003:2019</docidentifier>
+<docnumber>10003</docnumber>
+<date type="published">
+<on>2019-01-18</on>
+</date>
+<contributor>
+<role type="author"/>
+<organization>
+<name>CalConnect</name>
+</organization>
+</contributor>
+<contributor>
+<role type="publisher"/>
+<organization>
+<name>CalConnect</name>
+</organization>
+</contributor>
+<edition>1</edition>
+<version>
+<revision-date>2019-01-18</revision-date>
+</version>
+<language>en</language>
+<script>Latn</script>
+<status>
+<stage>published</stage>
+</status>
+<copyright>
+<from>2019</from>
+<owner>
+<organization>
+<name>CalConnect</name>
+</organization>
+</owner>
+</copyright>
+<ext>
+<doctype>directive</doctype>
+<editorialgroup>
+<technical-committee>PUBLISH</technical-committee>
+</editorialgroup>
+</ext>
 </bibdata>
-<termdocsource bibitemid="CCSTD"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_d67b93ac-3e1d-4b05-ac93-8832c01f5b5d">The Calendaring and Scheduling Consortium (“CalConnect”) is a global   
-non-profit organization with the aim to facilitate interoperability of   
-collaborative technologies and tools through open standards.</p>  
-<p id="_6b05c4fb-0d34-49a7-8796-454e09a3dc5b">CalConnect works closely with international and regional partners,   
-of which the full list is available on our website   
-(<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>  
-<p id="_796f0a1c-db9e-4df4-a50e-0d34fb936107">The procedures used to develop this document and those intended for its   
-further maintenance are described in the CalConnect Directives.</p>  
-<p id="_30acef14-5b3b-42f3-ac31-066d16f3b957">In particular the different approval criteria needed for the different   
-types of CalConnect documents should be noted. This document was drafted in   
-accordance with the editorial rules of the CalConnect Directives.</p>  
-<p id="_11dc5f82-1464-4af3-9d42-7e1d58f7e087">Attention is drawn to the possibility that some of the elements of this   
-document may be the subject of patent rights. CalConnect shall not be   
-held responsible for identifying any or all such patent rights. Details   
-of any patent rights identified during the development of the document   
-will be provided in the Introduction.</p>  
-<p id="_143f81da-3169-4ed4-be6b-ac4288abe0df">Any trade name used in this document is information given for the   
-convenience of users and does not constitute an endorsement.</p>  
-<p id="_cad5cf97-9384-427a-8586-370fe18cd112">This document was prepared by Technical Committee   
-<em>PUBLISH</em>.</p></foreword><introduction id="_introduction" obligation="informative"><title>Introduction</title><clause id="_general" obligation="informative"><title>General</title><p id="_2be5e936-8b90-4920-ae65-31fac91d00c1">CalConnect is committed in expanding the realm of standards    
-in collaborative technologies with a focus on interoperability    
-across the globe and communities of practice.</p>   
-<p id="_1085436a-40cb-43f2-aad0-15226325d6ab">As a proponent of open standards, CalConnect does not endorse    
-mandatory usage of patents within CalConnect Standards.    
-The CalConnect Board of Directors has decided to align    
-IPR practice with major international standardization bodies    
-including ISO, IEC and ITU.</p></clause>  
-<clause id="_purpose" obligation="informative"><title>Purpose</title><p id="_b4c541f9-51f5-4045-941c-57b756e5c9fc">This document describes the policy of CalConnect with regards to patent    
-usage within CalConnect deliverables and provides a    
-“code of practice” that is simple and straightforward.</p>   
-<p id="_be60606c-7ac6-4951-9b93-5a3f0b47832c">CalConnect deliverables are drawn up by technical, not patent, experts,    
-who may not be fully aware of all nuisances in the complex    
-international legal situation of intellectual property rights.</p>   
-<p id="_d5ebb625-f56a-4492-8d27-cc50a7db1ccd">CalConnect deliverables are non-binding — their objective is to ensure    
-compatibility of technologies and systems on a worldwide basis.</p>   
-<p id="_54c0ac7b-394c-44a9-b185-6367c6308dff">To ensure the applicability and accessibility of CalConnect    
-deliverables, the implementation and continued usage of content within    
-the deliverables must be possible to the worldwide audience without    
-discrimination, including any patent embodiment in such deliverables.</p></clause></introduction></preface><sections> 
- 
-<clause id="_scope" obligation="normative"><title>Scope</title><p id="_4e76dd05-3961-4035-a1df-2ac64c2f0b7b">This document provides the CalConnect patent policy, which governs all   
-standardization deliverables developed through the CalConnect   
-standardization process.</p>  
-<p id="_112e6f04-a39c-4185-ad29-789f0b02dad2">The CalConnect patent policy is identical to the <eref type="inline" bibitemid="ISOPP" citeas="ISO/IEC/ITU common patent policy"/> in content,   
-except where:</p>  
-<ul id="_f3871ef6-00b5-481a-8172-384dd2f5bb31">   
-  <li>   
-    <p id="_eebed1e1-e3d7-4e7f-a6a7-9dfebd12808d">entity names such as “ISO”, “IEC”, “ITU-T” and “ITU-R” were   
-changed to “CalConnect”;</p>   
-  </li>   
-  <li>   
-    <p id="_4ac85206-4cba-4f5f-90e3-46d44ea4e5f8">deliverables and processes pertaining to those entities have been   
-changed to their counterparts within CalConnect.</p>   
-  </li>   
-</ul>  
-<p id="_d0279b6e-f1d9-4d55-ae23-3fde5482174f">Detailed arrangements arising from patents (licensing, royalties, etc.)   
-are left to the parties concerned, as these arrangements might differ   
-from case to case.</p></clause> 
- 
-<terms id="terms" obligation="normative">  
-  <title>Terms and definitions</title>  
-    
-</terms> 
-<clause id="information-transparency" obligation="normative"><title>Patent information transparency policy</title><p id="_5ce6256e-8091-4052-ba12-b9e00d3cb485">CalConnect does not provide authoritative or comprehensive information   
-about evidence, validity or scope of patents or similar rights.</p>  
-<p id="_3fc536a8-1a30-40cf-be78-a802adecc5a7">However, the fullest available information shall be disclosed in any CalConnect-published standard.</p>  
-<p id="_ade50152-9fd8-4666-ae08-8b28247989ba">Therefore, any party participating in the work of CalConnect shall,   
-from the outset, draw the attention of the Executive Director and TCC   
-of CalConnect, to any known patent or to any known pending patent   
-application, either their own or of other organizations, although   
-CalConnect is unable to verify the validity of any such information.</p>  
-<p id="_e5a3c673-7776-492e-a89b-a16838707952">In a joint deliverable developed with other standardization bodies,   
-IPR requirements of all such standardization bodies who will be   
-publishing the deliverable shall be satisfied.</p></clause> 
-<clause id="licensing-requirements" obligation="normative"><title>Licensing requirements on patent holders</title><clause id="_general_2" obligation="normative">   
-  <title>General</title>   
-  <p id="_8c3bc40e-67fa-473a-a57e-ead51dfdced3">If a CalConnect deliverable is developed and such information as    
-referred to in <xref target="information-transparency"/> has been disclosed,    
-one of the following three situations may arise.</p>   
-</clause>  
-<clause id="license-free" obligation="normative"><title>Situation 1: Licensing free-of-charge</title><p id="_1b48eefa-9ee0-47ae-8bcd-398921e9337a">The patent holder is willing to negotiate licences free of charge with    
-other parties on a nondiscriminatory basis on reasonable terms and    
-conditions.</p>   
-<p id="_f053b2d9-c410-4efe-b545-656b9e4ad493">Such negotiations are left to the parties concerned and are performed    
-outside CalConnect.</p></clause>  
-<clause id="license-nd" obligation="normative"><title>Situation 2: Licensing in a non-discriminatory manner</title><p id="_9e1f72a3-d4c7-443f-a0cd-406adc4cff03">The patent holder is willing to negotiate licences with other parties    
-on a non-discriminatory basis on reasonable terms and conditions.</p>   
-<p id="_f1e2cebe-0241-429c-94e8-eb1f020bf6c1">Such negotiations are left to the parties concerned and are performed    
-outside CalConnect.</p></clause>  
-<clause id="license-other" obligation="normative"><title>Situation 3: Licensing in other manners</title><p id="_04876e9a-368e-4c1c-a5cb-0c08fc51e0a1">The patent holder is not willing to comply with the provisions of    
-either <xref target="license-free"/> or <xref target="license-nd"/>.</p>   
-<p id="_464d4d81-9d75-4ca5-ae30-14da07a72dfb">In such case, the deliverable shall not include provisions that depends    
-on the patent.</p></clause></clause> 
-<clause id="declaration" obligation="normative"><title>Patent declaration requirements</title><p id="_d7604652-e36b-4507-8b48-f5ca405f2f3e">Whatever the licensing requirements (<xref target="licensing-requirements"/>)   
-are, the patent holder must provide a written statement to be   
-filed at CalConnect, using the appropriate   
-“Patent Statement and Licensing Declaration” Form.</p>  
-<p id="_b5fcf329-73ef-457b-915c-09ca87172cea">This statement must not include additional provisions, conditions, or   
-any other exclusion clauses in excess of what is provided for each case   
-in the corresponding boxes of the form.</p></clause> 
-</sections><bibliography><references id="_normative_references" obligation="informative">  
-  <title>Normative References</title>  
-  <bibitem id="ISOPP">   
-  <formattedref format="application/x-isodoc+xml"><em>ISO/IEC/ITU common patent policy</em>, <link target="https://isotc.iso.org/livelink/livelink/fetch/2000/2122/3770791/Common_Policy.htm"/></formattedref>   
-  <docidentifier type="ISO">ISO/IEC/ITU common patent policy</docidentifier>   
-</bibitem>  
-</references><references id="_bibliography" obligation="informative">  
-  <title>Bibliography</title>  
-  <bibitem id="CCSTD">   
-  <formattedref format="application/x-isodoc+xml">   
-    <em>CalConnect Directive: Standardization and publication</em>   
-  </formattedref>   
-  <docidentifier>CC/DIR 10001</docidentifier>   
-</bibitem>  
-  <bibitem id="ISODIR1" type="standard">   
-  <title format="text/plain">ISO/IEC Directives, Part 1, Procedures for the technical work</title>   
-  <docidentifier type="ISO">ISO/IEC Directives, Part 1</docidentifier>   
-  <contributor>   
-    <role type="publisher"/>   
-    <organization>   
-      <name>ISO</name>   
-    </organization>   
-  </contributor>   
-  <contributor>   
-    <role type="publisher"/>   
-    <organization>   
-      <name>IEC</name>   
-    </organization>   
-  </contributor>   
-</bibitem>  
-  <bibitem id="ISODIR2" type="standard">   
-  <title format="text/plain">ISO/IEC Directives, Part 2, Principles and rules for the structure and drafting of ISO and IEC documents</title>   
-  <docidentifier type="ISO">ISO/IEC Directives, Part 2</docidentifier>   
-  <contributor>   
-    <role type="publisher"/>   
-    <organization>   
-      <name>ISO</name>   
-    </organization>   
-  </contributor>   
-  <contributor>   
-    <role type="publisher"/>   
-    <organization>   
-      <name>IEC</name>   
-    </organization>   
-  </contributor>   
-</bibitem>  
-  <bibitem id="ISODIR1C">   
-  <formattedref format="application/x-isodoc+xml">   
-    <em>ISO/IEC Directives, Part 1, Consolidated ISO Supplement, Procedures specific to ISO</em>   
-  </formattedref>   
-  <docidentifier type="ISO">ISO/IEC Directives, Part 1, Consolidated ISO Supplement</docidentifier>   
-</bibitem>  
-</references></bibliography>
+<termdocsource bibitemid="CCSTD"/><boilerplate>
+  <copyright-statement>
+    <clause>
+      <p id="_68f36c81-c39a-4de0-bc96-27be769d54b3">© 2019 The Calendaring and Scheduling Consortium, Inc. </p>
+    </clause>
+  </copyright-statement>
+
+  
+
+  <legal-statement>
+    <clause>
+      <p id="_f030dea9-8a54-4072-8382-725b78c3b52e">All rights reserved. Unless otherwise specified, no part of this
+        publication may be reproduced or utilized otherwise in any form or by any
+        means, electronic or mechanical, including photocopying, or posting on the
+        internet or an intranet, without prior written permission. Permission can
+        be requested from the address below.  </p>
+    </clause>
+  </legal-statement>
+
+  <feedback-statement>
+    <clause>
+      <p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+      <p id="boilerplate-address">4390 Chaffin Lane<br/>
+        McKinleyville<br/>
+        California 95519<br/>
+        United States of America<br/>
+        <br/>
+        <link target="mailto:copyright@calconnect.org">copyright@calconnect.org</link><br/>
+        <link target="www.calconnect.org">www.calconnect.org</link>
+      </p>
+    </clause>
+  </feedback-statement>
+</boilerplate>
+
+<preface><foreword id="_3d20f063-7f6e-4237-8cbd-b276e348532e" obligation="informative"><title>Foreword</title><p id="_3a5056dd-b232-4b9e-9409-4cae80d92555">The Calendaring and Scheduling Consortium (“CalConnect”) is a global
+non-profit organization with the aim to facilitate interoperability of
+collaborative technologies and tools through open standards.</p>
+<p id="_f9b62345-433a-451f-80f0-9f7d5bb07b8e">CalConnect works closely with international and regional partners,
+of which the full list is available on our website
+(<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>
+<p id="_aa21e7fe-b664-4c58-9876-2b4ede059e97">The procedures used to develop this document and those intended for its
+further maintenance are described in the CalConnect Directives.</p>
+<p id="_193d7f0b-2a03-4f66-a4e3-9aaf8f162fcc">In particular the different approval criteria needed for the different
+types of CalConnect documents should be noted. This document was drafted in
+accordance with the editorial rules of the CalConnect Directives.</p>
+<p id="_f9b8142b-8413-4060-88dd-194adda667d6">Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be
+held responsible for identifying any or all such patent rights. Details
+of any patent rights identified during the development of the document
+will be provided in the Introduction.</p>
+<p id="_26226283-0cf4-4bee-ba69-33f47b658c42">Any trade name used in this document is information given for the
+convenience of users and does not constitute an endorsement.</p>
+<p id="_70297364-c7aa-4f7c-ade0-00449a96f000">This document was prepared by Technical Committee
+<em>PUBLISH</em>.</p></foreword><introduction id="_introduction" obligation="informative"><title>Introduction</title><clause id="_general" obligation="informative"><title>General</title><p id="_18e39f40-6aff-4ffd-82ad-82019d92c737">CalConnect is committed in expanding the realm of standards
+in collaborative technologies with a focus on interoperability
+across the globe and communities of practice.</p>
+<p id="_db579b1c-27b6-408a-934c-cf0500562a12">As a proponent of open standards, CalConnect does not endorse
+mandatory usage of patents within CalConnect Standards.
+The CalConnect Board of Directors has decided to align
+IPR practice with major international standardization bodies
+including ISO, IEC and ITU.</p></clause>
+<clause id="_purpose" obligation="informative"><title>Purpose</title><p id="_50938b82-9fe3-4dcb-86cf-61d850383dee">This document describes the policy of CalConnect with regards to patent
+usage within CalConnect deliverables and provides a
+“code of practice” that is simple and straightforward.</p>
+<p id="_85e92038-01d5-48f9-8504-baefe643dea5">CalConnect deliverables are drawn up by technical, not patent, experts,
+who may not be fully aware of all nuisances in the complex
+international legal situation of intellectual property rights.</p>
+<p id="_f9e1a0ce-090a-4c3e-903f-e4805dec480f">CalConnect deliverables are non-binding — their objective is to ensure
+compatibility of technologies and systems on a worldwide basis.</p>
+<p id="_0bcd571a-dbf7-43ca-b399-32093b7fb759">To ensure the applicability and accessibility of CalConnect
+deliverables, the implementation and continued usage of content within
+the deliverables must be possible to the worldwide audience without
+discrimination, including any patent embodiment in such deliverables.</p></clause></introduction></preface><sections>
+
+<clause id="_scope" obligation="normative"><title>Scope</title><p id="_04e46257-d37b-4efc-81a3-5e6b420e066b">This document provides the CalConnect patent policy, which governs all
+standardization deliverables developed through the CalConnect
+standardization process.</p>
+<p id="_51b71309-dfb6-4009-b055-ad8d8b67aa43">The CalConnect patent policy is identical to the <eref type="inline" bibitemid="ISOPP" citeas="ISO/IEC/ITU common patent policy"/> in content,
+except where:</p>
+<ul id="_0b36abc6-595f-446a-8808-9f6e099809f9">
+<li>
+<p id="_37652817-13de-4ba7-a37c-264cf7a3bba5">entity names such as “ISO”, “IEC”, “ITU-T” and “ITU-R” were
+changed to “CalConnect”;</p>
+</li>
+<li>
+<p id="_6241b037-a6c3-4d88-b4ff-428feb823c46">deliverables and processes pertaining to those entities have been
+changed to their counterparts within CalConnect.</p>
+</li>
+</ul>
+<p id="_947186e7-e7b5-4d65-95c9-c55d41aab9c8">Detailed arrangements arising from patents (licensing, royalties, etc.)
+are left to the parties concerned, as these arrangements might differ
+from case to case.</p></clause>
+
+<terms id="terms" obligation="normative">
+<title>Terms and definitions</title><p id="_439a6080-a889-49ef-8492-614471a2e722">For the purposes of this document, 
+  the terms and definitions given in <eref bibitemid="CCSTD"/> apply.</p>
+
+
+</terms>
+<clause id="information-transparency" obligation="normative"><title>Patent information transparency policy</title><p id="_077e1ead-6bc3-4cb9-ad6a-d56efaf596cb">CalConnect does not provide authoritative or comprehensive information
+about evidence, validity or scope of patents or similar rights.</p>
+<p id="_8aef7530-a8b5-4735-863a-961ddd2e98b0">However, the fullest available information shall be disclosed in any CalConnect-published standard.</p>
+<p id="_28566c06-1865-42ad-8ef1-34fe7871be70">Therefore, any party participating in the work of CalConnect shall,
+from the outset, draw the attention of the Executive Director and TCC
+of CalConnect, to any known patent or to any known pending patent
+application, either their own or of other organizations, although
+CalConnect is unable to verify the validity of any such information.</p>
+<p id="_d4cf7c90-ae0e-44f3-a443-cf1847de1f16">In a joint deliverable developed with other standardization bodies,
+IPR requirements of all such standardization bodies who will be
+publishing the deliverable shall be satisfied.</p></clause>
+<clause id="licensing-requirements" obligation="normative"><title>Licensing requirements on patent holders</title><clause id="_general_2" obligation="normative">
+<title>General</title>
+<p id="_169f35b9-a6ab-4fef-b8df-f81647247c66">If a CalConnect deliverable is developed and such information as
+referred to in <xref target="information-transparency"/> has been disclosed,
+one of the following three situations may arise.</p>
+</clause>
+<clause id="license-free" obligation="normative"><title>Situation 1: Licensing free-of-charge</title><p id="_b2df8aa0-b4cb-4083-917c-619f870e750d">The patent holder is willing to negotiate licences free of charge with
+other parties on a nondiscriminatory basis on reasonable terms and
+conditions.</p>
+<p id="_5061f179-373e-4c58-b45b-cafb2cbd45f3">Such negotiations are left to the parties concerned and are performed
+outside CalConnect.</p></clause>
+<clause id="license-nd" obligation="normative"><title>Situation 2: Licensing in a non-discriminatory manner</title><p id="_0376ba9a-b5e7-461b-acf9-a19207132a39">The patent holder is willing to negotiate licences with other parties
+on a non-discriminatory basis on reasonable terms and conditions.</p>
+<p id="_e9b5fda4-5395-4893-a375-ae408693c066">Such negotiations are left to the parties concerned and are performed
+outside CalConnect.</p></clause>
+<clause id="license-other" obligation="normative"><title>Situation 3: Licensing in other manners</title><p id="_3bd4c4db-bf1b-4fd1-b457-c2b1bdea230d">The patent holder is not willing to comply with the provisions of
+either <xref target="license-free"/> or <xref target="license-nd"/>.</p>
+<p id="_a96f6c00-2d34-4e32-9475-35214f229fd9">In such case, the deliverable shall not include provisions that depends
+on the patent.</p></clause></clause>
+<clause id="declaration" obligation="normative"><title>Patent declaration requirements</title><p id="_e8d64696-afdf-417f-8994-5d820a9f79e1">Whatever the licensing requirements (<xref target="licensing-requirements"/>)
+are, the patent holder must provide a written statement to be
+filed at CalConnect, using the appropriate
+“Patent Statement and Licensing Declaration” Form.</p>
+<p id="_dd0b1ccb-4185-4989-a334-0bf1bc957015">This statement must not include additional provisions, conditions, or
+any other exclusion clauses in excess of what is provided for each case
+in the corresponding boxes of the form.</p></clause>
+</sections><bibliography><references id="_normative_references" normative="true" obligation="informative">
+<title>Normative References</title><p id="_410f4e4e-7cf7-422a-9316-16b773ecfaff">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+<bibitem id="ISOPP">
+<formattedref format="application/x-isodoc+xml"><em>ISO/IEC/ITU common patent policy</em>, <link target="https://isotc.iso.org/livelink/livelink/fetch/2000/2122/3770791/Common_Policy.htm"/></formattedref>
+<docidentifier type="ISO">ISO/IEC/ITU common patent policy</docidentifier>
+
+</bibitem>
+</references><references id="_bibliography" normative="false" obligation="informative"><title>Bibliography</title><bibitem id="CCSTD" type="standard">  <title format="text/plain" language="en">CalConnect Directive: Standardization and publication</title>  <uri type="xml">csd/cc-10001.xml</uri>  <uri type="pdf">csd/cc-10001.pdf</uri>  <uri type="doc">csd/cc-10001.doc</uri>  <uri type="html">csd/cc-10001.html</uri>  <uri type="rxl">csd/cc-10001.rxl</uri>  <docidentifier type="CC">CC/DIR 10001:2019</docidentifier>  <docnumber>10001</docnumber>  <date type="published">    <on>2019</on>  </date>  <contributor>    <role type="author"/>    <organization>      <name>CalConnect</name>    </organization>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>CalConnect</name>    </organization>  </contributor>  <edition>1</edition>  <version>    <revision-date>2019-01-18</revision-date>  </version>  <language>en</language>  <script>Latn</script>  <status>    <stage>published</stage>  </status>  <copyright>    <from>2019</from>    <owner>      <organization>        <name>CalConnect</name>      </organization>    </owner>  </copyright></bibitem><bibitem id="ISODIR1" type="standard">  <fetched>2020-06-16</fetched>  <title type="title-intro" format="text/plain" language="en" script="Latn">Geometrical product specifications (GPS)</title>  <title type="title-main" format="text/plain" language="en" script="Latn">Standard reference temperature for the specification of geometrical and dimensional properties</title>  <title type="main" format="text/plain" language="en" script="Latn">Geometrical product specifications (GPS) – Standard reference temperature for the specification of geometrical and dimensional properties</title>  <title type="title-intro" format="text/plain" language="fr" script="Latn">Spécification géométrique des produits (GPS)</title>  <title type="title-main" format="text/plain" language="fr" script="Latn">Température normale de référence pour la spécification des propriétés géométriques et dimensionnelles</title>  <title type="main" format="text/plain" language="fr" script="Latn">Spécification géométrique des produits (GPS) – Température normale de référence pour la spécification des propriétés géométriques et dimensionnelles</title>  <uri type="src">https://www.iso.org/standard/67630.html</uri>  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:67630:en</uri>  <uri type="rss">https://www.iso.org/contents/data/standard/06/76/67630.detail.rss</uri>  <docidentifier type="ISO">ISO 1 (all parts)</docidentifier>  <docnumber>1</docnumber>  <date type="published">    <on>2016</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      <name>International Organization for Standardization</name>      <abbreviation>ISO</abbreviation>      <uri>www.iso.org</uri>    </organization>  </contributor>  <edition>3</edition>  <language>en</language>  <language>fr</language>  <script>Latn</script>  <status>    <stage>60</stage>    <substage>60</substage>  </status>  <copyright>    <from>2016</from>    <owner>      <organization>        <name>ISO</name>      </organization>    </owner>  </copyright>  <relation type="obsoletes">    <bibitem type="standard">      <formattedref format="text/plain">ISO 1:2002</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <fetched>2020-06-16</fetched>      <title type="title-intro" format="text/plain" language="en" script="Latn">Geometrical product specifications (GPS)</title>      <title type="title-main" format="text/plain" language="en" script="Latn">Standard reference temperature for the specification of geometrical and dimensional properties</title>      <title type="main" format="text/plain" language="en" script="Latn">Geometrical product specifications (GPS) – Standard reference temperature for the specification of geometrical and dimensional properties</title>      <title type="title-intro" format="text/plain" language="fr" script="Latn">Spécification géométrique des produits (GPS)</title>      <title type="title-main" format="text/plain" language="fr" script="Latn">Température normale de référence pour la spécification des propriétés géométriques et dimensionnelles</title>      <title type="main" format="text/plain" language="fr" script="Latn">Spécification géométrique des produits (GPS) – Température normale de référence pour la spécification des propriétés géométriques et dimensionnelles</title>      <uri type="src">https://www.iso.org/standard/67630.html</uri>      <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:67630:en</uri>      <uri type="rss">https://www.iso.org/contents/data/standard/06/76/67630.detail.rss</uri>      <docidentifier type="ISO">ISO 1:2016</docidentifier>      <docnumber>1</docnumber>      <date type="published">        <on>2016</on>      </date>      <contributor>        <role type="publisher"/>        <organization>          <name>International Organization for Standardization</name>          <abbreviation>ISO</abbreviation>          <uri>www.iso.org</uri>        </organization>      </contributor>      <edition>3</edition>      <language>en</language>      <language>fr</language>      <script>Latn</script>      <abstract format="text/plain" language="en" script="Latn">ISO 1:2016 defines the concepts of a reference temperature and of the standard reference temperature, and specifies the standard reference temperature value for the specification of geometrical and dimensional properties of an object. Some examples of geometrical and dimensional properties include size, location, orientation (including angle), form and surface texture of a workpiece.ISO 1:2016 Standard is also applicable to the definition of the measurand used in verification or calibration.</abstract>      <abstract format="text/plain" language="fr" script="Latn">ISO 1:2016 définit les concepts de température de référence et de température normale de référence, et spécifie la valeur de la température normale de référence pour la spécification des propriétés géométriques et dimensionnelles d’un objet. Certains exemples de propriétés géométriques et dimensionnelles incluent la taille, la position, l’orientation (y compris l’angle), la forme et l’état de surface d’une pièce.ISO 1:2016 s’applique aussi à la définition du mesurande utilisé en vérification ou en étalonnage.</abstract>      <status>        <stage>60</stage>        <substage>60</substage>      </status>      <copyright>        <from>2016</from>        <owner>          <organization>            <name>ISO</name>          </organization>        </owner>      </copyright>      <relation type="obsoletes">        <bibitem type="standard">          <formattedref format="text/plain">ISO 1:2002</formattedref>        </bibitem>      </relation>      <place>Geneva</place>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">IWA 1:2005</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO 1:2002</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">IWA 1:2001</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO/TTA 1:1994</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO/DATA 1:1978</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO 1:1975</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO Guide 1:1972</formattedref>    </bibitem>  </relation>  <place>Geneva</place></bibitem><bibitem id="ISODIR2" type="standard">  <fetched>2020-06-16</fetched>  <title type="title-intro" format="text/plain" language="en" script="Latn">Standardization and related activities</title>  <title type="title-main" format="text/plain" language="en" script="Latn">General vocabulary</title>  <title type="main" format="text/plain" language="en" script="Latn">Standardization and related activities – General vocabulary</title>  <title type="title-intro" format="text/plain" language="fr" script="Latn">Normalisation et activités connexes</title>  <title type="title-main" format="text/plain" language="fr" script="Latn">Vocabulaire général</title>  <title type="main" format="text/plain" language="fr" script="Latn">Normalisation et activités connexes – Vocabulaire général</title>  <uri type="src">https://www.iso.org/standard/39976.html</uri>  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:39976:en</uri>  <uri type="rss">https://www.iso.org/contents/data/standard/03/99/39976.detail.rss</uri>  <docidentifier type="ISO">ISO/IEC Guide 2 (all parts)</docidentifier>  <docnumber>2</docnumber>  <date type="published">    <on>2004</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      <name>International Organization for Standardization</name>      <abbreviation>ISO</abbreviation>      <uri>www.iso.org</uri>    </organization>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>International Electrotechnical Commission</name>      <abbreviation>IEC</abbreviation>      <uri>www.iec.ch</uri>    </organization>  </contributor>  <edition>8</edition>  <language>en</language>  <language>fr</language>  <script>Latn</script>  <status>    <stage>90</stage>    <substage>93</substage>  </status>  <copyright>    <from>2004</from>    <owner>      <organization>        <name>ISO/IEC</name>      </organization>    </owner>  </copyright>  <relation type="obsoletes">    <bibitem type="standard">      <formattedref format="text/plain">ISO/IEC Guide 2:1996</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <fetched>2020-06-16</fetched>      <title type="title-intro" format="text/plain" language="en" script="Latn">Standardization and related activities</title>      <title type="title-main" format="text/plain" language="en" script="Latn">General vocabulary</title>      <title type="main" format="text/plain" language="en" script="Latn">Standardization and related activities – General vocabulary</title>      <title type="title-intro" format="text/plain" language="fr" script="Latn">Normalisation et activités connexes</title>      <title type="title-main" format="text/plain" language="fr" script="Latn">Vocabulaire général</title>      <title type="main" format="text/plain" language="fr" script="Latn">Normalisation et activités connexes – Vocabulaire général</title>      <uri type="src">https://www.iso.org/standard/39976.html</uri>      <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:39976:en</uri>      <uri type="rss">https://www.iso.org/contents/data/standard/03/99/39976.detail.rss</uri>      <docidentifier type="ISO">ISO/IEC Guide 2:2004</docidentifier>      <docnumber>2</docnumber>      <date type="published">        <on>2004</on>      </date>      <contributor>        <role type="publisher"/>        <organization>          <name>International Organization for Standardization</name>          <abbreviation>ISO</abbreviation>          <uri>www.iso.org</uri>        </organization>      </contributor>      <contributor>        <role type="publisher"/>        <organization>          <name>International Electrotechnical Commission</name>          <abbreviation>IEC</abbreviation>          <uri>www.iec.ch</uri>        </organization>      </contributor>      <edition>8</edition>      <language>en</language>      <language>fr</language>      <script>Latn</script>      <abstract format="text/plain" language="en" script="Latn">ISO/IEC Guide 2:2004 provides general terms and definitions concerning standardization and related activities. It is intended to contribute fundamentally towards mutual understanding amongst the members of ISO and IEC and the various governmental and non-governmental agencies involved in standardization at international, regional and national levels. It is intended also to provide a suitable source for teaching and for reference, briefly covering basic theoretical and practical principles of standardization, certification and laboratory accreditation.It is not the aim of ISO/IEC Guide 2:2004 to duplicate definitions of terms adequately defined for general purposes in other authoritative international vocabularies.NOTE 1 From this point of view, particular attention is drawn to the International vocabulary of basic and general terms in metrology (VIM) jointly prepared by ISO, IEC, BIPM, IFCC, IUPAC, IUPAP and OIML, and published in 1993 (second edition).NOTE 2 In addition to the terms given in the official languages of ISO and IEC (English, French and Russian), equivalent terms provided by the relevant member bodies are given in the following languages:</abstract>      <abstract format="text/plain" language="fr" script="Latn">Le Guide ISO/CEI 2 fournit des termes généraux et leurs définitions concernant la normalisation et les activités connexes. Il est prévu pour contribuer, de manière fondamentale, à la compréhension mutuelle entre les membres de l’ISO, de la CEI et des diverses institutions gouvernementales et non gouvernementales engagées dans la normalisation aux niveaux international, régional et national. Il est prévu également pour constituer un instrument de formation ou de référence couvrant brièvement les principes de base, théoriques et pratiques, de la normalisation, de la certification et de l’accréditation des laboratoires d’essais.L’objet du Guide ISO/CEI 2 n’est pas de redonner les définitions de termes déjà définis de façon satisfaisante dans leur sens général par d’autres vocabulaires internationaux faisant autorité.NOTE 1 Une attention particulière doit être portée, à cet égard, au Vocabulaire international des termes fondamentaux et généraux de métrologie (VIM) préparé conjointement par l’ISO, la CEI, le BIPM, la FICC, l’OIML, l’UICPA et l’UIPPA et qui a été publié en 1993 (deuxième édition).NOTE 2 En plus des termes donnés dans les langues officielles de l’ISO et de la CEI (anglais, français et russe), les termes équivalents fournis par les comités membres responsables sont donnés dans les langues suivantes :</abstract>      <status>        <stage>90</stage>        <substage>93</substage>      </status>      <copyright>        <from>2004</from>        <owner>          <organization>            <name>ISO/IEC</name>          </organization>        </owner>      </copyright>      <relation type="obsoletes">        <bibitem type="standard">          <formattedref format="text/plain">ISO/IEC Guide 2:1996</formattedref>        </bibitem>      </relation>      <place>Geneva</place>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO/TTA 2:1997</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO 2:1973</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">IWA 2:2007</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">IWA 2:2003</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO/IEC Guide 2:1996</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO/IEC Guide 2:1991</formattedref>    </bibitem>  </relation>  <place>Geneva</place></bibitem><bibitem id="ISODIR1C" type="standard">  <fetched>2020-06-16</fetched>  <title type="title-intro" format="text/plain" language="en" script="Latn">Geometrical product specifications (GPS)</title>  <title type="title-main" format="text/plain" language="en" script="Latn">Standard reference temperature for the specification of geometrical and dimensional properties</title>  <title type="main" format="text/plain" language="en" script="Latn">Geometrical product specifications (GPS) – Standard reference temperature for the specification of geometrical and dimensional properties</title>  <title type="title-intro" format="text/plain" language="fr" script="Latn">Spécification géométrique des produits (GPS)</title>  <title type="title-main" format="text/plain" language="fr" script="Latn">Température normale de référence pour la spécification des propriétés géométriques et dimensionnelles</title>  <title type="main" format="text/plain" language="fr" script="Latn">Spécification géométrique des produits (GPS) – Température normale de référence pour la spécification des propriétés géométriques et dimensionnelles</title>  <uri type="src">https://www.iso.org/standard/67630.html</uri>  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:67630:en</uri>  <uri type="rss">https://www.iso.org/contents/data/standard/06/76/67630.detail.rss</uri>  <docidentifier type="ISO">ISO 1 (all parts)</docidentifier>  <docnumber>1</docnumber>  <date type="published">    <on>2016</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      <name>International Organization for Standardization</name>      <abbreviation>ISO</abbreviation>      <uri>www.iso.org</uri>    </organization>  </contributor>  <edition>3</edition>  <language>en</language>  <language>fr</language>  <script>Latn</script>  <status>    <stage>60</stage>    <substage>60</substage>  </status>  <copyright>    <from>2016</from>    <owner>      <organization>        <name>ISO</name>      </organization>    </owner>  </copyright>  <relation type="obsoletes">    <bibitem type="standard">      <formattedref format="text/plain">ISO 1:2002</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <fetched>2020-06-16</fetched>      <title type="title-intro" format="text/plain" language="en" script="Latn">Geometrical product specifications (GPS)</title>      <title type="title-main" format="text/plain" language="en" script="Latn">Standard reference temperature for the specification of geometrical and dimensional properties</title>      <title type="main" format="text/plain" language="en" script="Latn">Geometrical product specifications (GPS) – Standard reference temperature for the specification of geometrical and dimensional properties</title>      <title type="title-intro" format="text/plain" language="fr" script="Latn">Spécification géométrique des produits (GPS)</title>      <title type="title-main" format="text/plain" language="fr" script="Latn">Température normale de référence pour la spécification des propriétés géométriques et dimensionnelles</title>      <title type="main" format="text/plain" language="fr" script="Latn">Spécification géométrique des produits (GPS) – Température normale de référence pour la spécification des propriétés géométriques et dimensionnelles</title>      <uri type="src">https://www.iso.org/standard/67630.html</uri>      <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:67630:en</uri>      <uri type="rss">https://www.iso.org/contents/data/standard/06/76/67630.detail.rss</uri>      <docidentifier type="ISO">ISO 1:2016</docidentifier>      <docnumber>1</docnumber>      <date type="published">        <on>2016</on>      </date>      <contributor>        <role type="publisher"/>        <organization>          <name>International Organization for Standardization</name>          <abbreviation>ISO</abbreviation>          <uri>www.iso.org</uri>        </organization>      </contributor>      <edition>3</edition>      <language>en</language>      <language>fr</language>      <script>Latn</script>      <abstract format="text/plain" language="en" script="Latn">ISO 1:2016 defines the concepts of a reference temperature and of the standard reference temperature, and specifies the standard reference temperature value for the specification of geometrical and dimensional properties of an object. Some examples of geometrical and dimensional properties include size, location, orientation (including angle), form and surface texture of a workpiece.ISO 1:2016 Standard is also applicable to the definition of the measurand used in verification or calibration.</abstract>      <abstract format="text/plain" language="fr" script="Latn">ISO 1:2016 définit les concepts de température de référence et de température normale de référence, et spécifie la valeur de la température normale de référence pour la spécification des propriétés géométriques et dimensionnelles d’un objet. Certains exemples de propriétés géométriques et dimensionnelles incluent la taille, la position, l’orientation (y compris l’angle), la forme et l’état de surface d’une pièce.ISO 1:2016 s’applique aussi à la définition du mesurande utilisé en vérification ou en étalonnage.</abstract>      <status>        <stage>60</stage>        <substage>60</substage>      </status>      <copyright>        <from>2016</from>        <owner>          <organization>            <name>ISO</name>          </organization>        </owner>      </copyright>      <relation type="obsoletes">        <bibitem type="standard">          <formattedref format="text/plain">ISO 1:2002</formattedref>        </bibitem>      </relation>      <place>Geneva</place>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">IWA 1:2005</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO 1:2002</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">IWA 1:2001</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO/TTA 1:1994</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO/DATA 1:1978</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO 1:1975</formattedref>    </bibitem>  </relation>  <relation type="instance">    <bibitem type="standard">      <formattedref format="text/plain">ISO Guide 1:1972</formattedref>    </bibitem>  </relation>  <place>Geneva</place></bibitem>    </references></bibliography>
 </csd-standard>
