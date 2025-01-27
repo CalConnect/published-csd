@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+
+# Download all XML files from a given URL, where the single HTML page contains
+# links to XML files of the form:
+#   https://$URL/documents/my-doc-1/document.xml
+#
+# An example of a URL is https://calconnect.github.io/cc-admin-documents/
+#
+# The script will download the XML files to the current directory with the name:
+#   my-doc-1.xml
+#
+
+log() {
+  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $*"
+} >&2
+
+err() {
+  printf "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: \e[1;31mError:\e[m %b\n" "$*"
+} >&2
+
+# Given a URL, scrape all XML paths from the HTML page
+get_xml_paths() {
+  local url=$1
+  command curl -s "${url}" | \
+    command grep 'a.href.*\.xml' | \
+    command sed 's@.*href="\(.*\)".*@\1@'
+}
+
+# Bookkeeping
+XML_PATHS=()
+SUCCESS_TRANSFERS=()
+FAILED_TRANSFERS=()
+
+# Print a summary of the downloads
+print_summary() {
+  log "Downloaded ${#SUCCESS_TRANSFERS[@]} out of ${#XML_PATHS[@]} XML files"
+  if [[ "${#FAILED_TRANSFERS[@]}" -gt 0 ]]
+  then
+    err "Failed to download ${#FAILED_TRANSFERS[@]} files"
+    for failed_transfer in "${FAILED_TRANSFERS[@]}"
+    do
+      err "${failed_transfer}"
+    done
+  fi
+}
+
+trap print_summary EXIT
+
+main() {
+  # local url=https://calconnect.github.io/cc-admin-documents/
+  local url="${1:?Usage: $0 <url>}"
+
+  # Get all XML paths
+  while read -r line
+  do
+    XML_PATHS+=("${line}")
+  done < <(get_xml_paths "${url}")
+
+  log "Found ${#XML_PATHS[@]} XML paths"
+
+  local xml_dest
+  # Download all XML files
+  for xml_path in "${XML_PATHS[@]}"
+  do
+    # `xml_path` is expected to be of the form:
+    #   'documents/my-doc-1/document.xml'
+    #
+    # Download the file to the current directory with the name:
+    #   'my-doc-1.xml'
+    #
+    xml_dest="${xml_path}"
+    xml_dest="${xml_dest%/document.xml}"
+    xml_dest="${xml_dest%.xml}.xml"
+    xml_dest="${xml_dest##*/}"
+    local full_url="${url}${xml_path}"
+    log "Downloading ${full_url} to ${xml_dest}"
+    if command curl -s --fail-early "${full_url}" -o "${xml_dest}"
+    then
+      SUCCESS_TRANSFERS+=("${full_url}")
+    else
+      err "Failed to download ${full_url}"
+      FAILED_TRANSFERS+=("${full_url}")
+    fi
+  done
+
+  if [[ "${#FAILED_TRANSFERS[@]}" -gt 0 ]]
+  then
+    err "Failed to download ${#FAILED_TRANSFERS[@]} files"
+    for failed_transfer in "${FAILED_TRANSFERS[@]}"
+    do
+      err "${failed_transfer}"
+    done
+    return 1
+  fi
+}
+
+main "$@"
