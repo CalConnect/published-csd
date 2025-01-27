@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">May 2010 CalConnect Interoperability Test Event Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1009:2010</docidentifier><docnumber>1009</docnumber><date type="published"><on>2010-07-19</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Rhonda Chicone</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>John Davies</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Alexej Eremias</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Tony Groover</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Ben King</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Alvaro Manera</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Andrey Moiseenko</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Filip Navara</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Amit Patel</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Tino Schultze</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2010-07-19</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2010</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_8f20ccc1-635d-bf2f-404a-72507af81e77" obligation="normative">
+<p id="_dcdc0398-a59b-3ae3-7a62-8128124a3fad">© 2010 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_765bb91e-d70c-64da-92b5-db571ff982bc">The June 2010 CalConnect Interoperability Testing Event was actually two distinct sets of testing. One set of vendors tested CalDAV and CardDAV. The second set of vendors tested mobile calendaring devices. The first section will detail the CalDAV and CardDAV results. The second section will detail the mobile testing results.</p>
+
+<clause id="_caldav_and_carddav_participants" obligation="informative">
+<title>CalDAV and CardDAV Participants</title>
+<table id="_67b0373e-4822-017b-990c-3197fbd5b459">
+<name>Participants</name>
+<tbody><tr><td valign="top" align="left">Organization</td>
+<td valign="top" align="left">Participants</td>
+<td valign="top" align="left">Versions Tested</td>
+</tr><tr><td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Cyrus Daboo</td>
+<td valign="top" align="left">iCal Server and client — OS X 10.6.1<br/> Apple iCal 4.0 (SnowLeopard)</td>
+</tr><tr><td valign="top" align="left">Genentech</td>
+<td valign="top" align="left">Monica Kumar</td>
+<td valign="top" align="left">None (participant observer)</td>
+</tr><tr><td valign="top" align="left">Icewarp</td>
+<td valign="top" align="left">Filip Navara</td>
+<td valign="top" align="left">eM Client 2.7.7402</td>
+</tr><tr><td valign="top" align="left">Kerio</td>
+<td valign="top" align="left"/><td valign="top" align="left">(server tested remotely)</td>
+</tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_findings" obligation="normative">
+<title>Findings</title>
+<p id="_a6aecbfd-e05e-295b-a4e2-6cafae51ec88">During the testing, as usual minor issues were found and fixed. In particular a question arose as to the interpretation of text in the WebDAV ACL spec surrounding what clients need to send in an ACL request. Follow-up discussion is needed on that topic.</p>
+
+<p id="_9ac738ec-a2fb-5dcc-90cf-ce5bdc3aa3bc">The CalDAV specification has been tested quite extensively over the last several interoperability tests. Therefore, recent events had tested either problematic areas or have focused on new portions of the specification such as sync reports.</p>
+
+<p id="_13d273e5-3072-bb3b-407d-ec79ae38b68d">The newer CardDAV specification also was tested. There is only a small subset of tests for the specification as it is still evolving.</p>
+
+<p id="_11d2acc8-dda7-6094-79cb-3c5ea8576cc1">The following outlines findings and observations found during testing:</p>
+
+<p id="_c6453540-5dc7-849b-ae33-bfefd2883030">The WebDAV ACL RFC is not ambiguous on whether protected ACEs should be sent when the ACL HTTP verb is used to change the access control list on a resource. There was discussion on whether or not protected ACEs and inherited ACEs should be sent. If a client doesn’t send inherited ACEs, but sends protected ones, this results in errors reported by the server. This is the area that requires further discussion.</p>
+
+<p id="_32742f2c-145f-d9b0-c693-73e8d295d9a6">Rountrip of X- properties results in the X- properties being put into <tt>NOTE</tt> property as a text value.</p>
+
+<p id="_c569fb7c-f7fc-2415-eb83-a68cf99df1ad">Some implicit scheduling was tested between normal and calendar users and a resource.</p>
+
+<p id="_e76f1e63-1b12-0ce4-43cc-1fe133b46618"><tt>PUT</tt>s of events on URIs that don’t have the resource name in the <tt>&lt;UID&gt;.ics</tt> format result in 302 redirect response.</p>
+
+<clause id="_vcard_fields_name_fn_x_aim_x_jabber" obligation="normative">
+<title>vCard fields (<tt>NAME</tt>, <tt>FN</tt>, <tt>X-AIM</tt>, <tt>X-JABBER</tt>)</title>
+<p id="_29a7f35c-e2a9-8e47-b796-c7a2c8efe7b3">Testing was performed on the CardDAV server with two clients accessing the address book. The interpretation of certain vCard fields differed between the clients.</p>
+
+<p id="_7ee6101d-6087-bc6d-8b6d-9149412b261c">One client incorrectly used the <tt>FN</tt> and <tt>NAME</tt> properties, where the <tt>FN</tt> value was stored in <tt>NAME</tt> property and the other value shouldn’t have been used at all. Some vCard 4 properties (eg.  <tt>KIND</tt>) were also generated even though the server announced only vCard 3 support.</p>
+
+<p id="_930c8161-98df-661b-85ee-20cfc08a91b9">If custom <tt>X-AIM</tt> and <tt>X-JABBER</tt> properties are used for IM information, client cannot understand and resolve them. It is suggested that standard IMPP properties be used instead.</p>
+</clause>
+</clause>
+
+<clause id="_mobile_calendar_testing" obligation="normative">
+<title>Mobile Calendar Testing</title>
+<p id="_0c72e05b-c566-109a-0d31-7b619a2fefa9">This was the third Mobile Calendaring Interoperability test event. The primary focus was Activesync and the CalConnect Mobile Calendar Interoperability Test suite was used as the basis for testing. A copy of the test suite can be found in the resources section of the CalConnect website.</p>
+
+<p id="_29c3f3f7-7b95-fbe3-def8-d13b5a787fb5">The test suite is quite large. In order to ensure we tested as much as possible during the three days, a subset of the test suite was chosen. A testing matrix was used as a guide and to record findings. In addition, a matrix of tested components was used to record results. A completed test matrix with the results from all testing vendors is included at the end of this report.</p>
+
+<p id="_6de42bc2-bfc4-7628-29f8-bc68cc41be03">The testing included calendar (vEvent), tasks (vTodo) and contacts (vCard). The number of items tested was as follows:</p>
+
+<table id="_bfb88408-22e6-f3d6-ff38-eb235f9014f9" unnumbered="true"><tbody><tr><td valign="top" align="left">Calendar Test Results</td>
+<td valign="top" align="left"># of test cases</td>
+</tr><tr><td valign="top" align="left">Easy</td>
+<td valign="top" align="left">24</td>
+</tr><tr><td valign="top" align="left">Medium</td>
+<td valign="top" align="left">42</td>
+</tr><tr><td valign="top" align="left">Hard</td>
+<td valign="top" align="left">17</td>
+</tr><tr><td valign="top" align="right">Total calendar tests</td>
+<td valign="top" align="left">83</td>
+</tr><tr><td valign="top" align="left">Task Test Results</td>
+<td valign="top" align="left">14</td>
+</tr><tr><td valign="top" align="left">Contact Test Results</td>
+<td valign="top" align="left">14</td>
+</tr><tr><td valign="top" align="left">Total of all tests</td>
+<td valign="top" align="left">111</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_participants" obligation="normative">
+<title>Participants</title>
+<p id="_943983f6-43ff-6c4e-e6e7-28af17093eea">The participants in the testing were as follows:</p>
+
+<table id="_9d46fc2a-ea37-3660-af76-480c156393a6">
+<name>Mobile Interop Testing Participants</name>
+<tbody><tr><td valign="top" align="left">Organization</td>
+<td valign="top" align="left">Contact</td>
+<td valign="top" align="left">What was tested</td>
+</tr><tr><td valign="top" align="left">Icewarp</td>
+<td valign="top" align="left">Alexej Eremias</td>
+<td valign="top" align="left">Server</td>
+</tr><tr><td valign="top" align="left">MailSite</td>
+<td valign="top" align="left">John Davies<br/> Amit Patel</td>
+<td valign="top" align="left">Server and Client (AstraSync 4.1.13)</td>
+</tr><tr><td valign="top" align="left">Microsoft</td>
+<td valign="top" align="left">Kiran Nallabothula</td>
+<td valign="top" align="left">Server and Client</td>
+</tr><tr><td valign="top" align="left">Nokia</td>
+<td valign="top" align="left">Alvaro Manera<br/> Andrey Moiseenko</td>
+<td valign="top" align="left">Client</td>
+</tr><tr><td valign="top" align="left">Notify Technology</td>
+<td valign="top" align="left">Rhonda Chicone<br/> Ben King <br/> Tony Groover</td>
+<td valign="top" align="left">Client</td>
+</tr><tr><td valign="top" align="left">Synchronica</td>
+<td valign="top" align="left">Tino Schultze</td>
+<td valign="top" align="left">Server</td>
+</tr><tr><td valign="top" align="left">CalConnect Reps</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Interop Manager<br/> Logistics</td>
+<td valign="top" align="left">Pat Egen<br/> Dave Thewlis</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+
+<clause id="_findings_2" obligation="normative">
+<title>Findings</title>
+<p id="_f8b1f275-e0eb-4db8-64eb-202f0e9be1f7">Because Activesync is a specification that has been around for awhile, many items tested worked well. Much of what is noted here are the areas where issues were found.</p>
+
+<p id="_619b1bf1-9cc3-f4b5-3711-9d94fcd964d3">Timezones caused problems on several devices.</p>
+
+<p id="_0c77d3c0-ed8b-b748-7092-d8474b81c2b1">The <tt>GETITEMESTIMATE</tt> command was found to not be supported on several servers. This caused an issue as several clients required support.</p>
+
+<p id="_afcc6669-5916-1222-4ea9-ba2054c179b1">Some servers will report that they support a specific version of ActiveSync but will then send a different version data to the device.</p>
+
+<p id="_5b3c12dc-97d6-7844-e193-8634b62f6f89">Some devices do not send ‘user=’ string with HTTP <tt>POST</tt> command. This is probably caused by different interpretations of the ActiveSync spec.</p>
+
+<p id="_d87c8458-efee-262a-502a-512ed0c2779a">Several devices received an error 400 from various servers. Again, this issue is a different interpretation of the specification. It is ambiguous with regards to parameters. Some vendors have interpreted a parameter as a  <tt>MUST</tt> and others as a <tt>SHOULD</tt>.</p>
+
+<p id="_703fa625-2899-cd44-75f8-0da8ff5e73aa"><tt>RDATE</tt>s are not supported on many devices and servers.</p>
+</clause>
+
+<clause id="_general_overall_summary" obligation="normative">
+<title>General Overall Summary</title>
+<p id="_8081a5a4-8866-e072-a2d7-82834739441f">Activesync is a protocol that has been around a while and is in heavy usage. This was evidenced by the fact that much of the testing of normal operations passed.</p>
+
+<p id="_8c75e151-93d5-ca92-0322-40f751535ca2">It was noted that several server had issues with <tt>GETITEMESTIMATE</tt>. This may be due, in part, to ambiguities in the specification. This should be added to the “check next time” testing requirements for our future mobile interoperability testing.</p>
+
+<p id="_36a15d16-c116-cfea-7b2c-eabb7e72faae">Across the board, the test items including RRules were either not tested or failed. General feedback was the event overall was useful for talking to other vendors in industry and discussing common issues. The server/client testing matrix was useful to define some structure to the event without being too restrictive.</p>
+
+<p id="_111f4e49-532e-1bca-4ac8-8f429a2bd9b0">Our thanks to all participants and contributors to this document.</p>
+
+<p id="_4a18fae7-bd49-7996-fc06-e3977de2269a">Respectfully submitted by Pat Egen, CalConnect Interop Manager.</p>
+</clause>
+</sections>
+</csd-standard>

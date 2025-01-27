@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">January 2006 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0603:2006</docidentifier><docnumber>0603</docnumber><date type="published"><on>2006-02-09</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>David Nuttell</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Dave Camp</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Joey Minta</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Grant Baillie</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Simon Vaillancourt</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Chuck Norris</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Dan Markham</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Dan Hickman</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Mike Douglass</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2006-02-09</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_8bbe0742-f763-6a0f-11e5-9a828c25eb6f">The following document contains notes and results from the January 2006 calendar interoperability event held at the Novell complex in Provo, Utah.</p>
+
+<p id="_e906f53c-b30f-aa1a-7b97-17435c732aff">The chart below shows the attendees, their organization and the products they were testing.</p>
+
+<clause id="_attendees" obligation="informative">
+<title>Attendees</title>
+<table id="_02b0db10-1d1a-e835-56cf-c05ab26dd9ab" unnumbered="true"><thead><tr><th valign="top" align="left">Attendees</th>
+<th valign="top" align="left">Organization</th>
+<th valign="top" align="left">Products</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Chuck Norris</td>
+<td valign="top" align="left">EVDB</td>
+<td valign="top" align="left">CALDAV server</td>
+</tr><tr><td valign="top" align="left">Danny Markham</td>
+<td valign="top" align="left">EVDB</td>
+<td valign="top" align="left">CALDAV server</td>
+</tr><tr><td valign="top" align="left">Joey Minta</td>
+<td valign="top" align="left">Mozilla</td>
+<td valign="top" align="left">Mozilla client</td>
+</tr><tr><td valign="top" align="left">Dave Camp</td>
+<td valign="top" align="left">Novell</td>
+<td valign="top" align="left">Hula, Evolution</td>
+</tr><tr><td valign="top" align="left">Dave Nuttell</td>
+<td valign="top" align="left">Novell</td>
+<td valign="top" align="left">Groupwise</td>
+</tr><tr><td valign="top" align="left">Simon Vaillancourt</td>
+<td valign="top" align="left">Oracle</td>
+<td valign="top" align="left">Oracle CALDAV server</td>
+</tr><tr><td valign="top" align="left">Grant Bailey</td>
+<td valign="top" align="left">OSAF</td>
+<td valign="top" align="left">Chandler and Cosmo</td>
+</tr><tr><td valign="top" align="left">Mike Douglass</td>
+<td valign="top" align="left">RPI</td>
+<td valign="top" align="left">RPI CALDAV Server</td>
+</tr><tr><td valign="top" align="left">Dan Hickman</td>
+<td valign="top" align="left">Trumba</td>
+<td valign="top" align="left">OneCalendar</td>
+</tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_general_comments" obligation="normative">
+<title>General Comments</title>
+<p id="_3b0dfb7b-b692-6c35-93e9-0e639251c1df">After introductions there were general discussions about testing and requirements for suites. The Open Source tool, iCal 4J, does have a parser so we are considering pointing people at already-developed implementations for testing iCalendar streams.</p>
+
+<p id="_e21f67d8-6625-1ba3-ab4d-2e1625f4136e">We talked about the concept of using a public CALDAV server to help test calendar objects. This server and suite would need to do the following tasks: Import events, do some actions, export and compare. It would then present the final state to the tester. A good parser will test and decompile into components.</p>
+
+<p id="_ab280722-204e-35e0-9502-d9478abef410">The purpose of this test event was to test CALDAV clients and servers and iCalendar implementations. Exhibit A are the test scenarios used for iCalendar testing. All products tested during this event are “not shipping application.” Therefore, in this pubic document, we do not explicitly name products or note how each product works. Comments are general and generic. To help differentiate notes, we have named the participants as Vendor one, Vendor two, Vendor three, Vendor four, Vendor five, Vendor six and Vendor 7.</p>
+</clause>
+
+<clause id="_vendor_notes_and_comments" obligation="normative">
+<title>Vendor Notes and Comments</title>
+<p id="_fb67d893-6e1d-fd97-225d-a4927f025409">The following are various notes, including comments provided by vendors that reflect their findings and thoughts from the interoperability event.</p>
+
+<p id="_fc463929-fe3f-8e3d-3383-82268148556e">The CALDAV server implementations had the easiest task at the event. Their job was to ensure the servers were available and to monitor the traffic from the various clients. As clients sent requests, various bugs were fixed and added to list of items that need to be repaired.</p>
+
+<p id="_2d67b6b4-679d-d271-a263-8779b197aca9">Several clients went through the CALDAV scenarios (details are attached to this report). Each time we hold the interoperability events, we uncover more bugs that each client and server repairs.</p>
+
+<p id="_3a2db3c8-85b9-3263-2727-fc076c6ddc82">One thing noted was a difference in CALDAV specifications within products. The spec is now at version 8; however, some of the other clients and/or server were still only at version 7. This caused some things to not be able to be tested at this event. However, this is common when a draft is not a finalized RFC.</p>
+
+<p id="_4dff038d-7ee3-24a7-6205-1fb34d6860a3">Some servers imported timezones well. Recurrence is not working yet for some of the clients. This shows how two vendors have two different interpretations of the same object.</p>
+
+<p id="_160bdd95-abff-f66b-f75a-0f6e9bc72719">One vendor had a few problems with timezone ids. They appeared to be too verbose for their product. There were little issues with starts and ends. The vendor said it was helpful to hear other issues.</p>
+
+<p id="_167e4d27-b680-20d5-9c55-a1e308350b19">Not every client supports RFC 2446 or 2447. These are the scheduling and email transport protocols. In general, it seemed that the majority of clients did not have much support for attendees, and as such, a vast portion of the testing scenarios were not applicable.</p>
+
+<p id="_22f0067b-9d62-3900-b7b8-46e66e241d4e">Vendor one noted they lack implementations of some of the more complex <tt>RRULE</tt> (like BySETPOS), and struggled with overridden instances of recurring events. Publishing and subscribing seemed to work quite well with all clients. Their CalDAV support is rather limited at this stage, but they were able to do basic event adding/deleting with all servers except for one. That vendor was running a different version of the spec, and as such, could not return their queries.</p>
+
+<p id="_9e2687d2-1f6b-0669-47b5-ed056b6e9096">Vendor two reported the following items:</p>
+
+<ul id="_6e84954b-de22-36b3-ec49-76846c19acc4"><li><p id="_1c442f68-c96a-5e95-4bd3-a31d92a1b132">They currently support import and export of RFC 2445 iCalendar objects and also allow clients to publish and subscribe to calendars via Webdav.</p>
+</li>
+<li><p id="_d55fef42-7f9d-8ca6-62db-1f37953dbb32">Calendar objects from Vendor three were successfully published and subscribed to their calendars via Webdav. Webdav connectivity worked quite well.</p>
+</li>
+<li><p id="_56c0972b-1a24-9546-a661-74931dfbaa98">They noted that they were not able to map Vendor one’s <tt>TZID</tt>s to their timezones.</p>
+</li>
+<li><p id="_de0a676c-ae61-3ade-1f1a-417906efae31">In this case, timezones were interpreted in UTC.</p>
+</li>
+<li><p id="_35248329-d27a-86f8-67dd-41d30283be55">Their floating dates and all day events imported correctly into another vendor’s product.</p>
+</li>
+<li><p id="_d90d5226-2edb-9256-6205-cb1365a461bb">They also successfully mapped the other vendor’s timezones to their internal timezones.</p>
+</li>
+<li><p id="_7991079e-d0b8-4df4-337b-cf515f5dd6b2">Their application did not correctly import private event status (<tt>CLASS:PRIVATE</tt>). This has since been fixed.</p>
+</li>
+<li><p id="_046bd470-d42b-4cc9-6be7-4e2d43ffe9c7">Vendor four noted that importing their ics object into Vendor two’s application worked well. Currently Vendor four does not support recurrence or timezones.</p>
+</li>
+<li><p id="_7da4657b-fab3-c43f-cc63-e21854e0fd29">Importing one time event ics objects from Vendor five worked correctly. The sample recurring event instance provided from Vendor five included multiple  <tt>DTSTART</tt> properties which is not valid and could not be imported. Importing their recurring events into Vendor five’s application worked for the most part. Import of a rescheduled occurrence of a recurring event left the original date in addition to the new date/time in Vendor five’s application.</p>
+</li>
+<li><p id="_62cd1a6b-e948-a58f-44b9-3cdbb9ab97f7">When importing Vendor six’s ics files, timezone ID’s were not correctly mapped to their timezones. They had to implement enhanced mapping logic. Imported recurrence samples worked very well with all rescheduled events importing properly. Export of Vendor six’s client recurring event did not import correctly. The master event included only  <tt>RDATE</tt> objects to specify recurrence set and did not include an <tt>RRULE</tt> which is not currently supported by Vendor two.</p>
+</li>
+<li><p id="_41ea4d30-b0bf-8678-80a7-8b0279d3a2d3">Vendor seven provided four sample ics files which all successfully imported. Examples included multiple timezones, all day events and recurrence. Vendor two exports include a custom attribute in the  <tt>VTIMEZONE</tt> component which caused issues when importing into Vendor seven’s application. These should be ignored.</p>
+</li>
+</ul>
+
+<p id="_fd3c8487-a63f-e9bf-cb08-21aec209ab69">Vendor seven reported the following items:</p>
+
+<ul id="_a9558e2d-26d3-a936-4a6e-df718353fe96"><li><p id="_22bebf84-f4f0-ccec-fa87-c5614d6beb5f">A couple of bugs relating to Vendor eight’s handling of recurring events and <tt>EXDATE</tt>s.</p>
+</li>
+<li><p id="_2966d6e1-a445-5fb7-f4e2-a679fdab0ab8">An issue where they were <tt>PROPPATCH</tt>‘ing calendar collections (to set their display names). However, not all servers support this, and they need to ignore returned errors in this case.</p>
+</li>
+<li><p id="_6c6144c4-8ca9-2244-3973-b09abadac0e8">A couple of Vendor five problems that were fixed, allowing tests to proceed.</p>
+</li>
+<li><p id="_b0836479-d7eb-c5f1-f6c0-ce6498f54710">A issue where they do not correctly interpret an empty multistatus response to a <tt>PROPFIND</tt> (Vendor five does this, and it’s allowed by the WebDAV spec), leading to a failure in creating calendar collections.</p>
+</li>
+<li><p id="_d4129156-57d1-4b59-2efc-cc077e7d77ae">Updating events on Vendor six is broken right now, apparently because of a known issue with Vendor seven not preserving X-properties.</p>
+</li>
+<li><p id="_0e7547ce-2740-5e57-9cf0-ff5d28eb3c2b">They are unable to parse .ics files from Vendor two — (a bug in the way we parse <tt>VTIMEZONE</tt>).</p>
+</li>
+<li><p id="_dc617267-348f-2cd2-d67b-620571cdea75">Some of the other vendors noticed that they are exporting events in UTC timezone incorrectly.</p>
+</li>
+<li><p id="_89615319-4bd4-5fdd-705c-db026f77c5a0">A couple of bugs in their subscription to http: ics URLs were uncovered.</p>
+</li>
+<li><p id="_a45db5e3-2845-07ff-d7e4-90dde959cf00">There were initially some problems with Vendor five’s client that turned out to be a result of client and server having implemented different versions of the CalDAV spec.</p>
+</li>
+<li><p id="_86df88ee-a4c9-9626-68ff-a10fd44aad93">Vendor five updated their calendar-query <tt>REPORT</tt>s to match the latest spec, but was unable to retrieve events from our application. This was tracked down to being an indexing issue, and was fixed. Subsequently, the testing ran OK.</p>
+</li>
+<li><p id="_c145327d-2896-33ed-4b40-66b2e22a9e72">After the above fix, Vendor three had similar behavior retrieving events. It turned out this was a result of  <tt>PUT</tt>-ing illegal iCalendar data (an empty <tt>STATUS</tt> value in a <tt>VEVENT</tt>). Vendor three worked around the problem, and was able to proceed. However, our application should have rejected the initial  <tt>PUT</tt> request: This problem is being investigated.</p>
+</li>
+</ul>
+
+<p id="_ed51ed4d-ad55-e2a1-abf4-05485dd8bb7c">Vendor five reported the following items:</p>
+
+<ul id="_3c714c8b-fe94-4f94-56ab-54a674173fd2"><li><p id="_a2f10cb6-6523-22eb-6da0-40af323f5686">Vendor five more interested in finding out what worked and what didn’t than in actually following the test scenarios. So the matrix was filled in with what seemed to work and where problems were found.</p>
+</li>
+<li><p id="_ae564b94-660e-b755-523b-7c4ac5117700">Most of the other vendors didn’t actually send invitations but rather sent emails with the ICS file attachments that were then imported. Therefore there was not a lot of Accept and Decline testing done. Delegate, Counter and Reschedule was not tested with any vendors.</p>
+</li>
+<li><p id="_3d89c95f-0aa9-1e59-00a0-62b8a8bd03ce">They felt it was very helpful and they are busy working on the problems they found.</p>
+</li>
+<li><p id="_2d43f248-986e-0bcb-f79f-768539f1f7d4">They noted that their CALDAV implementation has problems with “@” in URLs. It also isn’t happy with  <tt>PUT</tt> not returning an <tt>ETAG</tt>.</p>
+</li>
+<li><p id="_741ccdcb-2ad1-9acb-c8ee-9e5ce5a7b0bd">Their CALDAV application had problems with Vendor six’s Auto-added organizer.</p>
+</li>
+<li><p id="_40486fbb-d740-b0da-776c-d41330409520">Vendor eight doesn’t add a “calendar-access” DAV header.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_f1ebde21-e38a-eab7-fb0a-c7557a6bd452">Once again, this was a good event. We tried a new approach for testing — instead of trying to work through any bugs, we decided to continue testing all items that we could and only go back to fix bugs if they were holding up continuing with testing. This turned out to be a good approach and we were able to get the majority of vendor products tested.</p>
+
+<p id="_3b6675f8-d857-44a6-bbac-6c877b613dc3">Location turned out to be an important issue during the interop. Location appears to be useless in iCalendar. Some clients use locations, some do not. There needs to be a definition of properties that are absolutely required. Mozilla commented that they drop the location details on their recurrence items. Everyone wanted to be able to ingest location items and then know what to do with them. There may need to be extensions put in place within the specifications or via the Calsify efforts to handle them. Xprops are what need to be enhanced/fixed/resolved.</p>
+
+<p id="_bf470b6b-f05a-ef80-3994-ac41b9fd7ab9">For the next interop, items to add to interop testing include:</p>
+
+<ul id="_6010f08b-9b7e-f27d-5b29-b8192f138561"><li><p id="_e27fc037-bd20-903c-90de-ee59077ecc12">how many people use the language property on iCalendar objects</p>
+</li>
+<li><p id="_b6ba4b95-db18-e6db-9ae8-f54459d0c3a5">how many can support daily savings time changes that will happen in 2007</p>
+</li>
+<li><p id="_7f1c3e66-0ee6-c991-4a9c-034720bc0e41">Free busy testing within CALDAV</p>
+</li>
+<li><p id="_04143f89-0c0d-ec6c-eabe-59990a012a7d">Tasks testing</p>
+</li>
+<li><p id="_7b0e8749-7332-763a-a2d9-1ae9271a57eb">More testing of RFC2446 and RFC2447 scheduling events</p>
+</li>
+<li><p id="_92f9de39-a458-8e08-2cf3-8df1a26ba9fb">and the next phase of the CALDAV specification.</p>
+</li>
+</ul>
+
+<p id="_7b25d116-6b26-fab6-d38a-8b282866357f">Following this report are the test results for the scenario testing for both CALDAV and the iCalendar specifications.</p>
+
+<p id="_3a10c280-eeac-f3d4-2a2f-2615b4703f7d">My thanks to everyone who furnished their notes and results.</p>
+
+<p id="_251f4fe2-83d5-3881-86de-57dee3b5215d">Respectfully submitted,</p>
+
+<p id="_4a5544a0-2c45-c995-6da5-92fabcc49558">Pat Egen<br/> Interoperability Event Manager</p>
+</clause>
+
+<clause id="_exhibit_a_icalendar_test_scenarios" obligation="normative">
+<title>Exhibit A — iCalendar Test Scenarios</title>
+<p id="_ab912130-2ee7-e643-57c8-774408afbc4c">Basic test scenarios:</p>
+
+<figure id="_fd61c097-b31a-3704-32dd-8e38d831062d" unnumbered="true" class="pseudocode"><p id="_2581c8aa-3c2a-19ae-e106-041f2cd65768">A: Non-repeating cases:<br/>   1: User A PUBLISHes an event <br/>   2: User A invites Users B, C, D  E to a meeting: <br/>     A: ATTACHments: <br/>       1: 0 <br/>       2: 1 <br/>       3: 1+ <br/>     B: ALTREPs of: <br/>       1: DESCRIPTION <br/>       2: COMMENT <br/>       3: CONTACT <br/>       4: LOCATION <br/>       5: RESOURCES <br/>       6: SUMMARY <br/>       7: iana-token (TBD usage but legal) <br/>       8: x-token (TBD usage but legal) <br/>     C: Including ALARMs: <br/>       1: AUDIO only <br/>       2: DISPLAY only <br/>       3: EMAIL only <br/>       4: PROCEDURE only <br/>       5: iana-token only (TBD value but non X- type) <br/>       6: x-token only (TBD value but anything made up is ok) <br/>       7+: Multiple alarm types (mix  match 1-6 above as desired) <br/>     D: COMMENTs: <br/>       1: 0 <br/>       2: 1 <br/>       3: 1+ <br/>     E: CONTACTs: <br/>       1: 0 <br/>       2: 1 <br/>       3: 1+ <br/>     F: ATTENDEE property parameters: <br/>       1: CUTYPE: <br/>         A: INDIVIDUAL (Default) <br/>         B: GROUP <br/>         C: RESOURCE <br/>         D: ROOM <br/>         E: UNKNOWN <br/>         F: x-name (TBD case, perhaps SKiCAL?) <br/>         G: iana-token (TBD case) <br/>         H: Multiple values (Illegal case) <br/>       2: MEMBER <br/>         A: 0 <br/>         B: 1 <br/>         C: 1+ <br/>       3: ROLE: <br/>         A: CHAIR <br/>         B: REQ-PARTICIPANT (Default) <br/>         C: OPT-PARTICIPANT <br/>         D: NON-PARTICIPANT <br/>         E: x-name (TBD case, perhaps SKiCAL?) <br/>         F: iana-token <br/>         G: Multiple values (Illegal case) <br/>       4: PARTSTAT: <br/>         A: NEEDS-ACTION (Default) <br/>         B: ACCEPTED <br/>         C: DECLINED <br/>         D: TENTATIVE <br/>         E: DELEGATED <br/>         F: x-name (TBD case, perhaps SKiCAL?) <br/>         G: iana-token <br/>         H: COMPLETED (Illegal for VEVENTs) <br/>         I: IN-PROCESS (Illegal for VEVENTs) <br/>         J: Multiple values (Illegal case) <br/>       5: RSVP <br/>         A: TRUE <br/>         B: FALSE (Default) <br/>         C: Any other value (Illegal case) <br/>         D: Multiple values (Illegal case) <br/>       6: DELEGATED-TO <br/>         A: 0 <br/>         B: 1 <br/>         C: 1+ <br/>       7: DELEGATED-FROM <br/>         A: 0 <br/>         B: 1 <br/>         C: 1+ <br/>       8: SENT-BY <br/>         A: 0 <br/>         B: 1 <br/>         C: 1+ (Illegal case) <br/>       9: CN <br/>         A: 0 <br/>         B: 1 <br/>         C: 1+ (Illegal case) <br/>       10: DIR <br/>         A: 0 <br/>         B: 1 <br/>         C: 1+ (Illegal case) <br/>     3: User B Accepts the invitation: <br/>       A: but then Declines the invitation: <br/>       B: but then requests a Refresh of the invitation: <br/>     4: User C Declines the invitation: <br/>       A: but then Accepts the invitation: <br/>       B: but then requests a Refresh of the invitation: <br/>     5: User D Counters with a new meeting time: <br/>       A: User A Declines the Counter: <br/>       B: User A Accepts the Counter and reschedules the meeting: <br/>     6: User E Delegates to User G: <br/>       A: User G Accepts the invitation: <br/>       B: User G Declines the invitation: <br/>       C: User G requests a Refresh of the invitation: <br/>       D: User G Counters with a new meeting time: <br/>       E: User G Delegates to User I: <br/>     7: User A reschedules the meeting: <br/>       Repeat permutations of 1-6 below here as necessary.</p>
+
+<p id="_c453078e-0567-411c-e5d4-7c92a47c1545">B: Repeating cases:<br/>   (Repeat A. subcases but expand for instance manipulation including entire <br/>   set, 1 instance, THISANDPRIOR  THISANDFUTURE ranges <br/>   Tests should include the following permutations: <br/>     RDATEs only <br/>     RRULEs only <br/>     RDATEs and RRULEs <br/>     RDATEs  EXDATEs only <br/>     RRULEs  EXDATEs only <br/>     RDATEs  EXRULEs only <br/>     RRULEs  EXRULEs only <br/>     RDATEs, EXDATEs  EXRULEs <br/>     RRULEs, EXDATEs  EXRULEs <br/>     RDATEs, RRULEs  EXDATEs <br/>     RDATEs, RRULEs  EXRULEs <br/>     RDATEs, RRULEs, EXDATEs  EXRULEs</p>
+</figure>
+</clause>
+
+<clause id="_exhibit_b_caldav_testing_scenarios" obligation="normative">
+<title>Exhibit B — CALDAV Testing Scenarios</title>
+<table id="_ce52895b-5f36-0439-4aa0-177db4a33a75" unnumbered="true"><tbody><tr><th valign="top" align="left">1.</th>
+<th valign="top" align="left">Event creation.</th>
+</tr><tr><td valign="top" align="left">1.1.</td>
+<td valign="top" align="left">Create new single-instance meeting titled “Meeting 1.1” with the location “Durham”.</td>
+</tr><tr><td valign="top" align="left">1.2.</td>
+<td valign="top" align="left">Create new meeting titled “Meeting 1.2” recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks.</td>
+</tr><tr><td valign="top" align="left">1.3.</td>
+<td valign="top" align="left">Create new single-instance meeting titled “Meeting 1.3” with 2 other attendees.</td>
+</tr><tr><td valign="top" align="left">1.4.</td>
+<td valign="top" align="left">Create new single-instance meeting titled “Meeting 1.4” with an alarm set to trigger 15 minutes prior to the schedule time of the meeting.</td>
+</tr><tr><th valign="top" align="left">2.</th>
+<th valign="top" align="left">Event modification</th>
+</tr><tr><td valign="top" align="left">2.1.</td>
+<td valign="top" align="left">Modify the title of meeting “Meeting 1.1” to “Meeting 1.1bis”.</td>
+</tr><tr><td valign="top" align="left">2.2.</td>
+<td valign="top" align="left">Modify the location of the meeting “Meeting 1.1bis” to “Seattle bis”.</td>
+</tr><tr><td valign="top" align="left">2.3.</td>
+<td valign="top" align="left">Reschedule meeting “Meeting 1.1bis” to the next day.</td>
+</tr><tr><td valign="top" align="left">2.4.</td>
+<td valign="top" align="left">Add an attendee to “Meeting 1.1bis”.</td>
+</tr><tr><td valign="top" align="left">2.5.</td>
+<td valign="top" align="left">Add an alarm to “Meeting 1.1bis”.</td>
+</tr><tr><td valign="top" align="left">2.6.</td>
+<td valign="top" align="left">Modify the title of the 1st instance of the recurring meeting created in 1.2.</td>
+</tr><tr><td valign="top" align="left">2.7.</td>
+<td valign="top" align="left">Modify the participation status of the 1st attendee in meeting 1.3 to <tt>DECLINED</tt>.</td>
+</tr><tr><td valign="top" align="left">2.8.</td>
+<td valign="top" align="left">Cancel the 4th instance of the recurring meeting created in 1.2.</td>
+</tr><tr><td valign="top" align="left">2.9.</td>
+<td valign="top" align="left">One client changes “Meeting 1.1bis” to a different time, second client ‘refreshes’ its display to see the modification.</td>
+</tr><tr><th valign="top" align="left">3.</th>
+<th valign="top" align="left">Event retrieval</th>
+</tr><tr><td valign="top" align="left">3.1.</td>
+<td valign="top" align="left">calendar-query <tt>REPORT</tt></td>
+</tr><tr><td valign="top" align="left">3.1.1.</td>
+<td valign="top" align="left">No filtering (match everything)</td>
+</tr><tr><td valign="top" align="left">3.1.1.1.</td>
+<td valign="top" align="left">Query all components and return all data. (tests &lt;calendar-query&gt; and &lt;filter&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.1.2.</td>
+<td valign="top" align="left">Query all components and return ETag WebDAV property and all data. (tests &lt;calendar-query&gt;+ &lt;DAV:prop&gt; and &lt;filter&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.1.3.</td>
+<td valign="top" align="left">Query all components and return just entire <tt>VEVENT</tt> components. (tests &lt;calendar-query&gt;, &lt;filter&gt;+&lt;comp-filter&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.1.4.</td>
+<td valign="top" align="left">Query all components and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND</tt>/<tt>DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests &lt;calendar-query&gt;, &lt;filter&gt;&lt;comp-filter&gt;, &lt;calendar-data&gt;&lt;comp&gt;+&lt;prop&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.2.</td>
+<td valign="top" align="left">time-range filtering</td>
+</tr><tr><td valign="top" align="left">3.1.2.1.</td>
+<td valign="top" align="left">Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests &lt;calendar-query&gt; , &lt;filter&gt;+&lt;time-range&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.2.2.</td>
+<td valign="top" align="left">Query all components within a one week time-range and return just entire <tt>VEVENT</tt> components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests &lt;calendar-query&gt;, &lt;filter&gt;+&lt;time-range&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.3.</td>
+<td valign="top" align="left">component based filtering</td>
+</tr><tr><td valign="top" align="left">3.1.3.1.</td>
+<td valign="top" align="left">Query all components that contain an embedded <tt>VALARM</tt> component. (tests &lt;calendar-query&gt; , &lt;filter&gt;+&lt;comp-filter&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.3.2.</td>
+<td valign="top" align="left">Query all components that contain an embedded <tt>VALARM</tt> component whose trigger falls within a specific time-range. (tests &lt;calendar-query&gt;, &lt;filter&gt;&lt;comp-filter&gt;&lt;prop-filter&gt;+&lt;time-range&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.4.</td>
+<td valign="top" align="left">property based filtering</td>
+</tr><tr><td valign="top" align="left">3.1.4.1.</td>
+<td valign="top" align="left">Query all components that contain any <tt>ORGANIZER</tt> property. (tests &lt;calendar-query&gt;, &lt;filter&gt;&lt;prop-filter&gt;&lt;is-defined&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.4.2.</td>
+<td valign="top" align="left">Query all components that contain an <tt>ORGANIZER</tt> property with a specific CUA text value case-insensitively. (tests &lt;calendar-query&gt;, &lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;+&lt;caseless&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.4.3.</td>
+<td valign="top" align="left">Query all components that contain an <tt>ORGANIZER</tt> property with a specific CUA text value case-senstively. (tests &lt;calendar-query&gt;, &lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;+&lt;caseless&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.5.</td>
+<td valign="top" align="left">parameter based filtering</td>
+</tr><tr><td valign="top" align="left">3.1.5.1.</td>
+<td valign="top" align="left">Query all components that contain a <tt>DTSTART</tt> property with a <tt>TZID</tt> parameter. (tests &lt;calendar-query&gt;, &lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;&lt;param-filter&gt;&lt;is-defined&gt;)</td>
+</tr><tr><td valign="top" align="left">3.1.5.2.</td>
+<td valign="top" align="left">Query all components that contain an <tt>ATTENDEE</tt> property with <tt>PARTSTAT=NEEDS-ACTION</tt> parameter. (tests &lt;calendar-query&gt;, &lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;&lt;param-filter&gt;&lt;text-match&gt;)</td>
+</tr><tr><td valign="top" align="left">3.2.</td>
+<td valign="top" align="left">calendar-multiget <tt>REPORT</tt></td>
+</tr><tr><td valign="top" align="left">3.2.1.</td>
+<td valign="top" align="left">Query a specific href and return all data. (tests &lt;calendar-multiget &gt;)</td>
+</tr><tr><td valign="top" align="left">3.2.2.</td>
+<td valign="top" align="left">Query multiple hrefs (some of which do not exist) and return all data. (tests &lt;calendar-multiget&gt;)</td>
+</tr><tr><td valign="top" align="left">3.2.3.</td>
+<td valign="top" align="left">Query a specific href and return ETag WebDAV property and all data. (tests &lt;calendar-multiget&gt;+&lt;DAV:prop&gt;)</td>
+</tr><tr><td valign="top" align="left">3.2.4.</td>
+<td valign="top" align="left">Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests &lt;calendar-multiget&gt;+&lt;DAV:prop&gt;)</td>
+</tr><tr><td valign="top" align="left">3.2.5.</td>
+<td valign="top" align="left">Query a specific href and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND</tt>/<tt>DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests &lt;calendar-query&gt;, &lt;calendardata&gt;&lt;comp&gt;&lt;prop&gt;)</td>
+</tr><tr><td valign="top" align="left">3.2.6.</td>
+<td valign="top" align="left">Query multiple hrefs (some of which do not exist) and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND</tt>/<tt>DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests &lt;calendar-query&gt;, &lt;calendar-data&gt;&lt;comp&gt;&lt;prop&gt;)</td>
+</tr><tr><th valign="top" align="left">4.</th>
+<th valign="top" align="left">Event deletion</th>
+</tr><tr><td valign="top" align="left">4.1.</td>
+<td valign="top" align="left">Delete a single non-recurring meeting.</td>
+</tr><tr><td valign="top" align="left">4.2.</td>
+<td valign="top" align="left">Delete a single recurring meeting with no overridden instances.</td>
+</tr><tr><td valign="top" align="left">4.3.</td>
+<td valign="top" align="left">Delete a single recurring meeting with overridden instances.</td>
+</tr><tr><td valign="top" align="left">4.4.</td>
+<td valign="top" align="left">Delete a non-overridden instance of a recurring meeting.</td>
+</tr><tr><td valign="top" align="left">4.5.</td>
+<td valign="top" align="left">Delete an overridden instance of a recurring meeting.</td>
+</tr><tr><th valign="top" align="left">5.</th>
+<th valign="top" align="left">Access Control</th>
+</tr><tr><td valign="top" align="left">5.1.</td>
+<td valign="top" align="left">View access control details on current user’s main calendar.</td>
+</tr><tr><td valign="top" align="left">5.2.</td>
+<td valign="top" align="left">Change access control details on current user’s main calendar to add another user with read-only access. Verify that other user can view the calendar but not change it.</td>
+</tr><tr><td valign="top" align="left">5.3.</td>
+<td valign="top" align="left">Change access control details on current user’s main calendar to add another user with read-write access. Verify that other user can view the calendar and change it. Verify that changes done by one user are seen by the other.</td>
+</tr><tr><td valign="top" align="left">5.4.</td>
+<td valign="top" align="left">Remove another user’s access to the current user’s main calendar and verify they can no longer access the calendar.</td>
+</tr><tr><th valign="top" align="left">6</th>
+<th valign="top" align="left">Calendar Management</th>
+</tr><tr><td valign="top" align="left">6.1</td>
+<td valign="top" align="left">Browse the list of calendars on the server, including the current user’s personal calendars.</td>
+</tr><tr><td valign="top" align="left">6.2</td>
+<td valign="top" align="left">Create a new calendar in the current user’s personal calendar space.</td>
+</tr><tr><td valign="top" align="left">6.3</td>
+<td valign="top" align="left">Create a regular collection in the current user’s personal calendar space.</td>
+</tr><tr><td valign="top" align="left">6.4</td>
+<td valign="top" align="left">Create a new calendar inside the collection created in 6.3.</td>
+</tr><tr><td valign="top" align="left">6.5</td>
+<td valign="top" align="left">Delete the calendar created in 6.2.</td>
+</tr><tr><td valign="top" align="left">6.6</td>
+<td valign="top" align="left">Delete the collection created in 6.3.</td>
+</tr></tbody>
+</table>
+</clause>
+</sections>
+</csd-standard>

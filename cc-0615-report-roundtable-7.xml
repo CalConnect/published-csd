@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Roundtable VII, 26-29 September 2006</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0615:2006</docidentifier><docnumber>0615</docnumber><date type="published"><on>2006-09-29</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2006-09-29</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_c3a76917-ff91-5b1b-d92c-7d3a8171fa36">Roundtable VII took place on September 26-29, 2006, hosted by Apple Computer in Cupertino, California. The event was attended by sixty representatives to the IOP testing and/or the Roundtable, including representatives from nine observers (organizations attending a Roundtable to see if they wish to join).</p>
+
+<p id="_5455cdf1-5320-e8bd-f6b8-e0da254db1cc">Tuesday September 26th and Wednesday morning the 27th were a dedicated CalConnect Interoperability Test Event where participating organizations performed interoperability testing on their calendaring and scheduling implementations. Wednesday morning a reprise of the Federated Free/Busy demo originally done at The Open Group meeting in Miami in July, 2006 was arranged. Wednesday afternoon, all day Thursday, and Friday morning comprised the Roundtable. The majority of this time was dedicated to technical committee sessions, with an all-hands Plenary meeting as the last item on Friday morning. The Technical Committee sessions were organized sequentially, to allow all attendees who wished to be involved in the discussions of a Technical Committee the opportunity to do so.</p>
+</introduction></preface><sections>
+
+<clause id="_update_on_technical_committees_and_initiatives" obligation="normative">
+<title>Update on Technical Committees and Initiatives</title>
+<p id="_4a13c887-157c-e10c-dc2f-18f778918b11"><strong>Work Products</strong>: Since Roundtable VI, the <em>Mobile Calendaring Questionnaire Results</em> Document has been published. The  <em>Calendaring and Scheduling Glossary of Terms</em> will be published shortly after Roundtable VII, as will the  <em>CalDAV Scheduling Use Cases and Requirements</em> document.</p>
+
+<p id="_2642afc9-5865-0089-56a7-66d5d266e70f"><strong>TC-AUTHENTICATE</strong> has been shutdown. Currently work is ongoing in the IETF to specify new HTTP authentication protocols that can be utilized by CalDAV as well as other HTTP applications. As a result the Consortium’s technical committee chairs felt that TC-AUTHENTICATE was unnecessary right now, as there was no specific input from the Consortium that was needed.</p>
+
+<p id="_7b3ed58f-5c29-41e4-382a-2dbc05cb7278"><strong>TC-CALDAV</strong> continues to work on requirements for CalDAV Scheduling as input to the development of the scheduling draft for CalDAV, and will be focusing after this Roundtable on the areas of availability, scheduled event updates, and external attachments.</p>
+
+<p id="_461d258c-e398-724e-5aa4-070795e7d3f4"><strong>TC-EVENTPUB</strong> has developed use cases and requirements for the <tt>VVENUE</tt> iCalendar extension, which will be submitted to the IETF shortly after Roundtable VII as an individual submission by its authors, and will focus on event sharing and event server synchronization after this Roundtable.</p>
+
+<p id="_5537ceb2-a347-3880-23e9-12a153d69333"><strong>TC-FREEBUSY</strong> conducted the proof of concept Federated Free/Busy Demo in July and reprised it with additional participants, and will look at ways to extend the Freebusy aggregator and enhance the Free/Busy tool as a basis for further development.</p>
+
+<p id="_e733b981-039e-b1c9-6989-bbbff50d33a4"><strong>TC-IOPTEST</strong> conducted the IOP test event and is starting to consider the development of mobile calendaring tests in conjunction with TC MOBILE.</p>
+
+<p id="_18ec39c1-10bb-526f-05b3-82558969091c"><strong>TC-MOBILE</strong> discussed three major areas <em>The Benefits of iCalendar for the mobile industry</em>, a white paper under development; recurrence simplification for mobile devices as input to the IETF CALSIFY effort; and the development of a mobile calendaring IOP test suite and IOP test events for mobile devices; work on all of these will proceed after the Roundtable. The session was attended by a delegation of ten people from the OMA Data Sync working group, with which CalConnect has a liaison.</p>
+
+<p id="_66e48609-1fd0-ed8a-7fa9-7c1790dfe30b"><strong>TC-REALTIME</strong> is focusing on three major discussion areas: addressing, discovery, and authentication/authorization/access control, and will continue work in those areas after the Roundtable.</p>
+
+<p id="_aef5eea2-7989-6edd-a7e9-365009e0aa98"><strong>TC-USECASE</strong> has completed the Calendaring Glossary document which will be published shortly after the Roundtable, has begun work on the minimum interoperable subset for tasks ( <tt>VTODO</tt>s), and will undertake a study of recurrence features in mobile device support for TC MOBILE.</p>
+
+<p id="_3ba5bb88-3d99-71df-65bd-e2cd8f60c507"><strong>vCard Ad Hoc Group</strong>: One of the OMA/DS delegates presented a paper on vCard and on contact information in genera as part of a discussion on whether or not the Consortium should undertake any action in this area.</p>
+
+<p id="_0019ec84-9cd3-2d7a-df1b-5dd3d98657e2"><strong>CalConnect Interoperability Test Event</strong>: Participants in the IOP test event included Apple Computer, Eventful (formerly EVDB), Mozilla, OSAF and RPI (Rensselaer Polytechnic Institute). Results from the event will be posted at Past IOP Reports shortly.</p>
+
+<p id="_f6f2b268-6227-058c-90ea-e19819539bcb"><strong>NEW INITIATIVES</strong>: The Consortium is studying the possibility of undertaking work in several new areas, in particular vCard/contact information, resources, and a general assessment of Calendaring tools and specifications such as CalDAV/RSS-SSE/microformats and so forth. Possible work will be undertaken depending on whether or not the Consortium has resources interested in the work, and the development of charters and proposed work products appropriate for the Consortium.</p>
+</clause>
+
+<clause id="_future_meetings" obligation="normative">
+<title>Future Meetings</title>
+<p id="_25c156e2-ed57-7440-043b-e6a30f6a9d91">The next meeting (Roundtable VIII) will take place January 29 through February 2 in Provo, Utah, hosted by Novell. Due to the increasing size of the IOP test event, the format of the January meeting will be changed to span the week. The IOP test event will run from noon Monday (Jan 29) through noon Wednesday (Jan 31). The Roundtable will run from noon Wednesday (Jan 31) through noon Friday (Feb 2).</p>
+
+<p id="_97e84d4d-6b06-67e6-6e9f-069114bbc527">Roundtable IX will take place the week of May 7-11, location TBD.</p>
+</clause>
+</sections>
+</csd-standard>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">February 2009 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0902:2009</docidentifier><docnumber>0902</docnumber><date type="published"><on>2009-04-14</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Nate Barry</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Gordon Connelly</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Jong Yoon Lee</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Mu Zhang</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Bruce Wiedemann</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>2</edition><version><revision-date>2009-04-14</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2009</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_00b731d5-d923-19b5-259b-ba92f34b5407" obligation="normative">
+<p id="_2ff90088-afa3-d6ab-ae6c-e9f1e3224b5a">© 2009 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_5dc64d52-eb82-6490-e289-f82de4461af5">The February 2009 CalConnect interoperability testing event was held at the Microsoft campus at Redmond, Washington. Participants of the testing event used predetermined test scenarios. Rather than post the full scenarios in this document, they can be found on the CalConnect website at the following URL:  <link target="http://www.calconnect.org/ioptesting.shtml"/>.</p>
+
+<p id="_fef74f69-f48d-7cdf-7932-54efd4548439">The documents used in this testing event were the CalConnect CalDAV Matrix for Draft 08, in particular the scheduling section and an iCalendar/iMIP/iTIP testing matrix. Summaries and specific findings and issues found are noted in this document.</p>
+
+<clause id="_participants" obligation="informative">
+<title>Participants</title>
+<table id="_a60e0d63-1c60-2c2c-59fe-b72ab289bab7">
+<name>Participants</name>
+<tbody><tr><td valign="top" align="left">Organization</td>
+<td valign="top" align="left">Participants</td>
+<td valign="top" align="left">Versions Tested</td>
+</tr><tr><td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Cyrus Daboo<br/> Wilfredo Sanchez <br/> John Drummond <br/> Red Dutta</td>
+<td valign="top" align="left">iCal Server and client — OS X 10.5.3<br/> iCal client 3.03</td>
+</tr><tr><td valign="top" align="left">Entourage</td>
+<td valign="top" align="left">Mu Zhang</td>
+<td valign="top" align="left">Entourage EWS Beta (2008)</td>
+</tr><tr><td valign="top" align="left">Google</td>
+<td valign="top" align="left">Peter Colijn</td>
+<td valign="top" align="left">Google CalDav server</td>
+</tr><tr><td valign="top" align="left">IBM</td>
+<td valign="top" align="left">Nate Barry</td>
+<td valign="top" align="left">Lotus Domino 8.5/Lotus Notes 8.5</td>
+</tr><tr><td valign="top" align="left">Microsoft</td>
+<td valign="top" align="left">Bruce Wiedemann<br/> Brian Bishop</td>
+<td valign="top" align="left">Exchange 14 and Outlook 2007 w/Beta Service Pk</td>
+</tr><tr><td valign="top" align="left">PeopleCube</td>
+<td valign="top" align="left">Kellie Hunter<br/> Gordon Connelly</td>
+<td valign="top" align="left">Meetingmaker V8.8</td>
+</tr><tr><td valign="top" align="left">Yahoo/Zimbar</td>
+<td valign="top" align="left">Jong Yoon Lee</td>
+<td valign="top" align="left">Zimbra Server pre 5.0.7</td>
+</tr><tr><td valign="top" align="left">CalConnect Reps</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Interop Manager<br/> Logistics</td>
+<td valign="top" align="left">Pat Egen<br/> Dave Thewlis</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_participant_comments_and_findings" obligation="normative">
+<title>Participant Comments and Findings</title>
+<clause id="_caldav_testing" obligation="normative">
+<title>CALDAV Testing</title>
+<clause id="_vendor_1" obligation="normative">
+<title>Vendor 1</title>
+<p id="_502abd26-ccd1-80f4-b4b8-ee25fc775dd2">Vendor 1 tested both client and server products. On the server side we tested CalDAV client interactions as well as iMIP scheduling out from the server. Various issues were found and fixed.</p>
+
+<p id="_cd95e266-646d-fec0-557b-5fc69f94d91a">On the client side, CalDAV server testing was done and various issues discussed. The client also did iMIP testing with other clients and a few issues were found, and follow-ups after the event have happened.</p>
+</clause>
+
+<clause id="_vendor_2" obligation="normative">
+<title>Vendor 2</title>
+<p id="_d33d8c45-3778-f653-94a3-56a02fb39937">Vendor 2 was happy to test with some new server/clients. We did the basic client to client iCalendar testing. We do see some issues with different clients. It is good we’ve discussed with each product vendor and we’ve understood all the root causes of the issues.</p>
+
+<p id="_53ecbd95-30e9-7e1e-0d6e-9a82a4503913">General issues:</p>
+
+<ol id="_7c444a50-64a7-daa9-7450-89b2b11692d4" type="arabic"><li><p id="_d6f5878a-a6ff-2357-1872-892d5e3c90f7">Sequence number: Different design on sequence number in Cancellation or update caused the update or cancellation not recognized well.</p>
+</li>
+<li><p id="_20f82c34-6b10-baf5-23a7-6e2ed2d6efab">Cancellations are not recognized by different clients due to varied reasons</p>
+</li>
+<li><p id="_3cd1b33c-5128-f53f-860d-b6cbfee34515"><tt>RDATE</tt> issue. Vendor 2 doesn’t support <tt>RDATE</tt>.</p>
+</li>
+</ol>
+</clause>
+</clause>
+
+<clause id="_detailed_results" obligation="normative">
+<title>Detailed Results</title>
+<clause id="_vendor_1_2" obligation="normative">
+<title>Vendor 1</title>
+<p id="_7d704e40-39e3-e932-0b01-79baa4ee0476">Issues:</p>
+
+<ol id="_87b825f4-23cb-164b-1fc5-f7c707451008" type="arabic"><li><p id="_aca6b8b8-013b-52ac-fffa-43cd8da1f2e6">Vendor 1 calendar server will send duplicate update when organizer receives responses. i.e. the server considers the meeting is changed when responses are received.</p>
+</li>
+<li><p id="_f970d8b8-560f-57e3-bf74-5d1b6620f9ab">The cancellation for single occurrence in a series has the wrong date value (always points to the first occurrence of the series) in the “When” field and Body text. The iCalendar actually has the correct value and it can remove the correct occurrence from calendar.</p>
+</li>
+</ol>
+</clause>
+
+<clause id="_vendor_3" obligation="normative">
+<title>Vendor 3</title>
+<p id="_6e04f4bf-4341-fb70-6354-bcb24a591e80">We did good tests with Vendor 3 this time.</p>
+
+<p id="_d3b7ff0d-8cc1-d6c9-455f-99cfabe3c599">Issues:</p>
+
+<ol id="_54d3c2cf-6e64-a9ce-ed98-3a7cda692f5c" type="arabic"><li><p id="_30fa1eb8-8dbd-1b2b-f238-cdb704e4a40f">All Vendor 3’s cancellations, including cancellations for single meeting, for series or for occurrence in series, are not recognized in Vendor 2.</p>
+<ol id="_8aace072-b2db-98e5-83ec-570e2e841cb4" type="alphabet"><li><p id="_ac608348-59b8-ed36-153c-2fc6dae3ec79">The root cause is these cancellations do not have “ATTENDEE” section in the iCal. Vendor 2 requires this for any meeting message.</p>
+</li>
+</ol>
+</li>
+<li><p id="_afc873aa-1301-fd26-3648-b333c16df187">All Vendor 2’s cancellations, includes cancellation for single meeting, recurring series, or occurrence in series, are interpreted as “Update” in Vendor 3.</p>
+<ol id="_0df47d90-07ee-b719-3f1c-14f1cf35dbee" type="alphabet"><li><p id="_be70455a-4783-1c0c-c93a-9963a4551af8">The root cause is Vendor 2 doesn’t have “STATUS: CANCELLED” in the cancellation message. Notes require this section and the value has to be <tt>CANCELLED</tt>.</p>
+</li>
+</ol>
+</li>
+<li><p id="_80963e22-b31f-9c42-f684-82897266d40e">Vendor 3 uses <tt>RDATE</tt> for modified occurrence and in updating series.</p>
+<ol id="_08d44506-e52a-6075-6aa5-28949c3633c6" type="alphabet"><li><p id="_c534644a-b1ee-f020-8047-5f7a8a701a3e">Vendor 2 doesn’t support <tt>RDATE</tt>. The only issues happening now is Vendor 2 couldn’t interpret Vendor 3’s update to series. The original invite to series or update to modified occurrence are good.</p>
+</li>
+</ol>
+</li>
+<li><p id="_b4ede675-9840-83c2-13cd-57a8271acd26">Vendor 2’s update to single occurrence of the series is not recognized correctly in Vendor 3’s application:</p>
+<ol id="_7c539401-6d4d-fd91-d7df-83b1efc3662e" type="alphabet"><li><p id="_25eaf6b4-201b-d277-93b0-323e084d456a">This is because Vendor 2’s initial <tt>SEQ</tt> for such update is from 0. In Vendor 2 design, the  <tt>SEQ</tt> for modified occurrence is calculated separately from Series’ <tt>SEQ</tt>.</p>
+</li>
+</ol>
+</li>
+<li><p id="_fb43c39f-cc8d-496c-9ef6-7be54df323c4">Counter messages from Vendor 3 do not have Attendee status set to “Tentative”.</p>
+<ol id="_1a2386e2-da2e-10c8-06f9-edccc19ed26b" type="alphabet"><li><p id="_d5f8bff7-92ae-7031-9f2b-abfa7a6c7955">Vendor 2 doesn’t support Counter message. It only changes the Attendee status according to the value set in the message. iCalendar generated in Vendor 3’s Counter message has “Needs-Action” for this field.</p>
+</li>
+</ol>
+</li>
+<li><p id="_e4396929-a5d3-6e94-0424-f9645c110f5e">Vendor 2’s attachment in meeting messages are not shown up in Vendor 3.</p>
+<ol id="_c18ff199-6847-b8f7-ea9e-3333898a84ee" type="alphabet"><li><p id="_612f4f48-1ca2-b75b-1aaf-b1f17deff765">This seems to be a Vendor 3 bug so far.</p>
+</li>
+</ol>
+</li>
+</ol>
+</clause>
+
+<clause id="_vendor_8" obligation="normative">
+<title>Vendor 8</title>
+<p id="_44386539-de11-d72e-bc1c-a0d627d95f9f">Issues:</p>
+
+<ol id="_7612fef6-0b95-f819-2010-17023998bca0" type="arabic"><li><p id="_cb135206-1537-4251-f386-5a8a4222926a">All Vendor 2’s cancellations, includes cancellation for single meeting, recurring series, or occurrence in series, do not work in Vendor 4.</p>
+<ol id="_55ab94fb-3160-0fee-9495-0d19863198b8" type="alphabet"><li><p id="_ee244ebc-f5ad-d340-03b3-233ce973fdac">This is because Vendor 4 requires the <tt>SEQ</tt> number increased in the Cancellation. Vendor 4 is planning to fix this.</p>
+</li>
+</ol>
+</li>
+<li><p id="_458c38e3-b00f-2ca7-052e-9ac958e7a5e7">Vendor 4’s cancellations for series or for occurrence in series do not work in Vendor 2.</p>
+<ol id="_835a211a-374b-e8eb-23ce-52bbf615ce5f" type="alphabet"><li><p id="_b600860a-acbb-b1e9-0e6e-76bf844692c5">The root cause is these cancellations do not have “ATTENDEE” section in the iCal. Vendor 2 requires this for any meeting message.</p>
+</li>
+<li><p id="_5979fe02-5635-6ec1-9ff7-3ce51d32ca10">Vendor 4 has a bug here since Cancellation for single meeting does have this section. Vendor 4 is going to investigate this.</p>
+</li>
+</ol>
+</li>
+<li><p id="_a87fcb64-8d33-09f2-1e00-6a92139d512a">Vendor 4 does not increase sequence number for informational update</p>
+<ol id="_41665b36-1baa-f682-3e1c-fbc6b15d6978" type="alphabet"><li><p id="_500f3c07-7b84-0714-c4d9-7c05c0f7f10a">This shows an Vendor 2 bug here: Vendor 2 treats all meeting invites/updates with  <tt>SEQ=0</tt> as new invites, thus it changes the banner for previous invites/updates.</p>
+</li>
+<li><p id="_3ebef663-ac02-ec73-28a3-5fc1581646c7">Vendor 4 also treats changing “End time” of meeting without changing Start time as informational update.</p>
+</li>
+</ol>
+</li>
+</ol>
+</clause>
+
+<clause id="_vendor_5" obligation="normative">
+<title>Vendor 5</title>
+<p id="_9c4c860b-e081-257b-2e9f-2f42a116ae98">Our testing effort was minimal this time around due to issues involving the subscription method and URL we were using to configure the Vendor 1’s client and the Vendor 6 client.</p>
+
+<p id="_70b1cd08-040d-cad2-647b-9b3dc6e35ccb">We were able to take this issue back with us to discuss with our engineering team and now have a better understanding of the blocker issues and have corrected the problem.</p>
+
+<p id="_536b8fd5-c138-905c-e018-a080bdd9dcd8">To help continue our testing effort, we are looking to take advantage of the virtual environments available and will work toward setting up an environment to share with others in the group.</p>
+
+<p id="_dcc58a04-c726-91de-b645-1dfc53ebfd93">We are looking forward to the next testing session as we will bring in a more robust servlet for testing.</p>
+</clause>
+
+<clause id="_vendor_6" obligation="normative">
+<title>Vendor 6</title>
+<p id="_87c7dc96-3475-5735-a0e2-47d5e9995f47">Here’s the result of testing. We were using our home brewed CalDAV client against the following servers:</p>
+
+<ul id="_54133ee1-364d-32d8-415b-1430cd7fac44"><li><p id="_18e17afa-b4bb-a98a-1307-528e8f315dd1">Vendor 1 CalDAV Server</p>
+</li>
+<li><p id="_2b02d1bd-aa3d-41e9-b957-851b5a849ff1">Vendor 4 CalDAV server</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_tests_performed" obligation="normative">
+<title>Tests Performed</title>
+<p id="_b885f25c-b0e4-38b6-ff28-7a9a2bbaf0d1">The following tests were done against all the servers:</p>
+
+<ul id="_b27ca3ea-484d-f6d5-9dd4-a94468519613"><li><p id="_2a01c8bc-5b19-7310-c31c-2274c824af0f">authentication using HTTP basic auth</p>
+</li>
+<li><p id="_17cce4a2-b150-a1de-6261-6ac55f66626f"><tt>PROPFIND</tt> on principal url</p>
+</li>
+<li><p id="_e07c3b99-ae87-7cae-10ec-e9faa3521138">creating new non-recurring events</p>
+</li>
+<li><p id="_007fcab3-53c6-de54-13a1-280727871c45">modifying non-recurring events (start/end time, summary, description)</p>
+</li>
+<li><p id="_475eebdb-4d33-2981-e0c8-a047a9b41f00">creating new recurring events</p>
+</li>
+<li><p id="_21be95d5-07d0-3734-938e-0a7b48f47704">creating an exception to recurring events</p>
+</li>
+</ul>
+
+<p id="_d549e932-4f71-256a-c439-b59670421349">Vendor 1 and Vendor 4 servers passed all the tests.</p>
+</clause>
+
+<clause id="_icalendar_testing" obligation="normative">
+<title>iCalendar Testing</title>
+<clause id="_vendor_3_2" obligation="normative">
+<title>Vendor 3</title>
+<p id="_5072748c-8b57-86bc-dee0-d5eca9099d06">Overall we were pleased with the amount of testing and with the results of the testing. Vendor 2 and Vendor 6 testing had never been done previously and was more successful than would have expected. While there was only small progress made since the last test event between Vendor 3 and Vendor 1 and Vendor 7, we certainly pinned down some specific problems that we can address in coming releases which made this event very valuable.</p>
+
+<p id="_f244f512-7a72-985c-ddfb-d3a653f49347">Notes on specific vendors:</p>
+
+<p id="_4421139a-efd7-773c-eb87-d7da5eb7b873">Vendor 3:</p>
+
+<ul id="_483ca2a4-f973-d9d1-c9c2-cd6d7186cc6f"><li><p id="_af6bee5c-0ec3-8326-a18b-a5d237537d55">Cancellations to some clients are not honored — likely due to no <tt>ATTENDEE</tt> listed on cancellation. Notes to investigate and address.</p>
+</li>
+<li><p id="_5afc5204-555c-4463-94f4-836227292769">Investigate being lenient of missing <tt>STATUS:CANCELLED</tt> on cancellations coming to us.</p>
+</li>
+<li><p id="_0f6cda5e-4600-dd28-1207-97ddaf37e680">We will make an attempt to improve user experience around receiving series updates/reschedules.</p>
+</li>
+<li><p id="_51e978b0-e78c-f2a8-4afa-6cd52cd52d4b">We will consider sending out an alternative block even when sending simplified MIME to provide richer experience for some clients.</p>
+</li>
+<li><p id="_c1f55a63-b045-6dbb-c28b-37ef67951f9a">Overaggressive name matching caused some response tracking errors</p>
+</li>
+</ul>
+
+<p id="_2e45ca67-a237-182d-c77f-74a374e2a286">Vendor 7a:</p>
+
+<ul id="_47eb90f5-d270-0e91-f3db-24a42d467e74"><li><p id="_74607a93-0fc2-8929-7f1e-e19e9c6e54dc">No major surprises.</p>
+</li>
+<li><p id="_cba00fce-73aa-3a6b-ceaf-41cd6423188c">We do not implement <tt>RDATE</tt>s on invites/updates/reschedules. Now (incorrectly) says ‘not a valid iCal file’.</p>
+</li>
+<li><p id="_92856e72-95d1-8792-33d3-29a818b1b41b">Does not handle rich content in description.</p>
+</li>
+<li><p id="_32c53697-4a1f-7ad4-f2ba-039d64cd0142">There was a bug found with counter-proposals of a single instance of a repeat set.</p>
+</li>
+<li><p id="_98e9eda9-947b-6d47-7b25-ed7ea61ef204">Comments ARE shown when they come from iCalendar — This has improved since October.</p>
+</li>
+<li><p id="_370162ec-6f9f-1f10-7468-ae50e0df2c50">Cancel all somewhat worked accidentally via corruption. This is certainly livable but not ideal.</p>
+</li>
+<li><p id="_149c97c5-6bdc-2fd7-1b08-7c06957f7ea9">There seems to be a display issue with original time on counter-proposals</p>
+</li>
+<li><p id="_c00e3b86-7287-5ee4-2b4c-02080a5e2096">Name matching problems cause response tracking errors</p>
+</li>
+</ul>
+
+<p id="_25121e8a-5caa-e003-bac3-434ab5fcffb1">Vendor 7b:</p>
+
+<ul id="_099bc2fb-dc8e-80a4-b1d8-69d51c6c20c3"><li><p id="_bc156860-be6e-ee41-4fb9-fd858f4bd50a">Vendor 3 worked largely to the expected extent…​ no major surprises.</p>
+</li>
+<li><p id="_fd005e67-5fd4-806b-754a-d26f400ca27a">Does not implement <tt>RDATE</tt>s on invites/updates/reschedules. They now (incorrectly) say ‘not a valid iCal file’.</p>
+</li>
+<li><p id="_fd22d021-9a65-19d6-746e-e94368c16171">Does not handle rich content in description.</p>
+</li>
+<li><p id="_4c6c7ddb-611f-7aae-4185-91bceea819e8">Cancellations do not work. Both Vendor 1 and Vendor 7 have plans to address.</p>
+</li>
+<li><p id="_45d35a79-91c4-939f-1780-03298bb43666">Counters are not handled correctly by Vendor 3. Investigation needed.</p>
+</li>
+<li><p id="_a190d324-ec3c-0d52-f659-79662050563c">Acceptance notice didn’t seem to come</p>
+</li>
+<li><p id="_403485d7-ccf2-a460-a795-997f3ee9281d">Decline of a counter-proposal from Vendor 3 was not handled.</p>
+</li>
+<li><p id="_2fadc8d7-8eec-0286-89f8-154003d129aa">Name matching problems cause response tracking errors</p>
+</li>
+<li><p id="_a2adfb5c-b562-8452-cafe-cd279783172c">Cosmetic issues:</p>
+<ul id="_24f32b46-b8a3-9e99-b6a4-d5b56462e6b5"><li><p id="_25c0633a-1804-c2a5-3313-58d32ccc83e9">Does not append ‘rescheduled’ to a rescheduled meeting.</p>
+</li>
+<li><p id="_2a4e0ed5-1b90-a116-00fb-89e471d1797c">There is timezone munge in the body showing incorrect timezone, but it comes through fine otherwise.</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<p id="_31487f3c-b854-dc70-4044-ab5aea400c48">Vendor 6:</p>
+
+<ul id="_90641213-3dbe-6f75-2110-b8a7813c8b76"><li><p id="_2538926d-85d9-e0e1-6456-6c2f94db3e1a">This testing was very successful even for complicated issues. Good job!</p>
+</li>
+<li><p id="_acd01887-9dba-1985-5899-1f54eb08a830">Reschedules of a single instance need to increment sequence number. Vendor 6 to address.</p>
+</li>
+<li><p id="_4f7ae944-67d5-bd7c-9277-fa2a973b5e33">Questions on why some meetings show plain text and some show rich content — Vendor 6 to investigate</p>
+</li>
+<li><p id="_8650dd48-a840-4a05-309f-8ca4b50d9222">Responses from Vendor 3 do not show any body — they will address by including an alternative block even when simplifying MIME.</p>
+</li>
+<li><p id="_3dffc44c-745d-f1c9-8ea1-2867dc6749a6">Does not implement counter-proposals</p>
+</li>
+</ul>
+
+<p id="_e764d986-c4a6-73b2-a9a0-0e037a203f39">Vendor 1:</p>
+
+<ul id="_bfe06c0c-c98d-7288-d005-0f3c995106d2"><li><p id="_150b8913-02e8-cd8f-2cfd-3113fdfe8a05">Still sends ics attachments rather than actual workflow. Some clients (Vendor 4) have hacks to treat this like workflow, but it is not valid. MIME edits to make these ics attachments is minimal, and Vendor 1 is taking these changes back to see if they can implement, although this might be difficult due to limited Mail APIs.</p>
+</li>
+<li><p id="_56f228f4-b2a7-895f-8965-52e8dc7e9227">Rich text is not handled by Vendor 1 Mail</p>
+</li>
+<li><p id="_f70d101a-2637-b9bb-8644-e3e415fdf52a">Vendor 1 mail loses attachments from Vendor 3</p>
+</li>
+<li><p id="_8d205869-67d0-c8e0-c81f-eeb92a064315">Vendor 3 does not handle Vendor 1’s inline or URI attachments — Vendor 1 to investigate</p>
+</li>
+<li><p id="_42643fab-ca8c-4371-b1f6-60dd1c4a835c">Cancellations from Vendor 1 do not show as such in Vendor 3 (<tt>STATUS:CANCELLED</tt> problem). Actions by Vendor 3 and Vendor 1 planned.</p>
+</li>
+<li><p id="_133bc700-bcf5-4c8f-0e88-482d46035cf0">Cancellations from Vendor 3 do not show as such in Vendor 1. This is likely a bug with <tt>ATTENDEE</tt> not specified.</p>
+</li>
+<li><p id="_81fb6c2d-a438-7818-def8-148688abfc58">Vendor 1 was not tested very much beyond this as working with the attachments is difficult.</p>
+</li>
+</ul>
+
+<p id="_fde79275-a291-b2d7-f2e4-0331a249153c">Vendor 1 CalDAV:</p>
+
+<ul id="_3991ea7d-33a3-025e-f505-579fbd2fcc02"><li><p id="_f90c72a8-23c9-b425-3556-a0c709193737">This is only one way as one cannot invite an Vendor 1 CalDAV user to a meeting (this uses iCal)</p>
+</li>
+<li><p id="_996ab405-a40f-d00d-f1e8-98f308413f18">Cancellations from Vendor 1 do not show as such in Notes (<tt>STATUS:CANCELLED</tt> problem). Actions by Vendor 3 and Vendor 1 planned.</p>
+</li>
+<li><p id="_0043b2ed-37ac-9236-4bd8-fe4bfc5de8d8">Attachments from Vendor 1 are not working with Vendor 3 — Vendor 1 to investigate.</p>
+</li>
+<li><p id="_3719ff6b-2c51-d650-7c36-ce4378fc0285">Vendor 3 and Vendor 1 will meet in a month or so to retest some scenarios as server problems stopped testing prematurely and because we have some bugs to fix.</p>
+</li>
+</ul>
+
+<p id="_6e2b815a-9504-3b50-f773-c13ffbc7b415">Vendor 2:</p>
+
+<ul id="_c8857cd1-59d0-57c3-5c54-3194fb7ad7bd"><li><p id="_fe735b57-d0ef-0ba3-ef1b-5dacfd4be90a">Vendor 2 testing worked fairly well, with most problems encountered inherited from Outlook.</p>
+</li>
+<li><p id="_0ee7588c-a3d4-f409-c03d-94ea9f3caa41">Vendor 2 does not implement <tt>RDATE</tt>s on invites/updates/reschedules and this causes major data loss.</p>
+</li>
+<li><p id="_ca7d2b66-f925-6278-2ace-5851973142b9">Vendor 2 does not handle rich content in description.</p>
+</li>
+<li><p id="_8ef9a7bb-e819-ad9b-793c-2944b10b8c79">Cancellations from Vendor 2 do not show as such in Vendor 3 (<tt>STATUS:CANCELLED</tt> problem). Actions by Vendor 3 and Vendor 2 planned.</p>
+</li>
+<li><p id="_ac2c365a-d016-d5f5-fd1a-f6c17cddfab3">Cancellations from Vendor 3 do not show as such in Vendor 2. This is likely a bug with <tt>ATTENDEE</tt> not specified.</p>
+</li>
+<li><p id="_ba168919-9f19-d548-b5ce-5d59d9c4c7e2">Seem to have a problem with Vendor 2 attachments — Vendor 3 to investigate.</p>
+</li>
+<li><p id="_ad8d7993-2d6f-a9ab-5a19-9c1864fba214">Counters are not implemented.</p>
+</li>
+<li><p id="_0eb57312-2621-04c8-3663-b981429e3048">Updates/Reschedules from Vendor 2 fail. I don’t have the details of this written down but I believe that this was a problem where Vendor 2 did not update the sequence number.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_vendor_7" obligation="normative">
+<title>Vendor 7</title>
+<p id="_4c222695-085d-5fb1-08c1-fb006eab0464">Since this was our first real experience with CalConnect, we did not really have specific testing goals, but our focus was to get accounted with the people and products that were attending CalConnect. It was a real pleasure to meet all the people we got accounted with through the interoperability testing event. It was also good to get a better understanding of many of the clients customers will be using to interoperate with our application.</p>
+
+<p id="_e8429657-b2de-0a70-d2ca-2b296c4c2372">We really look forward to ongoing interactions with everyone we worked with through CalConnect. Below are notes I took on our interaction with specific vendors:</p>
+
+<p id="_5be51638-a57e-01b4-d8b2-09ce07270874">Vendor 3:</p>
+
+<ul id="_1e0b9c92-4de7-7db1-ec3a-d4217f66c703"><li><p id="_b54600db-8b94-eba9-a9d3-dce90fc83ca0">On single instance items, we are not showing the time zone for the item sent from another time zone. It is the correct time, but only shows the local time zone. (known issue)</p>
+</li>
+<li><p id="_619a57c8-2b79-e66e-f3b4-b173d5d194fe">When Vendor 3 changes the time of a meeting, the subject in our client connect through our server changes prepends Rescheduled, and the direct pop client does not put anything extra in the subject.</p>
+</li>
+<li><p id="_74861643-9cd5-74f4-21f1-6c3e1fb2622b">Auto Configuring a Vendor 8 profile through our application, connected with POP. It connected as IMAP. (investigating)</p>
+</li>
+<li><p id="_2ab24cab-cb14-ec29-cec3-9f0df7ed865a">Default setting for meeting processing for Vendor 9 POP is turned off. I need to confirm this is expected for POP. (investigating)</p>
+</li>
+<li><p id="_ac1d3f8a-9454-e8c6-7e8a-56edd9543cb8">Default setting on Vendor 8 POP is to decline on propose new time. I need to confirm this is expected for POP. (investigating)</p>
+</li>
+</ul>
+
+<p id="_362d1357-e650-9d33-f1e5-fc4a34216647">Vendor 1:</p>
+
+<ul id="_efbcb140-8fb9-fd20-b52e-e0612a61d6cb"><li><p id="_a58cf4aa-8410-2b80-87c4-d3ed39f48d57">Meeting request from Vendor 1 is not recognized as meeting requests and must be processed by opening .ics file which may or may not cause some of the other issues below. These cases all need to be confirmed with another client or once this issue is fixed.</p>
+</li>
+<li><p id="_52c91f70-95ae-c6d8-9e53-0a062fba816e">Clicking Accept on ICS attachment for updated informational item does not send acceptance. Since it should be informational, we do not send an acceptance, but the buttons should not show up on informational update.</p>
+</li>
+<li><p id="_7b6d302f-0af5-7ab6-8039-c062aae4fc60">Informational update does not show as informational.</p>
+</li>
+<li><p id="_4c92f3bd-c31a-94a0-5091-06dcd42f5d0c">Decline an instance then receive an update for a new time on declined instance, and client does not prompt to send an acceptance.</p>
+</li>
+<li><p id="_7accab95-9259-54cf-aa99-938f6b57dcb1">Receiving a meeting update with attendee change where someone else is added, I am prompted to Accept. I would expect this to be informational.</p>
+</li>
+<li><p id="_29584ad2-9ef6-d006-6bc4-a7b37e25faad">Closing recurring ICS attachment prompts me to save on meeting request in inbox. This does not repro for single instance ICS file.</p>
+</li>
+<li><p id="_883386cf-050b-8590-08bd-6e2a385d25c8">On meeting Cancellation, the processing of the cancellation removes the meeting from the calendar without clicking the Remove from calendar button.</p>
+</li>
+<li><p id="_ea746fdc-850e-3482-020c-cc3d7ab5d69d">Remove from Calendar on our server account on cancellation from Vendor 1 does not remove any instance from my calendar. This also happens when sent from Vendor 1 client. It did the right thing when sent from the server, but when sent from Vendor 1 it does not.</p>
+</li>
+<li><p id="_95a0e629-c58b-94a2-4373-e3cc029f9cbd">When our client accepts a Vendor 1 recurring meeting, the acceptance contains an attachment when viewed with Vendor 1’s client.</p>
+</li>
+</ul>
+
+<p id="_63b58d10-5448-9c20-da25-981507789228">Vendor 2:</p>
+
+<ul id="_1a435ac0-877d-9b5a-e3ec-878b150af1f5"><li><p id="_7a16a219-274c-2c2b-36ee-3cbf3670a1ba">All interoperability cases we tried in the test event worked as expected.</p>
+</li>
+</ul>
+</clause>
+</clause>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_84eb9999-1f56-e5a1-5951-358f1c1d53db">This Interop showed continued improvement in iCalendar interoperability. On the CalDAV side of testing, several issues regarding Cancellations of calendar events showed up during testing. This should be an area of focus at the next Interop session.</p>
+
+<p id="_d84b4f76-5e51-7998-2d9c-46556d4f4cd8">Our thanks to all participants and contributors to this document.</p>
+
+<p id="_37a7a93b-ff9d-236c-e7dd-c5c52cf190b2">Respectfully submitted by Pat Egen, CalConnect Interoperability OP Testing Manager</p>
+</clause>
+</sections>
+</csd-standard>

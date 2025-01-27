@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Interoperability Test Event XXIX, February 3-5, 2014</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1402:2014</docidentifier><docnumber>1402</docnumber><date type="published"><on>2014-02-28</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2014-02-28</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2014</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_05279a05-0a0b-6451-fbd4-fbd6ac0103f2" obligation="normative">
+<p id="_5ec0293a-3e54-b21d-4834-71c6677c8e06">© 2014 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_8d3a83de-c239-3714-aea1-2e845d7e2956" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_29007362-ac9c-24ea-99a6-e89b1f229577">This document was prepared by Technical Committee <em>IOPTEST</em>.</p>
+</foreword></preface><sections>
+<clause id="_report" obligation="normative">
+<title>Report</title>
+<p id="_399b2a03-8748-b60f-5062-354a2486049b">The interoperability test event at CalConnect XXIX, hosted by Mozilla, San Francisco, California took place on Monday February 3 through Wednesday morning February 5.</p>
+
+<p id="_950cb8db-03b0-290f-f673-85488a9c4e06">There were 11 members participating onsite represented by 20 individuals; two members participated remotely. Participating were:</p>
+
+<ul id="_8f02cc2d-84ca-d60c-e4aa-e2fe44ea7d81"><li><p id="_e48d753c-c9e9-1289-e37d-3e436a0381aa">AOL — CalDAV Scheduling</p>
+</li>
+<li><p id="_0444f4c0-88fb-38b1-e93b-5a998ba83996">Apple — iCloud, iCal Client, Calendar Server</p>
+</li>
+<li><p id="_c10842ea-b72c-9639-edb4-d3b6f9e3c173">BusyMac — remote testing</p>
+</li>
+<li><p id="_93430b82-606e-ebdc-765e-66c86b90cb37">CMU — CalDav Scheduling, timezone service, jCal/xCal, test suite (load testing)</p>
+</li>
+<li><p id="_6accd8c2-e4e0-e3ff-bd3e-66eb1f772b13">Marten Gajda — remote testing — sync-collection CalDAV  CardDAV, managed attachments, PUSH notification</p>
+</li>
+<li><p id="_9daac18a-6f92-c319-ba1e-96f0eb6230e6">Milton.io — general testing, CardDAV with clients</p>
+</li>
+<li><p id="_9103dfe0-0c90-ad8b-9182-93664a1c0796">Mozilla — Firefox OS/CalDAV</p>
+</li>
+<li><p id="_456ff5b8-4d87-fad3-d609-d1d27720f98d">Oracle — CalDAV Scheduling, iMIP, CardDAV</p>
+</li>
+<li><p id="_dc9ea8d4-50b4-afb4-4ace-b12695c95004">Ribose — CalDAV access and scheduling, CalDAV sharing, CalDAV Tester</p>
+</li>
+<li><p id="_03816f18-f5fe-450f-5f9d-4706d5dabf3d">RPI — VPOLL — test suite — sharing and notifications</p>
+</li>
+<li><p id="_74b869bb-0876-95ef-31db-cd378a3597b8">Softly Software — Basic CalDAV and iCalendar</p>
+</li>
+<li><p id="_a9e55039-8f7a-98a6-7ca0-23bdb424ba3c">University of Wisconsin — mostly observing</p>
+</li>
+<li><p id="_c1fe11a3-7bfb-e8c3-59c1-7e9e229f4a5b">Yahoo! — CardDAV, CalDAV</p>
+</li>
+</ul>
+
+<p id="_044eb527-d779-c848-f767-f44855fb2f83">As usual there was a lot of testing of basic CalDAV features. Some client applications are developing CalDAV support and there are some newer server implementations that need to test.</p>
+
+<p id="_57057c2d-de12-b7f2-24ac-5384c29eb295">As we did at the last event we had a session led by Cyrus Daboo describing the CalDAV test suite and updates he had recently made to address some issues raised. Newer issues are related to using the test suite in an automated test environment and defining a subset of the tests which check the basic functions of CalDAV and CalDAV scheduling. The full test suite checks out many obscure issues, often related to recurrences. The session helped get some of the server implementors successfully running the test suite. It is expected that we will do more work on developing this suite during the next event.</p>
+
+<p id="_aeebfd94-7c96-2e7f-1229-799976666f55">There was some more testing of the timezone server specification which has had some minor updates since the last interoperability test event. This resulted in some further changes to the specification. A new feature of the specification is the ability to request and deliver truncated timezone specifications, allowing for much smaller sets of data to be transferred. There was some testing of this feature and some minor fixes resulted.</p>
+
+<p id="_a78966b1-baef-6adb-be47-fbe3ebe98476">There was some further testing of the new JSON jCal and JCard specifications and some parsing problems were resolved — mostly in recurrence rules.</p>
+
+<p id="_7e977128-9907-4dc8-59b5-e2bbe482b2f9">Some of the client developers tested some of the more awkward calendar issues such as uploads of medium to large sets of data which revealed problems in a number of server implementations.</p>
+
+<p id="_ee3ebe7e-b488-d58b-0548-353981d52f76">The tests revealed many issues relating to the parsing and delivering of iCalendar data which are difficult to spot in production systems, such as:</p>
+
+<ul id="_aff2758a-6194-1906-7216-d5df495643fd"><li><p id="_86de14d5-9013-6041-8370-6c5e29899503">Incorrect escaping of <tt>GEO</tt> values causing server exceptions</p>
+</li>
+<li><p id="_ece952b3-6e4a-e57b-a597-038f9766e51b">Clients generating invalid end dates and server not handling them correctly</p>
+</li>
+<li><p id="_c26eafe4-6d3f-d0ae-853e-eea080be25e9">Events with attendees but no <tt>ORGANIZER</tt></p>
+</li>
+<li><p id="_fcf6136e-271d-3a60-cf2e-b37b79e07e55">Failures during calendar creation due to unsupported properties</p>
+</li>
+</ul>
+
+<p id="_e7f0aacf-9cfc-568f-ad51-1158d9a7bf9b">The testing and resulting fixes generally result in more robust systems that react better to invalid data being presented — as well as, we hope, less invalid data.</p>
+
+<p id="_75031881-8d96-e077-c7ac-36c9f1ee5703">Some of the new clients were able to test against a range of the servers available and reassure themselves that the clients were able to deal with most of the basic CalDAV features.</p>
+
+<p id="_5cc356a8-59d5-e751-09b6-18924317113d">Mike Douglass, CalConnect Interoperability Test Manager</p>
+</clause>
+</sections>
+</csd-standard>

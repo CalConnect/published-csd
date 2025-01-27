@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Roundtable II, 11-13 January 2005</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0511:2005</docidentifier><docnumber>0511</docnumber><date type="published"><on>2005-01-13</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2005-01-13</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2005</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7fbaec4b-0250-84e7-0e43-81775debe8a4" obligation="normative">
+<p id="_cdc4fc6d-0ab8-7040-218a-aee9d6fd453d">© 2005 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_71b0471c-39db-8c9a-44e9-dab9ce5a6be2">The first post-launch event of The Calendaring and Scheduling Consortium took place on 11-13 January, 2005, sponsored by the University of Washington in Seattle. The event was attended by 31 people representing 16 organizations. The Roundtable event consisted of two days of Technical Committee meetings, followed by an all-hands plenary meeting of the membership and attendees. The first two days, a CalConnect Interoperability Event was held in parallel with the Technical Committee meetings. The Technical Committee sessions were organized sequentially, to allow all attendees who wished to be involved in the discussions of a Technical Committee the opportunity to do so, and there was definitely “drift” between TC sessions and those participating in the CalConnect Interoperability Event.</p>
+</introduction></preface><sections>
+
+<clause id="_new_initiatives" obligation="normative">
+<title>New Initiatives</title>
+<p id="_f9149d59-51fc-739c-5119-ef72c35e9303"><strong>TC-TIMEZONE</strong> was formed as a result of work being done in CalDAV showing the need for a formal time zone registry; iCAL needs this as well. Some work has been done in the past in this area; the new Technical Committee will gather the work that has been done and develop a proposal as to how best to move this forward.</p>
+
+<p id="_d11d8173-d691-dd87-d501-fde667362706"><strong>TC-EVENTPUB</strong> was formed based on work being done at UC Berkeley and elsewhere to develop a precise understanding of event publishing and how it differs from general scheduling problems, with the goal of attracting efforts being done in several academic institutions and elsewhere to combine into a single work project and Technical Committee within CalConnect.</p>
+
+<p id="_fc7b61b8-51fb-8f5d-82d0-9e5401182584"><strong>TC-CALSIFY</strong> was re chartered with an expanded scope to support and help drive the CALSIFY effort in the IETF via a Working Group to consider the potential revision of RFC 2445.</p>
+
+<p id="_a8ee5102-7bad-a79e-89d7-df56a50e8ff1"><strong>Glossary Project</strong>: The work done in the USECASE Technical Committee has shown the need for a taxonomy document for common vocabulary and glossary for calendaring and scheduling. Ms. Egan volunteered to act as Project Editor to compile a first draft document for circulation by mid- February. The Glossary, once complete, will be posted and publicly available on the CalConnect website.</p>
+
+<p id="_4767f32c-f409-b77d-9f90-41abd967f0f3"><strong>External Communications</strong>: The Consortium has chartered an ad hoc group to develop proposals for publicity, promotion, and recruitment, e.g. ways of communicating activities in calendaring and scheduling, such as an RSS Feed for the C space, speaking appearances at technical conferences and trade shows, and an expanded website presence including links to sites offering calendaring functionality.</p>
+</clause>
+
+<clause id="_calconnect_interoperability_event" obligation="normative">
+<title>CalConnect Interoperability Event</title>
+<p id="_5e5cdb06-b5ad-49c0-9014-c599d90c457a">Participants in the CalConnect Interoperability Event included Isamet, Mozilla, Oracle, and the University of Washington. The major part of the CalConnect Interoperability Event was CalDAV testing; this was the first formal interoperability testing of CalDAV implementations, and demonstrated basic interoperability between two CalDAV servers (Isamet, Oracle) and three clients (Isamet Mulberry Desktop and Mobile Clients and Mozilla). The results of the CalConnect Interoperability Event should be available by early February and will be posted on the Consortium website and delivered to the IETF.</p>
+</clause>
+
+<clause id="_technical_committees" obligation="normative">
+<title>Technical Committees</title>
+<p id="_9f8d4771-17fa-e738-b261-1c533ad9d989">Five Technical Committees met on Tuesday and Wednesday.</p>
+
+<p id="_67d4bd54-934d-2424-bf0a-1dbb57b481a4">The Min-IOP Technical Committee is working to develop a comprehensive table of which features of iCAL are actually implemented in which Calendaring products and are able to interoperate successfully. The goal is to determine the minimum interoperable subset of functions defined by the three RFCs which are actually in use and which must be succesfully carried forward into any revision or “simplification” of RFC 2445, iCalendar. The Technical Committee is actively involved in developing this matrix and determining how well the matrix maps to what the needed minimum actually is.</p>
+
+<p id="_67034731-d46f-4145-e776-e8a6c5e33e1f">The CALDAV Technical Committee will produce scenarios for additional CalDAV testing for the next CalConnect Interoperability Event, then turn to assisting CalDAV authors in submitting the CalDAV draft to the IETF. They expect to use the use cases from the USECASE TC and anticipate contributing additional use cases. CALDAV is very interested in being able to conduct virtual Interops on a monthly basis and will work with IOP/TEST and the IOP Manager to accomplish this under Consortium auspices. The Oracle and Isamet CalDAV servers are available on the internet for client testing.</p>
+
+<p id="_c9cc14de-6c61-17da-6659-9c1234107571">The CALDAV participants were heavily involved in the CalConnect Interoperability Event and also provided several demonstrations to the Roundtable:</p>
+
+<ul id="_3cbb6b95-11b7-74e3-5e8b-a56a2268cf07"><li><p id="_db5f9202-331a-e0de-1dd1-889d1a133da9">Mozilla’s Sunbird and Oracle Calendar with CalDAV protocol adapter</p>
+</li>
+<li><p id="_14e30904-a923-7c81-9917-2f06493bb539">Mozilla’s Sunbird and Oracle’s Exchange CalDAV protocol adapter</p>
+</li>
+<li><p id="_f387153e-4e7f-e14f-b0de-b8c4bf047079">Isamet Mulberry Desktop Client and Isamet CalDAV server</p>
+</li>
+<li><p id="_fcb9beaa-d582-3800-9fa8-faa91d9c3dac">Isamet Mulberry Mobile Client and Isamet CalDAV server</p>
+</li>
+</ul>
+
+<p id="_2cfdbdcd-4f48-3765-1058-456a805fb888">The IOP/TEST Technical Committee is working to develop and formalize the Consortium’s CalConnect Interoperability Event testing. Among the issues being addressed by the Technical Committee are planning and implementing virtual and ad hoc interops; how to contact nonmembers about CalConnect Interoperability Event testing; how to establish CalConnect Interoperability Event planning early on and integrate product planning; and how to conduct multiple CalConnect Interoperability Event tests together. The Committee is also beginning discussions on a reference implementations which for ad hoc testing by implementers as a service from the Consortium to promote calendaring and scheduling standards.</p>
+
+<p id="_613ba0f0-aaae-ed61-2858-6925282e080b">The RECURR Technical Committee was only able to meet briefly as the Chair was not able to come to the Roundtable and had to join the TC by teleconference. The problem statement for the TC was reviewed and narrowed to focus on recurrence rule problems. An additional effort will be to identify and document the specifics of existing problems with recurrence rules as part of the MIN-IOP effort.</p>
+
+<p id="_fa02823c-b88d-0a29-6d65-bb49bf09d89d">The USECASE Technical Committee spent substantial time compiling a set of Use Cases identifying “real world” requirements for interoperable calendaring and scheduling implementations. Some 29 specific use cases were documented. The next steps will be to develop a ranking method and continue to add use cases from other members, and from other Technical Committees.</p>
+</clause>
+
+<clause id="_future_meetings" obligation="normative">
+<title>Future Meetings</title>
+<p id="_979f70d2-39e9-8a52-642c-0fd701e6125e">Three regular meetings per year were agreed, roughly in January, May, and September. The membership is strongly in favor of holding combined 2-1/2 day events featuring a CalConnect Interoperability Event, Technical Committee meetings, and a membership plenary, after the model followed at this Roundtable. The Consortium will attempt to alternate meetings between the east and west coasts. The next meeting (Roundtable III) will take place 1-3 June, 2005, hosted by Duke University in Durham, North Carolina. The following meeting will be in mid- to late September, on the west coast.</p>
+</clause>
+</sections>
+</csd-standard>

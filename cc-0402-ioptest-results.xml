@@ -1,0 +1,2026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">July 2004 CalConnect Interoperability Test Results Spreadsheet</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0402:2004</docidentifier><docnumber>0402</docnumber><date type="published"><on>2004-07-30</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2004-07-30</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2004</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_82a46e87-ef01-780e-b856-9dc8e47f725f" obligation="normative">
+<p id="_fef2b9dd-f447-2c9f-fb28-ba4e81490543">© 2004 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<clause id="_spreadsheet" obligation="normative">
+<title>Spreadsheet</title>
+<table id="_e8af8e42-857b-5f30-78c0-7d8e0880d4ad" unnumbered="true"><thead><tr><th valign="top" align="left">RFC 2445</th>
+<th colspan="2" valign="top" align="left">Internet Calendaring and Scheduling Core Object Specification</th>
+<th colspan="2" valign="top" align="left"/></tr><tr><th valign="top" align="left">Feature Set</th>
+<th valign="top" align="left">Requirement</th>
+<th valign="top" align="left">Condition</th>
+<th valign="top" align="left">V1</th>
+<th valign="top" align="left">V2</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">2.3 International Considerations</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If a non-US-ASCII compatible character set is used, appropriate code-point from that character set <tt>MUST</tt> be chosen instead</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.1 Content Lines</td>
+<td valign="top" align="left"><tt>SHOULD NOT</tt></td>
+<td valign="top" align="left">Lines of text <tt>SHOULD NOT</tt> be longer than 75 octets, excluding the line break</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.1 Content Lines</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Long content lines <tt>SHOULD</tt> be split into a multiple line representations using a line “folding” technique</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.1.1 List and Field Separators</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Values in a list of values <tt>MUST</tt> be separated by a <tt>COMMA</tt> character (US-ASCII decimal 44).</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.1.1 List and Field Separators</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Structured property values <tt>MUST</tt> have their value parts separated by a <tt>SEMICOLON</tt> character (US-ASCII decimal 59)</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.1.1 List and Field Separators</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Each property parameter in a list of property parameters <tt>MUST</tt> be separated by a <tt>SEMICOLON</tt> character (US-ASCII decimal 59).</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.1.1 List and Field Separators</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Property parameters with values containing a <tt>COLON</tt>, a <tt>SEMICOLON</tt> or a <tt>COMMA</tt> character <tt>MUST</tt> be placed in quoted text</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.1.3 Binary Content</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Binary content information in an iCalendar object <tt>SHOULD</tt> be referenced using a URI within a property value</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.1.3 Binary Content</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Binary content information placed external to the iCalendar object <tt>MUST</tt> be referenced by a uniform resource identifier (URI)</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2 Property Parameters</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Property parameter values that contain the <tt>COLON</tt> (US-ASCII decimal 58), <tt>SEMICOLON</tt> (US-ASCII decimal 59) or <tt>COMMA</tt> (US-ASCII decimal 44) character separators <tt>MUST</tt> be specified as quoted-string text value</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.2 Property Parameters</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">Property parameter values <tt>MUST NOT</tt> contain the <tt>DOUBLE-QUOTE</tt> (US-ASCII decimal 22) character.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y?</td>
+</tr><tr><td valign="top" align="left">4.2.1 Alternate Text Representation</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">A property specifying alternate text representation parameter <tt>MUST</tt> also include a value that reflects the default representation of the text value</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.1 Alternate Text Representation</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The individual URI parameter values <tt>MUST</tt> each be specified in a quoted-string</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.4 Delegators</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The value of the <tt>DELEGATED-FROM</tt> parameter <tt>MUST</tt> be a <tt>MAILTO</tt> URI as defined in <eref type="inline" bibitemid="rfc1738" citeas="IETF RFC 1738"/></td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.4 Delegators</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The individual calendar address parameter values <tt>MUST</tt> each be specified in a quoted-string.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.5 Delegatees</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The value of the <tt>DELEGATED-TO</tt> parameter <tt>MUST</tt> be a <tt>MAILTO</tt> URI as defined in <eref type="inline" bibitemid="rfc1738" citeas="IETF RFC 1738"/>.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.5 Delegatees</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The individual calendar address parameter values <tt>MUST</tt> each be specified in a quoted-string.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.6 Directory Entry Reference</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The individual URI parameter values of <tt>DIR=</tt> <tt>MUST</tt> each be specified in a quoted-string.</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.7 Inline Encoding</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If the value type parameter is “;VALUE=BINARY”, then the inline encoding parameter <tt>MUST</tt> be specified with the value “;ENCODING=BASE64”</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.8 Format Type</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The parameter value of <tt>FMTTYPE=MUST</tt> be the <tt>TEXT</tt> for either an IANA registered content type or a non-standard content type</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.11 Group or List Membership</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The individual calendar address parameter values <tt>MUST</tt> each be specified in a quoted-string.</td>
+<td valign="top" align="left">N?</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.12 Participation Status</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The values to <tt>PARTSTAT=MUST</tt> match one of the values allowed for the given calendar component.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.2.18 Sent By</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The parameter value of <tt>SENT-BY</tt> <tt>MUST</tt> be a <tt>MAILTO</tt> URI as defined in <eref type="inline" bibitemid="rfc1738" citeas="IETF RFC 1738"/>.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.18 Sent By</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The individual calendar address parameter values <tt>MUST</tt> each be specified in a quoted-string.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.2.19 Time Zone Identifier</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The parameter <tt>MUST</tt> be specified on the “DTSTART”, “DTEND”, “DUE”, “EXDATE” and “RDATE” properties when either a <tt>DATE-TIME</tt> or <tt>TIME</tt> value type is specified and when the value is not either a UTC or a “floating” time</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.2.19 Time Zone Identifier</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">An individual “VTIMEZONE” calendar component <tt>MUST</tt> be specified for each unique “TZID” parameter value specified in the iCalendar object</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.2.19 Time Zone Identifier</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">The <tt>TZID</tt> property parameter <tt>MUST NOT</tt> be applied to <tt>DATE-TIME</tt> or <tt>TIME</tt> properties whose time values are specified in UTC.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.2.20 Value Data Types</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The property values <tt>MUST</tt> be of a single value type.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.2.20 Value Data Types</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If the property’s value is the default value type, then this parameter need not be specified. However, if the property’s default value type is overridden by some other allowable value type, then this parameter <tt>MUST</tt> be specified</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.1 Binary</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Property values with this value type <tt>MUST</tt> also include the inline encoding parameter sequence of “;ENCODING=BASE64”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.3.3 Calendar User Address</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When used to address an Internet email transport address for a calendar user, the value <tt>MUST</tt> be a <tt>MAILTO</tt> URI, as defined by <eref type="inline" bibitemid="rfc1738" citeas="IETF RFC 1738"/></td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.5 Date-Time</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">The form of date and time with UTC offset <tt>MUST NOT</tt> be used.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.5 Date-Time</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">The recipient of an iCalendar object with a property value consisting of a local time, without any relative time zone information, <tt>SHOULD</tt> interpret the value as being fixed to whatever time zone the <tt>ATTENDEE</tt> is in at any given moment</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.5 Date-Time</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Floating time <tt>SHOULD</tt> only be used where that is the reasonable behavior</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.5 Date-Time</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">In most cases, a fixed time is desired. To properly communicate a fixed time in a property value, either UTC time or local time with time zone reference <tt>MUST</tt> be specified</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.5 Date-Time</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">The <tt>TZID</tt> property parameter <tt>MUST NOT</tt> be applied to <tt>DATE-TIME</tt> properties whose time values are specified in UTC</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.5 Date-Time</td>
+<td valign="top" align="left"><tt>MUST ONLY</tt></td>
+<td valign="top" align="left">A time value <tt>MUST ONLY</tt> specify 60 seconds when specifying the periodic “leap second” in the time value</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.9 Period of Time</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The start of the period <tt>MUST</tt> be before the end of the period.</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">?</td>
+</tr><tr><td valign="top" align="left">4.3.10 Recurrence Rule</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Individual rule parts <tt>MUST</tt> only be specified once</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.10 Recurrence Rule</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The <tt>FREQ</tt> rule part identifies the type of recurrence rule. This rule part <tt>MUST</tt> be specified in the recurrence rule</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.10 Recurrence Rule</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If <tt>UNTIL</tt> is specified as a date-time value, then it <tt>MUST</tt> be specified in an UTC time format.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.10 Recurrence Rule</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>BYSETPOS</tt> <tt>MUST</tt> only be used in conjunction with another <tt>BYxxx</tt> rule part</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y?</td>
+</tr><tr><td valign="top" align="left">4.3.11 Text</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">An intentional formatted text line break <tt>MUST</tt> only be included in a “TEXT” property value by representing the line break with the character sequence of <tt>BACKSLASH</tt> (US-ASCII decimal 92), followed by a <tt>LATIN SMALL LETTER N</tt> (US-ASCII decimal 110) or a <tt>LATIN CAPITAL LETTER N</tt> (US-ASCII decimal 78), that is “\n” or “\N”</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.12 Time</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">The form of time with UTC offset <tt>MUST NOT</tt> be used.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.12 Time</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">The recipient of an iCalendar object with a property value consisting of a local time, without any relative time zone information, <tt>SHOULD</tt> interpret the value as being fixed to whatever time zone the <tt>ATTENDEE</tt> is in at any given moment</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.12 Time</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Floating time <tt>SHOULD</tt> only be used where that is reasonable behavior</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.12 Time</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">To properly communicate a fixed time in a property value, either UTC time or local time with time zone reference <tt>MUST</tt> be specified.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.12 Time</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">The <tt>TZID</tt> property parameter <tt>MUST NOT</tt> be applied to <tt>TIME</tt> properties whose time values are specified in UTC</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.3.14 UTC Offset</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The <tt>PLUS SIGN</tt> character <tt>MUST</tt> be specified for positive UTC offsets (i.e., ahead of UTC).</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.4 iCalendar Object</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The first line and last line of the iCalendar object <tt>MUST</tt> contain a pair of iCalendar object delimiter strings</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6 Calendar Components</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">An iCalendar object <tt>MUST</tt> include the “PRODID” and “VERSION” calendar properties.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6 Calendar Components</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">‘calscale’ and ‘method’ are optional, but <tt>MUST NOT</tt> occur more than once</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6 Calendar Components</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">An iCalendar object <tt>MUST</tt> include at least one calendar component.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y?</td>
+</tr><tr><td valign="top" align="left">4.6.1 Event Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: <tt>class</tt> / <tt>created</tt> / <tt>description</tt> / <tt>dtstart</tt> / <tt>geo</tt> / <tt>last-mod</tt> / <tt>location</tt> / <tt>organizer</tt> / <tt>priority</tt> / <tt>dtstamp</tt> / <tt>seq</tt> / <tt>status</tt> / <tt>summary</tt> / <tt>transp</tt> / <tt>uid</tt> / <tt>url</tt> / <tt>recurid</tt></td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.1 Event Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">either ‘dtend’ or ‘duration’ may appear in a ‘eventprop’, but ‘dtend’ and ‘duration’ <tt>MUST NOT</tt> occur in the same ‘eventprop’</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.1 Event Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following are optional, and <tt>MAY</tt> occur more than once: <tt>attach</tt> / <tt>attendee</tt> / <tt>categories</tt> / <tt>comment</tt> / <tt>contact</tt> / <tt>exdate</tt> / <tt>exrule</tt> / <tt>rstatus</tt> / <tt>related</tt> / <tt>resources</tt> / <tt>rdate</tt> / <tt>rrule</tt> / <tt>x-pro</tt></td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.2 To-do Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: <tt>class</tt> / <tt>completed</tt> / <tt>created</tt> / <tt>description</tt> / <tt>dtstamp</tt> / <tt>dtstart</tt> / <tt>geo</tt> / <tt>last-mod</tt> / <tt>location</tt> / <tt>organizer</tt> / <tt>percent</tt> / <tt>priority</tt> / <tt>recurid</tt> / <tt>seq</tt> / <tt>status</tt> / <tt>summary</tt> / <tt>uid</tt> / <tt>ur</tt></td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.2 To-do Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">either ‘due’ or ‘duration’ may appear in a ‘todoprop’, but ‘due’ and ‘duration’ <tt>MUST NOT</tt> occur in the same ‘todoprop’</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.2 To-do Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following are optional, and <tt>MAY</tt> occur more than once: <tt>attach</tt> / <tt>attendee</tt> / <tt>categories</tt> / <tt>comment</tt> / <tt>contact</tt> / <tt>exdate</tt> / <tt>exrule</tt> / <tt>rstatus</tt> / <tt>related</tt> / <tt>resources</tt> / <tt>rdate</tt> / <tt>rrule</tt> / <tt>x-pro</tt></td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.3 Journal Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: <tt>class</tt> / <tt>created</tt> / <tt>description</tt> / <tt>dtstart</tt> / <tt>dtstamp</tt> / <tt>last-mod</tt> / <tt>organizer</tt> / <tt>recurid</tt> / <tt>seq</tt> / <tt>status</tt> / <tt>summary</tt> / <tt>uid</tt> / <tt>url</tt></td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.3 Journal Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following are optional, and <tt>MAY</tt> occur more than once: <tt>attach</tt> / <tt>attendee</tt> / <tt>categories</tt> / <tt>comment</tt> / <tt>contact</tt> / <tt>exdate</tt> / <tt>exrule</tt> / <tt>related</tt> / <tt>rdate</tt> / <tt>rrule</tt> / <tt>rstatus</tt> / <tt>x-pro</tt></td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.3 Journal Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">The “VJOURNAL” calendar component cannot be nested within another calendar component</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.4 Free/Busy Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: <tt>contact</tt> / <tt>dtstart</tt> / <tt>dtend</tt> / <tt>duration</tt> / <tt>dtstamp</tt> / <tt>organizer</tt> / <tt>uid</tt> / <tt>url</tt></td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.4 Free/Busy Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following are optional, and <tt>MAY</tt> occur more than once: <tt>attendee</tt> / <tt>comment</tt> / <tt>freebusy</tt> / <tt>rstatus</tt> / <tt>x-prop</tt></td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.4 Free/Busy Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">The recurrence properties (“RRULE”, “EXRULE”, “RDATE”, “EXDATE”) are not permitted within a “VFREEBUSY” calendar component. Any recurring events are resolved into their individual busy time periods using the “FREEBUSY” property</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">‘tzid’ is required, but <tt>MUST NOT</tt> occur more than once</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">‘last-mod’ and ‘tzurl’ are optional, but <tt>MUST NOT</tt> occur more than once</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">one of ‘standardc’ or ‘daylightc’ <tt>MUST</tt> occur and each <tt>MAY</tt> occur more than once</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: x-prop</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">Multiple “VTIMEZONE” calendar components can exist in an iCalendar object.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If multiple “VTIMEZONE” calendar components exist in an iCalendar object, each “VTIMEZONE” <tt>MUST</tt> represent a unique time zone definition</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “VTIMEZONE” calendar component <tt>MUST</tt> be present if the iCalendar object contains an <tt>RRULE</tt> that generates dates on both sides of a time zone shift</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">A “VTIMEZONE” calendar component can be present if the iCalendar object does not contain such an <tt>RRULE</tt> that generates dates on both sides of a time zone shift.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If a <tt>RRULE</tt> that generates dates on both sides of a time zone shift is present, there <tt>MUST</tt> be valid time zone information for all recurrence instances</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “VTIMEZONE” calendar component <tt>MUST</tt> include the “TZID” property and at least one definition of a standard or daylight component.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The standard or daylight component <tt>MUST</tt> include the “DTSTART”, “TZOFFSETFROM” and “TZOFFSETTO” properties.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">An individual “VTIMEZONE” calendar component <tt>MUST</tt> be specified for each unique “TZID” parameter value specified in the iCalendar object.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left"><tt>TZURL</tt> <tt>SHOULD</tt> refer to a resource that is accessible by anyone who might need to interpret the object.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.5 Time Zone Component</td>
+<td valign="top" align="left"><tt>SHOULD NOT</tt></td>
+<td valign="top" align="left"><tt>TZURL</tt> <tt>SHOULD NOT</tt> normally be a file: URL or other URL that is not widely-accessible.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>REQUIRED</tt></td>
+<td valign="top" align="left">‘action’ and ‘trigger’ are both <tt>REQUIRED</tt>, but <tt>MUST NOT</tt> occur more than once</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">‘duration’ and ‘repeat’ are both optional, and <tt>MUST NOT</tt> occur more than once each, but if one occurs, so <tt>MUST</tt> the other</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt> NOT</td>
+<td valign="top" align="left">the following is optional, but <tt>MUST NOT</tt> occur more than once: attach</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: x-prop</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>REQUIRED</tt></td>
+<td valign="top" align="left">the following are all <tt>REQUIRED</tt>, but <tt>MUST NOT</tt> occur more than once: <tt>action</tt> / <tt>description</tt> / <tt>trigger</tt></td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">‘duration’ and ‘repeat’ are both optional, and <tt>MUST NOT</tt> occur more than once each, but if one occurs, so <tt>MUST</tt> the other</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: x-prop</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>REQUIRED</tt></td>
+<td valign="top" align="left">the following are all <tt>REQUIRED</tt>, but <tt>MUST NOT</tt> occur more than once: <tt>action</tt> / <tt>description</tt> / <tt>trigger</tt> / <tt>summary</tt></td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>REQUIRED</tt></td>
+<td valign="top" align="left">the following is <tt>REQUIRED</tt>, and <tt>MAY</tt> occur more than once: attendee</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">‘duration’ and ‘repeat’ are both optional, and <tt>MUST NOT</tt> occur more than once each, but if one occurs, so <tt>MUST</tt> the other</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following are optional, and <tt>MAY</tt> occur more than once: <tt>attach</tt> / <tt>x-prop</tt></td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>REQUIRED</tt></td>
+<td valign="top" align="left">the following are all <tt>REQUIRED</tt>, but <tt>MUST NOT</tt> occur more than once: <tt>action</tt> / <tt>attach</tt> / <tt>trigger</tt></td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">‘duration’ and ‘repeat’ are both optional, and <tt>MUST NOT</tt> occur more than once each, but if one occurs, so <tt>MUST</tt> the other</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">‘description’ is optional, and <tt>MUST NOT</tt> occur more than once</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: x-prop</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “VALARM” calendar component <tt>MUST</tt> include the “ACTION” and “TRIGGER” properties.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When the action is “AUDIO”, the alarm can also include one and only one “ATTACH” property, which <tt>MUST</tt> point to a sound resource, which is rendered when the alarm is triggered.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When the action is “DISPLAY”, the alarm <tt>MUST</tt> also include a “DESCRIPTION” property, which contains the text to be displayed when the alarm is triggered.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When the action is “EMAIL”, the alarm <tt>MUST</tt> include a “DESCRIPTION” property, which contains the text to be used as the message body, a “SUMMARY” property, which contains the text to be used as the message subject, and one or more “ATTENDEE” properties, which contain the email address of attendees to receive the message.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">It can also include one or more “ATTACH” properties, which are intended to be sent as message attachments.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When the action is “PROCEDURE”, the alarm <tt>MUST</tt> include one and only one “ATTACH” property, which <tt>MUST</tt> point to a procedure resource, which is invoked when the alarm is triggered.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “VALARM” calendar component <tt>MUST</tt> only appear within either a “VEVENT” or “VTODO” calendar component.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">“VALARM” calendar components cannot be nested.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">In an alarm set to trigger on the “START” of an event or to-do, the “DTSTART” property <tt>MUST</tt> be present in the associated event or to-do.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">In an alarm in a “VEVENT” calendar component set to trigger on the “END” of the event, either the “DTEND” property <tt>MUST</tt> be present, or the “DTSTART” and “DURATION” properties <tt>MUST</tt> both be present.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">In an alarm in a “VTODO” calendar component set to trigger on the “END” of the to-do, either the “DUE” property <tt>MUST</tt> be present, or the “DTSTART” and “DURATION” properties <tt>MUST</tt> both be present.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">A definition of an alarm with a repeating trigger <tt>MUST</tt> include both the “DURATION” and “REPEAT” properties.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Both “DURATION” and “REPEAT” properties <tt>MUST</tt> be present in order to specify a repeating alarm. If one of these two properties is absent, then the alarm will not repeat beyond the initial trigger.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “ACTION” property <tt>MUST</tt> specify one and only one of “AUDIO”, “DISPLAY”, “PROCEDURE”, “EMAIL”.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">In an <tt>AUDIO</tt> alarm, if the optional “ATTACH” property is included, it <tt>MUST</tt> specify an audio sound resource.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">For an “EMAIL” alarm, the “DESCRIPTION” property of the “VALARM” calendar component <tt>MUST</tt> be used as the body text of the message, and the “SUMMARY” property <tt>MUST</tt> be used as the subject text.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Any “ATTACH” properties in the “VALARM” calendar component <tt>SHOULD</tt> be sent as attachments to the message.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">In a <tt>PROCEDURE</tt> alarm, the “ATTACH” property in the “VALARM” calendar component <tt>MUST</tt> specify a procedure or program that is intended to be invoked as the alarm effect.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.6.6 Alarm Component</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">While a very useful alarm capability, the <tt>PROCEDURE</tt> type of alarm <tt>SHOULD</tt> be treated by the “Calendar User Agent” as a potential security risk.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.7 Calendar Properties</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Calendar Properties <tt>SHOULD</tt> be specified after the “BEGIN:VCALENDAR” property and prior to any calendar component.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.7.2 Method</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When used in a MIME message entity, the value of this property <tt>MUST</tt> be the same as the Content-Type “method” parameter value. This property can only appear once within the iCalendar object.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.7.2 Method</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If either the “METHOD” property or the Content-Type “method” parameter is specified, then the other <tt>MUST</tt> also be specified.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.7.2 Method</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">If this property is not present in the iCalendar object, then a scheduling transaction <tt>MUST NOT</tt> be assumed.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.7.3 Product Identifier</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The property <tt>MUST</tt> be specified once in an iCalendar object.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.7.3 Product Identifier</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">The vendor of the implementation <tt>SHOULD</tt> assure that this is a globally unique identifier; using some technique such as an FPI value, as defined in <eref type="inline" bibitemid="iso9070" citeas="ISO 9070"/>.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.7.3 Product Identifier</td>
+<td valign="top" align="left"><tt>SHOULD NOT</tt></td>
+<td valign="top" align="left">This property <tt>SHOULD</tt> not be used to alter the interpretation of an iCalendar object beyond the semantics specified in this memo.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.7.4 Version</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be specified by an iCalendar object, but <tt>MUST</tt> only be specified once.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.1 Attachment</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">the following is optional, but <tt>MUST NOT</tt> occur more than once: fmttypeparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.1.1 Attachment</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.1.2 Categories</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following is optional, but <tt>MUST NOT</tt> occur more than once: languageparam</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.2 Categories</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.4 Comment</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: altrepparam, languageparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.4 Comment</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.5 Description</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: altrepparam, languageparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.5 Description</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.6 Geographic Position</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The value <tt>MUST</tt> be two <tt>SEMICOLON</tt> separated <tt>FLOAT</tt> values.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.7 Location</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: altrepparam, languageparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.7 Location</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.10 Resources</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: altrepparam, languageparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.10 Resources</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.12 Summary</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: altrepparam, languageparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.1.12 Summary</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.1 Date/Time Completed</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The date and time <tt>MUST</tt> be in a UTC format.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.2 Date/Time End</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: “VALUE” “=” (“DATETIME” / “DATE”)), tzidparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.2 Date/Time End</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.3 Date/Time Due</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: “VALUE” “=” (“DATETIME” / “DATE”)), tzidparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.2.3 Date/Time Due</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.2.4 Date/Time Start</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The time value <tt>MUST</tt> be one of the forms defined for the <tt>DATE-TIME</tt> value type.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.4 Date/Time Start</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: “VALUE” “=” (“DATETIME” / “DATE”)), tzidparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.4 Date/Time Start</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.6 Free/Busy Time</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The date and time values <tt>MUST</tt> be in an UTC time format.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y?</td>
+</tr><tr><td valign="top" align="left">4.8.2.6 Free/Busy Time</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">the following is optional, but <tt>MUST NOT</tt> occur more than once: fbtypeparam</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.6 Free/Busy Time</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.7 Time Transparency</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Events that consume actual time for the individual or resource associated with the calendar <tt>SHOULD</tt> be recorded as <tt>OPAQUE</tt>, allowing them to be detected by free-busy time searches.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.2.7 Time Transparency</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Other events, which do not take up the individual’s (or resource’s) time <tt>SHOULD</tt> be recorded as <tt>TRANSPARENT</tt>, making them invisible to free-busy time searches.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.3.1 Time Zone Identifier</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be specified in a “VTIMEZONE” calendar component.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.3.2 Time Zone Name</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following is optional, but <tt>MUST NOT</tt> occur more than once: languageparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.3.2 Time Zone Name</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.3.3 Time Zone Offset From</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be specified in a “VTIMEZONE” calendar component.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.3.4 Time Zone Offset To</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be specified in a “VTIMEZONE” calendar component.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.1 Attendee</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be specified in an iCalendar object that specifies a group scheduled calendar entity.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.1 Attendee</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">This property <tt>MUST NOT</tt> be specified in an iCalendar object when publishing the calendar information.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.4.1 Attendee</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The property <tt>MUST</tt> only be specified within calendar components to specify participants, non-participants and the chair of a group scheduled calendar entity.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.1 Attendee</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">The <tt>ROLE</tt>, <tt>PARSTAT</tt>, <tt>RSVP</tt>, <tt>CUTYPE</tt>, etc. <tt>MUST NOT</tt> be specified in an “ATTENDEE” property in a “VFREEBUSY” or “VALARM” calendar component.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.1 Attendee</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">A recipient delegated a request <tt>MUST</tt> inherit the <tt>RSVP</tt> and <tt>ROLE</tt> values from the attendee that delegated the request to them.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.4.1 Attendee</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: cutypeparam, memberparam, roleparam, partstatparam, rsvpparam, deltoparam, delfromparam, sentbyparam, cnparam, dirparam, languageparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.1 Attendee</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.2 Contact</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: altrepparam, languageparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.2 Contact</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.3 Organizer</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be specified in an iCalendar object that specifies a group scheduled calendar entity.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.3 Organizer</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be specified in an iCalendar object that specifies the publication of a calendar user’s busy time.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.3 Organizer</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">This property <tt>MUST NOT</tt> be specified in an iCalendar object that specifies only a time zone definition or that defines calendar entities that are not group scheduled entities, but are entities only on a single user’s calendar.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.4.3 Organizer</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: cnparam, dirparam, sentbyparam, languageparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.3 Organizer</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.4 Recurrence ID</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If the value of the “DTSTART” property is a <tt>DATE</tt> type value, then the value <tt>MUST</tt> be the calendar date for the recurrence instance.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.4 Recurrence ID</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: “VALUE” “=” (“DATETIME” / “DATE”), tzidparam, rangeparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.4 Recurrence ID</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.5 Related To</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following is optional, but <tt>MUST NOT</tt> occur more than once: reltypeparam</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.4.5 Related To</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.4.7 Unique Identifier</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The property <tt>MUST</tt> be specified in the “VEVENT”, “VTODO”, “VJOURNAL” or “VFREEBUSY” calendar components.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.7 Unique Identifier</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The UID itself <tt>MUST</tt> be a globally unique identifier.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.7 Unique Identifier</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The generator of the identifier <tt>MUST</tt> guarantee that the identifier is unique.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.4.7 Unique Identifier</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Implementations <tt>MUST</tt> be able to receive and persist values of at least 255 characters for this property.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.5.1 Exception Date/Times</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “EXDATE” property can be used to exclude the value specified in “DTSTART”. However, in such cases the original “DTSTART” date <tt>MUST</tt> still be maintained by the calendaring and scheduling system because the original “DTSTART” value has inherent usage dependencies by other properties such as the “RECURRENCE-ID”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.5.1 Exception Date/Times</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: “VALUE” “=” (“DATETIME” / “DATE”), tzidparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.5.1 Exception Date/Times</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.5.3 Recurrence Date/Times</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: “VALUE” “=” (“DATETIME” / “DATE” / “PERIOD”), tzidparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.5.3 Recurrence Date/Times</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.5.4 Recurrence Rule</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Any duration associated with the iCalendar object applies to all members of the generated recurrence set. Any modified duration for specific recurrences <tt>MUST</tt> be explicitly specified using the “RDATE” property.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.6.1 Action</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be specified once in a “VALARM” calendar component.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The value type can be set to a <tt>DATE-TIME</tt> value type, in which case the value <tt>MUST</tt> specify a UTC formatted <tt>DATE-TIME</tt> value.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The trigger relationship property parameter <tt>MUST</tt> only be specified when the value type is <tt>DURATION</tt>.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be specified in the “VALARM” calendar component.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If a value type of <tt>DATE-TIME</tt> is specified, then the property value <tt>MUST</tt> be specified in the UTC time format.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If the trigger is set relative to <tt>START</tt>, then the “DTSTART” property <tt>MUST</tt> be present in the associated “VEVENT” or “VTODO” calendar component.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If an alarm is specified for an event with the trigger set relative to the <tt>END</tt>, then the “DTEND” property or the “DSTART” and “DURATION” properties <tt>MUST</tt> be present in the associated “VEVENT” calendar component.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">If the alarm is specified for a to-do with a trigger set relative to the <tt>END</tt>, then either the “DUE” property or the “DSTART” and “DURATION” properties <tt>MUST</tt> be present in the associated “VTODO” calendar component.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following are optional, but <tt>MUST NOT</tt> occur more than once: “VALUE” “=” “DURATION”, trigrelparam</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.6.3 Trigger</td>
+<td valign="top" align="left"><tt>REQUIRED</tt></td>
+<td valign="top" align="left">the following is <tt>REQUIRED</tt>, but <tt>MUST NOT</tt> occur more than once: “VALUE” “=” “DATETIME”</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">?</td>
+</tr><tr><td valign="top" align="left">4.8.7.2 Date/Time Stamp</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This property <tt>MUST</tt> be included in the “VEVENT”, “VTODO”, “VJOURNAL” or “VFREEBUSY” calendar components.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.7.2 Date/Time Stamp</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The value <tt>MUST</tt> be specified in the UTC time format.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.7.4 Sequence Number</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When the “Organizer” makes changes to one of the following properties, the sequence number <tt>MUST</tt> be incremented: “DTSTART”, “DTEND”, “DUE”, “RDATE”, “RRULE”, “EXDATE”, “EXRULE”, “STATUS”</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.7.4 Sequence Number</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “Organizer” CUA <tt>MUST</tt> increment the sequence number when ever it makes changes to properties in the calendar component that the “Organizer” deems will jeopardize the validity of the participation status of the “Attendees”.</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">?</td>
+</tr><tr><td valign="top" align="left">4.8.8.2 Request Status</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">the following is optional, but <tt>MUST NOT</tt> occur more than once: languageparm</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">4.8.8.2 Request Status</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">the following is optional, and <tt>MAY</tt> occur more than once: xparam</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">6 Recommended Practices</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">2. A calendar entry with a “DTSTART” property but no “DTEND” property does not take up any time. It is intended to represent an event that is associated with a given calendar date and time of day, such as an anniversary. Since the event does not take up any time, it <tt>MUST NOT</tt> be used to record busy time no matter what the value for the “TRANSP” property.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">6 Recommended Practices</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">4. When the combination of the “RRULE” and “RDATE” properties on an iCalendar object produces multiple instances having the same start date/time, they should be collapsed to, and considered as, a single instance.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr></tbody>
+</table>
+
+<table id="_e332c3fa-4ec3-3ce8-acc3-8e9e07cd7fd7" unnumbered="true"><thead><tr><th valign="top" align="left">RFC 2446</th>
+<th colspan="2" valign="top" align="left">iCalendar Transport-Independent Interoperability Protocol</th>
+<th colspan="2" valign="top" align="left"/></tr><tr><th valign="top" align="left">Feature Set</th>
+<th valign="top" align="left">Requirement</th>
+<th valign="top" align="left">Condition</th>
+<th valign="top" align="left">V1</th>
+<th valign="top" align="left">V2</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">3.1 Common Component Restrictions</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>CALSCALE</tt> 0 or 1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.1 Common Component Restrictions</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>PRODID</tt> <tt>MUST</tt> appear</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.1 Common Component Restrictions</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>VERSION</tt> <tt>MUST</tt> be 2.0</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.1 Common Component Restrictions</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>VTIMEZONE</tt> <tt>MUST</tt> contain specified required values</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.1 Common Component Restrictions</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>VALARM</tt> <tt>MUST</tt> contain specified required values</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.2.1 <tt>VEVENT PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>MUST</tt> contain specified required values</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.1 <tt>VEVENT PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>MUST</tt> contain “Organizer”</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.1 <tt>VEVENT PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left"><tt>MUST NOT</tt> contain “Attendees”</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.2 <tt>VEVENT REQUEST</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>MUST</tt> contain specified required values</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.2.1 Rescheduling an Event</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>MUST</tt> contain existing “UID” but incremented “SEQUENCE” or higher “DTSTAMP”</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.2.2 Updating or Reconfirmation of an Event</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>MUST</tt> contain existing “UID” and current “SEQUENCE”</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.2.3 Delegating an Event to another CU</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">“Delegator” <tt>MUST</tt> forward <tt>VEVENT REQUEST</tt> to “Delegate” showing the “Delegate” as an “Atendee”</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.2.2.3 Delegating an Event to another CU</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">“Delegator” <tt>MUST</tt> send <tt>VEVENT REPLY</tt> to “Organizer” showing “Deletator’s” “Atendee” parstat as “delegated” plus “delegated-to” value</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.2.2.3 Delegating an Event to another CU</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">“Delegate” <tt>MUST</tt> send <tt>VEVENT REPLY</tt> to “Organizer” showing “delegated-from” value</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.2.2.6 Forwarding to An Uninvited CU</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">If the “Organizer” decides not to add the uninvited CU no further action is required, however the “Organizer” <tt>MAY</tt> send the uninvited CU a “CANCEL” message.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.2.2.6 Forwarding to An Uninvited CU</td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">When forwarding a “REQUEST” to another CU, the forwarding “Attendee” <tt>MUST NOT</tt> make changes to the <tt>VEVENT</tt> property set.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.2.3 <tt>VEVENT REPLY</tt></td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">The optional properties of the original <tt>VEVENT REQUEST</tt> <tt>MUST NOT</tt> be changed from those of the original request. If property changes are desired the <tt>COUNTER</tt> message must be used.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y?</td>
+</tr><tr><td valign="top" align="left">3.2.4 <tt>VEVENT ADD</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “UID” <tt>MUST</tt> be that of an existing <tt>VEVENT</tt>.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.4 <tt>VEVENT ADD</tt></td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">If the “UID” property value in the “ADD” is not found on the recipient’s calendar, then the recipient <tt>SHOULD</tt> send a “REFRESH” to the “Organizer” in order to be updated with the latest version of the “VEVENT”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y?</td>
+</tr><tr><td valign="top" align="left">3.2.4 <tt>VEVENT ADD</tt></td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">If an “Attendee” implementation does not support the “ADD” method it should respond with a “REQUEST-STATUS” value of 3.14 and ask for a “REFRESH”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.4 <tt>VEVENT CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">To cancel the complete range of recurring event, the “UID” property value for the event <tt>MUST</tt> be specified and a “RECURRENCE-ID” <tt>MUST NOT</tt> be specified in the “CANCEL” method.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.4 <tt>VEVENT CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">In order to cancel an individual instance of the event, the “RECURRENCE-ID” property value for the event <tt>MUST</tt> be specified in the “CANCEL” method.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.4 <tt>VEVENT CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Canceling multiple <tt>VEVENT</tt> instances <tt>MUST</tt> be done with either “RECURRENCE-ID” and “RANGE” <tt>OR</tt> multiple “RECURRENCE-ID” values.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.2.4 <tt>VEVENT CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When a “VEVENT” is cancelled, the “SEQUENCE” property value <tt>MUST</tt> be incremented.</td>
+<td valign="top" align="left">N?</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.3 Methods For <tt>VFREEBUSY</tt> Components</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">This document only addresses the transfer of busy time information. Applications desiring free time information <tt>MUST</tt> infer this from available busy time information.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.3 Methods For <tt>VFREEBUSY</tt> Components</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The busy time information within the iCalendar object <tt>MAY</tt> be grouped into more than one “VFREEBUSY” calendar component.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.3 Methods For <tt>VFREEBUSY</tt> Components</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The “FREEBUSY” property value <tt>MAY</tt> include a list of values, separated by the <tt>COMMA</tt> character ([US-ASCII] decimal 44).</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.3 Methods For <tt>VFREEBUSY</tt> Components</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">Alternately, multiple busy time periods <tt>MAY</tt> be specified with multiple instances of the “FREEBUSY” property.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.3 Methods For <tt>VFREEBUSY</tt> Components</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Both forms <tt>MUST</tt> be supported by implementations conforming to this document.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.3 Methods For <tt>VFREEBUSY</tt> Components</td>
+<td valign="top" align="left"><tt>SHOULD NOT</tt></td>
+<td valign="top" align="left">Duplicate busy time periods <tt>SHOULD NOT</tt> be specified in an iCalendar object</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.3 Methods For <tt>VFREEBUSY</tt> Components</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">However, two different busy time periods <tt>MAY</tt> overlap.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.3 Methods For <tt>VFREEBUSY</tt> Components</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">“FREEBUSY” properties should be sorted such that their values are in ascending order, based on the start time, and then the end time, with the earliest periods first.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.3.1 <tt>VFREEBUSY PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “ATTENDEE” property must be specified in the busy time information. The value is the CU address of the originator of the busy time information.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.3.2 <tt>VFREEBUSY `REQUEST</tt></td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">If the originator of the “REQUEST” method is not authorized to make a busy time request on the recipient’s calendar system, then an exception message <tt>SHOULD</tt> be returned in a “REPLY” method, but no busy time data need be returned.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.3.3 <tt>VFREEBUSY REPLY</tt></td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The “REPLY” method may also be used to respond to an unsuccessful “REQUEST” method. Depending on the “REQUEST-STATUS” value, no busy time information may be returned.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.1 <tt>VTODO PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>VTODO PUBLISH</tt> <tt>MUST</tt> have an “Organizer”</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.1 <tt>VTODO PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left"><tt>VTODO PUBLISH</tt> <tt>MUST NOT</tt> have “Attendees”</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.1 <tt>VTODO PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The “Organizer” <tt>MAY</tt> subsequently update (with another “PUBLISH” method), add instances to (with an “ADD” method), or cancel (with a “CANCEL” method) a previously published “VTODO” calendar component.</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2 <tt>VTODO REQUEST</tt></td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left"><tt>VTODO REQUEST</tt> <tt>MAY</tt> be a new request or a rescheduling of a <tt>VTODO</tt> depending on the values of the “UID”, “SEQUENCE”, and “DTSTAMP” properties.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.3 <tt>REQUEST</tt> for Delegating a <tt>VTODO</tt></td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">An “Attendee” of a “VTODO” calendar component <tt>MUST NOT</tt> delegate to the “Organizer” of the event.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.3 <tt>REQUEST</tt> for Delegating a <tt>VTODO</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “Delegator” of a “VTODO” calendar component <tt>MUST</tt> forward the existing “REQUEST” method for a “VTODO” calendar component to the “Delegate”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.3 <tt>REQUEST</tt> for Delegating a <tt>VTODO</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “VTODO” calendar component description <tt>MUST</tt> include the “Delegator’s” up-to-date “VTODO” calendar component definition.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.3 <tt>REQUEST</tt> for Delegating a <tt>VTODO</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “REQUEST” method <tt>MUST</tt> also include an “ATTENDEE” property with the calendar address of the “Delegate”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.3 <tt>REQUEST</tt> for Delegating a <tt>VTODO</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “Delegator” <tt>MUST</tt> also send a “REPLY” method back to the “Organizer” with the “Delegator’s” “Attendee” property “partstat” parameter value set to “DELEGATED”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.3 <tt>REQUEST</tt> for Delegating a <tt>VTODO</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “delegated-to” parameter <tt>MUST</tt> be included with the calendar address of the “Delegate”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.3 <tt>REQUEST</tt> for Delegating a <tt>VTODO</tt></td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">The “REPLY” method from the “Delegate” <tt>SHOULD</tt> include the “ATTENDEE” property with their calendar address and the “delegated-from” parameter with the value of the “Delegator’s” calendar address.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.3 <tt>REQUEST</tt> for Delegating a <tt>VTODO</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The delegation “REQUEST” method <tt>MUST</tt> assign a value for the “RSVP” property parameter associated with the “Delegator’s” “Attendee” property to that of the “Delegate’s” “ATTENDEE” property. For example if the “Delegator’s” “ATTENDEE” property specifies “RSVP=TRUE”, then the “Delegate’s” “ATTENDEE” property <tt>MUST</tt> specify “RSVP=TRUE”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.4 <tt>REQUEST</tt> Forwarded To An Uninvited Calendar User</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">An “Attendee” assigned a “VTODO” calendar component may send the “VTODO” calendar component to another new CU, not previously associated with the “VTODO” calendar component.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.4 <tt>REQUEST</tt> Forwarded To An Uninvited Calendar User</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The new CU can send a “REPLY” to the “Organizer” of the “VTODO” calendar component.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.2.4 <tt>REQUEST</tt> Forwarded To An Uninvited Calendar User</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The “Organizer” <tt>MAY</tt> send the CU a “CANCEL” message to indicate that they will not be added to the to-do.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.3 <tt>VTODO REPLY</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When used to provide a delegation response, the “Delegator” <tt>MUST</tt> include the calendar address of the “Delegate” in the “delegated-to” parameter of the “Delegator’s” “ATTENDEE” property.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.3 <tt>VTODO REPLY</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “Delegate” <tt>MUST</tt> include the calendar address of the “Delegator” on the “delegated-from” parameter of the “Delegate’s” “ATTENDEE” property.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.3 <tt>VTODO REPLY</tt></td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The “REPLY” method <tt>MAY</tt> also be used to respond to an unsuccessful “VTODO” calendar component “REQUEST” method.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.3 <tt>VTODO REPLY</tt></td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The “Organizer” of a “VTODO” calendar component <tt>MAY</tt> receive a “REPLY” method from a “Calendar User” not in the original “REQUEST”. This uninvited “Attendee” <tt>MAY</tt> be accepted, or the “Organizer” <tt>MAY</tt> cancel the “VTODO” calendar component for the uninvited “Attendee” by sending them a “CANCEL” method.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.4 <tt>VTODO ADD</tt></td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">If the “UID” property value in the “ADD” is not found on the recipient’s calendar, then the recipient <tt>SHOULD</tt> send a “REFRESH” to the “Organizer” in order to be updated with the latest version of the “VTODO”. If an “Attendee” implementation does not support the “ADD” method it should respond with a “REQUEST-STATUS” value of 5.3 and ask for a “REFRESH”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.5 <tt>VTODO CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">To cancel the complete range of a recurring “VTODO” calendar component, the “UID” property value for the “VTODO” calendar component <tt>MUST</tt> be specified and a “RECURRENCE-ID” <tt>MUST NOT</tt> be specified in the “CANCEL” method.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.5 <tt>VTODO CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">In order to cancel an individual instance of a recurring “VTODO” calendar component, the “RECURRENCE-ID” property value for the “VTODO” calendar component <tt>MUST</tt> be specified in the “CANCEL” method.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.5 <tt>VTODO CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When a “VTODO” is cancelled, the “SEQUENCE” property value <tt>MUST</tt> be incremented.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.6 <tt>VTODO REFRESH</tt></td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The “Organizer” of the “VTODO” calendar component <tt>MAY</tt> use this method to request an updated status from the “Attendees”.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.6 <tt>VTODO REFRESH</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “REFRESH” method <tt>MUST</tt> specify the “UID” property corresponding to the “VTODO” calendar component needing update.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.6 <tt>VTODO REFRESH</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">A refresh of a recurrence instance of a “VTODO” calendar component may be requested by specifying the “RECURRENCE-ID” property corresponding to the associated “VTODO” calendar component. The “Organizer” responds with the latest description and rendition of the “VTODO” calendar component. In most cases this will be a <tt>REQUEST</tt> unless the “VTODO” has been cancelled, in which case the <tt>ORGANIZER</tt> <tt>MUST</tt> send a “CANCEL”. This method is intended to facilitate machine processing of requests for updates to a “VTODO” calendar component.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.4.7 <tt>VTODO COUNTER</tt></td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">The “Organizer” accepts the counter proposal by sending all of the “Attendees” of the “VTODO” calendar component a “REQUEST” method rescheduling the “VTODO” calendar component. In the latter case, the “Organizer” <tt>SHOULD</tt> reset the individual “RSVP” property parameter values to <tt>TRUE</tt> on each “ATTENDEE” property; in order to force a response by the “Attendees”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.5.1 <tt>VJOURNAL PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><tt>VJOURNAL PUBLISH</tt> <tt>MUST</tt> have an “Organizer”.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.5.1 <tt>VJOURNAL PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left"><tt>VJOURNAL PUBLISH</tt> <tt>MUST NOT</tt> have “Attendees”.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.5.1 <tt>VJOURNAL PUBLISH</tt></td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">The “Organizer” <tt>MAY</tt> subsequently update (with another “PUBLISH” method) or cancel (with a “CANCEL” method) a previously published journal entry.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.5.2 <tt>VJOURNAL ADD</tt></td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">If the “UID” property value in the “ADD” is not found on the recipient’s calendar, then the recipient <tt>MAY</tt> treat the “ADD” as a “PUBLISH”.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.5.3 <tt>VJOURNAL CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">To cancel the complete range of a recurring journal entry, the “UID” property value for the journal entry <tt>MUST</tt> be specified and a “RECURRENCE-ID” property <tt>MUST NOT</tt> be specified in the “CANCEL” method.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.5.3 <tt>VJOURNAL CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">In order to cancel an individual instance of the journal entry, the “RECURRENCE-ID” property value for the journal entry <tt>MUST</tt> be specified in the “CANCEL” method.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.5.3 <tt>VJOURNAL CANCEL</tt></td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">When a “VJOURNAL” is cancelled, the “SEQUENCE” property value <tt>MUST</tt> be incremented.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3.6 Status Replies</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">Various optional responses <tt>MAY</tt> be added to the various Status Replies to explain the particular Status value</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.7.2 Attendee Property Considerations</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The “ORGANIZER” property is required on published events, to-dos, and journal entries for two reasons. First, only the “Organizer” is allowed to update and redistribute an event or to-do component. It follows that the “ORGANIZER” property <tt>MUST</tt> be present in the event, to-do, or journal entry component so that the CUA has a basis for authorizing an update. Second, it is prudent to provide a point of contact for anyone who receives a published component in case of problems.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.7.2 Attendee Property Considerations</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">There are valid &lt;rfc822&gt;&gt; addresses that represent groups. Sending email to such an address results in mail being sent to multiple recipients. Such an address may be used as the value of an “ATTENDEE” property.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3.7.2 Attendee Property Considerations</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left"><p id="_a1b62315-f376-86aa-7c03-91edd769976d">Look for attendees where “TYPE=GROUP” or “TYPE=UNKNOWN”. The CUA then determines if the “Calendar User” is a member of one of these groups. If so, the “REPLY” method sent to the “Organizer” <tt>MUST</tt> contain a new “ATTENDEE” property in which:</p>
+
+<ol id="_c396ccab-01d5-bddc-2ce1-7b337b46b99d" type="arabic"><li><p id="_753ff6ea-fc1c-4815-5af7-f9e6d7c811d0">the “type” property parameter is set to <tt>INDIVIDUAL</tt></p>
+</li>
+<li><p id="_df6e39b4-577c-9824-cb4c-026ec1e75590">the “member” property parameter is set to the name of the group</p>
+</li>
+</ol>
+</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">5 Application Protocol Fallbacks</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Applications that support this memo are not required to support the entire protocol. The following describes how methods and properties <tt>SHOULD</tt> “fallback” in applications that do not support the complete protocol.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr></tbody>
+</table>
+
+<table id="_6f7fcc76-1f42-191d-0a23-8823815a0629" unnumbered="true"><thead><tr><th valign="top" align="left">RFC 2447</th>
+<th colspan="2" valign="top" align="left">iCalendar Message-Based Interoperability Protocol</th>
+<th colspan="2" valign="top" align="left"/></tr><tr><th valign="top" align="left">Feature Set</th>
+<th valign="top" align="left">Requirement</th>
+<th valign="top" align="left">Condition</th>
+<th valign="top" align="left">V1</th>
+<th valign="top" align="left">V2</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">2.2.1 Authorization</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">Implementations of iMIP <tt>SHOULD</tt> verify the authenticity of the creator of an iCalendar object before taking any action. The methods for doing this are presented later in this document.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">2.3 <eref type="inline" bibitemid="rfc822" citeas="IETF RFC 822"/> Addresses</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The calendar address specified within the “ATTENDEE” property in an iCalendar object <tt>MUST</tt> be a fully qualified, <eref type="inline" bibitemid="rfc822" citeas="IETF RFC 822"/> address specification for the corresponding “Organizer” or “Attendee” of the “VEVENT” or “VTODO”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">2.3 <eref type="inline" bibitemid="rfc822" citeas="IETF RFC 822"/> Addresses</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The addresses of “Organizers” or “Attendees” <tt>MUST</tt> be ascertained by opening the “text/calendar” MIME body part and examining the “ATTENDEE” and “ORGANIZER” properties.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">2.4 Content Type</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">A MIME body part containing content information that conforms to this document <tt>MUST</tt> have an <eref type="inline" bibitemid="rfc2045" citeas="IETF RFC 2045"/> “Content-Type” value of text/calendar”.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">2.4 Content Type</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">The <eref type="inline" bibitemid="rfc2045" citeas="IETF RFC 2045"/> “Content-Type” header field must also include the type parameter “method”. The value <tt>MUST</tt> be the same as the value of the “METHOD” calendar property within the iCalendar object. This means that a MIME message containing multiple iCalendar objects with different method values must be further encapsulated with a “multipart/mixed” MIME entity. This will allow each of the iCalendar objects to be encapsulated within their own “text/calendar” MIME entity.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">2.4 Content Type</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">A “charset” parameter <tt>MUST</tt> be present if the iCalendar object contains characters that are not part of the US-ASCII character set. <eref type="inline" bibitemid="rfc2046" citeas="IETF RFC 2046"/> discusses the selection of an appropriate “charset” value.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">2.4 Content Type</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">In order to permit the information in the scheduling message to be understood by MIME user agents (UA) that do not support the “text/calendar” content type, scheduling messages <tt>SHOULD</tt> be sent with an alternative, human-readable form of the information.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">2.5 Content-Transfer-Encoding</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">A transfer encoding <tt>SHOULD</tt> be used for iCalendar objects containing any characters that are not part of the US-ASCII character set.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">2.6 Content-Disposition</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">The handling of a MIME part should be based on its <eref type="inline" bibitemid="rfc2045" citeas="IETF RFC 2045"/> “Content-Type”. However, this is not guaranteed to work in all environments. Some environments handle MIME attachments based on their file type or extension. To operate correctly in these environments, implementations may wish to include a “Content-Disposition” property to define a file name.</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+</tr><tr><td valign="top" align="left">3 Security Considerations</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Compliant applications <tt>MUST</tt> support signing and encrypting text/calendar attachments using a mechanism based on Security Multiparts for MIME <eref type="inline" bibitemid="rfc1847" citeas="IETF RFC 1847"/> to facilitate the authentication the originator of the iCalendar object.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3 Security Considerations</td>
+<td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">Implementations <tt>MAY</tt> provide a means for users to disable signing and encrypting.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3 Security Considerations</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">1. The iCalendar object <tt>MUST</tt> be signed by the “Organizer” sending an update or the “Attendee” sending a reply.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3 Security Considerations</td>
+<td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">To address the confidentiality security threats, signed iMIP messages <tt>SHOULD</tt> be encrypted by a mechanism based on Security Multiparts for MIME <eref type="inline" bibitemid="rfc1847" citeas="IETF RFC 1847"/>.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr><tr><td valign="top" align="left">3 Security Considerations</td>
+<td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">Implementations <tt>MUST</tt> provide mechanisms for the “Calendar Users” to make that decision before applying changes from someone working on behalf of a “Calendar User”.</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N</td>
+</tr></tbody>
+</table>
+</clause>
+
+
+</sections><bibliography><references id="_bibliography" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc1738" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Uniform Resource Locators (URL)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc1738</uri>
+  <docidentifier type="IETF" primary="true">RFC 1738</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC1738</docidentifier>
+  <docnumber>RFC1738</docnumber>
+  <date type="published">
+    <on>1994-12</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">M. McCahill</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_17cbecce-5457-1f5e-0585-dedaac1e3b55">This document specifies a Uniform Resource Locator (URL), the syntax and semantics of formalized information for location and access of resources via the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC4248</formattedref>
+      <docidentifier type="IETF" primary="true">RFC4248</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC4266</formattedref>
+      <docidentifier type="IETF" primary="true">RFC4266</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>1738</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">Legacy</title>
+
+  </series>
+  <keyword>URL</keyword>
+</bibitem><bibitem id="rfc822" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">STANDARD FOR THE FORMAT OF ARPA INTERNET TEXT MESSAGES</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc822</uri>
+  <docidentifier type="IETF" primary="true">RFC 822</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC0822</docidentifier>
+  <docnumber>RFC0822</docnumber>
+  <date type="published">
+    <on>1982-08</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Crocker</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_88f4e3ce-3263-2f24-1f2d-c7c320ca7158">This document revises the specifications in RFC 733, in order to serve the needs of the larger and more complex ARPA Internet. Some of RFC 733’s features failed to gain adequate acceptance. In order to simplify the standard and the software that follows it, these features have been removed. A different addressing scheme is used, to handle the case of internetwork mail; and the concept of re-transmission has been introduced. Obsoletes RFC 733, NIC 41952.</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC2822</formattedref>
+      <docidentifier type="IETF" primary="true">RFC2822</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">STD</title>
+
+    <number>11</number>
+  </series>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>822</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">Legacy</title>
+
+  </series>
+  <keyword>MAIL</keyword>
+</bibitem><bibitem id="rfc1847" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Security Multiparts for MIME: Multipart/Signed and Multipart/Encrypted</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc1847</uri>
+  <docidentifier type="IETF" primary="true">RFC 1847</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC1847</docidentifier>
+  <docnumber>RFC1847</docnumber>
+  <date type="published">
+    <on>1995-10</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Galvin</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Murphy</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Crocker</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">N. Freed</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_b0e71f36-8bcc-6d23-7645-242d1496018a">This document defines a framework within which security services may be applied to MIME body parts. [STANDARDS-TRACK] This memo defines a new Simple Mail Transfer Protocol (SMTP) [1] reply code, 521, which one may use to indicate that an Internet host does not accept incoming mail. This memo defines an Experimental Protocol for the Internet community. This memo defines an extension to the SMTP service whereby an interrupted SMTP transaction can be restarted at a later time without having to repeat all of the commands and message content sent prior to the interruption. This memo defines an Experimental Protocol for the Internet community.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>1847</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>MIME-Encyp</keyword>
+  <keyword>mail</keyword>
+  <keyword>multipurpose</keyword>
+  <keyword>extensions</keyword>
+</bibitem><bibitem id="rfc2045" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2045</uri>
+  <docidentifier type="IETF" primary="true">RFC 2045</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2045</docidentifier>
+  <docnumber>RFC2045</docnumber>
+  <date type="published">
+    <on>1996-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">N. Freed</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">N. Borenstein</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_aba6e45d-4fc0-b575-c2e1-2994fd4db008">This initial document specifies the various headers used to describe the structure of MIME messages. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2045</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>MIME</keyword>
+  <keyword>media</keyword>
+  <keyword>types</keyword>
+  <keyword>headers</keyword>
+</bibitem><bibitem id="rfc2046" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2046</uri>
+  <docidentifier type="IETF" primary="true">RFC 2046</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2046</docidentifier>
+  <docnumber>RFC2046</docnumber>
+  <date type="published">
+    <on>1996-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">N. Freed</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">N. Borenstein</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_d37d9b37-acb0-6cda-6594-4f882e0c6bee">This second document defines the general structure of the MIME media typing system and defines an initial set of media types. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2046</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>MIME-MEDIA</keyword>
+  <keyword>headers</keyword>
+  <keyword>structure</keyword>
+</bibitem><bibitem id="iso9070" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-intro" format="text/plain" language="en" script="Latn">Information processing</title>
+
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">SGML support facilities</title>
+
+  
+<title type="title-part" format="text/plain" language="en" script="Latn">Registration procedures for public text owner identifiers</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Information processing — SGML support facilities — Registration procedures for public text owner identifiers</title>
+
+  <uri type="src">https://www.iso.org/standard/16644.html</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/01/66/16644.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 9070</docidentifier>
+  <docidentifier type="iso-reference">ISO 9070(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:9070:stage-95.99</docidentifier>
+  <docnumber>9070</docnumber>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <status>
+    <stage>95</stage>
+    <substage>99</substage>
+  </status>
+  <copyright>
+    <from>1990</from>
+    <owner>
+      <organization>
+        
+<name>ISO</name>
+
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO/IEC 9070:1991</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/IEC 9070:1991</docidentifier>
+      <date type="circulated">
+        <on>1991-04-25</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem type="standard">
+      <fetched>2025-01-25</fetched>
+      
+<title type="title-intro" format="text/plain" language="en" script="Latn">Information processing</title>
+
+      
+<title type="title-main" format="text/plain" language="en" script="Latn">SGML support facilities</title>
+
+      
+<title type="title-part" format="text/plain" language="en" script="Latn">Registration procedures for public text owner identifiers</title>
+
+      
+<title type="main" format="text/plain" language="en" script="Latn">Information processing — SGML support facilities — Registration procedures for public text owner identifiers</title>
+
+      <uri type="src">https://www.iso.org/standard/16644.html</uri>
+      <uri type="rss">https://www.iso.org/contents/data/standard/01/66/16644.detail.rss</uri>
+      <docidentifier type="ISO" primary="true">ISO 9070:1990</docidentifier>
+      <docidentifier type="iso-reference">ISO 9070:1990(E)</docidentifier>
+      <docidentifier type="URN">urn:iso:std:iso:9070:stage-95.99</docidentifier>
+      <docnumber>9070</docnumber>
+      <date type="published">
+        <on>1990-01</on>
+      </date>
+      <contributor>
+        <role type="publisher"/>
+        <organization>
+          
+<name>International Organization for Standardization</name>
+
+          <abbreviation>ISO</abbreviation>
+          <uri>www.iso.org</uri>
+        </organization>
+      </contributor>
+      <edition>1</edition>
+      <language>en</language>
+      <language>fr</language>
+      <script>Latn</script>
+      <status>
+        <stage>95</stage>
+        <substage>99</substage>
+      </status>
+      <copyright>
+        <from>1990</from>
+        <owner>
+          <organization>
+            
+<name>ISO</name>
+
+          </organization>
+        </owner>
+      </copyright>
+      <relation type="updates">
+        <bibitem type="standard">
+          <formattedref format="text/plain">ISO/IEC 9070:1991</formattedref>
+          <docidentifier type="ISO" primary="true">ISO/IEC 9070:1991</docidentifier>
+          <date type="circulated">
+            <on>1991-04-25</on>
+          </date>
+        </bibitem>
+
+      </relation>
+      <place>Geneva</place>
+    </bibitem>
+
+  </relation>
+  <place>Geneva</place>
+</bibitem>
+
+
+
+
+
+
+</references></bibliography>
+</csd-standard>

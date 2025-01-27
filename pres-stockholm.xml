@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Stockholm University — Membership in CalConnect</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0812-7:2008</docidentifier><docnumber>0812-7</docnumber><date type="published"><on>2008-11-07</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Mattias Amnefelt</completename></name>
+<affiliation>
+<name>Infrastructure architect</name>
+<organization>
+<name>Stockholm University</name>
+</organization></affiliation><email>mattiasa@it.su.se</email></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2008-11-07</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2008</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_907f9be5-eb56-eaba-9be2-d2f72bcb5dcb" obligation="normative">
+<p id="_97a3febc-f821-69e7-8ed2-9465d2853728">© 2008 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_e4362571-4a0e-43cb-af86-a5ff59c4fe8f" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<admonition id="_31782a23-2347-befb-525b-0452486b2763" type="important"><p id="_ed137926-a40e-f924-44ab-e9c416021a4a">All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.</p>
+</admonition></foreword></preface><sections>
+<clause id="_what_is_stockholm_university" obligation="normative">
+<title>What is Stockholm University?</title>
+<ul id="_5e61ed2a-14cf-e110-17cb-9f685068909d"><li><p id="_614a3269-d63b-f033-4bc6-1f4c0adb9635">Largest Higher-ed institution in Sweden</p>
+<ul id="_d503c191-9a6e-4ca8-cc85-bcab857afade"><li><p id="_6c564a83-0427-37af-8aa5-e28a398ec190">50,000 Students</p>
+</li>
+<li><p id="_f8b1d91c-1d2f-940a-f424-49709933c2da">5,000 Employees</p>
+</li>
+</ul>
+</li>
+<li><p id="_d2d6eed2-0aa3-4ea2-c73e-c922b78ccd31">Central IT Department with 110 employees</p>
+</li>
+<li><p id="_7513a805-82a6-2626-b024-0a175d5f9da6">Approx. the same in other departments</p>
+</li>
+<li><p id="_80f17774-63a6-43d0-da56-e10c8f1bdff4">Very diverse IT-organisation</p>
+</li>
+<li><p id="_d1d2ca4e-1d18-a5c6-bd8d-8702d6689e86">About 110 different mail systems (many with calendar support)</p>
+</li>
+<li><p id="_812242fc-4e84-9ff0-f89b-e94e68ed803e">Several calendar-enabled systems (10 exchange, 1 FirstClass, 1 Kerio…​)</p>
+</li>
+<li><p id="_d2459059-bbee-39e6-245d-4f8a80cf1751">We need interoperability!</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_calendars_at_stockholm_university" obligation="normative">
+<title>Calendars at Stockholm University</title>
+<p id="_e4c161f9-e87f-fb58-3714-c779d7c499e8">Many applications which can produce and consume calendar data</p>
+
+<ul id="_53499463-3a9b-18c5-1d1d-91ff2cde514e"><li><p id="_a260bd49-1b8d-f66c-7d7e-8140cea5f13a">Class schedules</p>
+</li>
+<li><p id="_9f7e260b-4244-0f1e-c55a-63608850eb5c">Room and equipment reservations</p>
+</li>
+<li><p id="_7bab8fd3-77da-e60c-b064-fae5de6ceb1b">Public website</p>
+</li>
+<li><p id="_886950c2-829a-371d-7f51-a08d5f497dba">Personal and group calendars</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_why_calconnect" obligation="normative">
+<title>Why CalConnect?</title>
+<ul id="_baf63da1-156d-254f-4b35-b7e0b3bcc8a1"><li><p id="_621ad782-df22-d9b8-d717-b4266e86a059">Close contact with vendors</p>
+</li>
+<li><p id="_92e5c6f3-f44e-435e-e1b2-acd8f6426003">Get early familiarity with the technology</p>
+</li>
+<li><p id="_b4e9f9dd-d64f-2e47-a9d3-0281f4b3bda1">Contact with other orgs with similar problems</p>
+<ul id="_1f588685-2b60-8c99-5437-d9c7e102c015"><li><p id="_1b01a4e6-0aa3-7d34-c706-b1c688f761e0">Many University members</p>
+</li>
+</ul>
+</li>
+<li><p id="_c4a0a702-6369-af3f-773e-6af35474cab6">Can influence to “get things right” from our perspective</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_questions" obligation="normative">
+<title>Questions?</title>
+<p id="_aebcd5ec-121e-b296-279c-98c226c153ae">Mattias Amnefelt<br/><link target="mailto:mattiasa@it.su.se"/></p>
+</clause>
+</sections>
+</csd-standard>

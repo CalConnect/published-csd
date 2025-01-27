@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">An Introduction to The Calendaring and Scheduling Consortium</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0812-1:2008</docidentifier><docnumber>0812-1</docnumber><date type="published"><on>2008-11-07</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2008-11-07</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2008</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_907f9be5-eb56-eaba-9be2-d2f72bcb5dcb" obligation="normative">
+<p id="_97a3febc-f821-69e7-8ed2-9465d2853728">© 2008 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_d5d2dcd7-9dc8-9651-2dfb-3492adf845df" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<admonition id="_31782a23-2347-befb-525b-0452486b2763" type="important"><p id="_ed137926-a40e-f924-44ab-e9c416021a4a">All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.</p>
+</admonition>
+<p id="_87d9246c-1b43-1a8d-8dd7-fe0741137030">Presentation locations:</p>
+
+<ul id="_42d6045e-2cfc-7e00-ff0d-432ea11aed1e"><li><p id="_748cebae-4845-6046-37c2-1a1ea1a5494a">November 7: Prague, Czech Republic</p>
+</li>
+<li><p id="_35afc2ad-6fa2-0b61-3d1f-2d7a9bd65f22">November 10: London, United Kingdom</p>
+</li>
+</ul>
+</foreword></preface><sections>
+<clause id="_agenda" obligation="normative">
+<title>Agenda</title>
+<ul id="_51072c86-4b6a-4c6c-9438-3d9e34cdb591"><li><p id="_c563ca98-eaa5-e7ad-88f8-5305c3a2abfe">Introduction to CalConnect</p>
+<ul id="_a3771888-8ff7-f0e0-4502-2a4a4b8eb058"><li><p id="_8c4d2084-fbf9-f18b-e92e-7ea9c10e4a3e">Dave Thewlis, Executive Director, CalConnect</p>
+</li>
+</ul>
+</li>
+<li><p id="_7b99e353-bb27-0c9a-aa74-798d653a084b">Interoperability Testing and Standards Development</p>
+<ul id="_6af9c7b2-c0ff-f8b8-fd03-24fd8f1746fe"><li><p id="_f41e68b7-337b-723a-a6e6-46923f01892a">Patricia Egen, Interoperability Test Event Manager</p>
+</li>
+</ul>
+</li>
+<li><p id="_301ce478-628d-d46c-4164-e62972ea31c0">CalConnect Technical Committees</p>
+<ul id="_2c181717-8810-3999-b845-5da3932d311e"><li><p id="_f1915b9c-485e-2ff0-6b8c-a1334887d919">TC MOBILE — Chris Dudding, Symbian</p>
+</li>
+<li><p id="_125a595e-7395-d0b6-9af7-b2086038b139">TC iSCHEDULE — Mattias Amnefelt, Stockholm University</p>
+</li>
+</ul>
+</li>
+<li><p id="_b8224fa1-ec94-cc4e-1418-7b7ff7ad71aa">CalConnect and Open Source</p>
+<ul id="_d2a9ec15-69c5-da0b-8a6a-04da472a2757"><li><p id="_1890d336-45f7-cd6f-0d67-3bd09e3982ef">Gary Schwartz, Rensselaer Polytechnic Institute</p>
+</li>
+</ul>
+</li>
+<li><p id="_39e12e5d-deca-d6e5-9f23-2b29b5c2cdb0">CalConnect from a Member Perspective</p>
+<ul id="_110c92af-b286-167f-327f-c751ce9a1188"><li><p id="_0a4cab16-7dc4-98dc-0ad7-ab97f382233a">Gary Schwartz, Rensselaer Polytechnic Institute</p>
+</li>
+<li><p id="_33ef59cf-4451-3b04-64bf-2188f27c40d7">Tomáš Hnétila, Kerio Technologies</p>
+</li>
+<li><p id="_74a4b268-53b6-bcfe-247b-fe2a2e0f1b4f">Mattias Amnefelt, Stockholm University</p>
+</li>
+</ul>
+</li>
+<li><p id="_1a275a56-474c-165a-5635-26f26f17b7c3">General Question &amp; Answer Session</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_the_presenters" obligation="normative">
+<title>The Presenters</title>
+<ul id="_cdbe3497-99b3-86f7-3e68-3af1be88722e"><li><p id="_e8ca2a4f-e03e-3377-6bf0-446199a0f1f9">Mattias Amnefelt</p>
+<ul id="_e7823a12-3f51-e185-71e3-4af0553a62dc"><li><p id="_672f1a08-d5af-4aec-9d2b-3055f975862e">Affiliation: Stockholm University</p>
+</li>
+<li><p id="_63ae751a-1cae-dbd2-be52-1369876d1dd8">iSchedule Technical Committee</p>
+</li>
+</ul>
+</li>
+<li><p id="_d70add0b-519b-c107-3b43-b23bf224792c">Chris Dudding</p>
+<ul id="_05a6eeb3-f478-943a-cd6e-227a4f5760cd"><li><p id="_54e25fb3-4912-10be-1180-77f68eb8e7ed">Affiliation: Symbian</p>
+</li>
+<li><p id="_d976220e-d068-c094-d898-df7fea0b3957">Chair, Mobile Technical Committee</p>
+</li>
+</ul>
+</li>
+<li><p id="_8e0f55b4-2d82-aa73-f3b1-cabc6c179bd6">Patricia Egen</p>
+<ul id="_5758c3f8-d26d-9888-30f2-42682a75b625"><li><p id="_d65e1f79-c459-72fe-1e36-67e591b72c2d">Affiliation: Patricia Egen Consulting</p>
+</li>
+<li><p id="_87c7282c-31ea-3d5e-9f06-c487bea578e3">CalConnect Interoperability Test Event Manager</p>
+</li>
+</ul>
+</li>
+<li><p id="_070a5d39-c84f-53de-776f-d6060a0a559c">Tomáš Hnétila</p>
+<ul id="_f5ce9442-56c5-f8e4-1061-2d002ad5eb9b"><li><p id="_f98e6774-c29b-9a9d-9770-93d354efafb4">Affiliation: Kerio Technologies</p>
+</li>
+</ul>
+</li>
+<li><p id="_72e39241-5769-d4a8-ceaf-f219a08efef9">Gary Schwartz</p>
+<ul id="_04a338ae-153b-72e2-c4b4-bf3888f7cd8b"><li><p id="_bbede307-d8ff-db39-065c-06f58506881b">Affiliation: Rensselaer Polytechnic Institute</p>
+</li>
+<li><p id="_91be064c-0aee-8c23-f811-9f31d51f540e">Chair, Freebusy Technical Committee</p>
+</li>
+</ul>
+</li>
+<li><p id="_6285a80c-2de0-7d62-f7fc-7932fb85d5ab">Dave Thewlis</p>
+<ul id="_5408d2a6-fd41-72fd-6334-50983e310e99"><li><p id="_1c572e1e-47c8-843e-30a1-a935804b9927">CalConnect Executive Director</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+
+<clause id="_questions" obligation="normative">
+<title>Questions</title>
+<ul id="_77e60805-8fa0-9105-4045-1291ae2cd072"><li><p id="_03cc485b-219b-cbc9-9bfa-2f62faca023d">You may ask questions at any time</p>
+<ul id="_595ac212-47f0-7f74-921f-e695155af3ab"><li><p id="_7fe8d6fb-a687-8807-2522-502b59d1cd39">During a presentation</p>
+</li>
+<li><p id="_d145f586-3987-e8df-8458-de00ba11050c">At the end of a presentation</p>
+</li>
+<li><p id="_269f1e1f-da82-76a0-ed38-1e5820458329">At the General Question and Answer Session</p>
+</li>
+</ul>
+</li>
+<li><p id="_eadda22f-f08a-05ca-af83-a98dfb80ca0d">The Presenter may ask you to defer your question to later</p>
+</li>
+<li><p id="_4e185eb0-1e06-2988-8687-39435e858f10">If you have a question we don’t answer</p>
+<ul id="_f5c24c47-bfda-d106-371a-858fd289e758"><li><p id="_6a244292-c45d-9e82-72b3-26097b5f7dd4">E-mail it to the appropriate presenter or to Dave Thewlis</p>
+</li>
+<li><p id="_50051c3b-8002-7fcf-dadf-005a8e2e6269">We’ll get you an answer</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+</sections>
+</csd-standard>

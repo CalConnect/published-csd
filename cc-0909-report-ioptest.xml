@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">June 2009 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0909:2009</docidentifier><docnumber>0909</docnumber><date type="published"><on>2009-08-30</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Gordon Connelly</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Bernard Desruisseaux</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Michael Douglass</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Jon Drummond</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Firdosh Ghyara</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Helge Heß</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Morgen Sagen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Matt Shepherd</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>2</edition><version><revision-date>2009-08-30</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2009</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_00b731d5-d923-19b5-259b-ba92f34b5407" obligation="normative">
+<p id="_2ff90088-afa3-d6ab-ae6c-e9f1e3224b5a">© 2009 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_7ccf7505-eac7-94c0-ee43-f0f272eac061">The June 2009 CalConnect interoperability testing event was held at the Vendor 2 campus at Redwood Shores, California. Participants of the testing event used predetermined test scenarios. Rather than post the full scenarios in this document, they can be found on the CalConnect website at the following URL: <link target="http://www.calconnect.org/ioptesting.shtml"/>.</p>
+
+<p id="_c9a3640b-bd17-6d5b-b609-e9eaac18645c">The documents used in this testing event were the CalConnect CalDAV Matrix for Draft 08, in particular the scheduling section and iCalendar, iMIP and iTIP testing matrix. Summaries and specific findings and issues found are noted in this document.</p>
+
+<clause id="_participants" obligation="informative">
+<title>Participants</title>
+<table id="_946d80ee-c344-12c5-e7a8-75a43f36fe83">
+<name>Participants</name>
+<tbody><tr><td valign="top" align="left">Organization</td>
+<td valign="top" align="left">Participants</td>
+<td valign="top" align="left">Versions Tested</td>
+</tr><tr><td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Cyrus Daboo<br/> Morgen Sagen <br/> Jon Drummond <br/> Matt Shepherd</td>
+<td valign="top" align="left">iCal Server and client — OS X 10.5.3<br/> iCal client 4.0</td>
+</tr><tr><td valign="top" align="left">Microsoft</td>
+<td valign="top" align="left">Firdosh Ghyara</td>
+<td valign="top" align="left">Exchange 14 Beta</td>
+</tr><tr><td valign="top" align="left">Oracle</td>
+<td valign="top" align="left">Bernard Desruisseaux<br/> Simon Vaillancourt</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">RPI</td>
+<td valign="top" align="left">Michael Douglass</td>
+<td valign="top" align="left">Bedework</td>
+</tr><tr><td valign="top" align="left">PeopleCube</td>
+<td valign="top" align="left">Kellie Hunter<br/> Gordon Connelly</td>
+<td valign="top" align="left">Meetingmaker V8.8</td>
+</tr><tr><td valign="top" align="left">Zideone</td>
+<td valign="top" align="left">Helge Heß</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">CalConnect Reps</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Interop Manager<br/> Logistics</td>
+<td valign="top" align="left">Pat Egen<br/> Dave Thewlis</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_participant_comments_and_findings" obligation="normative">
+<title>Participant Comments and Findings</title>
+<clause id="_caldav_testing" obligation="normative">
+<title>CALDAV Testing</title>
+<clause id="_vendor_1" obligation="normative">
+<title>Vendor 1</title>
+<p id="_ea1f6241-9f31-c746-47a8-9cbee13ebecd">Vendor 2 server worked well with Vendor 1. We had some trouble at first with recurring meetings, but that was resolved server-side. The only part of the interop that didn’t end in an outright “Pass” was the use of the inbox, since the server uses a “virtual” inbox and doesn’t actually create and store messages in it. Either way, this didn’t really have any impact on Vendor 1. The auto-scheduling was working nicely.</p>
+
+<p id="_b70e9179-466b-47d9-5f4f-f1b4435596c3">Vendor 1 vs. Vendor 5:</p>
+
+<p id="_67afb784-b503-40e3-5bc4-97d5ba91604b">We had some initial issues where the server did not adhere to various elements of the WebDAV/CalDAV spec, which caused problems with loading the account into Vendor 1. I hacked around that on the client side in order to test and reported the issues to Vendor 5, but that will need to be fixed server-side before it will work with stock Vendor 1.</p>
+
+<p id="_ae7402f3-fd50-fb88-5119-33a3e40d8791">Vendor 1 encountered many 500 errors from the server, so testing was limited by that. The server was continually setting the organizer’s attendee to RSVP=TRUE, which caused display issues in Vendor 1. The server also stripped all but display alarms. Free-busy lookups did work well, though.</p>
+
+<p id="_a5711adf-edc7-9faa-dad6-c14331581bbc">Vendor 1 vs. VENDOR 3:</p>
+
+<p id="_04ef9a3b-db50-098b-a46b-bbbc083fcd45">500 errors when adding alarms or attendees prevented much of the tests in the matrix.</p>
+
+<table id="_0665bc83-68c1-c6df-2978-9dea61ce2b98">
+<name>Vendor 1 client testing matrix results chart</name>
+<thead><tr><th colspan="3" valign="top" align="left">Servers</th>
+<th colspan="2" valign="top" align="left"/><th valign="top" align="left">Comments</th>
+</tr><tr><th valign="top" align="left"><p id="_f487e326-4419-3bdc-6475-a734f25f7652">Vendor 2</p>
+</th>
+<th valign="top" align="left"><p id="_737d410d-73da-1a62-c42b-886b40580f61">Vendor 5</p>
+</th>
+<th valign="top" align="left"><p id="_d5a75f14-3d1c-3118-e03b-ef335c2ede38">VENDOR 3</p>
+</th>
+<th colspan="3" valign="top" align="left"/></tr></thead>
+<tbody><tr><td colspan="3" valign="top" align="left"/><th valign="top" align="left">1.</th>
+<td valign="top" align="left"><p id="_bc4aac23-e050-ee46-179d-92ffcd5ad16c">Event creation.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_cbb4a7bf-bc4a-9553-715a-01d910d27d7e">P</p>
+</td>
+<td valign="top" align="left"><p id="_b88fc0cc-2d09-40c5-13cb-ab96f79b56f2">P</p>
+</td>
+<td valign="top" align="left"><p id="_767d8288-bae7-489a-5078-3c9a4b92efac">P</p>
+</td>
+<td valign="top" align="left"><p id="_71913068-e194-bc43-aa41-a0be0e2c1581">1.1.</p>
+</td>
+<td valign="top" align="left">Create new single-instance meeting titled “Meeting 1.1” with the location “Durham”.</td>
+<td valign="top" align="left"><p id="_84851bbd-44cf-c5fa-7bcb-637373987765">Vendor 5: setting organizer’s attendee to <tt>RSVP=TRUE</tt> causes display weirdness in Vendor 1</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_2480939e-0e82-060d-fad3-e6912f7cbe0c">P</p>
+</td>
+<td valign="top" align="left"><p id="_6e30fd6e-7930-5a7b-0bc1-f3b951cff355">P</p>
+</td>
+<td valign="top" align="left"><p id="_3e6caab8-42b5-5505-d501-5a287d23cb70">P</p>
+</td>
+<td valign="top" align="left"><p id="_64db935b-8829-6911-4d4f-5c381d7c2f39">1.2.</p>
+</td>
+<td valign="top" align="left">Create new meeting titled “Meeting 1.2” recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_7381275d-c5f6-53dd-7bf6-1c2d83f8218d">P</p>
+</td>
+<td valign="top" align="left"><p id="_97951387-5513-e6f9-6d16-95e65221656d">P</p>
+</td>
+<td valign="top" align="left"><p id="_fad90fbe-a308-5af6-c300-769829ed7395">F</p>
+</td>
+<td valign="top" align="left"><p id="_04f87cd1-619f-c8d3-812d-d7a6633ac4fd">1.3.</p>
+</td>
+<td valign="top" align="left">Create new single-instance meeting titled “Meeting 1.3” with 2 other attendees.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_489f9b5a-87e3-be12-8dbd-15196cd266b0">P</p>
+</td>
+<td valign="top" align="left"><p id="_1de72523-62d1-d1f7-c5e5-70d9b70516ea">P/F</p>
+</td>
+<td valign="top" align="left"><p id="_2c6f891d-49db-a374-2860-7d602e138656">F</p>
+</td>
+<td valign="top" align="left"><p id="_38265fbb-1ecf-279d-8e9c-9d3fe08ac486">1.4.</p>
+</td>
+<td valign="top" align="left">Create new single-instance meeting titled “Meeting 1.4” with an alarm set to trigger 15 minutes prior to the schedule time of the meeting.</td>
+<td valign="top" align="left"><p id="_43cdc811-2d0b-f2c4-0721-23011897c568">Vendor 5: only <tt>DISPLAY</tt> alarms remain, all others are stripped</p>
+</td>
+</tr><tr><td colspan="3" valign="top" align="left"/><th valign="top" align="left">2.</th>
+<th valign="top" align="left">Event modification</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_847037b6-d15b-2d97-460f-59dd6ee7f734">P</p>
+</td>
+<td valign="top" align="left"><p id="_6d062fb5-8081-21fa-3f96-440be1f622dc">P/F</p>
+</td>
+<td valign="top" align="left"><p id="_c4fd60b8-e0ce-0dff-f5de-8759f1c7b793">P</p>
+</td>
+<td valign="top" align="left"><p id="_1e11c689-bb7f-a126-26e8-b460c126ce4b">2.1.</p>
+</td>
+<td valign="top" align="left">Modify the title of meeting “Meeting 1.1” to “Meeting 1.1bis”.</td>
+<td valign="top" align="left"><p id="_3bf4076b-8166-f7ca-1875-fc0ea896732e">Vendor 5: sometimes it worked, sometimes it failed.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_fc6fdaeb-e960-6aba-e8a1-3d166fb63553">P</p>
+</td>
+<td valign="top" align="left"><p id="_fdc3f3de-5c9a-863e-74ec-4055ade85a07">P/F</p>
+</td>
+<td valign="top" align="left"><p id="_111195b3-f416-fc17-544a-8578636e22ec">P</p>
+</td>
+<td valign="top" align="left"><p id="_4d6a6551-58d9-ce63-f3b0-d4dff6b4019f">2.2.</p>
+</td>
+<td valign="top" align="left">Modify the location of the meeting “Meeting 1.1bis” to “Seattle bis”.</td>
+<td valign="top" align="left"><p id="_d2906263-0b0f-ae53-dcf3-4624405bdf18">Vendor 5: see 2.1</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_798d4152-be5e-3cd5-8246-71bfba79d498">P</p>
+</td>
+<td valign="top" align="left"><p id="_c033ab3f-9869-ca7d-4e21-4788c1705632">P</p>
+</td>
+<td valign="top" align="left"><p id="_cae9d150-7e80-562d-540c-1342dd58b042">P</p>
+</td>
+<td valign="top" align="left"><p id="_5961a16a-6b4d-4741-97a6-60aa4b2f03b2">2.3.</p>
+</td>
+<td valign="top" align="left">Reschedule meeting “Meeting 1.1bis” to the next day.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_a382dc87-a493-04f6-050f-ae48da4f5049">P</p>
+</td>
+<td valign="top" align="left"><p id="_879e42fa-8b9e-4e94-4fde-c854e242865e">P</p>
+</td>
+<td valign="top" align="left"><p id="_125ae46f-2a89-5d67-8802-e2fb4bbc3eb1">F</p>
+</td>
+<td valign="top" align="left"><p id="_b5f3d02c-10da-dda9-6b57-172549bfcbb1">2.4.</p>
+</td>
+<td valign="top" align="left">Add an attendee to “Meeting 1.1bis”.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_c6e74425-3183-3bea-1d86-b29e805cba67">P</p>
+</td>
+<td valign="top" align="left"><p id="_c1038d6b-89b0-52a6-b242-57b86e88f196">P</p>
+</td>
+<td valign="top" align="left"><p id="_d4deb6e3-ff32-a14d-6065-634251579a4e">F</p>
+</td>
+<td valign="top" align="left"><p id="_bae76f45-5db0-e5ee-dfe5-8ea56533bd00">2.5.</p>
+</td>
+<td valign="top" align="left">Add an alarm to “Meeting 1.1bis”.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_abce824c-ee73-c22a-fa87-d6315b908635">P</p>
+</td>
+<td valign="top" align="left"><p id="_8b4c5c60-dedb-db94-f225-acd8a1b3e7e2">F</p>
+</td>
+<td valign="top" align="left"><p id="_c29b7dc6-a227-f334-29a8-4b6ad4188a68">P</p>
+</td>
+<td valign="top" align="left"><p id="_5c290628-e02e-a5a0-68bc-6087097f0833">2.6.</p>
+</td>
+<td valign="top" align="left">Modify the title of the 1st instance of the recurring meeting created in 1.2.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_5dde5868-0abc-8ddb-3cca-7d5ac91ba263">P</p>
+</td>
+<td valign="top" align="left"><p id="_3965a962-ee11-3144-1f54-e92be6c7e434">P</p>
+</td>
+<td valign="top" align="left"><p id="_dea67309-a801-a53c-408c-6f885c319275">F</p>
+</td>
+<td valign="top" align="left"><p id="_94daf328-d06f-7c6d-190c-ef59d0c11d66">2.7.</p>
+</td>
+<td valign="top" align="left">Modify the participation status of the 1st attendee in meeting 1.3 to <tt>DECLINED</tt>.</td>
+<td valign="top" align="left"><p id="_9e6d9413-eb2d-170a-acee-af8abcb51f0f">VENDOR 3: cannot add attendees</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_ce6729aa-10e9-8ddd-04ab-cf06a20bb3cf">P</p>
+</td>
+<td valign="top" align="left"><p id="_fdf1ce18-9c70-aab9-4cd9-a6682e6ab5f4">P</p>
+</td>
+<td valign="top" align="left"><p id="_4e5dbdbc-29f3-aa7c-ea3a-69dd723b4d98">P</p>
+</td>
+<td valign="top" align="left"><p id="_96c154f3-4d7f-bc64-d384-5a1a68b27b7f">2.8.</p>
+</td>
+<td valign="top" align="left">Cancel the 4th instance of the recurring meeting created in 1.2.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_e2c2367c-b7f5-2672-c2ca-065d0457dbdf">P</p>
+</td>
+<td valign="top" align="left"><p id="_fbf366bb-80da-2418-4b51-082592de871f">P</p>
+</td>
+<td valign="top" align="left"><p id="_2407fe40-5a73-d59e-c572-4521891e5ab9">F</p>
+</td>
+<td valign="top" align="left"><p id="_cbf405b8-a203-a578-7688-b07738eb88a1">2.9.</p>
+</td>
+<td valign="top" align="left">One client changes “Meeting 1.1bis” to a different time, second client ‘refreshes’ its display to see the modification.</td>
+<td valign="top" align="left"><p id="_7dbe47ff-e42f-84d5-b349-a59de4872a34">VENDOR 3: see 1.3, 2.7</p>
+</td>
+</tr><tr><td colspan="3" valign="top" align="left"/><th valign="top" align="left">3.</th>
+<th valign="top" align="left">Event retrieval</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_9915ff84-c3a2-3b7f-2604-21061c822626">N</p>
+</td>
+<td valign="top" align="left"><p id="_b6489177-eeff-6b10-f020-80ca2e626d98">N</p>
+</td>
+<td valign="top" align="left"><p id="_76c2364d-a4be-5515-573f-dba392480794">N</p>
+</td>
+<td valign="top" align="left"><p id="_a1269562-91d4-de19-a854-b308b0ccd85e">3.1.</p>
+</td>
+<td valign="top" align="left">calendar-query <tt>REPORT</tt></td>
+<td valign="top" align="left"><p id="_974ed92f-f299-62d5-2293-20cc48437340">Vendor 1 does not implement calendar-query <tt>REPORT</tt></p>
+</td>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_cd1bd1b9-646f-e31c-9459-3dffd00e9d95">3.1.1.</p>
+</td>
+<td valign="top" align="left">No filtering (match everything)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_c5319583-821d-440e-32b8-069a1db9ab99">3.1.1.1.</p>
+</td>
+<td valign="top" align="left">Query all components and return all data. (tests &lt;calendar-query&gt; and &lt;filter&gt;)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_7b5658e3-0ede-22af-0479-5917b62695aa">3.1.1.2.</p>
+</td>
+<td valign="top" align="left">Query all components and return ETag WebDAV property and all data. (tests <tt>&lt;calendar-query&gt;+&lt;DAV:prop&gt;</tt> and <tt>&lt;filter&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_c3e47bbd-60fe-6af3-5364-dc308e669d95">3.1.1.3.</p>
+</td>
+<td valign="top" align="left">Query all components and return just entire <tt>VEVENT</tt> components. (tests <tt>&lt;calendar-query&gt;, &lt;filter&gt;+&lt;comp-filter&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_ae091668-ebfa-83c7-e302-3d255e54a421">3.1.1.4.</p>
+</td>
+<td valign="top" align="left">Query all components and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND/DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;comp-filter&gt;`, `&lt;calendar-data&gt;&lt;comp&gt;+&lt;prop&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_5efb0733-565e-a8df-a3ab-7f3a02dfdb8d">3.1.2.</p>
+</td>
+<td valign="top" align="left">time-range filtering</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_31c4dc23-c5e6-7844-5aa2-a86a9e2a9f67">3.1.2.1.</p>
+</td>
+<td valign="top" align="left">Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;time-range&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_2deaf55e-8deb-ba3c-9562-b0fe19b8acd9">3.1.2.2.</p>
+</td>
+<td valign="top" align="left">Query all components within a one week time-range and return just entire <tt>VEVENT</tt> components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;time-range&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_94d7de16-a9e5-34cf-899d-849b6f23b82c">3.1.3.</p>
+</td>
+<td valign="top" align="left">component based filtering</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_2a3a77b5-59a7-efe0-e313-3b629299cacd">3.1.3.1.</p>
+</td>
+<td valign="top" align="left">Query all components that contain an embedded <tt>VALARM</tt> component. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;comp-filter&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_b0aa655f-7a35-0e68-9baa-a3e73d5a16d8">3.1.3.2.</p>
+</td>
+<td valign="top" align="left">Query all components that contain an embedded <tt>VALARM</tt> component whose trigger falls within a specific time-range. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;comp-filter&gt;&lt;prop-filter&gt;+&lt;time-range&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_98fe2401-7540-bb26-40cb-b42736d242e5">3.1.4.</p>
+</td>
+<td valign="top" align="left">property based filtering</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_f93ac71a-48d3-584c-4826-a6e7b62bb711">3.1.4.1.</p>
+</td>
+<td valign="top" align="left">Query all components that contain any <tt>ORGANIZER</tt> property. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;is-defined&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_f561ece7-d017-e3f7-c13a-eab378d28443">3.1.4.2.</p>
+</td>
+<td valign="top" align="left">Query all components that contain an <tt>ORGANIZER</tt> property with a specific CUA text value case-insensitively. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;+&lt;caseless&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_cd3c5964-a1d3-8384-e28b-c068dd939538">3.1.4.3.</p>
+</td>
+<td valign="top" align="left">Query all components that contain an <tt>ORGANIZER</tt> property with a specific CUA text value case-sensitively. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;+&lt;caseless&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_2c523567-defa-fd6a-d72c-1410ab424b64">3.1.5.</p>
+</td>
+<td valign="top" align="left">parameter based filtering</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_ee20f46b-4350-f51b-968d-5807c61e5179">3.1.5.1.</p>
+</td>
+<td valign="top" align="left">Query all components that contain a <tt>DTSTART</tt> property with a <tt>TZID</tt> parameter. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;&lt;param-filter&gt;&lt;is-defined&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_89403982-724c-377f-d48e-1d27aaab029c">3.1.5.2.</p>
+</td>
+<td valign="top" align="left">Query all components that contain an <tt>ATTENDEE</tt> property with <tt>PARTSTAT=NEEDSACTION</tt> parameter. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;&lt;param-filter&gt;&lt;text-match&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_86176e29-863f-44bc-a67e-396c27e17aa0">3.2.</p>
+</td>
+<td valign="top" align="left">calendar-multiget <tt>REPORT</tt></td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_9ecf8d39-6c88-2c3a-07ba-6ba59f9d123a">3.2.1.</p>
+</td>
+<td valign="top" align="left">Query a specific <tt>href</tt> and return all data. (tests <tt>&lt;calendar-multiget&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_9dfb2017-69e4-2db2-0a6c-b82877cb3a5e">3.2.2.</p>
+</td>
+<td valign="top" align="left">Query multiple <tt>href</tt>s (some of which do not exist) and return all data. (tests <tt>&lt;calendar-multiget&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_59b0c803-0b58-bf5f-1751-3cc352ace7c6">3.2.3.</p>
+</td>
+<td valign="top" align="left">Query a specific <tt>href</tt> and return ETag WebDAV property and all data. (tests <tt>&lt;calendar-multiget&gt;+&lt;DAV:prop&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_97ab0ed1-e23d-17ee-fff3-e0c7870949ee">3.2.4.</p>
+</td>
+<td valign="top" align="left">Query multiple <tt>href</tt>s (some of which do not exist) and return ETag WebDAV property and all data. (tests <tt>&lt;calendar-multiget&gt;+&lt;DAV:prop&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_8da7dcda-07b6-3194-de7c-4ad6b3f5f3a7">3.2.5.</p>
+</td>
+<td valign="top" align="left">Query a specific <tt>href</tt> and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND/DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;calendar-data&gt;&lt;comp&gt;&lt;prop&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"><p id="_d8b7a56e-886d-4062-319c-4194cfdcb3fe">3.2.6.</p>
+</td>
+<td valign="top" align="left">Query multiple <tt>href</tt>s (some of which do not exist) and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND/DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;calendar-data&gt;&lt;comp&gt;&lt;prop&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td colspan="3" valign="top" align="left"/><th valign="top" align="left">4.</th>
+<th valign="top" align="left">Event deletion</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_c871e9c5-6001-67e5-274e-b87e64e9fdda">P</p>
+</td>
+<td valign="top" align="left"><p id="_570b8857-9867-5d90-03e8-3f2bd60e4c03">P</p>
+</td>
+<td valign="top" align="left"><p id="_cf8cfc27-1266-c951-0c82-9deb25e4a533">P</p>
+</td>
+<td valign="top" align="left"><p id="_38808c33-390f-727f-4428-a8f4d26ec2e2">4.1.</p>
+</td>
+<td valign="top" align="left">Delete a single non-recurring meeting.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_4b07f3ce-43ba-d495-4e54-9308ee0b66c0">P</p>
+</td>
+<td valign="top" align="left"><p id="_22a00049-732a-9617-a6b0-d2ad85204cf5">P</p>
+</td>
+<td valign="top" align="left"><p id="_4cd8a571-c51f-636c-aaff-9777069ea030">P</p>
+</td>
+<td valign="top" align="left"><p id="_87889253-4db7-e7dd-14c4-ad434f83513e">4.2.</p>
+</td>
+<td valign="top" align="left">Delete a single recurring meeting with no overridden instances.</td>
+<td valign="top" align="left"><p id="_d527d1bb-0cd8-f4de-ecb9-c9fbda8c8fd5">Vendor 2: 4.2-4.5 originally failed but server changes made during meeting led to success.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_a62009b3-1c1e-c144-4c41-b2dd392caaf7">P</p>
+</td>
+<td valign="top" align="left"><p id="_969d674c-2224-9c65-a722-4fb76027fb7f">F</p>
+</td>
+<td valign="top" align="left"><p id="_0a4500e2-e587-5c7c-4f47-7ae522a92440">P</p>
+</td>
+<td valign="top" align="left"><p id="_ece30662-aa4d-2ac1-dece-2ca93063815c">4.3.</p>
+</td>
+<td valign="top" align="left">Delete a single recurring meeting with overridden instances.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_c584c57d-9250-0cb4-e432-19c71fa7cf60">P</p>
+</td>
+<td valign="top" align="left"><p id="_84f9700d-a946-ce72-05a8-517aa0d0fb09">F</p>
+</td>
+<td valign="top" align="left"><p id="_ba01e5e9-259b-8086-ea8b-af017f4994cd">P</p>
+</td>
+<td valign="top" align="left"><p id="_1bbad0f3-2bd0-a163-c778-e5d1ef1413f0">4.4.</p>
+</td>
+<td valign="top" align="left">Delete a non-overridden instance of a recurring meeting.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_5d26bee8-8d2b-5ab6-7de9-0e6aceff881d">P</p>
+</td>
+<td valign="top" align="left"><p id="_0501513b-332b-4773-31dc-6556ff544d0a">F</p>
+</td>
+<td valign="top" align="left"><p id="_3c8d3fa0-1546-55d5-faf4-c0c2a2f1132e">P</p>
+</td>
+<td valign="top" align="left"><p id="_8bc851b5-89d7-9226-6e30-c108164a4310">4.5.</p>
+</td>
+<td valign="top" align="left">Delete an overridden instance of a recurring meeting.</td>
+<td valign="top" align="left"/></tr><tr><td colspan="3" valign="top" align="left"/><th valign="top" align="left">5.</th>
+<th valign="top" align="left">Access Control</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_c5c1e824-95c2-ecee-8805-1370474699be"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_8c1884f9-2a91-8484-7288-f4f68a584586"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_8f4bf858-839f-d6a3-d120-4c6e1e20f3a0"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_0eb17c4e-72b1-df3a-e296-a92a0b2d4518">5.1.</p>
+</td>
+<td valign="top" align="left">View access control details on current user’s main calendar.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_19c49cf2-aeb1-1f3a-995e-23b87ee60866"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_764ee656-2612-1da1-3d9c-f7ae59f3fe61"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_ec357b2d-a6b0-4fb2-8598-3633ec1612cb"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_26157def-9965-98da-e276-549a22a30191">5.2.</p>
+</td>
+<td valign="top" align="left">Change access control details on current user’s main calendar to add another user with read-only access. Verify that other user can view the calendar but not change it.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_02735dbe-9a97-c1b8-4d43-1dac26e3ac35"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_b1ab46eb-0232-de35-ad66-644c2fbb707e"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_a46e5365-ed9f-6785-b1be-26cfdb32ee80"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_0fc6577f-28f2-1261-bbe4-232285781b32">5.3.</p>
+</td>
+<td valign="top" align="left">Change access control details on current user’s main calendar to add another user with read-write access. Verify that other user can view the calendar and change it. Verify that changes done by one user are seen by the other.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_7246bed9-008f-1832-2c54-db22246960b7"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_649bb9a7-d41f-00c5-f1b3-724a61ac61ee"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_4644eb84-fe0d-d4ff-36a0-f34019b399ba"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_e272fe33-932d-f545-bf9a-280b262cc7ab">5.4.</p>
+</td>
+<td valign="top" align="left">Remove another user’s access to the current user’s main calendar and verify they can no longer access the calendar.</td>
+<td valign="top" align="left"/></tr><tr><td colspan="3" valign="top" align="left"/><th valign="top" align="left">6.</th>
+<th valign="top" align="left">Calendar Management</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_3609f1c9-b82f-d0cc-4ab0-c528e6cd7c50">P</p>
+</td>
+<td valign="top" align="left"><p id="_cc3bebee-d99b-2a14-5431-60cc44b24586">P</p>
+</td>
+<td valign="top" align="left"><p id="_30f80ba4-7b92-5759-348e-45d691e64929">P</p>
+</td>
+<td valign="top" align="left"><p id="_42c9de4b-b994-8997-de17-39df41b2084f">6.1</p>
+</td>
+<td valign="top" align="left">Browse the list of calendars on the server, including the current user’s personal calendars.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_8a0292af-f5ab-d9fb-f702-e5da92cf2e84">P</p>
+</td>
+<td valign="top" align="left"><p id="_5830996b-3492-b5d4-7f3a-9378accbccac">F/N</p>
+</td>
+<td valign="top" align="left"><p id="_b04fa2e1-e351-a701-6a35-6b500061351d">F</p>
+</td>
+<td valign="top" align="left"><p id="_3b6fa672-c5d9-a3c0-a31d-5ed14d7f88c6">6.2</p>
+</td>
+<td valign="top" align="left">Create a new calendar in the current user’s personal calendar space.</td>
+<td valign="top" align="left"><p id="_253166e1-cf0b-a8b0-02ee-1ee9f6048253">Vendor 5: does not support this</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_aac51521-b547-58d7-a5f1-f0e3095f0224">N</p>
+</td>
+<td valign="top" align="left"><p id="_b62a87e2-1436-ac67-6f19-fd667743ada4">N</p>
+</td>
+<td valign="top" align="left"><p id="_8a5ab85c-4901-35c1-b178-5c86a19b1506">N</p>
+</td>
+<td valign="top" align="left"><p id="_a3e8b507-bf74-f0bd-d76c-b2cf518080e1">6.3</p>
+</td>
+<td valign="top" align="left">Create a regular collection in the current user’s personal calendar space.</td>
+<td valign="top" align="left"><p id="_805df637-0cca-8cdc-73ee-df68e3833429">Vendor 1 does not implement creation of regular collections.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_36076100-d6a5-1d55-e142-11d672f211b9">N</p>
+</td>
+<td valign="top" align="left"><p id="_2bb24086-aebc-436f-0804-fd500d2ac4d9">N</p>
+</td>
+<td valign="top" align="left"><p id="_95940424-3870-942b-7ad8-1c977c7be3be">N</p>
+</td>
+<td valign="top" align="left"><p id="_e3a282ce-5fb7-fcb7-22d7-39d7d1bd794b">6.4</p>
+</td>
+<td valign="top" align="left">Create a new calendar inside the collection created in 6.3.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_0b5e51ee-10fc-6d6c-c6c5-fc3a55f90e72">P</p>
+</td>
+<td valign="top" align="left"><p id="_a2b52bd9-3845-1f7a-6c26-2427ef0941e0">N</p>
+</td>
+<td valign="top" align="left"><p id="_02401f29-a019-685f-086b-2c357cde05ee">F</p>
+</td>
+<td valign="top" align="left"><p id="_71fec5f7-495f-7e31-5854-ebd424107a04">6.5</p>
+</td>
+<td valign="top" align="left">Delete the calendar created in 6.2.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_dce3ac45-431d-db6d-b156-8af290969dfe">N</p>
+</td>
+<td valign="top" align="left"><p id="_bfc3b68a-3111-858c-d03c-ce0c65a4400f">N</p>
+</td>
+<td valign="top" align="left"><p id="_6454f034-be98-bfe5-70c0-4f284db80406">N</p>
+</td>
+<td valign="top" align="left"><p id="_c5a16436-9435-465f-0d0a-a5990f382747">6.6</p>
+</td>
+<td valign="top" align="left">Delete the collection created in 6.3.</td>
+<td valign="top" align="left"/></tr><tr><td colspan="3" valign="top" align="left"/><th valign="top" align="left">7.</th>
+<th valign="top" align="left">Free Busy Reports</th>
+<td valign="top" align="left"/></tr><tr><td colspan="3" valign="top" align="left"/><td valign="top" align="left"><p id="_a7132303-1afc-2df1-c496-adcbfb17a6ef">Setup</p>
+</td>
+<td valign="top" align="left"><p id="_14224934-a873-862f-928e-e6a91ccee1d4">Create a new calendar and populate it with the following for one week:</p>
+
+<p id="_2aae7009-370a-e58d-4a2a-0f490f02d15c">Event on Monday, 9 am — 11 am, recurs every day for five times<br/> Event on Monday, 12 pm — 1 pm, status tentative <br/> Event on Monday, 2 pm — 3 pm, status cancelled <br/> Event on Tuesday, 11 am — 12 pm <br/> Event on Tuesday, 2 pm — 4 pm, recurs every day for four times <br/> Event on Tuesday, 3 pm — 5 pm <br/> Event on Wednesday, 11 am — 12 pm, status tentative <br/> Event on Wednesday, 3 pm — 5 pm, status tentative <br/> Event on Thursday, 11 am — 12 pm, status cancelled <br/> Event on Thursday, 3 pm — 5 pm, status cancelled</p>
+</td>
+<td valign="top" align="left"><note id="_c68a6919-c8a8-cf12-729b-c581e973dcca"><p id="_16adf707-c3f4-f2ba-e379-0427b686ee53">Vendor 1 does not differentiate between tentative and unavailable in the availability interface UI.</p>
+</note>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_316fa1d0-0a3b-1e0a-f939-dbd1ec15931f">P</p>
+</td>
+<td valign="top" align="left"><p id="_d3d88800-5fe2-1938-8eda-4ac3696dec38">P</p>
+</td>
+<td valign="top" align="left"><p id="_5dc04296-fb0c-e937-7c80-cebb3711a18f">?</p>
+</td>
+<td valign="top" align="left"><p id="_d405b085-98d2-8e29-b5c2-b9b58cbf8547">7.1</p>
+</td>
+<td valign="top" align="left">Run a free-busy report for the entire week.</td>
+<td valign="top" align="left"><p id="_5a92ca76-9c81-0a4c-f835-359796017470">VENDOR 3: unable to test because cannot add attendees</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_fc3e6b61-cb8f-02ba-b2fd-55b7da7f2934">P</p>
+</td>
+<td valign="top" align="left"><p id="_052e6817-c6ed-760f-fbf2-8fb1568f4815">P</p>
+</td>
+<td valign="top" align="left"><p id="_0302ff5b-4bfe-da7c-112d-6f62bb6b12e1">?</p>
+</td>
+<td valign="top" align="left"><p id="_a847c409-8190-a69f-4c8b-db6f45137b93">7.1.1</p>
+</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Monday, the second is <tt>BUSY-TENTATIVE</tt>.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_0560757b-1539-bf05-8f6a-96c754267a9d">P</p>
+</td>
+<td valign="top" align="left"><p id="_3cdcca2f-c2ce-ea10-16ef-e9f1619a27e5">P</p>
+</td>
+<td valign="top" align="left"><p id="_3cb31d1a-7749-01c9-fff5-fc0ed15e1a31">?</p>
+</td>
+<td valign="top" align="left"><p id="_46e1d657-0f20-13d5-29fd-7b00bb2e1570">7.1.2</p>
+</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Tuesday.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_8046b5ca-cc39-4d93-98f6-051372476fcb">P</p>
+</td>
+<td valign="top" align="left"><p id="_df657b49-d7b6-9523-c9e6-afcc467b6617">P</p>
+</td>
+<td valign="top" align="left"><p id="_8a0c724c-cefe-b0f7-e088-c49f9e38352d">?</p>
+</td>
+<td valign="top" align="left"><p id="_38efe504-d54d-2a3c-916a-3b171ce0cd42">7.1.3</p>
+</td>
+<td valign="top" align="left">Verify four <tt>FREEBUSY</tt> periods for Wednesday, second and fourth are <tt>BUSY-TENTATIVE</tt> and one hour long.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_a026cf47-1181-bb03-0607-3635d2e24d49">P</p>
+</td>
+<td valign="top" align="left"><p id="_8967e400-ff51-e168-e9a5-b404a028efd3">P</p>
+</td>
+<td valign="top" align="left"><p id="_c2ac8e68-4242-6776-9cb2-15f27f5fc930">?</p>
+</td>
+<td valign="top" align="left"><p id="_6c14d7e7-0273-4260-30d6-1958be1ff9f7">7.1.4</p>
+</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Thursday.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_1d5ebf45-6ca6-02bc-dbcc-3391da45cf4b">P</p>
+</td>
+<td valign="top" align="left"><p id="_bddb81af-2db8-313a-500d-6df20ce5b13f">P</p>
+</td>
+<td valign="top" align="left"><p id="_23844d21-1783-8377-e0ff-949844501c53">?</p>
+</td>
+<td valign="top" align="left"><p id="_1589a2fa-5d71-1ae9-1716-40099c52f937">7.1.5</p>
+</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Friday.</td>
+<td valign="top" align="left"/></tr><tr><td colspan="3" valign="top" align="left"/><th valign="top" align="left">8.</th>
+<th valign="top" align="left">Scheduling</th>
+<td valign="top" align="left"/></tr><tr><td colspan="3" valign="top" align="left"/><td valign="top" align="left"><p id="_0fdecb56-ec4d-cfcd-99df-b5a6ec51141a">Setup</p>
+</td>
+<td valign="top" align="left"><p id="_165d8dd7-5161-89cf-8298-27dfc5c486e8">Three user accounts user1 (role Organizer), user2 (role Attendee), user3 (role Attendee) provisioned with suitable principal properties for calendar home, inbox, outbox and user addresses.</p>
+</td>
+<td valign="top" align="left"><note id="_772d1abb-1e1b-fa8c-42ba-99cc82f79db6"><p id="_44049999-6263-10bb-2af1-04a93edbd39b">Vendor 2 server uses a virtual inbox, and attendee replies are not relayed back to the organizer. Vendor 5 does not make use of the inbox (events are updates automatically by the server); VENDOR 3: unable to test because cannot add attendees</p>
+</note>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_0e5db400-75d4-c5c2-dff7-267223bba3bc">P</p>
+</td>
+<td valign="top" align="left"><p id="_baa5745c-96ce-22b3-2e9c-9e9e4c54adff">N</p>
+</td>
+<td valign="top" align="left"><p id="_cc4a22d7-6995-a50c-8a89-bba3af12f81d">?</p>
+</td>
+<td valign="top" align="left"><p id="_e7d30d3d-b939-f92c-b846-668b9ef2aa17">8.1</p>
+</td>
+<td valign="top" align="left">Organizer (user1) sends nonrecurring message invite for Monday at 9am (1 hour) to each attendee. Verify that each attendee Inbox receives a copy of the invite.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_0d430c75-7225-f708-7252-8fa81c8c63bf">F/N</p>
+</td>
+<td valign="top" align="left"><p id="_79fb2e6d-568c-385f-92be-a5f42de08f85">N</p>
+</td>
+<td valign="top" align="left"><p id="_1fecce34-e09d-088a-63b6-26cd58b5d0d8">?</p>
+</td>
+<td valign="top" align="left"><p id="_d614fbd4-5e47-3474-1372-33d40f7c5736">8.2</p>
+</td>
+<td valign="top" align="left">Attendee (user2) accepts invite and sends back reply. Verify that reply is placed in Organizer Inbox.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_184692f9-88d7-757f-3483-a1264c0653d1">P/N</p>
+</td>
+<td valign="top" align="left"><p id="_4d239c55-8221-fda1-bf80-3e3e8e2d4351">N</p>
+</td>
+<td valign="top" align="left"><p id="_44c59d44-6ea8-ab44-51e2-5498b4d8afb7">?</p>
+</td>
+<td valign="top" align="left"><p id="_6c7e6c42-289e-44d5-cadd-005513cae591">8.3</p>
+</td>
+<td valign="top" align="left">Organizer (user1) updates invite with user2 accept state and resends invite. Verify that each attendee Inbox receives a copy of the new invite.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_da9c1f11-7501-7e99-0042-bb2c37fcdaca">F/N</p>
+</td>
+<td valign="top" align="left"><p id="_43b5517f-b05a-2068-7268-db6eb8443aad">N</p>
+</td>
+<td valign="top" align="left"><p id="_576a88a6-2799-bef3-bb96-3c085fb80079">?</p>
+</td>
+<td valign="top" align="left"><p id="_635d246d-f11a-0e95-21a4-a3c7c4b06e6f">8.4</p>
+</td>
+<td valign="top" align="left">Attendee (user3) accepts updated invite and sends back reply. Verify that reply is placed in Organizer Inbox.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_4977410c-0301-9694-0ee0-d4384faa26d3">P/N</p>
+</td>
+<td valign="top" align="left"><p id="_d67759ef-c929-024a-c4b2-e801d17ca7e2">N</p>
+</td>
+<td valign="top" align="left"><p id="_064b4bb8-7f95-843a-e658-8780ad3168c3">?</p>
+</td>
+<td valign="top" align="left"><p id="_c8e2e314-fa66-cf47-0df9-91b3da2678aa">8.5</p>
+</td>
+<td valign="top" align="left">Organizer (user1) updates invite with user3 accept state and resends invite. Verify that each attendee Inbox receives a copy of the new invite.</td>
+<td valign="top" align="left"><p id="_4271cf2b-7ff3-ff36-4f62-8a332494c900">Vendor 2 passes inbox messages only for certain event updates.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_b9c5f7e1-fee8-3169-ddc8-705526e79a88">F/N</p>
+</td>
+<td valign="top" align="left"><p id="_6ed3e3a4-7428-d229-6a94-3b52d0b2dec9">N</p>
+</td>
+<td valign="top" align="left"><p id="_8807d0bd-f02e-605f-05b7-ad829d91ec37">?</p>
+</td>
+<td valign="top" align="left"><p id="_4efe7248-eb28-6823-d013-b52d3c7e519b">8.6</p>
+</td>
+<td valign="top" align="left">Organizer (user1) cancels the invite. Verify that each attendee Inbox receives the cancellation.</td>
+<td valign="top" align="left"/></tr></tbody>
+<dl id="_aef52e1b-881f-8e29-27b9-efbc0a9d0284" key="true"><dt>P</dt>
+<dd><p id="_b1dc8ea6-37e0-9fe9-f2fb-3479f61cbab8">Pass</p>
+</dd>
+<dt>F</dt>
+<dd><p id="_2b668488-7d48-3752-daa5-64148ab67b24">Fail</p>
+</dd>
+<dt>N</dt>
+<dd><p id="_a5d68682-b664-69f0-16fa-bb39ebc6eea1">Not supported</p>
+</dd>
+</dl></table>
+
+
+</clause>
+
+<clause id="_vendor_1_server_observations" obligation="normative">
+<title>Vendor 1 server observations</title>
+<p id="_49c6216d-62b6-118c-d947-4c6440c7a6b9">Primarily interested in testing with Vendor 6. Some bugs found and fixed. Overall seemed to work well. We also did some CardDAV testing with Vendor 6. Again bugs found and fixed.</p>
+</clause>
+
+<clause id="_vendor_3_observations" obligation="normative">
+<title>VENDOR 3 Observations</title>
+<p id="_1dd50d45-730e-e309-0096-7a5e7e58ad52">VENDOR 3 spent a significant amount of time with Vendor 6 testing the CardDAV server against their Outlook plugin. As a first try went fairly well. Vendor 6 was eventually able to create and read CardDAV entries.</p>
+
+<p id="_155de07f-5417-f4c2-95d6-2b4061dfe112">Following day spent some time with Vendor 2 product testing iSchedule. After some fixing of bugs at both ends managed to successfully handle a meeting invitation.</p>
+
+<p id="_2138ffae-36f6-6ece-330a-590e688eaba6">Vendor 1 tried against VENDOR 3 on Monday and ran into a recently introduced bug which was fixed soon after. I don’t believe they retried any tests.</p>
+</clause>
+
+<clause id="_vendor_5_observations" obligation="normative">
+<title>Vendor 5 observations</title>
+<p id="_4cddbdc4-1e8a-0d2d-d170-e1fab957ddf9">Vendor 5 servlet vs. Vendor 1</p>
+
+<p id="_7ebfdf79-619c-e94e-a265-e8ae29735c1d">Issues found that resulted in problems loading the account into Vendor 1 client. These issues do not occur with the current release version of Vendor 1 Vendor 1 3.x. Additional testing with the Vendor 1 Vendor 1 4.0 client to understand the changes and tighter adaptation of the CalDAV specification in specific areas is required on the Vendor 5 Servlet.</p>
+
+<p id="_15015ebf-af9f-06e3-b689-a5159ad32500">Found that a new draft regarding delegates is in the works and has been adopted by Vendor 1 and others already. Vendor 5 will review and make changes as it appears to be a cleaner way to manage and display delegates.</p>
+
+<p id="_93cbeeb4-412f-23c2-e4ac-65b6362c2445">Found defects related to recurring patterns and modification of single instance. Additional instances added after exceptions are made to the recurring string.</p>
+
+<p id="_6560e327-9dee-0593-4a55-d942a058557b">Need additional support in Vendor 5 CalDAV servlet for all notification options.</p>
+
+<p id="_a67b82ef-50bc-b611-5af9-bf67beecf19d">Need to determine why we are adding <tt>RSVP=TRUE</tt> value for the organizer of an event after a modification. Caused internal error 500 issues and display issues.</p>
+
+<p id="_e2af2bc0-8a7c-bf49-70c2-3a05a5973c3f">Limited clients to test against server this time around.</p>
+</clause>
+
+<clause id="_vendor_6_observations" obligation="normative">
+<title>Vendor 6 Observations</title>
+<p id="_15bcbada-320c-d0c8-bb7b-a237852becd2">In summary the test event was very useful for us. From a CalDAV perspective all products are still in very early stages (IMHO). The event showed quite a few serious issues in the CalDAV layer of all products. For me this was a reason why we couldn’t do that much ‘formal’ testing. We always ran into issues to be solved quite quickly. What I basically did was:</p>
+
+<ol id="_f6feb977-cb61-1b65-d0fe-6f3c47042892" type="arabic"><li><p id="_b1a10524-ba80-b260-b889-2042f57c2c09">test against Vendor 2</p>
+<ul id="_242c4952-7b34-fea8-8a2e-7b2112b3a265"><li><p id="_dbcdb859-fc9a-1928-2c8b-af76f6c2b02d">initially the server ‘crashed’ (500 HTTP error) on some requests sent by us, but Simon was able to rather quickly fix this</p>
+</li>
+<li><p id="_ce38274f-126d-e2dd-6762-89b221208842">we tested a bit of implicit scheduling, this worked quite well</p>
+</li>
+</ul>
+</li>
+<li><p id="_1d49856d-6b3f-c295-ac2c-008b928532f8">test against the VENDOR 3 <tt>LDAP&lt;→CardDAV</tt> gateway</p>
+<ul id="_3430fd0f-50ac-8a9e-0f5a-87f1ec3e0dff"><li><p id="_b1d1d36a-3545-d126-f388-792a214df653">the VENDOR 3 CardDAV gateway was in its very early stages, so I worked with Mike to improve it</p>
+</li>
+<li><p id="_152a8ed1-cc8c-3b73-2632-bd125b1c711d">at the end of the IOP we could get/edit contacts in the server.</p>
+</li>
+<li><p id="_70e7c43b-a1de-8fc0-55cc-46e0628ef874">also discussed issues with cross-server CalDAV result sets, which VENDOR 3 seems to be using and which seems to break many clients (didn’t manage to test it). Cyrus suggested to use WebDAV Binds instead.</p>
+</li>
+</ul>
+</li>
+<li><p id="_02e3a017-a4d1-55f8-e04c-c2ff2fadbbfb">test against Vendor 5</p>
+<ul id="_3aa4b832-90ee-632c-b466-8b7b9e10a676"><li><p id="_c2e109e4-c8df-cc5e-dfcb-03338c4e3701">this server was a bit slow (requiring ~20s to update a record), but was the only one which didn’t produce 500 errors :-)</p>
+</li>
+<li><p id="_6849d44c-ffbd-bbca-d2f0-ce72db794e10">didn’t test that much on it, but the shallow testing I did, was OK</p>
+</li>
+</ul>
+</li>
+<li><p id="_7aebb584-8493-d499-7ae6-ab81f64bbee2">test against Vendor 1</p>
+<ul id="_6253842d-f097-9875-2ce7-20af3fc7244f"><li><p id="_f225ad1b-1d68-276d-0ec6-3591b0a89a18">we found issues in the ‘principal discovery’, when trying to query the root of the server</p>
+</li>
+<li><p id="_41356386-57c0-b810-94a6-11c040c30d75">this seems to be a rather ‘generic’ issue which produces interop issues</p>
+</li>
+<li><p id="_bcbb41ea-d1d8-c184-96ba-b269baf1323e">We tested implicit scheduling and found a bug in our Vendor 1 code which we fixed on site.</p>
+</li>
+<li><p id="_a6f034a2-388b-7b59-845a-4bb8cce096c4">Discussed the implementation of WebDAV <tt>XMPP</tt>.</p>
+</li>
+<li><p id="_6974bcac-6fda-545f-31bf-62e676466919">(BTW: Vendor 1 didn’t bring its new CardDAV server, but we successfully tested that before)</p>
+</li>
+</ul>
+</li>
+</ol>
+
+<p id="_cd36bcc5-2bd9-347d-a364-7cf37c6930f4">The table below shows the CALDAV testing matrix items tested by Vendor 6 against the Vendor 1 server.</p>
+
+<table id="_22793131-ebf9-9727-7285-d0d5262f9af4" unnumbered="true"><tbody><tr><td valign="top" align="left"/><th valign="top" align="left">1.</th>
+<th valign="top" align="left">Event creation.</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">1.1.</td>
+<td valign="top" align="left">Create new single-instance meeting titled “Meeting 1.1” with the location “Durham”.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">1.2.</td>
+<td valign="top" align="left">Create new meeting titled “Meeting 1.2” recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">1.3.</td>
+<td valign="top" align="left">Create new single-instance meeting titled “Meeting 1.3” with 2 other attendees.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">P/N</td>
+<td valign="top" align="left">1.4.</td>
+<td valign="top" align="left">Create new single-instance meeting titled “Meeting 1.4” with an alarm set to trigger 15 minutes prior to the schedule time of the meeting.</td>
+<td valign="top" align="left">alarm not exported, but stored locally, won’t trigger alarms in secondary folders</td>
+</tr><tr><td valign="top" align="left"/><th valign="top" align="left">2.</th>
+<th valign="top" align="left">Event modification</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">2.1.</td>
+<td valign="top" align="left">Modify the title of meeting “Meeting 1.1” to “Meeting 1.1bis”.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">2.2.</td>
+<td valign="top" align="left">Modify the location of the meeting “Meeting 1.1bis” to “Seattle bis”.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">2.3.</td>
+<td valign="top" align="left">Reschedule meeting “Meeting 1.1bis” to the next day.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">2.4.</td>
+<td valign="top" align="left">Add an attendee to “Meeting 1.1bis”.</td>
+<td valign="top" align="left">does not prompt to send an email</td>
+</tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">2.5.</td>
+<td valign="top" align="left">Add an alarm to “Meeting 1.1bis”.</td>
+<td valign="top" align="left">alarm not exported, but stored locally, won’t trigger alarms in secondary folders</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">2.6.</td>
+<td valign="top" align="left">Modify the title of the 1st instance of the recurring meeting created in 1.2.</td>
+<td valign="top" align="left">recurrence exceptions still unsupported</td>
+</tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">2.7.</td>
+<td valign="top" align="left">Modify the participation status of the 1st attendee in meeting 1.3 to <tt>DECLINED</tt>.</td>
+<td valign="top" align="left">Partstat panel does not show up (hm). Had to press ‘send invitations’ to make it show up. Then it worked for a Vendor 1 server external participant (plain email)</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">2.8.</td>
+<td valign="top" align="left">Cancel the 4th instance of the recurring meeting created in 1.2.</td>
+<td valign="top" align="left">recurrence exceptions still unsupported</td>
+</tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">2.9.</td>
+<td valign="top" align="left">One client changes “Meeting 1.1bis” to a different time, second client ‘refreshes’ its display to see the modification.</td>
+<td valign="top" align="left">Prompts the user and reminds that the reminder won’t be triggered.</td>
+</tr><tr><td valign="top" align="left"/><th valign="top" align="left">3.</th>
+<th valign="top" align="left">Event retrieval</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.</td>
+<td valign="top" align="left">calendar-query <tt>REPORT</tt></td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.1.</td>
+<td valign="top" align="left">No filtering (match everything)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.1.1.</td>
+<td valign="top" align="left">Query all components and return all data. (tests <tt>&lt;calendar-query&gt;</tt> and <tt>&lt;filter&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.1.2.</td>
+<td valign="top" align="left">Query all components and return ETag WebDAV property and all data. (tests <tt>&lt;calendar-query&gt;+&lt;DAV:prop&gt;</tt> and <tt>&lt;filter&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.1.3.</td>
+<td valign="top" align="left">Query all components and return just entire <tt>VEVENT</tt> components. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;comp-filter&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.1.4.</td>
+<td valign="top" align="left">Query all components and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND/DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;comp-filter&gt;`, `&lt;calendar-data&gt;&lt;comp&gt;+&lt;prop&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.2.</td>
+<td valign="top" align="left">time-range filtering</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.2.1.</td>
+<td valign="top" align="left">Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;time-range&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.2.2.</td>
+<td valign="top" align="left">Query all components within a one week time-range and return just entire <tt>VEVENT</tt> components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;time-range&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.3.</td>
+<td valign="top" align="left">component based filtering</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.3.1.</td>
+<td valign="top" align="left">Query all components that contain an embedded <tt>VALARM</tt> component. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;comp-filter&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.3.2.</td>
+<td valign="top" align="left">Query all components that contain an embedded <tt>VALARM</tt> component whose trigger falls within a specific time-range. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;comp-filter&gt;&lt;prop-filter&gt;+&lt;time-range&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.4.</td>
+<td valign="top" align="left">property based filtering</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.4.1.</td>
+<td valign="top" align="left">Query all components that contain any <tt>ORGANIZER</tt> property. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;is-defined&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.4.2.</td>
+<td valign="top" align="left">Query all components that contain an <tt>ORGANIZER</tt> property with a specific CUA text value case-insensitively. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;+&lt;caseless&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.4.3.</td>
+<td valign="top" align="left">Query all components that contain an <tt>ORGANIZER</tt> property with a specific CUA text value case-sensitively. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;+&lt;caseless&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.5.</td>
+<td valign="top" align="left">parameter based filtering</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.5.1.</td>
+<td valign="top" align="left">Query all components that contain a <tt>DTSTART</tt> property with a <tt>TZID</tt> parameter. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;&lt;param-filter&gt;&lt;is-defined&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.1.5.2.</td>
+<td valign="top" align="left">Query all components that contain an <tt>ATTENDEE</tt> property with <tt>PARTSTAT=NEEDS-ACTION</tt> parameter. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;&lt;param-filter&gt;&lt;text-match&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">3.2.</td>
+<td valign="top" align="left">calendar-multiget <tt>REPORT</tt></td>
+<td valign="top" align="left">used and works</td>
+</tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">3.2.1.</td>
+<td valign="top" align="left">Query a specific <tt>href</tt> and return all data. (tests <tt>&lt;calendar-multiget&gt;</tt>)</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">3.2.2.</td>
+<td valign="top" align="left">Query multiple <tt>href</tt>s (some of which do not exist) and return all data. (tests <tt>&lt;calendar-multiget&gt;</tt>)</td>
+<td valign="top" align="left">hard to trigger in the Vendor 6 plugin, but works</td>
+</tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">3.2.3.</td>
+<td valign="top" align="left">Query a specific <tt>href</tt> and return ETag WebDAV property and all data. (tests <tt>&lt;calendar-multiget&gt;+&lt;DAV:prop&gt;</tt>)</td>
+<td valign="top" align="left">used and works</td>
+</tr><tr><td valign="top" align="left">P</td>
+<td valign="top" align="left">3.2.4.</td>
+<td valign="top" align="left">Query multiple <tt>href</tt>s (some of which do not exist) and return ETag WebDAV property and all data. (tests <tt>&lt;calendar-multiget&gt;+&lt;DAV:prop&gt;</tt>)</td>
+<td valign="top" align="left">hard to trigger in the Vendor 6 plugin, but works</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.2.5.</td>
+<td valign="top" align="left">Query a specific <tt>href</tt> and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND/DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;calendar-data&gt;&lt;comp&gt;&lt;prop&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">3.2.6.</td>
+<td valign="top" align="left">Query multiple <tt>href</tt>s (some of which do not exist) and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND/DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;calendar-data&gt;&lt;comp&gt;&lt;prop&gt;</tt>)</td>
+<td valign="top" align="left">not used in Vendor 6</td>
+</tr></tbody>
+<dl id="_91b3652e-4675-e28d-1dc7-5b1305983cb0" key="true"><dt>P</dt>
+<dd><p id="_6be249a1-8f4c-d1d6-c16b-eb2968d74422">Pass</p>
+</dd>
+<dt>F</dt>
+<dd><p id="_d538888e-d9a1-1615-fdaf-dc9245964099">Fail</p>
+</dd>
+<dt>N</dt>
+<dd><p id="_e9e94b47-2155-9268-553d-d8e0d395cb22">Not supported</p>
+</dd>
+</dl></table>
+
+
+</clause>
+</clause>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_b0d0ff89-6d77-d011-612a-67183d9ea1c5">This Interop showed continued improvement in iCalendar and CALDAV interoperability. As is typical, 500 errors caused difficulties in interoperability with several clients and servers.</p>
+
+<p id="_46338efc-dd28-fbc5-e8d5-f691beadead5">We are starting to see a bit of testing with CardDAV and iSchedule. This is still quite early in the development cycle of these protocols and no set testing matrix is in place for testing.</p>
+
+<p id="_9e7b9c96-1a5f-73e1-cff1-3738c243a602">Our thanks to all participants and contributors to this document.</p>
+
+<p id="_561ff0e2-3b71-a8cf-24c3-7ce53bb190c6">Respectfully submitted by Pat Egen, CalConnect Interop Manager.</p>
+</clause>
+</sections>
+</csd-standard>

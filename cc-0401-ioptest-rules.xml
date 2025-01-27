@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">July 2004 CalConnect Interoperability Test Rules and Test Scenarios</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0401:2004</docidentifier><docnumber>0401</docnumber><date type="published"><on>2004-07-30</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2004-07-30</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2004</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_82a46e87-ef01-780e-b856-9dc8e47f725f" obligation="normative">
+<p id="_fef2b9dd-f447-2c9f-fb28-ba4e81490543">© 2004 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_ddcd0a86-ee36-ea5f-d3c6-9d4e17a67b5b">The purpose of this testing is to move the iCalendar, iMIP and iTIP proposed standards to the next level, Draft Standard. The following text describes what must occur.</p>
+
+<quote id="_718fdf34-01fb-df7c-9277-18a22a60291f"><source type="inline" bibitemid="rfc2026" citeas="IETF RFC 2026"><localityStack><locality type="section"><referenceFrom>4.1.2</referenceFrom></locality></localityStack></source><author>IETF</author><p id="_c9246567-c215-e93b-2e1b-f4de5b89acac">A specification from which at least two independent and interoperable implementations from different code bases have been developed, and for which sufficient successful operational experience has been obtained, may be elevated to the “Draft Standard” level. For the purposes of this section, “interoperable” means to be functionally equivalent or interchangeable components of the system or process in which they are used. If patented or otherwise controlled technology is required for implementation, the separate implementations must also have resulted from separate exercise of the licensing process. Elevation to Draft Standard is a major advance in status, indicating a strong belief that the specification is mature and will be useful.</p>
+
+<p id="_835375ae-1f1e-ff5b-4aab-3e49d004f1c9">The requirement for at least two independent and interoperable implementations applies to all of the options and features of the specification. In cases in which one or more options or features have not been demonstrated in at least two interoperable implementations, the specification may advance to the Draft Standard level only if those options or features are removed.</p>
+
+<p id="_2fc3a17b-002d-0022-dcf5-27a7719d5f77">The Working Group chair is responsible for documenting the specific implementations which qualify the specification for Draft or Internet Standard status along with documentation about testing of the interoperation of these implementations. The documentation must include information about the support of each of the individual options and features. This documentation should be submitted to the Area Director with the protocol action request. (see Section 6)</p>
+
+<p id="_3d6fa91c-4bbe-9e60-3534-96a78cb48960">A Draft Standard must be well-understood and known to be quite stable, both in its semantics and as a basis for developing an implementation. A Draft Standard may still require additional or more widespread field experience, since it is possible for implementations based on Draft Standard specifications to demonstrate unforeseen behavior when subjected to large-scale use in production environments. A Draft Standard is normally considered to be a final specification, and changes are likely to be made only to solve specific problems encountered. In most circumstances, it is reasonable for vendors to deploy implementations of Draft Standards into a disruption sensitive environment.</p>
+</quote>
+</introduction></preface><sections>
+
+<clause id="_conditions_and_their_meanings" obligation="normative">
+<title>Conditions and Their Meanings</title>
+<clause id="_must" obligation="normative">
+<title><tt>MUST</tt></title>
+<p id="_26baabf5-033a-c02f-6f7c-05b9e355f1d1">This word, or the terms “REQUIRED” or “SHALL”, mean that the definition is an absolute requirement of the specification.</p>
+</clause>
+
+<clause id="_must_not" obligation="normative">
+<title><tt>MUST NOT</tt></title>
+<p id="_9912b22e-d2d5-6328-2bb0-8024aa401b8c">This phrase, or the phrase “SHALL NOT”, mean that the definition is an absolute prohibition of the specification.</p>
+</clause>
+
+<clause id="_should" obligation="normative">
+<title><tt>SHOULD</tt></title>
+<p id="_02481528-bd28-e99c-7350-e6d61ef8cea9">This word, or the adjective “RECOMMENDED”, mean that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.</p>
+</clause>
+
+<clause id="_should_not" obligation="normative">
+<title><tt>SHOULD NOT</tt></title>
+<p id="_6ff585da-ad67-ef7d-2262-30968f9f9a03">This phrase, or the phrase “NOT RECOMMENDED” mean that there may exist valid reasons in particular circumstances when the particular behavior is acceptable or even useful, but the full implications should be understood and the case carefully weighed before implementing any behavior described with this label.</p>
+</clause>
+
+<clause id="_may" obligation="normative">
+<title><tt>MAY</tt></title>
+<p id="_a88eee86-7579-0120-4c91-1f2bd00f6232">This word, or the adjective “OPTIONAL”, mean that an item is truly optional. One vendor may choose to include the item because a particular marketplace requires it or because the vendor feels that it enhances the product while another vendor may omit the same item. An implementation which does not include a particular option  <tt>MUST</tt> be prepared to interoperate with another implementation which does include the option, though perhaps with reduced functionality. In the same vein an implementation which does include a particular option  <tt>MUST</tt> be prepared to interoperate with another implementation which does not include the option (except, of course, for the feature the option provides.)</p>
+</clause>
+</clause>
+
+<clause id="_number_of_conditions_per_rfc" obligation="normative">
+<title>Number of Conditions per RFC</title>
+<table id="_e3e74c59-b6cb-0897-1e1e-1021283110cf" unnumbered="true"><thead><tr><th valign="top" align="left">Conditions</th>
+<th valign="top" align="left">iCalendar (<eref type="inline" bibitemid="rfc2445" citeas="IETF RFC 2445"/>)</th>
+<th valign="top" align="left">iMIP (<eref type="inline" bibitemid="rfc2446" citeas="IETF RFC 2446"/>)</th>
+<th valign="top" align="left">iTIP (<eref type="inline" bibitemid="rfc2447" citeas="IETF RFC 2447"/>)</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>MUST</tt></td>
+<td valign="top" align="left">159</td>
+<td valign="top" align="left">195</td>
+<td valign="top" align="left">16</td>
+</tr><tr><td valign="top" align="left"><tt>REQUIRED</tt></td>
+<td valign="top" align="left">17</td>
+<td valign="top" align="left">67</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left"><tt>MUST NOT</tt></td>
+<td valign="top" align="left">55</td>
+<td valign="top" align="left">60</td>
+<td valign="top" align="left">0</td>
+</tr><tr><td valign="top" align="left"><tt>SHALL</tt></td>
+<td valign="top" align="left">14</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">0</td>
+</tr><tr><td valign="top" align="left"><tt>SHALL NOT</tt></td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">0</td>
+</tr><tr><td valign="top" align="left"><tt>SHOULD</tt></td>
+<td valign="top" align="left">39</td>
+<td valign="top" align="left">36</td>
+<td valign="top" align="left">7</td>
+</tr><tr><td valign="top" align="left"><tt>SHOULD NOT</tt></td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">0</td>
+</tr><tr><td valign="top" align="left"><tt>MAY</tt></td>
+<td valign="top" align="left">79</td>
+<td valign="top" align="left">217</td>
+<td valign="top" align="left">7</td>
+</tr><tr><td valign="top" align="left"><tt>MAY NOT</tt></td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">0</td>
+</tr></tbody>
+</table>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc2445" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2445</uri>
+  <docidentifier type="IETF" primary="true">RFC 2445</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2445</docidentifier>
+  <docnumber>RFC2445</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Stenerson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_88bab3dc-0aad-01bb-6a2a-9a92c5a12308">This memo has been defined to provide the definition of a common format for openly exchanging calendaring and scheduling information across the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2445</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ICALENDAR</keyword>
+  <keyword>interoperable</keyword>
+  <keyword>mime</keyword>
+  <keyword>multipurpose internet mail extensions</keyword>
+</bibitem><bibitem id="rfc2446" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP) Scheduling Events, BusyTime, To-dos and Journal Entries</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2446</uri>
+  <docidentifier type="IETF" primary="true">RFC 2446</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2446</docidentifier>
+  <docnumber>RFC2446</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Hopson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_2f851637-3559-a254-b7e3-483efe023c19">This document specifies how calendaring systems use iCalendar objects to interoperate with other calendar systems. It does so in a general way so as to allow multiple methods of communication between systems. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5546</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5546</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2446</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ITIP</keyword>
+  <keyword>iCalendar Transport-Independent Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>systems</keyword>
+</bibitem><bibitem id="rfc2447" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2447</uri>
+  <docidentifier type="IETF" primary="true">RFC 2447</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2447</docidentifier>
+  <docnumber>RFC2447</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_9b12ac5e-96d0-a5c6-2693-e3d65da7304e">This document specifies a binding from the iCalendar Transport- independent Interoperability Protocol (iTIP) to Internet email-based transports. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC6047</formattedref>
+      <docidentifier type="IETF" primary="true">RFC6047</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2447</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>IMIP</keyword>
+  <keyword>iCalendar Message-Based Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>electronic</keyword>
+  <keyword>mail</keyword>
+  <keyword>transport</keyword>
+</bibitem><bibitem id="rfc2026" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">The Internet Standards Process — Revision 3</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2026</uri>
+  <docidentifier type="IETF" primary="true">RFC 2026</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2026</docidentifier>
+  <docnumber>RFC2026</docnumber>
+  <date type="published">
+    <on>1996-10</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Bradner</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_57969fe0-4233-39af-4366-ac475c9157da">This memo documents the process used by the Internet community for the standardization of protocols and procedures. It defines the stages in the standardization process, the requirements for moving a document between stages and the types of documents used during this process. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">BCP</title>
+
+    <number>9</number>
+  </series>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2026</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Protocols</keyword>
+  <keyword>copyrights</keyword>
+  <keyword>intellectual</keyword>
+  <keyword>property</keyword>
+</bibitem>
+
+
+
+
+</references></bibliography>
+</csd-standard>

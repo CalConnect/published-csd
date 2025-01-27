@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Roundtable XV, June 3-5 2009</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0908:2009</docidentifier><docnumber>0908</docnumber><date type="published"><on>2009-06-11</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2009-06-11</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2009</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_00b731d5-d923-19b5-259b-ba92f34b5407" obligation="normative">
+<p id="_2ff90088-afa3-d6ab-ae6c-e9f1e3224b5a">© 2009 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_1566b179-e1cd-f347-7d32-3488706088a8">Roundtable XV took place on June 3-5 2009, hosted by Oracle Corporation in Redwood Shores, California. The event was attended by 33 people from 20 members, plus a representative from the OASIS oBIX working group.</p>
+
+<p id="_d732fd0a-896e-99da-8aca-90dbcdd9385e">The CalConnect Interoperability Test Event (CITE) was held immediately prior to the Roundtable on June 1-3. Six organizations and 13 people participated in the regular test event, performing interoperability testing between their calendaring and scheduling implementations. A report on the CITE will be published as soon as information has been delivered from all participants.</p>
+
+<p id="_db7743e7-6737-af58-1536-56c311e16597">The Roundtable was dedicated to technical committee sessions, and informal discussions and networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical Committee sessions were as usual organized sequentially, without competing parallel sessions, as is our standard practice to allow all attendees who wished to be involved in the discussions of each Technical Committee the opportunity to do so.</p>
+</introduction></preface><sections>
+
+<clause id="_special_events" obligation="normative">
+<title>Special Events</title>
+<p id="_8468ae49-c5b5-86c0-14eb-6991f9e8caef">A short (2 hour) workshop was held on Wednesday afternoon on Shared/Group/Public Calendars, and provided a unique opportunity for discussion of this key area of calendaring that many participants are interested in. The intent was to identify models and use cases for these types of calendars and calendaring, what technologies and standards are needed, and how to move forward. Work items will be picked up by TC USECASE and TC CALDAV to continue this effort.</p>
+</clause>
+
+<clause id="_update_on_technical_committees_and_initiatives" obligation="normative">
+<title>Update on Technical Committees and Initiatives</title>
+<clause id="_tc_caldav" obligation="normative">
+<title>TC CALDAV</title>
+<p id="_05639799-7442-3293-66f8-ccbc6871b91a">TC CALDAV provided a status update on the various IETF Internet Drafts relevant to CalDAV. The ZideOne Outlook to CalDAV connector was demonstrated. An open discussion was held on several projects for extensions to CalDAV which will be part of the TC’s remit going forward.</p>
+</clause>
+
+<clause id="_tc_eventpub" obligation="normative">
+<title>TC EVENTPUB</title>
+<p id="_0e7ca4f0-9c8f-fc20-4ef3-e61e3921d3ce">TC EVENTPUB discussed the interactions between the TC and the shared calendar workshop discussions throughout much of the Roundtable, in particular public events use cases previously developed by the TC. The TC also discussed the state of work in its document describing how vCard can be used with iCalendar. A decision was made to put the TC on hold pending completion of vCard 4.0 work in the IETF, when it can be integrated into the EVENTPUB resource proposal.</p>
+</clause>
+
+<clause id="_tc_freebusy" obligation="normative">
+<title>TC FREEBUSY</title>
+<p id="_89aa4542-a405-c8d6-c227-2618219f53d6">TC FREEBUSY reviewed the publication of the Freebusy Read URL proposal and discussed work that has begun on a proposal for support of consensus scheduling.</p>
+</clause>
+
+<clause id="_tc_ioptest" obligation="normative">
+<title>TC IOPTEST</title>
+<p id="_322c0422-1481-0385-cf3c-7aa024aa31d4">TC IOPTEST reported on the IOP test event just completed (elsewhere in this report) and on plans for an iCalendar parser and further use of the Virtual Test Lab Facility. The TC expects that testing will begin in October in new areas such as Freebusy Read URL, CardDAV, and the new Timezone service and registry proposals (the first two were tested informally this time; the Timezone protocols may begin informal testing in October).</p>
+</clause>
+
+<clause id="_tc_ischedule" obligation="normative">
+<title>TC iSCHEDULE</title>
+<p id="_5742b08e-d911-dcce-5cbe-238dc318914c">TC iSCHEDULE discussed the progress on the protocol and had an open discussion on methods of deploying the iSchedule protocol in various scenarios.</p>
+</clause>
+
+<clause id="_tc_mobile" obligation="normative">
+<title>TC MOBILE</title>
+<p id="_a52af109-1166-51d6-14fd-b28a39f1546a">TC MOBILE discussed its work on a Vision for Mobile Calendar, and held an open discussion on the use cases for the document. An agreement was reached on the desirability of a proposed document describing how CalDAV could effectively be used by mobile devices. The Technical Committee is looking for a new Chair, following the reassignment of the previous Chair within his organization.</p>
+</clause>
+
+<clause id="_tc_resource" obligation="normative">
+<title>TC RESOURCE</title>
+<p id="_8a63f8c8-3da4-653a-4868-cc01b363ed6c">TC RESOURCE was established after the last Roundtable and has begun work on defining a schema to represent resource attributes to enhance interoperability of resource data. A consensus was reached in the discussion to use an abstract schema a bit more complicated than name-value pairs, with an LDAP mapping example at the end of the document.</p>
+</clause>
+
+<clause id="_tc_timezone" obligation="normative">
+<title>TC TIMEZONE</title>
+<p id="_5f1ad86c-ea55-6230-61a1-f74af2889fbe">TC TIMEZONE presented work to date on its draft RFCs on Timezone Registry and Timezone Service. It seems likely that there will be at least three trial implementations available for interoperability testing at the October C.I.T.E.</p>
+</clause>
+
+<clause id="_tc_usecase" obligation="normative">
+<title>TC USECASE</title>
+<p id="_f02b0cc2-61b5-2254-ca59-8a14dc0d023c">TC USECASE presented an overview of its three Resouce documents which have just completed Last Call, and a vote to publish was taken at the TC Wrapup session at the end of Roundtable XV. The documents are published at:</p>
+
+<ul id="_c969ccc1-8908-55e5-9e61-c3e7f6bf2408"><li><p id="_4caa4e1b-07bf-a3d9-79ab-0a7cd8ea4760">State of Resource Interoperability for Calendaring, Groupware, and Project Management</p>
+</li>
+<li><p id="_bb3c8350-266f-90be-4425-779a934e2e01">Use Cases for Resources V1.0</p>
+</li>
+<li><p id="_589227c1-c8a7-058d-f7f7-2d32da61421e">A Recommendation for Minimum Interoperability of Resource Information</p>
+</li>
+</ul>
+
+<p id="_e56d88f3-3075-743b-a367-831412271e74">The TC will begin work in three areas new areas:</p>
+
+<ul id="_8d0e23d1-b8c1-b2ab-1586-b5f37f80f80f"><li><p id="_cb33ee89-4ef6-5ea0-3bf1-51f1a9408798">Use cases for non-institutional, non-enterprise calendar users.</p>
+</li>
+<li><p id="_3946eb94-e2d8-55ab-3a7f-a0510be6ac40">Use cases drawn from the Shared Calendar Workshop notes.</p>
+</li>
+<li><p id="_2ecb8a54-0ac4-6e27-182c-83f1884692df">A revision of the Calendaring and Scheduling Glossary of Terms.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_tc_xml" obligation="normative">
+<title>TC XML</title>
+<p id="_fed399f0-f879-aa27-85d7-8b5bbf6e2d08">The protocol for a round-trippable transform of iCalendar data to/from XML has been completed and approved for publication, and has been submitted to the IETF as an Internet Draft; see iCalendar XML Representation. A visitor from the OASIS oBIX working group was present and discussed their interest in taking advantage of this work in the devleopment of their WS calendar specification for intelligent building management. TX XML expects to begin next on a JSON document for the specification.</p>
+</clause>
+</clause>
+
+<clause id="_calconnect_interoperability_test_event" obligation="normative">
+<title>CalConnect Interoperability Test Event</title>
+<p id="_a55a1aea-cc35-3884-6d86-8b21c6794d3b">Participants in the IOP test included Apple, Microsoft, Oracle, PeopleCube, Rensselaer Polytechnic Institute (Bedework), and ZideOne. In addition to regular CalDAV, iMIP and iTIP testing, some informal CardDAV and Freebusy Read URL testing was done as well. Results from the event will be posted at Past IOP Reports as soon as they are collated and prepared.</p>
+</clause>
+
+<clause id="_future_events" obligation="normative">
+<title>Future Events</title>
+<ul id="_72bf439b-09db-b2b5-d57e-62fb0cfb99f6"><li><p id="_9e672a48-a4da-0007-99a6-b12e19795bae">CALCONNECT XVI: October 5-9, 2009, hosted by Apple in Cupertino, California</p>
+</li>
+<li><p id="_7840a294-18e4-66fa-0300-1385b8a7c31b">CALCONNECT XVII: February 1-5, 2010, hosted by the University of California, Irvine, in Irvine, Californa</p>
+</li>
+</ul>
+
+<p id="_d8683b51-6ad3-8cc2-28a7-67fb456213e0">The format of the CalConnect week is:</p>
+
+<ul id="_2cb50563-0ab6-0c91-b3b9-4f2bcef8cb7e"><li><p id="_6e8986a7-8ada-127e-36f0-6604fbefdbfe">Monday morning through Wednesday noon, C.I.T.E. (CalConnect Interoperability Test Event)</p>
+</li>
+<li><p id="_c49fcbfe-ceb7-10b6-f59f-c29860372f8d">Wednesday noon through Friday afternoon, Roundtable (presentations, TC sessions, BOFs, networking, Plenary).</p>
+</li>
+</ul>
+</clause>
+</sections>
+</csd-standard>

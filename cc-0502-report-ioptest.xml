@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">January 2005 CalConnect Interoperability Test Report</title>
+
+<title language="main-en" format="text/plain">Interoperability Testing of RFC 2445 and the current CALDAV draft</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0502:2005</docidentifier><docnumber>0502</docnumber><date type="published"><on>2005-01-12</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2005-01-12</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2005</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7fbaec4b-0250-84e7-0e43-81775debe8a4" obligation="normative">
+<p id="_cdc4fc6d-0ab8-7040-218a-aee9d6fd453d">© 2005 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<clause id="_report" obligation="normative">
+<title>Report</title>
+<clause id="_participants" obligation="normative">
+<title>Participants</title>
+<ul id="_59d0f816-88ad-f728-12b7-b794cc26e58a"><li><p id="_0603d87f-189e-61da-af77-3897b5952d25">Pat Egen — Interop Manager — Calendaring and Scheduling Consortium</p>
+</li>
+<li><p id="_0c8f9ad3-1519-8c04-3e5c-4eaaabd1e519">Cyrus Daboo — Isamet</p>
+</li>
+<li><p id="_23a5256c-6149-da49-8008-7266e1941aca">Mike Shaver — Mozilla</p>
+</li>
+<li><p id="_b910a511-88ae-8148-08e0-7bd4c6623070">Dan Mosedale — Mozilla</p>
+</li>
+<li><p id="_8dc75c33-a0be-7716-d1aa-f265250bf5ed">Bernard Desruisseaux — Oracle</p>
+</li>
+<li><p id="_8317c504-f8d0-eeac-378b-1bd7717c0f0b">Simon Vaillancourt — Oracle</p>
+</li>
+<li><p id="_87fe5f8b-4939-487e-c6aa-011979f6c59e">Greg Barnes — University of Washington</p>
+</li>
+<li><p id="_ae44a2d5-5fae-515f-0c41-04105634fad6">Scott Heyano — University of Washington</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_tested" obligation="normative">
+<title>Products Tested</title>
+<ul id="_c92f143b-4976-fb31-395d-b39f6371d4f4"><li><p id="_2baf6ec9-9809-272b-88e8-352d15d5685e">Oracle CALDAV server</p>
+</li>
+<li><p id="_c3b41bf6-f061-6a08-79d1-0caa91f7bf32">Isamet CALDAV server and two Isamet clients</p>
+</li>
+<li><p id="_df2760b9-25b4-280b-c6ad-23cfc0e3718b">Mozilla clients</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_introduction" obligation="normative">
+<title>Introduction</title>
+<p id="_5cfe9196-9c87-f350-74b6-57cb1dc676e2">In January, the Calendaring and Scheduling Consortium hosted their second interoperability event at the University of Washington in Seattle. This was actually the fifth in the series of interop events testing calendaring standards. The main purpose of the event is to exercise as many client/server pairs as possible to identify what interoperates and what does not.</p>
+
+<p id="_497aa0c8-a064-c06b-d8b8-a5c661c9bf15">During this event, two different groups did testing. The first group tested interoperability between CalDav clients and servers. CALDAV is current a draft (see footnote below) and not yet an RFC. However, it is always a good idea to start testing draft specifications as early as possible to ensure a draft is heading in the right direction. Considerable work has already been implemented using the draft in its current state. Therefore, there is enough of a code base to facilitate interoperability testing. At this event, two servers and three client applications were tested.</p>
+
+<p id="_b4fddad8-7e37-38db-2fe5-d6f18f4467a3">The second set of testing was reading iCalendar objects created by an application developed by the University of Washington. Their objects only used the RFC 2445 specification. They have not added iTIP (RFC 2447) and iMIP (RFC 2446) functionality but this testing was an excellent opportunity to test how different applications and servers reacted to their ics files.</p>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_441992b8-5ba4-db91-c75e-d1c82336c533">In summary, the server implementations basically worked and did what they were supposed to do. The clients are well along and passed the majority of the scenarios. There are some pieces left to fill in but this is early in the interop testing scheme of things for CALDAV. The results are pretty great for a specification so young. This bodes well for the future of this spec.</p>
+</clause>
+
+<clause id="_caldav_testing_results" obligation="normative">
+<title>CALDAV testing results</title>
+<p id="_1d0f9f86-b206-07d1-f19b-fcb1dc158f87">A set of 19 basic testing scenarios were used to test the servers and clients. We tested event creation, event modification, event retrieval and event deletion. One significant thing to note about this interop is this is the first time we are using a server-based application to store and retrieve events.</p>
+
+<p id="_02a138f0-b2fe-5844-c6c6-74ede4fc2112">Some general items were noted by each of the vendors present. They are as follows:</p>
+
+<clause id="_issues_and_findings" obligation="normative">
+<title>Issues and findings</title>
+<p id="_aedebf1e-c2ca-1072-7589-c774c103d930">It was determined there is no real good reason for a server to remember a URL specified by a client. Implementers want to be able to forget a URI but do want to be able to send back the real URI of the meeting that is the final object. There was discussion that there may have been something in the CAP draft that handles this. That may be a resource for text to add to CALDAV.</p>
+
+<p id="_1777a79f-1a3c-64d7-37d8-a56cd28e10b4">When a client does a PUT the server sends back what the URI is at the end of the process. There is dialog out on the CALDAV list that may point to possible resolutions.</p>
+
+<p id="_6efeeab5-cca8-68d0-bc8f-5371057e84d3">If an underlying WEBDAV server does not support ACL or locking, then the client must handle everything. Locking would then be handled by tags and “if match” — you have to do a put operation that fails — a lock will guarantee you have a connection if you don’t get data back down the pipe.</p>
+
+<p id="_6b8bf53b-b640-c42f-0e7a-3ad71c9a7e2e">It was determined it is hard to lock a collection. The question is will this cause a performance hit on the server?</p>
+
+<p id="_f8359add-445e-c38f-b365-b1c9276c8305">In order to determine if locking is required, we need good usecases or test scenarios to prove or justify requiring locking. It was suggested that implementers use eTags as a workaround. However, server implementations will need to handle limits on locks. This gives rise to the question of how to handle things when the lock is broken and the eTag has changed. Consensus among the group was to not make it mandatory.</p>
+
+<p id="_b62661ed-1125-cb87-7e7e-618f1e125765">One question that came up pertained to HREFs. The question is “are HREF’s allowed to be relative in Webdav?”</p>
+
+<p id="_489d32da-f27d-f97c-d890-27a745653659">The majority of issues found during testing were not with the CALDAV specifications, but more with RFC2445 interpretations. For example, section 4.6.5 of RFC2445 addresses vtimezones and rrules. The first paragraph in this section seems to be interpreted differently by various clients. We will need to post this issue to the Calsify mailing list in the hopes that group can add this to their list of required changes/enhancements to RFC2445.</p>
+
+<p id="_7225fffc-a40e-61b8-6874-d4d413289b38">It was discussed that there might be an issue with propstat in the Caldav draft. Bernard from Oracle is not sure and will research this.</p>
+
+<p id="_b90310b4-1eca-5a4c-3fb7-f2a1ffb1d022">The following page shows the cases tested. The names of the clients are not noted — we use a code instead. C1, C2 and C3 are clients and S1 and S2 are servers.</p>
+</clause>
+
+<clause id="_results_of_test_scenarios" obligation="normative">
+<title>Results of Test Scenarios</title>
+<table id="_da427079-ba9c-727d-9261-0b3bc67fc4b6" unnumbered="true"><thead><tr><th valign="top" align="left">C1<br/> &gt; <br/> S1</th>
+<th valign="top" align="left">C1<br/> &gt; <br/> S2</th>
+<th valign="top" align="left">C2<br/> &gt; <br/> S1</th>
+<th valign="top" align="left">C3<br/> &gt; <br/> S1</th>
+<th valign="top" align="left">C2<br/> &gt; <br/> S2</th>
+<th valign="top" align="left">C3<br/> &gt; <br/> S2</th>
+<th valign="top" align="left">Test Scenario</th>
+</tr></thead>
+<tbody><tr><td colspan="6" valign="top" align="left"/><td valign="top" align="left">1. Event creation.</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">1.1. Create new single-instance meeting titled “Meeting 1.1” with the location “Seattle”.</td>
+</tr><tr><td valign="top" align="left">F</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">1.2. Create new meeting titled “Meeting 1.2” recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks.</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">1.3. Create new single-instance meeting titled “Meeting 1.3” with 2 other attendees.</td>
+</tr><tr><td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">1.4. Create new single-instance meeting titled “Meeting 1.4” with an alarm set to trigger 15 minutes prior to the schedule time of the meeting.</td>
+</tr><tr><td colspan="6" valign="top" align="left"/><td valign="top" align="left">2. Event modification</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left"/><td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">2.1. Modify title of meeting “Meeting 1.1” to “Meeting 1.1bis”.</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left"/><td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">2.2. Modify the location of the meeting “Meeting 1.1bis” to “Seattle bis”.</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left"/><td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">2.3. Reschedule meeting “Meeting 1.1bis” to the next day.</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left"/><td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">2.4. Add an attendee to “Meeting 1.1bis”.</td>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">2.5. Add an alarm to “Meeting 1.1bis”.</td>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">2.6. Modify the title of the 1st instance of the recurring meeting created in 1.2.</td>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">2.7. Modify the participation status of</td>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">2.8. Cancel the 4th instance of the recurring meeting created in 1.2.</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left"/><td valign="top" align="left">F</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">2.9. One client changes “Meeting 1.1bis” to a different time, second client ‘refreshes’ its display to see the modification.</td>
+</tr><tr><td colspan="6" valign="top" align="left"/><td valign="top" align="left">3. Event retrieval</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left"/><td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">3.1. Retrieve all the components and properties of the meetings scheduled for the current day (i.e., midnight to midnight local time).</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left"/><td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">3.2. Retrieve all the components and properties of the meetings scheduled for the current week.</td>
+</tr><tr><td valign="top" align="left">F</td>
+<td valign="top" align="left"/><td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">3.3. Retrieve all the components and properties of the meetings scheduled for the current month.</td>
+</tr><tr><td valign="top" align="left">F</td>
+<td valign="top" align="left"/><td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">3.4. Retrieve only the <tt>SUMMARY</tt>, <tt>DTSTART</tt> and <tt>DTEND</tt> (or <tt>DURATION</tt>) properties of meetings scheduled for current week.</td>
+</tr><tr><td colspan="6" valign="top" align="left"/><td valign="top" align="left">4. Event deletion</td>
+</tr><tr><td valign="top" align="left">Y</td>
+<td valign="top" align="left"/><td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">4.1. Delete the meeting titled “Meeting 1.1bis”</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left"/><td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">4.2. Delete the meeting titles “Meeting 1.2”</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_bibliography" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="caldav-draft">
+  <formattedref format="application/x-isodoc+xml">Calendaring and Scheduling Extensions to WebDAV (CalDAV) draft-dusseault-caldav-04</formattedref>
+  <docidentifier type="IETF">IETF I-D draft-dusseault-caldav-04</docidentifier>
+  <docnumber>04</docnumber>
+</bibitem>
+
+</references></bibliography>
+</csd-standard>

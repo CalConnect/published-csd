@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">TC MOBILE Interoperability Test Event Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1010:2010</docidentifier><docnumber>1010</docnumber><date type="published"><on>2010-09-10</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2010-09-10</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2010</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>MOBILE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_8f20ccc1-635d-bf2f-404a-72507af81e77" obligation="normative">
+<p id="_dcdc0398-a59b-3ae3-7a62-8128124a3fad">© 2010 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_0ba0d44d-a249-b246-819c-97f2620b40e2">The Calendaring and Scheduling Consortium’s mobile technical committee (TC-Mobile) held a mobile interoperability test event in May 2010 at CalConnect’s roundtable event hosted by Carnegie Mellon University in Pittsburgh, PA, USA. This was the third mobile test event that CalConnect has held.</p>
+
+<p id="_40f68b94-66a9-31c7-5974-1b4e60148021">This event was instigated by participants of TC-Mobile who had a strong interest in interoperability testing of their products. The event was focused on testing the ActiveSync protocol. Previous events focused on general iCalendar interoperability and SyncML testing.</p>
+
+<p id="_a4d49435-1678-3048-ce48-bd1d44886935">TC-Mobile’s primary role is to promote calendaring interoperability for mobile devices. As part of its efforts, it has developed a <link target="http://www.calconnect.org/pubdocs/CD0706%20Mobile%20Calendar%20Interoperability%20Test%20Suite.pdf"><em>Mobile Calendar Interoperability Test Suite</em></link> document that contains a large number of testing scenarios to use as the basis of interoperability testing. This was used during the event reported here.</p>
+</introduction></preface><sections>
+
+<clause id="_event_summary" obligation="normative">
+<title>Event Summary</title>
+<p id="_f127ed66-b97c-4d6d-45e6-0ed95c0ad5c9">Participants in the test event are listed in the table below. We had five server products and four client products being tested. Some were released products, others were still in development.</p>
+
+<table id="_587258e6-1317-84b8-ecbd-5f16f808d929" unnumbered="true"><thead><tr><th valign="top" align="left">Vendor</th>
+<th valign="top" align="left">Server</th>
+<th valign="top" align="left">Client</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">IceWarp</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">Microsoft</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">MailSite/AstraSync</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Notify Corp</td>
+<td valign="top" align="left"/><td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Nokia</td>
+<td valign="top" align="left"/><td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Synchronica</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">Kerio (remote)</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+
+<p id="_b6eb91a7-a33d-ec4d-78b6-b9073e770f68">Each participant provided their own systems for testing, either in the room itself, or remotely. A testing plan with a listing of client/server pairs was available and used to ensure we had full coverage of all relevant combinations. Some participants brought their own testing plans for use at the event, and these were shared with other participants. Facilities in the room included wired and WiFi internet access, as well as good wireless coverage from the major carriers. Servers were mostly hosted remotely, clients were running locally.</p>
+
+<p id="_c7a23b38-2d14-adf2-3217-35e9c223f73a">The biggest issues found involved protocol features that were implemented or expected by one side that had not been implemented by the other. The most frequent reason was ambiguity in the specifications which we hope to address with Microsoft. In other cases, products were simply under development and had not yet implemented the feature, however the participants were glad to know that such features were going to be important to implement, helping to prioritize on-going development.</p>
+</clause>
+
+<clause id="_conclusions" obligation="normative">
+<title>Conclusions</title>
+<p id="_911ac1ab-bbec-3f84-1c7d-73e662b2d34e">The testing event was successful, with all participants being able to run through their detailed testing scenarios with the other participants in matched client/server pairs. Participants were able to share knowledge about mobile calendaring from both a server and client perspective. Participants considered this event valuable, especially as no other organization offers a similar event for testing calendaring aspects of ActiveSync (and indeed other similar protocols).</p>
+</clause>
+
+<clause id="_future_work" obligation="normative">
+<title>Future Work</title>
+<p id="_23b8c87c-f8e7-bf11-6b7f-b46418768ca8">Following on from this successful interoperability testing event, CalConnect is planning additional mobile testing events for the future. We would like to hear from members and non-members interested in participating in a future mobile interoperability testing event. In particular who would like to attend and what should be tested. In the past we have found that events focused on a specific suite of tests or one particular technology have worked the best.</p>
+
+<p id="_41507ac8-cc71-7f73-2853-e88df4169c50">Please contact Dave Thewlis at CalConnect if you are interested<br/> (mailto:Dave.Thewlis@calconnect.org , tel:+1-707-840-9391).</p>
+</clause>
+</sections>
+</csd-standard>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">May 2007 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0704:2007</docidentifier><docnumber>0704</docnumber><date type="published"><on>2007-08-10</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Mike Douglass</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Daniel Boelzle</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Tony Becker</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1.2</edition><version><revision-date>2007-08-10</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2007</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7809dbe8-e645-5f85-32ad-f71bc98571d1" obligation="normative">
+<p id="_50f4b52f-8422-795d-1913-62a3d383a692">© 2007 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_2ac72656-2c22-57c5-f451-79cf7c86e9bf">This document contains notes and results from the May 2007 calendar interoperability event, sponsored by Boeing, held in Seattle Washington. The basic purpose of the event was to test CALDAV Free Busy and Scheduling and iCalendar iMIP and iTIP events.</p>
+
+<p id="_e906f53c-b30f-aa1a-7b97-17435c732aff">The chart below shows the attendees, their organization and the products they were testing.</p>
+
+<clause id="_attendees" obligation="informative">
+<title>Attendees</title>
+<table id="_66ccbf03-4dc2-c218-c379-328100545811" unnumbered="true"><thead><tr><th valign="top" align="left">Attendees</th>
+<th valign="top" align="left">Organization</th>
+<th valign="top" align="left">Products</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Cyrus Daboo</td>
+<td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Apple Client and CALDAV server</td>
+</tr><tr><td valign="top" align="left">Michael Douglass</td>
+<td valign="top" align="left">RPI</td>
+<td valign="top" align="left">Bedework CALDAV Server</td>
+</tr><tr><td valign="top" align="left">Daniel Boelzle</td>
+<td valign="top" align="left">Mozilla</td>
+<td valign="top" align="left">Lightning and Thunderbird Calendar clients</td>
+</tr><tr><td valign="top" align="left">Tony Becker</td>
+<td valign="top" align="left">Marware</td>
+<td valign="top" align="left">Marware Calendar</td>
+</tr><tr><td valign="top" align="left">Mikeal Rogers</td>
+<td valign="top" align="left">OSAF</td>
+<td valign="top" align="left">Cosmo CALDAV server and Chandler Client</td>
+</tr><tr><td valign="top" align="left">Daniel Rauschenbach</td>
+<td valign="top" align="left">Synchronica</td>
+<td valign="top" align="left">CALDAV Server</td>
+</tr></tbody>
+<note id="_47202c41-213f-2da4-3bec-355298ac298b"><p id="_c618bbcd-d5a4-a3e4-d333-9da7d410733f">Oracle was not present but provided external access to their CALDAV server for testing purposes.</p>
+</note></table>
+
+
+</clause>
+</introduction></preface><sections>
+
+<clause id="_general_comments" obligation="normative">
+<title>General Comments</title>
+<p id="_a38cd29d-cfa5-1b6f-c803-26de29311c47">The following applications and products were tested:</p>
+
+<ul id="_8fca2d2c-05e6-4a1b-1f3d-fb5c271f25e0"><li><p id="_da356dc3-5d62-5238-c4fc-7c97a6d1e4a7">Four CALDAV servers — RPI, Oracle, Apple and OSAF (Cosmo)</p>
+</li>
+<li><p id="_dcf822d4-efbf-82ae-326b-8e0872ce2ff0">Four CALDAV clients — OSAF (Chandler), Mozilla, Marware and Apple</p>
+</li>
+<li><p id="_2445c615-b018-c93f-fc69-674fa462aa0f">iCalendar interoperability — Mozilla and Apple</p>
+</li>
+</ul>
+
+<p id="_d0674725-72f3-f724-5a8f-975fa5566d59">The focus of this event was Free Busy and Scheduling testing in CALDAV. As more and more clients are adding in the features, we are able to test more of the spec. During testing, bugs in code were found and noted. One of the benefits of interoperability testing is to stress test implementations in a controlled environment. Each product found situations where they need to go back and adjust their implementations in order to improve interoperability.</p>
+
+<p id="_cd064aab-631e-3b09-139f-844dd36bc9d5">Examples of what is tested:</p>
+
+<ul id="_5bceb76d-df93-9128-d70b-507e624bdcf3"><li><p id="_76ac23be-99f6-5d8b-8d30-d278b8073725">Connection to all CALDAV servers from all clients.</p>
+</li>
+<li><p id="_d37c9b40-be0f-2ee3-843c-5bd8d99b364c">Successfully publishing events</p>
+</li>
+<li><p id="_4f25d142-7282-2283-0ae3-096e3e8fd928">Publishing separate calendars</p>
+</li>
+<li><p id="_a196602c-7b28-68b8-b09c-70972033e91f">Handling of errors and authentication</p>
+</li>
+</ul>
+
+<p id="_e8c45b3c-e7c4-4610-4fa9-f555a601e661">Examples of issues found are:</p>
+
+<ul id="_718a7637-b39c-81a0-71b0-578cb62441fb"><li><p id="_e557b08a-e914-9433-b1bd-e7d60582b2bd">Serialization of all requests</p>
+</li>
+<li><p id="_023f3e15-6a50-c46c-3da1-51c8803f6420">Handling of Mkcalendar</p>
+</li>
+<li><p id="_cc835a8a-daf4-6019-d498-dc7279118a4b">Products not showing first instances</p>
+</li>
+<li><p id="_90cc6973-eb41-008d-2314-0de5b17be6c6">Not handling <tt>EXDATE=a,b,c</tt></p>
+</li>
+<li><p id="_46d07705-a564-c0ed-1673-84906cfabc94">Fetching ETags on non-existing resources when adding items</p>
+</li>
+<li><p id="_794085c5-43db-2df1-924a-8928cda4305f">Error reporting</p>
+</li>
+<li><p id="_cdc6fa45-4312-a249-99f3-d32c36978943">Weekly recurring event 4 times — Queries “in between” weeks return no results</p>
+</li>
+<li><p id="_af14c52a-e09f-d12e-02d0-b04e00f60471">Deleting recurring event with multiple overridden instances</p>
+</li>
+<li><p id="_381b469e-126e-3e81-5253-22f23e8c2ece">UI handling of switching between recurring event with count (1.2) that do not update the recurrence field</p>
+</li>
+<li><p id="_a43adaa9-f7f4-2838-8865-c242dcf9d6d8">Deleting some instances, then changing the whole event into an all-day daily recurring one failed (err 500)</p>
+</li>
+<li><p id="_d1329975-02b2-27ce-054b-8a4aabe31125">A server that seems to filter out a <tt>VALARM</tt> and doesn’t write it.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_60d2f714-5e7e-d623-a2b8-bb8279fdc42b">We continue to have good results testing CALDAV clients and servers. General comments again are that it is always good to have interops in person. The ability to stress test in a controlled, “safe” environment is a plus.</p>
+
+<p id="_708995fc-e030-257e-e6b3-4555954df1fb">The aim of the next interop is to test more CALDAV Scheduling features.</p>
+
+<p id="_b6521839-a9cd-985f-20e6-2041c4c37bfe">Respectfully submitted,<br/> Pat Egen, <br/> Interoperability Event Manager</p>
+</clause>
+</sections>
+</csd-standard>

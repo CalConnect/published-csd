@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">February 2010 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1002:2010</docidentifier><docnumber>1002</docnumber><date type="published"><on>2010-03-25</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Gordon Connelly</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Libor Grafnetr</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Ciny Joy</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Arnaud Quillaud</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1.1</edition><version><revision-date>2010-03-25</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2010</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_8f20ccc1-635d-bf2f-404a-72507af81e77" obligation="normative">
+<p id="_dcdc0398-a59b-3ae3-7a62-8128124a3fad">© 2010 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_6fb75f0c-48da-e0ad-a0db-899b4a58dc71">The February CalConnect interoperability testing event was held at the UC Irvine campus in Orange County, California. Participants of the testing event used predetermined test scenarios. The EMClient group participated remotely from the Czech Republic. We utilized our CalConnect Jabber room and Wiki to enable the remote participation.</p>
+
+<p id="_133747da-8d62-5d97-3c91-fea0590378a4">The documents used in this testing event were the testing matrix for RFC4791 and in addition sync reports. Summaries and specific findings and issues found are noted in this document.</p>
+
+<p id="_84277a00-325c-4ec4-a0f7-6211218ee961">A small amount of initial CardDAV testing was done this event as well. Not everyone supports this protocol yet, but those that did performed some testing.</p>
+
+<clause id="_participants" obligation="informative">
+<title>Participants</title>
+<table id="_72797b6e-6ed8-a9de-b4a8-20fbe6baab36">
+<name>Participants</name>
+<tbody><tr><td valign="top" align="left">Organization</td>
+<td valign="top" align="left">Participants</td>
+<td valign="top" align="left">Versions Tested</td>
+</tr><tr><td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Cyrus Daboo</td>
+<td valign="top" align="left">iCal Server and client — OS X 10.6.1<br/> Apple iCal 4.0 (SnowLeopard)</td>
+</tr><tr><td valign="top" align="left">EMClient</td>
+<td valign="top" align="left">Libor Grafnetr</td>
+<td valign="top" align="left">eMClient Caldav Client</td>
+</tr><tr><td valign="top" align="left">PeopleCube</td>
+<td valign="top" align="left">Kellie Hunter<br/> Gordon Connelly</td>
+<td valign="top" align="left">Meetingmaker V8.8</td>
+</tr><tr><td valign="top" align="left">Sun</td>
+<td valign="top" align="left">Chiu Chau<br/> Arnaud Quillaud</td>
+<td valign="top" align="left">Sun Java Calendar Server 7</td>
+</tr><tr><td valign="top" align="left">Binary Tree</td>
+<td valign="top" align="left">Cameron Stillion</td>
+<td valign="top" align="left">Observer</td>
+</tr><tr><td valign="top" align="left">CalConnect Reps</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Interop Manager<br/> Logistics</td>
+<td valign="top" align="left">Pat Egen<br/> Dave Thewlis</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_general_comments_and_findings" obligation="normative">
+<title>General Comments and Findings</title>
+<p id="_e6abbb3c-dc19-0a35-f3e4-6ec07ceaa403">Several servers tested against two CALDAV clients. In addition, there was CARDDAV client/server implementations tested as well.</p>
+
+<p id="_aec5544b-bed1-2c2a-75a2-43bb5d9eb08b">The focus of the CALDAV testing this session was WEBDAV sync reports The sync collection reports testing used the draft-daboo-webdav-sync-02 document as the key driver. Since this is the first time we are testing the sync reports, several issues were found and fixed.</p>
+
+<p id="_b25d315a-ea7e-d682-4aeb-3f8ee09c170d">The following URL was provided to show the specific specification for delegates currently supported by Apple and Oracle :</p>
+
+<p id="_28a7f139-43cf-6048-31a8-7be433a654ba"><link target="http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldavproxy.txt"/></p>
+
+<p id="_33526e80-f1cb-6975-e945-fac88553dcad">CardDAV testing concentrated on client interoperability with other servers. Several issues were fixed.</p>
+
+<p id="_b8f00d31-33e3-0ca1-4d63-4467a34842ae">Some problems noted were:</p>
+
+<ul id="_2f5431ad-48c8-d5ef-8f59-eff8be08b7e9"><li><p id="_674ccc05-d31c-fa33-5d2a-bc5636a2902d">Problems with URL encoding in WebDAV responses or requests</p>
+<ul id="_5d08a5fd-a4b7-01cf-5b70-3696ded7fa64"><li><p id="_2a8d4509-6311-7754-c3fe-aa93f4887e84">problem with the interpretation of the “+” (plus) and ” ” (space) characters in collection names. The problem was fixed during the interop event.</p>
+</li>
+</ul>
+</li>
+<li><p id="_4b1d2e26-5820-f955-b377-bb949a6b2dbb">Complex vCards not accepted by a CardDAV server or properties were lost — Specifically there was a problem with more than 3 TEL properties specified, which was rejected by a server.</p>
+</li>
+<li><p id="_44d72cc6-a8e8-9155-bb2d-eac608487be9">Also TEL properties containing text were silently dropped. Several servers seemed to accept these vCards just fine.</p>
+</li>
+</ul>
+
+<p id="_fd72506b-bac1-29d7-a568-039553cac2c7">Missing implementation of ACL reports required by the standard</p>
+
+<p id="_297a15c4-9cf7-d87e-d159-2280b568292a">Overall the servers seemed to lack support for various ACL <tt>REPORT</tt>s or properties. The specific set varied from server to server. This could be attributed to the lack of support for these features from the clients and the fact that most servers support only subset of the WebDAV ACL specification that is required for interoperability with the Apple iCal client.</p>
+
+<p id="_b8b55eee-72e3-8576-6fe2-ed94497c3890">Testing in general found these issues:</p>
+
+<ol id="_36d942ee-f930-32f6-a836-256c448f558b" type="arabic"><li><p id="_0f21646a-a310-2f22-eb0f-f4930943f2c4">Making multiple modifications to different instances of recurring patterns produced duplicate entries</p>
+</li>
+<li><p id="_4daa3987-973b-8aa6-36d1-e6f9a85de707">Modifying recurring patterns when instances fall on a weekend are moved to the closest week day cause disconnect.</p>
+</li>
+<li><p id="_6736b95f-4ce9-79b1-0762-e8ce2af546d1">Cross server guest invitations could not be sent through third party clients.</p>
+</li>
+<li><p id="_98302ba0-d667-7a82-e64a-de83099f8838">Cross server delegate/proxy access issues.</p>
+</li>
+<li><p id="_de579673-9ca7-df5c-bb0d-b46e24802d36">Problems sending events.</p>
+</li>
+</ol>
+
+<p id="_a7a562c1-26b4-074a-c4a3-0ea322280388">CalDAV Sync testing issues noted:</p>
+
+<ul id="_12989fdb-758d-1684-f7d5-0b841a29d597"><li><p id="_ecb5d9ed-cfb6-a823-4a33-06846ac22799"><tt>SCHEDULE-STATUS</tt> on <tt>ORGANIZER</tt>‘s copy is lost when attendee copy is updated as a consequence of a small change from organizer</p>
+</li>
+<li><p id="_c60c7aae-711f-fa48-fddc-27011faedfa6"><tt>RSVP</tt> not <tt>RESET</tt> on <tt>ATTENDEE</tt>s copy when <tt>ORGANIZER</tt> is sending an update with same <tt>PARTSTAT</tt> but with <tt>RSVP=TRUE</tt></p>
+</li>
+<li><p id="_e2fa9ee2-5058-420d-3796-c9ae10c1637d"><tt>RSVP</tt> not removed from <tt>ATTENDEE</tt> in the following scenario:</p>
+</li>
+<li><p id="_18a66700-4dcb-3d74-0e68-c86aa2a2ed9d"><tt>ORG</tt> invites <tt>ATTENDEE</tt> — <tt>ATTENDEE</tt> declines — <tt>ORG</tt> Sends an update with</p>
+</li>
+<li><p id="_bab17ff6-8fb2-cdde-df90-321b8f6b37f8"><tt>PARSTAT=DECLINED;RSVP=TRUE</tt> and new <tt>SUMMARY</tt> — <tt>ATTENDEE ACCEPTS</tt> — <tt>RSVP</tt> not removed from  <tt>ORG</tt> copy</p>
+</li>
+</ul>
+
+<p id="_5ad49254-5cd0-8a46-3433-5f87ee9f808f">Some CardDAV testing found that <tt>OPTION</tt> or <tt>PROPFIND</tt> on <tt>/davserver/dav/principals/</tt> returns 404</p>
+
+<p id="_9a411b5d-7498-4658-c604-b7b817c77947">The following matrices show some observations for CALDAV, CARDDAV and sync reports.</p>
+
+<table id="_e96cf8f4-10ba-426d-2813-3bf9d6e0ef1d">
+<name>CALDAV Testing Matrix</name>
+<thead><tr><th valign="top" align="left"/><th valign="top" align="left">Comments</th>
+</tr></thead>
+<tbody><tr><th valign="top" align="left">Event creation.</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_d97070c9-aa21-430f-64dc-287f57325cde">Create new single-instance meeting titled “Meeting 1.4” with an alarm set to trigger 15 minutes prior to the schedule time of the meeting.</p>
+</td>
+<td valign="top" align="left"><p id="_6be8e4a9-1067-fc40-0e97-ded5ec0bcda5">resolve lastack change for recurring</p>
+</td>
+</tr><tr><th valign="top" align="left">Event retrieval</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_8cd3bc4b-3ad9-e08e-dfa8-fcb9e7779357">calendar-query <tt>REPORT</tt></p>
+</td>
+<td valign="top" align="left"><p id="_49470ff3-39c1-c90f-ec04-75a7e03ad088">used calendar-query for filtering by component type, but abandoned it since some servers impose item limits → back to propfind.</p>
+</td>
+</tr><tr><th valign="top" align="left">Free Busy Reports</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_3c5d0c99-e61b-5481-928b-80e89d0ebeb4">Create a new calendar and populate it with the following for one week:</p>
+
+<p id="_a4aec7bb-c49b-ab0f-1034-8b0f7630f0c0">Event on Monday, 9 am — 11 am, recurs every day for five times<br/> Event on Monday, 12 pm — 1 pm, status tentative <br/> Event on Monday, 2 pm — 3 pm, status cancelled <br/> Event on Tuesday, 11 am — 12 pm <br/> Event on Tuesday, 2 pm — 4 pm, recurs every day for four times <br/> Event on Tuesday, 3 pm — 5 pm <br/> Event on Wednesday, 11 am — 12 pm, status tentative <br/> Event on Wednesday, 3 pm — 5 pm, status tentative <br/> Event on Thursday, 11 am — 12 pm, status cancelled <br/> Event on Thursday, 3 pm — 5 pm, status cancelled</p>
+</td>
+<td valign="top" align="left"><p id="_e219ebd7-1597-3a39-155d-a2d953f89941">Freebusy only through <tt>freebusy</tt> URLs at the moment</p>
+</td>
+</tr></tbody>
+<dl id="_91b917c5-ea32-5d05-5cf6-a3676ef21fb1" key="true"><dt>P</dt>
+<dd><p id="_df2985a5-57e0-4075-364d-cce0f18e77fb">Pass</p>
+</dd>
+<dt>F</dt>
+<dd><p id="_a277a47a-0dc7-9531-4bb2-a9d5d31dcede">Fail</p>
+</dd>
+<dt>N</dt>
+<dd><p id="_19b0d1bf-9eb0-a9fd-1e1f-66bbb6692766">Not supported</p>
+</dd>
+</dl></table>
+
+
+
+<table id="_2311f96b-0ebd-49f3-2f23-3f5d26e357b7">
+<name>CARDDAV Testing Matrix</name>
+<thead><tr><th valign="top" align="left"/><th valign="top" align="left">Comments</th>
+</tr></thead>
+<tbody><tr><th valign="top" align="left">Card creation.</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_71d4f3f7-db75-6cda-86ce-1b289ed96d82">Create a new Card called “Card.1.1” with the fullname “James Brown”</p>
+</td>
+<td valign="top" align="left"/></tr><tr><th valign="top" align="left">Card modification</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_f6a6a563-3f44-8349-fda9-f4ed51dcddd7">Add a City State to “Card.1.1” — “Cupertino, CA”</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_9ea3d5b3-c2da-f631-c8f0-c6a0bd9cab92">Modify the full name of “Card.1.1” to “James D. Brown”.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><th valign="top" align="left">Card retrieval</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_e060c59f-71b7-d8f7-338a-b1de61aeb19c">Perform a nickname lookup for “JamesD”</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_2d219a9f-1279-d7dd-b2e1-17acffe8451a">Perform a full name lookup for “James D. Brown”</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_9b0eb5bb-827c-b68a-4002-1bdfc76e7604">Perform an email lookup for “<link target="mailto:jamesbrown@aol.com"/>”</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_1a30c413-0d8c-4c8a-1d31-1088d638e9b6">Query server for an addressbook report</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_b580d1ec-20ff-744b-0f36-a00f7bd8ebb6">Create an addressbook query report</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_ede4ddf4-245d-5413-ba84-c8f4da4da563">Perform a multi-get report for “…​…​.” (fill in what we should do here)</p>
+</td>
+<td valign="top" align="left"><p id="_87d31449-04b5-dd9b-e7e7-ec779a420b44">use multi-get report for address-book data property</p>
+</td>
+</tr><tr><th valign="top" align="left">Card deletion</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_2e4212cf-13d0-d0cd-85ed-498898664f70">Delete the card for “James D. Brown”</p>
+</td>
+<td valign="top" align="left"/></tr></tbody>
+<dl id="_08f2cd3a-276c-6008-78b4-847f6ac8f1c1" key="true"><dt>P</dt>
+<dd><p id="_0872924a-5a02-35a8-c8ba-1a96bef0936c">Pass</p>
+</dd>
+<dt>F</dt>
+<dd><p id="_8a9623f0-42a5-2244-5fec-19818e11e5f8">Fail</p>
+</dd>
+<dt>N</dt>
+<dd><p id="_b0da2777-1327-0a00-cf6a-a6e1dbb165fc">Not supported</p>
+</dd>
+</dl></table>
+
+
+
+<table id="_79513d2e-4dba-4b68-1440-6ba62d71e42b">
+<name>Sync Collection Matrix</name>
+<tbody><tr><td valign="top" align="left"><p id="_a39936b4-a956-cdb9-b9a2-3ceb1bdfa6e9">Synchronize existing collection containing an event</p>
+</td>
+<td valign="top" align="left">P</td>
+<td valign="top" align="left">P</td>
+<td valign="top" align="left">P</td>
+</tr><tr><td valign="top" align="left"><p id="_bfc1a987-5570-74f6-b4f7-32ba0c3a03a5">Resynchronize the same collection if no changes occurred</p>
+</td>
+<td valign="top" align="left">P</td>
+<td valign="top" align="left">P</td>
+<td valign="top" align="left">P</td>
+</tr><tr><td valign="top" align="left"><p id="_a519ab4e-9318-2004-bff9-dc45913fd7c1">Create an event in the collection, resynchronize</p>
+</td>
+<td valign="top" align="left">P</td>
+<td valign="top" align="left">P</td>
+<td valign="top" align="left">P</td>
+</tr><tr><td valign="top" align="left"><ul id="_ce180558-bc89-994e-30d5-6b2bc768cdff"><li><p id="_39d1186a-cfc8-d0c5-dbb7-0508e6eb549b">server responded with sync-response element containing “201 Created” status for the item that was created by the client (draft -02)</p>
+</li>
+</ul>
+</td>
+<td valign="top" align="left">*</td>
+<td valign="top" align="left">*</td>
+<td valign="top" align="left">*</td>
+</tr><tr><td valign="top" align="left"><ul id="_1e805738-dcba-3a7c-8ef2-7064d035e614"><li><p id="_6f16bba6-0fdc-8c44-2503-e42f1988ebe6">server responded with response element without a status (draft -03)</p>
+</li>
+</ul>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_ffb3b7af-fd20-df35-be43-17e9a9d38802">Create an event in the collection from other client, resynchronize</p>
+</td>
+<td valign="top" align="left">P</td>
+<td valign="top" align="left"/><td valign="top" align="left">P</td>
+</tr><tr><td valign="top" align="left"><p id="_b98f4d52-690d-167e-7206-86ace0b86817">Create an event in the collection, delete it from other client, resynchronize</p>
+</td>
+<td valign="top" align="left">P</td>
+<td valign="top" align="left"/><td valign="top" align="left">P</td>
+</tr><tr><td valign="top" align="left"><ul id="_ca938d35-ba29-28e5-3290-a4991c8b74a1"><li><p id="_52ed5551-fa8f-4f3f-8fa9-f7329119e070">the server <tt>MUST</tt> respond with 404 status for the item that was deleted from the other client</p>
+</li>
+</ul>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_b29c54a7-fa5a-5fd0-b86b-e303d5a14ac3">Create a collection with several events, delete it and recreate it from other client, resynchronize</p>
+</td>
+<td valign="top" align="left">P</td>
+<td valign="top" align="left"/><td valign="top" align="left">P</td>
+</tr><tr><td valign="top" align="left"><ul id="_6c5e5533-2e19-77bc-65c7-a3b81b9683ec"><li><p id="_f160c9c5-2ec2-7306-82fe-603cfee0701f">server responded by sending multistatus response with 404 statuses for all previously existing resources</p>
+</li>
+</ul>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left">*</td>
+</tr><tr><td valign="top" align="left"><ul id="_8dc0db48-0908-d8c9-784d-de858b7bc888"><li><p id="_794e44bd-34fe-f7dd-81de-e5c68762e1b5">server invalidated the synchronization token and refused the resynchronization request with 4xx error and valid-sync-token precondition</p>
+</li>
+</ul>
+</td>
+<td valign="top" align="left">*</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr></tbody>
+<dl id="_99ef0418-aced-12fd-b98a-8e602843309a" key="true"><dt>P</dt>
+<dd><p id="_aca69e6c-cab9-f307-01f8-0ef5770e209e">Pass</p>
+</dd>
+<dt>F</dt>
+<dd><p id="_0596d324-8ed6-18ad-f96f-e52832067df3">Fail</p>
+</dd>
+<dt>N</dt>
+<dd><p id="_2930ae42-1c0e-c840-7cc9-ebab2cca84ac">Not supported</p>
+</dd>
+</dl></table>
+
+
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_5e83c28c-9e60-33fe-fe1c-c98a32f8c9d6">As we continue CalDAV testing, there is more and more evidence of improved functionality. This session focused on sync reports. Additional CardDAV testing occurred. The remote participation by one vendor appeared to work well. It is not a good substitute for in-person testing, but it was very helpful to the group.</p>
+
+<p id="_d84b4f76-5e51-7998-2d9c-46556d4f4cd8">Our thanks to all participants and contributors to this document.</p>
+
+<p id="_4240f6a0-b1e9-38a5-2c57-d6b7c475a2d0">Respectfully submitted by Pat Egen, CalConnect Interop Manager.</p>
+</clause>
+</sections>
+</csd-standard>

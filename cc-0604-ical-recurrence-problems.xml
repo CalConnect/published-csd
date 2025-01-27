@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">iCalendar Recurrence Problems and Recommendations</title>
+<docidentifier primary="true" type="CalConnect">CC/R 0604:2006</docidentifier><docnumber>0604</docnumber><date type="published"><on>2006-03-16</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Chris Stoner</completename></name>
+<affiliation><organization>
+<name>IBM</name>
+</organization></affiliation><email>cstoner1@us.ibm.com</email></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2006-03-16</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="R">report</doctype><flavor>cc</flavor><editorialgroup><committee>RECURR</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_99182f1e-afe9-88ed-397b-86612414dab2">This document contains information about recurrence implementation issues and recommendations on how to resolve these issues. We first explain what recurrences are, justify the need for recurrences, identify recurrence implementation problems and ambiguities, and then offer some guidelines and recommendations to solve these issues.</p>
+</introduction></preface><sections>
+
+<clause id="_what_are_recurrences_and_why_do_we_need_them" obligation="normative">
+<title>What are recurrences and why do we need them?</title>
+<p id="_7940ab96-1d58-7348-bcef-e925f2917170">The word “recurrence” in iCalendar refers to the ability of an event to repeat, i.e. schedule a meeting to occur every Wednesday for the next 3 weeks. This sort of scheduling can be represented in iCalendar using a recurrence rule. The purpose of using the recurrence properties is to have the ability to transmit many related event dates in a single transaction. For example, it is possible to create a recurring meeting that will repeat every day for 5 days in one transaction to the invitee list, instead of sending five transactions (one for each day) to the invitee list. Recurrence properties also offer synchronization from desktop to mobile device, for example, a way to quickly send information about many related event dates in a single transaction.</p>
+
+<p id="_66e7fe65-afc2-a031-3625-a2fdc8b813d3">The receiver expands the rule to display the actual dates during processing.</p>
+</clause>
+
+<clause id="_recurrence_issues_with_itip" obligation="normative">
+<title>Recurrence Issues with iTIP</title>
+<p id="_da1c4549-8857-0e40-d079-974b09835105">There are some ambiguities in iCalendar that have led some implementers to interpret the same iCalendar stream in very different ways. This difference in interpretation has lead to low interoperability of some of the features of recurrences.</p>
+
+<clause id="_how_should_recurrence_modifications_be_handled" obligation="normative">
+<title>How should recurrence modifications be handled?</title>
+<clause id="_c10ce14b-c6c1-86c8-9351-4997930ae708" obligation="normative">
+<p id="_ebb87462-a224-e347-50a5-73ea63b93fa3">There are interoperability problems when the sender is attempting to reschedule an entire event, but does not send recurrence properties and does not wish to replace the recipients set with the new set. The sender is trying to simply move the set from one time to another (1pm to 2pm), adjust duration, etc. A simple example would be a recurring meeting that is currently from 1pm to 2pm, that is being rescheduled to 4pm to 5pm, for all instances. Implementers might not want to lose the recipient’s changes, personal notes, and updates to the set by replacing their set with what’s received.</p>
+</clause>
+
+<clause id="_2" obligation="normative">
+<p id="_2487abaf-0bc9-7b6c-7d09-b7bf7f9d0269">There are additional interoperability problems when a sender attempts to reschedule a recurrence set with a new rule, which should replace the existing rule. An example would be a recurring meeting that follows one rule pattern, say daily for 5 days, and is replaced with another rule pattern that may or may not match the original number of instance, say weekly for 3 weeks.</p>
+</clause>
+</clause>
+
+<clause id="_when_should_the_add_method_be_used" obligation="normative">
+<title>When should the <tt>ADD</tt> method be used?</title>
+<clause id="_3" obligation="normative">
+<p id="_4e6a5ace-6e01-bb92-5c98-f7a81f3cca20">There’s some ambiguity in iTIP involving when these properties: <tt>RRULE</tt>, <tt>EXRULE</tt>, <tt>RDATE</tt>, <tt>EXDATE</tt> and some others of the master instance should be sent to the recipient. It’s unclear if the master instance properties should be sent to the recipient during an  <tt>ADD</tt>.</p>
+</clause>
+</clause>
+
+<clause id="_how_should_the_scheduling_of_an_unbounded_rule_be_solved" obligation="normative">
+<title>How should the scheduling of an unbounded rule be solved?</title>
+<clause id="_4" obligation="normative">
+<p id="_6c6d2d39-5200-cd55-cbca-38c023a7c316">Since there is no limit to the set of recurrences, it’s unclear what is expected to happen when scheduling, e.g. how can an attendee verify that they are free or busy for each event in the unbounded (infinite) set?</p>
+</clause>
+</clause>
+
+<clause id="_can_unbounded_rules_be_truncated" obligation="normative">
+<title>Can unbounded rules be truncated?</title>
+<clause id="_5" obligation="normative">
+<p id="_19058c40-8db1-da0c-5be3-dbe94d52c05e">It’s unclear what an implementer should do if unbounded rules do not fit the business case the application was written for, i.e. if the iCalendar stream contains an unbounded rule that repeats every second forever. If the implementer’s application expands  <tt>RRULE</tt>s upon receiving them, it’s unclear if it’s acceptable to truncate and what response, if any, should go back to the sender.</p>
+</clause>
+</clause>
+
+<clause id="_how_should_calendar_objects_occurring_during_a_daylight_time_change_be_handled" obligation="normative">
+<title>How should calendar objects occurring during a daylight time change be handled?</title>
+<clause id="_6" obligation="normative">
+<p id="_29ca5c98-3b78-b42c-fe8c-fdcb64daaf11">It’s unclear what should happen if an iCalendar object occurs during a daylight time change, like April 4, 2005 at 2am EST, what should happen?</p>
+</clause>
+</clause>
+
+<clause id="_if_an_event_is_set_to_repeat_on_the_31st_of_each_month_what_do_you_do_in_months_with_fewer_than_31_days" obligation="normative">
+<title>If an event is set to repeat on the 31st of each month, what do you do in months with fewer than 31 days?</title>
+<clause id="_7" obligation="normative">
+<p id="_78211c1f-cf62-1ddf-75c3-78d8c9974127">Should the instance roll to the next day or be dropped?</p>
+</clause>
+</clause>
+
+<clause id="_how_do_we_create_a_rule_that_excludes_weekends_and_holidays" obligation="normative">
+<title>How do we create a rule that excludes weekends and holidays?</title>
+<clause id="_8" obligation="normative">
+<p id="_de15109f-f2ed-e35c-e19d-0eb4fb77819e">It’s unclear how to describe the sender’s idea of holidays (say US holidays) when the recipient could have a different holiday set (say Israeli holidays).</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_recommendations_for_itip" obligation="normative">
+<title>Recommendations for iTIP</title>
+<clause id="_recurrence_properties_modifications" obligation="normative">
+<title>Recurrence properties modifications</title>
+<clause id="_9" obligation="normative">
+<p id="_d44fbacf-3ff3-ab3e-025b-b78cb28c4779">To reschedule an event to a set of explicit dates/times but not replace the set with a new rule pattern, the sender should send a set of components with  <tt>RECURRENCE-ID</tt> being set in each to handle the explicit override of the rule’s date/time.</p>
+</clause>
+
+<clause id="_10" obligation="normative">
+<p id="_e40aab1a-e2bc-a08a-bb6d-5bed84bcc4b3">If an <tt>RRULE</tt> is changed, then the entire iCalendar object should be resent in the reschedule. This tells the receiver that all exceptions should be removed and replaced with this new rule. The new  <tt>RRULE</tt> properties are required in order for the recipient to know that they need to replace the set they have with the incoming set.</p>
+
+<clause id="_11" obligation="normative">
+<p id="_3b4ebb7b-9203-e246-540e-806d8d243903">In iTIP there is currently the possibility of adding an <tt>RRULE</tt> to an event using the  <tt>ADD</tt> method, discussions about this should be brought to a public forum. See next topic for details on the  <tt>ADD</tt> method.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_when_should_the_add_method_be_used_2" obligation="normative">
+<title>When should the <tt>ADD</tt> method be used?</title>
+<clause id="_12" obligation="normative">
+<p id="_2a50354f-a047-866f-7a0d-bf22ed4e16cc">The <tt>ADD</tt> method should only be used to add occurrences to an existing calendar object, the supplied  <tt>VEVENT</tt>/<tt>VJOURNAL</tt>/<tt>VTODO</tt> component data must not contain these properties:  <tt>RRULE</tt>, <tt>EXRULE</tt>, <tt>RDATE</tt>, <tt>EXDATE</tt> (and all other properties that can only be in the master instance). Currently iTIP does allow recurrence properties in an ADD method’s data.</p>
+</clause>
+</clause>
+
+<clause id="_how_should_the_scheduling_of_an_unbounded_rule_be_solved_2" obligation="normative">
+<title>How should the scheduling of an unbounded rule be solved?</title>
+<clause id="_13" obligation="normative">
+<p id="_5dc003fe-0b54-045d-d923-f9cc08511039">A free busy request must always have a start and end date, only the occurrences of the unbounded rule that match the free busy request timerange should be expanded.</p>
+</clause>
+</clause>
+
+<clause id="_can_unbounded_rules_be_truncated_2" obligation="normative">
+<title>Can unbounded rules be truncated?</title>
+<clause id="_14" obligation="normative">
+<p id="_f0bdbd20-a61e-24e9-d97b-9a73ee7ba13f">The implementer can truncate an unbounded rule if unbounded rules do not fit the business case the application was written for. The implementer must however make sure that when that calendar object is exported, the original rule is preserved; a warning could also be issued indicating that the calendar object was truncated.</p>
+</clause>
+
+<clause id="_15" obligation="normative">
+<p id="_eb7ed819-a35e-bd92-e50d-a3d70f56ec2e">The application truncating an incoming calendar object could implement an internal mechanism that would send an iTIP refresh request to the organizer requesting additional occurrences as time goes by.</p>
+</clause>
+</clause>
+
+<clause id="_how_should_calendar_objects_occurring_during_a_daylight_saving_time_change_be_handled" obligation="normative">
+<title>How should calendar objects occurring during a daylight saving time change be handled?</title>
+<clause id="_16" obligation="normative">
+<p id="_dc3da587-e001-ba54-080f-c73dfff0b9cb">An explicit instance specified using an <tt>RDATE</tt> with a <tt>PERIOD</tt> value should be used to fix the required duration for the event spanning the daylight saving time change.</p>
+</clause>
+</clause>
+
+<clause id="_if_an_event_is_set_to_repeat_on_the_31st_of_each_month_what_do_you_do_for_months_with_fewer_than_31_days" obligation="normative">
+<title>If an event is set to repeat on the 31st of each month, what do you do for months with fewer than 31 days?</title>
+<clause id="_17" obligation="normative">
+<p id="_5b491355-5e03-5553-4633-036153b6a0fb">The instance needs to be dropped as specified in <eref type="inline" bibitemid="rfc2445" citeas="IETF RFC 2445"><localityStack><locality type="page"><referenceFrom>44</referenceFrom></locality></localityStack></eref>.</p>
+</clause>
+</clause>
+
+<clause id="_how_do_we_create_a_rule_that_excludes_weekends_and_holidays_2" obligation="normative">
+<title>How do we create a rule that excludes weekends and holidays?</title>
+<clause id="_18" obligation="normative">
+<p id="_7eb3b6f8-06bb-3092-ed4a-02ec28892802">Use <tt>BYDAY</tt> without specifying Saturday and Sunday and use <tt>EXDATE</tt>s to remove holidays.</p>
+</clause>
+</clause>
+
+<clause id="_implementations_without_rrule_support" obligation="normative">
+<title>Implementations without <tt>RRULE</tt> support</title>
+<clause id="_19" obligation="normative">
+<p id="_57b6a57e-d115-3e13-f5ef-5302a8d0bbef">A new iTIP response could be created indicating to a sender that the recipient does not support  <tt>RRULE</tt>s, the sender could then decide to “explode” the calendar object into  <tt>RDATE</tt>s and send that <tt>RRULE</tt>-less calendar object. A link to  <tt>RRULE</tt> processing reference table and <tt>FREQ</tt> example streams can be found at the end of this document.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_recurrence_issues_with_icalendar" obligation="normative">
+<title>Recurrence Issues with iCalendar</title>
+<clause id="_usefulness_vs_cost_of_implementation_of_some_properties" obligation="normative">
+<title>Usefulness vs. Cost of implementation of some properties</title>
+<clause id="_20" obligation="normative">
+<p id="_9b99ba53-316b-ea75-fc40-3ee87bbb39a7">Some of the <tt>RRULE</tt> grammar is cumbersome and difficult to use.</p>
+</clause>
+
+<clause id="_21" obligation="normative">
+<p id="_ba4ecc44-92e3-9fab-1cac-244ce98f51b7">Some of the <tt>RRULE</tt> grammar is not needed for human-interaction systems.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_recommendations_for_icalendar" obligation="normative">
+<title>Recommendations for iCalendar</title>
+<clause id="_usefulness_vs_cost_of_implementation_of_some_properties_2" obligation="normative">
+<title>Usefulness vs. Cost of implementation of some properties</title>
+<clause id="_22" obligation="normative">
+<p id="_c3ee37e6-4d0d-3257-9b37-06cfec78e85b">Further discussions on public forums are needed about the usefulness of the following properties and if there could be simpler ways to solve the use cases they were made for:</p>
+
+<clause id="_23" obligation="normative">
+<p id="_1dc01ed4-9a27-ad11-b538-3f005c09ab63"><tt>EXRULE</tt> — This recurrence property is cumbersome to use and the equivalent can be generated with a list of  <tt>EXDATE</tt>s. This property could be removed for better interoperability.</p>
+</clause>
+
+<clause id="_24" obligation="normative">
+<p id="_4d3338d0-1b02-9573-96e2-15b6edee88cd"><tt>BYSECOND</tt> — This recurrence rule part is not useful in a human-interaction system and since that is our target, not automated systems, this rule part should be removed for better interoperability.</p>
+
+<clause id="_25" obligation="normative">
+<p id="_4666517f-33fe-f6ff-9a58-d2a6a71decb2">How to handle seconds if they are received? If a client receives an  <tt>RRULE</tt> with a <tt>DTSTART</tt> that has non-zero seconds, the client can ignore the seconds without having to round up, which might have pushed the time into the next hour or day.</p>
+</clause>
+</clause>
+
+<clause id="_26" obligation="normative">
+<p id="_f09352b8-eda3-c732-7470-a703bffcac79"><tt>BYSETPOS</tt> — This <tt>RRULE</tt> property is useful in that it has the “payday” use case, ie. last workday of the month, but can be complicated to implement. The sender could use  <tt>RDATE</tt>s as well but could be a lengthy list if this goes on yearly, etc. It is better to send a list of  <tt>RDATE</tt>s with exceptions already taken into account, and refresh this at appropriate intervals to extend the set. If that is recommended in the RFC, then this property could be removed. Recommend going to the  <tt>CALSIFY</tt> list to see if this is deemed a workable solution.</p>
+</clause>
+
+<clause id="_27" obligation="normative">
+<p id="_d01a5525-3564-9e16-e5e4-c6d54d598f58">Multiple <tt>EXRULE</tt>s and <tt>RRULE</tt>s — These properties combined are complicated to implement, are not supported by many implementers, so support for multiple  <tt>EXRULE</tt>s and <tt>RRULE</tt>s should be removed from the iCalendar RFC and related memos.</p>
+</clause>
+</clause>
+</clause>
+</clause>
+
+<clause id="_best_practices" obligation="normative">
+<title>Best Practices</title>
+<clause id="_when_should_the_sequence_value_change" obligation="normative">
+<title>When should the <tt>SEQUENCE</tt> value change?</title>
+<clause id="_28" obligation="normative">
+<p id="_5d1be842-e93c-ec36-908f-fdd844e39a31">The <tt>SEQUENCE</tt> value should be changed when the date, time, or duration of one or more instances, of the master instance, change. This refers to a scheduling time change, say a meeting that was from 1pm to 2pm is being rescheduled to 3pm to 4pm.</p>
+</clause>
+
+<clause id="_29" obligation="normative">
+<p id="_13a23d69-26e7-298c-37e4-85596b766316">The <tt>SEQUENCE</tt> value should not be changed when the only properties that are changed are those not having to do with meeting date, time, or duration change. This refers to changing  <tt>SUMMARY</tt> or <tt>LOCATION</tt>, for example. When changing these properties, it’s best not to change the <tt>SEQUENCE</tt> value if a meeting time change is not also involved in the update. The  <tt>SEQUENCE</tt> value is used to denote a date, time, or duration change; not a change in other properties.</p>
+
+<clause id="_30" obligation="normative">
+<example id="_ae0e3043-184f-12b3-35f6-da8659b2ddfd"><p id="_4b2e7966-08d2-ab90-9269-60e17d21a99c">Chair sends out a 3 day recurring meeting that repeats Monday through Wednesday. Chair later changes the  <tt>LOCATION</tt> for all the instances, but did not change the date, time, or duration. The receiver will note the  <tt>SEQUENCE</tt> value has not changed, and can simply apply the other properties sent to the recurrence set. If the sender had changed the  <tt>SEQUENCE</tt> value, the receiver could believe this to mean a date, time, or duration change, and attempt to apply a reschedule to the set when one did not occur.</p>
+</example>
+</clause>
+</clause>
+</clause>
+
+<clause id="_31" obligation="normative">
+<p id="_76faac88-ed7b-b1e7-daeb-d8553333f0d3">If you want to reschedule the first instance, you’d send <tt>DTSTART</tt> and <tt>DTEND</tt>, <tt>RECURRENCE-ID</tt>, and <tt>UID</tt>. (iTIP)</p>
+</clause>
+
+<clause id="_32" obligation="normative">
+<p id="_b409d5e9-8c16-fdb3-41ff-e37396cbd769">Reschedules occur in two different varieties (iTIP), rescheduling where the <tt>RECURRENCE-ID</tt> is supposed to be changed and when <tt>RECURRENCE-ID</tt> is not supposed to change.</p>
+
+<clause id="_33" obligation="normative">
+<p id="_ec13fb1f-7574-6760-0bb1-0eb38ba524c9">Rescheduling of one or more instances where <tt>RECURRENCE-ID</tt> is not subject to change. In this case, recurrence properties are not sent, so the receiver is expected to keep the current recurrence set and simply reschedule what’s already on the calendar to different dates/times.</p>
+
+<clause id="_34" obligation="normative">
+<p id="_56103c5d-4c31-0e69-11f0-2bb0c29be8b3">Single Instance example: Chair sends out a 5 day recurring meeting that repeats Monday through Friday. Chair later reschedules only Wednesday to a different time. The Wednesday instance should retain it’s original  <tt>RECURRENCE-ID</tt>; this property should not be updated.</p>
+</clause>
+
+<clause id="_35" obligation="normative">
+<p id="_5a5aa58c-0fc9-d189-5f52-6a9e59d0ecaa">Many instance example: Chair sends out a 5 day recurring meeting that repeats Monday through Friday. Chair later reschedules Wednesday and Thursday to a different time. The Wednesday and Thursday instances should retain their original  <tt>RECURRENCE-ID</tt>; this property should not be updated.</p>
+</clause>
+</clause>
+
+<clause id="_36" obligation="normative">
+<p id="_bc8715f6-61c0-3b35-5d4e-652fe3f1d288">Rescheduling of the entire set, where <tt>RECURRENCE-ID</tt> is expected to change. In this case, recurrence properties are sent, so that the receiver is expected to replace the existing recurrence set with the incoming set.</p>
+
+<clause id="_37" obligation="normative">
+<example id="_121ed71d-ebb3-cd1a-ed24-e8357e90c0ef"><p id="_854b3daf-4efb-4e9d-8534-d842f10ef50d">Chair sends out a 5 day recurring meeting that repeats Monday through Friday. Chair later reschedules the entire event to follow a different rule pattern; this time weekly for 5 weeks on Monday. All of the instances should be replaced with new instances containing data from the master that was sent, with new <tt>RECURRENCE-ID</tt> properties generated for each.</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_38" obligation="normative">
+<p id="_6f889716-45e5-7d82-3791-b86d31ae7d84">Why not always update <tt>RECURRENCE-ID</tt>? Since <tt>RECURRENCE-ID</tt> is our key to find that particular instance, it should not be changed unless the entire set is being replaced. The reason is best explained with an example: Chair sends out a 5 day recurring meeting, Monday thru Friday, from 9am to 10am. Chair later reschedules Wednesday to be from 1pm to 2pm. One of their recipients does not receive the reschedule for Wednesday. Chair reschedules Wednesday again this time from 3pm to 4pm. If the  <tt>RECURRENCE-ID</tt> was changed during the 1-2pm reschedule, then the recipient will not be able process this reschedule or any subsequent reschedules or updates. That  <tt>RECURRENCE-ID</tt> will never match any instances on their calendar.</p>
+</clause>
+</clause>
+
+<clause id="_39" obligation="normative">
+<p id="_211c76e5-6c0b-8e9f-0236-45d5559b5ed7">When processing a <tt>RANGE</tt> that is set to <tt>THISANDFUTURE</tt> for recurrences, the order in which components have been overridden must be used to define which instances are affected by  <tt>THISANDFUTURE</tt>. For example, say an event has three instances A, B and C. If B is overridden with a component with a  <tt>RANGE=THISANDFUTURE</tt> parameter, then both B and C will be affected by the change. However, if C were subsequently changed, the change to C would not incorporate the changes done in B. Alternatively, if C was overridden first, and then B overridden with  <tt>THISANDFUTURE</tt>, then the changes in B would be incorporated into C. Note that this means that the overridden component for C is effectively not used.</p>
+</clause>
+</clause>
+
+<clause id="_conclusion" obligation="normative">
+<title>Conclusion</title>
+<p id="_472e5010-174b-c895-2bd4-b82efca4aeeb">In conclusion, this document has attempted to trim recurrences to a subset of features that are common to implementations in the market, offer real value in the end result product, and would be deemed require functionality to the end user. Additional modifications that could be discussed for the new drafts are:</p>
+
+<ol id="_1cea4769-4f3f-9361-7920-127188321866" type="arabic"><li><p id="_e33a5b07-20b3-8350-33b8-639a596c89b8">Are multiple <tt>RRULE</tt>s and <tt>EXRULE</tt>s really useful, could we do without them?</p>
+</li>
+<li><p id="_efeb42d7-f4a9-815c-9e1e-5345b14188be">Are <tt>EXRULE</tt>s really useful, could we do without them?</p>
+</li>
+<li><p id="_89bdbaaa-cfd9-25a5-d009-e7868a9cab0f">Removal of <tt>THISANDPRIOR</tt>, since <tt>THISANDPRIOR</tt> always refers to a finite number of occurrences it could be done with exceptions.</p>
+</li>
+</ol>
+</clause>
+
+
+
+
+
+
+</sections><annex id="appendixA" obligation="normative">
+<title><tt>RRULE</tt> Processing</title>
+<p id="_519e9479-01ea-5d56-482e-52e0e802d6a5">A particular <tt>BYxxx</tt> rule part may expand or limit the set of date/times generated by the rule. The expand or limit behaviour is governed by the  <tt>FREQ</tt> value used for the rule.</p>
+
+<example id="_42decdfb-2b4e-466f-83be-9b577cd66ab2"><p id="_bd0b45d7-0cc1-bc8d-bee2-59baa1407a3d"><tt>RRULE:FREQ=MONTHLY;BYMONTH=1,3,5;BYDAY=MO,TU</tt></p>
+
+<p id="_4449a2e8-c5ae-d53c-0088-ab6237b77dc8">The <tt>FREQ=MONTHLY</tt> value would match each of the twelve months in a year.</p>
+
+<p id="_08e94b40-96d0-eb4b-3c28-b955c2191c50">The <tt>BYMONTH=1,3,5</tt> rule part limits the matching months to just the 1st, 3rd and 5th in a year.</p>
+
+<p id="_66e117c3-bf2b-08eb-631e-0b9f4c83f2d7">The <tt>BYDAY=MO,TU</tt> rule part adds each Monday and Tuesday within the matching months to the recurrence set.</p>
+</example>
+
+<p id="_1d206a28-4b6b-c36c-b67a-cf906bc7297c">The table below shows the dependency of <tt>BYxxx</tt> rule part expand or limit behaviour on the  <tt>FREQ</tt> value in the rule. When evaluating a rule, each <tt>BYxxx</tt> rule part must be evaluated in the order it appears in the table (i.e.  <tt>BYMONTH</tt> evaluated before  <tt>BYWEEKNO</tt>), irrespective of the expand or limit behaviour.</p>
+
+<p id="_353db97a-09c2-aaa6-01c1-e021fd735840"><tt>BYDAY</tt> has some special behaviour depending on the <tt>FREQ</tt> value and this is described in separate notes below the table.</p>
+
+<table id="_2397c43c-00af-0bb0-5d67-1f881aa8c235" unnumbered="true"><tbody><tr><td valign="top" align="left"/><td valign="top" align="left"><tt>SECONDLY</tt></td>
+<td valign="top" align="left"><tt>MINUTELY</tt></td>
+<td valign="top" align="left"><tt>HOURLY</tt></td>
+<td valign="top" align="left"><tt>DAILY</tt></td>
+<td valign="top" align="left"><tt>WEEKLY</tt></td>
+<td valign="top" align="left"><tt>MONTHLY</tt></td>
+<td valign="top" align="left"><tt>YEARLY</tt></td>
+</tr><tr><td valign="top" align="left"><tt>BYMONTH</tt></td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Expand</td>
+</tr><tr><td valign="top" align="left"><tt>BYWEEKNO</tt></td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Expand</td>
+</tr><tr><td valign="top" align="left"><tt>BYYEARDAY</tt></td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Expand</td>
+</tr><tr><td valign="top" align="left"><tt>BYMONTHDAY</tt></td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">N/A</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+</tr><tr><td valign="top" align="left"><tt>BYDAY</tt></td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left"><fn reference="a"><p id="_bc367ae7-c7a5-fc1b-8d4f-e8690caffd19">Special expand for <tt>WEEKLY</tt>.</p>
+
+<p id="_e4726ebd-498c-f341-4e90-0daaf67c349a">A <tt>BYDAY</tt> rule part cannot have a numeric value in a <tt>FREQ=WEEKLY</tt> rule (i.e. ‘MO’, ‘TU’ etc is allowed, but ‘1MO’, ‘2TU’ is not allowed).</p>
+</fn></td>
+<td valign="top" align="left"><fn reference="b"><p id="_a9ffa2ee-c734-cf81-5ccd-35d39cd66fa7">Limit if <tt>BYYEARDAY</tt> or <tt>BYMONTHDAY</tt> is present, otherwise special expand for  <tt>MONTHLY</tt>.</p>
+
+<p id="_cff85e8e-0d49-9bdc-d9ab-8f68c785c846">The numeric value in a <tt>BYDAY</tt> rule part in a <tt>FREQ=MONTHLY</tt> rule corresponds to an offset with the month.</p>
+</fn></td>
+<td valign="top" align="left"><fn reference="c"><p id="_4daeaf05-2e10-13ea-5d8d-09640eae4dc2">Limit if <tt>BYYEARDAY</tt> or <tt>BYMONTHDAY</tt> is present, otherwise special expand for  <tt>WEEKLY</tt> if <tt>BYWEEKNO</tt> present, otherwise special expand for  <tt>MONTHLY</tt> if <tt>BYMONTH</tt> present, otherwise special expand for  <tt>YEARLY</tt>.</p>
+
+<p id="_7b78a793-e38a-e053-5ff1-e2d0719b870c">A <tt>BYDAY</tt> rule part cannot have a numeric value in a <tt>FREQ=YEARLY</tt> rule (i.e. ‘MO’, ‘TU’ etc is allowed, but ‘1MO’, ‘2TU’ is not allowed), if  <tt>BYWEEKNO</tt> is specified.</p>
+
+<p id="_f654fc67-83f7-f274-9f1e-b8c68376cc17">The numeric value in a <tt>BYDAY</tt> rule part in a <tt>FREQ=YEARLY</tt> rule with a  <tt>BYMONTH</tt> present corresponds to an offset with the month.</p>
+
+<p id="_f6d992ca-4e44-dc28-6158-4e15b69b5251">The numeric value in a <tt>BYDAY</tt> rule part in a <tt>FREQ=YEARLY</tt> rule without  <tt>BYWEEKNO</tt> or <tt>BYMONTH</tt> present corresponds to an offset within the year.</p>
+</fn></td>
+</tr><tr><td valign="top" align="left"><tt>BYHOUR</tt></td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+</tr><tr><td valign="top" align="left"><tt>BYMINUTE</tt></td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+</tr><tr><td valign="top" align="left"><tt>BYSECOND</tt></td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+<td valign="top" align="left">Expand</td>
+</tr><tr><td valign="top" align="left"><tt>BYSETPOS</tt></td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+<td valign="top" align="left">Limit</td>
+</tr></tbody>
+</table>
+
+
+
+
+
+
+</annex><annex id="appendixB" obligation="normative">
+<title>Recurrence <tt>FREQ</tt> Examples</title>
+<example id="_34918a8b-456f-4804-6e17-73cc2191f19e">
+<name>Monthly by Day: Every Month on the 1st Monday for 5 months</name>
+<sourcecode id="_8c78c298-c2ca-b34a-0743-421415b4a253" unnumbered="true">BEGIN:VCALENDAR
+X-LOTUS-CHARSET:UTF-8
+VERSION:2.0
+PRODID:-//Lotus Development Corporation//NONSGML Notes 7.0//EN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Eastern
+BEGIN:STANDARD
+DTSTART:19501029T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+RRULE:FREQ=YEARLY;BYMINUTE=0;BYHOUR=2;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19500402T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+RRULE:FREQ=YEARLY;BYMINUTE=0;BYHOUR=2;BYDAY=1SU;BYMONTH=4
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID="Eastern":20100802T100000
+DTEND;TZID="Eastern":20100802T110000
+TRANSP:OPAQUE
+RRULE:FREQ=MONTHLY;COUNT=5;BYDAY=1MO
+DTSTAMP:20050822T203750Z
+SEQUENCE:0
+ATTENDEE;ROLE=CHAIR;PARTSTAT=ACCEPTED;CN="Chris Stoner/Westford/IBM"
+;RSVP=FALSE:mailto:Chris_Stoner@notesdev.ibm.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE
+:mailto:green_jellybean@mac.com
+CLASS:PUBLIC
+DESCRIPTION;ALTREP="CID:&lt;FFFF__=0ABBFAF6DFE2AA148f9e8a93df938690918c0AB@&gt;"
+:Every Month on the 1st Monday for 5 months
+SUMMARY:FREQ =BYMONTH Limit Example
+ORGANIZER;CN="Chris Stoner/Westford/IBM"
+:mailto:Chris_Stoner/Westford/IBM@
+UID:A8398E9A6BBE453F8525706500712C84-Lotus_Notes_Generated
+END:VEVENT
+END:VCALENDAR</sourcecode>
+
+</example>
+
+<example id="_feb57391-918d-c0ca-f5c1-274076616fad">
+<name>Monthly By Day Expand Example: Every month on the 6th day</name>
+<sourcecode id="_6880165d-df03-9d67-cd19-ff49118740d7" unnumbered="true">BEGIN:VCALENDAR
+X-LOTUS-CHARSET:UTF-8
+VERSION:2.0
+PRODID:-//Lotus Development Corporation//NONSGML Notes 7.0//EN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Eastern
+BEGIN:STANDARD
+DTSTART:19501029T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+RRULE:FREQ=YEARLY;BYMINUTE=0;BYHOUR=2;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19500402T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+RRULE:FREQ=YEARLY;BYMINUTE=0;BYHOUR=2;BYDAY=1SU;BYMONTH=4
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID="Eastern":20100906T100000
+DTEND;TZID="Eastern":20100906T110000
+TRANSP:OPAQUE
+RRULE:FREQ=MONTHLY;COUNT=5;BYMONTHDAY=6
+DTSTAMP:20050822T204655Z
+SEQUENCE:0
+ATTENDEE;ROLE=CHAIR;PARTSTAT=ACCEPTED;CN="Chris Stoner/Westford/IBM"
+;RSVP=FALSE:mailto:Chris_Stoner@notesdev.ibm.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE
+:mailto:gb@foo.com
+CLASS:PUBLIC
+DESCRIPTION;ALTREP="CID:&lt;FFFF__=0ABBFAF6DFE19B548f9e8a93df938690918c0AB@&gt;":
+Every month on the 6th day
+SUMMARY:Every month on the 6th day
+ORGANIZER;CN="Chris Stoner/Westford/IBM"
+:mailto:Chris_Stoner/Westford/IBM@
+UID:9DF697E752368AE78525706500721DC4-Lotus_Notes_Generated
+END:VEVENT
+END:VCALENDAR</sourcecode>
+
+</example>
+
+<example id="_b40f60ad-fa35-70f7-f306-3f11fbc20c28">
+<name>Daily every other day for 5 days</name>
+<sourcecode id="_17861d5e-85d7-ab5d-88de-e68a68e4a6dd" unnumbered="true">BEGIN:VCALENDAR
+X-LOTUS-CHARSET:UTF-8
+VERSION:2.0
+PRODID:-//Lotus Development Corporation//NONSGML Notes 7.0//EN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Eastern
+BEGIN:STANDARD
+DTSTART:19501029T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+RRULE:FREQ=YEARLY;BYMINUTE=0;BYHOUR=2;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19500402T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+RRULE:FREQ=YEARLY;BYMINUTE=0;BYHOUR=2;BYDAY=1SU;BYMONTH=4
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID="Eastern":20100906T100000
+DTEND;TZID="Eastern":20100906T110000
+TRANSP:OPAQUE
+RRULE:FREQ=DAILY;COUNT=3;INTERVAL=2
+DTSTAMP:20050822T204514Z
+SEQUENCE:0
+ATTENDEE;ROLE=CHAIR;PARTSTAT=ACCEPTED;CN="Chris Stoner/Westford/IBM"
+;RSVP=FALSE:mailto:Chris_Stoner@notesdev.ibm.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE
+:mailto:green_jellybean@foo.com
+CLASS:PUBLIC
+SUMMARY:Daily every other day
+ORGANIZER;CN="Chris Stoner/Westford/IBM"
+:mailto:Chris_Stoner/Westford/IBM@
+UID:FACE7CA46BE8B3F3852570650071F380-Lotus_Notes_Generated
+END:VEVENT
+END:VCALENDAR</sourcecode>
+
+</example>
+
+<example id="_3abae603-882d-5898-de1c-a34a9b2a0194">
+<name>Daily every day for 5 days</name>
+<sourcecode id="_a1113146-5a86-45f0-852a-cc5f3976583b" unnumbered="true">BEGIN:VCALENDAR
+X-LOTUS-CHARSET:UTF-8
+VERSION:2.0
+PRODID:-//Lotus Development Corporation//NONSGML Notes 7.0//EN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Eastern
+BEGIN:STANDARD
+DTSTART:19501029T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+RRULE:FREQ=YEARLY;BYMINUTE=0;BYHOUR=2;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19500402T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+RRULE:FREQ=YEARLY;BYMINUTE=0;BYHOUR=2;BYDAY=1SU;BYMONTH=4
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID="Eastern":20100906T100000
+DTEND;TZID="Eastern":20100906T110000
+TRANSP:OPAQUE
+RRULE:FREQ=DAILY;COUNT=5
+DTSTAMP:20050822T204315Z
+SEQUENCE:0
+ATTENDEE;ROLE=CHAIR;PARTSTAT=ACCEPTED;CN="Chris Stoner/Westford/IBM"
+;RSVP=FALSE:mailto:Chris_Stoner@notesdev.ibm.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE
+:mailto:green_jellybean@foo.com
+CLASS:PUBLIC
+SUMMARY:Daily every day for 5 days
+ORGANIZER;CN="Chris Stoner/Westford/IBM"
+:mailto:Chris_Stoner/Westford/IBM@
+UID:217C3BD27E9FDF9E852570650071C753-Lotus_Notes_Generated
+END:VEVENT
+END:VCALENDAR</sourcecode>
+
+</example>
+</annex><bibliography><references id="_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc2445" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2445</uri>
+  <docidentifier type="IETF" primary="true">RFC 2445</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2445</docidentifier>
+  <docnumber>RFC2445</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Stenerson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_88bab3dc-0aad-01bb-6a2a-9a92c5a12308">This memo has been defined to provide the definition of a common format for openly exchanging calendaring and scheduling information across the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2445</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ICALENDAR</keyword>
+  <keyword>interoperable</keyword>
+  <keyword>mime</keyword>
+  <keyword>multipurpose internet mail extensions</keyword>
+</bibitem><bibitem id="rfc2446" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP) Scheduling Events, BusyTime, To-dos and Journal Entries</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2446</uri>
+  <docidentifier type="IETF" primary="true">RFC 2446</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2446</docidentifier>
+  <docnumber>RFC2446</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Hopson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_2f851637-3559-a254-b7e3-483efe023c19">This document specifies how calendaring systems use iCalendar objects to interoperate with other calendar systems. It does so in a general way so as to allow multiple methods of communication between systems. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5546</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5546</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2446</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ITIP</keyword>
+  <keyword>iCalendar Transport-Independent Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>systems</keyword>
+</bibitem>
+
+
+</references></bibliography>
+</csd-standard>

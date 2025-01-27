@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Extended Daylight Savings Time Links, Advisories and Changes</title>
+
+<title language="main-en" format="text/plain">Links to Advisory and Vendor Material on the Daylight Saving Time Changes in 2007 -- A Reference for Users and Systems Administrators</title>
+<docidentifier primary="true" type="CalConnect">CC/Adv 0709:2007</docidentifier><docnumber>0709</docnumber><date type="published"><on>2007-10-06</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2007-10-06</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2007</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="Adv">advisory</doctype><flavor>cc</flavor><editorialgroup><committee>DST ADHOC</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7809dbe8-e645-5f85-32ad-f71bc98571d1" obligation="normative">
+<p id="_50f4b52f-8422-795d-1913-62a3d383a692">© 2007 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_e30b29a7-8e54-4e4b-ad93-355edc1217ea" obligation="informative">
+<title>Foreword</title>
+<p id="_5a595ec3-355f-3728-ab28-b8719979c4aa">The links below are not exhaustive and may become out of date as vendors update the available information. If you have references to official documentation for vendors not listed below or notice a problem with one of the links, please send your updates to DST Referrals and we will attempt to include them as soon as possible.</p>
+
+<admonition id="_f06eb572-3e00-eec5-facc-1cfdb18ee1a1" type="disclaimer"><p id="_07e059c5-064f-ed04-875b-76ddfe3337d4">This document is provided for informational purposes only and does not represent an endorsement or statement of support by The Calendaring and Scheduling Consortium for any of the products mentioned. The omission of any product or products represents only a lack of information rather than any bias against or deprecation of that product or products. The Consortium is not responsible for any results or consequences of any sort as a result of following any advice or performing any actions recommended in this material.</p>
+</admonition></foreword></preface><sections>
+<clause id="_daylight_saving_time_information_and_history" obligation="normative">
+<title>Daylight Saving Time Information and History</title>
+<ul id="_5f0cc52f-b1c9-361e-13a9-ece683693fdb"><li><p id="_d55c649c-f985-6413-d4a2-1754f33a3f6d"><link target="http://en.wikipedia.org/wiki/Daylight_saving_time">Daylight Saving Time from Wikipedia, the free encyclopedia.</link></p>
+</li>
+<li><p id="_292bd8cc-c4a3-a2c5-73ff-a059b5021cb5"><link target="http://webexhibits.org/daylightsaving/index.html">About Daylight Saving Time — History, rationale, laws &amp; dates.</link></p>
+</li>
+<li><p id="_1b6d198e-5ba4-5698-9cea-07bf5da2b75b"><link target="http://tf.nist.gov/timefreq/general/dst.htm">How the DST change impacts NIST Time Services, including WWVB radio broadcast and their Internet Time Service</link></p>
+</li>
+<li><p id="_01d8e9f0-80de-1e96-aa9f-5fd817a46b3e">CalConnect EDST Reflections and Recommendations:</p>
+<p id="_c56f1f02-fcb5-1b2b-d8cc-c1ec8053bc05">Reflections on how well the transition to EDST happened on March 11, together with recommendations for the transition on November 4 and future years, and longer-term recommendations for timezone management in general.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_calconnect_daylight_saving_time_documents_and_resources" obligation="normative">
+<title>CalConnect Daylight Saving Time Documents and Resources</title>
+<p id="_fc0797be-583e-d6f7-4dd7-4b44c2b19c3a">The following pages and documents on Daylight Saving Time and Extended DST have been published by CalConnect:</p>
+
+<ul id="_bd5142d4-c12f-4bd2-3325-9cec64d1e3ce"><li><p id="_c9d4850f-f298-e2f3-5121-24aabbe85d3d">CalConnect EDST Reflections and Recommendations:</p>
+<p id="_7a653285-7670-5700-5028-69abab2841f7">Post March 2007 discussion of how well the transition to EDST went; recommendations for November 4 and long-term recommendations for timezone management.</p>
+</li>
+<li><p id="_b2283dd3-35ee-3aa3-be33-5bd7295deea1">Extended Daylight Saving Time Review and Considerations:</p>
+<p id="_0b8b0379-cf9b-028a-526a-555406c962b9">Introductory discussion of Extended DST and the implications for the software changes and patches required.</p>
+</li>
+<li><p id="_78b114ce-27ff-0278-e997-b61d91268de2">Extended Daylight Saving Time Links, Advisories and Changes:</p>
+<p id="_011265e1-4194-7c8d-fdf0-4eb5dc80c0e2">This document; a compilation of links about DST and EDST, advisory notices, necessary changes and patches offered by software vendors and others.</p>
+</li>
+<li><p id="_ea95ec87-e1e4-e235-fe0a-3f664d37c81a">Extended Daylight Saving Time Advisory Notice:</p>
+<p id="_8537a4f2-5c7f-b634-64f0-0f3563041dbf">The original advisory notice issued by CalConnect in June 2005 in response to the legislation creating EDST.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_vendor_information" obligation="normative">
+<title>Vendor Information</title>
+<p id="_76eb1903-20ab-f1a4-c2b5-fd9ea80d6d27">In each entry below, the URL of the link is provided, along with the official title of that web page as provided by the vendor. Comments by CalConnect providing the context for the material on the page are provided in italics immediately after the title of the page.</p>
+
+<clause id="_apache_and_tomcat" obligation="normative">
+<title>Apache and Tomcat</title>
+<p id="_b4a4f34f-cc42-cf3e-da2f-6f4fdddfc872"><link target="http://blog.covalent.net/roller/covalent/entry/2">US Daylight Saving Time Change 2007 Effects on Apache and Tomcat</link></p>
+
+<p id="_a471b51a-2f18-0edf-8739-638c6e157c35"><em>Covalent Technologies advisories for users of Apache and Tomcat</em></p>
+</clause>
+
+<clause id="_apple" obligation="normative">
+<title>Apple</title>
+<p id="_40a6f75c-475a-ebf2-c2fb-f3d45e160e5f"><link target="http://docs.info.apple.com/article.html?artnum=305056">About Daylight Saving Time changes in 2007</link></p>
+
+<p id="_b3d79ce5-bb6c-0b9a-aa9d-fb0587d83a67"><em>This document itemizes several updates from Apple for the very latest DST changes. Updates for Mac OS X 10.3, 10.4, their Java environments, and WebObjects will be offered via Software Update or direct download. Information on Classic and Mac OS 9 is also provided in the document. Note that the US DST changes were included in Mac OS X 10.4.5 and later, but further changes for Alberta, Canada and other parts of the world are included in these updates. The unofficial patches for 10.3 are no longer necessary since Apple is now offering them with this set of updates.</em></p>
+</clause>
+
+<clause id="_avaya" obligation="normative">
+<title>Avaya</title>
+<p id="_42f99bb9-0ebe-8e8a-2039-c42cf3012165"><link target="http://support.avaya.com/japple/css/japple?PAGE=OpenPage&amp;temp.template.name=Daylight">2007 Daylight Saving Time Changes</link></p>
+
+<p id="_86fce45c-a7e3-c333-ee71-e43522eb5080"><em>Comprehensive listing of fixes for Avaya’s IP telephony product line</em></p>
+</clause>
+
+<clause id="_bedework" obligation="normative">
+<title>Bedework</title>
+<p id="_64d258cf-0893-2e56-fb7e-f22318050776"><link target="http://www.bedework.org/bedework/update.do?artcenterkey=69">Bedework and the Energy Policy Act of 2005</link></p>
+
+<p id="_92221d92-c297-4693-ff32-17f9b7aec5e4"><em>Bedework is an open-source institutional calendar system</em></p>
+</clause>
+
+<clause id="_blackberry" obligation="normative">
+<title>Blackberry</title>
+<p id="_f214f06a-836a-ddb8-86dc-b1c52ccbbaac"><link target="http://www.blackberry.com/select/dst2007/">Daylight Saving Time 2007</link></p>
+
+<p id="_510b253d-b260-5dba-72bc-351763f0ef2a"><em>Impact of DST changes on Blackberry devices and BlackBerry Enterprise Server</em></p>
+
+<p id="_4046b898-88a4-ced5-e24c-b4584776ef8d"><link target="http://www.blackberry.com/DST2007/patch/index2.shtml">DST 2007 Patches for BlackBerry Devices</link></p>
+
+<p id="_61f392de-5f1a-f56e-e992-42890653d1b1"><em>This page explains the download process for BlackBerry handhelds</em></p>
+</clause>
+
+<clause id="_cisco" obligation="normative">
+<title>Cisco</title>
+<p id="_08f7db9a-2d50-0733-c0df-429676346db3"><link target="http://www.cisco.com/en/US/tech/tk648/tk362/technologies_tech_note09186a00807ca437.shtml">U.S. Daylight Saving Time (DST) Changes for 2007</link></p>
+
+<p id="_7662d164-2298-eb0e-eb73-d5bead2edfee"><em>Comprehensive information on actions required for Cisco products</em></p>
+</clause>
+
+<clause id="_citrix" obligation="normative">
+<title>Citrix</title>
+<p id="_781dd98a-c9fb-139d-f077-cf5de67d1a9b"><link target="http://support.citrix.com/article/CTX111734&amp;searchID=39611352">Daylight-saving Time Changes in 2007</link></p>
+
+<p id="_7dae57b5-a352-b837-a683-10ef0dee2ec8"><em>Describes the EDST changes and the products that require updates</em></p>
+</clause>
+
+<clause id="_debian_gnulinux" obligation="normative">
+<title>Debian GNU/Linux</title>
+<p id="_17bdc92b-3695-225f-daf5-2d4de04aecd3"><link target="http://www.debian.org/News/2007/20070218">Debian GNU/Linux 3.1 updated</link></p>
+
+<p id="_ea61b7d3-d7bb-87eb-b161-cf05eb8eec84"><em>The change log for 3.1r5 indicates that the time zone rules were updated to “2006p-1”, including new rules for the United States and West Australia</em></p>
+</clause>
+
+<clause id="_enterasys" obligation="normative">
+<title>Enterasys</title>
+<p id="_b9366712-d8f9-591c-4ddd-3cb305633ccf"><link target="http://secure.enterasys.com/services/support/daylight_savings.html">Enterasys Technical Notification Regarding Changes to US Daylight Savings Time Observance</link></p>
+
+<p id="_d0450363-cd57-5236-7ff1-03282ed71138"><em>Summary of changes to DST, identifies Enterasys products and required actions</em></p>
+</clause>
+
+<clause id="_good_technology_inc" obligation="normative">
+<title>Good Technology Inc.</title>
+<p id="_876da5e5-a323-0eba-3d5d-c94e76b03f5e"><em>See <xref target="motorola"/>.</em></p>
+</clause>
+
+<clause id="_google" obligation="normative">
+<title>Google</title>
+<p id="_f39866a2-1d21-2899-545f-c143df0fb916"><link target="http://www.google.com/support/calendar/bin/answer.py?answer=61026&amp;topic=8580">Are my events in Google Calendar affected by the Daylight Savings Time change in 2007?</link></p>
+
+<p id="_e4856377-55d0-d5b7-11fe-3c3a643db906"><em>Advisory for users of Google Calendar</em></p>
+
+<p id="_c02c8e4b-9025-6533-f641-b521d48bfece"><link target="http://www.google.com/support/calendar/bin/answer.py?answer=55677">Known Issues &amp; Feature Updates</link></p>
+
+<p id="_3a62dd65-7f05-13cb-de77-692fed232f01"><em>More general issues and feature updates for Google Calendar</em></p>
+</clause>
+
+<clause id="_hitachi_data_systems" obligation="normative">
+<title>Hitachi Data Systems</title>
+<p id="_b24e4ada-5c52-fb60-311c-9e7d20a9d613"><link target="http://www.hds.com/pdf/hds_dst_impact.pdf">Extended Daylight Saving Time Product Impact Alert</link></p>
+
+<p id="_55049fdb-af66-3f5f-fb0d-2a5e66f3c08c"><em>Notification of DST impact on hardware and software products from HDS and their partners</em></p>
+</clause>
+
+<clause id="_hp" obligation="normative">
+<title>HP</title>
+<p id="_b0176e70-473e-a750-0c33-35b62f39d5ee"><link target="http://h10072.www1.hp.com/dst">U.S. 2007 Daylight Saving Time</link></p>
+
+<p id="_1de5869c-ade9-1aa8-0dba-965360eddddd"><em>Revised and more complete information on HP systems and related software</em></p>
+</clause>
+
+<clause id="_ibm" obligation="normative">
+<title>IBM</title>
+<p id="_4241a206-6819-a995-67cb-5dbd8126b36f"><link target="http://www.ibm.com/support/alerts/us/en/daylightsavingstimealert.html">IBM-wide product alerts</link></p>
+
+<p id="_bc49f8aa-92d5-0739-4dc0-8f5771ddef64"><em>Update information is organized by categories of products</em></p>
+</clause>
+
+<clause id="_juniper" obligation="normative">
+<title>Juniper</title>
+<p id="_c26e294f-e053-211d-7c85-b132325d3798"><link target="http://kb.juniper.net/KB9358">2007 Daylight Savings Changes and Support for Juniper Products</link></p>
+
+<p id="_e84972b8-3c7e-4281-8d8a-b91f18e65774"><em>A listing of technical bulletins that address the DST issue in Juniper products</em></p>
+</clause>
+
+<clause id="_kerberos_from_mit" obligation="normative">
+<title>Kerberos from MIT</title>
+<p id="_c61f4c51-bff3-fdfa-06f6-ab407b6399da"><link target="http://confab.mit.edu/confluence/display/ISDA/Kerberos-2007-DST">Kerberos-2007-DST</link></p>
+
+<p id="_36f3e1ca-2ada-4c21-b7a5-75e21a0661d6"><em>Comments for KDC administrators regarding the time synchronization requirements and features in Kerberos as implemented by MIT</em></p>
+</clause>
+
+<clause id="_kerio_technologies" obligation="normative">
+<title>Kerio Technologies</title>
+<p id="_8c941f93-5430-e581-07b1-a50ee7700bb9"><link target="http://support.kerio.com/kb/454">Does KMS Support Daylight Saving Time for 2007</link></p>
+
+<p id="_e5c8a764-9027-12ee-20df-f3b42ff758c2"><em>Statement of compliance for Kerio Mailserver 6.3.0 and higher; links for underlying OS changes which must be done manually</em></p>
+</clause>
+
+<clause id="_microsoft" obligation="normative">
+<title>Microsoft</title>
+<p id="_e5483ee4-ad15-0775-3737-3ee884ae0f9c"><link target="http://www.microsoft.com/time">Daylight Saving Time Help and Support Center</link></p>
+
+<p id="_fd5927e9-9ab5-4a31-3e47-142b052fc06f"><em>Comprehensive document regarding the DST issue with pointers to other knowledge base articles and patches</em></p>
+
+<p id="_8f70f45c-16ae-a4b8-4e97-a0a4d6c0275d"><link target="http://support.microsoft.com/gp/dst_prodlist">List of Microsoft products affected by daylight saving time and time zone changes</link></p>
+
+<p id="_a361958a-d59c-0555-1ccf-24de89828215"><em>Comprehensive index of Microsoft products and links to latest updates for Microsoft Windows and other products, including the current version of the Microsoft Office Time Zone Data Update Tool</em></p>
+
+<p id="_524472bf-9436-d529-c85d-a8160b4eb3c0"><link target="http://www.windowsmobile.com/daylightsaving/">Daylight Saving Time 2007 Update</link></p>
+
+<p id="_66eb5587-1cf6-dea3-f9a5-a2a6f5da58ec"><em>Updates for handheld devices (PDAs) running Windows Mobile. See also  <xref target="palm"/> if your handheld is made by Palm.</em></p>
+
+<p id="_e320024c-b44d-8f06-eeac-c323fc6c17e2"><link target="http://blogs.msdn.com/macmojo/archive/2007/01/10/the-times-they-are-a-changin.aspx">The Office for Mac Team Blog entry</link></p>
+</clause>
+
+<clause id="_microsoft_related_third_party" obligation="normative">
+<title>Microsoft-Related (Third Party)</title>
+<p id="_cc4b39ea-a484-6b4b-0394-d8393dad64f8"><link target="http://blogs.technet.com/amir/archive/2007/01/31/dst-2007-changes-entourage-2004-for-mac.aspx">DST 2007 Changes &amp; Entourage 2004 for Mac</link></p>
+
+<p id="_905a72ba-4500-c585-2331-499fe0f7d685"><em>Not an official support document, but useful information posted on Amir’s Exchange Clients Blog</em></p>
+
+<p id="_fd56cdce-4dfe-8d3c-ea1c-cea21e76f7fb"><link target="http://www.intelliadmin.com/blog/2007/01/unofficial-windows-2000-daylight.html">IntelliAdmin: Unofficial Windows 2000 Daylight Saving Time Patch</link></p>
+
+<p id="_b7ce3cc7-d3ce-fd07-9cbe-15c2c494fac7"><em>Microsoft is not providing an update to Windows 2000 for extended DST but has outlined a multi-step procedure which involves updating the registry. IntelliAdmin created this unofficial utility program to automate the procedure recommended by Microsoft.</em></p>
+
+<p id="_48462562-8b68-e622-d568-6c99fdc05383"><link target="http://www.sharpebusinesssolutions.com/dst2007.htm">DST Update Tool for Windows from NT4 through Server 2003 and XP</link></p>
+
+<p id="_b6b616d8-1db0-4335-abc7-af63fbea394f"><em>A global update solution from Sharpe Business Solutions for most versions of windows from NT 4 and Win2KPRO through WinXP. This is a product.</em></p>
+
+<p id="_d157a24f-dae2-7c27-c9b1-b80c3479b382"><link target="http://solprovider.com/articles/win98timezones">Fixing Windows 98 TimeZones for the New 2007 Daylight Saving Time Rules</link></p>
+
+<p id="_0634369e-f8a5-fe57-9aee-348e53e3dc38"><em>An unofficial fix from SolProvider for extended DST for Windows 98 and a companion way to set the system back to the old rules (in case Congress changes its mind because the expected benefits from the change don’t actually occur).</em></p>
+
+<p id="_43d232eb-1d07-423d-bb43-0b96dad1f635"><link target="http://blogs.technet.com/hied_west_blog/archive/2007/02/20/dst-2007-update-step-by-step-support-webcast-training.aspx">DST 2007 Update: “Step by Step” Support Webcast Training</link></p>
+
+<p id="_7d610892-369e-7d97-ecfa-e530529be011"><em>Another Microsoft blog with references to several helpful official and unofficial DST resources</em></p>
+</clause>
+
+<clause id="motorola" obligation="normative">
+<title>Motorola Good Technology Group</title>
+<p id="_b9694a41-7dd5-92bb-a18f-6890de8b1f66"><link target="http://www.good.com/faq/17882.html">Daylight Savings Time Adjustment 2007</link></p>
+
+<p id="_9f0b2c12-86b6-eb96-c9de-de5ae8a311fc"><em>Provides detailed information on addressing DST in Good’s products and on other DST-related issues</em></p>
+</clause>
+
+<clause id="_mulberry" obligation="normative">
+<title>Mulberry</title>
+<p id="_95415067-644f-d32f-2e18-4cdb44f31210"><link target="http://www.mulberrymail.com">The Mulberry email and calendar client has recently been updated to a new version v4.0.8 to address the upcoming Extended Daylight Saving Time changes.</link></p>
+
+<p id="_f7cc9447-cd42-20f7-19aa-239e98a100c3"><em>Mulberry will attempt to automatically upgrade existing timezones to the new rules when run. Anyone using the calendaring features of Mulberry should upgrade to this new release right away.</em></p>
+</clause>
+
+<clause id="_nokia" obligation="normative">
+<title>Nokia</title>
+<p id="_a96bf701-8aaa-a899-e4d4-02ff556ebb61"><link target="http://europe.nokia.com/A4143002">Product Support and Software — Europe</link></p>
+
+<p id="_601036b9-4b8d-5156-693b-3a189bc232a3"><em>DST updaters are listed in the “Latest Software” for several Nokia phones. This is for European customers.</em></p>
+
+<p id="_d4606cf6-26c4-c874-2961-3bac42af2327"><link target="http://www.nokiausa.com/support/software/softwareupdate/1,8838,,00.html">Phone Software Update (USA)</link></p>
+
+<p id="_fee45bb3-9e85-7aac-9dc6-b414e27d4256"><em>Windows software to download updates from Nokia and apply them to a phone. For United States customers.</em></p>
+</clause>
+
+<clause id="_notify_technology_corp" obligation="normative">
+<title>Notify Technology Corp</title>
+<p id="_dd9fe140-2139-1533-0746-73056870fad7"><link target="http://notifylink.notify.net/download/DST%202007%20Adjustments.pdf">2007 Daylight Saving Time Changes: Transition for NotifyLink Users</link></p>
+
+<p id="_b6ed114e-1953-902a-f77a-a796d7d2c254"><em>Instructions for NotifyLink fixes and suggestions for calendar server and mobile device patches to apply</em></p>
+</clause>
+
+<clause id="_novell" obligation="normative">
+<title>Novell</title>
+<p id="_3603f68c-2a69-a657-0289-549d9d60430b"><link target="http://www.novell.com/coolsolutions/feature/18566.html">Daylight Saving Time Change Impacts GroupWise Appointments</link></p>
+
+<p id="_33d6412f-607d-85ed-85c1-395b03218766"><em>Automated Tool to Address Daylight Saving Time Impact on GroupWise Appointments</em></p>
+
+<p id="_cb94f6e7-9c7f-eaca-3b9c-93170e541e19"><link target="http://www.novell.com/support/search.do?cmd=displayKC&amp;sliceId=%3Cbr%3ESAL_Public&amp;externalId=3397648">Netware Servers</link></p>
+
+<p id="_a04b829a-f199-bb5b-2540-ed5148ad2e85"><em>This link was not working on 4 October</em></p>
+</clause>
+
+<clause id="_oracle" obligation="normative">
+<title>Oracle</title>
+<p id="_f242b5bd-6bc1-5667-b2b6-b1c53f551801"><link target="http://www.oracle.com/support/daylight-savings.html">Daylight Savings Time Alert for Oracle Customers</link></p>
+
+<p id="_1a2fa491-18c0-cff6-b80a-841225ece8d5"><em>This is an open page and does not require a MetaLink account to access it</em></p>
+</clause>
+
+<clause id="_packeteer" obligation="normative">
+<title>Packeteer</title>
+<p id="_de4f384e-4692-abdb-b383-624e221b35d2"><link target="http://packeteer.custhelp.com/cgi-bin/packeteer.cfg/php/enduser/std_adp.php?p_faqid=1178&amp;p_created=1169227986&amp;p_sid=1WoDpILi&amp;p_accessibility=0&amp;p_redirect=&amp;p_lva=&amp;p_sp=cF9zcmNoPTEmcF9zb3J0X2J5PSZwX2dyaWRzb3J0PSZwX3Jvd19jbnQ9NDImcF9wcm9kcz0mcF9jYXRzPSZwX3B2PSZwX2N2PSZwX3BhZ2U9MSZwX3NlYXJjaF90ZXh0PWRheWxpZ2h0&amp;p_li=&amp;p_topview=1">Daylight Saving Time Change in 2007</link></p>
+
+<p id="_d64783fa-ada2-89de-268a-b44e80dd8a59"><em>Update and configuration instructions for Packeteer products</em></p>
+</clause>
+
+<clause id="palm" obligation="normative">
+<title>Palm</title>
+<p id="_85f403f8-642d-5ea7-b3c0-dcaaba94e5bb"><link target="http://www.palm.com/us/support/downloads/dst.html">Daylight Saving Time Updates</link></p>
+
+<p id="_da352acc-e045-18e1-9b56-5eaf6cbc8a71"><em>Updates for both Palm and Windows Mobile handheld devices from Palm</em></p>
+</clause>
+
+<clause id="_peoplecube" obligation="normative">
+<title>PeopleCube</title>
+<p id="_2b7ff7e6-774c-bae3-ba8c-d3835db5f6ef"><link target="http://peoplecube.com/news/20061218.cfm">PeopleCube Announces New Version of Meeting Maker</link></p>
+
+<p id="_6dd3e090-a101-94d3-6968-3f2889374430"><em>Meeting Maker 8.6 includes support for new DST regulations</em></p>
+
+<p id="_7620cdee-0140-c1d1-506c-ccfe32f32572"><link target="http://www.peoplecube.com/news/20061016.cfm">PeopleCube Announces New Version of Resource Scheduler</link></p>
+
+<p id="_6761e113-4869-59c3-c1dc-2e989843b8d5"><em>Resource Scheduler 7.7 includes new DST rules</em></p>
+</clause>
+
+<clause id="_peoplesoft" obligation="normative">
+<title>PeopleSoft</title>
+<p id="_57e4f927-c312-e238-c691-8848c5d2382b"><link target="ftp://ftp.peoplesoft.com/incoming/GSC/DST/PeopleTools_DST.pdf">PeopleTools Daylight Saving Time Required Modifications</link></p>
+
+<p id="_6af86bfb-7f4e-ccae-74cb-61399e33bbd2"><em>Advisory for PeopleTools Products</em></p>
+
+<p id="_e2ad796d-6d4f-aed0-39fc-3819d4c36a99"><link target="ftp://ftp.peoplesoft.com/incoming/GSC/DST/PeopleTools%20Vendor%20Daylight%20Saving%20Time%20Information.pdf">PeopleTools Vendor Daylight Saving Time Required Modifications</link></p>
+
+<p id="_93e49def-ffb4-74ed-f2f2-d486033894ad"><em>Advisory for Third Party (Vendor) Applications</em></p>
+</clause>
+
+<clause id="_polycom" obligation="normative">
+<title>Polycom</title>
+<p id="_9c142ff8-85ff-8de1-bf53-7d7c87d56d07"><link target="http://www.polycom.com/common/documents/support/downloads/network/readimanager_se200_daylight_savings_time_patch_release_notes.pdf">ReadiManager SE200 Patch Release Notes</link></p>
+
+<p id="_30335c1f-9f8d-3519-27de-8af91b908cad"><em>Patch instructions for the ReadiManager SE200 embedded Microsoft OS</em></p>
+</clause>
+
+<clause id="_psion_teklogix" obligation="normative">
+<title>Psion Teklogix</title>
+<p id="_03762163-b299-857d-a26e-a9a3fe37d6d9"><link target="http://www.psionteklogix.com/public.aspx?s=us&amp;p=DST">Daylight Savings Time Changes and Support Information</link></p>
+
+<p id="_9a4272a6-8eb1-d366-5224-f9189f8e5355"><em>Updates for Psion Teklogix industrial mobile devices</em></p>
+</clause>
+
+<clause id="_red_hat" obligation="normative">
+<title>Red Hat</title>
+<p id="_2196a4b7-8e6d-3bcf-8b68-6b495f58c5f3"><link target="http://kbase.redhat.com/faq/FAQ_80_7909.shtm">Red Hat Knowledgebase Article ID 7909</link></p>
+
+<p id="_d042ae96-7c1d-1266-a6d0-71927920f13a"><em>DST updates available for Red Hat Enterprise Linux 2, 3, 4, and related links</em></p>
+</clause>
+
+<clause id="_snap_server_by_adaptec" obligation="normative">
+<title>Snap Server by Adaptec</title>
+<p id="_4d5344c4-c891-9fde-7416-973a8bbbcd72"><link target="http://www.snapserver.com/Landing/0702_Daylight/Index.shtml">Ensure Your Snap Server is Ready for Daylight Saving Time</link></p>
+
+<p id="_10f5a32b-d4fd-5286-e75e-19041da75c56"><em>Guidance for users of Adaptec’s line of Snap Server Network Attached Storage and SAN Devices</em></p>
+</clause>
+
+<clause id="_sun" obligation="normative">
+<title>Sun</title>
+<p id="_fd06cf02-350e-72ed-7c7e-150d26a939e5"><link target="http://www.sun.com/bigadmin/hubs/dst/">DST: Daylight Saving Time Changes (2007)</link></p>
+
+<p id="_583a03ff-a9ad-397f-9e85-b5ed312e43b8"><em>A central index of DST change information for Sun products, both software and hardware</em></p>
+
+<p id="_0129e6fb-1976-1727-63d2-c658dbc538a3"><link target="http://java.sun.com/developer/technicalArticles/Intl/USDST/">Overview and Mitigation of the USA2007DST Issue for the Java SE platform and Solaris OS</link></p>
+
+<p id="_986816df-4910-f50a-bc41-54c334debadb"><em>A listing of which Java run time environments have updated DST rules</em></p>
+
+<p id="_de5af5d6-e5f3-8850-6c60-6bea13ef9297"><link target="http://java.sun.com/developer/technicalArticles/Intl/tzupdatertool.html">Sun Java SE JDK tzupdater Tool</link></p>
+
+<p id="_0acc5f17-f8c0-3bd6-79fa-21fe7f576c64"><em>A tool for updating time zone data in JDK and JRE version 1.4 and later</em></p>
+</clause>
+
+<clause id="_symantec" obligation="normative">
+<title>Symantec</title>
+<p id="_5836c445-eba1-65cf-da89-f9565a4f91fd"><link target="http://service1.symantec.com/SUPPORT/tsgeninfo.nsf/docid/2007011911191539?Open&amp;src=w">Symantec enterprise products and daylight saving time</link></p>
+
+<p id="_c23ae028-6df5-2479-4462-cbefb45f5193"><em>This page provides links to documents for each Symantec product indicating whether each product is affected by the change to daylight saving time, and if so, how.</em></p>
+</clause>
+
+<clause id="_trumba" obligation="normative">
+<title>Trumba</title>
+<p id="_a0e40da7-1738-c53f-358a-35441e857541"><link target="http://www.trumba.com/help/trumbafaq.html#dst">Trumba Connect Frequently Asked Questions</link></p>
+
+<p id="_de021b0b-55df-d68a-b7f6-154035b1188d"><em>DST changes will be applied behind the scenes by Trumba</em></p>
+</clause>
+
+<clause id="_vmware" obligation="normative">
+<title>VMWare</title>
+<p id="_7cde2066-745c-ee70-55b2-ade948bb4aae"><link target="http://kb.vmware.com/kb/8695824">2007 U.S. Daylight-Saving Time Extension</link></p>
+
+<p id="_ceb8309e-8a3e-78e2-3acb-49e3d6be68d7"><em>Updates for ESX Server 2.x and 3.0.x</em></p>
+</clause>
+
+<clause id="_xerox" obligation="normative">
+<title>Xerox</title>
+<p id="_e36ce3f0-9c3c-7379-dd8d-25176f846064"><link target="http://www.xerox.com/go/xrx/portal/STServlet?projectID=ST_DST&amp;pageID=DST_Landing&amp;Xcntry=USA&amp;Xlang=en_US">Updating Xerox Products for Daylight Saving Time</link></p>
+
+<p id="_71f2d80c-8f73-7320-2e66-d78545fe06f6"><em>Links to instructions for updating Xerox products</em></p>
+</clause>
+</clause>
+
+<clause id="_companion_document" obligation="normative">
+<title>Companion Document</title>
+<p id="_fc30168c-53a4-af4d-e9a8-3272dbb1f277">The companion page to this one, Extended Daylight Saving Time Review and Considerations, provides a review of the Daylight Saving Time changes and the potential impact of this change on computer systems and devices. It is intended as a review and reference for users and in particular for systems administrators who may need to make necessary updates to their systems.</p>
+</clause>
+
+<clause id="_future_documents_and_proposals" obligation="normative">
+<title>Future Documents and Proposals</title>
+<p id="_b0ad2aaf-2b5d-a77e-aca4-6c9c1c4fd724">CalConnect plans to update this page as information becomes available prior to November 4th. Following November 4 an update to CalConnect EDST Reflections and Recommendations may be prepared to take into account additional information from the November transition.</p>
+
+<p id="_bcb5e132-46bd-d511-8734-47ea4b998df7">CalConnect has also initiated work in TC TIMEZONE, one of its Technical Committees, on proposals for a formal, universal Timezone Registry and a companion Timezone Service protocol, intended to make the management of timezones (and related phenomena such as DST) substantially easier in the future.</p>
+</clause>
+</sections>
+</csd-standard>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">February 2008 CalConnect Mobile Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0803:2008</docidentifier><docnumber>0803</docnumber><date type="published"><on>2008-04-09</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Mike Zhou</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Tomas Hnetila</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>David Coulter</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>2</edition><version><revision-date>2008-04-09</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2008</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_907f9be5-eb56-eaba-9be2-d2f72bcb5dcb" obligation="normative">
+<p id="_97a3febc-f821-69e7-8ed2-9465d2853728">© 2008 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_6a1b3a7b-6357-8f27-8fa7-ef2f266fb371">This was the first Mobile Calendar Interoperability testing event held by CalConnect. There was a predetermined set of objects to test. It was determined early one that the testing document was quite comprehensive and would never be completed in the two days we had for interop testing. Therefore, the testing parties elected to choose several items from each testing group for interoperability testing. You can find the full test suite at the following url: <link target="http://www.calconnect.org/ioptesting.shtml"/></p>
+
+<p id="_2386cd02-7904-d1df-d9db-ee25b7ff0039">Two servers and one phone device were tested. For purposes of anonymity, the names of the vendors are not referenced in this document.</p>
+</introduction></preface><sections>
+
+<clause id="_server_1_test_results_with_device_vendor" obligation="normative">
+<title>Server 1 — Test Results with device vendor</title>
+<p id="_c10e620d-fe7c-a22c-31e5-ae45085d7595"><strong>Part I — Calendar Tests</strong></p>
+
+<clause id="_events_server_to_device" obligation="normative">
+<title>Events — Server to Device</title>
+<clause id="_create_an_event_with_a_reminder" obligation="normative">
+<title>Create an Event with a Reminder</title>
+<p id="_851fe6f5-af5e-069e-c1c7-845822f73656">OK except for:</p>
+
+<ul id="_137ee10c-46c6-33d4-fa28-2a3fb4f6de16"><li><p id="_bacc62df-7e46-d68c-250a-138118dc3e31">Server to client alarm issue: Server created an alarm on device side regardless if server event has an alarm. This is the default behavior by design and alarms can be turned off by changing server configurations.</p>
+</li>
+<li><p id="_1ef82512-3474-f7e3-b70b-3ea5aef72ea1">Truncation issue: On device modify the location only. When sync’d back to server, the location was restored with the long original value. The un-modified title was truncated on server. Seems to be a bug on server. Need more investigation.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_access_level_and_priority" obligation="normative">
+<title>Access Level and Priority</title>
+<p id="_64609be2-900b-e0d5-d474-5942cb2af180">Device does not support priority.</p>
+</clause>
+
+<clause id="_special_characters_from_server" obligation="normative">
+<title>Special Characters From Server</title>
+<p id="_bf3a243e-0d62-f92d-832d-139a7e1ec6b7">OK</p>
+</clause>
+
+<clause id="_multi_byte_characters_from_server" obligation="normative">
+<title>Multi-Byte Characters From Server</title>
+<p id="_a06631e9-3fce-01e4-32a8-fac10b8ff266">OK</p>
+</clause>
+
+<clause id="_deletion" obligation="normative">
+<title>Deletion</title>
+<p id="_33b35f9f-92d5-97e4-1dc5-ef1d9a8aede5">OK</p>
+</clause>
+</clause>
+
+<clause id="_events_device_to_server" obligation="normative">
+<title>Events — Device to Server</title>
+<p id="_09c32f2f-4112-0bbf-3766-aea79a2540d5"><tt>X-PHONEOWNER</tt> issue in device vCalendar:</p>
+
+<p id="_b46df5fd-235f-4af5-4eb4-7ba54ecb16c4">Device in some cases put <tt>X-PHONEOWNER</tt> as one parameter of the attendee indicating that the attendee is the phone owner.  <tt>X-PHONEOWNER</tt> doesn’t have a value and this breaks the server parser. Server should handle this.</p>
+
+<sourcecode id="_60ac2499-b178-ed6a-aace-96b719bdc611" unnumbered="true">VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+UID:20080204T191415Z-405000-H2_Board
+SUMMARY;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:Special=20chars=20=C6=92
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:=C2=A2=20=C2=A6=20&amp;
+DTSTART:20080204T191200Z
+DTEND:20080204T194200Z
+X-EPOCAGENDAENTRYTYPE:APPOINTMENT
+CLASS:PUBLIC
+LOCATION;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:=C2=A9
+SEQUENCE:-1
+X-METHOD:NONE
+ATTENDEE;ROLE=ORGANIZER;STATUS=NEEDS ACTION;RSVP=NO;EXPECT=FYI;XPHONEOWNER:
+name@server.com
+LAST-MODIFIED:20080204T191415Z
+PRIORITY:0
+STATUS:CONFIRMED
+X-MOBILEOS-LUID:11
+END:VEVENT
+END:VCALENDAR</sourcecode>
+
+
+<sourcecode id="_9f5ebe3e-5caa-8cd6-faa7-6699fa05afcc" unnumbered="true">Exception=vendor.ocs.tm.icalendar.exception.ICalParseException: '=' expected after "XPHONEOWNER"(Parameter=X-PHONEOWNER)(Parameter in comp=VEVENT.prop=ATTENDEE)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:232)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:203)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseComponent(VCalParser.java:148)
+at vendor.ocs.protocols.oma.ds.connector.calendar.CalendarUtil.stringToVCalendar(CalendarUtil.java:225)
+at vendor.ocs.protocols.oma.ds.connector.calendar.EventsStore.initIncomingEvent(EventsStore.java:1399)
+at vendor.ocs.protocols.oma.ds.connector.calendar.EventsStore.addData(EventsStore.java:2259)
+at vendor.ocs.protocols.oma.ds.connector.calendar.EventsStoreConnector.applyClientDataOperationById(EventsStoreConnector.java:201)
+at vendor.ocs.protocols.oma.ds.connector.calendar.CalendarStoreConnector.applyClientDataOperationById(CalendarStoreConnector.java:129)
+at vendor.ocs.protocols.oma.ds.protocol.executor.AddExecutor.execute(AddExecutor.java:312)
+at vendor.ocs.protocols.oma.ds.protocol.executor.CmdExecutor.executeSubCommands(CmdExecutor.java:81)
+at vendor.ocs.protocols.oma.ds.protocol.executor.SyncExecutor.execute(SyncExecutor.java:214)
+at vendor.ocs.protocols.oma.ds.protocol.DsProtocolHandler.processMessage(DsProtocolHandler.java:720)
+at vendor.ocs.protocols.oma.RequestProcessor.processRequest(RequestProcessor.java:334)
+at vendor.ocs.protocols.oma.transport.servlet.OmaServlet.doPost(OmaServlet.java:103)
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:763)
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:856)
+at com.evermind.server.http.ResourceFilterChain.doFilter(ResourceFilterChain.java:64)
+at vendor.security.jazn.oc4j.JAZNFilter$1.run(JAZNFilter.java:396)
+at java.security.AccessController.doPrivileged(Native Method)
+at javax.security.auth.Subject.doAs(Subject.java:396)
+at vendor.security.jazn.oc4j.JAZNFilter.doFilter(JAZNFilter.java:415)
+at com.evermind.server.http.ServletRequestDispatcher.invoke(ServletRequestDispatcher.java:621)
+at com.evermind.server.http.ServletRequestDispatcher.forwardInternal(ServletRequestDispatcher.java:368)
+at com.evermind.server.http.HttpRequestHandler.doProcessRequest(HttpRequestHandler.java:866)
+at com.evermind.server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:448)
+at com.evermind.server.http.AJPRequestHandler.run(AJPRequestHandler.java:302)
+at com.evermind.server.http.AJPRequestHandler.run(AJPRequestHandler.java:190)
+at vendor.oc4j.network.ServerSocketReadHandler$SafeRunnable.run(ServerSocketReadHandler.java:260)
+at com.evermind.util.ReleasableResourcePooledExecutor$MyWorker.run(ReleasableResourcePooledExecutor.java:303)
+at java.lang.Thread.run(Thread.java:595)
+Caused by: vendor.ocs.tm.icalendar.exception.ICalParseException: '=' expected after "XPHONEOWNER"(
+Parameter=X-PHONEOWNER)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseParameters(VCalParser.java:407)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:230)
+... 29 more
+Caused by: vendor.ocs.tm.icalendar.exception.ICalParseException: '=' expected after "XPHONEOWNER"(Parameter=X-PHONEOWNER)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseParameters(VCalParser.java:407)
+at
+vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:230)
+... 29 more
+Caused by: vendor.ocs.tm.icalendar.exception.ICalParseException: '=' expected after "XPHONEOWNER"
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseParameters(VCalParser.java:379)
+... 30 more</sourcecode>
+
+
+<clause id="_create_an_event_with_a_reminder_2" obligation="normative">
+<title>Create an Event with a Reminder</title>
+<p id="_8ea41eef-0a07-ca47-5e47-46ad6c8e0c87">OK except for:</p>
+
+<ul id="_901470b8-2f0b-f05e-156b-eb8e62c56e97"><li><p id="_963e78ed-e1d0-3b0d-8e55-bd58be3ef46e">Client to Server alarm issue: Server didn’t create an alarm on server side regardless if device event has an alarm. Device did include alarm in the vCalendar, however importing the vCalendar to a calendaring client supporting vcalendar didn’t result in an alarm either. Need more investigation. Following is the vCalendar from device.</p>
+</li>
+</ul>
+
+<sourcecode id="_81b84673-b2d7-0d03-504a-af75dec797b7" unnumbered="true">VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+UID:20080204T184223Z-263000-H2_Board
+SUMMARY:CalConnect Day 2
+DESCRIPTION:The Mike and Dave Show!
+DTSTART:20080205T160000Z
+DTEND:20080206T020000Z
+X-EPOCAGENDAENTRYTYPE:APPOINTMENT
+CLASS:PUBLIC
+LOCATION:Sun Microsystems
+SEQUENCE:-1
+X-METHOD:NONE
+AALARM;TYPE=X-EPOCSOUND:20080205T155000Z;;0;0x100048ac0x00000205
+LAST-MODIFIED:20080204T184223Z
+PRIORITY:0
+STATUS:CONFIRMED
+X-MOBILEOS-LUID:10
+END:VEVENT
+END:VCALENDAR</sourcecode>
+
+</clause>
+
+<clause id="_access_level_and_priority_2" obligation="normative">
+<title>Access Level and Priority</title>
+<ul id="_172b4b25-745f-8b9e-c342-456a4178b8c6"><li><p id="_288055f6-dfd1-2ae2-2f8a-b18841f1f1af">can only be done if device supports setting an access level or priority</p>
+</li>
+<li><p id="_b168504a-7dad-0b5f-439a-85150b9333ff">Device not supporting priority.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_special_characters_from_server_2" obligation="normative">
+<title>Special Characters From Server</title>
+<p id="_a2deb6eb-1149-bd0a-b8b7-54c569349eb2">OK</p>
+</clause>
+
+<clause id="_multi_byte_characters_from_server_2" obligation="normative">
+<title>Multi-Byte Characters From Server</title>
+<ul id="_40198dbd-a47c-606a-0ecb-04bbc3bfc6f6"><li><p id="_5659468e-41c9-a691-d2b1-914c8db10782">Device can’t display the multi-byte characters (no font, normal). Chars were sent back to server correctly when modified.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_deletion_2" obligation="normative">
+<title>Deletion</title>
+<p id="_b01000ef-efe8-5c25-aad2-a4b44292306c">OK</p>
+</clause>
+</clause>
+
+<clause id="_all_day_events_server_to_device" obligation="normative">
+<title>All Day Events — Server to Device</title>
+<clause id="_create_all_day_event_in_same_time_zone" obligation="normative">
+<title>Create all-day event in same time zone</title>
+<p id="_c265d44c-2760-3eaf-c26d-12a2f52897e3">OK</p>
+</clause>
+
+<clause id="_create_all_day_event_to_device_in_different_time_zone" obligation="normative">
+<title>Create all-day event to device in different time zone</title>
+<p id="_1b540c21-55d7-059d-6dc2-08fa95895153">OK</p>
+</clause>
+
+<clause id="_create_a_single_instance_all_day_event_with_reminder" obligation="normative">
+<title>Create a Single Instance All Day Event with Reminder</title>
+<p id="_647b2cd0-6ca3-5d68-83a4-fd2b1fcb81bb">OK except for truncation issue:</p>
+
+<ul id="_b2208c39-a89a-da4b-6fbf-8be3624c2f3f"><li><p id="_5952ab4d-6dcf-66f1-38f5-15d9ed231035">Sync server day event to device, title and location were truncated. Modify title on device and sync, event remains same on server and device change is rolled back. Modify location on device, changes are propagated to server but title is also truncated on server. Seems to be a bug on server. Need more investigation.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_create_an_anniversary_all_day_event" obligation="normative">
+<title>Create an anniversary all-day event</title>
+<p id="_e1d6f9ad-f225-ca90-ac9a-4f728696e132">Recurrence issue: Server only sends one instance of the event to device. This was because that server splits the recurrence and only sends the instances within sync range to device.</p>
+</clause>
+
+<clause id="_all_day_event_on_last_day_of_month_last_day_of_year_check" obligation="normative">
+<title>All-day event on last day of month &amp; last day of year check</title>
+<p id="_1937acaa-fe17-f3fb-eb75-8d56a703d634">OK</p>
+</clause>
+
+<clause id="_create_a_single_instance_holiday_with_reminder" obligation="normative">
+<title>Create a Single Instance Holiday with Reminder</title>
+<p id="_8391d9a3-2491-b66a-7aaa-c9d21bbdb8af">Not supported by device.</p>
+</clause>
+
+<clause id="_update_an_all_day_event_on_server_and_synchronize_back_to_mobile_device_in_same_time_zone" obligation="normative">
+<title>Update an all-day event on server and synchronize back to mobile device in same time zone</title>
+<p id="_70100c4d-f64c-2541-686b-3e44ff7a97f9">OK</p>
+</clause>
+
+<clause id="_update_an_all_day_event_on_server_and_synchronize_back_to_a_device_in_different_time_zone" obligation="normative">
+<title>Update an all-day event on server and synchronize back to a device in different time zone</title>
+<p id="_b9a736a3-8839-2617-ae3d-3bd53e8f0ea1">OK</p>
+</clause>
+
+<clause id="_create_a_single_instance_multi_day_day_event" obligation="normative">
+<title>Create a Single Instance Multi-day Day Event</title>
+<p id="_9bfa759f-0b24-5e70-2f69-5c3a0228aa61">OK</p>
+</clause>
+
+<clause id="_remove_single_instance_meeting_day_event_and_holiday" obligation="normative">
+<title>Remove Single Instance Meeting, Day Event, and Holiday</title>
+<p id="_b195ae65-7a34-6b5c-6ff1-47a71a1191e0">OK</p>
+</clause>
+</clause>
+
+<clause id="_all_day_events_device_to_server" obligation="normative">
+<title>All Day Events — Device to Server</title>
+<clause id="_create_an_all_day_event_and_synchronize_to_a_server_in_same_time_zone" obligation="normative">
+<title>Create an all-day event and synchronize to a server in same time zone</title>
+<p id="_8a93cbd6-5c97-4b38-9957-2c3f5f6088b3">OK</p>
+</clause>
+
+<clause id="_create_an_all_day_event_and_synchronize_to_a_server_in_different_time_zone" obligation="normative">
+<title>Create an all-day event and synchronize to a server in different time zone</title>
+<p id="_4a2ac2ec-5fb8-f50a-dd7c-53d8cab03176">OK</p>
+</clause>
+
+<clause id="_create_a_single_instance_all_day_event_with_reminder_2" obligation="normative">
+<title>Create a Single Instance All Day Event with Reminder</title>
+<p id="_4f69b138-e58d-bcb9-4b4e-e99d6f202340">OK</p>
+</clause>
+
+<clause id="_create_an_anniversary_all_day_event_2" obligation="normative">
+<title>Create an anniversary all-day event</title>
+<p id="_a56f6157-94be-1cdc-41b2-dbed05bc0b85">OK</p>
+</clause>
+
+<clause id="_update_an_all_day_event_on_mobile_device_and_synchronize_back_to_server_in_same_time_zone" obligation="normative">
+<title>Update an all-day event on mobile device and synchronize back to server in same time zone</title>
+<p id="_d757a6b8-0800-2156-13cb-84966a249a97">OK</p>
+</clause>
+
+<clause id="_update_an_all_day_event_on_mobile_device_and_synchronize_back_to_a_server_in_different_time_zone" obligation="normative">
+<title>Update an all-day event on mobile device and synchronize back to a server in different time zone</title>
+<p id="_57d16700-d17c-556b-2bb3-47fbfc6a329c">OK</p>
+</clause>
+
+<clause id="_create_a_single_instance_multi_day_day_event_2" obligation="normative">
+<title>Create a Single Instance Multi-Day Day Event</title>
+<p id="_2b2bcb47-2444-2e52-0785-6d0ab61b9360">OK</p>
+</clause>
+
+<clause id="_remove_instance_meeting_day_event_holiday" obligation="normative">
+<title>Remove Instance Meeting, Day Event, Holiday</title>
+<p id="_e0449e7c-8e19-720d-9ba8-9b24609fe87c">OK</p>
+</clause>
+</clause>
+
+<clause id="_repeating_entries" obligation="normative">
+<title>Repeating Entries</title>
+<p id="_faf34b42-42c8-3a35-563e-0bd58329d391">This section was not tested extensively but the basics worked. The server splits the recurrence and only sends the instances within sync range to device.</p>
+</clause>
+
+<clause id="_scheduling" obligation="normative">
+<title>Scheduling</title>
+<clause id="_create_entry_as_owner_with_attendees_from_server" obligation="normative">
+<title>Create Entry as owner with Attendees from Server</title>
+<p id="_c9b35b54-844a-6621-163e-40dd572eec40">OK except for:</p>
+
+<ul id="_dd7a3ebc-61f3-ac72-f929-588c972a8902"><li><p id="_de17086a-a69b-fb0d-8484-bb58cf7fc348">Owner email wrong: owner email was <link target="mailto:name@vendor.com"/>, however it was shown as <link target="mailto:name@othername.com"/>. Seems to be server bug.</p>
+</li>
+<li><p id="_f437a8ca-00d3-d4c6-e645-5f8c5b469ccd">Owner email was not first on the attendee list. Need to find out whether it is server or client bug.</p>
+</li>
+<li><p id="_a6e1ae32-8ba3-b3aa-100a-17988f20a41a">Client doesn’t support attendance status. Server should put the info into the meeting description as is done for Windows Mobile Smartphone.</p>
+</li>
+</ul>
+</clause>
+</clause>
+</clause>
+
+<clause id="_server_2_and_device_testing_comments" obligation="normative">
+<title>Server 2 and device Testing Comments</title>
+<clause id="_device_vendor_comments" obligation="normative">
+<title>Device vendor comments</title>
+<p id="_7599b58a-9e76-b4bc-a2ec-bbddcfebfaca">An attempt was made to interoperate between the device and our servers but this proved to not be very fruitful at this event. The device vendor did advise the server vendor on the one defect found for their server: Phone was in different time zone from server. Created a contact on the phone with a birthday, adding birthday to the phone calendar. Synced to server. Contact on server had the birthday on the correct day but the calendar on the server had the birthday on the wrong day, due to time zone adjustment.</p>
+
+<p id="_99f17bd0-94bc-13a8-682d-60f84af102b1">Also, a mobile OS contacts (which was the area the device vendor was testing informally) do not match up to other servers’ format for contact data (e.g.a calendaring client supporting vCalendar) especially where differentiations like Mobile (w) and Mobile (h) are concerned.</p>
+</clause>
+
+<clause id="_server_2_testing_comments" obligation="normative">
+<title>Server 2 Testing Comments</title>
+<p id="_04670cc7-c54a-cafc-3b95-98176bfb3cfc">Mobile IOP test suite is very comprehensive. It is very difficult to do all tests.</p>
+
+<ul id="_5aa38670-9f4d-4763-8a57-1a92abd6834b"><li><p id="_e137e84c-afba-fd68-fe9b-fef7792d128a">week GSM signal at IOP place — difficult to test</p>
+</li>
+<li><p id="_43601591-e73e-00a3-9d24-477af71c0155">new device is disabled by default in our Server. It was necessary to enable it.</p>
+</li>
+<li><p id="_d970088a-765f-b3e1-3288-c3baeb4b5205">DirectPUSH fails after couple of minutes with, it works fine with different device</p>
+<ul id="_ae4c6d5f-80ec-fbe7-d337-67e1c829cbc5"><li><p id="_b3c3969d-5ada-bccd-36e6-87d0a71fc648">we don’t know yet if it is client or server issue</p>
+</li>
+</ul>
+</li>
+<li><p id="_884ca060-7c8d-b305-75ce-c3949002bf97">Birthday problem:</p>
+<ol id="_79045be5-b1d8-950c-5591-17f9493d8924" type="alphabet"><li><p id="_5d216e7c-798d-f46f-acc9-8a6b8af22a05">create new Contact with birthday and let device to create event in your calendar</p>
+</li>
+<li><p id="_b5366380-e9f6-0d53-f2b3-aedff9adb5c0">synchronize it to server</p>
+</li>
+<li><p id="_1a1b45e4-872a-cda5-0b72-aa55abe7f4a9">open Calendar in client (EST) which is in different timezone than mobile device (GMT)</p>
+<ul id="_e170be54-167b-2f06-8037-67e1fec609c6"><li><p id="_b37018a0-ff8a-3b35-4807-6250969c7325">Result: birthday is one day early</p>
+<ul id="_c4db3f70-4557-fb1b-cac2-e3992f39ce64"><li><p id="_a5c83644-920c-229c-17da-4713dd345126">we are not sure, if it is correct or not</p>
+</li>
+<li><p id="_0f9dceae-40dd-bb2f-fc4d-cbd5cc01a193">general question: how to present all day events in different timezones</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_54bf7e8c-1cc0-1328-4e49-4329796a944c">The first mobile interop testing was a success. We learned a couple of things. First, we need to ensure we are located in a facility that has good cell coverage. The room we occupied had occasional issues with cell phone coverage. The best approach would be to test rooms we will be utilizing prior to starting the event so we can ensure we have adequate coverage.</p>
+
+<p id="_4c074700-7953-d449-7a06-ff687876713f">The other thing we determined was the test scenario document has too many items to test in two days. We are not even sure we can test everything within three days. What was done this time was the vendors chose to test specific items from each group in an effort to try to cover as much as possible. For future testing, we may choose to break down the testing into specific areas. In other words, we may test section one during one event, section two during the next event, and so on. Or we may determine which items are the most critical to testing, and focus on them during the next events. This will be decided before the next Mobile interoperability test event is held.</p>
+
+<p id="_7c1b647b-acc2-5b28-6995-77bd7f56af50">Our thanks to the participating vendors.</p>
+
+<p id="_fec76b0a-efa2-bf12-efe9-9fd4f472c081">Respectfully submitted by Pat Egen, CalConnect Interop Manager.</p>
+</clause>
+</sections>
+</csd-standard>

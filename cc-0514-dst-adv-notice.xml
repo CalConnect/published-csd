@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">DST Advisory Notice</title>
+<docidentifier primary="true" type="CalConnect">CC/Adv 0514:2005</docidentifier><docnumber>0514</docnumber><date type="published"><on>2005-06-29</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2005-06-29</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2005</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="Adv">advisory</doctype><flavor>cc</flavor><editorialgroup><committee>DST ADHOC</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7fbaec4b-0250-84e7-0e43-81775debe8a4" obligation="normative">
+<p id="_cdc4fc6d-0ab8-7040-218a-aee9d6fd453d">© 2005 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_60e0efe6-4d65-7abd-88dd-0ccfaf67316a">H.R. 6: Energy Policy Act of 2005, which recently passed the US House of Representatives, contains an ‘energy saving’ provision which may have broad impact on users of existing Calendaring and Scheduling systems and manufacturers of software that support calendaring and scheduling functions. This document explains the impact and our concerns.</p>
+</introduction></preface><sections>
+
+<clause id="_energy_bill" obligation="normative">
+<title>Energy Bill</title>
+<clause id="_what_the_bill_says" obligation="normative">
+<title>What the bill says</title>
+<p id="_65c77c3f-f6bf-39b5-3ab7-38ebc530691b">H.R. 6: Energy Policy Act of 2005, which recently passed the US House of Representatives, contains an ‘energy saving’ provision regarding Daylight Savings Time (DST). It calls for a change in start and end dates of DST observed in the United States, with the new DST period stretching from March to November. This change would take effect in March 2006 if the House language prevails over Senate language, which does not contain the extension.</p>
+</clause>
+
+<clause id="_our_concerns" obligation="normative">
+<title>Our Concerns</title>
+<p id="_436599a0-7404-3a4e-84fa-de3f28c2115b">Members of the Calendaring and Scheduling Consortium, comprising both product vendors and end-user groups, are concerned about the proposed timing of this change.</p>
+
+<p id="_5444d0c5-3511-734e-d03b-b28350b14003">It’s not a matter of whether the proposal is right or wrong. It’s a matter of practicality. The Consortium hopes that the bill will not go forward with the current language on daylight savings time. We suggest a simple delay of the effective date to insure that calendaring and scheduling vendors and consumers have ample time to prepare for the changes. Without surveying a reasonable number of affected parties, we cannot offer an ‘ideal’ effective date, but would be pleased to offer whatever information and expertise we have available.</p>
+</clause>
+
+<clause id="_what_its_impact_is" obligation="normative">
+<title>What its impact is</title>
+<p id="_ea6146db-6dc9-760a-3b6f-fc3bfce7df31">If this legislation is approved, software and hardware calendaring and scheduling products based on the iCalendar standard will need to be changed. Users of such products—​universities, companies of all sizes, and many other types of organizations—​as well as their suppliers will face a major challenge:</p>
+
+<ul id="_7157945f-3090-9f16-6839-ed0a8771046a"><li><p id="_c3430118-982d-2d44-6b47-c9bc33ee03e3">How can vendors efficiently issue “patches” to the problem in so short a time? Additionally, how could their customers—​with millions of end users—​deploy those fixes in so short a time?</p>
+</li>
+<li><p id="_c3793834-5ff5-c9f4-c8b1-132b24b351cb">As a corollary, how can organizations in the U.S. that depend on such products make the necessary changes and remain synchronized with colleagues outside of the US?</p>
+</li>
+</ul>
+
+<p id="_9d0affea-09f3-1ab8-608f-fb3cbba059d9">To complicate matters, this generally affects any calendaring and scheduling product whether or not it’s based on the iCalendar standard. Anything that keeps a calendar, including cell phones, is potentially affected. Many embedded environmental systems such as building management systems, time-lock control, work-shift and time clocks, may also be affected.</p>
+
+<p id="_e9f0b822-db0a-4e53-1c85-2ef8dd175e22">It is also not clear whether other countries that currently share the same timezone and DST definitions as the US will adopt the new definitions at the same time, or stay with the current ones. This has serious impact for cross-border commerce as for two months in the year, regions of the US will have a local time one hour different than similar regions in other countries.</p>
+</clause>
+</clause>
+
+<clause id="_what_icalendar_has_to_do_to_adapt" obligation="normative">
+<title>What iCalendar has to do to adapt</title>
+<clause id="_dst" obligation="normative">
+<title>DST</title>
+<p id="_a63e72ee-deb1-c4c1-6875-6b0840d07f32">Daylight Savings Time (DST), sometimes called ‘Summer Time’, is the period during the course of a year in which a particular geopolitical region advances its local time by one hour compared to the standard time for that region (as determined by its ‘timezone’). The goal is to better match hours of work and school to real daylight hours during the course of a day, for better productivity and potential energy savings.</p>
+
+<p id="_b6182cd4-63a8-bdcf-228b-3b911c395c43">For a more complete description and a history of DST, see <link target="http://en.wikipedia.org/wiki/Daylight_savings_time"/>.</p>
+</clause>
+
+<clause id="_icalendars_dependency_on_dst" obligation="normative">
+<title>iCalendar’s dependency on DST</title>
+<p id="_affb2d56-1e38-c05d-e841-bd5e150b3373">The Internet Calendaring and Scheduling Core Object Specification, or iCalendar, is an Internet Engineering Task Force (IETF) proposed standard defined in the document RFC2445 ( <link target="http://www.ietf.org/rfc/rfc2445.txt"/>) and further described in a guide to calendaring RFC3283 ( <link target="http://www.ietf.org/rfc/rfc3283.txt"/>). In addition, specifications also exist that describe how iCalendar can be used for scheduling between multiple parties (RFC2446 ( <link target="http://www.ietf.org/rfc/rfc2446.txt"/>) and RFC 2447 ( <link target="http://www.ietf.org/rfc/rfc2447.txt"/>)).</p>
+
+<p id="_251102e9-6065-e69c-a2fc-444745360831">iCalendar describes a data format to encapsulate calendaring data such as events and tasks which can be passed between different systems in an interoperable way. As part of this, timezone information is also required in order to allow times to be specified relative to a particular locality. To that end iCalendar defines a ‘VTIMEZONE’ object that encapsulates timezone information. These objects provide for both ‘STANDARD’ and ‘DAYLIGHT’ subcomponents that can be used to represent the standard timezone offset, as well as the timezone offset when DST is in effect. In addition, these sub-components also specify, via a set of rules or a list of explicit dates, the dates and times at which DST starts and ends. Typically rules are used, and those specify the DST changes from some point in the past, into the future for an indeterminate amount of time.</p>
+</clause>
+
+<clause id="_changes_need_to_icalendar_products" obligation="normative">
+<title>Changes need to iCalendar Products</title>
+<p id="_714c96a5-aa49-7513-ac4a-3bce7e3ebab2">If this legislation goes forward, the following changes will need to take place:</p>
+
+<ol id="_686a687b-8a8d-59e0-106b-2a3653fee75a" type="arabic"><li><p id="_e781ac1f-3276-b927-4bc0-1e05e8875503">Any iCalendar product that currently uses timezone information will have to have their timezone ‘definitions’ updated to reflect the new start and end periods for DST. This affects both calendaring servers and clients, including desktop and mobile clients.</p>
+<ul id="_46fa40fa-d862-85fe-bd91-b3856c113a87"><li><p id="_83bca422-b9a9-dd95-7991-498e3aef344b">In the case of servers, this may be a simple process of upgrading timezone definitions.</p>
+</li>
+<li><p id="_03b86ddc-eb4c-dbe1-2011-650f93386d81">In the case of clients, either an automated or manual upgrade of the timezone definitions will be required, subject to the other issues described below. This process will have to take place on ALL systems using iCalendar — potentially tens or hundreds of millions of users.</p>
+</li>
+<li><p id="_1e3efaf5-a2c4-3bd8-8901-6c8f2b15844e">This change is not just limited to US systems — anyone outside the US that needs to do business with the US or travel to the US will need their definitions updated.</p>
+</li>
+</ul>
+</li>
+<li><p id="_9fbdd270-9583-072b-77c3-6b8063094882">Given that the legislation proposes this change taking effect in March 2006, it is quite likely that there are already schedules of events defined for the period when DST is extended. The question arises as to how these existing events should be adjusted.</p>
+</li>
+<li><p id="_11a2d631-ec49-4b7e-8f29-3b395975c83d">Typically there are two ways in which timezone definitions are enumerated.</p>
+<ol id="_9bb6d8d0-efb4-8806-77f4-988e3529e7f1" type="alphabet"><li id="case-a"><p id="_6b794214-6415-6933-3dcb-36d4339eae21">Using the naming scheme defined in the ‘Olsen’ timezone database ( <link target="ftp://elsie.nci.nih.gov/pub/"/>). This splits the timezone name into two parts: a region (typically a continent) and a city. For example: ‘America/New_York’, ‘America/Montreal’, ‘Europe/London’.</p>
+</li>
+<li id="case-b"><p id="_52b0c165-75d1-56fb-dcba-b15401caecd2">Using the colloquial timezone name, e.g. ‘Eastern’, ‘Central’, ‘GMT’.</p>
+</li>
+</ol>
+
+<p id="_b5cc56b4-8fa6-e048-1c0d-464a677d8bdb">For <xref target="case-a"/>, updating timezone definitions is a matter of identifying which cities are in the US and changing just those definitions. If other countries (e.g. Canada) choose not to adopt the same changes, then the definitions for cities in Canada could remain the same. i.e. ‘America/New_York’ would be changed and ‘America/Montreal’ would be unchanged.</p>
+
+<p id="_da7bfa1e-e6ba-38d1-e3ba-c380436c38bb">For <xref target="case-b"/> the situation is more complex if other countries do not adopt the changes. In that case the existing definitions would need to be split into separate items to reflect the different timezone rules in each region — using Canada as an example again: ‘US-Eastern’ and ‘Canada-Eastern’. Any upgrade process to existing systems would have to determine whether an event that currently uses the ‘Eastern’ definition should be assigned ‘US-Eastern’ or ‘Canada-Eastern’. It may not be possible to automatically determine that in all cases and explicit human intervention may be required.</p>
+</li>
+<li><p id="_c7437d9b-7e0f-1dc6-2886-4df55e3e0fca">The Calendaring and Scheduling consortium recently carried out a survey on timezone support in calendar products. One conclusion from that is that a number of products convert local time information with a supplied timezone into UTC (the ‘standard’ time reference) as a simplification. As a result of this, timezone information is effectively lost. Such products will need to determine how to do any adjustment of the UTC times based on the proposed DST changes.</p>
+</li>
+</ol>
+</clause>
+</clause>
+
+<clause id="_contact" obligation="normative">
+<title>Contact</title>
+<p id="_ce414bdd-85ac-25d1-ff16-72aebe25be46">The Calendaring and Scheduling Consortium is composed of ten universities, seven corporations, two foundations, and one research facility. More information is available at www.calconnect.org.</p>
+
+<p id="_55ec3a4b-bda6-0b66-85f4-59b2bb394122">For further information or to discuss these issues, contact Dave Thewlis, Executive Director: <link target="mailto:dave.thewlis@calconnect.org"/></p>
+
+<p id="_5b3c2738-2151-778d-12e2-c635dd4f7805">1550 Dena Drive<br/> McKinleyville, CA 95519 <br/> (707) 840 9391 <br/> www.calconnect.org</p>
+</clause>
+</sections>
+</csd-standard>

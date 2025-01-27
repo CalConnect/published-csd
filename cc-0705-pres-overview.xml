@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">CalConnect, Calendaring Interoperability and Calendaring Standards</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0705:2007</docidentifier><docnumber>0705</docnumber><date type="published"><on>2007-11-11</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Dave Thewlis</completename></name>
+<affiliation>
+<name>Executive Director</name>
+<organization>
+<name>The Calendaring and Scheduling Consortium</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2007-11-11</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2007</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>FREEBUSY</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7809dbe8-e645-5f85-32ad-f71bc98571d1" obligation="normative">
+<p id="_50f4b52f-8422-795d-1913-62a3d383a692">© 2007 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<terms id="_definitions" obligation="normative">
+<title>Terms and definitions</title><p id="_9ebbb531-2d3e-eb13-6a3c-ec26454a48d4">For the purposes of this document, the following terms and definitions apply.</p>
+
+<term id="term-Calendar"><preferred><expression>
+<name>Calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_d9942260-80c2-0639-52a3-fbf75f2ec68b">A collection of events, tasks, journal entries, etc. Examples include a person’s or group’s schedule, resource availability, and event listings.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Scheduling"><preferred><expression>
+<name>Scheduling</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ec519cac-e41f-296e-4454-578ad0fbece0">The exchange of request/invitations and responses between organizers and attendees of scheduled events, tasks or journal entries.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-CalConnect"><preferred><expression>
+<name>CalConnect</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_9f6ed573-2c21-d5fe-16d4-b722c1e66028">The Calendaring and Scheduling Consortium, consisting of vendors and user groups interested in promoting and improving calendaring and scheduling  <underline>standards and interoperability</underline>.</p></verbal-definition></definition>
+ </term>
+</terms>
+
+<clause id="_why_calconnect_was_established" obligation="normative">
+<title>Why CalConnect was established</title>
+<clause id="_1995_1999" obligation="normative">
+<title>1995-1999</title>
+<ul id="_c2cbcfc3-ed97-9c60-77cf-629c23491a1c"><li><p id="_dde6b2e3-a117-0c8f-96d0-b5db38fdcced">1996 Versit Consortium issued vCalendar specification</p>
+</li>
+<li><p id="_4254a470-c925-a3cb-863e-cf67fe520e38">199x IETF CALSCH working group started on iCalendar specification</p>
+</li>
+<li><p id="_a850fb49-ad05-8005-9195-11b96ceae9f4">1998 iCalendar (RFC 2445), iTIP (RFC 2446) and iMIP (RFC 2447) became a proposed standard</p>
+</li>
+<li><p id="_9d0ca5da-a290-9a24-1af3-52b1ce7b6a73">199x Work began on draft for Calendaring Access Protocol (CAP)</p>
+</li>
+<li><p id="_1e449eb7-4f62-436a-de0d-100db1766867">1998 — 2000 Some interoperability testing</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_2000_2004" obligation="normative">
+<title>2000-2004</title>
+<ul id="_ea84cb2c-90c6-ae2c-e79b-56580de42b71"><li><p id="_2827a595-9ae4-ee71-7a1e-1e8308af1281">Work on CAP — stopped</p>
+</li>
+<li><p id="_0a55dbff-35f6-565b-bec3-ab635a2ad56e">Interoperability testing — stopped</p>
+</li>
+<li><p id="_9870a724-871c-6d11-7ebd-59b076bdff92">Work on iCalendar, iTIP and iMIP — stopped</p>
+</li>
+<li><p id="_af5b983e-3b03-855b-d009-a3dd17d022bc">IETF CALSCH working group — stopped</p>
+</li>
+<li><p id="_5e2d2dee-ab5d-c62b-ae13-032743ae0268"><strong>The draft RFCs were not ready</strong></p>
+<ul id="_369d7685-30dd-6795-231f-2a840652a674"><li><p id="_222ac1b8-397c-3e27-6bae-a743049e78fb">Too ambiguous</p>
+</li>
+<li><p id="_5a822f60-301a-ebf9-ca7f-5bfe27c697cc">Too complex</p>
+</li>
+<li><p id="_0dfd7e77-94fe-2348-31fa-1a23e3c074aa">Untested</p>
+</li>
+</ul>
+</li>
+<li><p id="_e9d3deed-6cfc-8c3b-8184-b160c2aaa680">Calendaring and Scheduling Vendors continued to use the RFCs as they could</p>
+</li>
+<li><p id="_a2e70410-b9fd-1a83-0597-7bf64fe1cd2d">Where the RFCs were inadequate vendors were forced to develop workarounds or unique extensions</p>
+</li>
+<li><p id="_4d8ea883-314f-a20e-3aca-b648cb8fca3f">Work on follow-on or related specifications was hampered by being “built on sand”</p>
+</li>
+<li><p id="_1c20b177-e352-7a46-f9ba-21c3bf7fb781">Vendors — and users — became more and more frustrated by the lack of movement in calendaring standards and interoperability</p>
+</li>
+<li><p id="_409f1c6e-ce4c-878c-dc0d-5e449b9d4cd7">Interoperability between calendaring systems was mostly still a dream</p>
+</li>
+<li><p id="_2947a7c1-33c4-3460-cb0b-aa46197e0ebd">Somewhere around 2004 things started to move again</p>
+</li>
+<li><p id="_48a7724f-66fa-fdcb-2a89-bce27cd821a4">Some vendors began moving towards alternatives to the base RFCs</p>
+</li>
+<li><p id="_f17469bc-a398-17cb-a205-dd8730e3ec46">Interoperability seemed less important than progressing products</p>
+</li>
+<li><p id="_395e133a-0d0b-426d-1ef5-bc2b132bb89a">Work was begun on CalDAV as a prospective standard for a calendar access protocol, recognizing that CAP was a dead end</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_establishment_of_calconnect" obligation="normative">
+<title>Establishment of CalConnect</title>
+<p id="_745890c3-ad48-96e8-329e-0f31ebaa37fb">CalConnect was founded in January of 2004 to promote interoperable Calendaring and Scheduling.</p>
+
+<quote id="_8a721167-0a1f-1640-bcb9-feafbb301bd9"><p id="_7779320c-38dc-adba-3ffe-9a67e8e458b5">The driving premise behind the Consortium is that interoperability between calendaring programs and systems is essential to achieving the promise and future growth of calendaring.</p>
+</quote>
+
+<quote id="_6a5bdf50-fc27-ac1f-941f-0465bf40189f"><p id="_58fb3375-c2f9-b4c9-293a-69334f3b1554">We believe that our work towards interoperability is a major factor driving the future of internet calendaring, and are actively working to involve significant players (vendors and customers) in the calendaring arena.</p>
+</quote>
+</clause>
+
+<clause id="_why_a_consortium" obligation="normative">
+<title>Why a Consortium?</title>
+<p id="_677bd8cb-e591-a6f6-ede7-4764f1856add">A focused environment to:</p>
+
+<ul id="_7abe3540-ecdc-c584-e7de-96f59137bae6"><li><p id="_f3e5ef60-e645-5ab5-5c86-d631e52ea22d">Re-energize Calendaring and Scheduling</p>
+</li>
+<li><p id="_9c5e5843-01f7-69ec-7c49-b43716865d1a">Provide a forum to discuss the direction for standards and implementations</p>
+</li>
+<li><p id="_934d6093-d791-0580-b7e0-cfa2239c0e0f">Validate the existing standards</p>
+</li>
+<li><p id="_7a712e4a-0c43-d566-458b-47310dd64d16">Provide interoperability testing between implementations and against standards</p>
+</li>
+<li><p id="_edd084ac-7e2d-3517-4b24-35fb3f07e6bd">Drive requirements for changes to existing standards, new and complementary standards back into IETF, other bodies</p>
+</li>
+<li><p id="_e50995be-334a-290e-2a14-ee3423394c90">Where necessary develop initial specifications and submit them to SDOs for progression to standards</p>
+</li>
+<li><p id="_b8a77b60-cc05-ee9b-3740-4d62b348e1bd">Promote standards and technologies to the vendor and user communities</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_overview_of_calconnect" obligation="normative">
+<title>Overview of CalConnect</title>
+<clause id="_what_is_calconnect" obligation="normative">
+<title>What is CalConnect?</title>
+<p id="_07bd206a-71e0-1848-a282-51b930b59898">A Partnership between Calendaring  Scheduling Vendors and Customers</p>
+
+<ul id="_de7d5fbb-f9c9-d56b-dc7e-807a784ae492"><li><p id="_7d793695-01f3-7ddc-c4d6-a2843acbaa1b">To provide a general understanding of, promote, and provide mechanisms so that Calendaring and Scheduling methodologies, tools and applications can enter the mainstream of computing</p>
+</li>
+</ul>
+
+<p id="_7e6d6e54-d4ab-8718-fd91-2da8ce1fd17a">Not a standards development organization (SDO)</p>
+
+<ul id="_4ed9ba20-287e-4ee4-57e3-4105e6921cb6"><li><p id="_895e5577-9691-dcaf-8e37-d8c6c18f364b">Develop use cases, requirements, papers, specs</p>
+</li>
+<li><p id="_f61eb4bd-5824-41b0-03d5-03842bab4ec4">Promote development and adoption of standards</p>
+</li>
+<li><p id="_2ba6aa2a-9fc2-de53-600b-fcd3ba13f065">Introduce specifications into SDOs for progression</p>
+</li>
+<li><p id="_c8b4ba2c-a53b-0206-f6f2-902d4639c0c2">Influence SDOs and vendors</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_the_vision" obligation="normative">
+<title>The Vision</title>
+<quote id="_4be94108-7165-68bc-9772-639734e30a18"><author>Dave Thewlis, CalConnect Executive Director</author><p id="_7300b650-ae56-0e05-18f9-e44b77e13d38">Our vision of the future is not only interoperable calendaring, but ubiquitous interoperable calendaring. Calendaring should—​and can—​be as ubiquitous as electronic mail.</p>
+</quote>
+
+<quote id="_d7520ac0-7f97-0888-1afa-47c20d5ef67c"><author>Pamela Taylor, CalConnect Board Member</author><p id="_abd3399a-e8ca-f28b-d1b6-724c005c3733">Being able to schedule meetings with my work group is important. But being able to schedule an appointment with my hairdresser could change the world.</p>
+</quote>
+</clause>
+
+<clause id="_calconnect_members" obligation="normative">
+<title>CalConnect Members</title>
+<clause id="_institutional_members" obligation="normative">
+<title>Institutional Members</title>
+<ul id="_7f6bc4d1-216e-5c9d-6319-b5af9df2984e"><li><p id="_a692740c-ec32-dc9e-4543-9ea00ce67f43">Apple Inc.</p>
+</li>
+<li><p id="_16866223-f774-c6ed-fcd6-4cdb8156a00f">Boeing</p>
+</li>
+<li><p id="_db1b119e-b2eb-9d16-0d15-349a11644235">California State University, Fresno</p>
+</li>
+<li><p id="_c5eb4651-dc48-49b5-d918-b1603985a269">Carnegie Mellon</p>
+</li>
+<li><p id="_eb5054cb-df6b-28d9-a6ae-e10f0b7dc0b7">Dartmouth</p>
+</li>
+<li><p id="_bca2051d-1ef5-55e1-4355-2fffd726a85f">Duke University<fn reference="1"><p id="_8b814bf1-1e46-5722-793d-9e74ec5e06b1">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_e9637229-8933-2671-90d5-a6f05fd2e19a">Eventful<fn reference="1"><p id="_059b8cae-679e-6cc4-f43f-f2b4fc69340b">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_7c85261a-8ded-c4a4-bdab-aa45f8f08158">Google</p>
+</li>
+<li><p id="_de6c8a5f-71f2-3756-c607-430c5e26d143">IBM</p>
+</li>
+<li><p id="_6e6f6270-da65-bef7-d46d-a5708038dc12">Kerio Technology</p>
+</li>
+<li><p id="_8df6e5fc-9abf-d6b6-83f6-a6a744c850cd">MailSite Software</p>
+</li>
+<li><p id="_752d7904-0a10-4f0b-ece4-f6df97e6adfb">Marware</p>
+</li>
+<li><p id="_2524afc4-212a-7400-9ffe-ed89e9487ca1">M.I.T.<fn reference="1"><p id="_79d8c285-4c96-622f-d3ed-ca58dc73dd34">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_50f63df7-73b0-5b04-526e-6ecd5630cef9">Microsoft</p>
+</li>
+<li><p id="_cd9b50c6-7221-06d7-b38d-9c172d91ec54">Mirapoint</p>
+</li>
+<li><p id="_2c535070-ce87-7e47-35e1-978221bfe247">Mozilla Foundation<fn reference="1"><p id="_fc0c90ed-3cb0-27d7-6c60-182ffac90f14">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_08c3d3ce-3e19-8259-1b03-e94118b91716">New York University</p>
+</li>
+<li><p id="_176fcd84-efff-9968-b628-63221bb04d2c">Open Connector Groupware</p>
+</li>
+<li><p id="_0872d3c0-0a20-8dd1-ba30-22e17b5301f3">Oracle Corporation<fn reference="1"><p id="_bbbf0494-77d0-e6a5-97aa-82b971023f02">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_2ed17cf1-43dc-5d17-7f66-afc4d5d2571c">Open Source Applications Foundation<fn reference="1"><p id="_a5ffdd8e-235b-a739-d494-ea01a451edc3">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_f430ea48-24cc-ba61-f5b3-b10a18c3666e">PeopleCube<fn reference="1"><p id="_e6218889-915d-ca7f-e5bd-7db75778252a">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_a474dcf7-dc45-be6f-249c-61af5db8a241">Princeton University OIT</p>
+</li>
+<li><p id="_22c2368d-5f52-db85-3099-3f698fb0dba5">Rensselaer Polytechnic Institute (RPI)</p>
+</li>
+<li><p id="_86c540e7-b2ae-7cfe-d2e3-8190a1c567ea">Scalix</p>
+</li>
+<li><p id="_42f44778-a23d-a083-3e97-e97f5c0e1a66">Sony Ericsson</p>
+</li>
+<li><p id="_32e02c49-eb38-8681-3a7e-3f8fc15c61f9">Stanford University<fn reference="1"><p id="_4a24665f-f10a-3d83-8a45-3512f2958400">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_85e15123-f441-fd1c-50a3-4cbdb0c6f712">Sun Microsystems</p>
+</li>
+<li><p id="_898f68de-3890-68f7-bc36-195ea7747b5e">Symbian<fn reference="1"><p id="_ac1c0aa7-df12-a85b-524e-0f8cf9c434cc">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_047e9557-861d-b095-ab44-9b8f64abc4c2">Synchronica</p>
+</li>
+<li><p id="_6b7678c9-b643-0f04-cae2-7367ec4e59c9">Timebridge</p>
+</li>
+<li><p id="_504d81a0-4ff5-c056-4f79-bf1ec90fda16">Trumba Corp</p>
+</li>
+<li><p id="_045add49-46c3-50d4-469d-8391409ae893">University of California, Berkeley<fn reference="1"><p id="_53b8eb96-ed58-a0a4-d92e-5dc0bb87182b">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_def65042-5fcd-541b-4c74-f65997dcf08f">University of Chicago</p>
+</li>
+<li><p id="_489966dd-c37b-f600-23b1-a8168c8ead8e">University of Michigan</p>
+</li>
+<li><p id="_d4b1ade6-5f0d-6cd1-1f00-7fb096343f1b">University of Pennsylvania</p>
+</li>
+<li><p id="_551c3476-61bf-7293-d423-913abf84b1fe">University of Washington<fn reference="1"><p id="_9bb1b2ed-78d7-de4a-e555-ecec3a5b9e10">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_90922ab3-0581-be34-8bd3-25587750912d">University of Wisconsin, Madison<fn reference="1"><p id="_131329d9-bd34-09ae-8cb9-a58dcee1c5be">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_18ed5934-3dd5-5c01-d094-5d4acc52645c">Yahoo!<fn reference="1"><p id="_34a1c637-f00c-26e2-213d-72497885eb60">Founding member</p>
+</fn></p>
+</li>
+<li><p id="_611f3dec-e5ae-7f5b-58c3-7b3a57f3bcc7">Zimbra</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_individual_members" obligation="normative">
+<title>Individual Members</title>
+<ul id="_d7fc4c18-6a06-f455-0957-7174a9976165"><li><p id="_024d44f5-4dd1-7458-6013-c0ff1b86cf18">Patricia R. Egen</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_calconnect_2" obligation="normative">
+<title>CalConnect</title>
+<p id="_f8d6f87c-b5ba-955f-e2a7-6edb7ba15a25">What we do:</p>
+
+<ul id="_3a3fcc1a-7b8e-de74-d092-b1a6ea80e7be"><li><p id="_8ec8918b-40a4-4118-838e-d07780ad84cb">Promote Calendaring &amp; Scheduling (C&amp;S)</p>
+</li>
+<li><p id="_fa9f2ef0-4f5b-e340-3f25-9f53e0fb656b">Help drive the evolution of open standards for Calendaring  Scheduling</p>
+</li>
+<li><p id="_dea29730-e71d-5fc7-f790-0c0c57114335">Conduct interoperability testing</p>
+</li>
+<li><p id="_12ff7e66-4650-3196-cd83-1aed1d2c0db3">Develop a shared vision for C&amp;S community</p>
+</li>
+</ul>
+
+<p id="_070367ce-501b-5b42-17d2-e7146f8e590d">How we do it:</p>
+
+<ul id="_31ed5859-7d29-6a5f-65cf-b69d970dd5d9"><li><p id="_7775e50d-c9e1-148b-a9d7-01391fc2d082">All members have same rights &amp; privileges</p>
+</li>
+<li><p id="_f3ec54f0-b882-dd05-4877-52ef3c7bbd16">Collegial, consensus environment</p>
+</li>
+<li><p id="_152247e3-d46d-f23e-8865-36d3df2caec3">Completed work products are published</p>
+</li>
+<li><p id="_28a77964-b6a5-48da-9bda-03ca3e65ce42">Non-member organizations may attend one Roundtable as Observers</p>
+</li>
+<li><p id="_1c7ff2f5-8355-b398-06a0-0be9d4667135">Member may have unlimited participants</p>
+</li>
+<li><p id="_18ec83b1-8bbc-124f-c23b-fb3ba958cee6">Any member may propose new TC, provide Chair</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_how_calconnect_works" obligation="normative">
+<title>How CalConnect Works</title>
+<ul id="_d5effdbc-5c72-d100-f2d6-1277a4fc0ee7"><li><p id="_f3eb77bf-a968-a38e-8be1-59aa4c65ec4b">All members have same rights &amp; privileges</p>
+</li>
+<li><p id="_abeee149-a5d8-526a-4968-cd6328617469">Collegial, consensus environment</p>
+</li>
+<li><p id="_9f6d049a-df48-6b94-e555-a2ab0ce494e6">Completed work products are published</p>
+</li>
+<li><p id="_7c459b74-5a20-cbd2-7bff-6d59aa26d251">Non-member organizations may attend one Roundtable as Observers</p>
+</li>
+<li><p id="_4a71d4bf-32ba-3283-dd36-462f8a49b798">Member may have as many representatives involved as it wishes</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_technical_committees" obligation="normative">
+<title>Technical Committees</title>
+<clause id="_membership" obligation="normative">
+<title>Membership</title>
+<ul id="_b795afb2-7d43-927f-a882-1ee3e104f9e6"><li><p id="_f5a7bab7-7c12-aafe-5dcd-65c53543df6b">TC participants from member organizations</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_operations" obligation="normative">
+<title>Operations</title>
+<ul id="_d3931199-4eef-caff-b1d7-99f8e69213ad"><li><p id="_2f2b74d0-d781-1729-cb7e-fe5304dde114">Determined by TC Chair and TC membership</p>
+</li>
+<li><p id="_3855a2a3-c424-3272-5d80-f8161202cd4d">TC Chair provides regular status to Steering Committee</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_governance" obligation="normative">
+<title>Governance</title>
+<ul id="_67097af2-08e2-b577-6347-556b080c7f55"><li><p id="_1520215a-80b2-fa20-a606-c55ea13ea1ce">Any Consortium member may propose new work</p>
+</li>
+<li><p id="_a34d4243-5ea2-94d9-8317-8d1085f21608">Charter, scope and deliverables identified in the proposal</p>
+</li>
+<li><p id="_033ee58e-dbbf-ff1b-daf3-9bb2d9964b1c">Chair confirmed by SC</p>
+</li>
+<li><p id="_c167cdb8-2eb5-6245-4911-2b8b22a27aa8">Committee terminates when chartered work is complete</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_operational_policies" obligation="normative">
+<title>Operational policies</title>
+<ul id="_84db7948-3c34-3dcb-2e68-0c33d0458465"><li><p id="_ec235dbf-6b5f-2b6f-c7b0-9483b412d7f5">In-progress work confidential to Consortium members only</p>
+</li>
+<li><p id="_c8df9810-939b-085c-8c1a-38ccfdca670f">Completed work published and freely available on Consortium web site</p>
+</li>
+<li><p id="_a401c6ce-df16-eb22-0c5d-b0c488a99e3e">No proprietary information discussed</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_tc_chairs" obligation="normative">
+<title>TC CHAIRS</title>
+<ul id="_ac0801ff-2507-f92e-ebcf-7de74cf21f05"><li><p id="_cbf0ffa3-7c8e-a7ca-902a-7f6cb4d20e2e">Management committee for TCs</p>
+<ul id="_90d558fd-bab3-c1ad-eea5-2d9211e5c6f6"><li><p id="_d0e7c834-c48d-a87c-6eec-a50e2620c457">Composed of Chairs of all TCs</p>
+</li>
+</ul>
+</li>
+<li><p id="_82c07e01-e8fc-52dc-70e3-7849ae9b8e6f">Weekly conference calls</p>
+</li>
+<li><p id="_b5e0dc12-7797-14db-f77f-bfad2be2836c">Ongoing TC coordination on behalf of Steering Committee</p>
+</li>
+<li><p id="_20b3ad4b-a687-35db-a329-fa6890342a3b">Approves document publication following last call process</p>
+</li>
+<li><p id="_47c5714d-1817-63b9-7ebf-9111205e495d">Chair of TC CHAIRS participates in Steering Committee</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_steering_committee" obligation="normative">
+<title>Steering Committee</title>
+<clause id="_membership_2" obligation="normative">
+<title>Membership</title>
+<ul id="_527214fa-8319-f7aa-2cad-4047a1feaa7d"><li><p id="_6f5574e5-8ffe-724d-4d9a-66fe12e26987">Founding Members plus first member from each membership category</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_operations_2" obligation="normative">
+<title>Operations</title>
+<ul id="_ec756f5f-f07b-abd8-6a7d-7c59ebe312f6"><li><p id="_6dc465ba-4db9-237a-046f-60cb2dc99bb7">Monthly teleconference</p>
+</li>
+<li><p id="_5b22aff5-6065-4a63-5c05-616bb7948a84">Meetings at Roundtables or other activities if needed</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_governance_2" obligation="normative">
+<title>Governance</title>
+<ul id="_3fcf4930-f9ad-6be4-208e-b51be41fcb8d"><li><p id="_fb2e72f4-d776-87f3-54f4-dec1d93ea7fd">Chair chosen by Steering Committee members</p>
+</li>
+<li><p id="_30fd7be3-2a1d-eadf-d1cc-b8e4e37ad45c">Chair participates in Board of Directors meetings</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_activities" obligation="normative">
+<title>Activities</title>
+<ul id="_3f37de1c-8084-d528-48c3-ec7c748a7023"><li><p id="_2715caf2-7d5a-8e81-e778-b949174619b8">Overall technical direction</p>
+</li>
+<li><p id="_92fc1edc-1e08-33e9-de21-fbc3dc586a1e">Management of Technical Committees via TC CHAIRS committee</p>
+</li>
+<li><p id="_80639c29-1793-bfb7-b123-f8c50c02826c">Consortium program elements</p>
+</li>
+<li><p id="_834d7529-d016-55bc-2630-4d44907e8d58">Advice to the Board of Directors</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_why_get_involved_in_calconnect" obligation="normative">
+<title>Why Get Involved in CalConnect</title>
+<ul id="_e2d5757e-dfc8-1f93-7f5f-3e1f3bdb23bf"><li><p id="_e8d64df4-0aec-f79e-a241-08da39141888">Help shape the evolution of calendaring and scheduling specifications, standards and products</p>
+</li>
+<li><p id="_3ae2b291-f314-7bd4-9438-06c5e8cf96b0">Develop real-world use cases and requirements</p>
+</li>
+<li><p id="_a4393b28-fe46-5b60-4d11-e087ea9d9995">Make sure needs are considered</p>
+</li>
+<li><p id="_d5d4f8af-54aa-57ae-4436-5506df459023">Work directly with developers/major customers</p>
+</li>
+<li><p id="_d06963fb-ff73-ca18-bab1-0cb6d79838ce">Help drive the calendaring community towards interoperability</p>
+</li>
+<li><p id="_74aff021-8cbb-059e-a5cb-d8c460ae98cf">Member may have as many representatives as desired in Consortium Activities</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_membership_3" obligation="normative">
+<title>Membership</title>
+<clause id="_eligibility" obligation="normative">
+<title>Eligibility</title>
+<p id="_36c12bfb-377b-dbc8-057a-7035b10a9307">Any company, institution or individual who:</p>
+
+<ul id="_1eda2499-6e9e-ebe5-edaa-f91697e0467d"><li><p id="_b42b27de-3064-4da1-694c-d22f5d5b7209">supports the goals of the Consortium</p>
+</li>
+<li><p id="_9a2e209d-1564-8e54-6e2c-8570bf08a278">agrees to abide by its rules</p>
+</li>
+<li><p id="_36344386-20d9-2b51-6291-ea03a7e34828">submits the proper membership application</p>
+</li>
+<li><p id="_8c72282c-281d-829c-fd40-b2c0a24f7049">pays the appropriate membership fee</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_fees" obligation="normative">
+<title>Fees</title>
+<ul id="_e219813f-8636-dcd2-62ad-de4e65f36858"><li><p id="_87df29f7-c02a-3b21-5c56-b58786f28c0f">Published on the Consortium web site</p>
+</li>
+<li><p id="_9ce56c97-bd71-1114-3348-ef43e4f72964">Based on membership category</p>
+</li>
+<li><p id="_f6e79901-e10a-5f54-c3c9-131da97594ce">Due annually upon anniversary of joining the Consortium</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_categories" obligation="normative">
+<title>Categories</title>
+<ul id="_e1a096a1-61ff-64f6-a58b-3131b870c033"><li><p id="_6011bd1e-2b58-50fb-0230-0fa167a7d0e0">Commercial Vendor</p>
+<ul id="_5abf4657-edae-8353-47e6-1e559863f8b7"><li><p id="_db957a22-f1f5-5f6e-b172-bd78af384a92">&gt;$100 million annual revenue</p>
+</li>
+<li><p id="_742841b1-f145-9c46-bc08-d654f7408976">$10-100 million annual revenue</p>
+</li>
+<li><p id="_0fe24c88-a8c6-73f6-f25f-98782dde2878">&gt;$10 million annual revenue</p>
+</li>
+</ul>
+</li>
+<li><p id="_21ce6ddb-f209-8df1-cf6b-2750e6155143">Customer Organizations/Companies</p>
+</li>
+<li><p id="_dcdaa8d4-a025-2f09-9a42-99351a372fba">Non-Profit Organizations</p>
+</li>
+<li><p id="_b2626fd8-09a3-ed73-e0e0-1133593f360c">Open Source Organizations</p>
+</li>
+<li><p id="_664a647d-b313-dba0-5c0e-56062ce2455a">Academic Institutions</p>
+</li>
+<li><p id="_d8480368-15ef-990a-ff30-5fa0cce8da1e">Standards Setting Organizations</p>
+</li>
+<li><p id="_fe190a49-f54d-0958-9ccc-c3d8794e4cd7">Individuals</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_organizational_structure" obligation="normative">
+<title>Organizational Structure</title>
+<figure id="_a5125d09-b5de-ad13-b60b-37160662b067">
+<name>Organizational structure</name>
+<image src="data:image/png;base64,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" mimetype="image/png" id="_68b20df4-9b48-bea2-e0a9-06e7f7477b24" height="auto" width="auto"/></figure>
+</clause>
+
+<clause id="_events" obligation="normative">
+<title>Events</title>
+<ol id="_c0902132-114c-9fe3-f97f-8f0afd2f3d6d" type="arabic"><li><p id="_906070dc-f2a7-bcde-2d6a-c79863f292a7">Interops (Interoperability Testing)</p>
+<ul id="_f501eb61-bfdd-45e5-dbb4-7e8a44616dec"><li><p id="_9649bbb8-96cd-c130-d2b6-c4ed739aef6c">Open to members and non-members</p>
+</li>
+<li><p id="_252cfeb8-c79d-ed87-6500-1e2b98e27c84">Two day event usually co-located with Roundtable</p>
+</li>
+<li><p id="_f9c32c06-00f5-e6c9-f58e-51476b773874">Results published to relevant standards development organizations</p>
+</li>
+<li><p id="_24b5ac4e-f347-a964-cb18-f777fe82797e">Public reports are “sanitized”</p>
+</li>
+</ul>
+</li>
+<li><p id="_723046a6-c531-82a2-8fe5-7751c033357f">Roundtables</p>
+<ul id="_880de61e-6f6c-fc31-451d-6c0ac2f3662c"><li><p id="_a02a2c0a-d9a3-5009-7f0d-f785989e4c3e">“All hands” plenary meeting of membership</p>
+</li>
+<li><p id="_c9378446-7e18-82f9-3e45-bcb87ee0c786">Three per year, midway between IETF meetings</p>
+</li>
+<li><p id="_5657edb3-1d07-1cc9-cc1b-cf8896ecb959">Held in conjunction with Interops</p>
+</li>
+<li><p id="_d47bc71b-6f77-320c-ab70-ddde28f78e27">Technical committee working meetings</p>
+</li>
+<li><p id="_ff6bdf82-4566-dcfc-e32e-6166be2c9b2c">Steering Committee meeting</p>
+</li>
+<li><p id="_7e3701ec-b6f2-ed2d-0c18-3c8048e89a1a">Review and status of technical committees</p>
+</li>
+</ul>
+</li>
+<li><p id="_2aece3a5-9016-6352-f7f3-0b1087872f77">Workshops</p>
+<ul id="_8ab559eb-ab47-c618-4e4b-f361877726c8"><li><p id="_8233084d-b44d-ee08-30ae-a4e607271923">Open or invitational depending on goal &amp; topic</p>
+</li>
+<li><p id="_7366313c-0931-d75d-b44b-74618f5ff807">May involve non-Consortium members and liaisons</p>
+</li>
+<li><p id="_aa0c2111-a37f-685b-bf80-553c9e334695">Co-hosted with Roundtable or independent event</p>
+</li>
+</ul>
+</li>
+<li><p id="_bd2699e5-4243-84fd-c5a4-2207440f332c">Calendaring &amp; Scheduling Public Conference</p>
+<ul id="_5ce74d3d-d31c-4cfa-3949-15b94ac3d3c5"><li><p id="_135a9030-97be-8b0b-8c6f-cd0fa79638fe"><strong>Under evaluation</strong></p>
+</li>
+<li><p id="_5fc087ce-5bbc-6fa6-ed67-939ad699e4a0">Would offer technology and product overviews, tutorials and classes, demonstrations and vendor offerings</p>
+</li>
+</ul>
+</li>
+</ol>
+</clause>
+
+<clause id="_current_technical_committees" obligation="normative">
+<title>Current Technical Committees</title>
+<clause id="_caldav" obligation="normative">
+<title>CALDAV</title>
+<p id="_3916c499-e294-5692-8aaf-d5ffe81ac5a0">Define problems CalConnect wishes to solve with extensions to WebDAV; assist IETF with development of CalDAV Specification</p>
+</clause>
+
+<clause id="_eventpub" obligation="normative">
+<title>EVENTPUB</title>
+<p id="_edc38eec-c8f2-f325-aad4-fb54fbdb00cb">Define event publishing  establish differences from regular calendaring and scheduling</p>
+</clause>
+
+<clause id="_freebusy" obligation="normative">
+<title>FREEBUSY</title>
+<p id="_0a8ba63c-774c-18d4-af6f-3b5a4ea65fa2">Develop and conduct Federated Free/Busy Challenge Response; review Free/Busy related proposals</p>
+</clause>
+
+<clause id="_ioptest" obligation="normative">
+<title>IOPTEST</title>
+<p id="_b1a7db42-9c6a-b9f1-e443-28004cf12de8">Support interoperability testing for all technical committees, develop test suites  reference implementation, publish Interop results</p>
+</clause>
+
+<clause id="_mobile" obligation="normative">
+<title>MOBILE</title>
+<p id="_77808d88-3c12-f570-b38c-dcbd5f74514e">Define issues for mobile support of standards-based Calendaring and recommend extensions to standards for mobile support</p>
+</clause>
+
+<clause id="_realtime" obligation="normative">
+<title>REALTIME</title>
+<p id="_14a55a68-9ae6-cdba-96bc-37908541d6b6">Clarify issues involved with realtime server-to-server calendaring and scheduling issues  provide recommendations</p>
+</clause>
+
+<clause id="_timezone" obligation="normative">
+<title>TIMEZONE</title>
+<p id="_a0c62b9f-1e5f-4398-beaa-91e53f9d6c94">Develop proposals for a formal, authoritative Timezone Registry and a Timezone Service Protocol</p>
+</clause>
+
+<clause id="_usecase" obligation="normative">
+<title>USECASE</title>
+<p id="_07977c89-e30b-b402-13e7-6fcbc85a1ace">Develop sets of real world use cases that can be used to validate identified functionality  testing scenarios for existing  future C implementations</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_the_current_state_of_calendaring_standards" obligation="normative">
+<title>The Current State of Calendaring Standards</title>
+<clause id="_calendaring_standards_today" obligation="normative">
+<title>Calendaring Standards Today</title>
+<clause id="_ietf_calsch_working_group" obligation="normative">
+<title><strike>IETF CALSCH Working Group</strike></title>
+<ul id="_828a350a-017e-2884-ab01-accbba4e2ab6"><li><p id="_b4bdb04b-1840-428b-7713-08003fe1ce81"><strike>Developed RFCs 2445/6/7</strike></p>
+</li>
+<li><p id="_f06dc48d-1e6f-a62c-c93f-8a20844d21dd"><strike>Shut down in 2004 at same time as CAP removed from table</strike></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_original_cap_calendar_access_protocol" obligation="normative">
+<title><strike>Original CAP (Calendar Access Protocol)</strike></title>
+<ul id="_f52fc250-6fc2-cb97-708a-81bdc65ce3f7"><li><p id="_ff852b0c-ed61-8034-b47c-6597ed9b8059"><strike>Assigned “experimental draft” status by IETF in 2004 (effectively removed from program of work in IETF)</strike></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_vcalendar" obligation="normative">
+<title><strike>vCalendar</strike></title>
+<ul id="_a1f728f4-ceaa-1965-0796-96cb1f3ebe9f"><li><p id="_504e8161-d9b4-d7ca-f24d-39b10d8dac39"><strike>Still in use especially in mobile calendaring, travel industry websites</strike></p>
+</li>
+<li><p id="_03fb2279-f73a-f61e-0514-62df0a5037fe"><strike>Not fully compatible with iCalendar (e.g. recurrence); encourage move to iCalendar</strike></p>
+</li>
+<li><p id="_d1568772-085f-90ed-dddc-0a6821cef8f3"><link target="https://www.calconnect.org/publications/iCalendarforthemobileindustryv1.0.pdf">The Benefits of iCalendar for the Mobile Industry</link></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_vcard" obligation="normative">
+<title>vCard</title>
+<ul id="_2906ee88-dac9-7840-29a4-5c65008b099a"><li><p id="_83475617-e6fe-baf7-e86b-76f185830f3d">Not precisely “calendaring” — but contacts/address book central to calendaring</p>
+</li>
+<li><p id="_d1c7445b-4c40-44de-6c1e-0e6800ecb8c2">Current version 3.0 needs work</p>
+</li>
+<li><p id="_0639b233-b06a-cec1-8ea6-38bbc4ade281">Mobile calendaring mostly obsolete vCard 2.1</p>
+</li>
+<li><p id="_dbf2ea66-4b20-d37a-ffd0-74abafc9f809"><link target="https://www.calconnect.org/vcardworkshopreport.shtml">CalConnect vCard workshop</link></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_ietf_calsify_working_group" obligation="normative">
+<title>IETF “CALSIFY” Working Group</title>
+<ul id="_6e76db0c-e245-593f-1cd4-52ab71593b34"><li><p id="_332d851b-663e-b0bc-cc22-d722af9e2f1d">Simplify (rationalize) RFCs 2445/6/7</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_rfcs_244567_icalendar_itip_imip" obligation="normative">
+<title>RFCs 2445/6/7 (iCalendar, iTIP, iMIP)</title>
+<ul id="_a62e58a3-6771-b6e0-b4c1-2f24a7b36851"><li><p id="_20c6bace-bf2a-e9b3-931c-b7648faf92d0">Target of initial CalConnect work products</p>
+</li>
+<li><p id="_4e0a6acc-d239-265e-fae0-3f5e8d4c06f5">All have revised drafts underway</p>
+</li>
+<li><p id="_e9d0e03e-6030-2846-a7f9-2e29ea0ec807">Expect publication of revised RFCs in 2008</p>
+</li>
+<li><p id="_38ab14a9-bd22-0d13-f465-307b68227e57">Still require interoperability demonstration to progress to Draft Standards (i.e. CalConnect)</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_caldav_2" obligation="normative">
+<title>CalDAV</title>
+<ul id="_0f4526b1-79b3-91db-02a8-006af253c9f5"><li><p id="_e11d8b4d-db41-bc9a-87c5-d63e2634660b">“Calendaring Extensions to WebDAV” published as Proposed Standard, RFC 4791</p>
+</li>
+<li><p id="_bbf51e8b-e3da-fd43-2812-475fa3dae205">“Scheduling Extensions to CalDAV” is under review for submission</p>
+</li>
+<li><p id="_caccf6fc-8ff8-d6ed-490e-13b5ffb6bd6b">Several CalDAV implementations today</p>
+<ul id="_fe1cdf8c-bf9c-bffe-6a12-926584221f30"><li><p id="_0fd7bea9-fe43-d4e9-5959-6bf23c113445">Apple iCal Server (Darwin Calendar Server)</p>
+</li>
+<li><p id="_486ccb42-f4f8-f99d-d566-affe5250e3f7">Bedework</p>
+</li>
+<li><p id="_0e681206-2ede-8ed3-3884-e9f0efc3ea00">Evolution</p>
+</li>
+<li><p id="_d518cab2-4aad-18fd-f35a-f2115ba2c8ea">Kerio Technologies (Kerio MailServer)</p>
+</li>
+<li><p id="_c615eb14-fd79-b7d8-ee39-c5929a17c6fc">Marware (Project X Client)</p>
+</li>
+<li><p id="_10fe9709-c81a-d617-6d46-a56142a791a2">Mozilla Lightning &amp; Sunbird (CalDAV client)</p>
+</li>
+<li><p id="_4391bdfc-53a0-2361-e2d0-0b6ba9fe3559">Mulberry (Client)</p>
+</li>
+<li><p id="_9c8ca630-5494-9725-6e74-f301c025398c">Oracle Calendar</p>
+</li>
+<li><p id="_8b61ccbc-0786-dbe1-5a2a-4947b0e25d6b">OSAF Cosmo (Chandler Project)</p>
+</li>
+<li><p id="_288638fc-8459-8379-870c-481c00b59ab2">Etc.</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+
+<clause id="_icalendar_extensions" obligation="normative">
+<title>iCalendar Extensions</title>
+<ul id="_e18e770e-9200-3907-ed70-d924f2a3e28b"><li><p id="_733af58f-da43-abae-bce2-a61bf01fcdfe">Proposed extensions (additions) to the revised iCalendar when it is complete</p>
+</li>
+<li><p id="_5e62f82d-5328-821c-64cc-cb5f942e9227"><tt>VAVAILABILITY</tt></p>
+<ul id="_99fcb3ee-dfb4-15da-869f-12062e7d9fc2"><li><p id="_4570a5de-8317-b622-3053-297be6d4f009">New iCalendar component allowing publication of available and unavailable time periods associated with calendar user</p>
+</li>
+</ul>
+</li>
+<li><p id="_d3473da7-8cbe-f4fc-8491-fdb2b4941e09"><tt>VVENUE</tt></p>
+<ul id="_b3db151f-68a9-13bd-9166-6f5596744bd6"><li><p id="_9fbef6ea-e5cc-f500-2c56-b77061aeb554">New iCalendar component allowing the specification of structured location data for publishing event information</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+
+<clause id="_eventmap_protocol" obligation="normative">
+<title>EVENTMAP protocol</title>
+<ul id="_dac601fe-e756-3562-2a8c-597997ff8504"><li><p id="_fe71c3ec-e046-d564-20e2-103b0ba3d864">Identifies location on website of structured event information for use by event publication aggregators</p>
+</li>
+</ul>
+</clause>
+</clause>
+</clause>
+
+<clause id="_calconnect_activities_and_accomplishments" obligation="normative">
+<title>CalConnect Activities and Accomplishments</title>
+<clause id="_tc_caldav" obligation="normative">
+<title>TC CALDAV</title>
+<clause id="_charter" obligation="normative">
+<title>Charter</title>
+<ul id="_b7c5eaa6-70bb-cea6-782a-99e8e8affeda"><li><p id="_e77fc88d-a93a-8b88-d6cf-35b02c05f249">Begin: October 2004</p>
+</li>
+<li><p id="_66c4baf8-6d61-a034-d4f1-3ca39a9bf637">Define problems CalConnect wishes to resolve with <em>CalDAV Extensions to WebDAV</em></p>
+</li>
+<li><p id="_ff3ea3d6-712c-c93f-12c6-ab1b1a035a55">Assist IETF with CalDAV Specifications</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics" obligation="normative">
+<title>Projects, Topics</title>
+<ul id="_d4a90639-4630-05a5-b3f5-7d8bf39617f2"><li><p id="_aa92918f-5a5c-576e-5e76-4823412d3966">Act as “real world” input to CalDAV Specification authors (two of three are members of TC CALDAV)</p>
+</li>
+<li><p id="_d893d032-3978-b5c3-a1a1-3e65ff16c9dc">Develop CalDAV testing matrices for TC IOPTEST</p>
+</li>
+<li><p id="_e18f16d3-01ff-6f85-f440-304a674cffa1">Develop <tt>VAVAILABILITY</tt> with TC FREEBUSY</p>
+</li>
+<li><p id="_30a1c4af-c8f8-6add-6d73-b4d74a44925b">Develop use cases and requirements for CalDAV Scheduling</p>
+</li>
+<li><p id="_661aba6d-f5a9-a3f4-cc27-db061d639143"><strong>CalDAV scheduling extensions (discovery, auth/auth, etc.)</strong></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products" obligation="normative">
+<title>Products</title>
+<ul id="_51a4d378-8172-6619-0086-51ddc386168a"><li><p id="_e03b15d0-be0b-a6c8-118e-92429c8b97e7">CalDAV testing matrices for Interoperability testing</p>
+</li>
+<li><p id="_606793bb-5448-d324-eb8e-b3c225b4e101">CalDAV Use Cases and Requirements</p>
+</li>
+<li><p id="_6c4319d1-6420-de6b-1fdc-eb35b6f84b7e">CalDAV Scheduling Requirements</p>
+</li>
+<li><p id="_efaabb5e-cb31-0c7c-5f23-5f746b3f7bed"><strong><tt>VAVAILABILITY</tt> extension to iCalendar</strong></p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_tc_eventpub" obligation="normative">
+<title>TC EVENTPUB</title>
+<clause id="_charter_2" obligation="normative">
+<title>Charter</title>
+<ul id="_3ce8517d-8e74-5588-c2bd-9ad758b9159b"><li><p id="_ab624a7e-1ff4-c238-cadd-e6c75f02c7b2">Begin: March 2005</p>
+</li>
+<li><p id="_aed53788-1b8e-6418-87e9-8f3620975431">Define Event Publication and distinguish from regular calendaring</p>
+</li>
+<li><p id="_e38d1876-b426-7293-634d-860fdafcbaac">Determine requirements for event publication not met by existing specifications and propose remedies</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_2" obligation="normative">
+<title>Projects, Topics</title>
+<ul id="_680c8501-2fdd-52dd-e19c-aecd7e2bdcc3"><li><p id="_f6829fe0-6974-8465-ef02-70c2c0aaef66">Review of possible extensions to iCalendar to support event publication and venue information</p>
+</li>
+<li><p id="_3fa820bd-32dc-fb42-c0f9-06e297f6321a"><strong>Develop mechanism for event “crawlers” to find and consume event information on websites, analogous to “sitemap”</strong></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_2" obligation="normative">
+<title>Products</title>
+<ul id="_7f5418d8-7c5c-4dd9-6e8e-33b772b93f04"><li><p id="_ed666862-7158-bced-193a-35fa9369a36b"><tt>VVENUE</tt> extension to iCalendar</p>
+</li>
+<li><p id="_88839ab3-a256-b840-177d-ab8907a3dfff"><strong><tt>EVENTMAP</tt> proposal under development</strong></p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_tc_freebusy" obligation="normative">
+<title>TC FREEBUSY</title>
+<clause id="_charter_3" obligation="normative">
+<title>Charter</title>
+<ul id="_b23cbbd2-e154-10e7-d4d8-6082a045f148"><li><p id="_2d2957af-31f6-dd70-d0c6-999bd7f90ba1">Begin: May 2006</p>
+</li>
+<li><p id="_6233fa04-5139-a4dd-1830-484975352b9d">Act as CalConnect Liaison with The Open Group for the Federated Freebusy Challenge in 2006</p>
+</li>
+<li><p id="_02f2e297-afa8-9e96-8576-d9371a4cee36">Inform the work of CALDAV, REALTIME, and other TCs</p>
+</li>
+<li><p id="_846663b9-f37f-2c0d-d6e6-7cef93e5cd2a">Participate in drafting the final report for The Open Group</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_3" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_303d5c0b-7700-2dd2-0b1b-122f01f4c0a1"><li><p id="_04fa897d-f53e-835b-e775-8b43b6fca175">Demo-ed a Federated Freebusy Aggregator at The Open Group meeting in July 2006</p>
+</li>
+<li><p id="_d5306cf9-e7e9-0ad9-ce45-f8e0b9b0a1a1">Assist Boeing to “productize” components used in the demo as well as those being further developed by Boeing</p>
+</li>
+<li><p id="_611c8c71-f41c-23f7-6c36-af4c25d59227"><strong>Addressing “office hours”/“availability” — joint <tt>VAVAILABILITY</tt> project with TC CALDAV</strong></p>
+</li>
+<li><p id="_b79f83d1-2299-30dc-0d53-4f72a08073f5"><strong>Standardize and simplify FREEBUSY URL</strong></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_references" obligation="normative">
+<title>References</title>
+<ul id="_8d05129e-1dba-cd29-3e05-98298c3ce028"><li><p id="_bcf09775-8526-deed-ad0b-447424a7b137"><link target="http://tools.ietf.org/html/draft-daboo-calendar-availability-00"/></p>
+</li>
+<li><p id="_9d890025-dbdf-024b-1182-cec30f434500"><link target="http://calconnect.org/publicity/060724freebusydemorelease.pdf"/></p>
+</li>
+<li><p id="_c716af49-9922-dfa2-e0fb-623694f36b38"><link target="http://calconnect.org/presentations/freebusydemo.pdf"/></p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_tc_ioptest" obligation="normative">
+<title>TC IOPTEST</title>
+<clause id="_charter_4" obligation="normative">
+<title>Charter</title>
+<ul id="_5b90d4e4-de32-f817-5ad9-bb463e67104d"><li><p id="_170f0b1e-4a2e-5258-7473-43d330cf6e68">Begin: October 2004</p>
+</li>
+<li><p id="_e45038cc-32fc-46c1-74ee-8d3c6d48b128">Conduct CalConnect Interoperability Test Events and publish results</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_4" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_22ecc4c5-a1bd-06ff-7b50-21319304faf3"><li><p id="_2c56cf85-c216-4611-21fd-be4da54ff13d">CalConnect Interoperability Test Events scheduled with each Consortium event week (i.e. together with Roundtables)</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_3" obligation="normative">
+<title>Products</title>
+<ul id="_3d0c7eb4-e721-3c19-f50b-a13c020b301e"><li><p id="_d805d247-9c5e-1cde-74d0-4458d23aa346">Public and CalConnect-internal IOP test event reports</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_tc_mobile" obligation="normative">
+<title>TC MOBILE</title>
+<clause id="_charter_5" obligation="normative">
+<title>Charter</title>
+<ul id="_df8aae10-a2be-54ba-0fd6-00a40c33e522"><li><p id="_8b36913c-e5ae-0669-ae57-de81d7056584">Begin: September 2005</p>
+</li>
+<li><p id="_325cf5c3-95c9-4e6c-e2b9-14e8f1907a07">Identify issues related to mobile calendaring and scheduling and develop recommendations to address</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_5" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_ca63b9a7-fc6e-bbb1-5519-ff53a47c1d48"><li><p id="_44372d55-2b1c-1204-eadb-189ba1d07981">Determine mobile calendaring issues and problems</p>
+</li>
+<li><p id="_0d8937df-df6c-b9d4-36a2-2cc1aadd0881">Survey mobile users about calendaring</p>
+</li>
+<li><p id="_b46788d4-87a8-a63d-8af6-84df2ff9bfb4">Evaluate continued reliance on vCalendar and develop ways to move vendors forward</p>
+</li>
+<li><p id="_749a12f4-80f5-0d2a-d275-11e41e65f424">Develop Mobile Calendaring Interoperability Test Suite</p>
+</li>
+<li><p id="_d335dba6-37f1-2fcc-d457-6ff1f406927f"><strong>Implement Mobile IOP Test Events (with TC IOPTEST)</strong></p>
+</li>
+<li><p id="_025ce1b9-e235-4537-1026-c13693fd78e3"><strong>Define Mobile Calendaring issues for CalDAV</strong></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_4" obligation="normative">
+<title>Products</title>
+<ul id="_591f882a-1fde-21b8-c253-4b7dba011916"><li><p id="_fc62d14d-c970-19e3-615f-ea9e8e88aa1b">Report on Mobile Calendaring Questionnaires</p>
+</li>
+<li><p id="_2593a3c2-9ac0-9d76-eb41-9c028ee9645d">Mobile Calendaring Interoperability Test Suite</p>
+</li>
+<li><p id="_c9ef75b8-eee4-205e-2d1b-c9bc2985f70d">Benefits of iCalendar for the Mobile Industry</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_tc_realtime" obligation="normative">
+<title>TC REALTIME</title>
+<clause id="_charter_6" obligation="normative">
+<title>Charter</title>
+<ul id="_0d9edd0d-ca7c-52b7-aa32-50ff4441d25f"><li><p id="_355b6837-d8ec-267f-af55-402bcb7ca8e0">Begin: June 2007</p>
+</li>
+<li><p id="_ef9bca47-b94b-c5ab-18f4-c5651cceac78">Identify issues related realtime server-server scheduling and make recommendations to address</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_6" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_5b613a1e-8899-01ef-582a-26adbe8ebdac"><li><p id="_a3908b86-806f-2cca-816f-2d24c64d2c4a">Discovery, Authentication and Authorization</p>
+</li>
+<li><p id="_ed17ea19-1a58-afae-d04a-f9200adcf2e9">iTIP evaluation and extensions</p>
+</li>
+<li><p id="_2dec7fcc-8072-0075-5630-956f488ae873">Work with TC CALDAV, TC FREEBUSY</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_5" obligation="normative">
+<title>Products</title>
+</clause>
+</clause>
+
+<clause id="_tc_recurr" obligation="normative">
+<title>TC RECURR</title>
+<clause id="_charter_7" obligation="normative">
+<title>Charter</title>
+<ul id="_ca42d230-64e8-b7cd-c10d-0d5956ff1762"><li><p id="_cabd151a-ef54-e6bf-957e-b2ede60e095c">Begin: October 2004 (completed February 2006)</p>
+</li>
+<li><p id="_e2a7a0d5-6d0f-24f6-7c25-81458b6f1662">Identify problems with Recurrences in iCalendar</p>
+</li>
+<li><p id="_3f913238-5dbd-0b83-0a74-82a4ccca0680">Make recommendations to IETF CALSIFY effort (revision of RFC 2445 iCalendar)</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_7" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_ea94c7dc-1887-7945-941a-aaf5310fa45d"><li><p id="_d530e1d3-6d89-daf5-d6a4-d86405a2b7cc">Questionnaires to determine problems with recurrence in implementations of iCalendar</p>
+</li>
+<li><p id="_3a51cc41-e758-9d59-9baa-40dbc9d43834">Develop problem statement and recommendations</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_6" obligation="normative">
+<title>Products</title>
+<ul id="_c14213e9-87b7-cd1f-43bf-02c95a80dce2"><li><p id="_a20ba320-8355-93cd-7044-86fdd074908e">Results from Recurrence Questionnaire</p>
+</li>
+<li><p id="_82684beb-c9d4-3982-2b93-37d0886c4d86">iCalendar Recurrence Problems and Recommendations</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_tc_timezone_phase_1" obligation="normative">
+<title>TC TIMEZONE (Phase 1)</title>
+<clause id="_charter_8" obligation="normative">
+<title>Charter</title>
+<ul id="_7ffec145-3fc9-d734-9bd4-e9bc7a78d006"><li><p id="_5c9525d6-bdd8-0287-6959-e448815c8231">Begin: October 2004 (completed February 2006)</p>
+</li>
+<li><p id="_56d2c1c9-4fe7-11e6-a081-01b9a1883e35">Identify problems with timezone usage in iCalendar and timezone support in genera</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_8" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_4567bd7a-455e-273d-9251-3c3b8e6cd163"><li><p id="_8c94ee2d-8ff4-dba0-eb57-e925b0d9837b">Conduct survey on problems with timezone management</p>
+</li>
+<li><p id="_a46dd7c0-55c8-cf65-20f7-55dc348790ea">Develop problem statements and recommendations for IETF CALSIFY effort for iCalendar</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_7" obligation="normative">
+<title>Products</title>
+<ul id="_5114c971-2b75-e364-8766-4dccba46526b"><li><p id="_ba9e8621-deaf-cb27-613d-edda05ad93e8">Timezone Questionnaire</p>
+</li>
+<li><p id="_b3d60ba1-7065-0599-d485-14668d641b12">Report on Timezone Questionnaire</p>
+</li>
+<li><p id="_9b551ba7-92cb-27e9-2063-2266c7a939a5">Timezone Problems and Recommendations</p>
+</li>
+<li><p id="_44cc4337-f19f-6c8c-b3ef-144bcf87ad4a">Timezone Registry and Service Recommendations</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_tc_timezone_phase_2" obligation="normative">
+<title>TC TIMEZONE (Phase 2)</title>
+<clause id="_charter_9" obligation="normative">
+<title>Charter</title>
+<ul id="_a882335c-27a3-9d16-ddbb-79a865455fbf"><li><p id="_1980b340-2adf-96c0-ec57-e6b5be006e56">Begin: May 2007</p>
+</li>
+<li><p id="_5146190d-8ec9-22b8-79bd-8aecf15b8dd4">Continue work of TC TIMEZONE by developing formal proposals based on Timezone Registry and Service Recommendations</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_9" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_d6f32c1b-581b-3b93-ccf1-5d822560c03e"><li><p id="_7d567566-0fb0-95db-f7a7-d3a81b222e04"><strong>Develop proposal for formal, authoritative Timezone Registry for submission to IETF to be published as an RFC</strong></p>
+</li>
+<li><p id="_ba5774a6-0851-d19a-9753-ee4d7899fe6a"><strong>Develop requirements for Timezone Registry Service</strong></p>
+</li>
+<li><p id="_f5ff93c7-2df3-251a-fd12-70779c3f2171"><strong>Develop proposals for Timezone Registry Service implementations using current protocols</strong></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_8" obligation="normative">
+<title>Products</title>
+</clause>
+</clause>
+
+<clause id="_tc_usecase" obligation="normative">
+<title>TC USECASE</title>
+<clause id="_charter_10" obligation="normative">
+<title>Charter</title>
+<ul id="_35611780-8f2d-f645-b328-9dd9830a7fc9"><li><p id="_f508fca0-ce88-8df8-1cbd-b056c62c2b98">Begin: October 2004</p>
+</li>
+<li><p id="_306538fa-e985-f04d-fa3b-651f99e73275">Develop use cases for calendaring and scheduling and their contextual environments</p>
+</li>
+<li><p id="_f4e47f4d-0ae3-eafe-1c5e-f8011e407643">Establish the ways that users actually want to use calendaring environments</p>
+</li>
+<li><p id="_1c7384ce-7e64-b80e-7e66-7f1456781333">Establish “Minimum Interoperable Subsets” (the minimum set of functions which must be interoperable to make an implementation useful to a customer)</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_10" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_95ba5037-6756-2433-b953-6cda8b43fb21"><li><p id="_6b95a60b-4150-4fff-270e-77d2af4632c1"><strong>Assessment of access control in existing calendaring implementations for TC CALDAV</strong></p>
+</li>
+<li><p id="_d5bd0137-bca5-6943-18cd-f8f4aa8e94b1"><strong>Develop Min-IOP use cases for Resources</strong></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_9" obligation="normative">
+<title>Products</title>
+<ul id="_98bfafc5-5ba0-42bb-f1cc-f4bc17edc495"><li><p id="_fab96398-74a0-03d5-b2a0-a3b4df7f3b0b">Min-IOP Use Cases for iCalendar</p>
+</li>
+<li><p id="_7e4fc495-c29e-26bb-7eca-25eb3b590712">CalDAV Use Cases (with TC CALDAV)</p>
+</li>
+<li><p id="_681b9ab3-814e-c26e-23d4-29e435a4d62c">Min-IOP Use Cases for Tasks</p>
+</li>
+<li><p id="_975762c7-e08f-0110-3ff4-96cfa7b47c99">Calendaring and Scheduling Glossary of Terms</p>
+</li>
+<li><p id="_df3ff20a-f14e-aae1-ebaf-ed6a90547baa"><strong>Min-IOP Use Cases for Resources</strong></p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_dst_ad_hoc" obligation="normative">
+<title>DST AD HOC</title>
+<clause id="_charter_11" obligation="normative">
+<title>Charter</title>
+<ul id="_e8ec7a12-6f9b-7e2c-77c6-3f68abe5273c"><li><p id="_a09fdbec-ca4d-c3c4-0940-90b755dcf251">Begin: June 2005</p>
+</li>
+<li><p id="_69648642-ae24-a3e1-e489-119a5d379475">Establish CalConnect position on Extended Daylight Savings Time Proposal by U.S. Congress</p>
+</li>
+<li><p id="_2f24958d-1a3f-2b63-2122-b7d8c0f4d7d1">Continue DST Advisory Work</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_11" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_0476f4c2-1dee-8ef8-725d-984af44ab016"><li><p id="_bc27147d-b0f4-22f1-9290-6dc4ef41925a">Develop CalConnect position on EDST and communicate to U.S. Congress prior to enactment of law</p>
+</li>
+<li><p id="_d7458229-575e-ac48-3b47-35523e883596">Develop guidance for industry on planning for and implementing EDST Changes in March and October</p>
+</li>
+<li><p id="_c726bc7e-92de-3739-3330-4435853d939d">Work with TC TIMEZONE on recommendations on future of timezone and DST support</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_10" obligation="normative">
+<title>Products</title>
+<ul id="_9a6a113c-e2c7-0ed1-9160-2400a6517f75"><li><p id="_90134d2c-7d61-1f6f-72eb-8b7b6964a0f4">Extended Daylight Savings Time Advisory</p>
+</li>
+<li><p id="_bfb760c8-da61-497e-4453-b918dee38823">Extended Daylight Savings Time Review and Considerations</p>
+</li>
+<li><p id="_48cb17e5-011d-c23c-98d5-9c869e6b808b">EDST Links, Advisories and Changes</p>
+</li>
+<li><p id="_d66f9ffa-a6ee-6d5c-6d21-6ceff59c1842">CalConnect Reflections and Recommendations</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_vcard_ad_hoc" obligation="normative">
+<title>vCard Ad Hoc</title>
+<clause id="_charter_12" obligation="normative">
+<title>Charter</title>
+<ul id="_7331ae78-19d6-6c3f-1426-7d87c88621df"><li><p id="_e1a2f4ed-0b66-50b6-dd27-38d1f45cf97f">Begin: January 2007</p>
+</li>
+<li><p id="_b6d4dae4-97d0-2d95-c966-4b0c8e6741f6">Determine interest in and support for revision of vCard standard</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_12" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_c2146435-d5cf-a441-549d-7f81bf248d57"><li><p id="_91fcbd35-243c-2830-5425-02b5119f6abc">vCard Workshop planning and implementation</p>
+</li>
+<li><p id="_1d47b31f-4557-7262-fa6b-e2a69d70827e">Liaisons with OMA/DS on interest in vCard Revision</p>
+</li>
+<li><p id="_c1396268-238c-355f-ca0b-a7f0d6538582"><strong>Identify products of vCard Technical Committee</strong></p>
+</li>
+<li><p id="_de5d62cd-1f18-0bde-6947-77fb2fe27526"><strong>Develop charter for vCard Technical Committee in support of IETF working group on vCard revision</strong></p>
+</li>
+<li><p id="_356c2859-d87c-e5ab-26cd-76bfc117c2e6"><strong>Recommendation on establishment of vCard TC</strong></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_11" obligation="normative">
+<title>Products</title>
+<ul id="_a8e821bd-1294-3275-d7b3-1412a921db6a"><li><p id="_8f035071-40da-15e5-e6eb-5fa3011ed387">vCard Workshop (September 2007)</p>
+</li>
+<li><p id="_1762445b-9384-9615-17b4-7ed2c7d77385">Draft Charter for vCard Technical Committee</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_xml_ad_hoc" obligation="normative">
+<title>XML Ad Hoc</title>
+<clause id="_charter_13" obligation="normative">
+<title>Charter</title>
+<ul id="_2cfd7f3f-606b-3f11-35ac-affc58cad3b3"><li><p id="_9c78598a-6cfd-fd29-d968-6aa6c7618b6b">Begin: May 2007</p>
+</li>
+<li><p id="_942501cc-94eb-699a-0a3a-56af6d4a397c">Plan for and explore XML representations of iCalendar</p>
+</li>
+<li><p id="_9bac3726-bb30-b78e-3eae-093718f0a019">Determine need for XML Technical Committee</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_projects_topics_13" obligation="normative">
+<title>Projects, topics</title>
+<ul id="_1439f13f-8b6c-4fc0-f4b2-c83388d62617"><li><p id="_1f4f02b7-5c0a-fa23-1ef5-6fd5b63d12c6">Conduct BOFs to determine level of support for roundtrip iCalendar/XML</p>
+</li>
+<li><p id="_afc76a46-980d-a0ea-8029-a1bb38e7f8c3">Review prior art in this are</p>
+</li>
+<li><p id="_75a5a024-859f-3410-ebcb-4d834a8b5f59"><strong>Develop charter for XML Technical Committee</strong></p>
+</li>
+<li><p id="_9800897f-ee09-c3f7-52f8-9bd777959fb0"><strong>Identify potential products of XML TC</strong></p>
+</li>
+<li><p id="_f66e35f4-42f8-a0d9-9929-665c84d55347"><strong>Recommendation for establishment of XML TC</strong></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_12" obligation="normative">
+<title>Products</title>
+<ul id="_e69fd183-9195-26af-8b03-0a31cbac35bc"><li><p id="_82b5d889-22a1-362d-968d-c1afb0edb1fa"><strong>Draft charter for XML Technical Committee</strong></p>
+</li>
+</ul>
+</clause>
+</clause>
+</clause>
+
+<clause id="_summary_new_and_proposed_work" obligation="normative">
+<title>Summary: New and Proposed Work</title>
+<clause id="_new_activities" obligation="normative">
+<title>New Activities</title>
+<ul id="_9e502a7c-044a-2abc-d460-3fe7cc92261c"><li><p id="_d3a8ed80-1491-b707-1291-a02f46174cab">Mobile Calendaring Interoperability Test Suite</p>
+</li>
+<li><p id="_85ae9965-cf1c-e6b9-99ff-1717d2eeb11b">Planning for Mobile Calendaring Interoperability Test Events</p>
+</li>
+<li><p id="_6a5b217e-d5a0-bbc1-a763-6ac870860a7e">Min-IOP Use Cases for Resources</p>
+</li>
+<li><p id="_9fede73a-172a-18bd-c4e4-e7b9cda7da7a">Expansion of IOP Testing areas</p>
+<ul id="_9be82f8f-3d0b-ec2e-8b44-223de2189992"><li><p id="_1d337fb6-ebf4-33c9-41ae-a82c8dc51805">EDST</p>
+</li>
+<li><p id="_2b2e50fe-b08a-8ae4-7ea4-01aa01465075">iTIP</p>
+</li>
+<li><p id="_ca5201f6-4b9f-ff66-4546-f8f7450e91ad">CalDAV Scheduling</p>
+</li>
+</ul>
+</li>
+<li><p id="_6f0441bd-c719-db0b-c11d-773ab46e8c01">Formal Timezone Registry and Timezone Registry Service proposals</p>
+</li>
+<li><p id="_f88c4a31-ece1-ddaf-8701-c39a7ef1bc76">FREE/BUSY URL</p>
+</li>
+<li><p id="_0ca718e9-83cd-cf9f-7188-140e0649d183"><tt>VAVAILABILITY</tt> (“Office Hours”)</p>
+</li>
+<li><p id="_fbb3fc69-fa93-70c9-3631-1ded9e02df85"><tt>EVENTMAP</tt> protocol</p>
+</li>
+<li><p id="_81884e04-1b06-41d2-ad16-56c9889cd5b6">Event Sharing between servers</p>
+</li>
+<li><p id="_e00afbab-e560-52ef-e9fa-485584b0623a">Automated Scheduling Updates (CalDAV)</p>
+</li>
+<li><p id="_30bc4ad7-c0d4-a2db-52a8-57a6c379d73f">External Attachments (CalDAV)</p>
+</li>
+<li><p id="_72ef5f52-557a-45b0-d9f4-9314c10d2401">vCard Revision</p>
+</li>
+<li><p id="_a1003586-4660-c0b0-279e-6e7c9567de90">XML iCalendar Representations</p>
+</li>
+<li><p id="_da03c92c-b9ef-2737-c062-fb3351c82fa2"><tt>REALTIME</tt> issues for iTIP and scheduling</p>
+<ul id="_cbee334c-9798-c707-f2a9-71e641541966"><li><p id="_1a857c9a-ac41-56c2-fc2e-9314fbe6000a">Addressability</p>
+</li>
+<li><p id="_3d587035-d275-3691-d189-8dceceb0b076">Discovery</p>
+</li>
+<li><p id="_2caea5cd-1ffb-c16a-14fe-c037c18c2b39">Authentication/Authorization/Access Control</p>
+</li>
+</ul>
+</li>
+<li><p id="_14bfb370-bc28-b895-7a41-47a410529918">Diverse calendaring specifications  tools (CalATOM, RSS/SSE, microformats, CalDAV, proprietary calendaring systems)</p>
+<ul id="_0319131e-8893-5141-ff55-8550b03f8442"><li><p id="_268ce4b1-1b25-8e7b-d30e-960e2298ef9d">Develop and publish guide and comparison</p>
+</li>
+<li><p id="_f957d1b2-8030-778c-26d7-74d19c9f49a5">Work towards ensuring interoperability and synergy between various tools and specs</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_more_info" obligation="normative">
+<title>More Info</title>
+<ol id="_151a472a-46ae-9a85-ecc9-7ea6b2494ddf" type="arabic"><li><p id="_1181da70-8d1c-6709-6124-b285dc20d383">Website: <link target="http://www.calconnect.org"/></p>
+</li>
+<li><p id="_d18ae39c-4c86-f57f-1ecd-4440adffb57d">Contact us: <link target="mailto:info@calconnect.org"/></p>
+</li>
+<li><p id="_0da26eb8-de58-e869-4232-cb5974de1223">For more information:</p>
+<p id="_00f5d176-adf9-2981-f0d0-cb4a0fa869e0">Dave Thewlis, Executive Director<br/> The Calendaring and Scheduling Consortium <br/> 4390 Chaffin Lane <br/> McKinleyville, CA 95519-8028 <br/> Voice: +1 707 840 9391 <br/> FAX: +1 415 946 3454 <br/> Mobile: +1 707 498 2238 <br/> Email: <link target="mailto:Dave.Thewlis@calconnect.org"/></p>
+</li>
+</ol>
+</clause>
+
+
+</sections><bibliography><references id="_references_2" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="ccw">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://www.calconnect.org"/>
+  </formattedref>
+  <docidentifier>CalConnect Web Site</docidentifier>
+  
+</bibitem><bibitem id="ccpd">
+  <formattedref format="application/x-isodoc+xml"><link target="http://www.calconnect.org/aboutproducts.shtml"/> (Questionnaires, Recommendations, Use Cases and Requirements, Mobile Interoperability Test Suite, Calendaring and Scheduling Glossary of Terms, Event Reports, vCard Workshop Report)</formattedref>
+  <docidentifier>CalConnect Published Documents</docidentifier>
+  
+</bibitem><bibitem id="ccs">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://www.calconnect.org/calendaringstandards.shtml"/>
+  </formattedref>
+  <docidentifier>CalConnect Calendaring Standards</docidentifier>
+  
+</bibitem><bibitem id="ccp">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://www.calconnect.org/presentations.shtml"/>
+  </formattedref>
+  <docidentifier>CalConnect Presentations</docidentifier>
+  
+</bibitem><bibitem id="ccdst">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://www.calconnect.org/dstdocs.shtml"/>
+  </formattedref>
+  <docidentifier>CalConnect DST Documents</docidentifier>
+  
+</bibitem>
+
+
+
+
+
+</references></bibliography>
+</csd-standard>

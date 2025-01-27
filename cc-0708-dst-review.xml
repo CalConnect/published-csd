@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Extended Daylight Savings Time Review and Considerations</title>
+
+<title language="main-en" format="text/plain">A Review of the Potential Impact of Daylight Saving Time Changes in 2007 -- A Reference for Users and Systems Administrators</title>
+<docidentifier primary="true" type="CalConnect">CC/R 0708:2007</docidentifier><docnumber>0708</docnumber><date type="published"><on>2007-02-15</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Joseph Jackson</completename></name>
+<affiliation><organization>
+<name>Carnegie Mellon University</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2007-02-15</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2007</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="R">report</doctype><flavor>cc</flavor><editorialgroup><committee>DST ADHOC</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7809dbe8-e645-5f85-32ad-f71bc98571d1" obligation="normative">
+<p id="_50f4b52f-8422-795d-1913-62a3d383a692">© 2007 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_c1d046bf-f338-abb3-afb7-0c92ab0fbd34">The year 2007 brings with it a change in Daylight Saving Time (DST) rules. A provision of the Energy Policy Act of 2005 changed DST to begin three weeks earlier and end one week later, effective in 2007. Starting this year, DST will begin the second week of March and end the first week in November (March 11 and November 4 in 2007). This is the first modification to the DST rules in the United States in 20 years. Other areas that follow US DST rules, including Canada and Bermuda but not Mexico, are similarly affected.</p>
+
+<p id="_8f881f86-b53e-c1a0-f4f7-f4f45b4d3f78">The time of day that we begin and end observing Daylight Saving Time has not changed; in the United States DST still begins at 2:00 am standard time in the spring, when clocks are set forward to 3:00 am, and ends at 2:00 am daylight saving time in the fall, when clocks are set back to 1:00 am.</p>
+
+<p id="_d638fba5-c97d-16f5-91a3-d76484efe376">This document outlines the impact of the DST change on computer systems and devices. The goal is to raise awareness for users and in particular system administrators so they understand the potential impact of the DST changes and can take request or take action to avoid problems related to the change. There are two major recommendations:</p>
+
+<ul id="_8710ec78-d5ad-63c3-86f7-fc13a71bbc00"><li><p id="_549a9f2e-ae35-06c2-0f7c-c25887d12ad9">Apply system patches to implement the new DST starting and ending dates</p>
+</li>
+<li><p id="_ad8cd237-a79c-93e7-82d8-4ff37193dbd5">Consider whether corrections are needed to systems that store date/time values, such as calendar software or spreadsheets</p>
+</li>
+</ul>
+
+<p id="_448eab39-4578-2fa2-5d94-57bf5f2bce35">The sections below go into more detail on each issue. A companion document contains a collection of links to vendor web pages where DST updates are discussed and patches are offered.</p>
+
+<p id="_aabf5143-12ba-08d2-179d-10101fe191d2">The change in DST rules will remind some of the Year 2000 (Y2K) problems in programs that referred to a year using two digits. The impact of the DST changes should be significantly smaller but is still a concern for those involved in preparing for the change. Many systems will be corrected simply by applying automatic updates from the system vendor in advance of the March 11th deadline. The result of having out of date rules is also smaller, with systems being off by an hour instead of a hundred years (or failing completely). On the other hand, there may be significant impact on computer support organizations, especially in cases where meetings in a calendar system need to be corrected manually.</p>
+</introduction></preface><sections>
+<clause id="_system_clock_updates" obligation="normative">
+<title>System Clock Updates</title>
+<dl id="_3eda82d0-3570-4c71-f942-6ae5fe02e5f8"><dt>Issue</dt>
+<dd><p id="_dd8a0545-9327-a523-7def-89961722faf5">Systems or devices that include a date/time clock that adjusts ahead and back automatically for Daylight Saving Time use rules to decide when to switch from Standard Time to Daylight Saving Time. These rules need to be updated, where possible.</p>
+</dd>
+<dt>Recommendation</dt>
+<dd><p id="_cf8586dc-ca7b-6fec-685c-0b1bd1c19457">If you maintain computer devices or systems with DST-aware clocks, locate and apply any updates related to the new DST rules. This applies to personal computers, servers, handheld computing devices, phones, and embedded devices such as automatic door lock systems.</p>
+</dd>
+<dt>Impact</dt>
+<dd><p id="_7b9f7039-d132-af87-2fb1-f07fa0bbd2f6">Systems that aren’t updated will have their clocks set one hour slow during the four weeks covered by the extended DST period. In addition to the clock display being wrong, it could cause confusion in cases where the time is reflected externally. Here are a few examples:</p>
+<ul id="_7a83f535-3f03-30eb-c99f-fc993768b68e"><li><p id="_176b7c3f-49d0-bd3a-d121-f92011bd2178">Outgoing mail messages will be given an incorrect time stamp and incoming messages may have their time stamps incorrectly interpreted.</p>
+</li>
+<li><p id="_47390d30-900b-45d6-faf3-f3e916ec072d">Systems using older versions of Kerberos authentication may have problems if users have manually adjusted their system clock to compensate for the incorrect DST rules. UTC time stamps are involved in the original versions of the protocol, requiring clocks to be synchronized to within a few minutes.</p>
+</li>
+<li><p id="_fb2d5cf6-b4c0-758a-358b-081fc41b63c0">Processes that run at a preset time, such as unlocking a door or sending a data file to another computer for processing, may happen an hour later than expected.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</clause>
+
+<clause id="_network_time_protocol_ntp" obligation="normative">
+<title>Network Time Protocol (NTP)</title>
+<dl id="_954c01a2-3c29-5d13-88a4-853654c94fc2"><dt>Issue</dt>
+<dd><p id="_9ac054ec-421e-f87e-713a-8fd04ab8d28b">Most recent operating systems include support for the Network Time Protocol (NTP), meaning they can synchronize the local clock to a time server over the network. For example, Apple and Microsoft both provide NTP servers on the Internet that their systems can use. Note, however, that time zone information is not updated through NTP. Time is synchronized in terms of Coordinated Universal Time (UTC) so time zones don’t factor into NTP at all.</p>
+</dd>
+<dt>Recommendation</dt>
+<dd><p id="_45102107-e358-8384-f2c7-df02e046137e">If a computer hasn’t been updated with the new DST starting and ending dates, users may be tempted to manually set the clock to compensate. This won’t be effective for very long if the computer is synchronizing its time to a time server, since the clock will soon revert back to the way it was. If the new DST rules can’t be applied by a software update, a better work-around is to change the time zone setting, not the time. Choosing the time zone to your east will normally achieve the desired result and will remain correct even if your clock is being synchronized over the network. After the extended DST weeks are over, the time zone will need to be put back to the normal setting.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_stored_datetime_values" obligation="normative">
+<title>Stored date/time values</title>
+<dl id="_e6a922be-b469-9611-bd6f-ec07a07a95c3"><dt>Issue</dt>
+<dd><p id="_c0a20df8-ad8b-340a-883a-23dc2999dc50">Many computer systems need to represent future dates and times. A calendar system where you can schedule meetings and other events is a good example. Depending on how the system stores the date/time values, there may be a need to make corrections to accommodate the new DST rules.</p>
+<p id="_d52ab47d-41e3-9454-129d-0fbef3621ca9">In particular, if the system stores the date and time as a combined value that is relative to Universal Time (UTC), then the data in the system may be off by an hour for the parts of the year that used to be in standard time but are now in daylight saving time. An example may help explain why changes are needed:</p>
+
+<example id="_6367f8d3-4bbe-6a1f-dd8e-b515867e029d"><p id="_8c679122-0a3a-8234-6564-ccf6e5be6748">Let’s say you’re in the Eastern time zone. If you entered a repeating meeting for 9:00 am every Monday, the system would store it as 14:00 UTC for weeks outside of DST and 13:00 UTC for weeks inside DST. The system takes care of the translation to UTC for you, so you might not even be aware that it’s happening. If the old rules were in effect when you entered the weekly meeting, it would use the 14:00 UTC values for late March dates. Under the 2007 DST rules, those need to be stored as 13:00 UTC in order to show up at 9:00 am Eastern. The recorded events in your system need to be adjusted back one hour.</p>
+</example>
+</dd>
+<dt>Recommendation</dt>
+<dd><p id="_cc912e59-73c4-65d4-bf07-5429107fc18b">For third-party software, contact the vendor to find out if the product is affected by the DST change. Systems that store date/times relative to the local time zone are not likely to be impacted but products that support multiple time zones will often require remediation. For solutions developed in-house, consider the places where date and time values are stored as one field in a format relative to UTC.</p>
+</dd>
+<dt>Impact</dt>
+<dd><p id="_a041f030-14db-f00b-c453-e9bb78def737">Systems that store date/time values relative to UTC will display incorrect times within the three weeks in spring and one week in fall that are now part of DST. In particular, the time shown will be one hour later than intended. This will affect events not only in 2007, but in any future year as well.</p>
+<p id="_000fa658-8bbc-9ab0-f861-5a55a669c0e3">Some calendar systems store day-long events internally as midnight to midnight records. These may get shifted by one hour during the new DST weeks, causing the events to extend into the day after they were intended to finish.</p>
+
+<p id="_987fdb72-1735-7123-a767-a43aeb1635ad">Other unexpected behavior may occur with calendar systems that synchronize events between two or more types of devices, such as a computer and a smart phone. The exact symptoms will depend on how each devices stores date/time values and how those values are represented by the synchronization software.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_companion_document" obligation="normative">
+<title>Companion Document</title>
+<p id="_c7b00c82-5695-f4e9-1474-27c2b6bded21">The companion document to this review, Extended Daylight Savings Time Links, Advisories and Changes, offers a collection of links to vendor web pages where DST updates are discussed and patches are offered.</p>
+</clause>
+
+<clause id="_future_documents" obligation="normative">
+<title>Future Documents</title>
+<p id="_88988ee9-f7bc-3309-4dc4-b62572919e92">It is the intent of The Calendaring and Scheduling Consortium to publish a “Lessons Learned and Recommendations for the Future” document based on real-world experiences over the transition time in March to the new DST rules. The document should be available in late spring or early summer.</p>
+</clause>
+
+<clause id="_credits" obligation="normative">
+<title>Credits</title>
+<p id="_8ee982eb-2022-5209-6046-1b53edf50f77">Joseph Jackson, Author<br/> Computing Services <br/> Carnegie Mellon University <br/> Chair, DST Ad Hoc Working Group, The Calendaring and Scheduling Consortium</p>
+</clause>
+</sections>
+</csd-standard>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">CalConnect I — April, 2000</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0001:2000</docidentifier><docnumber>0001</docnumber><date type="published"><on>2000-04-12</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2000-04-12</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2000</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_19b163d8-5818-aa25-5965-c7bec6f80552" obligation="normative">
+<p id="_afcce3ef-374b-9481-1b58-266ed94092ef">© 2000 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_a05bd1d4-16aa-04ee-c029-a612ec7a1649">On April 11 and 12, 2000, CalConnect Spring was held in Boston. It was graciously hosted by MIT and chaired by Bob Mahoney.</p>
+
+<clause id="_participants" obligation="informative">
+<title>Participants</title>
+<p id="_6b4ae108-ba18-d9aa-2139-354f7c1633ab">The following companies and representatives were in attendance:</p>
+
+<ul id="_02bba9d3-c569-da2d-ab36-b3742bb8d06b"><li><p id="_6ff12de9-98c4-9921-36a5-c31d2a2ae812">Tom Ransdell, Lotus,</p>
+</li>
+<li><p id="_496d422c-3fde-00b1-1c90-ac5e850a2789">Dan Gurney, Iris/Lotus,</p>
+</li>
+<li><p id="_dfbdfec4-dda8-64ca-7967-6f630f5083d5">John Sun, iPlanet,</p>
+</li>
+<li><p id="_38500bdc-8798-7fcb-4fee-914c6a62159d">Ki Wong, iPlanet,</p>
+</li>
+<li><p id="_40b01fca-3b67-1cc1-bc27-11d3d088ae21">Katia Hage, Microsoft,</p>
+</li>
+<li><p id="_b2f0bfcd-07a4-9bff-677d-8908f3397f87">Colin DuPlantis, Critical Path,</p>
+</li>
+<li><p id="_9dd710bb-babb-9dd5-0997-a6318007df2d">Bob Mahoney, MIT,</p>
+</li>
+<li><p id="_2eac1d09-7137-d694-0c93-10fd88bffd50">Paul Hill, MIT.</p>
+</li>
+</ul>
+
+<p id="_831e8b7c-366c-0bb0-d810-628e5e1b39aa">Pat Egen sat at home with a broken leg, and assisted (poorly) from the sidelines.</p>
+</clause>
+
+<clause id="_products_tested" obligation="informative">
+<title>Products Tested</title>
+<p id="_f7abe307-c722-3e1b-b4b9-45028da05c3e">The following products and versions were tested:</p>
+
+<ul id="_6fba8dc4-29d8-34e1-21f7-796f3f4fb386"><li><p id="_b365b112-4855-5d0c-d8e2-9a8182fdc982">EventCenter Version 3.0 (Critical Path)</p>
+</li>
+<li><p id="_b2424d54-cdb0-606d-1b7a-0308c5023327">Outlook 2000 and Outlook Express 5.0 (Microsoft)</p>
+</li>
+<li><p id="_d80e5573-2dbb-2845-8d68-4c62495d942b">iPlanet — internal unreleased alpha version iCS 5.0, server and client (Netscape)</p>
+</li>
+<li><p id="_db228f4e-b77e-e025-ec89-b94cafc23d27">Organizer (Lotus)</p>
+</li>
+</ul>
+</clause>
+</introduction></preface><sections>
+<clause id="_general_summary" obligation="normative">
+<title>General Summary</title>
+<p id="_0245a231-9239-feaf-4162-84d8df3b5e17">First off, thanks to everyone for their efforts. There was consensus that all participants have a lot of work to do, and that another testing event should be held in the fall. A west coast location was suggested, although some interest was also expressed for New Orleans or San Antonio. All participants felt that great progress would be made in the coming months.</p>
+
+<p id="_3dd9e033-eb6a-dc67-117c-e9ef1437c574">Little interoperability has occurred so far. Repeating events and canceled events seem to be causing problems. Parsers are working OK but the actual generation of the data objects is very inconsistent.</p>
+
+<p id="_59c75425-0e68-641c-3380-8d3ad9c00234">Problems found with recurrence included the following:</p>
+
+<ul id="_ac266b69-9aa0-3052-dcbf-0d6110ede46e"><li><p id="_a60c7d1e-e622-56e7-6ed3-8277c2daeae9">one vendor always generates and expects <tt>RRULE</tt>s, but cannot handle <tt>RDATE</tt>s.</p>
+</li>
+<li><p id="_e673541a-1701-7122-6b32-cec8a38206bc">two vendors always generate <tt>RDATE</tt>s and cannot currently handle <tt>RRULE</tt>s.</p>
+</li>
+<li><p id="_b328d06c-4bda-cbed-96a4-d90b1c5d3697">one vendor handles <tt>RRULE</tt>s but cannot handle exceptions.</p>
+</li>
+</ul>
+
+<p id="_d7f4fc0f-5612-f476-e19a-1c321aa0ec96">There was a brief discussion about redesigning recurrence. Some useful alternatives were suggested but the developers also seemed to be willing to live with the current specification. They did feel that word-smithing would help. This will be brought back to the list in more detail for some review.</p>
+
+<p id="_65166b06-bdec-e8cc-82dc-4bbb8c652c24">The biggest complaints are currently with iMIP and the MIME handling. “iMIP under-constrains what may be emitted by a data source; this requires a client to handle every possible case” which is perceived as a heavy burden by the developers.</p>
+
+<p id="_32a0c517-8bbc-ef84-cf83-c4f9f32a1fb1">Regarding MIME: “(multipart mixed vs. multipart alternative vs. text-alternative vs.attachments …​)” — the developers would be happier if there fewer options, or perhaps some stronger assertions in the draft. This too will be put on the list.</p>
+
+<p id="_f86a0929-9e40-1d0e-bf0d-0b9dfea41cb8">There has been virtually no interoperability testing of alarms yet. There were some side issues relating to alarms, which will be brought back to the list.</p>
+
+<p id="_a5c3c8a6-19a3-2186-248c-7fa2831369e8">There has been virtually no testing of conformance with line lengths yet.</p>
+
+<p id="_5366d3f1-c1e8-0fb8-df71-4e4ecc7c814c">A number of minor problems with blank spaces, terminating lines, and MIME boundaries were observed and are in the process of being fixed by the implementors.</p>
+
+<p id="_c2a442fc-4f3f-eee3-04a2-b2f9a55ac951">No tester has fully implemented Journals. One vendor has the support in the parser but no support in the front end, so they cannot be generated or displayed by the product. All of the implementors indicate that supporting Journals is intended and that no obstacles are seen, they are just lower on the priority list so far.</p>
+
+<p id="_ecac76f8-ab12-4401-7e54-320fa69eb1b1">There has been no testing of signed or encrypted objects. This should be a major goal of the next testing event.</p>
+
+<p id="_aeb54625-569d-06a3-89de-6b9345089cca">Some progress is better than no progress. Look for additional activity on the list as we post some of the items referenced above. CalConnect Fall will be announced later in the year.</p>
+
+<p id="_9e58a578-b4e3-c87f-fa19-f9a954a4f150">Respectfully submitted,</p>
+
+<p id="_ffeac179-2396-6dc6-2d25-bea8aa9730ca">Pat Egen and Bob Mahoney</p>
+</clause>
+</sections>
+</csd-standard>

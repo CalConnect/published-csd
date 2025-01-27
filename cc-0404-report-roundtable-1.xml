@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Roundtable I, 23-24 September 2004</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0404:2004</docidentifier><docnumber>0404</docnumber><date type="published"><on>2004-09-24</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2004-09-24</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2004</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_82a46e87-ef01-780e-b856-9dc8e47f725f" obligation="normative">
+<p id="_fef2b9dd-f447-2c9f-fb28-ba4e81490543">© 2004 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword></preface><sections>
+<clause id="_report" obligation="normative">
+<title>Report</title>
+<p id="_e9e14654-5460-44ce-aa5c-71fdb2ce460a">The first Roundtable sponsored by the Consortium took place on 23-24 September, 2004, hosted by Oracle Corporation in Montreal. This event was not restricted to Consortium members. It was an invitational “Open Roundtable on the Future of Interoperable Calendaring and Scheduling” and the invitation was sent out to a variety of individuals and organizations involved in Calendaring and Scheduling as vendors, customers, standards participants, etc.</p>
+
+<p id="_2412c37e-42be-7282-858f-c53ced36d8ea">Twenty-three individuals from fourteen organizations attended the Roundtable. The discussion was oriented towards three general areas:</p>
+
+<ul id="_51faf729-ba13-7704-a0d5-74b12fde910d"><li><p id="_091b23e5-d57a-6480-ef7a-8ff4251c05aa">Do we agree on a problem statement?</p>
+</li>
+<li><p id="_eed608de-a9af-a04b-d78e-401e4cebc5ea">Are we willing to work together to address the problem(s)?</p>
+</li>
+<li><p id="_2e27b0a5-5bd9-44e6-d3a9-85f225ba87cb">How do we want to go about undertaking this work?</p>
+</li>
+</ul>
+
+<p id="_55dd06cb-62ed-ff6b-7103-dcf050a06492">At the end of the two days, the participants had broadly agreed on a common definition of the problem in terms of what had to be done to move forward with interoperable Calendaring and Scheduling, and had jointly agreed to work together to address the problems. The group adopted the following informal “charter” as a synthesis of their discussions:</p>
+
+<quote id="_b1bfc879-3e5a-89a5-0ddf-ed9da15a078d"><p id="_3c282253-06db-e242-2530-23aae194e529">“WE” will come together to develop use cases, in concert with the users of calendaring products, to shape the technical requirements and critical input to help shape the work taking place in at least CalDAV, CALSIFY, UMA and other calendaring areas. Areas of focus will be calendar interoperability and a definition of a minimum implementation of same. We will also focus on testing and evaluation of interoperability. Attention will be paid to the promotion and evangelism of calendaring standards, capabilities and interop.</p>
+</quote>
+
+<p id="_c9d45c6c-a798-5f75-e4cb-7e939201d778">The Roundtable agreed to work within the Consortium structure to accomplish its work, and established a timetable for participating organizations to commit to and join the Consortium. Plans for initial technical committees, and a general timetable for carrying out the work, were also agreed.</p>
+
+<p id="_44d8caf1-3c81-c4b1-a1c4-df9b687dc1cc">Represented at the Roundtable were Apple, Duke University, Isamet, IBM Lotus, the Mozilla Foundation, Nokia, Novell, Oracle, OSAF (Open Source Applications Foundation), Stata Labs, UC Berkeley, University of Washington, Yahoo!, and the Calendaring and Scheduling Consortium.</p>
+
+<p id="_cf10a70b-5fef-6667-e9dd-3d482d4cd81d">The critical mass of organizations joining the Consortium in the following months, both those who had participated in the September Roundtable and others, enabled the Consortium to make its public launch announcement on December 14, 2004, and to move forward with plans for its next Roundtable in January 2005.</p>
+</clause>
+</sections>
+</csd-standard>

@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">The Benefits of iCalendar for the Mobile Industry</title>
+<docidentifier primary="true" type="CalConnect">CC/Adv 0611:2006</docidentifier><docnumber>0611</docnumber><date type="published"><on>2006-11-27</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Chris Dudding</completename></name>
+<affiliation><organization>
+<name>Symbian Ltd</name>
+</organization></affiliation></person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+<affiliation><organization>
+<name>Apple</name>
+</organization></affiliation></person></contributor><contributor><role type="author"/><person>
+<name><completename>Chris Dudding</completename></name>
+<affiliation><organization>
+<name>Symbian</name>
+</organization></affiliation></person></contributor><contributor><role type="author"/><person>
+<name><completename>Mark Paterson</completename></name>
+<affiliation><organization>
+<name>Oracle</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2006-11-27</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="Adv">advisory</doctype><flavor>cc</flavor><editorialgroup><committee>MOBILE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_1980ac30-0b55-4174-11a8-70db5e6b8690" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<dl id="_38d8f362-9b55-0f1d-a7d1-d84ce56a714f"><dt>Chair(s)</dt>
+<dd><p id="_21a99bd2-531e-8a74-ddb1-d62f78f9ac5c">Chris Dudding</p>
+</dd>
+</dl>
+</foreword></preface><sections>
+<clause id="_executive_summary" obligation="normative">
+<title>Executive Summary</title>
+<p id="_bd88e2aa-676d-c6e4-404a-f0f6a9afa2b5">The ability to share calendar information among different applications and across network boundaries has become an important business need, as a growing number of organizations look for ways to leverage their investments in collaborative applications.</p>
+
+<p id="_3727a7a3-6d79-2be8-9268-50678dcfd059">Since the 1990s, when email standards were developed to allow for access to messages on any server, from any device or browser, the same challenge has remained for calendar and scheduling applications: How can we ensure that meeting and task information can be accessed and managed from any application, anytime, anywhere?</p>
+
+<p id="_5bef166f-21ef-a593-24d9-9bf2300e5fb7">The goal is simple enough at a high level: Develop a standard data object for sharing calendar information over the Internet. iCalendar (RFC 2445) is a widely accepted format for calendar data representation, and is supported by several applications. However, vendors diverge in their interpretation of the standard’s format, leading to incomplete or unusable data being exchanged. Further complicating the issue is that iCalendar has not been widely adopted within certain application spaces. Although adopted by all major time management solution vendors, there has been reluctance within the mobile industry to migrate from vCalendar (iCalendar’s predecessor) based solutions and to fully embrace iCalendar.</p>
+
+<p id="_9937d3eb-10da-095f-5b89-3f2c633f5e00">The Mobile Technical Committee (TC-MOBILE) of the Calendaring  Scheduling Consortium recently published the results of a mobile calendaring questionnaire. Of concern were answers related to calendar synchronization. Synchronization was one of the main things users did, but it was also singled out as one of the main things that did not work well yet. This can be attributed, in large part, to issues related to data object interoperability.</p>
+
+<p id="_5c3572d8-ffcd-be83-694f-33ae3ea50c96">Efforts to clarify and simplify aspects of iCalendar and investment in producing effective interoperability test suites hopefully can foster more reliable solutions, but this can only be achieved through the widespread adoption of iCalendar (RFC 2445) within all application spaces.</p>
+</clause>
+
+<clause id="_introduction" obligation="normative">
+<title>Introduction</title>
+<p id="_c9353bd9-1ccd-e243-a794-7014439f7486">The vCalendar 1.0 specification defines a format for exchanging electronic calendaring and scheduling information between different applications and systems. It was developed by the Versit Consortium in September 1996.</p>
+
+<p id="_db3afa03-ac6c-14b1-7dca-af35c7446547">Ten years after publication, vCalendar has been adopted by a wide variety of consumer electronics and mobile devices, from mobile phones to digital music players. However, many products in this category have not adopted RFC2445 (iCalendar) despite a high level of implementation by desktop applications and services.</p>
+
+<p id="_a5486eef-04e9-2151-e57e-9f8ef0a2fc54">The iCalendar specification, introduced in 1998, was intended to improve the level of interoperability between dissimilar calendaring and scheduling applications and systems. iCalendar builds on the previous work of vCalendar 1.0 and defines a MIME content type for exchanging calendar and scheduling information with support for operations such as requesting and replying to meeting events, to-dos or journal entries.</p>
+
+<p id="_59781d5c-56cd-4071-3cdf-7053f95bdb8f">Interoperability among devices and platforms is very important for mobile users. The Mobile Technical Committee of the Calendaring  Scheduling Consortium conducted a questionnaire of 60 mobile users about calendaring on mobile devices in April 2006. One of the key findings from the questionnaire was that user experience of synchronization was not good enough due to problems with reliability and interoperability with desktop applications. iCalendar provides a solution to these interoperability issues.</p>
+
+<p id="_577cf93f-aedc-5324-8f63-e10dc285d744">In this paper:</p>
+
+<ul id="_3397b2ed-ed1e-2f2a-0fa7-fd7eafe5d152"><li><p id="_4b4e0b32-4c69-dc1e-0637-f136ed7b777d">We explain the differences between the vCalendar and iCalendar standards</p>
+</li>
+<li><p id="_cc088445-720e-b22b-2a40-125420b417f0">We identify the advantages of wider usage of iCalendar</p>
+</li>
+<li><p id="_25008609-0e12-fdea-56a9-b7cf7148bf1b">We describe on-going activities to improve calendar interoperability based on iCalendar</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_what_is_icalendar" obligation="normative">
+<title>What is iCalendar?</title>
+<p id="_9eda559e-ee97-bc92-e42d-b5140c7b3526">iCalendar provides a more precise specification of the calendar components defined in the vCalendar 1.0 specification ( <tt>VEVENT</tt>, <tt>VTODO</tt>) and defines new calendar components for a journal entry ( <tt>VJOURNAL</tt>), free and busy time information ( <tt>VFREEBUSY</tt>), time zone specification (<tt>VTIMEZONE</tt>), and alarm definition ( <tt>VALARM</tt>).</p>
+
+<p id="_5b28390f-0660-95a7-0cc7-b2db07d05b8a">The <tt>VJOURNAL</tt> component allows descriptive notes to be recorded for a particular calendar date. Only a few products implement this component currently.</p>
+
+<p id="_c640a9fd-4825-d935-dacb-b7cad2e4f1f8">The grouping of properties in the <tt>VFREEBUSY</tt> component “describe either a request for free/busy time, describe a response to a request for free/busy time or describe a published set of busy time” (from RFC2445).</p>
+
+<p id="_a47c16a1-fe61-5406-7f07-edf982a978ba">The timezone specification provided by the <tt>VTIMEZONE</tt> component provides a more comprehensive replacement for the  <tt>DAYLIGHT</tt> and <tt>TZ</tt> properties in vCalendar 1.0. It enables date and time information to be communicated in an unambiguous format.</p>
+
+<p id="_0d7d56e8-d5d7-a407-fb5b-83fcb2ca5d75">The definition of alarms is provided by the <tt>VALARM</tt> component. This component provides equivalent functionality to the  <tt>AALARM</tt>, <tt>DALARM</tt>, <tt>MALARM</tt>, and <tt>PALARM</tt> vCalendar 1.0 properties.</p>
+</clause>
+
+<clause id="_what_are_the_differences_between_vcalendar_and_icalendar" obligation="normative">
+<title>What are the differences between vCalendar and iCalendar?</title>
+<p id="_c6e396fe-7435-30fa-dbc2-ca3189f38f72">The default character set for iCalendar is UTF-8 rather than ASCII. It is no longer possible to define a character set for an individual property; the same character set applies to the whole iCalendar object.</p>
+
+<p id="_18a37c20-85a1-ef82-1400-dbb5cbeadd02">iCalendar has a default encoding of 8-bit; compared to vCalendar’s default of 7-bit. It is no longer necessary to indicate 8-bit content using property parameters. iCalendar data that needs to be transferred using protocols restricted to 7 bits should use a content transfer encoding such as Base64 or quoted-printable at the transport layer.</p>
+
+<p id="_8cd9a016-9d7b-72e3-62fa-dcee6f6cbec7">There are new file type extensions of ICS and IFB for iCalendar core components and free/busy information components. vCalendar’s file type extension of VCS is not used for identification of iCalendar data.</p>
+
+<p id="_80dd0107-46b1-ff03-c58a-f2b93198e2ac">Property value data types such as date-time are specified in a more rigorous manner than in vCalendar; iCalendar also defines new property value data types such as ‘Calendar User Address’ to improve interoperability. iCalendar supports a more comprehensive set of property parameters to enable delegation of requests, alternative representations of data, and participant status. A full list of new property value data types and property value parameters is provided in  <xref target="appendix-A"/>.</p>
+
+<p id="_8419ef7b-0b96-2915-0751-f0837e79773d">iCalendar defines eighteen new properties to support specification of time zones, calendaring and scheduling operations such as a canceling a meeting, non-Gregorian calendar scales, and other calendar attributes. A full list is provided in  <xref target="appendix-A"/>.</p>
+
+<p id="_aef8f8da-e13d-a505-e3be-6111909bbbca">iCalendar provides support for meeting requests/group scheduling with the new  <tt>METHOD</tt> property. The scheduling protocol is a logical extension of iCalendar and is defined by RFC 2446 the iCalendar Transport-independent Interoperability Protocol (iTIP). There is no equivalent for vCalendar data.</p>
+
+<p id="_58fae3ef-3ebf-8199-eef8-865f7e2827fe">The new <tt>RECURRENCE-ID</tt> property allows individual calendar instances to be linked together and enables powerful recurrence/exception handling.</p>
+
+<p id="_b2b9622e-c73e-4fc9-3dbe-cc0a902592de">iCalendar has proper support for time zones and can accurately represent entries in local time, UTC time and local time with a time zone specified. This is particularly important for repeating entries, which may span a daylight saving change. vCalendar alone cannot represent the same data correctly.</p>
+
+<p id="_4a959712-23b3-a990-86bf-52692208b08b">iCalendar supports repeat rules with a frequency of seconds, minutes and hours. These kinds of repeat rules cannot be represented in vCalendar.</p>
+
+<p id="_9ba71f53-b735-f0fa-234d-a020396cf0ad">In summary, the iCalendar specification is more detailed and more powerful; the iCalendar specification is 148 pages compared to vCalendar’s 47 pages. This means that there is less opportunity for implementers to misinterpret the specification’s calendar components and it is easier to develop conformance tests to verify a correct implementation of the standard.</p>
+</clause>
+
+<clause id="_what_are_the_benefits_of_icalendar" obligation="normative">
+<title>What are the benefits of iCalendar?</title>
+<p id="_093b5346-888f-0442-8b75-1f25846871ec">For consumers, adoption of iCalendar will result in improved interoperability among devices and platforms that will allow them to synchronize data easily among multiple devices and servers and see the same set of information wherever they look.</p>
+
+<p id="_57355945-bf74-59d0-8396-1307e5d106f4">The widespread adoption of iCalendar in all application spaces will result in a larger range of Calendar content available to consumers over the Internet. Further extensions to iCalendar will enable exchange of an even richer set of data. The consortium’s Event Publication Technical Committee (TCEVENTPUB) has developed the  <tt>VVENUE</tt> proposal for representing venue related information (e.g. concert listings, museum admission prices, and driving directions). iCalendar-based solutions combined with ITIP (RFC 2446) will enable full fledged scheduling for consumers.</p>
+
+<p id="_e1ec75dd-6dd4-c7bd-b1f3-a4982b0ea058">Third party software and OMA Data Synchronization server vendors can increase customer satisfaction and reduce defects by using iCalendar due to the combination of needing to support only a single data object format and the more reliable representation of calendar data. The ongoing active development of the iCalendar standard provides implementers with a vehicle for promoting change.</p>
+
+<p id="_3ef1b99c-59f9-90f2-0bf0-ddd0ad6b0395">Mobile operating system vendors and device manufacturers will benefit from wider adoption of iCalendar. The improved interoperability with third party software and server implementations that can be achieved with iCalendar will result in less reported user defects. This in turn should result in reduced support costs. With an industry-wide push towards iCalendar, server vendors will be encouraged to support devices also claiming such support.</p>
+
+<p id="_7d132a55-8c9f-386f-bf5d-f88f2cdd53ed">For mobile operators, solutions that are more reliable will result in increased usage of calendar access and synchronization, which should show in increased data revenues. Using iCalendar and taking advantage of iCalendar content that is available on the Internet, a richer set of applications and value added premium services can result.</p>
+
+<p id="_48c7cb4b-b508-8b81-091e-fe7d323edf73">The benefits of iCalendar continue to improve as ongoing work to clarify and simplify the standard continues in the IETF Calsify working group. While vCalendar can no longer evolve, iCalendar as a data object format continues to takes steps towards being the needed standard data object format.</p>
+</clause>
+
+<clause id="_efforts_underway_to_improve_interoperability" obligation="normative">
+<title>Efforts underway to improve interoperability</title>
+<p id="_c52dedc5-2fd4-55d1-4068-61b17cf5837f">It is well understood that even if iCalendar were widely adopted throughout the industry, this alone would not solve the issue of interoperability that users experience today. Fortunately, there are ongoing efforts to help address issues of interoperability.</p>
+
+<p id="_6d126f9f-4b4f-d59e-8c26-e15382aa0467">The Calsify effort in the IETF is chartered to revise the core iCalendar specifications to fix any problems discovered over the years during interoperability testing. This effort involves not only fixing issues in the specifications, but also an analysis of areas where simplification may be required. The core documents RFC2445, RFC2246 and RFC2447 have new draft revisions available, and these are actively being worked on as of November 2006. It is expected that this work will complete in early 2007.</p>
+
+<p id="_ec4d4b26-78cf-c528-e18b-f44dbed6640f">The Calendaring  Scheduling Consortium is committed to helping bring about appropriate updates to the iCalendar specifications. As part of this effort, it has organized technical committees to study some of the more problematic areas such as recurrences and time zones.</p>
+
+<p id="_90f8f297-05bc-0b55-92f7-5613a2ea9cdc">The consortium’s technical committees have published the following papers:</p>
+
+<ul id="_06d74a61-e5e6-c3b3-a05c-ce1bebf1ec7a"><li><p id="_44ec2da8-de49-4e99-f3bb-4bf08f8b34a3">Time zone Registry &amp; Service Recommendations</p>
+</li>
+<li><p id="_6b38d89b-3969-13f9-fffd-c763d721a2e0">Time zone Problems &amp; Recommendations</p>
+</li>
+<li><p id="_7ae31cb2-c6d4-9828-0879-33a18b5addf6">Recurrence Problems &amp; Recommendations</p>
+</li>
+</ul>
+
+<p id="_a8db1095-b756-0d2b-5e1b-f1abd79d59b8">Fixing issues within the iCalendar specifications will certainly help, but many issues could be solved now through increased interoperability testing by vendors. Recognizing this fact, the MOBILE Technical Committee (TCMOBILE) of the Calendaring  Scheduling Consortium has begun working on a Mobile Calendaring Synchronization Test Suite that it hopes to publish by January 2007. This test suite will focus on the actual iCalendar payload and issues related to interpreting calendar data.</p>
+
+<p id="_32ed8c3f-aebd-e7de-455b-ab1180e2306b">Working with the Interoperability Testing Technical Committee (TCIOPTEST), also from the Calendaring  Scheduling Consortium, work is underway to host Calendaring Interoperability Tests Events (CITEs) where vendors will be able test their implementations using this new test suite.</p>
+
+<p id="_aa95dcf7-37e7-ffae-49bd-b51634fc9b50">All of these efforts are directed at improving the iCalendar specifications and the usage of these specifications. Only through the widespread adoption of iCalendar can these efforts truly help address issues of interoperability.</p>
+</clause>
+
+<clause id="_conclusion" obligation="normative">
+<title>Conclusion</title>
+<p id="_31b00689-f206-c81d-974e-6d0d5c0c0e2d">Mobile calendaring is something users want but it has to be something they can rely on. The mobile industry must overcome the current issues related to interoperability. The starting point for this is the widespread adoption of iCalendar.</p>
+
+<p id="_59d15597-a135-9289-c525-7388c1bcc958">For more information on the efforts of the Calendaring  Scheduling Consortium, please visit  <link target="http://www.calconnect.org/"/>.</p>
+</clause>
+
+
+
+
+</sections><annex id="appendix-A" obligation="normative">
+<table id="_84e0e323-f6dc-f7c6-584b-eed06d25e8f8">
+<name>New properties defined in iCalendar</name>
+<thead><tr><th valign="top" align="left">Property Name</th>
+<th valign="top" align="left">Section in RFC 2445</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>ACTION</tt></td>
+<td valign="top" align="left">4.8.6.1</td>
+</tr><tr><td valign="top" align="left"><tt>CALSCALE</tt></td>
+<td valign="top" align="left">4.7.1</td>
+</tr><tr><td valign="top" align="left"><tt>COMMENT</tt></td>
+<td valign="top" align="left">4.8.1.4</td>
+</tr><tr><td valign="top" align="left"><tt>CONTACT</tt></td>
+<td valign="top" align="left">4.8.4.2</td>
+</tr><tr><td valign="top" align="left"><tt>DTSTAMP</tt></td>
+<td valign="top" align="left">4.8.7.2</td>
+</tr><tr><td valign="top" align="left"><tt>DURATION</tt></td>
+<td valign="top" align="left">4.8.2.5</td>
+</tr><tr><td valign="top" align="left"><tt>FREEBUSY</tt></td>
+<td valign="top" align="left">4.8.2.6</td>
+</tr><tr><td valign="top" align="left"><tt>METHOD</tt></td>
+<td valign="top" align="left">4.7.2</td>
+</tr><tr><td valign="top" align="left"><tt>ORGANISER</tt></td>
+<td valign="top" align="left">4.8.4.3</td>
+</tr><tr><td valign="top" align="left"><tt>PERCENT-COMPLETE</tt></td>
+<td valign="top" align="left">4.8.1.8</td>
+</tr><tr><td valign="top" align="left"><tt>RECURRENCE-ID</tt></td>
+<td valign="top" align="left">4.8.4.4</td>
+</tr><tr><td valign="top" align="left"><tt>REPEAT</tt></td>
+<td valign="top" align="left">4.8.6.2</td>
+</tr><tr><td valign="top" align="left"><tt>REQUEST-STATUS</tt></td>
+<td valign="top" align="left">4.8.8.2</td>
+</tr><tr><td valign="top" align="left"><tt>TRIGGER</tt></td>
+<td valign="top" align="left">4.8.6.3</td>
+</tr><tr><td valign="top" align="left"><tt>TZID</tt></td>
+<td valign="top" align="left">4.8.3.1</td>
+</tr><tr><td valign="top" align="left"><tt>TZNAME</tt></td>
+<td valign="top" align="left">4.8.3.2</td>
+</tr><tr><td valign="top" align="left"><tt>TZOFFSETFROM</tt></td>
+<td valign="top" align="left">4.8.3.3</td>
+</tr><tr><td valign="top" align="left"><tt>TZOFFSETTO</tt></td>
+<td valign="top" align="left">4.8.3.4</td>
+</tr><tr><td valign="top" align="left"><tt>TZURL</tt></td>
+<td valign="top" align="left">4.8.3.5</td>
+</tr></tbody>
+</table>
+
+<table id="_80b83d15-aa2a-f5f3-9e0b-e17d9ed21d1a">
+<name>New property value data types defined in iCalendar</name>
+<thead><tr><th valign="top" align="left">Property Value Data Type</th>
+<th valign="top" align="left">Section in RFC 2445</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Boolean</td>
+<td valign="top" align="left">4.3.2</td>
+</tr><tr><td valign="top" align="left">Calendar User Address</td>
+<td valign="top" align="left">4.3.3</td>
+</tr><tr><td valign="top" align="left">Date</td>
+<td valign="top" align="left">4.3.4</td>
+</tr><tr><td valign="top" align="left">Float</td>
+<td valign="top" align="left">4.3.7</td>
+</tr><tr><td valign="top" align="left">Integer</td>
+<td valign="top" align="left">4.3.8</td>
+</tr><tr><td valign="top" align="left">Period of Time</td>
+<td valign="top" align="left">4.3.9</td>
+</tr><tr><td valign="top" align="left">Recurrence Rule</td>
+<td valign="top" align="left">4.3.10</td>
+</tr><tr><td valign="top" align="left">Text</td>
+<td valign="top" align="left">4.3.11</td>
+</tr><tr><td valign="top" align="left">Time</td>
+<td valign="top" align="left">4.3.11</td>
+</tr><tr><td valign="top" align="left">UTC Offset</td>
+<td valign="top" align="left">4.3.14</td>
+</tr></tbody>
+</table>
+
+<table id="_db0918d4-9e2e-88cc-fc77-589818e5e701">
+<name>New property parameters defined in iCalendar</name>
+<thead><tr><th valign="top" align="left">Property Parameter Name</th>
+<th valign="top" align="left">Section in RFC 2445</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>ALTREP</tt></td>
+<td valign="top" align="left">4.2.1</td>
+</tr><tr><td valign="top" align="left"><tt>CN</tt></td>
+<td valign="top" align="left">4.2.2</td>
+</tr><tr><td valign="top" align="left"><tt>CUTYPE</tt></td>
+<td valign="top" align="left">4.2.3</td>
+</tr><tr><td valign="top" align="left"><tt>DELEGATED-FROM</tt></td>
+<td valign="top" align="left">4.2.4</td>
+</tr><tr><td valign="top" align="left"><tt>DELEGATED-TO</tt></td>
+<td valign="top" align="left">4.2.5</td>
+</tr><tr><td valign="top" align="left"><tt>DIR</tt></td>
+<td valign="top" align="left">4.2.6</td>
+</tr><tr><td valign="top" align="left"><tt>FMTTYPE</tt></td>
+<td valign="top" align="left">4.2.8</td>
+</tr><tr><td valign="top" align="left"><tt>FBTYPE</tt></td>
+<td valign="top" align="left">4.2.9</td>
+</tr><tr><td valign="top" align="left"><tt>MEMBER</tt></td>
+<td valign="top" align="left">4.2.11</td>
+</tr><tr><td valign="top" align="left"><tt>PARTSTAT</tt></td>
+<td valign="top" align="left">4.2.12</td>
+</tr><tr><td valign="top" align="left"><tt>RANGE</tt></td>
+<td valign="top" align="left">4.2.13</td>
+</tr><tr><td valign="top" align="left"><tt>RELATED</tt></td>
+<td valign="top" align="left">4.2.14</td>
+</tr><tr><td valign="top" align="left"><tt>RELTYPE</tt></td>
+<td valign="top" align="left">4.2.15</td>
+</tr><tr><td valign="top" align="left"><tt>RSVP</tt></td>
+<td valign="top" align="left">4.2.17</td>
+</tr><tr><td valign="top" align="left"><tt>SENT-BY</tt></td>
+<td valign="top" align="left">4.2.18</td>
+</tr><tr><td valign="top" align="left"><tt>TZID</tt></td>
+<td valign="top" align="left">4.2.19</td>
+</tr></tbody>
+</table>
+
+<table id="_2a2642fa-c560-a4b8-d142-01f6158f931c">
+<name>Mapping between vCalendar and iCalendar properties</name>
+<thead><tr><th valign="top" align="left">vCalendar property name</th>
+<th valign="top" align="left">iCalendar property name</th>
+<th valign="top" align="left">Section in RFC2445</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>DAYLIGHT</tt></td>
+<td valign="top" align="left">Replaced by <tt>VTIMEZONE</tt> component</td>
+<td valign="top" align="left">4.6.5</td>
+</tr><tr><td valign="top" align="left"><tt>GEO</tt></td>
+<td valign="top" align="left"><tt>GEO</tt></td>
+<td valign="top" align="left">4.8.1.6</td>
+</tr><tr><td valign="top" align="left"><tt>PRODID</tt></td>
+<td valign="top" align="left"><tt>PRODID</tt></td>
+<td valign="top" align="left">4.7.3</td>
+</tr><tr><td valign="top" align="left"><tt>TZ</tt></td>
+<td valign="top" align="left">Replaced by <tt>VTIMEZONE</tt> component</td>
+<td valign="top" align="left">4.6.5</td>
+</tr><tr><td valign="top" align="left"><tt>VERSION</tt></td>
+<td valign="top" align="left"><tt>VERSION</tt></td>
+<td valign="top" align="left">4.7.4</td>
+</tr><tr><td valign="top" align="left"><tt>ATTACH</tt></td>
+<td valign="top" align="left"><tt>ATTACH</tt></td>
+<td valign="top" align="left">4.8.1.1</td>
+</tr><tr><td valign="top" align="left"><tt>ATTENDEE</tt></td>
+<td valign="top" align="left"><tt>ATTENDEE</tt></td>
+<td valign="top" align="left">4.8.4.1</td>
+</tr><tr><td valign="top" align="left"><tt>AALARM</tt></td>
+<td valign="top" align="left">Replaced by <tt>VALARM</tt> component</td>
+<td valign="top" align="left">4.6.6</td>
+</tr><tr><td valign="top" align="left"><tt>CATEGORIES</tt></td>
+<td valign="top" align="left"><tt>CATEGORIES</tt></td>
+<td valign="top" align="left">4.8.1.2</td>
+</tr><tr><td valign="top" align="left"><tt>CLASS</tt></td>
+<td valign="top" align="left"><tt>CLASS</tt></td>
+<td valign="top" align="left">4.8.1.3</td>
+</tr><tr><td valign="top" align="left"><tt>DCREATED</tt></td>
+<td valign="top" align="left"><tt>CREATED</tt></td>
+<td valign="top" align="left">4.8.7.1</td>
+</tr><tr><td valign="top" align="left"><tt>COMPLETED</tt></td>
+<td valign="top" align="left"><tt>COMPLETED</tt></td>
+<td valign="top" align="left">4.8.2.1</td>
+</tr><tr><td valign="top" align="left"><tt>DESCRIPTION</tt></td>
+<td valign="top" align="left"><tt>DESCRIPTION</tt></td>
+<td valign="top" align="left">4.8.1.5</td>
+</tr><tr><td valign="top" align="left"><tt>DALARM</tt></td>
+<td valign="top" align="left">Replaced by <tt>VALARM</tt> component</td>
+<td valign="top" align="left">4.6.6</td>
+</tr><tr><td valign="top" align="left"><tt>DUE</tt></td>
+<td valign="top" align="left"><tt>DUE</tt></td>
+<td valign="top" align="left">4.8.2.3</td>
+</tr><tr><td valign="top" align="left"><tt>DTEND</tt></td>
+<td valign="top" align="left"><tt>DTEND</tt></td>
+<td valign="top" align="left">4.8.2.2</td>
+</tr><tr><td valign="top" align="left"><tt>EXDATE</tt></td>
+<td valign="top" align="left"><tt>EXDATE</tt></td>
+<td valign="top" align="left">4.8.5.1</td>
+</tr><tr><td valign="top" align="left"><tt>EXRULE</tt></td>
+<td valign="top" align="left"><tt>EXRULE</tt></td>
+<td valign="top" align="left">4.8.5.2</td>
+</tr><tr><td valign="top" align="left"><tt>LAST-MODIFIED</tt></td>
+<td valign="top" align="left"><tt>LAST-MODIFIED</tt></td>
+<td valign="top" align="left">4.8.7.3</td>
+</tr><tr><td valign="top" align="left"><tt>LOCATION</tt></td>
+<td valign="top" align="left"><tt>LOCATION</tt></td>
+<td valign="top" align="left">4.8.1.7</td>
+</tr><tr><td valign="top" align="left"><tt>MALARM</tt></td>
+<td valign="top" align="left">Replaced by <tt>VALARM</tt> component</td>
+<td valign="top" align="left">4.6.6</td>
+</tr><tr><td valign="top" align="left"><tt>RNUM</tt></td>
+<td valign="top" align="left">No equivalent property, iCalendar <tt>RECUR</tt> property value type allows the number of occurrences to be specified</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><tt>PRIORITY</tt></td>
+<td valign="top" align="left"><tt>PRIORITY</tt></td>
+<td valign="top" align="left">4.8.1.9</td>
+</tr><tr><td valign="top" align="left"><tt>PALARM</tt></td>
+<td valign="top" align="left">Replaced by <tt>VALARM</tt> component</td>
+<td valign="top" align="left">4.6.6</td>
+</tr><tr><td valign="top" align="left"><tt>RELATED-TO</tt></td>
+<td valign="top" align="left"><tt>RELATED-TO</tt></td>
+<td valign="top" align="left">4.8.4.5</td>
+</tr><tr><td valign="top" align="left"><tt>RDATE</tt></td>
+<td valign="top" align="left"><tt>RDATE</tt></td>
+<td valign="top" align="left">4.8.5.3</td>
+</tr><tr><td valign="top" align="left"><tt>RRULE</tt></td>
+<td valign="top" align="left"><tt>RRULE</tt></td>
+<td valign="top" align="left">4.8.5.4</td>
+</tr><tr><td valign="top" align="left"><tt>RESOURCES</tt></td>
+<td valign="top" align="left"><tt>RESOURCES</tt></td>
+<td valign="top" align="left">4.8.1.10</td>
+</tr><tr><td valign="top" align="left"><tt>SEQUENCE</tt></td>
+<td valign="top" align="left"><tt>SEQUENCE</tt></td>
+<td valign="top" align="left">4.8.7.4</td>
+</tr><tr><td valign="top" align="left"><tt>DTSTART</tt></td>
+<td valign="top" align="left"><tt>DTSTART</tt></td>
+<td valign="top" align="left">4.8.2.4</td>
+</tr><tr><td valign="top" align="left"><tt>STATUS</tt></td>
+<td valign="top" align="left"><tt>STATUS</tt></td>
+<td valign="top" align="left">4.8.1.11</td>
+</tr><tr><td valign="top" align="left"><tt>SUMMARY</tt></td>
+<td valign="top" align="left"><tt>SUMMARY</tt></td>
+<td valign="top" align="left">4.8.1.12</td>
+</tr><tr><td valign="top" align="left"><tt>TRANSP</tt></td>
+<td valign="top" align="left"><tt>TRANSP</tt></td>
+<td valign="top" align="left">4.8.2.7</td>
+</tr><tr><td valign="top" align="left"><tt>URL</tt></td>
+<td valign="top" align="left"><tt>URL</tt></td>
+<td valign="top" align="left">4.8.4.6</td>
+</tr><tr><td valign="top" align="left"><tt>UID</tt></td>
+<td valign="top" align="left"><tt>UID</tt></td>
+<td valign="top" align="left">4.8.4.7</td>
+</tr><tr><td valign="top" align="left"><tt>X-</tt></td>
+<td valign="top" align="left"><tt>X-</tt></td>
+<td valign="top" align="left">4.8.8.1</td>
+</tr></tbody>
+</table>
+</annex><bibliography><clause id="_resources" obligation="informative">
+<title>Bibliography</title>
+<references id="_icalendar_specifications" normative="false" obligation="informative">
+<title>iCalendar Specifications</title><bibitem id="rfc2445" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2445</uri>
+  <docidentifier type="IETF" primary="true">RFC 2445</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2445</docidentifier>
+  <docnumber>RFC2445</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Stenerson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_afbc5148-8753-b9c7-39db-bfa698a5a732">This memo has been defined to provide the definition of a common format for openly exchanging calendaring and scheduling information across the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2445</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ICALENDAR</keyword>
+  <keyword>interoperable</keyword>
+  <keyword>mime</keyword>
+  <keyword>multipurpose internet mail extensions</keyword>
+</bibitem><bibitem id="rfc2446" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP) Scheduling Events, BusyTime, To-dos and Journal Entries</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2446</uri>
+  <docidentifier type="IETF" primary="true">RFC 2446</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2446</docidentifier>
+  <docnumber>RFC2446</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Hopson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_d5f65262-aa5c-80c7-d3d4-44acc9ea7db2">This document specifies how calendaring systems use iCalendar objects to interoperate with other calendar systems. It does so in a general way so as to allow multiple methods of communication between systems. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5546</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5546</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2446</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ITIP</keyword>
+  <keyword>iCalendar Transport-Independent Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>systems</keyword>
+</bibitem><bibitem id="rfc2447" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2447</uri>
+  <docidentifier type="IETF" primary="true">RFC 2447</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2447</docidentifier>
+  <docnumber>RFC2447</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_d65860e6-15c9-a762-35a9-9bcd52d3ff7b">This document specifies a binding from the iCalendar Transport- independent Interoperability Protocol (iTIP) to Internet email-based transports. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC6047</formattedref>
+      <docidentifier type="IETF" primary="true">RFC6047</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2447</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>IMIP</keyword>
+  <keyword>iCalendar Message-Based Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>electronic</keyword>
+  <keyword>mail</keyword>
+  <keyword>transport</keyword>
+</bibitem><bibitem id="rfc3283" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Guide to Internet Calendaring</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3283</uri>
+  <docidentifier type="IETF" primary="true">RFC 3283</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3283</docidentifier>
+  <docnumber>RFC3283</docnumber>
+  <date type="published">
+    <on>2002-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Mahoney</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Babics</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Taler</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_ea4ec106-fce2-32fd-4780-973673b03d56">This document describes the various Internet calendaring and scheduling standards and works in progress, and the relationships between them. Its intent is to provide a context for these documents, assist in their understanding, and potentially aid in the design of standards-based calendaring and scheduling systems. The standards addressed are RFC 2445 (iCalendar), RFC 2446 (iTIP), and RFC 2447 (iMIP). The work in progress addressed is “Calendar Access Protocol” (CAP). This document also describes issues and problems that are not solved by these protocols, and that could be targets for future work. This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3283</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>scheduling systems</keyword>
+  <keyword>cap</keyword>
+  <keyword>calendar access protocool</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+</bibitem>
+
+
+
+
+</references>
+
+<references id="_caldav_specifications" normative="false" obligation="informative">
+<title>CalDAV Specifications</title><bibitem id="cd-access">
+  <formattedref format="application/x-isodoc+xml">Calendaring Extensions to WebDAV.
+<link target="http://www.ietf.org/internet-drafts/draft-dusseault-caldav-14.txt"/>.</formattedref>
+  <docidentifier>CALDAV-ACCESS</docidentifier>
+  
+</bibitem><bibitem id="cd-sched">
+  <formattedref format="application/x-isodoc+xml">Scheduling Extensions to CalDAV
+<link target="http://www.ietf.org/internet-drafts/draft-desruisseaux-caldav-sched-02.txt"/>.</formattedref>
+  <docidentifier>CALDAV-SCHED</docidentifier>
+  
+</bibitem>
+
+
+</references>
+
+<references id="_implementations" normative="false" obligation="informative">
+<title>Implementations</title><bibitem id="libical">
+  <formattedref format="application/x-isodoc+xml">libical C library. <link target="http://freshmeat.net/projects/libical"/>.</formattedref>
+  <docidentifier>LIBICAL</docidentifier>
+  
+</bibitem><bibitem id="ical4j">
+  <formattedref format="application/x-isodoc+xml">iCal4j Java library. <link target="http://ical4j.sourceforge.net"/>.</formattedref>
+  <docidentifier>ICAL4J</docidentifier>
+  <docnumber>4J</docnumber>
+</bibitem><bibitem id="vobject">
+  <formattedref format="application/x-isodoc+xml">VObject Python library. <link target="http://vobject.skyhouseconsulting.com"/>.</formattedref>
+  <docidentifier>VOBJECT</docidentifier>
+  
+</bibitem>
+
+
+
+</references>
+
+<references id="_icalendar_on_the_web" normative="false" obligation="informative">
+<title>iCalendar on the Web</title><bibitem id="icalshare">
+  <formattedref format="application/x-isodoc+xml">Shared, searchable calendars. <link target="http://www.icalshare.com"/></formattedref>
+  <docidentifier>ICALSHARE</docidentifier>
+  
+</bibitem><bibitem id="eventful">
+  <formattedref format="application/x-isodoc+xml">Local events. <link target="http://eventful.com"/></formattedref>
+  <docidentifier>EVENTFUL</docidentifier>
+  
+</bibitem>
+
+
+</references>
+
+<references id="_efforts_to_improve_interoperability" normative="false" obligation="informative">
+<title>Efforts to improve Interoperability</title><bibitem id="calsify">
+  <formattedref format="application/x-isodoc+xml">Charter for IETF iCalendar Simplification Working Group.
+<link target="http://www.ietf.org/html.charters/calsify-charter.html"/>.</formattedref>
+  <docidentifier type="IETF">IETF CALSIFY</docidentifier>
+  
+</bibitem><bibitem id="cc-tz-registry" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Timezone Registry and Service Recommendations V1.0 (CD 0606)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Timezone Registry and Service Recommendations V1.0 (CD 0606)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0606%20Timezone%20Registry%20and%20Service%20Recommendations%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC 0606:2006</docidentifier>
+  <version>
+    <revision-date>2006-04-17</revision-date>
+  </version>
+  <abstract format="text/plain">This document contains technical recommendations on implementing a time zone registry and a time zone service. Standardized time zones are needed for improved interoperability to avoid some common problems, and to allow using time zones by reference rather than value.</abstract>
+</bibitem><bibitem id="cc-tz-problems" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">iCalendar Timezone Problems and Recommendations V1.0 (CD 0602)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">iCalendar Timezone Problems and Recommendations V1.0 (CD 0602)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0602%20iCalendar%20Timezone%20Problems%20and%20Recommendations%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/R 0602:2006</docidentifier>
+  <version>
+    <revision-date>2006-01-24</revision-date>
+  </version>
+  <abstract format="text/plain">This document was created by the TIMEZONE Technical Committee of the Calendaring and Scheduling Consortium. It contains information about common time zone implementation issues and recommendations on how to resolve these issues. We first justify the need for time zones, then we identify time zone implementation problems, and then offer some guidelines and recommendations. Take note that the listed recommendations often describe what vendors are currently doing to solve the problems.</abstract>
+</bibitem><bibitem id="cc-recurrence" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">iCalendar Recurrence Problems and Recommendations V1.0 (CD 0604)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">iCalendar Recurrence Problems and Recommendations V1.0 (CD 0604)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0604%20iCalendar%20Recurrence%20Problems%20and%20Recommendations%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/R 0604:2006</docidentifier>
+  <version>
+    <revision-date>2006-03-16</revision-date>
+  </version>
+  <abstract format="text/plain">This document contains information about recurrence implementation issues and recommendations on how to resolve these issues. We first explain what recurrences are, justify the need for recurrences, identify recurrence implementation problems and ambiguities, and then offer some guidelines and recommendations to solve these issues.</abstract>
+</bibitem>
+
+
+
+
+</references>
+
+<references id="_calconnect_mobile_calendaring_questionnaire" normative="false" obligation="informative">
+<title>CalConnect Mobile Calendaring Questionnaire</title><bibitem id="cc-mob-calendaring" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Mobile Calendaring Questionnaire V2 Results (CD 0609)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Mobile Calendaring Questionnaire V2 Results (CD 0609)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0609%20Report%20on%20Mobile%20Calendaring%20Questionnaire%20V2%20Results.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/R 0609:2006</docidentifier>
+  <version>
+    <revision-date>2006-06-24</revision-date>
+  </version>
+  <abstract format="text/plain">The goal of this questionnaire was to determine how and to what extent Calendaring is being used on mobile devices, with a view to using those results to aid in the development of recommendations on how to address any problem areas. A number of responses were received to the online questionnaire, and a summary and brief conclusion of these results is presented, along with the raw results themselves. Respondents to the questionnaire answered based on the capabilities of their device. The results show an aggregate of these results.</abstract>
+</bibitem>
+
+</references>
+</clause></bibliography>
+</csd-standard>

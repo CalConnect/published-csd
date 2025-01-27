@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">iCalendar Timezone Problems and Recommendations</title>
+<docidentifier primary="true" type="CalConnect">CC/R 0602:2006</docidentifier><docnumber>0602</docnumber><date type="published"><on>2006-01-24</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Simon Vaillancourt</completename></name>
+<affiliation><organization>
+<name>Oracle Corporation</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2006-01-24</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="R">report</doctype><flavor>cc</flavor><editorialgroup><committee>TIMEZONE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_564da529-b374-219b-0e3b-5ccb0a91ff19" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<p id="_2b5b0f26-545d-6746-371f-40cd8b0265d7">This document was created by the TIMEZONE Technical Committee of the Calendaring and Scheduling Consortium. It contains information about common time zone implementation issues and recommendations on how to resolve these issues. We first justify the need for time zones, then we identify time zone implementation problems, and then offer some guidelines and recommendations. Take note that the listed recommendations often describe what vendors are currently doing to solve the problems.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_1d2c48dc-c83f-f982-6644-9e15e59d00df">This document contains information about common time zone implementation issues and recommendations on how to resolve these issues. We first justify the need for time zones, then we identify time zone implementation problems, and then offer some guidelines and recommendations. Take note that the listed recommendations often describe what vendors are currently doing to solve the problems.</p>
+</introduction></preface><sections>
+
+<clause id="_why_do_we_need_time_zones" obligation="normative">
+<title>Why do we need time zones?</title>
+<p id="_3a544097-e37f-6b07-8296-b2e5a03bae89">This section contains emails gathered on various mailing lists (e.g.: <link target="mailto:ietfcalsify@osafoundation.org"/>, <link target="mailto:tc-timezone-l@calconnect.org"/>…​) and a summary of discussions between Calendaring and Scheduling Consortium members.</p>
+
+<clause id="_why_should_time_zone_information_be_preserved_in_a_vcalendar_object_rather_than_converting_to_utc" obligation="normative">
+<title>Why should time zone information be preserved in a <tt>VCALENDAR</tt> object rather than converting to UTC?</title>
+<clause id="_f630dcd2-4000-b263-3698-983c4c04d1cb" obligation="normative">
+<p id="_34079bd3-7494-872d-a9f9-5f9802f33da6">Recurring events that occur on both sides of a daylight savings time change need the appropriate time zone information to ensure they happen at the correct local time.</p>
+</clause>
+
+<clause id="_2" obligation="normative">
+<p id="_59e01c3c-581e-3b24-bd55-c4093ab796f1">Keeping the time zone information during the whole life of the event is important because it allows the events to be adjusted if a change to the time zone rules occurs.</p>
+</clause>
+
+<clause id="_3" obligation="normative">
+<p id="_ad51b60e-8074-6436-1b10-757cc31c2e15">Interoperability with well-established products is a requirement for most calendar applications. Anything that those products support will most likely have to be supported by the majority of standards-based calendar applications, so we should keep time zones in the standard, clarifying them if needed instead of removing them entirely.</p>
+</clause>
+
+<clause id="_4" obligation="normative">
+<p id="_3a747ee3-8492-d95f-8aa6-119ff1fb6cfd">It gives more context information about the meeting creation that can be used in the future if the meeting times have to be adjusted.</p>
+</clause>
+
+<clause id="_5" obligation="normative">
+<p id="_61cf7a71-0443-a9be-6ae0-fe8c328a037d">Because the day of the week corresponding to a local time and a UTC time may be different, recurrence rules cannot reliably be expanded using only UTC time.</p>
+
+<example id="_46357e3b-313e-a754-75cc-86b2bb053d27"><p id="_ff02def9-4c7c-c544-1ea4-737f85daec03">A meeting occurring every first Monday of the month at 0:30 CEST would be 22:30 every Sunday in UTC. Since the first Sunday of the month is not always occurring just before the first Monday of the month, converting that event to UTC would not expand that rule correctly.</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_should_a_vcalendar_object_contain_whole_vtimezone_objects_or_reference_to_a_time_zone" obligation="normative">
+<title>Should a <tt>VCALENDAR</tt> object contain whole <tt>VTIMEZONE</tt> objects or reference to a time zone?</title>
+<p id="_d23514a4-a54f-ea85-e40d-c8a65a4af4cb">Here are some arguments for having a whole <tt>VTIMEZONE</tt> object inside a <tt>VCALENDAR</tt> object instead of just a reference to an external time zone definition:</p>
+
+<clause id="_6" obligation="normative">
+<p id="_f4051ea4-a9fe-19ef-0d41-efe468f9caf6">Including the <tt>VTIMEZONE</tt> data in the <tt>VCALENDAR</tt> object makes the entity self contained and very portable.</p>
+</clause>
+
+<clause id="_7" obligation="normative">
+<p id="_3344e613-5771-5e08-4c16-b720ebc39792">An application with only offline viewing capabilities does not have to worry about keeping a time zone database if all the  <tt>VCALENDAR</tt> objects contain the necessary time zone information.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_identified_implementation_problems_and_recommendations" obligation="normative">
+<title>Identified implementation problems and recommendations</title>
+<p id="_5b379e37-9961-0fa2-efa3-756c6a546940">Implementing a standards-compliant calendar client or server that supports time zones correctly is not an easy task. This section describes some common implementation problems and recommendations in italics.</p>
+
+<clause id="_general_time_zone_issues" obligation="normative">
+<title>General time zone issues</title>
+<clause id="_8" obligation="normative">
+<p id="_3eb160b0-d867-79c8-5def-32422e5477e1">How should a client / server react towards existing meetings when a time zone rule changes? For example, if DST changes for a time zone, should the existing meetings created in that time zone be adjusted to the new rules or should they remain the same and let the changes be applied only to newly created events?</p>
+
+<clause id="_9" obligation="normative">
+<p id="_ef30297a-f768-ae83-4ae1-4e71c7856a55">In most cases, meetings created using a time zone should use the new time zone definition so that effected recurrences reflect the time zone change (Example: Lunch at noon every day). Cases where the timing has to be fixed should be created in UTC (Example: Enter a few digits on a terminal every 108 minutes), which has no dependency on time zone rules.</p>
+</clause>
+</clause>
+
+<clause id="_10" obligation="normative">
+<p id="_abbdd069-3e12-5d42-0ec6-eb19f3c300d8">How should a client / server handle a new time zone?</p>
+
+<clause id="_11" obligation="normative">
+<p id="_cb800bec-e6c9-bfdf-586c-5b7bbbfd833d">If a client /server model is used, the server should have a means of updating the time zone list. This can be accomplished in many different ways such as keeping a checksum of the “current” time zone list; when that list changes on the server, clients simply re-download their local copies.</p>
+</clause>
+
+<clause id="_12" obligation="normative">
+<p id="_04bbafc8-4125-b813-5ac0-acdbf1798ef9">If a PIM client is used (no server), a patch could be issued updating its time zone list.</p>
+</clause>
+</clause>
+
+<clause id="_13" obligation="normative">
+<p id="_5b0755db-9b74-3192-d9a3-9bdc39a14e16">How should a client / server handle a time zone fork? (For example: if DST changes in the US only and not in Canada and meetings were created using an  <tt>EST5EDT</tt> time zone). This could create two new time zones  <tt>EST5EDT_CA</tt> for Canada and <tt>EST5EDT_US</tt> for the US (and deprecating <tt>EST5EDT</tt>).</p>
+
+<clause id="_14" obligation="normative">
+<p id="_8b9e4c43-af85-d68a-ec54-e275009d3114">The <tt>GEO</tt> property might be used to detect which of the new time zones every meeting belongs in.</p>
+</clause>
+
+<clause id="_15" obligation="normative">
+<p id="_2b925e59-5931-8562-5adf-a1b89b05f83d">The <tt>LOCATION</tt> property can also be used to detect the appropriate time zone for the meetings.</p>
+</clause>
+
+<clause id="_16" obligation="normative">
+<p id="_3d6ae9e5-34f9-5dce-ad37-6ba4641a4c26">If no information in the calendar object can be used to detect the appropriate new time zone, a default choice could be used based on where the majority of the meetings usually occur.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_consuming_time_zones" obligation="normative">
+<title>Consuming time zones</title>
+<p id="_30ae4a63-087b-7071-058c-5ab7aa1afb13">Quite often, applications have a list of time zones stored internally or in a non-standard registry, and when a meeting is created with a time zone, the application will:</p>
+
+<ol id="_4201d721-0c07-acef-f956-dbc0ae1c9b83" type="arabic"><li><p id="_fd15184c-6249-48cf-7843-6394bcdcb351">Try to match the supplied time zone with its internal representation. This match can be accomplished by using any of these techniques:</p>
+<ul id="_0b34a9fc-dcb3-c86a-8b56-02b332044e51"><li><p id="_71dbf156-c49b-97d9-b66a-88e2140ba0bf">Have an algorithm pick an internal time zone with the closest corresponding set of rules to the supplied one.</p>
+</li>
+<li><p id="_794ba216-8697-8f23-a65c-fea2cb39c5f3">Try to match the <tt>TZID</tt> with its internal counterpart.</p>
+</li>
+</ul>
+</li>
+<li><p id="_57e9f0d5-dd01-1835-3853-5de5807f3587">If no match can be found the application will do one of these:</p>
+<ul id="_224db30a-7f33-98fc-8d4a-6b1c82a3224f"><li><p id="_ea0ff372-08be-a14d-0a17-852a5d7a89c2">Return an error.</p>
+</li>
+<li><p id="_c990ee9c-ce2a-43fe-20cf-c4f18f52f7f6">Add the new time zone to its internal time zone list.</p>
+</li>
+</ul>
+</li>
+</ol>
+
+<p id="_61dce0f8-a737-2101-ace5-3c651da757d7">At this point, these problems can occur:</p>
+
+<clause id="_17" obligation="normative">
+<p id="_105fc285-d968-ee8d-b8af-9428424b5fe2">If the application cannot add “unmatchable” time zones to its internal list, even a perfectly valid VTIMEZONE can be rejected.</p>
+
+<clause id="_18" obligation="normative">
+<p id="_1ae8eb39-6ba0-b2a3-b00e-72b6cc65a4cd">The meeting could be converted to UTC using the provided time zone, take note that this solution is less than ideal since time zone information is lost.</p>
+</clause>
+</clause>
+
+<clause id="_19" obligation="normative">
+<p id="_67dbe18a-6daf-bccd-25c0-736617933d03">If the application has in its internal list a <tt>TZID</tt> “America/New_York”, and receives a <tt>VTIMEZONE</tt> with a <tt>TZID</tt> “America/New_York” with a different definition than its internal one, the server may react unpredictably.</p>
+
+<clause id="_20" obligation="normative">
+<p id="_89c85d82-8cc5-39a0-9bb8-32d065882bc5">If using a time zone registry the time zone definition of the registry should be the one used.</p>
+</clause>
+
+<clause id="_21" obligation="normative">
+<p id="_4f6e8a4a-96e6-ee4c-fbbe-f52e40857f26">If using an internal time zone list that can be changed, a versioning of the <tt>TZID</tt> could be used allowing different versions of the same <tt>TZID</tt>s to be kept. This would allow applications to have events using different time zones with the same  <tt>TZID</tt>. Take note however that consuming and preserving all time zones can become quite problematic:</p>
+
+<ul id="_ece93a30-13ab-e496-c3b5-2bdd5847b699"><li><p id="_587525b9-43d0-b769-ebf0-d7d14a655482">Since time zone ids are often shown to users, the time zone list could become quite large and confusing over time.</p>
+</li>
+<li><p id="_66d60fe7-7cd6-d918-1d31-a6008ca64ef8">The need to “preserve” the original consumed time zone can also look like a bad idea when a time zone rule changes; meetings that have yet to occur will most likely need to be updated with the new time zone rule.</p>
+</li>
+</ul>
+</clause>
+</clause>
+</clause>
+
+<clause id="_client_application_time_zone_issues" obligation="normative">
+<title>Client application time zone issues</title>
+<clause id="_how_should_client_applications_present_a_choice_of_time_zones_to_users" obligation="normative">
+<title>How should client applications present a choice of time zones to users?</title>
+<clause id="_22" obligation="normative">
+<p id="_69a3aeaf-6719-4591-5a85-86c51c5ca64d">Use <tt>TZDATA</tt> database (a.k.a. Olson Database, “America/New_York”) names.</p>
+</clause>
+
+<clause id="_23" obligation="normative">
+<p id="_eee54b40-ed18-12c2-a27a-9dcca581f1dc">Use a GMT Offset scheme (“GMT+2, Cairo”…​).</p>
+</clause>
+
+<clause id="_24" obligation="normative">
+<p id="_f97eabac-0b2d-41bb-448e-84a95e69d75e">Use common name presentation (<tt>EST5EDT</tt>, <tt>PST8PDT</tt>…​).</p>
+</clause>
+
+<clause id="_25" obligation="normative">
+<p id="_7d400ca4-e34c-c53d-0aaa-a7e2a6bf609f">Additionally, a “clickable” world map is often used.</p>
+</clause>
+</clause>
+
+<clause id="_where_should_a_client_application_get_its_supported_time_zone_list" obligation="normative">
+<title>Where should a client application get its supported time zone list?</title>
+<clause id="_26" obligation="normative">
+<p id="_17d44033-11a4-8947-d9e4-4a2b427aadac">Use <tt>TZDATA</tt> database (a.k.a. Olson Database).</p>
+</clause>
+
+<clause id="_27" obligation="normative">
+<p id="_174be4e1-e8f1-649f-972b-2513ad1a93af">Use standardized registry.</p>
+</clause>
+</clause>
+
+<clause id="_how_can_a_client_application_map_the_operating_system_time_zone_to_the_calendar_server_time_zone" obligation="normative">
+<title>How can a client application map the Operating System time zone to the calendar server time zone?</title>
+<clause id="_28" obligation="normative">
+<p id="_5037f1da-5603-8a33-645d-7acb7712a810">Time zone registry with “aliases” could be used. The mapping of OS time zone to a standardized time zone database could be provided by OS Vendors or by a third party. For the long term, platform vendors should ideally start using data coming from a standardized registry.</p>
+</clause>
+</clause>
+
+<clause id="_how_often_should_a_client_update_its_time_zone_definition" obligation="normative">
+<title>How often should a client update its time zone definition</title>
+<clause id="_29" obligation="normative">
+<p id="_0fd26263-0700-4a2c-5098-f5916d01c8fa">Clients can compare a checksum of its time zone list against the server’s checksum, if it’s different; the client refreshes its time zone list with the server’s time zone list.</p>
+</clause>
+
+<clause id="_30" obligation="normative">
+<p id="_d79a9e6e-e771-7f1d-7568-976a64366c0f">By doing periodic checks on the server.</p>
+</clause>
+
+<clause id="_31" obligation="normative">
+<p id="_bbaf3f46-5d83-3a1b-4968-147f88abe72d">Using a push mechanism notifying the client that a time zone has been updated. Possibly by adding a new iTIP method.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_time_zone_registry_and_service_issues" obligation="normative">
+<title>Time zone registry and service issues</title>
+<clause id="_why_do_we_need_a_time_zone_registry_and_service" obligation="normative">
+<title>Why do we need a time zone registry and service?</title>
+<clause id="_32" obligation="normative">
+<p id="_e0bc6218-33e7-36cb-8145-0a3e67f45969">A time zone registry would be useful in producing a standardized list of time zones.</p>
+</clause>
+
+<clause id="_33" obligation="normative">
+<p id="_d1b73ac0-c7af-2a85-c5a5-e8dbd2f7ad62">A time zone service protocol would be useful in defining how time zones should be retrieved and in what format.</p>
+</clause>
+
+<clause id="_34" obligation="normative">
+<p id="_84beae49-8321-31ac-b36a-b769c0f056bb">A time zone registry and service would promote interoperability.</p>
+</clause>
+
+<clause id="_35" obligation="normative">
+<p id="_53798ce9-4734-2ec6-5667-b5cc84df3ad6">A time zone registry and service would solve the problems encountered when trying to consume time zones.</p>
+</clause>
+
+<clause id="_36" obligation="normative">
+<p id="_d30b1a64-754a-02d2-0ab7-44bdec910bfe">A time zone service means having centralized time zone definitions that are easy to update.</p>
+</clause>
+
+<clause id="_37" obligation="normative">
+<p id="_67c8438e-cebc-85d7-d51e-bb400aac2e27">A time zone registry and service could open the door for time zones being sent by reference (Useful for mobile devices and other bandwidth limited platforms).</p>
+</clause>
+</clause>
+
+<clause id="_how_should_a_time_zone_registry_be_implemented" obligation="normative">
+<title>How should a time zone registry be implemented?</title>
+<clause id="_38" obligation="normative">
+<p id="_a0865e1c-d292-796f-a1d1-6fc3fa1a998d">By using an IANA registry to store time zone data with a standardized naming scheme.</p>
+</clause>
+</clause>
+
+<clause id="_how_should_a_time_zone_service_be_implemented" obligation="normative">
+<title>How should a time zone service be implemented?</title>
+<clause id="_39" obligation="normative">
+<p id="_499f05ed-b10a-20ab-5b3c-e69f1c9aa5ef">By defining a standardized way to retrieve the IANA registered time zones (i.e.:  <tt>VTIMEZONE</tt> objects accessible through an extension of CalDAV, DNS, HTTP…​.).</p>
+</clause>
+</clause>
+
+<clause id="_who_should_be_responsible_for_updating_it_how_can_it_be_trusted" obligation="normative">
+<title>Who should be responsible for updating it, how can it be trusted?</title>
+<clause id="_40" obligation="normative">
+<p id="_cf25824e-5c69-e446-ef21-02328f999974">Updates could be done through: RFC, informational RFC, appointed/elected committee/individual who approves updates to the list.</p>
+</clause>
+</clause>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="tz">
+  <formattedref format="application/x-isodoc+xml">Time zone registry draft <link target="http://www.ietf.org/internet-drafts/draft-royer-timezone-registry-02.txt"/></formattedref>
+  <docidentifier type="metanorma">[1]</docidentifier>
+</bibitem><bibitem id="wtz">
+  <formattedref format="application/x-isodoc+xml">Windows time zones to TZID mapping <link target="http://unicode.org/cldr/data/diff/supplemental/supplemental.html#windows___tzid"/></formattedref>
+  <docidentifier type="metanorma">[2]</docidentifier>
+</bibitem><bibitem id="cd">
+  <formattedref format="application/x-isodoc+xml">CalDAV Draft <link target="http://ietfreport.isoc.org/all-ids/draft-dusseault-caldav-08.txt"/></formattedref>
+  <docidentifier type="metanorma">[3]</docidentifier>
+</bibitem><bibitem id="rfc2445" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2445</uri>
+  <docidentifier type="IETF" primary="true">RFC 2445</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2445</docidentifier>
+  <docnumber>RFC2445</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Stenerson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_a3c1bae1-6a92-fc4d-7b5c-714774ed7a93">This memo has been defined to provide the definition of a common format for openly exchanging calendaring and scheduling information across the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2445</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ICALENDAR</keyword>
+  <keyword>interoperable</keyword>
+  <keyword>mime</keyword>
+  <keyword>multipurpose internet mail extensions</keyword>
+</bibitem><bibitem id="rfc2446" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP) Scheduling Events, BusyTime, To-dos and Journal Entries</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2446</uri>
+  <docidentifier type="IETF" primary="true">RFC 2446</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2446</docidentifier>
+  <docnumber>RFC2446</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Hopson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_db2e76a0-34f1-4133-c7ec-68e999c40e57">This document specifies how calendaring systems use iCalendar objects to interoperate with other calendar systems. It does so in a general way so as to allow multiple methods of communication between systems. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5546</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5546</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2446</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ITIP</keyword>
+  <keyword>iCalendar Transport-Independent Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>systems</keyword>
+</bibitem><bibitem id="tzdb">
+  <formattedref format="application/x-isodoc+xml">TZ Database (Olson) <link target="http://www.twinsun.com/tz/tz-link.htm"/></formattedref>
+  <docidentifier type="metanorma">[6]</docidentifier>
+</bibitem>
+
+
+
+
+
+
+</references></bibliography>
+</csd-standard>

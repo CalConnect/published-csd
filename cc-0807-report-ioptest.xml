@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">October 2008 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0807:2008</docidentifier><docnumber>0807</docnumber><date type="published"><on>2008-12-08</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Nate Barry</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Mike Douglass</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Firdosh Ghyara</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Libor Grafnetr</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Tomas Hnetila</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Kellie Hunter</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>May Ma</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Ross Peter Nelson</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Morgen Sagen</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1.1</edition><version><revision-date>2008-12-08</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2008</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_907f9be5-eb56-eaba-9be2-d2f72bcb5dcb" obligation="normative">
+<p id="_97a3febc-f821-69e7-8ed2-9465d2853728">© 2008 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_efc72f7a-8f60-47cc-c82c-c48b8addf2b5">The thirteenth CalConnect interoperability event was held at the Yahoo campus at Sunnyvale, California. Participants of the testing event used predetermined test scenarios. Rather than post the full test scenarios in this document, they can be found on the CalConnect website at the following URL:  <link target="http://www.calconnect.org/ioptesting.shtml"/>.</p>
+
+<p id="_16628e5f-9a35-b546-09ec-026539fff8ae">The documents used in this testing event were the CalConnect CalDAV Matrix for Draft 08, in particular the scheduling section and an iCalendar, iMIP and iTIP testing matrix.</p>
+
+<clause id="_participants" obligation="informative">
+<title>Participants</title>
+<table id="_c469239a-b6c1-e408-3609-86c563faac3b">
+<name>Participants</name>
+<thead><tr><th valign="top" align="left">Organization</th>
+<th valign="top" align="left">Participants</th>
+<th valign="top" align="left">Versions Tested</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><p id="_511e2cbf-1a09-9162-714b-43675b5480d6">Apple</p>
+</td>
+<td valign="top" align="left"><p id="_b7dea853-ff45-32c7-fa04-f85b0b28e814">Cyrus Daboo<br/> Wilfredo Sanchez <br/> Haley Allen <br/> Scott Adler</p>
+</td>
+<td valign="top" align="left"><p id="_fb3afae9-de80-3539-f3dd-0f232622c887">iCal Server and client — OS X 10.5.3<br/> iCal client 3.03</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_9cc60a70-dd40-7456-86f8-1574160ae984">Google</p>
+</td>
+<td valign="top" align="left"><p id="_a2b4f1c9-7089-4338-95f9-6ef2bf022936">Harish Venkataramani<br/> Ross Nelson</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_986c3383-7e76-b065-5f14-151436f93e0c">IBM</p>
+</td>
+<td valign="top" align="left"><p id="_aa11ba29-0631-a0a4-c641-0a93a66ff6b1">Nate Barry<br/> Bruce Kahn</p>
+</td>
+<td valign="top" align="left"><p id="_610bd58e-138d-5189-6316-18673d6258f0">Lotus Domino and Notes 8.05</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_819e9c69-02e9-5726-1d06-5aaf93e36ade">Kerio Technologies</p>
+</td>
+<td valign="top" align="left"><p id="_643d58e7-0224-d18c-de3f-7367d1237378">Tomas Hnetila</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_14e1e825-99c9-05bd-3ede-1817fd6d14a5">Microsoft</p>
+</td>
+<td valign="top" align="left"><p id="_15e6fefb-4db6-a526-75d1-c3d3e6291a34">Firdosh Ghyara</p>
+</td>
+<td valign="top" align="left"><p id="_c05ef00f-4072-1fcc-64f9-8215fc9cf8a6">Exchange 8.5 and Outlook 2007</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_8ed65d0e-2dd2-bbff-6f09-e7076234ecb6">PeopleCube</p>
+</td>
+<td valign="top" align="left"><p id="_d7d9a179-6829-2925-50a5-ae4f1187cf02">Kellie Hunter<br/> Gordon Connelly</p>
+</td>
+<td valign="top" align="left"><p id="_6b6bc0bb-1e58-d00a-c89f-d26306b81e34">Meetingmaker V8.8</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_b9aecc3b-a7fb-40ad-04e2-bb5a40142e3b">RPI (Bedework)</p>
+</td>
+<td valign="top" align="left"><p id="_11da25e6-e283-afbe-f475-f7e2f0b807f5">Mike Douglass</p>
+</td>
+<td valign="top" align="left"><p id="_9c3ab606-d1a6-6326-151d-a75b8adba072">Bedework server 3.5</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_8157ffe2-accf-82de-76dc-a377e5f6e385">Scalix</p>
+</td>
+<td valign="top" align="left"><p id="_30edb021-7b6d-2b8a-e171-691d0e988c8c">Florian von Kurnatowski<br/> Gren Elliot <br/> Chris Olsen</p>
+</td>
+<td valign="top" align="left"><p id="_e5aa9905-78df-88ed-2f95-feb372d021a1">11.4.3 pre-release</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_8ac4076e-9356-8f68-4a62-46472f3c8a3d">Sun Microsystems</p>
+</td>
+<td valign="top" align="left"><p id="_1409ee06-b54f-4b7c-4e87-52abe7635f8f">Arnaud Quillaud<br/> May Ma <br/> Karen Wu <br/> Chengchen Zhou <br/> Lakshmi Pavithra Pidatala</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_177584f0-7aad-c302-6733-2dac30856713">Yahoo/Zimbra</p>
+</td>
+<td valign="top" align="left"><p id="_eaadc27d-c362-a112-0ad1-9167af8d1ded">John Holder</p>
+</td>
+<td valign="top" align="left"><p id="_3b4564e8-9e31-4685-09a7-97e167f72b2c">Zimbra Server pre 5.0.7</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_3f5d5851-4abb-a107-6df9-9aecabba57f8">EM Client — Observer</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_2a3fd761-777e-00bc-7a6d-02fe92bb7ef6">Comind CalDAV Client</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_bf58a353-b697-2575-8e19-14dd30aad698">CalConnect Reps</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_8658403a-87b8-3a01-f680-4f6dd9aa8bbd">Interop Manager Logistics</p>
+</td>
+<td valign="top" align="left"><p id="_568d0380-cc44-f61f-82b7-2746c923ea70">Pat Egen<br/> Dave Thewlis</p>
+</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_general_comments_and_findings" obligation="normative">
+<title>General comments and findings</title>
+<p id="_d6a5cb20-aa25-529f-203e-84256aa8e2b8">Eight CalDAV servers were tested against 4 CalDAV clients. iSchedule, a new specification was tested as well by several servers. Examples of what was tested by CalDAV servers and clients are:</p>
+
+<ul id="_2002d36b-f6a0-bf27-be57-02edc240c71c"><li><p id="_880f9899-88c6-722c-8e3d-74a377f8d78e">CalDAV access</p>
+</li>
+<li><p id="_490eb54e-f054-bc1e-d9a2-677d40043eca">CalDAV scheduling</p>
+</li>
+<li><p id="_1a117c69-6d33-f6c4-4ab3-e4c2841d354d">CalDAV free/busy</p>
+</li>
+<li><p id="_ded4e863-3129-5ce3-cd54-1e92dff26928">CalDAV Availability</p>
+</li>
+<li><p id="_85b0328e-d166-eda7-fec6-1d4671d03e03">CalDAV Delegation.</p>
+</li>
+</ul>
+
+<p id="_a7e1aad7-b5b8-d9eb-ce1c-3f5776d080a0">In addition, two vendors tested their application’s support for iCalendar, iTIP and iMIP. There were several clients who were testing iCalendar, iMIP and iTIP against regular clients as well as against several CalDAV servers so the CalDAV servers could test how they handled iMIP requests.</p>
+
+<p id="_de6a72b9-8f36-3ad3-9ab6-d661c4f1156c">The following are general comments about what occurred and specific findings. Vendor names are not referenced. What is discussed are actual issues found so that developers of applications can recognize potential issues within their own products.</p>
+</clause>
+
+<clause id="_caldav_testing" obligation="normative">
+<title>CalDAV Testing</title>
+<p id="_990ad1b6-9005-ecc9-1d3b-c07222f7765a">During CalDAV testing, the following things were noted:</p>
+
+<p id="_1a0be68b-73cc-946c-4254-1a59ecdcf395">When creating a new single-instance meeting with an alarm set to trigger 15 minutes prior to the schedule time of the meeting, a server removed the alarm after several update operations.</p>
+
+<p id="_5844ceaf-ead8-1dfc-3582-78b48dc01191">When modifying the location of the meeting a server did not preserve seconds on the override of the meeting.</p>
+
+<p id="_7f9811b4-d4a0-2fec-95ca-acf99af4f5d9">After modifying the title of the first instance of the recurring meeting a server did not support the overwrite.</p>
+
+<p id="_803b891f-ce24-ece2-24a8-b15e30056f26">On the “Query all components and return ETag WebDAV property and all data” test, a CalDAV client did a query only for the etag, not the calendar data</p>
+
+<p id="_a22f6dc2-5bcc-5711-0a3c-2eaeb2e248a9">When creating a calendar-query <tt>REPORT</tt>, one server’s Reports are overridden in separate resources with the same url.</p>
+
+<p id="_e393f0b6-7469-0601-2e30-721b7a7fe251">After creating a new calendar in the current user’s personal calendar space, one CalDAV server appends “1” to the name of the created folder.</p>
+
+<p id="_4ac13e7c-351d-d687-3247-7e01cf92e6ae">A CalDAV server verified an issue that makes it impossible to use alerts in one of the clients. Fixing the problem will require the server vendor to preserve non-standard properties specific to this client, so they do not have a complete resolution at the moment. A few other minor issues were also uncovered.</p>
+
+<p id="_32294df0-5ea1-b254-0ac3-1d545573ba43">This same server discovered that they were missing a CalDAV operation (options request, not currently invoked by any other client). They implemented a fix during the interop and verified that the basic scheduling features worked after adding support for the options request. They helped one of the clients testing iCalendar uncover an issue with regards to incrementing sequence numbers when canceling events.</p>
+
+<p id="_8591019d-8d6d-f57a-829f-d824657d5f6f">One CalDAV server noted that they found CalDAV implementations seems more mature than before. Items they noted were GUI and Usability issues in Availability settings in one of the clients. They noted incorrect server responses that caused problems with another client.</p>
+
+<p id="_28e7d51f-8054-ab1f-43bb-37f5488f90dc">A CalDAV server noted the following issues within their own application:</p>
+
+<ul id="_7859371f-0868-1067-52d7-3677cfbde784"><li><p id="_09ce7465-29ba-8713-3d02-b194b1744c61">a problem with <tt>xmlns:D="DAV:"</tt></p>
+</li>
+<li><p id="_95260c49-858d-a488-d0e4-c907bfd4c3d8">another problem with <tt>DAV:</tt> in iSchedule response</p>
+</li>
+<li><p id="_39c30af6-f0de-b2e5-091b-4cad2f59b2d6">Originator and Recipient address are swapped when a meeting reply was sent from a server over iSchedule</p>
+</li>
+<li><p id="_e1e264d5-76ac-2c79-d09c-bda0c65f04d7">finally it works.</p>
+</li>
+</ul>
+
+<p id="_c761d958-f94d-ea1a-0eed-d44ebe05d950">Issues found with other clients and servers:</p>
+
+<ul id="_856eee2d-3dcf-6493-d665-c787ec49e01f"><li><p id="_f384baa6-34d3-8ae9-42c5-9573ddb1c03d">iMIP: iPhone doesn’t recognize meeting invitation from a CalDAV server</p>
+</li>
+<li><p id="_ca2cb743-81cd-1583-a1a6-4d02102d448d">A CalDAV client modified structure of MIME format on site</p>
+</li>
+<li><p id="_fc74d9c3-b6fc-0d3e-9460-8a9c80f0dd14">iMIP: when meeting is accepted in a server’s email, reply is sent to From: header address instead of Organizer’s address.</p>
+</li>
+</ul>
+
+<p id="_781e37db-5537-ff74-0caa-f8be3db0eb32">One CalDAV server noted that all Tomcat versions don’t work with large data amounts with CalDAV. They also noted that a client stored user credentials in the browser cache and even if the server deleted a calendar account and added it back it didn’t ask them to re-authenticate. Also, upon deletion, we had to clear the browser cache to clear user credentials. This happened on Internet Explorer and Firefox.</p>
+
+<p id="_1ff69ee5-71bd-f7d3-9d24-63e58b0cd497">A CalDAV server noted the following:</p>
+
+<p id="_2950ff3d-50a4-4380-b168-ff2ef45705b3">Problems found:</p>
+
+<ol id="_1e0f0b20-edb8-f67b-fd25-bd0c305357a0" type="arabic"><li><p id="_43fc9aa9-ca65-c4f0-f871-643d74bf08f6">If you use the wrong authentication for a valid Calendar, we give a 501 error. A more friendly response would be desirable.</p>
+</li>
+<li><p id="_78e1192e-df1a-cc90-e574-22e86071cba3">If you add a daily recurrence with one of the clients with four instances and delete the third instance, you lose sight of the fourth instance too.</p>
+</li>
+<li><p id="_b5b6e0ff-c200-f548-e9e4-12bf536b4374">If you have a recurrence with an exception where the start of the recurrence specifies seconds, we generate a bad recurrence-id for the exception.</p>
+</li>
+<li><p id="_ccfd6e6c-0ab4-e45f-c4a9-777e5cfb5883">We were not preserving the value of <tt>RSVP</tt> in Meeting <tt>REQUEST</tt>s. i.e. we always assumed the value was  <tt>TRUE</tt>.</p>
+</li>
+<li><p id="_76e1faee-fa1f-9c7e-9a3b-48a53fedea98">Notes originated meetings were not visible to our CalDAV clients.</p>
+</li>
+<li><p id="_8a609851-e93d-59ac-a213-548a8c8d8c42">One server’s iMip Gateway originated messages are not recognized as meeting requests by us. We spotted an original issue that the Content-Type  <tt>METHOD</tt> parameter was not being specified but we still had an issue with the final form of Mime structure that they intend to use.</p>
+</li>
+<li><p id="_572fd6e7-7b6d-9653-edfe-cb887d7a562b">Notes originated requests end up with blank <tt>DESCRIPTION</tt> in the iCalendar object and invalid  <tt>ATTACH</tt> properties.</p>
+</li>
+</ol>
+
+<p id="_684e378e-1c86-3077-634f-2ae14d25f359">Another server observed the following during testing of iSchedule.</p>
+
+<ul id="_eb82a68f-68b9-19cd-7e4c-d60ff1628a84"><li><p id="_75101cb2-3575-fea0-5c08-9ba9d934ef1e">From one server to another server, they got the invitation ok, and reply sent properly and the client was updated with the status</p>
+</li>
+<li><p id="_03ffa208-1ed7-ada2-ac65-08fbd4a5207a">From one server to another an invitation doesn’t show up on the client</p>
+</li>
+<li><p id="_c3e388f4-e35f-ab9a-c65c-204ba7d5108a">From one server to another the invitation was received ok, and reply sent properly, and they could see status updated in the client</p>
+</li>
+<li><p id="_ab15bf14-0cd6-6164-89f3-030d7fdf54ac">On another server to server, the invitation was received ok, and reply sent properly but the status was not updated on the client</p>
+</li>
+<li><p id="_dc045698-e689-3328-8f7f-2bfded2caba9">From one server to another server, the invitation was ok, but reply can’t be sent properly</p>
+</li>
+<li><p id="_899508ec-d5df-155a-6131-3992059a14fe">From one server to another, the invitation was ok, but reply can’t be sent properly</p>
+</li>
+</ul>
+
+<p id="_4dcaaaa0-7745-c5f5-e9a0-8c742f43161b">One server noted:</p>
+
+<p id="_2af275e2-6c4f-ba86-5877-62c73eb53185">There were a number of fixes needed to new code — mostly in CalDAV scheduling — had a number of interactions with a server with problems at both ends.</p>
+
+<p id="_5dba43be-15f2-3db5-3101-642c9bd055a7">One server tested with a client and found it worked well enough with the new CalDAV scheduling draft.</p>
+</clause>
+
+<clause id="_icalendar_testing" obligation="normative">
+<title>iCalendar Testing</title>
+<p id="_78668205-626e-1223-17a2-3307b0acb249">Two vendors tested their applications against each other and other servers that would accept iCalendar objects. These were some of the findings. What is shown is the specific test and observations for each test.</p>
+
+<p id="_3c86d312-8d6d-e933-524f-de5e2e9c744f">Send a meeting invitation</p>
+
+<ul id="_66ed70ed-eafe-4c85-b0ce-b7142598b645"><li><p id="_7e8f5746-75ad-22be-080f-a55f4ea533a2">There is a problem with reading MIME messages sent from one of the servers.</p>
+</li>
+</ul>
+
+<p id="_498601b3-2f54-6b74-aa1a-cfba8cb1dacb">Accept a meeting invitation</p>
+
+<ul id="_d16709e4-3b4d-8ac0-db25-28d5acd90ec3"><li><p id="_5eab5d0e-f318-3c88-9dac-c295fb5557ed">Issue where Accepts are showing as Tentative (likely related to above mismatch bugs)</p>
+</li>
+<li><p id="_fff64a94-7d18-9684-fe01-cee08da7d3e4">One vendor will investigate incorrect assumptions on name match</p>
+</li>
+<li><p id="_f4c633a5-e440-d5cc-328c-e1a9d85bfc96">Acceptances do not reliably get delivered</p>
+</li>
+<li><p id="_456a8578-b579-0e0d-583e-19b9bb1f5547">The entire body shows in accept comments</p>
+</li>
+</ul>
+
+<p id="_7a7076b6-e508-f2a0-1d30-1e8647dc81f6">Cancel a Meeting Invitation</p>
+
+<ul id="_7c71ccac-3092-3b67-32c9-783bd6537638"><li><p id="_b40679fe-0f0f-29c4-7625-e8d791db4e7d">Not bumping the sequence on cancel</p>
+</li>
+<li><p id="_7f5dae1d-1992-792c-770a-56c599f4858a">One vendor will consider not requiring <tt>SEQUENCE</tt> to be bumped</p>
+</li>
+<li><p id="_3b77fba6-c757-59b9-ec66-e1f338d5ad7c">Updating the subject only — possibly related to sequence bump (retest)</p>
+</li>
+<li><p id="_a2982fee-6783-00fd-7d62-692b5a980a5b">Viewing the cancel causing duplicates</p>
+</li>
+</ul>
+
+<p id="_2d32ffdc-0c8c-dbb4-4bb0-7801dff108e8">Send an invite with Rich Text</p>
+
+<ul id="_e9ef9427-93e4-2e10-0939-ab4531ff12eb"><li><p id="_2240e75c-c66e-6cb3-8ebe-35fef3ed1d1b">Not honoring <tt>ALTREP</tt> or sending any rich text.</p>
+</li>
+<li><p id="_9f3a76fd-e9cd-9da3-d1e9-b4d8e25aa4b3">Displaying rich text in invite, not in calendar.</p>
+</li>
+<li><p id="_7393beeb-e11e-0894-c668-40dfaaa0bd69">Putting HTML directly in description rather than in an <tt>ALTREP</tt>.</p>
+</li>
+</ul>
+
+<p id="_76da7bb8-3d74-7e88-3ae7-8ac58bac765d">Send an invite with attachments</p>
+
+<ul id="_bad80756-01eb-2e71-3c99-c4c346edc3da"><li><p id="_6ba1b823-6200-00d1-9961-1ce5e2ffe060">Putting inline attachments that can’t be handled</p>
+</li>
+<li><p id="_be6f531e-d452-c512-1dad-324a9c60ad7a">Attachments show in mail only and not in calendar</p>
+</li>
+</ul>
+
+<p id="_51f2e6c5-6604-2dfd-d93c-c0aeab650a5f">Update a meeting invitation</p>
+
+<ul id="_1a4a8732-f061-cfc0-cfd4-175abe93b899"><li><p id="_be25c75f-2c35-fb59-9d12-1c6ff290becd">Bumping the sequence number and forcing another vendor to accept.</p>
+</li>
+</ul>
+
+<p id="_add2ccbf-882e-39c5-1fbc-5a9017f15e41">Reschedule the original meeting invitation</p>
+
+<ul id="_c8957817-ae57-f9b3-c013-26474c066698"><li><p id="_9f790661-7676-102b-dc30-02e517fd1dfd">Not clearing invitee status on reschedule</p>
+</li>
+</ul>
+
+<p id="_342436c6-f831-d03c-3668-32c941d4e5e5">Decline a meeting invitation</p>
+
+<ul id="_c760aff8-7865-e6d9-5c72-4399cb8711f1"><li><p id="_9fedb915-c3fc-213b-bd98-866b4151d650">Not sending <tt>RSVP</tt> thus causing lost responses</p>
+</li>
+</ul>
+
+<p id="_0ae88051-e610-1717-0763-539099536714">Create a meeting with required and optional Participants</p>
+
+<ul id="_2e2fcd45-494b-f49f-ce9c-d4a90e7d3b90"><li><p id="_9552bdc6-a66d-505c-5e42-69e34ebcecd4">Not correlating the message.</p>
+</li>
+<li><p id="_ba5df5a3-4055-586e-4e6e-f510c6fd15f1">Showing CC users as To users, but without data loss</p>
+</li>
+</ul>
+
+<p id="_cd1d5a83-fa1b-b7c6-f29a-874cc497283c">Create a repeating monthly by date</p>
+
+<ul id="_419eaf17-5e41-184d-e07c-d286d33de79c"><li><p id="_0b0eeb32-795f-872d-9429-8badc5440a91">Bug for monthly on first thurs until 1/2/09 — last instance missing</p>
+</li>
+<li><p id="_330cea29-3010-8af5-4c4b-c82107b4a8cf">Not handling multiple by date entries</p>
+</li>
+</ul>
+
+<p id="_70ccbcb7-08d4-b473-44df-49d8ee625200">Create a repeating monthly by day</p>
+
+<ul id="_328b72de-5835-1ad7-00ed-d274cdaa3687"><li><p id="_94ea921a-e4fc-25f5-9a01-40821b94073b">Not working when multiple days are selected</p>
+</li>
+<li><p id="_b28ae81d-68ae-691e-0fc8-e3cd1f2a6ea3">Not implementing second day</p>
+</li>
+<li><p id="_c103fc63-b695-6e05-f11f-e7a2e079ff50">Not handling multiple by day entries</p>
+</li>
+</ul>
+
+<p id="_0cc5437f-aca3-9264-3b9d-4c0136878725">Create a repeating monthly event from end</p>
+
+<ul id="_faef9edf-9174-0fbb-22e3-bc386d6a30aa"><li><p id="_505bd2e5-a5e7-1654-6448-a50285f125d3">Error with end of month iCalendar.</p>
+</li>
+<li><p id="_fdde0bab-6e54-88a0-6514-d5a819b2edfa">Writing bad iCalendar</p>
+</li>
+</ul>
+
+<p id="_ced09d04-f030-39fc-e9fd-d31aee90d6db">Create a repeating yearly</p>
+
+<ul id="_42e78db3-ed42-5913-7e24-dfbb9993e8aa"><li><p id="_8e48bdb9-5023-3550-9dac-58b624705040">Not honoring <tt>DTSTART</tt> that doesn’t match <tt>RRULE</tt>. <tt>DTEND</tt> is also wrong (early).</p>
+</li>
+</ul>
+
+<p id="_c22798f9-454c-84fc-c0cf-ade65ab1c15f">Create a repeating <tt>RDATE</tt> meeting</p>
+
+<ul id="_07bcd493-b1e8-38d0-dfbf-6a0e04bd4046"><li><p id="_d419b47e-4416-2f27-4779-089ac68b144f">Not supporting or understanding <tt>RRULE</tt></p>
+</li>
+<li><p id="_d49a11cd-76d1-f805-3ff8-c937f01442a1">Not supporting <tt>RDATE</tt>s</p>
+</li>
+</ul>
+
+<p id="_da4541d2-1135-a703-997d-247d9f601c1b">Repeats with no end date</p>
+
+<ul id="_90f9c057-dcf6-1442-1beb-2cdd6d582ebc"><li><p id="_1ff7e676-4332-54a8-083e-08f2b258970e">Sending a response for all even though it truncates the set to some finite value</p>
+</li>
+</ul>
+
+<p id="_96d12b8c-5d56-fa78-f90d-b56186937bde">Repeat every other…​</p>
+
+<ul id="_0cac6a93-1e5b-ee25-2452-601c0e728756"><li><p id="_1ffa2c7f-89c5-a87a-2319-f2ed968eac01">Failing for every other year</p>
+</li>
+</ul>
+
+<p id="_0f771529-b014-c89a-ef2d-66ea53c8cd85">Test until (daily)</p>
+
+<ul id="_6fb776da-668b-dbfc-bd01-ead1dd8fc44b"><li><p id="_d084df09-0a89-48c8-2911-c5d239e2f05f">Not including time on the date</p>
+</li>
+<li><p id="_070a0835-776a-99af-15cb-d8618c05cbd7">Not showing last instance</p>
+</li>
+<li><p id="_d1732d28-d07a-9fe9-1802-e98b81451e4a">Time on the until is not before the instance — still puts it on the calendar.</p>
+</li>
+</ul>
+
+<p id="_9057e593-0e4d-e44e-3fa4-08eb487ec340">Create a repeating daily invite</p>
+
+<ul id="_d19c893c-b2ca-6b49-0603-f58fbfb7931d"><li><p id="_cbe434c8-ad3e-1549-279e-2f487514e125">Duplicate entries upon acceptance (not reproducible)</p>
+</li>
+</ul>
+
+<p id="_b2699dd4-8411-a4c6-2888-37583fcc3851">Update the invite (all instances)</p>
+
+<ul id="_193e83a8-c2f2-0d8c-fb38-89be71bf8c48"><li><p id="_ebe25f9e-06c2-b5d8-a2d1-c8d383ee98bb">Not supporting <tt>RDATE</tt>s</p>
+</li>
+<li><p id="_42c6f307-f96b-6799-fa45-25efd3d29045">Deleting the existing meeting (and invite) and recreating a new invite since it does not handle  <tt>RRULE</tt> updates</p>
+</li>
+</ul>
+
+<p id="_6d5a96c2-045d-aa3f-465d-3224b3aeff39">Reschedule the invite (all instances)</p>
+
+<ul id="_d74cf22f-65b4-c422-e634-abeb472f19bb"><li><p id="_c878021b-95c5-bb00-708c-bb48d7b1f8df">Showing as accepted despite not receiving an updated acceptance</p>
+</li>
+</ul>
+
+<p id="_ba5d0bc1-5cc5-8ff1-5fd9-84ca94e25b6d">Cancel the invite (all instances)</p>
+
+<ul id="_336ba7d4-3944-411a-3712-86d8a1244fdb"><li><p id="_d76e9e19-ff10-9094-8831-b46025de9d88">Not bumping sequence — also <tt>RDATE</tt>s</p>
+</li>
+<li><p id="_2dbd150e-1998-0cd8-d6b0-c6b643f92898">Not bumping sequence number on cancel</p>
+</li>
+</ul>
+
+<p id="_b86aae18-4900-7b3d-994c-5e68fced6c3f">Update one instance, then series</p>
+
+<ul id="_64b3db0b-c066-7bb8-39d1-801bc7641f32"><li><p id="_fdac851e-8d51-851a-3416-5dfa71e8d57a">Not supporting series update (<tt>RDATE</tt>s?)</p>
+</li>
+<li><p id="_7044ad5d-c2e1-e1db-64dd-8bf31909615e">Fail when working on messages with multiple <tt>VEVENT</tt>s</p>
+</li>
+<li><p id="_11ac71a4-0f54-3e1c-0051-3bde93f34ccd">Not interpreted — Does One vendor need to put the <tt>RDATE</tt>?</p>
+</li>
+</ul>
+
+<p id="_3f0a5c39-f249-a05e-c8c0-c7bcdacff83a">Cancel a single instance</p>
+
+<ul id="_e5f22e23-c5b4-411b-a021-a939ea9ded9a"><li><p id="_56b79175-4759-09b7-f927-0282a614ed17">Pass but last char of subject is truncated</p>
+</li>
+<li><p id="_b26cd62d-4f6f-5e96-dbe8-5a2b0ed95331">Not interpreted — Does One vendor need to put the <tt>RDATE</tt>?</p>
+</li>
+<li><p id="_b82865fb-c436-ef3b-d802-68691866cbbf">Doesn’t bump sequence</p>
+</li>
+<li><p id="_ef3f0e02-5cfd-f78e-bd06-605670ffb33c">Does not bump sequence number on cancel</p>
+</li>
+<li><p id="_706502ef-75fc-bef8-9018-db97dac3b3d7">Only updating subject line — possibly related to a bug</p>
+</li>
+<li><p id="_46edf5da-9f80-80a1-8273-4df3d0867047">Only updating subject line — possibly related to a bug</p>
+</li>
+</ul>
+
+<p id="_40dfc41e-2015-68b9-1605-12f764cc5dc1">Reschedule a single instance</p>
+
+<ul id="_9f697fdc-b506-e319-deab-7538a3f9f3bf"><li><p id="_33911d43-903e-7eea-2464-79a42e5997e5">Does not bump sequence number</p>
+</li>
+</ul>
+
+<p id="_54be87c3-9079-0980-d9d9-547d8ba0b0f7">Update a single instance</p>
+
+<ul id="_972d696c-778e-5321-b269-c9f3938f1241"><li><p id="_d7914064-3166-792b-8793-7760e675cc73">Not interpreted — Does One vendor need to put the <tt>RDATE</tt>?</p>
+</li>
+</ul>
+
+<p id="_a9344076-336d-5eb9-de70-9e3fc9539825">Accept the updated single instance</p>
+
+<ul id="_3fcdc05d-0c0e-e5c4-2fd1-8074e8c1e2a8"><li><p id="_e3c9be29-f504-ca0e-9ff9-840403b03b7d">Not handling exception instances</p>
+</li>
+</ul>
+
+<p id="_24a6855c-4c92-8551-46d1-74067ce8aced">Counter a single date</p>
+
+<ul id="_6ec4ce37-862b-1a91-1ffb-8a6bee2669ba"><li><p id="_47ff70bc-9637-2530-4677-b30293c1f8df">Could not correlate the message,</p>
+</li>
+</ul>
+
+<p id="_382a9f07-2878-6517-9b79-03ff63947bc4">Cancel this and all future instances</p>
+
+<ul id="_0a3f0ddc-1623-3c75-ed78-7fb78527442d"><li><p id="_38de1f0e-1933-434c-fbb5-40d139fd26fc">Not supporting <tt>RDATE</tt>s</p>
+</li>
+<li><p id="_56373507-a410-7301-4d11-02efb0b5900d">Bug preventing <tt>RDATE</tt>s from working</p>
+</li>
+</ul>
+
+<p id="_9327dcfc-9fd7-b38e-203e-bf699088a22c">Reschedule meeting and all future instances</p>
+
+<ul id="_44d31adc-bd23-4c20-8368-0d89c3528c3d"><li><p id="_9a00cbbb-2f1c-b9cd-9bf6-12f97ef9c44c">Not sending cancel when it splits, which causes duplicates</p>
+</li>
+</ul>
+
+<p id="_3a601ef0-4779-396b-8f0a-603025bb7dbd">Remove an attendee from a simple meeting</p>
+
+<ul id="_55d85cde-f179-b44c-b928-056a54832aaf"><li><p id="_8780db36-edeb-6684-53e2-77ea5d28dbc9">Does not bump sequence</p>
+</li>
+<li><p id="_62bc2ad4-fc38-c967-9a3b-8824c8928972">Chair does not work</p>
+</li>
+</ul>
+
+<p id="_64cd7170-3069-c220-b86c-80837629ccd5">Add an attendee to a series</p>
+
+<ul id="_07b2fe80-5c40-e659-ad31-1f03f3332b23"><li><p id="_8b32405d-967a-91c1-c3f6-ef356d2929c0">Does not handle <tt>RDATE</tt>s</p>
+</li>
+</ul>
+
+<p id="_f352a353-1fa9-65c1-7d70-71fac6442f4d">Create a meeting with Reminders — one for 5mins, one for 10 mins</p>
+
+<ul id="_2bdbdbbc-53ce-25ce-159f-53cd542479cb"><li><p id="_2f3598be-ff64-2942-dc04-6db4c9c46562">Alarms are not preserved for anyone</p>
+</li>
+</ul>
+
+<p id="_8805b53c-af47-324a-b705-261b3f8e54c8">Items not supported by several applications:</p>
+
+<ul id="_0e3b1e33-390e-bacc-ed85-ce4ee6b54a6c"><li><p id="_be516276-297f-b455-849b-8cc46545906c">Counter all dates</p>
+</li>
+<li><p id="_eded2144-9790-cd59-f93d-41bfbdc8482e">Counter for this and all future instances</p>
+</li>
+<li><p id="_29b81c05-2f18-00e1-3cba-2c0c4bcc7005">Accept the counter for this and all future instances</p>
+</li>
+<li><p id="_6f06e599-9bfc-bfd5-8c88-f41eac2683c8">Counter a meeting invitation</p>
+</li>
+<li><p id="_9e671fcc-7903-dc3e-f127-8788f9be4780">Counter a single date</p>
+</li>
+<li><p id="_b7701d17-f753-ed30-70d4-2a6de14096f9">Counter all dates</p>
+</li>
+<li><p id="_f5f5059b-6d22-8284-b91b-9119267d623b">Accept a meeting invitation counter</p>
+</li>
+<li><p id="_ba57739c-658c-2a0c-11ab-ac163f19e1a3">Accept the countered single date</p>
+</li>
+</ul>
+
+<p id="_7b92f043-b98f-34e5-1a79-0748fbdfe837">A summary of significant interoperability issues is as follows:</p>
+
+<ol id="_260581f9-e7ce-f5c2-7c7a-3bdb21234062" type="arabic"><li><p id="_73d9018e-cfb7-0a4f-cebd-13f82d9a3b93">Needs to handle <tt>VCALENDAR</tt>s with multiple <tt>VEVENT</tt>s — this results in very ugly behavior and result in severe data loss.</p>
+</li>
+<li><p id="_423a09a4-4b9d-066f-2c51-11dc408e92f7">Needs to increment <tt>SEQUENCE</tt> on cancellations to comply with the standard to unblock cancellation tests.</p>
+</li>
+<li><p id="_dc6147fb-20c3-dba8-2473-78f0c84680fb">Revisit handling of <tt>RRULE</tt> updates — current method does not lose data but is a very brute force method. Is there a better way?</p>
+</li>
+<li><p id="_7f12e5a0-7a62-e26e-6780-b23e9ce56c49"><tt>RDATE</tt>s are not supported: This causes severe data loss on some (rare) invites and also on multiple instance updates, which are very common.</p>
+</li>
+<li><p id="_d6912304-6b3d-425b-5efc-503f29264860">Rich body content is not supported in either direction.<note id="_80957842-6ba4-0b6d-2ddd-6d87eb94c1d5"><p id="_27216eb3-6717-c9c4-f031-474978974b6a">Counterproposals now work! This was very exciting!</p>
+</note></p>
+
+</li>
+<li><p id="_e46a7f86-141c-ad7d-fb09-eeee26a59bd5">Must fix the reliability of responses as these seem to intermittently not be sent (bug).</p>
+</li>
+<li><p id="_8a66affc-a7b1-0f33-6f20-d205f083b932">Fix bug with <tt>RDATE</tt> format. This should be working but is not. Fixing this will unblock a large number of tests.</p>
+</li>
+<li><p id="_bfd4c92e-239c-8177-dc60-af33059236d8">Attachments and rich body content come in but do not make it to a calendar.</p>
+</li>
+<li><p id="_3868d3de-bb69-93e5-b2b5-3b59d144273f">Counterproposals are not currently supported.</p>
+</li>
+<li><p id="_ad0479ff-5a39-4523-800b-07dee73fe874">Not handling nested multipart/mixed MIME sections.</p>
+</li>
+<li><p id="_36e037d8-cd35-0228-6d80-e6eca46c5552">The MIME structure needs to be revisited to allow iCalendar data to be represented as workflow rather than as an attachment. This does not block tests but is ugly and annoying.</p>
+</li>
+<li><p id="_047811a0-9a59-79b0-1321-491c74b58c33"><tt>RDATE</tt>s are not supported: This causes severe data loss on some (rare) invites and also on multiple instance updates, which are very common.</p>
+</li>
+<li><p id="_cf707f46-c2a5-b3bc-d6b8-b40bedd61ee0">Counterproposals are not currently supported.</p>
+</li>
+<li><p id="_3aa17e80-1137-c97e-6e30-2c4905c55243">Meeting modifications to a single instance is not yet supported.</p>
+</li>
+<li><p id="_f1e66e9b-4f55-2cc5-fad9-36e6734e01c2">Intermittent problem where meetings get duplicated</p>
+</li>
+</ol>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_5047e915-461c-4c47-8bc9-4f5b5930a357">This meeting was our largest interoperability event to date. Eight CalDAV servers and 4 CalDAV clients were tested as well as iCalendar, iMIP and iTIP</p>
+
+<p id="_455416c6-8182-0e0f-1c29-fea667b75b07">The most significant takeaway from this event was CalDAV clients were able to test with the majority of the servers. In the past, because things were often not finished or applications had issues, it was not possible to complete testing. The fact that one client was able to successfully test against 8 servers during a two day process shows tremendous progress. I look forward to the next set of testing to see how much improvement has been made, particularly with respect to CalDAV scheduling.</p>
+
+<p id="_e96e92d5-c7e4-d11d-d5fd-244163c7a160">With regards to iCalendar testing general interoperability worked far better than it has in the past and it is clear that strong interoperability efforts have been and are being made by many of the vendors present.</p>
+
+<p id="_5a6cd722-0eff-7fa2-7cce-fdd833da36d2">Respectfully submitted by Pat Egen, CalConnect Interop Manager.</p>
+</clause>
+</sections>
+</csd-standard>

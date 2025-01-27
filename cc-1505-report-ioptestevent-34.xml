@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Interoperability Test Event XXXIV, Sep 28-30, 2015</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1505:2015</docidentifier><docnumber>1505</docnumber><date type="published"><on>2015-10-19</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2015-10-19</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2015</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_18c85bc2-7fe7-da90-e276-21b1c434f0d8" obligation="normative">
+<p id="_cf2cd1e6-0df3-6096-5f89-cc1ac3147aa1">© 2015 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_8d3a83de-c239-3714-aea1-2e845d7e2956" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_29007362-ac9c-24ea-99a6-e89b1f229577">This document was prepared by Technical Committee <em>IOPTEST</em>.</p>
+</foreword></preface><sections>
+<clause id="_report" obligation="normative">
+<title>Report</title>
+<p id="_546110f3-ce04-6569-fff0-d87fa65dae15">The September 2015 Calendar Interoperability event took place in Amsterdam, Netherlands hosted by Gershon Janssen.</p>
+
+<p id="_39cfc216-6897-1dcc-a419-6b69b0ba2bd1">There were 9 members participating onsite represented by 12 individuals. Participating entities were:</p>
+
+<ul id="_e5001f79-89cb-3b96-dfc1-1d8c5ca7f78d"><li><p id="_0e15193d-2ea6-2b92-e3c9-2214f08902fe">1&amp;1 (the hosts)</p>
+</li>
+<li><p id="_3f76a98d-efa6-620b-6c78-b4ad1da45086">Apple</p>
+</li>
+<li><p id="_b39d64ce-c6ab-b622-e052-f8a2d7aace50">Mozilla</p>
+</li>
+<li><p id="_5dbb2686-9e1a-9fd8-7fea-2a48aef62e2a">Oracle</p>
+</li>
+<li><p id="_a0eb8a35-82fd-f256-f8e2-225d4830f58c">Spherical Cow Group (Bedework)</p>
+</li>
+<li><p id="_4248ca54-749b-98d0-50b3-3b6b7d51feb1">SmoothSync</p>
+</li>
+<li><p id="_c2d17c54-2caa-ab78-b4f9-ffe21951e3e6">Stylite</p>
+</li>
+<li><p id="_46397841-22c2-9171-2de9-93f5c672ba8d">YouCanBook.me</p>
+</li>
+<li><p id="_329e3a11-8959-e2dc-0494-3247df77206f">Zimbra</p>
+</li>
+</ul>
+
+<p id="_6f79f70f-8ba1-1afc-2b40-545f8a1b0e2b">Additionally present were Gershon Janssen, the host, and as ever Dave Thewlis, Executive Director.</p>
+
+<p id="_3289659c-058b-f1b9-e12a-0823409ce798">There was the usual testing of CalDAV as a number of participants continue to implement features of that protocol. There were a number of client implementations at the event which allowed for fairly extensive testng.</p>
+
+<p id="_279e9f67-5cbc-00b8-b2f2-e9b5337e526a">In addition to the usual testing of protocols we had other items which occupied our time:</p>
+
+<p id="_35ad6f8e-1f1c-e769-1995-3f017982fcc1">There was a lot of interest in the new WebDAV server info document ( <link target="https://tools.ietf.org/html/draft-douglass-server-info"/>). This allows clients to determine what features are available from a service and to cache the information. It allows us to reduce the number of headers being transferred and also allows for more complex information and a way for servers to indicate the feature set has changed. We had implementations from 3 servers and 2 clients — all done during the meeting. The specification went through a number of rapid iterations as we built the code.</p>
+
+<p id="_67e4dc3b-70a1-6b1e-0290-907283cd3ee7">We had planned for some work on the Apple CalDAV test suite to try to improve its usability in continuous testing environments. Ralf Becker of Stylite developed at the meeting a php tool which creates a SQLite database of test results and also provides a number of querying options. This work will probably continue between meetings and we will revisit it at the next event.</p>
+
+<p id="_62d2da28-5149-b215-997c-3f314273b36f">There were a number of discussions that took place during the event. For previous sessions we had tried to move these discussions to a separate room away from the main testing venue. However, we have come to realize that these discussions are of some interest to all participants and that they often provide unexpected insights. For the near future at least we will probably have these discussions as part of the main event. Topics covered the server information document, the new devguide work and possible extensions.</p>
+
+<p id="_d1731957-8242-976a-da6d-b65c1c000868">Once again, this has been a useful event for the participants. Our thanks go to Gershon Janssen for hosting the event and his attentiveness during the testing.</p>
+
+<p id="_37894166-c86b-a347-9d54-073e66d6a86e">Mike Douglass, Spherical Cow Group, CalConnect Interoperability Test Manager</p>
+</clause>
+</sections>
+</csd-standard>

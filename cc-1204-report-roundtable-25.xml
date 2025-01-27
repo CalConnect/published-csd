@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Roundtable XXV, October 3-5, 2012</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1204:2012</docidentifier><docnumber>1204</docnumber><date type="published"><on>2012-10-18</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2012-10-18</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2012</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_4a78cf53-692a-d957-48ab-fc25883e994e" obligation="normative">
+<p id="_ead63c6d-16c1-5177-8eba-a2c1cbc5bc56">© 2012 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_2444a991-5a86-f78b-bdad-7241dcfba1f6">Roundtable XXV took place on October 3-5, 2012, hosted by Google in Zürich, Switzerland. The event was attended by 26 people from 11 members and 5 non-members. The CalConnect Interoperability Test Event was held immediately prior to the Roundtable on October 1-3. Twenty-two people from 10 members and 2 non-members were present onsite, and four members participated remotely.</p>
+
+<p id="_82042d33-6ce1-5e43-7dde-dae63239c18f">The Roundtable was dedicated to technical committee sessions, and informal discussions and networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical Committee sessions were as usual organized sequentially, without competing parallel sessions, as is our standard practice to allow all attendees who wished to be involved in the discussions of each Technical Committee the opportunity to do so.</p>
+</introduction></preface><sections>
+
+<clause id="_special_events" obligation="normative">
+<title>Special Events</title>
+<p id="_bcf05c6d-9d02-8070-7416-ebcd2398a716">The Roundtable was structured with all regular TC sessions occurring in the afternoon to facilitate remote participation (in particular from North America) for the TC sessions. Thursday and Friday mornings were used for special symposia and BOFs:</p>
+
+<ul id="_57285bad-f13d-26b7-3cef-029eaa4aac52"><li><p id="_6731b947-7a14-892f-3ec9-a6abc2311b9f">Improving the web calendaring experience for end users</p>
+</li>
+<li><p id="_6d149649-3518-439f-6881-6c9653e5d201">Calendaring futures and CalConnect directions</p>
+</li>
+<li><p id="_beee3e44-26f4-5027-ae95-a775ae0d49e1">Internationalization/Localization for calendaring data</p>
+</li>
+<li><p id="_4f0fbf20-96cb-3115-b33e-6d20f9081bc9">Best practices for publishing iCalendar data to ensure optimum interoperability</p>
+</li>
+<li><p id="_4b3de2d8-9c33-68e0-f6fc-caa4cf7cf9b3">BOF on <tt>VTODO</tt>s</p>
+</li>
+<li><p id="_e43a1fa1-5e7b-ebbd-219a-ce06c5e6abea">BOF on Consensus Scheduling</p>
+</li>
+</ul>
+
+<p id="_17e07237-5fa7-95ac-4e12-ac06a1f84d01">Following the BOF on <tt>VTODO</tt>s, a <tt>VTODO</tt> Ad Hoc Committee was formed to examine requirements and ongooing work on  <tt>VTODO</tt>s and recommend future activity in this area to CalConnect. The Ad Hoc committee will report out at Roundtable XXVI.</p>
+
+<p id="_6cd38c3d-6d3c-8376-31c3-f4f6833566c9">The host session was presented by Fabian Schlup of Google and focused on various aspects of Google Calendar including internal and external APIs.</p>
+</clause>
+
+<clause id="_documents_since_last_roundtable" obligation="normative">
+<title>Documents since Last Roundtable</title>
+<clause id="_public_review_documents" obligation="normative">
+<title>Public Review Documents</title>
+<ul id="_a4e367dc-9862-b7da-940b-07a42e420b95"><li><p id="_c142c2f2-e40a-00b4-9f0e-0069c803c95c">CalWS-SOAP SOAP Web Services Protocol for Calendaring</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_updated_ietf_drafts_and_proposed_standards_published_rfcs_related_to_calconnect_includes_updates_to_published_calconnect_documents" obligation="normative">
+<title>Updated IETF Drafts and Proposed Standards (published RFCs) related to CalConnect (includes updates to published CalConnect documents)</title>
+<note id="_e9ad3540-cbf2-5388-222c-9511803a0b4e"><p id="_e203ef12-0966-84bb-345b-aba8be4e417c">The majority of specification work in CalConnect is necessarily focused on work to become internet draft submissions to the IETF and ultimpately be progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself.</p>
+</note>
+
+<ul id="_81a331e6-7561-ea11-eeb8-9c392f23e9dd"><li><p id="_165ac4c6-c39b-a976-cd03-33f2c43935d0"><link target="https://tools.ietf.org/html/draft-daboo-calendar-availability-03"/></p>
+</li>
+<li><p id="_10fc3131-70eb-a254-6620-74950575c7f8"><link target="https://tools.ietf.org/html/draft-daboo-icalendar-extensions-05"/></p>
+</li>
+<li><p id="_cabb3fa8-93f2-f039-2a2b-f88dd050d58e"><link target="https://datatracker.ietf.org/doc/draft-daboo-ical-vcard-parameter-encoding/"/></p>
+</li>
+<li><p id="_558dd4ae-1948-d175-daa0-f2e0e904d041"><link target="https://tools.ietf.org/html/draft-daboo-valarm-extensions-04"/></p>
+</li>
+<li><p id="_700cacc5-55e6-1388-cf79-940b65f3c406"><link target="https://www.ietf.org/rfc/rfc6638.txt">Scheduling Extensions to CalDAV RFC 6638</link></p>
+</li>
+<li><p id="_b0c95052-f2cf-15a5-5a4e-071f9025be0f"><link target="http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldavsharing.txt"/></p>
+</li>
+<li><p id="_de487258-7c94-9602-b13b-b8541a10a3f5"><link target="https://tools.ietf.org/html/draft-daboo-ical-vcard-parameter-encoding-01"/></p>
+</li>
+<li><p id="_9b5a1333-caf9-bda3-8c9d-41198c79d13c"><link target="https://datatracker.ietf.org/doc/draft-murchison-webdav-prefer/"/></p>
+</li>
+<li><p id="_8ece5135-d9bc-4d08-3b4b-7100646e6b1a"><link target="https://datatracker.ietf.org/doc/draft-daboo-aggregated-service-discovery/"/></p>
+</li>
+</ul>
+
+<p id="_cba8dded-ae1d-f701-f164-55ae2a2152dc">CalConnect has replaced the internal Interoperability Test Event Report with an internal wiki and etherpads, and the public Interoperability Test Report with a section on the Test Event in the CalConnect <em>Minutes</em> newsletter publised after each event.</p>
+</clause>
+</clause>
+
+<clause id="_update_on_technical_committee_work_and_initiatives" obligation="normative">
+<title>Update on Technical Committee Work and Initiatives</title>
+<p id="_4a58d107-dda6-e7a8-1eef-005e24b4019d">Roundtable session summaries and activities and a report on the Interoperability Test Event are published after each CalConnect event as part of the CalConnect  <em>Minutes</em> newsletter, to be published shortly. Issues of the newsletter may be found at CalConnect  <em>Minutes</em>.</p>
+</clause>
+
+<clause id="_future_events" obligation="normative">
+<title>Future Events</title>
+<ul id="_0e1de868-2c42-be06-20f8-9d4fb5c49826"><li><p id="_61df4821-b7f1-0534-d08c-3db5f2e27f84">CalConnect XXVI: January 28 — February 1, 2013, Oracle, San Francisco Bay Area, California</p>
+</li>
+<li><p id="_567edeb6-b5ab-036b-196a-8245cf121ddf">CalConnect XXVII: June 3-7, 2013, University of Wisconsin, Madison, Wisconsin</p>
+</li>
+<li><p id="_975071f2-b7aa-f3c3-1e39-61e4e91114e6">CalConnect XVIII: Autumn, 2013 (late September/early October), TBD</p>
+</li>
+</ul>
+
+<p id="_0a9a6093-4ac3-9feb-9025-12d0df82fbc9">The general format of the CalConnect week is:</p>
+
+<ul id="_bea3c27d-c9d7-bf29-c071-2143d337fa50"><li><p id="_d430b203-7e4a-0736-c8e9-ca10c0c669b9">Monday morning through Wednesday noon, CalConnect Interoperability Test Event</p>
+</li>
+<li><p id="_8c7fd874-8532-4a6b-8f8c-e2272549e413">Wednesday noon through Friday afternoon, CalConnect Roundtable (presentations, TC sessions, BOFs, networking, Plenary)</p>
+</li>
+</ul>
+
+<p id="_fd70ebdf-4dc7-0205-035b-1385fe903505">This format has been altered for the two (so far) European CalConnect events to move all TC sessions to the afternoon and offer symposia and BOFs during Thursday and Friday mornings.</p>
+</clause>
+</sections>
+</csd-standard>

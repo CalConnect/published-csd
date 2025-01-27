@@ -1,0 +1,1622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Calendaring and Scheduling Glossary of Terms</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1102:2011</docidentifier><docnumber>1102</docnumber><date type="published"><on>2011-02-23</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>2</edition><version><revision-date>2011-02-23</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2011</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>USECASE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_d3d51098-43f8-8ea0-ff8e-f76eabd026d9" obligation="normative">
+<p id="_2e1cdf70-c030-e883-9e15-3028de343bcc">© 2011 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_754b07a3-b870-6cf3-adb4-df393fd05eac">The document came about in an effort to compile, in one location, a common set of terminology with respect to calendaring and scheduling applications and standards. The document incorporates terminology already existing in calendaring standards such as <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/> (Internet Calendaring and Scheduling Core Object Specification), <eref type="inline" bibitemid="rfc5546" citeas="IETF RFC 5546"/> (iCalendar Transport-Independent Interoperability Protocol (iTIP)),  <eref type="inline" bibitemid="rfc6047" citeas="IETF RFC 6047"/> (iCalendar Message-Based Interoperability Protocol (iMIP)),  <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"/> (Calendaring Extensions to WebDAV (CalDAV)) as well as input from members of the Calendaring and Scheduling Consortium (CalConnect).</p>
+
+<p id="_0fce37ae-5cc8-1e67-9a1b-3c29898415fe">Some glossary terms may not appear in published standards today. These are common calendaring terms that are included so that everyone refers to components in the same manner.</p>
+
+<p id="_d8314bd4-4e53-6885-954e-c8fb37f3d26c">As new standards evolve, the glossary will serve as a resource for those creating documents so that all the standards share a common set of terms.</p>
+
+<p id="_74c9adca-998c-af71-7305-0b4be47d68f0">Calendaring and scheduling implementers will be able to utilize the glossary to assist them as they read and decipher calendaring standards. Calendaring and scheduling users will be able to use the glossary to help them better understand the terminology deployed by applications written using calendaring standards.</p>
+</introduction></preface><sections>
+
+<terms id="_terms" obligation="normative">
+<title>Terms and definitions</title><p id="_9ebbb531-2d3e-eb13-6a3c-ec26454a48d4">For the purposes of this document, the following terms and definitions apply.</p>
+
+<term id="term-Access-Control"><preferred><expression>
+<name>Access Control</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_d9f116a6-050d-abad-9750-72b3150a5540">Access control is a system which enables an authority (e.g., user or resource administrator) to control access to different entities in a calendar system. Typically vendors create Preference/Settings options to instantiate access control. Terminology varies considerably across products but broadly speaking access control is usually broken into two areas, read access and write access. Vendor terminology used for read access includes: ‘read’, ‘reviewer’, ‘proxy read’, ‘viewer’, ‘see all’, and ‘see only `freebusy’. Vendor terminology for write access includes: ‘write’, ‘editor’, ‘proxy write’, ‘proxy’, ‘manager’, ‘administrator’, ‘designate’, ‘read/create/edit’, ‘make changes’, ‘manage’, and ‘edit’. (Cp.  <concept><refterm>Delegate</refterm><renderterm>Delegate</renderterm><xref target="term-Delegate"/></concept> and <concept><refterm>Designate</refterm><renderterm>Designate</renderterm><xref target="term-Designate"/></concept>.)</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Access-Control-List"><preferred><expression>
+<name>Access Control List</name>
+</expression>
+</preferred><admitted><expression>
+<name>ACL</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_d1297f38-9406-ba4b-dc15-855f9a2def1d">A list of access control elements that define access control to a particular calendar system entity. See <eref type="inline" bibitemid="rfc3744" citeas="IETF RFC 3744"/> for its use in a WebDAV context.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Accessibility"><preferred><expression>
+<name>Accessibility</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a992c2dd-ebce-2626-9cf4-1ebe612bad2f">Information pertaining to access to a resource by the physically disabled. This applies to Location Resources.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Admittance-Info"><preferred><expression>
+<name>Admittance Info</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_388750bb-528d-2aaf-9c70-b2c36cb06aba">All information required to gain access to a resource. It applies to Location Resources.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Agenda"><preferred><expression>
+<name>Agenda</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_4f8fdb50-5bc3-8200-f870-bb0271478598">See <concept><refterm>Calendar</refterm><renderterm>Calendar</renderterm><xref target="term-Calendar"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Alarm"><preferred><expression>
+<name>Alarm</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_5fb1436b-d245-de3a-8226-0a9e3e79267f">Use of the terms alarm, reminder, alert, and notifications vary by implementation and can represent several things. They can represent a setting applied to an event by which a user indicates they want a ‘notification’ to be triggered to ‘remind’ them about some event or action (cp.  <concept><refterm>VALARM</refterm><renderterm>VALARM</renderterm><xref target="term-VALARM"/></concept> in <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>). They can also be used to designate the type of ‘alert’ that serves as the notification (e.g., email message, audible sound, pop-up window).</p></verbal-definition></definition>
+
+
+
+
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc4791" type="inline" citeas="IETF RFC 4791"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="rfc5546" type="inline" citeas="IETF RFC 5546"/></termsource></term>
+
+<term id="term-Application_calendar-_-XML"><preferred><expression>
+<name>Application/calendar + XML</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_5a6a1d7e-695e-fa87-d783-7d85c7939f02">The MIME content type that indicates an iCalendar object expressed in XML.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Appointment"><preferred><expression>
+<name>Appointment</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_d5cd178b-90ba-ce57-d0b3-d177d900f453">See <concept><refterm>Calendar</refterm><renderterm>Calendar</renderterm><xref target="term-Calendar"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Attendee"><preferred><expression>
+<name>Attendee</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_32a1d89b-2e5a-9f89-c05f-f400d8335710">Specifies the participants or non-participants (e.g., room or resources) for an event. This property in iCalendar can contain multiple attributes specifying additional information, i.e., role, participation status, group membership, delegation, etc.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Auto-schedule"><preferred><expression>
+<name>Auto schedule</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a8d8d905-17c1-8fa5-d5f3-4b4d6d59e5b8">Accept scheduling invitations automatically with no human intervention.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Booking-Window"><preferred><expression>
+<name>Booking Window</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_99a65464-689c-bb44-c595-2eaf405bace7">Defines a window of time a resource can be booked for a particular date. That is, what is the earliest and latest opportunity to book a resource for a given date and time.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-CalDAV"><preferred><expression>
+<name>CalDAV</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_d2adcf67-79c8-b4e7-e715-4348435f3f77">A standard protocol to allow calendaring and scheduling via extensions to the WebDAV protocol. Defined by two specifications, the first,  <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"/>, specifies a calendar access protocol that allows Calendar User Agents to access and manage calendar data. The second specification,  <eref type="inline" bibitemid="draft-desruisseaux-caldav-sched" citeas="Internet-Draft draft-desruisseaux-caldav-sched-10"/>, specifies a standard way of performing scheduling transactions with iCalendar-based calendar components. This document defines the “calendar-auto-schedule” feature of CalDAV.</p></verbal-definition></definition>
+
+
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc4791" type="inline" citeas="IETF RFC 4791"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="draft-desruisseaux-caldav-sched" type="inline" citeas="Internet-Draft draft-desruisseaux-caldav-sched-10"/></termsource></term>
+
+<term id="term-Calendar"><preferred><expression>
+<name>Calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_be1db3df-d91a-860a-be73-0098ad6c93d8">A collection of events. Examples include a person’s or group’s schedule, resource availability, and event listings. May also include items such as tasks, journal entries, etc.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-Access-Rights"><preferred><expression>
+<name>Calendar Access Rights</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_fc37bc5d-6376-7cd1-7363-7ce94143d2b6">See <concept><refterm>Access Control</refterm><renderterm>Access Control</renderterm><xref target="term-Access-Control"/></concept>, <concept><refterm>Access Control List</refterm><renderterm>Access Control List</renderterm><xref target="term-Access-Control-List"/></concept>, <concept><refterm>Delegate</refterm><renderterm>Delegate</renderterm><xref target="term-Delegate"/></concept>, and <concept><refterm>Designate</refterm><renderterm>Designate</renderterm><xref target="term-Designate"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-Collection"><preferred><expression>
+<name>Calendar Collection</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_7081876b-0d47-731e-8669-0d84660db7f0">A calendar collection contains calendar object resources (e.g., <tt>VEVENT</tt>, <tt>VTODO</tt>, <tt>VJOURNAL</tt>, <tt>VFREEBUSY</tt>, etc.) that represent calendar components within a calendar.</p></verbal-definition></definition>
+
+
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc4791" type="inline" citeas="IETF RFC 4791"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Calendar-Object"><preferred><expression>
+<name>Calendar Object</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_77cf7655-f7d3-bc6e-cc36-ec52ac930b4e">A single object that can be any of the constituent components of a calendar (cp.  <concept><refterm>Component</refterm><renderterm>Component</renderterm><xref target="term-Component"/></concept>).</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc4791" type="inline" citeas="IETF RFC 4791"/></termsource></term>
+
+<term id="term-Calendar-Service"><preferred><expression>
+<name>Calendar Service</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_0d464b3b-c49c-01cd-3b49-7b20670e005b">A server application that provides calendar user agents access to calendar stores.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-Store"><preferred><expression>
+<name>Calendar Store</name>
+</expression>
+</preferred><admitted><expression>
+<name>CS</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_546ee2cb-ac0a-3c16-421d-45fc7fe11ca5">A data repository that may contain several calendars as well as properties and components of those calendars. A local calendar store is on the same device as the calendar user agent (CUA). A remote calendar store is not on the same machine/device as the calendar user agent.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Calendar-User"><preferred><expression>
+<name>Calendar User</name>
+</expression>
+</preferred><admitted><expression>
+<name>CU</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_0f4877d1-bdb9-f9f9-6a21-e8f7574b3f9d">A person who accesses or modifies calendar information.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-User-Agent"><preferred><expression>
+<name>Calendar User Agent</name>
+</expression>
+</preferred><admitted><expression>
+<name>CUA</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><ol id="_abff90c0-05f2-30b5-45fd-10fab801d910" type="arabic"><li><p id="_6e7d659a-52fe-c1f4-dff5-276a7fe871d5">Software with which the calendar user communicates with a calendar service or local calendar store to access calendar information.</p>
+</li>
+<li><p id="_a8a2621a-78a8-56c8-1c74-a053fd4c0d3b">Software that gathers calendar data on the Calendar User’s behalf.</p>
+</li>
+</ol></verbal-definition></definition>
+ </term>
+
+<term id="term-CalConnect"><preferred><expression>
+<name>CalConnect</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e075f5fc-26b5-2b34-4c92-e75a7b551fb0">The Calendaring and Scheduling Consortium is focused on the interoperable exchange of calendaring and scheduling information between dissimilar programs, platforms, and technologies. The Consortium’s mission is to promote general understanding of and provide mechanisms to allow interoperable calendaring and scheduling methodologies, tools and applications to enter the mainstream of computing.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-CalWS"><preferred><expression>
+<name>CalWS</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a8be00a8-bd58-1ce2-bf9b-a8fbf9d15f3c">CalWS-REST is a CalConnect Proposal and CalWS-SOAP will be a parallel CalConnect Proposal which define an API of basic operations which allow creation, retrieval, update and deletion of calendar objects. In addition, query and  <tt>freebusy</tt> operations are defined to allow efficient, partial retrieval of calendar data.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Capacity"><preferred><expression>
+<name>Capacity</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_3503e753-7e12-2b3f-0d08-e482139009b7">Capacity of a resource, expressed as a numerical quantity. This applies to a Location Resource.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Component"><preferred><expression>
+<name>Component</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_57ff9bb4-76bd-ca51-3e31-da7df831b6fc">A piece of calendar data such as an event, a task or an alarm. Information about components is stored as properties of those components (cp.  <concept><refterm>Property</refterm><renderterm>Property</renderterm><xref target="term-Property"/></concept>).</p></verbal-definition></definition>
+
+
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc4791" type="inline" citeas="IETF RFC 4791"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Counter"><preferred><expression>
+<name>Counter</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_4f5fec43-6bc7-e51b-10f6-2c67b8b1dae1">A response sent by a Attendee of an event to the event Organizer to propose a change to the event or task such as the scheduled date/time, list of participants, etc. (cp. “counter offer”).</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5546" type="inline" citeas="IETF RFC 5546"/></termsource></term>
+
+<term id="term-Delegate"><preferred><expression>
+<name>Delegate</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_26cf0ba3-5615-9ca1-6a6a-074010751c74">In common usage ‘delegate’ may mean either a person who acts for someone else (cp.  <concept><refterm>Designate</refterm><renderterm>Designate</renderterm><xref target="term-Designate"/></concept>) or refer to the act of appointing someone as a representative. The term has very specific meaning in the  <concept><refterm>iCalendar</refterm><renderterm>iCalendar</renderterm><xref target="term-iCalendar"/></concept> and <concept><refterm>iTIP</refterm><renderterm>iTIP</renderterm><xref target="term-iTIP"/></concept> RFCs. In iCalendar, delegate means to specify that another individual, rather than oneself, should  <strong>attend</strong> an event (cp.  <concept><refterm>Delegator</refterm><renderterm>Delegator</renderterm><xref target="term-Delegator"/></concept> and <concept><refterm>Delegatee</refterm><renderterm>Delegatee</renderterm><xref target="term-Delegatee"/></concept>). In iTIP, delegate means to <strong>assign ownership</strong> of a task to another individual.</p></verbal-definition></definition>
+
+
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="rfc5546" type="inline" citeas="IETF RFC 5546"/></termsource></term>
+
+<term id="term-Delegatee"><preferred><expression>
+<name>Delegatee</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ece88fb8-82ae-560a-6d62-b66a7a9ad5be">The attribute in iCalendar that specifies the calendar user(s) to whom a calendar user has delegated participation in an event. The actual attribute name is <tt>DELEGATED-TO</tt>.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Delegator"><preferred><expression>
+<name>Delegator</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_553f2d6a-1ed4-40c9-b878-6a8c056a16e2">The attribute in iCalendar that specifies the calendar user(s) that have delegated their participation in an event to another calendar user. The actual attribute name is  <tt>DELEGATED-FROM</tt>.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Designate"><preferred><expression>
+<name>Designate</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e82fb8fe-60b5-42b2-9a4e-e275eec93e13">A calendar user authorized to act on behalf of another calendar user. An example of a designate are assistants who schedules meetings for their superior. (Cp. <concept><refterm>Access Control</refterm><renderterm>Access Control</renderterm><xref target="term-Access-Control"/></concept> and <concept><refterm>Access Control List</refterm><renderterm>Access Control List</renderterm><xref target="term-Access-Control-List"/></concept>.)</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5546" type="inline" citeas="IETF RFC 5546"/></termsource></term>
+
+<term id="term-DTEND"><preferred><expression>
+<name><tt>DTEND</tt></name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ec311771-a5e1-6526-2664-5edb451bfadb">The <tt>DTEND</tt> property for a <concept><refterm>VEVENT</refterm><renderterm>VEVENT</renderterm><xref target="term-VEVENT"/></concept> calendar component specifies the noninclusive end of the event.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-DTSTART"><preferred><expression>
+<name><tt>DTSTART</tt></name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_f0eb7571-6ea2-9c54-b2a0-63759f1f1000">The <tt>DTSTART</tt> property for a <concept><refterm>VEVENT</refterm><renderterm>VEVENT</renderterm><xref target="term-VEVENT"/></concept> specifies the inclusive start of the event. For  <concept><refterm>Recurring</refterm><renderterm>recurring</renderterm><xref target="term-Recurring"/></concept> events, it also specifies the very first instance in the recurrence set.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Event"><preferred><expression>
+<name>Event</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_0e6f6212-4d6b-e7b4-8b0b-d0aa676ad17e">A calendar object that is commonly used to represent things that mark time or use time. Examples include meetings, appointments, anniversaries, start times, arrival times, closing times.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Freebusy"><preferred><expression>
+<name>Freebusy</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_7537bb72-0682-5e9f-f849-82e8f1fbdb85">A list of free and busy periods for a particular calendar user or resource. Primarily used for scheduling resources or meetings with other people. Time periods may be marked as busy, free, busy-unavailable (sometimes referred to as out of office) and busy-tentative.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iCal"><preferred><expression>
+<name>iCal</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_b5ce7a1c-65e4-97bf-2b6c-d342918fea21">The name of Apple, Inc’s desktop calendar user agent. Often used as an abbreviation for the  <concept><refterm>iCalendar</refterm><renderterm>iCalendar</renderterm><xref target="term-iCalendar"/></concept> standard.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iCalendar"><preferred><expression>
+<name>iCalendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_cb69e648-e1ff-e8e6-57e7-4393ef481ff6">The Internet Calendaring and Scheduling Core Object Specification. An IETF standard ( <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>) for a text representation of calendar data. Scheduling operations are specified in  <eref type="inline" bibitemid="rfc5546" citeas="IETF RFC 5546"/>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-IETF"><preferred><expression>
+<name>IETF</name>
+</expression>
+</preferred><admitted><expression>
+<name>The Internet Engineering Task Force</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_9ac840c7-700c-21b1-1a9b-a53e21450734">According to <eref type="inline" bibitemid="rfc3935" citeas="IETF RFC 3935"/>, “The IETF has traditionally been a community for experimentation with things that are not fully understood, standardization of protocols for which some understanding has been reached, and publication of (and refinement of) protocols originally specified outside the IETF process. . . . The mission of the IETF is to produce high quality, relevant technical and engineering documents that influence the way people design, use, and manage the Internet in such a way as to make the Internet work better. These documents include protocol standards, best current practices, and informational documents of various kinds.”</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iMIP"><preferred><expression>
+<name>iMIP</name>
+</expression>
+</preferred><admitted><expression>
+<name>iCalendar Message-Based Interoperability Protocol</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_b5e6cbab-3bc3-44bc-e989-986e3782f7cd">An IETF standard (<eref type="inline" bibitemid="rfc6047" citeas="IETF RFC 6047"/>) that describes how iTIP messages are exchanged via email.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iTIP"><preferred><expression>
+<name>iTIP</name>
+</expression>
+</preferred><admitted><expression>
+<name>iCalendar Transport-Independent Interoperability Protocol</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_eb225837-5a29-e86d-1521-e40844ddac51">An IETF Standard ( <eref type="inline" bibitemid="rfc5546" citeas="IETF RFC 5546"/>) that specifies a protocol that uses the iCalendar object specification to provide scheduling interoperability between different calendaring systems without reference to a specific transport protocol so as to allow multiple methods of communication between systems (see  <concept><refterm>iMIP</refterm><renderterm>iMIP</renderterm><xref target="term-iMIP"/></concept>, <concept><refterm>iSchedule</refterm><renderterm>iSchedule</renderterm><xref target="term-iSchedule"/></concept>).</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iSchedule"><preferred><expression>
+<name>iSchedule</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_9a5314b2-8de6-b7bf-c95d-ee71858801f3">A draft specification that describes how <concept><refterm>iTIP</refterm><renderterm>iTIP</renderterm><xref target="term-iTIP"/></concept> messages are exchanged via HTTP</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="ischedule" type="inline" citeas="Internet-Draft draft-desruisseaux-ischedule-01"/></termsource></term>
+
+<term id="term-Instance"><preferred><expression>
+<name>Instance</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ad93ffed-8084-0453-ced8-3ca3fc31b15d">A single event of a larger group of events specified as a recurring event (cp. <concept><refterm>Recurring</refterm><renderterm>Recurring</renderterm><xref target="term-Recurring"/></concept>).</p></verbal-definition></definition>
+
+
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc4791" type="inline" citeas="IETF RFC 4791"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Inventory-Info"><preferred><expression>
+<name>Inventory Info</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ddafed3c-84d0-e820-81a5-52d8d25798ff">All information on other resources available as part of a resource.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Invitation_Invite"><preferred><expression>
+<name>Invitation/Invite</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ed54c899-eb68-87d1-309a-dfd7398cc2bb">A general term from common usage to convey a request for an attendee’s participation in an event. In RFC documents the more specific term is request (cp. <concept><refterm>Request</refterm><renderterm>Request</renderterm><xref target="term-Request"/></concept>).</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Journal-entry"><preferred><expression>
+<name>Journal entry</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_3f48bbee-8717-9957-3ea5-2c8f1a6ba33b">From <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>, one or more descriptive text notes associated with a particular calendar date. Examples of a journal entry include a daily record of a legislative body or a journal entry of individual telephone contacts for the day or an ordered list of accomplishments for the day.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Maximum-Instances"><preferred><expression>
+<name>Maximum Instances</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_52103d41-bb04-dba9-cf71-3173bf9ce0d7">Maximum number of instances of an event a resource can be scheduled for from a given point in time.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Meeting"><preferred><expression>
+<name>Meeting</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_9ab2cc23-91b9-9d50-b52a-5daedcf3fe16">See <concept><refterm>Event</refterm><renderterm>Event</renderterm><xref target="term-Event"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-MIME"><preferred><expression>
+<name>MIME</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_403a133a-f307-b294-752c-382670de2ca0">An acronym for Multipurpose Internet Mail Extensions, a specification for formatting non-ASCII text message content, including iCalendar data, graphics, audio and video, so that they can be sent over the Internet. MIME is supported by email clients and web browsers (see  <eref type="inline" bibitemid="rfc2045" citeas="IETF RFC 2045"/>, <eref type="inline" bibitemid="rfc2046" citeas="IETF RFC 2046"/>, <eref type="inline" bibitemid="rfc2047" citeas="IETF RFC 2047"/>).</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Mime-Type"><preferred><expression>
+<name>Mime Type</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_3c4803f0-5a11-3694-bf58-25fa9e216a5d">An Internet media type, sometimes a Content-type after the name of a header in several protocols whose value is such a type, is a two-part identifier for file formats on the Internet. The identifiers were originally defined in  <eref type="inline" bibitemid="rfc2046" citeas="IETF RFC 2046"/> for use in email sent through SMTP, but their use has expanded to other protocols such as HTTP, RTP and SIP and for other uses (e.g., OS-level file type identification for application/file association).</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Multiple-Bookings"><preferred><expression>
+<name>Multiple Bookings</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ea5ea051-863b-5ddd-d70e-aa0da9362387">Number of simultaneous bookings allowed by a resource, during scheduling.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Notification"><preferred><expression>
+<name>Notification</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a71f5568-89b0-ff0a-e4f8-6ce473600a5c">See <concept><refterm>Alarm</refterm><renderterm>Alarm</renderterm><xref target="term-Alarm"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-OASIS"><preferred><expression>
+<name>OASIS</name>
+</expression>
+</preferred><admitted><expression>
+<name>Organization for the Advancement of Structured Information Standards</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_4603a839-dc6d-1836-9c08-c7f40cd2a7bf">A Standards Development Organization primarily focused on web services standards. OASIS and CalConnect have reciprocal memberships for joint work on WS-Calendar.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="oasis" type="inline" citeas="OASIS"/></termsource></term>
+
+<term id="term-Organizer"><preferred><expression>
+<name>Organizer</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_fc7742f1-62ca-26a4-93a6-e516f29d139a">A calendar user who creates a calendar item, requests free/busy information, or published free/busy information. It is an Organizer who invites Attendees.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Priority"><preferred><expression>
+<name>Priority</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_11ac9a7f-90c3-9e21-f462-51fbc33e893f">A level of importance and/or urgency calendar users can apply to Tasks and Events.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Property"><preferred><expression>
+<name>Property</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_d280b4c7-bf82-a51d-586e-e229dd7a3a90">RFCs define the objects and components of their subject which in turn have properties which have values (sometimes referred to as ‘property parameters’ or ‘property attributes’). These “property parameters” contain meta-information about the property or the property value. Property parameters are provided to specify such information as the location of an alternate text representation for a property value, the language of a text property value, the value type of the property value, and other attributes. Throughout this glossary are references to component, property, and attribute following this usage.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Publish"><preferred><expression>
+<name>Publish</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_1102c114-8f90-c60c-0c0f-66c4f179b753">Generally, to make calendar information, such as <tt>freebusy</tt> time, available to a select group or to the public. From the RFC for  <concept><refterm>iTIP</refterm><renderterm>iTIP</renderterm><xref target="term-iTIP"/></concept>, “The ‘PUBLISH’ method in a ‘VEVENT’ calendar component is an unsolicited posting of an iCalendar object.”</p></verbal-definition></definition>
+ </term>
+
+<term id="term-RECURRENCE-ID"><preferred><expression>
+<name><tt>RECURRENCE-ID</tt></name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_8f163b95-0bab-5371-491e-b52273cb9630">This property is used to identify a specific instance of a <concept><refterm>Recurring</refterm><renderterm>recurring</renderterm><xref target="term-Recurring"/></concept> <concept><refterm>VEVENT</refterm><renderterm>VEVENT</renderterm><xref target="term-VEVENT"/></concept>, <concept><refterm>VTODO</refterm><renderterm>VTODO</renderterm><xref target="term-VTODO"/></concept>, or <concept><refterm>VJOURNAL</refterm><renderterm>VJOURNAL</renderterm><xref target="term-VJOURNAL"/></concept> calendar component.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Recurring"><preferred><expression>
+<name>Recurring</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_773a7389-15e5-6643-db87-956d298087f4">An event or task that happens more than once either with a regular interval (ex. daily, weekly, monthly) that can be expressed by a rule or with an explicit series of dates/times.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Request"><preferred><expression>
+<name>Request</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_6c0784e5-958f-78dc-fa3e-a3e1c3e1a10f">A broadly used term in multiple RFCs to represent an action. That action may be a query for property values from a client to a server (cp.  <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"/>), a query between a client and a server that results in object creation, modification, or deletion (cp. <erefstack><eref connective="and" bibitemid="rfc4791" citeas="IETF RFC 4791" type="inline"/><eref connective="and" bibitemid="rfc5545" citeas="IETF RFC 5545" type="inline"/></erefstack>), and it is the name of a method in iTIP that makes “an explicit invitation to one or more attendees” (among other things, cp.  <eref type="inline" bibitemid="rfc5546" citeas="IETF RFC 5546"/>).</p></verbal-definition></definition>
+
+
+
+
+
+
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc4791" type="inline" citeas="IETF RFC 4791"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="rfc5546" type="inline" citeas="IETF RFC 5546"/></termsource><termsource status="identical" type="authoritative"><origin bibitemid="ischedule" type="inline" citeas="Internet-Draft draft-desruisseaux-ischedule-01"/></termsource></term>
+
+<term id="term-Reminder"><preferred><expression>
+<name>Reminder</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a59aeb96-bb5e-041e-7467-ea0c1a709d11">See <concept><refterm>Alarm</refterm><renderterm>Alarm</renderterm><xref target="term-Alarm"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Repeating"><preferred><expression>
+<name>Repeating</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_84b7aa32-4485-d455-70d1-63072293387c">See <concept><refterm>Recurring</refterm><renderterm>Recurring</renderterm><xref target="term-Recurring"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Resource"><preferred><expression>
+<name>Resource</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a495c235-0e9d-b2a4-5625-b646da88a4c8">A resource in the scheduling context is any shared entity,that can be scheduled by a calendar user, but does not control its own attendance status. Resources can be of “Location”, “Equipment”, or “Role” type.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Resource-Kind"><preferred><expression>
+<name>Resource Kind</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e767f2c7-0f85-e3db-826a-c57968e65752">Specifies the kind of resource object represented. Some of the possible values are “Location”, “Thing”, or “Group”. Location is used for any physical location resource such as room, building, etc. Thing is used for any physical object that can scheduled like projector, printer, etc. Group is used to specify a group of resources with a specific skill set. For example: drivers, electricians, etc.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Resource-Manager-Info"><preferred><expression>
+<name>Resource Manager Info</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_fa3e6338-b6a9-b7f4-bd7d-25255574a7f5">Information on the person(s) responsible for the daily upkeep of a resource.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Response"><preferred><expression>
+<name>Response</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_3b293f68-c781-b182-51c3-aa5276d78c0a">Acceptance or refusal of a meeting request sent to a meeting proposer.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-RFC"><preferred><expression>
+<name>RFC</name>
+</expression>
+</preferred><admitted><expression>
+<name>Request for Comments</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_537e14a8-2e46-27ce-d076-c710bfbc8965">The IETF and other standards bodies use RFCs to define Internet standards. They document most of the protocols, mechanisms, procedures and best practices in use on the Internet</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="ietf" type="inline" citeas="IETF"/></termsource></term>
+
+<term id="term-RSVP"><preferred><expression>
+<name>RSVP</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_6e9e371b-df32-6f43-15d9-9dd0dfaf8193">Specifies whether there is an expectation of a reply from a specific calendar user</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource></term>
+
+<term id="term-Scheduling"><preferred><expression>
+<name>Scheduling</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ec3d1c09-0edd-0445-edbc-17eac09f7f50">Briefly the term refers to the process by which organizers and attendees plan events or assign tasks. More specifically the term encompasses the exchange of request/invitations and responses between organizers and attendees of scheduled events, tasks or journal entries.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Scheduling-Admin-Contact-Info"><preferred><expression>
+<name>Scheduling Admin Contact Info</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a70e3d08-f969-9cbf-b229-d33e65510a67">An attribute that contains contact information for the scheduling approvers, if approval is required.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Task"><preferred><expression>
+<name>Task</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_44987329-0225-76f9-1e4c-e1f351e1bcbe">A representation of an item of work assigned to an individual. In <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>, these are “VTODO” calendar components, which are groupings of component properties and possibly “VALARM” calendar components that represent an action-item or assignment.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Text_calendar"><preferred><expression>
+<name>Text/calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_cf1d8264-ec8a-70e5-18ca-e8bc2b032e0d">The MIME content type for encoding iCalendar objects. Example usage includes: email, web pages.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Time-Zone"><preferred><expression>
+<name>Time Zone</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_fe3f2691-f5bc-a613-b59b-5b521c80063c">Areas of the Earth that have adopted the same local time. Time zones are generally centered on meridians of a longitude, that is a multiple of 15, thus making neighboring time zones one hour apart. However, the one hour separation is not universal and the shapes of time zones can be quite irregular because they usually follow the boundaries of states, countries or other administrative areas. In  <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>, time zones are represented using “VTIMEZONE” calendar components, each with a Time Zone Identifier (TZID) that can be used to tie a particular date and time to a specific timezone.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Transparency"><preferred><expression>
+<name>Transparency</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_b4be2e1b-7577-f626-4957-b35d65ad8fe6">A property of an event that defines whether it will appear free or busy in free/busy time searches.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-UTC"><preferred><expression>
+<name>UTC</name>
+</expression>
+</preferred><admitted><expression>
+<name>Coordinated Universal Time</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_9ad7fa0a-478b-65c5-ad55-7e7e86daf928">UTC is designated to be at zero longitude. Also known as Zulu Time (Nato/military designation). Formerly GMT (Greenwich Mean Time) although there is a slight difference. UTC is the basis for all local time offsets. Offsets are either positive or negative. An example is UTC-8 (Pacific Standard Time). Some iCalendar examples:</p></verbal-definition></definition>
+
+
+ <termexample id="_b1d116d2-2af8-d86c-405d-b7e4e0dc9f50"><p id="_018e3f62-5fd4-16df-c7b6-95a426be334f"><tt>DTSTART:19970714T133000 ;Local time</tt><br/> <tt>DTSTART:19970714T173000Z ;UTC time</tt><br/> <tt>DTSTART;TZID=US-Eastern:19970714T133000 ;Local time and time zone reference</tt></p>
+</termexample></term>
+
+<term id="term-VALARM"><preferred><expression>
+<name><tt>VALARM</tt></name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_95fa2162-14de-1668-b395-018d98414764">A <tt>VALARM</tt> calendar component is a grouping of component properties that is a reminder or alarm for an event or a to-do. For example, it may be used to define a reminder for a pending event or an overdue to-do.  <tt>VALARM</tt>s will thus be included within <concept><refterm>VEVENT</refterm><renderterm>VEVENT</renderterm><xref target="term-VEVENT"/></concept> and <concept><refterm>VTODO</refterm><renderterm>VTODO</renderterm><xref target="term-VTODO"/></concept> components.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-vCalendar"><preferred><expression>
+<name>vCalendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_39cc44c7-b919-ee5e-965b-a5224f28f87e">A text representation of calendar and scheduling data created by the Versit consortium (also, the vCalendar specification). The  <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/> iCalendar specification supersedes the work of vCalendar, though  <tt>VCALENDAR</tt> remains as a component type in the  <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/> iCalendar specification.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-VEVENT"><preferred><expression>
+<name><tt>VEVENT</tt></name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a366db66-02ab-6c29-eec7-3766ff850bb5">A <tt>VEVENT</tt> calendar component represents a scheduled amount of time on a calendar. For example, it can be an activity; such as a one-hour long, department meeting from 8:00 AM to 9:00 AM, tomorrow. Generally, an event will take up time on an individual calendar. The  <tt>VEVENT</tt> is also the calendar component used to specify an anniversary or daily reminder within a calendar.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-VFREEBUSY"><preferred><expression>
+<name><tt>VFREEBUSY</tt></name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_72d52bc7-d8b0-0944-f239-daf25bf3491d">A grouping of component properties that represents either a request for free or busy time information, a reply to a request for free or busy time information, or a published set of busy time information.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-VJOURNAL"><preferred><expression>
+<name><tt>VJOURNAL</tt></name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_5f216abf-7e92-325f-4494-9a6c9c613b98">A <tt>VJOURNAL</tt> calendar component is a grouping of component properties that represent one or more descriptive text notes associated with a particular calendar date. The  <concept><refterm>DTSTART</refterm><renderterm>DTSTART</renderterm><xref target="term-DTSTART"/></concept> property is used to specify the calendar date with which the journal entry is associated. Examples of a journal entry include a daily record of a legislative body or a journal entry of individual telephone contacts for the day or an ordered list of accomplishments for the day. The  <tt>VJOURNAL</tt> calendar component can also be used to associate a document with a calendar date.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-VTODO"><preferred><expression>
+<name><tt>VTODO</tt></name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_bc2f2c5a-d29a-6b78-2d72-666ea65d5ff5">A <tt>VTODO</tt> calendar component is a grouping of component properties and possibly  <concept><refterm>VALARM</refterm><renderterm>VALARM</renderterm><xref target="term-VALARM"/></concept> calendar components that represent an action-item or assignment. For example, it can be used to represent an item of work assigned to an individual; such as “turn in travel expense today”.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-WS-Calendar"><preferred><expression>
+<name>WS-Calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_726daeb0-7999-d44b-ad05-26c23d2b8e6d">An OASIS (Organization for the Advancement of Structured Information Standards) working group tasked with defining a cross-domain standard for passing schedule and interval information between and within services built around CalWS. The product of the working group will be a standard also named “WS-Calendar” (from <link target="http://www.oasis-open.org/committees/workgroup.php?wg_abbrev=ws-calendar"/>). (See <concept><refterm>CalWS</refterm><renderterm>CalWS</renderterm><xref target="term-CalWS"/></concept>.)</p></verbal-definition></definition>
+ </term>
+
+<term id="term-xCal"><preferred><expression>
+<name>xCal</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e096442c-a86d-8b96-772b-d686d7329603">A draft specification that defines an XML representation of iCalendar data.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="xcal" type="inline" citeas="Internet-Draft draft-daboo-et-al-icalendar-in-xml-11"/></termsource></term>
+</terms>
+
+
+</sections><bibliography><references id="_bibliography" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc2045" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2045</uri>
+  <docidentifier type="IETF" primary="true">RFC 2045</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2045</docidentifier>
+  <docnumber>RFC2045</docnumber>
+  <date type="published">
+    <on>1996-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">N. Freed</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">N. Borenstein</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_b2dfd842-18ac-6677-f105-5aa55f0c2ce2">This initial document specifies the various headers used to describe the structure of MIME messages. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2045</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>MIME</keyword>
+  <keyword>media</keyword>
+  <keyword>types</keyword>
+  <keyword>headers</keyword>
+</bibitem><bibitem id="rfc2046" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2046</uri>
+  <docidentifier type="IETF" primary="true">RFC 2046</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2046</docidentifier>
+  <docnumber>RFC2046</docnumber>
+  <date type="published">
+    <on>1996-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">N. Freed</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">N. Borenstein</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_65376226-a091-2b09-9808-e15143290e0d">This second document defines the general structure of the MIME media typing system and defines an initial set of media types. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2046</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>MIME-MEDIA</keyword>
+  <keyword>headers</keyword>
+  <keyword>structure</keyword>
+</bibitem><bibitem id="rfc2047" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2047</uri>
+  <docidentifier type="IETF" primary="true">RFC 2047</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2047</docidentifier>
+  <docnumber>RFC2047</docnumber>
+  <date type="published">
+    <on>1996-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">K. Moore</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_d44a6446-7172-b9f5-bd42-a18e602e04cd">This particular document is the third document in the series. It describes extensions to RFC 822 to allow non-US-ASCII text data in Internet mail header fields. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2047</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>MIME-MSG</keyword>
+  <keyword>media</keyword>
+  <keyword>type</keyword>
+</bibitem><bibitem id="rfc3283" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Guide to Internet Calendaring</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3283</uri>
+  <docidentifier type="IETF" primary="true">RFC 3283</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3283</docidentifier>
+  <docnumber>RFC3283</docnumber>
+  <date type="published">
+    <on>2002-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Mahoney</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Babics</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Taler</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_8e83b1e5-058c-9c72-ecb7-37b07cc65a92">This document describes the various Internet calendaring and scheduling standards and works in progress, and the relationships between them. Its intent is to provide a context for these documents, assist in their understanding, and potentially aid in the design of standards-based calendaring and scheduling systems. The standards addressed are RFC 2445 (iCalendar), RFC 2446 (iTIP), and RFC 2447 (iMIP). The work in progress addressed is “Calendar Access Protocol” (CAP). This document also describes issues and problems that are not solved by these protocols, and that could be targets for future work. This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3283</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>scheduling systems</keyword>
+  <keyword>cap</keyword>
+  <keyword>calendar access protocool</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+</bibitem><bibitem id="rfc3744" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Web Distributed Authoring and Versioning (WebDAV) Access Control Protocol</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3744</uri>
+  <docidentifier type="IETF" primary="true">RFC 3744</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3744</docidentifier>
+  <docnumber>RFC3744</docnumber>
+  <date type="published">
+    <on>2004-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Clemm</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Reschke</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">E. Sedlar</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Whitehead</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_5f1d10e0-0817-6ada-366c-5bd6ab544249">This document specifies a set of methods, headers, message bodies, properties, and reports that define Access Control extensions to the WebDAV Distributed Authoring Protocol. This protocol permits a client to read and modify access control lists that instruct a server whether to allow or deny operations upon a resource (such as HyperText Transfer Protocol (HTTP) method invocations) by a given principal. A lightweight representation of principals as Web resources supports integration of a wide range of user management repositories. Search operations allow discovery and manipulation of principals using human names. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3744</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>WebDAV</keyword>
+  <keyword>Web Distributed Authoring and Versioning</keyword>
+  <keyword>Access Control</keyword>
+</bibitem><bibitem id="rfc3935" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">A Mission Statement for the IETF</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3935</uri>
+  <docidentifier type="IETF" primary="true">RFC 3935</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3935</docidentifier>
+  <docnumber>RFC3935</docnumber>
+  <date type="published">
+    <on>2004-10</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">H. Alvestrand</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_cb31373f-7357-a1b3-e88b-18332cfd61a3">This memo gives a mission statement for the IETF, tries to define the terms used in the statement sufficiently to make the mission statement understandable and useful, argues why the IETF needs a mission statement, and tries to capture some of the debate that led to this point. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">BCP</title>
+
+    <number>95</number>
+  </series>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3935</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Mission Statement</keyword>
+</bibitem><bibitem id="rfc4791" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Calendaring Extensions to WebDAV (CalDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4791</uri>
+  <docidentifier type="IETF" primary="true">RFC 4791</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4791</docidentifier>
+  <docnumber>RFC4791</docnumber>
+  <date type="published">
+    <on>2007-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Dusseault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_9fa5ba56-425e-cc6c-94e6-378ab729a898">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing calendaring and scheduling information based on the iCalendar format. This document defines the “calendar-access” feature of CalDAV. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4791</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>calcav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>webdav</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>http</keyword>
+</bibitem><bibitem id="rfc5545" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>
+  <docidentifier type="IETF" primary="true">RFC 5545</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5545</docidentifier>
+  <docnumber>RFC5545</docnumber>
+  <date type="published">
+    <on>2009-09</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_f9765f7c-6624-86cf-1fa6-5e8a9b33c4ce">This document defines the iCalendar data format for representing and exchanging calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information, independent of any particular calendar service or protocol. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5545</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsify</keyword>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>caldav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>meeting</keyword>
+  <keyword>event</keyword>
+  <keyword>task</keyword>
+  <keyword>to-do</keyword>
+  <keyword>journal</keyword>
+  <keyword>appointment</keyword>
+  <keyword>agenda</keyword>
+  <keyword>schedule</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>ischedule</keyword>
+  <keyword>xCalendar</keyword>
+</bibitem><bibitem id="rfc5546" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5546</uri>
+  <docidentifier type="IETF" primary="true">RFC 5546</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5546</docidentifier>
+  <docnumber>RFC5546</docnumber>
+  <date type="published">
+    <on>2009-12</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_8e54d31c-4732-19c9-935e-21a4164d0fb3">This document specifies a protocol that uses the iCalendar object specification to provide scheduling interoperability between different calendaring systems. This is done without reference to a specific transport protocol so as to allow multiple methods of communication between systems. Subsequent documents will define profiles of this protocol that use specific, interoperable methods of communication between systems.</p>
+
+    <p id="_ae82262e-db0d-57f4-7c2e-0eedd4e11d8f">The iCalendar Transport-Independent Interoperability Protocol (iTIP) complements the iCalendar object specification by adding semantics for group scheduling methods commonly available in current calendaring systems. These scheduling methods permit two or more calendaring systems to perform transactions such as publishing, scheduling, rescheduling, responding to scheduling requests, negotiating changes, or canceling. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5546</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calendar</keyword>
+  <keyword>scheduling</keyword>
+</bibitem><bibitem id="rfc6047" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc6047</uri>
+  <docidentifier type="IETF" primary="true">RFC 6047</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6047</docidentifier>
+  <docnumber>RFC6047</docnumber>
+  <date type="published">
+    <on>2010-12</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Melnikov</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_ed52308b-5f35-65e3-187e-ab49c6ef1d3a">This document, “iCalendar Message-Based Interoperability Protocol (iMIP)”, specifies a binding from the iCalendar Transport-independent Interoperability Protocol (iTIP) to Internet email-based transports. Calendaring entries defined by the iCalendar Object Model (iCalendar) are wrapped using constructs from RFC 5322 and MIME (RFC 2045, RFC 2046, RFC 2047, and RFC 2049), and then transported over SMTP. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>6047</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>IMIP]</keyword>
+  <keyword>electronic mail</keyword>
+  <keyword>transport</keyword>
+  <keyword>itip</keyword>
+  <keyword>iCalendar Transport-independent Interoperability Protocol</keyword>
+  <keyword>iCalendar Object Model</keyword>
+</bibitem><bibitem id="draft-desruisseaux-caldav-sched" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">CalDAV Scheduling Extensions to WebDAV</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-desruisseaux-caldav-sched-10</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-caldav-sched-10</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.desruisseaux-caldav-sched</docidentifier>
+  <docnumber>I-D.desruisseaux-caldav-sched</docnumber>
+  <date type="published">
+    <on>2011-09</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Bernard Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <version>
+    <draft>10</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_fa6f4ed4-41a4-8e0d-1042-3727f8826549">This document defines extensions to the CalDAV “calendar-access” feature to specify a standard way of performing scheduling transactions with iCalendar-based calendar components. This document defines the “calendar-auto-schedule” feature of CalDAV.</p>
+
+  </abstract>
+  <relation type="updatedBy">
+    <bibitem>
+      <formattedref format="text/plain">draft-desruisseaux-caldav-sched-11</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-caldav-sched-11</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-desruisseaux-caldav-sched-10</number>
+  </series>
+</bibitem><bibitem id="xcal" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">xCal: The XML Format for iCalendar</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-et-al-icalendar-in-xml-11</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-et-al-icalendar-in-xml-11</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-et-al-icalendar-in-xml</docidentifier>
+  <docnumber>I-D.daboo-et-al-icalendar-in-xml</docnumber>
+  <date type="published">
+    <on>2011-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>RPI</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple, Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Steven Lees</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Microsoft</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>11</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_907b4b66-4a6b-a728-4ae3-8582b316b635">This specification defines “xCal”, an XML format for iCalendar data. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-et-al-icalendar-in-xml-11</number>
+  </series>
+</bibitem><bibitem id="ischedule" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Internet Calendar Scheduling Protocol (iSchedule)</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-desruisseaux-ischedule-01</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-ischedule-01</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.desruisseaux-ischedule</docidentifier>
+  <docnumber>I-D.desruisseaux-ischedule</docnumber>
+  <date type="published">
+    <on>2010-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Bernard Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <version>
+    <draft>01</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_7bdfdce3-bd5d-b03b-a9f0-5069033724a0">This document defines the Internet Calendar Scheduling Protocol (iSchedule), which is a binding from the iCalendar Transport- independent Interoperability Protocol (iTIP) to the Hypertext Transfer Protocol (HTTP) to enable interoperability between calendaring and scheduling systems over the Internet.</p>
+
+  </abstract>
+  <relation type="updatedBy">
+    <bibitem>
+      <formattedref format="text/plain">draft-desruisseaux-ischedule-02</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-ischedule-02</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-desruisseaux-ischedule-01</number>
+  </series>
+</bibitem><bibitem id="ietf">
+  <formattedref format="application/x-isodoc+xml">ietf.org</formattedref>
+  <docidentifier type="IETF">IETF</docidentifier>
+  
+</bibitem><bibitem id="oasis">
+  <formattedref format="application/x-isodoc+xml">oasis-open.org</formattedref>
+  <docidentifier type="OASIS">OASIS</docidentifier>
+  
+</bibitem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</references></bibliography>
+</csd-standard>

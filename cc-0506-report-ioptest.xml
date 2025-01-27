@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">September 2005 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0506:2005</docidentifier><docnumber>0506</docnumber><date type="published"><on>2005-09-14</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2005-09-14</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2005</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7fbaec4b-0250-84e7-0e43-81775debe8a4" obligation="normative">
+<p id="_cdc4fc6d-0ab8-7040-218a-aee9d6fd453d">© 2005 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<clause id="_report" obligation="normative">
+<title>Report</title>
+<p id="_0032e400-b5d7-8d83-3fef-d9267b99cde5">This event is the seventh event testing calendar interoperability and is the fourth one sponsored by the Calendaring and Scheduling Consortium. The participants and the products and drafts they tested are as follows:</p>
+
+<table id="_8815b1f0-8103-9d56-fbba-332a702b8583" unnumbered="true"><tbody><tr><td colspan="2" valign="top" align="left">VendorName</td>
+<td valign="top" align="left">Products</td>
+<td valign="top" align="left">Tested</td>
+</tr><tr><td valign="top" align="left">EVDB</td>
+<td valign="top" align="left">Dan Markham</td>
+<td valign="top" align="left">EVDB Server</td>
+<td valign="top" align="left">iCalendar</td>
+</tr><tr><td valign="top" align="left">IBM</td>
+<td valign="top" align="left">Bill Le</td>
+<td valign="top" align="left">Lotus Notes 7</td>
+<td valign="top" align="left">iCalendar,iTIP,iMIP</td>
+</tr><tr><td valign="top" align="left">Isamet</td>
+<td valign="top" align="left">Cyrus Daboo</td>
+<td valign="top" align="left">Mulberry</td>
+<td valign="top" align="left">CALDAV, iCalendar</td>
+</tr><tr><td valign="top" align="left">Mozilla</td>
+<td valign="top" align="left">Dan Mosedale</td>
+<td valign="top" align="left">Thunderbird</td>
+<td valign="top" align="left">iCalendar</td>
+</tr><tr><td valign="top" align="left">Novell</td>
+<td valign="top" align="left">Dave Camp</td>
+<td valign="top" align="left">Hula Server</td>
+<td valign="top" align="left">CALDAV</td>
+</tr><tr><td valign="top" align="left">Oracle</td>
+<td valign="top" align="left">Simon Vaillancourt</td>
+<td valign="top" align="left">Collaboration Suite</td>
+<td valign="top" align="left">CALDAV, iCalendar</td>
+</tr><tr><td valign="top" rowspan="3" align="left">OSAF</td>
+<td valign="top" align="left">Grant Baillie</td>
+<td valign="top" align="left">Chandler</td>
+<td valign="top" align="left">CALDAV</td>
+</tr><tr><td valign="top" align="left">Jeffrey Harris</td>
+<td valign="top" align="left">Chandler</td>
+<td valign="top" align="left">iCalendar</td>
+</tr><tr><td valign="top" align="left">Brian</td>
+<td valign="top" align="left">Cosmo</td>
+<td valign="top" align="left">CALDAV</td>
+</tr><tr><td valign="top" align="left">RPI</td>
+<td valign="top" align="left">Mike Douglass</td>
+<td valign="top" align="left">RPI Calendar Server</td>
+<td valign="top" align="left">CALDAV</td>
+</tr><tr><td valign="top" rowspan="2" align="left">Sun</td>
+<td valign="top" align="left">Ciny Joy</td>
+<td valign="top" align="left">Sun Calendar Server</td>
+<td valign="top" align="left">iCalendar,iTIP,iMIP</td>
+</tr><tr><td valign="top" align="left">May Ma</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr></tbody>
+</table>
+
+<p id="_c2dd2413-aa74-4f1e-dd60-475622ea3bf1">Prior to the interop the participants had pre-work to review iCalendar streams, CALDAV scripts and to provide usernames and passwords to the interop list in order for us to attempt to get an earlier start on interop testing.</p>
+
+<clause id="_caldav_testing" obligation="normative">
+<title>CALDAV Testing</title>
+<p id="_64c5dce2-fc45-8d1f-47d4-ac82d8656789">Anyone testing CALDAV had a test script to run through. During the pre-testing, some items were found in the script that were corrected and put back on the CalConnect web server.</p>
+
+<p id="_f74b6bd9-4d61-00ab-1d1d-587faf5fcbaf">As noted before, the CALDAV script was available for pre-testing as “Homework”. Some things that were found and fixed were the following:’</p>
+
+<p id="_838f5a8b-b693-9cab-3c4d-50a303824f2c">One tester noted the following while testing the CALDAV script: these were useful tests of conformance. I guess there’s almost an infinite number of incorrect forms of data but checking that the server enforces guid and uri uniqueness might be worthwhile. And I should add that having these tests available has been very useful.</p>
+
+<p id="_6d40ee05-e103-6f24-8c16-0882afbd6010">They also found the following testing the script prior to the interop. They tried creating a new account to run the scripts against and ran into another problem. The guid is supposed to be globally unique but isn’t. As a first pass he tried changing line 104 to:</p>
+
+<p id="_6b9829e8-8af5-73d7-fd2a-70ecf5efee9c"><tt>T_UIDPREFIX="CalConnectCalDAVTest.${T_USERNAME1}."</tt></p>
+
+<p id="_3f7fe4fa-8105-d71d-75f5-d2e486a6446e">We should probably add a timestamp or something.</p>
+
+<p id="_d8f1a0ad-fccb-5bab-2ec4-5d98fd9d7f57">The script developer replied with: The test is not supposed to be leaving any meetings it created when it’s done, if it does you need to manually clean them up before re-running the test on any users. Additionally, the test does not support being run at the same time from 2 different users because of the UIDs. Your idea to add a timestamp is a good one but should only help in running the test from 2 users at the same time.</p>
+
+<p id="_3eb29350-d0da-c9db-8356-4abe9a4d7541">The tester also found the following items which were fixed.</p>
+
+<p id="_5e9f4368-13ad-c34d-259f-1987faf61b90">The cleanup doesn’t have an .ics suffix on the names. Is this to test the servers response to the “MAY” in calendaring and scheduling information may be suffixed by “.ics”, Does the “.ics” form part of the name.</p>
+
+<p id="_7e612987-67a9-98c4-243f-9fbe40afac0a">The tester’s iCalendar parser is failing with the <tt>MAIL_TO</tt> value. All the RFC examples show mailto and RFC1738 only mentions mailto. This was fixed and the script updated.</p>
+
+<p id="_f72b5beb-e703-e28d-ebc5-c518fca65c57">A new matrix was provided that has all the Musts/Shoulds/Mays and Must Nots/Should Nots listed for the CALDAV draft. Several of the participating vendors filled out this sheet and the results are included with this report.</p>
+
+<p id="_160dc028-bc63-7978-ab63-8ac9de6c7bf3">A CALDAV scenario testing spreadsheet was completed by all the participants and is a summary spreadsheet is included in this report.</p>
+</clause>
+
+<clause id="_rfc2445_2446_and_2447_testing" obligation="normative">
+<title>RFC2445, 2446, and 2447 Testing</title>
+<p id="_d9da69c7-ac3f-6acc-9935-88363cf6bda5">Several ics streams had been submitted prior to the interop and these were pointed to as part of the prework. The idea was that vendors could try out the streams to see how their products reacted. I’m not sure how much of that was done prior to the interop. However, several of the streams were tested at the actual interop.</p>
+
+<p id="_2f3a60dd-c20e-92de-75de-112f4078b671">In addition, a Test scenario used at the last RFC interop was used to create examples. During the testing, it became apparent that it would be very helpful to have example ics streams next to each of the test scenarios.</p>
+</clause>
+
+<clause id="_specific_findings_and_observations" obligation="normative">
+<title>Specific Findings and observations</title>
+<p id="_b940a6d0-90c7-2144-1071-4f07743174b7">The following are some key notes from the CALDAV and iCalendar, iMIP and iTIP .</p>
+
+<p id="_db86e82c-5ac5-e92b-1b84-e423fd0c653b">During testing of the iCalendar scenarios, one vendor was able to:</p>
+
+<ul id="_955d98e2-9b8d-3ac9-74e1-065646e519b8"><li><p id="_b82ff267-a60e-f826-64c5-6596be38f6df"><tt>PUBLISH</tt> and process an event to/from all vendors</p>
+</li>
+<li><p id="_024ecb58-496a-6c8d-804e-a29cbd7d4d81">send/receive from all vendors a single without attachments.</p>
+</li>
+<li><p id="_3edc326b-28de-a552-6c33-d8a4056b7590">send all vendors a single with one attachment (bmp).</p>
+</li>
+<li><p id="_20e7c2d1-24d4-e18f-5d16-43bd1d35bbe3">send all vendors a single with two attachments (txt and bmp).</p>
+</li>
+<li><p id="_dd5feb85-aa68-a9ed-e378-8f329b6d3e43">send all vendors a single with AltReps of text in the description field.</p>
+</li>
+<li><p id="_56868ea3-58ac-684a-dd7f-d42a765482dd">send all vendors a single with AltReps of text in the comments dialog.</p>
+</li>
+<li><p id="_3e1944f1-89a5-c176-e97a-8338b15f2b05">send all vendors a single with AltReps of text in the location field.</p>
+</li>
+<li><p id="_ec17e339-20e6-3a85-3f63-db3816a35193">send all vendors a single with audio alarm.</p>
+</li>
+<li><p id="_bdbf1890-5d14-898f-9899-23a091b9f55f">send all vendors a single with display alarm.</p>
+</li>
+<li><p id="_eb21c125-7ec5-0515-5216-eb5b60abd0d0">send all vendors a single with email alarm.</p>
+</li>
+<li><p id="_e71b8be8-319c-0a75-e0b3-f4ff974049a3">send to vendors individually.</p>
+</li>
+<li><p id="_16d8eb08-53f6-b840-d489-502900db56a8">send to GROUP of vendors.</p>
+</li>
+<li><p id="_9953e2c9-c3b5-34c7-a4f2-7b28988f9a10">send all vendors a single Invite with an RnR.</p>
+</li>
+<li><p id="_d437c0b6-0f8e-f2e9-9fc2-e095e1b16815">send a single Invite with Chair role to all vendors.</p>
+</li>
+<li><p id="_c0a542e4-6ca0-9a05-b5f7-c713e6d08ea6">send a single Invite with <tt>REQ-PARTICIPANT</tt> role to all vendors.</p>
+</li>
+<li><p id="_0c26c9dd-ccae-a4ec-bad1-eb6b0afab84b">send a single Invite with <tt>OPT-PARTICIPANT</tt> role to all vendors.</p>
+</li>
+<li><p id="_f53bf127-cc99-59d4-b26b-a025986741ed">send a single Invite with <tt>NEEDS-ACTION</tt>.</p>
+</li>
+<li><p id="_07488c8d-fd95-1e84-0c58-22c11b059404">send an <tt>ACCEPTED</tt> out.</p>
+</li>
+<li><p id="_bb7bdd02-db00-9d27-c90f-d95d72674812">send a <tt>DECLINED</tt> out.</p>
+</li>
+<li><p id="_669aa469-6d6a-f05b-ad0e-1c02b3168b99">send a <tt>TENTATIVE</tt> out.</p>
+</li>
+<li><p id="_bc006e7b-e049-d02e-00a3-025e598664bc">delegate an invite.</p>
+</li>
+<li><p id="_e8339411-ce69-bd59-ed43-93e40dd88919">send with <tt>RSVP=TRUE</tt></p>
+</li>
+<li><p id="_0447a849-2683-e4fa-57fd-4ba1f0fe7f3b">send with <tt>RSVP=FALSE</tt></p>
+</li>
+<li><p id="_b7e86e86-2253-00f3-fbc7-bbd8c15239a9">send out with <tt>DELEGATED-TO</tt></p>
+</li>
+<li><p id="_91edf5f9-0402-ad95-898d-c9a2efdb65f2">send out with <tt>DELEGATED-FROM</tt></p>
+</li>
+<li><p id="_7d9a79b1-90a6-27ff-991c-36a934744357">send a single event with <tt>SENT-BY</tt> to all vendors</p>
+</li>
+<li><p id="_06f67416-e813-6085-56b7-4b8bf865445c">send with a CN.</p>
+</li>
+</ul>
+
+<p id="_1ef5ff1f-4a6c-5586-ef9d-2ef6696c56f1">During testing of accepting and declining invitations, they sent a vendor a single event. The vendor accepts. The vendor then declines. The paired vendor does not support a request for a Refresh. They were not able to test delegation as no one present supported this.</p>
+
+<p id="_ee5eefc5-6520-802a-6336-be7a3255648c">This was the second vendor’s first interop and several items on the scenarios were not tested. The items where they were successful in sending were:</p>
+
+<ul id="_569cd48f-9ee1-571f-ca6d-7430fe6f2bf6"><li><p id="_9274a1f8-8b21-dfcc-b6cb-173131981e10">Receipt of a published event from all vendors</p>
+</li>
+<li><p id="_e2bce667-4fd1-d60a-441d-ff58cf12b72c">Sending a published event to one vendor</p>
+</li>
+<li><p id="_77686a52-c8fe-61bc-9bb3-58efa13e6913">Display only and email only alarms on Non-repeating events</p>
+</li>
+<li><p id="_dc44433a-748b-2810-3c95-94a739266fc2">Under Partstat they can handle Needs-Action, Accept, Decline and Tentative with two vendors.</p>
+</li>
+<li><p id="_2b98ce73-4fdd-3382-ae5c-136888dd8ddc">They can send accept an invitation and reschedule of a meeting.</p>
+</li>
+<li><p id="_492ed8ea-4d39-15e4-0490-7107fc0db93d">They can <tt>RSVP</tt> to one vendor but not to another.</p>
+</li>
+<li><p id="_80975a5a-58cc-a29e-cb2d-c1ecabd51c0d">They can send and receive chair, req-participant, opt-participant and non-participant on Roles.</p>
+</li>
+</ul>
+
+<p id="_c279868b-24ff-de60-6b59-e89b85c1cf47">Specific issues we came across in testing one client:</p>
+
+<ul id="_298b08e5-decf-89d5-24f1-f7feb6c1cad1"><li><p id="_d398ac56-ef2a-2766-68dc-49329981c317">URL quoting was badly broken (Having ‘@’ in some of the calendar paths was very useful!).</p>
+</li>
+<li><p id="_3021ea14-c649-1ebd-fd15-efe353a225d8">iCALENDAR interoperability issues within the context of ical4j</p>
+</li>
+<li><p id="_7a50201f-65a1-0f3a-3d58-52b15a95dca4">Some code that tries to tell whether a resource exists on the server via HTTP <tt>OPTION</tt>s. After twiddling it to try to get it to work on 5 different servers (and some non-CalDAV servers elsewhere), the tester decided to re-factor it to use  <tt>PROPFIND</tt> where possible.</p>
+</li>
+<li><p id="_b9d5d958-9f27-7b51-ff8f-9c758c1994d7">Finally, running through some CalDAV tests helped isolate display issues in vendor apps. This has nothing to do with interoperability per se, but it’s a serendipitous side-effect!</p>
+</li>
+</ul>
+
+<p id="_0f95fea1-1bd4-0a07-70f4-857e6ebda506">Some problems found (in all products):</p>
+
+<ul id="_340de28d-5e3e-79ec-e956-d8586c412364"><li><p id="_c570f625-bc87-f940-f670-d1b5da2bbd54">iCAL: Escaping of some characters was not done properly. One vendor did not escape all CR in a description property.</p>
+</li>
+<li><p id="_3faf3db6-9c5f-b0b7-9180-28ae19c55a7f">iCAL: Some recurring meetings created by some products did not specify a time zone which is required by RFC2445. According to the draft, when used with a recurrence rule, the “DTSTART” and “DTEND” properties  <tt>MUST</tt> be specified in local time and the appropriate set of “VTIMEZONE” calendar components  <tt>MUST</tt> be included. For detail on the usage of the “VTIMEZONE” calendar component, see the “VTIMEZONE” calendar component definition. About local time — the date with local time form is simply a date-time value that does not contain the UTC designator nor does it reference a time zone.</p>
+</li>
+<li><p id="_0a173cbb-f404-8f47-05ba-441effff305c">CalDAV: If-None-Match and if-match precondition bugs. This is a bug on a CalDAV server where <tt>if-none-match=<strong/></tt> was not handled properly and a bug on a CalDAV client where <tt>if-none-mach=</tt> was set when modifying an event.</p>
+</li>
+<li><p id="_fd656dad-5281-e6fa-254e-0fe5d7f556c0">CalDAV: Interop problems with one vendor’s WebDAV interface making it unable to create events on “strict” CalDAV servers. Their WebDAV interface does a lot of things when creating a file, the most problematic being the  <tt>PUT</tt> of an empty file before doing the actual put of the real file. A CalDAV server enforcing the validity of the ics files being created will never accept that an empty ics file be created. Also it seems to be attempting to create some “.<filename>” hidden files without changing the file extension.</filename></p>
+</li>
+<li><p id="_430e1fe4-e941-f8dc-c980-f47623e5fa82">iCAL: <tt>EXDATE</tt> handling problems — Some vendors were not removing occurrences cancelled with exdate</p>
+</li>
+<li><p id="_1b647a95-d388-9c58-43fb-4b23bde02b53">iCAL: Handling problems with meetings without endtime or duration specified. Some vendors always expected to have either a  <tt>DURATION</tt> or a <tt>DTEND</tt> in a <tt>VEVENT</tt> component. RFC2445 clearly specifies that these are valid events. From the RFC, the description is: “Within the “VEVENT” calendar component, this property defines the start date and time for the event. The property is <tt>REQUIRED</tt> in “VEVENT” calendar components. Events can have a start date/time but no end date/time. In that case, the event does not take up any time.”</p>
+</li>
+<li><p id="_7b9f60bd-c08b-72e4-1483-9f0786d53b3d">iCAL: Handling problems when <tt>VTIMEZONE</tt> defined after <tt>VEVENT</tt> components. A vendor couldn’t import events where the  <tt>VTIMEZONE</tt> component was defined after the <tt>VEVENT</tt> component which is a valid  <tt>VCALENDAR</tt> object.</p>
+</li>
+<li><p id="_47b6d47e-81ef-a92d-8d64-259809b2b19d">iCAL: Matching of recurrence-id to <tt>RDATE</tt>s problems. A vendor was not doing a proper “union” with  <tt>RDATE</tt>s matching dates of a rule (The occurrences would appear as 2 occurrences instead of one.</p>
+</li>
+</ul>
+
+<p id="_1d989098-4183-d256-1e90-1227c4819dce">One vendor can receive our iCal correctly, but they can’t do a REPLY. This vendor sends us iCal stream, but we never receive any iCal stream. This is because they sent us a multi-event iCal (an initial rule event plus an update event for same uid within single iCalendar stream), which we don’t understand and we don’t handle it completely.</p>
+
+<p id="_c80f4134-57ed-59c9-2062-829ae2135b72">One vendor sent an iCal stream with no <tt>DTEND</tt>. We can parse it, but our client can’t handle an event without enddatetime. This is in the schedule to enhance this issue for our next release.</p>
+
+<p id="_02a60dad-c801-25d2-6d54-e408dbd4322f">We can’t handle EXDATEs correctly. In the schedule to fix for next release.</p>
+
+<p id="_2a35c03d-c3df-ebca-33cc-b8a2f35e38e7">One vendor has problems importing ics with Timezone id does not reference the Olson path.</p>
+
+<p id="_dfc7ee68-de4f-3acf-1ff1-06462dd77a4f">One vendor was busy with CalDAV and roundtable, so we couldn’t do much interops in between.</p>
+
+<p id="_1e6d62af-4f0d-f374-26ab-5ac532a730f3">Another thing that we’ve run into in the Interop is that it’s not entirely clear from at least cursory readings whether RRULEs are permitted to be in Zulu time.</p>
+
+<p id="_1c2d5d80-6bdc-12e0-36f0-e2b2141d12ea">Events were created and modified with attendees not in one vendor’s calendar server, using <tt>mailto:&lt;email address&gt;</tt>. One vendor’s calendar server sent iTip messages to the attendees.</p>
+
+<p id="_0c908e3a-71bc-146d-825a-def007891cc2">Similarly users on other calendar servers invited another vendor’s calendar server Users or published events to the calendar server users by sending e-mail and iCal data. The data received was imported. After importing the requested events, replies to events were sent from the Calendar Server via iTip messages to the organizer in appropriate cases.</p>
+
+<p id="_9296ad95-9dc9-a715-f6e5-ec81c2d92a86">The main problem area for us was detected to be timezone and recurrence related. All other implemented feature testing went fine. We do not send  <tt>VTIMEZONE</tt> information or timezone tags in a form specified by the standards in our iTip, making it hard for the consumers to interpret our  <tt>RRULE</tt>s or <tt>RECURRENCEID</tt>s right.</p>
+
+<p id="_d1b3775c-7330-28e9-af6f-2c3032897877">Similarly we do not parse the timezone information provided in iTips we receive right, making consumption of others’ iTips correctly, hard. We do not do a proper union of  <tt>RDATE</tt>s and the dates got by expansion of  <tt>RRULE</tt> resulting in multiple instances of really the same instance at times.</p>
+
+<p id="_a8db595d-3d31-d940-1a8f-6be3e5f6691c">We do not interpret the iTip methods during import which results in attendee copy overwriting the organizer copy on an import.</p>
+
+<p id="_2ca5e052-ee8d-d260-6b7a-d7792e5d0133">We do not send extra <tt>RDATE</tt>s if any when sending out iTip. That is, we send only the <tt>RRULE</tt>.</p>
+</clause>
+
+<clause id="_participant_general_comments" obligation="normative">
+<title>Participant General Comments</title>
+<p id="_04c13a14-e759-53d2-c8a6-23f5323f0bfa">The following are various notes and reports from the participants. The wording has been changed to remove identification of products where possible.</p>
+
+<p id="_a641c2f1-10a0-07e8-2f80-d4ec189aef18">This was my first interop (of any kind), so I wasn’t quite sure what to expect. What I found was a pretty intense combination of testing, debugging and writing code. It was definitely good to fire off questions at server authors, and, if something turned out to be a problem on their side, be able to proceed after they had fixed it.</p>
+
+<p id="_568f85b9-14fc-22b1-67a4-3ae86d35db59">It was also clear that several vendors were arriving with pretty recent implementations of some CalDAV features, so it was good to feel that we were all helping one another shake out some of the corner cases.</p>
+
+<p id="_42efc8b5-2d68-1d16-412a-37dc8d2980db">One client started out being a pure WebDAV client, and CalDAV support is being added afterward. As a result, we worked better against servers that are WebDAV-oriented. Testing against the more calendar-based servers turned up useful bugs.</p>
+
+<p id="_066fa856-4f11-9d02-1e55-94fbe904ffe2">This interop was a very interesting experience and the additional participants helped in finding more interoperability problems.</p>
+
+<p id="_26185bba-b989-bced-fd26-1e3731fa167b">The experience was again very valuable but at times it was difficult to tell what was going on. I think the arrangement for next time will address a lot of that. Ensuring everyone can devote a stretch of time without being dragged out will help. I don’t know if we can timetable tests or encourage people to be clearer about which server they are testing against. By it’s very nature it’s somewhat intensive and that’s a large part of its value but if more vendors take part it might become a little uncontrolled.</p>
+
+<p id="_3397caae-4c0d-f4d9-d977-97174a7a088a">I think encouraging server developers to make the server available ahead of time — say for the week preceding — and encouraging the client people to run through the tests — would weed out some of the simpler bugs. It might also bring to mind some topics for discussion ahead of time.</p>
+
+<p id="_c9b1c203-70eb-6bde-b1cf-3f1b87dba040">One vendor was able to test its CalDAV desktop client, web client and server with other servers and clients at the interop. Overall we found interoperability to be good. In a couple of situations there were areas where servers had not yet implemented functionality, but in several cases they were able to make modifications and get those working during the interop. Other minor issues were fixed during the course of the interop.</p>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_58b9dc39-bf53-0cff-3587-db3f01c2aab0">This was the largest interop event we’ve had testing calendar specifications. Several vendors got an excellent opportunity to see how their products worked with other applications. The more we can test, the more we can find, fix, enhance, and simplify. One of the products from this event will be the RFC matrix which we will provide to the CALSIFY working group at the IETF. It shows what components are supported and not supported by three vendors today. This should prove helpful in their mission to come up with RFC’s that will better interoperate.</p>
+
+<p id="_bd30b582-69a9-aecd-dfa8-48a806a0e709">In addition, based on comments made by attendees and the manager’s analysis of what transpired, we will make modifications to how we handle the interop testing itself. As we add more participants, we will have to make the interop a bit more structured in order to ensure we test each and every product implementation. Pre-defining user-ids prior to the interop this time helped. We will need to ensure that server implementations can be accessed prior to the interop as well. This may pose a problem to those who bring servers with them to interops, but we’ll work around those situations on a company by company basis.</p>
+
+<p id="_54bc2b27-9226-0b40-f9a3-cb6f95447c6e">More vendors at this interop also meant more extensive testing of CALDAV. Most vendors are still in the development stages, but the number of vendors supporting CALDAV is growing, so we expect the number of attendees at future interops to increase. In summary, it was a good event.</p>
+
+<p id="_0d320508-9490-fbf4-1804-9f06d1e24226">Respectively submitted,</p>
+
+<p id="_cc75edb0-fa70-99df-c52a-1943f48dea8c">Patricia Egen<br/> Interop Manager</p>
+</clause>
+</clause>
+</sections>
+</csd-standard>

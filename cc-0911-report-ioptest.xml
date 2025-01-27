@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">October 2009 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0911:2009</docidentifier><docnumber>0911</docnumber><date type="published"><on>2009-11-24</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Gordon Connelly</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Michael Douglass</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Jon Drummond</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Tomas Hnetila</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Ciny Joy</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Andrew McMillan</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Arnaud Quillaud</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>2</edition><version><revision-date>2009-11-24</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2009</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_00b731d5-d923-19b5-259b-ba92f34b5407" obligation="normative">
+<p id="_2ff90088-afa3-d6ab-ae6c-e9f1e3224b5a">© 2009 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_ef72b2bb-f1cf-ad4b-26f3-81be216c64bd">The October 2009 CalConnect interoperability testing event was held at the Apple campus at Cupertino, California. Participants of the testing event used predetermined test scenarios. Rather than post the full scenarios in this document, they can be found on the CalConnect website at the following URL: <link target="http://www.calconnect.org/ioptesting.shtml"/>.</p>
+
+<p id="_78bc8f3d-265a-6330-9084-e5b6cd281714">The documents used in this testing event were the CalConnect CalDAV Matrix for RFC4791, in particular the scheduling section and an iCalendar, iMIP and iTIP testing matrix. Summaries and specific findings and issues found are noted in this document.</p>
+
+<p id="_84277a00-325c-4ec4-a0f7-6211218ee961">A small amount of initial CardDAV testing was done this event as well. Not everyone supports this protocol yet, but those that did performed some testing.</p>
+
+<clause id="_participants" obligation="informative">
+<title>Participants</title>
+<table id="_f091e858-1168-d74d-9ce5-4a0000afea83">
+<name>Participants</name>
+<tbody><tr><td valign="top" align="left">Organization</td>
+<td valign="top" align="left">Participants</td>
+<td valign="top" align="left">Versions Tested</td>
+</tr><tr><td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Cyrus Daboo<br/> Jon Drummond <br/> Morgen Sagen <br/> Jeff Cathers</td>
+<td valign="top" align="left">iCal Server and client — OS X 10.6.1<br/> Apple iCal 4.0 (SnowLeopard)</td>
+</tr><tr><td valign="top" align="left">DaviCal (observer)</td>
+<td valign="top" align="left">Andrew McMillian</td>
+<td valign="top" align="left">DaviCal CalDAV server</td>
+</tr><tr><td valign="top" align="left">Kerio</td>
+<td valign="top" align="left">Tomas Hnetila</td>
+<td valign="top" align="left">Kerio MailServer 6.7.2 &amp; Apple iCal Server</td>
+</tr><tr><td valign="top" align="left">RPI</td>
+<td valign="top" align="left">Michael Douglass</td>
+<td valign="top" align="left">Bedework</td>
+</tr><tr><td valign="top" align="left">PeopleCube</td>
+<td valign="top" align="left">Kellie Hunter<br/> Gordon Connelly</td>
+<td valign="top" align="left">Meetingmaker V8.8</td>
+</tr><tr><td valign="top" align="left">Sun</td>
+<td valign="top" align="left">Ciny Joy<br/> Arnaud Quillaud</td>
+<td valign="top" align="left">CalDAV Server and CalDAV Mobile Client</td>
+</tr><tr><td valign="top" align="left">CalConnect Reps</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Interop Manager<br/> Logistics</td>
+<td valign="top" align="left">Pat Egen<br/> Dave Thewlis</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_general_findings" obligation="normative">
+<title>General Findings</title>
+<p id="_437f2172-62f8-36ab-4c8a-eb98ea945db9">The following are general observations noted during CalDAV testing. This is a public document; therefore references to specific vendors are removed. The purpose of the observations is to show the type of errors seen or experienced.</p>
+
+<p id="_4f3bc9b5-055c-a1e0-b415-d7918883df42">iMip had an issue related to “+” addressing used by one vendor. A vendor fix is required.</p>
+
+<p id="_a6f2d229-be49-0c9f-5240-5c4c4216fcee">Delegate expansion in one application is significantly different from an earlier version of the same application and server work is needed to accommodate those differences.</p>
+
+<p id="_6da7d0f5-0634-1935-066d-979759d49661">One vendor tested the ability to federate free/busy information from a server and it was successful after the vendor added an additional configuration item to allow free/busy information to be accessed without authentication. In a normal installation of the vendor’s application, the  <tt>freebusy</tt> URL is authenticated and access to a user’s  <tt>freebusy</tt> information requires the <tt>CalDAV:read-free-busy</tt> privilege.</p>
+
+<p id="_5c3c9262-3955-93c9-7df3-30eaf36e0f0e">iMIP compatibility testing by one vendor noted <tt>REPLY</tt> is not send to Reply-To: address but to From: address so server doesn’t recognize it. Client doesn’t see the invitation on server</p>
+
+<p id="_0540e4ee-4d93-a4d0-c92a-a30b8098b917">The CalDAV <tt>schedule-inbox-URL</tt> and <tt>schedule-outbox-URL</tt> are being returned incorrectly to one client. They appear like this:</p>
+
+<ul id="_83547627-2775-88cd-693d-73f0c2981dfb"><li><p id="_793d5b70-9935-3ea4-5d4e-e89dfa47675a"><tt>&lt;c:schedule-inbox-URL&gt;/fullcalendars/iop.test.dummy.com/user7/INBOX&lt;/c:schedule-inbox-URL&gt;</tt></p>
+</li>
+<li><p id="_5ddd2c0d-a0f3-d757-5236-2975a38ce42f"><tt>&lt;c:schedule-outbox-URL&gt;/fullcalendars/iop.test.dummy.com/user7/Sent%20Items&lt;/c:schedule-outbox-URL&gt;</tt></p>
+</li>
+</ul>
+
+<p id="_ae3be5eb-c483-89c5-7447-238cbb804237">But they should actually appear inside <tt>HREF</tt> tags like:</p>
+
+<ul id="_ce9a7fe7-9a55-625a-f4bf-dde7f37f2f67"><li><p id="_039f04ab-2b8d-44ff-db53-715ff8ae6f95"><tt>&lt;c:schedule-inbox-URL&gt;&lt;d:href&gt;/fullcalendars/iop.test.dummy.com/user7/INBOX&lt;/d:href&gt;&lt;/c:schedule-inbox-URL&gt;</tt></p>
+</li>
+<li><p id="_ace8affd-17c6-1362-ebe2-7b5c2aa7bd72"><tt>&lt;c:schedule-outbox-URL&gt;&lt;d:href&gt;/fullcalendars/iop.test.dummy.com/user7/Sent%20Items&lt;/d:href&gt;&lt;/c:scheduleoutbox-URL&gt;</tt></p>
+</li>
+</ul>
+
+<p id="_2bcf8b26-a46c-3a07-ac7f-dba5ead7b273">Configuring CardDAV account client results in incorrect server address if username contains ‘@’ character. For example setting the servername to ‘server:port’ and username to ‘user@domain’ results in requests being sent to:  <tt>http://user@domain@server:port</tt>. Our server uses username format <tt>user@domain</tt> in some cases (when more domains are configured). So there is no way to configure client CardDAV account manually with our server.</p>
+
+<p id="_dfefbecc-89b9-aa5e-7d3b-e6d156f5f09c">One client uses “/addressbook/” as the default collection (e.g.: <tt>/addressbooks/<em>uids/…​/addressbook/</em>uids/…​/contacts/". We can resolve this on our side but it would be better if the address book behaved as a general CardDAV client getting this information from the server.</tt></p>
+
+<p id="_3f7d28b2-464b-a8fd-0d29-626a8604c0a1">Areas of particular interest for testing include creating and modifying any and all recurring patterns, specifically looking for behavior centered around instances of recurring patterns that fall on a weekend when our user sets option to move the weekend instance to the closest Friday or Monday.</p>
+
+<p id="_c141de6a-9979-5022-f0d0-34e707885e07">Discovered a few errors related to implicit scheduling. Was not getting triggered correctly. At least partially fixed. More checking required.</p>
+
+<p id="_f301fb9c-6e53-88a4-1a40-77ad97269d1d">Some problems related to alarms and alarms with recurrence instances.</p>
+
+<p id="_5a000801-433a-a5b4-90df-b8c088871b43">First problem was due to not saving <tt>VALARM</tt> x-properties. Client got confused and multiplied default alarms.</p>
+
+<p id="_55096fa3-0749-eca9-cfa8-27b8d4dfa76b">Second problem appears to be server side only and needs further work. Exception when a (summary) change was made to a recurrence instance.</p>
+
+<p id="_3fa69ca7-f21f-fa19-3a10-afd82b15a104">Tests went fine for explicit scheduling. As far as implicit scheduling goes, on testing with one client, bugs were found and fixed, inconsistencies in the draft were discussed and explained. Towards the end of the interop was able to do basic invitation/reply.</p>
+
+<p id="_314a1d40-6d7b-73e4-66b4-cc040ab369eb">One client does not support <tt>VEVENT</tt> with <tt>METHOD:REPLY</tt> and no <tt>DTSTART</tt> when this is allowed by iTIP (but it was easy to fix that on the server side).</p>
+
+<p id="_af5ecde3-b3fd-327d-a1b6-f14980cc761c">One client could not create events because privileges are not correctly reported by a server.</p>
+
+<p id="_34652e47-0446-2565-49a9-e91608405b5a">When creating a new meeting recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks one server returns 415 error code when a client writes attendees with new  <tt>EMAIL</tt> parameter. Hacking the client to remove this parameter leads to success.</p>
+
+<p id="_0f95abd4-3475-9854-bfb3-97c124092d87">One server only allows one alarm. Additional alarms are removed</p>
+
+<p id="_bf480a36-f4d3-aa6b-41f1-36fea06f6de8">There appears to be intermittent errors when events contain alarms. Performing this step on one server caused the entire recurrence to vanish</p>
+
+<p id="_b205f60c-abe6-a9fa-c788-3985da4b1819">On one server, meeting changes beyond the initial invite do not seem to make it to attendees</p>
+
+<p id="_c0471c18-c148-8741-9ddc-4c145ee57e54">One client does not use calendar-query or vEvent queries.</p>
+
+<p id="_8a6678b7-7c6a-246e-e9ff-621d5832d477">One server is unable to create overridden instances</p>
+
+<p id="_4c1c2e3d-a981-aa2d-107d-fee9cc207abe">There are still a few CalDAV servers that do not support scheduling but this number is diminishing.</p>
+
+<p id="_c651a0e4-b475-5588-d76c-01c188dbbfd4">On one server, initial scheduling works but subsequent replies or updates do not.</p>
+
+<p id="_4443d6fb-02f6-967b-d2e2-39e2e83dde04">Creating a regular collection in the current user’s personal calendar space is not supported on some clients.</p>
+
+<p id="_4de7e19f-68ad-0dfb-88dd-086d88f7a187">A mobile client was tested and the following was noted. One server testing failed initially because the client could not handle SSL certs and then Digest auth. Though changes were done in the server to get around that, the client hung after getting to the home collection. More debugging required on client side to solve this.</p>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_8a32ae5e-90a3-dd7a-c42a-c57caecb9dba">As we continue CalDAV testing, there is more and more evidence of improved functionality. Jon Drummond from Apple remarked on how amazed he was that so much was working. This truly shows the support and work done by all the vendors to make this protocol a viable and working effort.</p>
+
+<p id="_2612822d-a446-34fc-766a-dc96ea906364">CardDAV testing is in the very early stages. A small amount was done to “test the waters.” This will be an item on the next event in February.</p>
+
+<p id="_ed51b7f7-ad69-da33-e2a2-7883b5955d9e">None of the vendors were ready to do any Timezone server testing at this event. We will poll the waters next time to see if anyone is ready to do preliminary testing.</p>
+
+<p id="_a56ffc56-e16b-029c-df44-39e10f0519a3">Our thanks to all participants and contributors to this document.</p>
+
+<p id="_85424f9f-2541-5cff-95db-7304c3136c52">Respectfully submitted by Pat Egen, CalConnect Interop Manager.</p>
+</clause>
+</sections>
+</csd-standard>

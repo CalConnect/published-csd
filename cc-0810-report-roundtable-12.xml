@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Roundtable XII, June 4-6 2008</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0810:2008</docidentifier><docnumber>0810</docnumber><date type="published"><on>2008-06-06</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2008-06-06</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2008</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_907f9be5-eb56-eaba-9be2-d2f72bcb5dcb" obligation="normative">
+<p id="_97a3febc-f821-69e7-8ed2-9465d2853728">© 2008 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_a80cadfb-4c45-0040-db5c-ef263705ded7">Roundtable XII took place June 4-6, 2008, hosted by the University of Wisconsin in Madison, Wisconsin. The event was attended by 31 people from 22 organizations, including representatives from two observers (organizations attending a Roundtable to see if they wish to join).</p>
+
+<p id="_baaecf82-6f78-b11a-1277-d2f2ac406990">The Roundtable was dedicated to technical committee sessions, BOFs, and informal discussions and networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical Committee sessions were as usual organized sequentially, without competing parallel sessions, as is our standard practice to allow all attendees who wished to be involved in the discussions of each Technical Committee the opportunity to do so.</p>
+</introduction></preface><sections>
+
+<clause id="_update_on_technical_committees_and_initiatives" obligation="normative">
+<title>Update on Technical Committees and Initiatives</title>
+<clause id="_tc_caldav" obligation="normative">
+<title>TC CALDAV</title>
+<p id="_dc9a4f68-ccf9-d149-6b56-419d5609b4dd">TC CALDAV reported on its work since the last Roundtable and on implicit scheduling. In particular the discussion focused on calendar roles in preparation for the development of a draft protocol on role-based access control in CalDAV.</p>
+</clause>
+
+<clause id="_tc_eventpub" obligation="normative">
+<title>TC EVENTPUB</title>
+<p id="_b46fc378-4ca2-361c-cdfa-19ff4e72602e">TC EVENTPUB discussed venue information on vCard and the need to let the new vCard specification develop. vCard V4 as planned will include new property types for individual, organization, and group, and provide scope for resources. The TC will focus going forward on requirements and use cases around the public event space, and additionally on how that may relate to CalDAV.</p>
+</clause>
+
+<clause id="_tc_freebusy" obligation="normative">
+<title>TC FREEBUSY</title>
+<p id="_6d52e716-3700-7a51-eb07-9fcde37327da">TC FREEBUSY reviewed its work on Freebusy URL. Key issues related to whether  <tt>FBURL</tt> would be used to publish information, as well as meeting events and interactions with CalDAV. Going forward the TC will focus on developing a formal  <tt>FBURL</tt> specification.</p>
+</clause>
+
+<clause id="_tc_ioptest" obligation="normative">
+<title>TC IOPTEST</title>
+<p id="_6afe5d5f-1266-030d-9d98-91d81dc3974a">TC IOPTEST reported on the IOP test event just completed, and presented the proposed Virtual Test Lab as part of the TC MOBILE session.</p>
+</clause>
+
+<clause id="_tc_mobile" obligation="normative">
+<title>TC MOBILE</title>
+<p id="_d3128cc4-4718-a4bd-8dee-35044a1fad73">TC MOBILE presented its work on extending the Mobile Calendar Interoperability Test Suite in the area of recurrences and formal definitions of mobile device capability levels. Plans for a Virtual Test Lab were presented by TC IOPTEST, and the second Mobile Interoperability Test Event was decided upon.</p>
+</clause>
+
+<clause id="_tc_timezone" obligation="normative">
+<title>TC TIMEZONE</title>
+<p id="_98c3edc0-4962-8986-ecf2-de044bc1a8e6">TC TIMEZONE presented the work to date on its draft proposal and RFC and will work towards having the proposal ready to present at the October Roundtable.</p>
+</clause>
+
+<clause id="_tc_usecase" obligation="normative">
+<title>TC USECASE</title>
+<p id="_1fd0bdab-d047-55a1-e9ac-bfd34466ba10">TC USECASE has been reviewing the topic of resources and finds little commonality between existing implementations. The TC will focus on a recommendation document for specific resource management issues.</p>
+</clause>
+
+<clause id="_tc_xml" obligation="normative">
+<title>TC XML</title>
+<p id="_4cc4ed6a-af9e-c560-761b-fc8d617c4973">TC XML, founded at the last Roundtable, reported on its work to date in developing a transform of iCalendar data to/from XML, particularly with respect to the size of an XML representation and the relative friendliness of the XML created.</p>
+</clause>
+
+<clause id="_calconnect_interoperability_test_event" obligation="normative">
+<title>CalConnect Interoperability Test Event</title>
+<p id="_e93193ae-e2c7-e968-6598-5fc79466064b">Participants in the IOP test included Apple, Mozilla, RPI (Bedework), Scalix, and Yahoo!/Zimbra. Results from the event will be posted at Past IOP Reports as soon as they are collated and prepared.</p>
+</clause>
+
+<clause id="_bofs" obligation="normative">
+<title>BOFS</title>
+<p id="_724996c6-e6c6-e90f-10a8-b998433cbd05">The major BOF was on preparing for an enhanced Technology Preview at the October event, and to what degree CalConnect should be trying to conduct a public event with press representatives. As before, we will invite a small number of selected individuals from the media with an interest in calendaring to the Technical Preview in October.</p>
+</clause>
+
+<clause id="_new_initiatives" obligation="normative">
+<title>New Initiatives</title>
+<ul id="_ac6cf56c-866c-f429-6088-d8d51bec89cf"><li><p id="_d91e4f73-61e8-64b2-47f9-df51c0c4fba3">CalConnect is developing a pilot of a Virtual Test Lab, to allow remote interoperability testing of regular or mobile calendaring between registered test pairs, as an adjunct to its regular in-person IOP test events.</p>
+</li>
+<li><p id="_107d2a87-ab41-5729-cd5a-62d12bd9b1ce">The second Mobile Interoperability Test Event will be held on 4-6 November, 2008, in Plzen, Czech Republic, hosted by Kerio Technologies.</p>
+</li>
+<li><p id="_ced24f82-187d-8f5d-864d-aac2b5c4d88b">CalConnect is continuing to consider an invitational “meet CalConnect” event in Europe but the location and timing is still under discussion.</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_future_meetings" obligation="normative">
+<title>Future Meetings</title>
+<ul id="_fcfa2c56-5d88-d0db-0713-d3681a214bc3"><li><p id="_38327942-07be-da16-dd09-320fbb15c777">ROUNDTABLE XIII: October 6-10, 2008, at Yahoo!, Sunnyvale, California. Mobile IOP Test Event: November 4-6, 2008, at Kerio Technologies, Plzen, Czech Republic.</p>
+</li>
+<li><p id="_ae1be0d0-df58-a90c-9fa7-864825f08156">ROUNDTABLE XIV: February 2-6, 2009, host and location TBD (east coast intended).</p>
+</li>
+<li><p id="_99d6c287-0409-ea8f-d324-cf3b369af25a">ROUNDTABLE XV: June 1-5, 2009, host and location TBD (west coast intended).</p>
+</li>
+</ul>
+
+<p id="_37e65408-9417-1af0-30c1-d05f4d872ad2">The format of the CalConnect week is:</p>
+
+<ul id="_5996f09d-03be-ff11-6336-2cdf8f7a86c6"><li><p id="_30c48611-84e5-b97a-ddda-b84bdacb30d0">Monday morning through Wednesday noon, C.I.T.E. (CalConnect Interoperability Test Event)</p>
+</li>
+<li><p id="_0a044cb3-52fd-38d6-9d4a-958b3b481888">Wednesday noon through Friday afternoon, Roundtable (presentations, TC sessions, BOFs, networking, Plenary).</p>
+</li>
+</ul>
+</clause>
+</sections>
+</csd-standard>

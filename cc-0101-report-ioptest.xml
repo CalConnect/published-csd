@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">CalConnect II — April, 2001</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0101:2001</docidentifier><docnumber>0101</docnumber><date type="published"><on>2001-04-13</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2001-04-13</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2001</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_ea878040-fff3-a568-e65c-e554030bae9d" obligation="normative">
+<p id="_5a78a629-90e5-9608-8b6e-d8e6b0dc4e2e">© 2001 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_78a730a2-a5f6-e039-324d-013eee3e8eca">IETF CALSCH Working Group Interoperability Testing . Held Wed. April 11, 2001 — Fri. April 13, 2001 — 8:30 a.m. — 6:00 p.m.</p>
+
+<p id="_e4808184-3e66-4887-c89f-53e250973b28">This second interop test was held at Stanford University in Palo Alto, CA. Stanford gratiously donated the use of their facilities and network in order to help further the movement of our standards. This interop focused on iCalendar, iTIP and iMIP. The testing matrix can be found on www.calsch.org.</p>
+
+<p id="_8d4ba377-5860-d9ac-adc2-87345870c1ae">The first day Pat Egen, IETF CALSCH working group co-chair introduced everyone and established the ground rules as well as let everyone know the network logistics within Stanford and to her server at www.egenconsulting.com.</p>
+
+<clause id="_participants" obligation="informative">
+<title>Participants</title>
+<p id="_2b26d21b-7e57-d9af-94eb-9a7d518614a3">The participants were:</p>
+
+<ul id="_aa2aa00b-bdff-e44c-d5bf-1057d5d8fbbb"><li><p id="_c7aeeb15-b123-5d65-4fa2-337246b96a18">George Babics, Steltor: <link target="mailto:georgeb@steltor.com"/></p>
+</li>
+<li><p id="_09bdc73f-05e8-b9b9-764b-4032b87bfa16">Alan Davies, Steltor: <link target="mailto:aland@steltor.com"/></p>
+</li>
+<li><p id="_0d224ec9-4aab-9391-c16e-be84a590fd2d">Tom Ransdell, Iris: <link target="mailto:transdell@iris.com"/></p>
+</li>
+<li><p id="_fec52b4b-95e3-f7fb-9800-23c0ac661852">Anita Paci, Iris: <link target="mailto:apaci@iris.com"/></p>
+</li>
+<li><p id="_e9ebfbd8-7de8-a2b0-1932-a8b87a8bc079">John Sun, Netscape: <link target="mailto:jsun@netscape.com"/></p>
+</li>
+<li><p id="_fc9e78e8-e429-fab8-2ddc-f4a01c26a6f3">Malika Parekh, Netscape: <link target="mailto:malika@netscape.com"/></p>
+</li>
+<li><p id="_d148679e-c36e-4329-6180-90b26bbf5a37">Pat Egen <link target="mailto:pregen@egenconsulting.com"/></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_and_releases_tested" obligation="informative">
+<title>Products and Releases Tested</title>
+<clause id="_steltor" obligation="informative">
+<title>Steltor</title>
+<ul id="_e42e597f-0c66-388d-b82a-85448d70f1f7"><li><p id="_17ad31cb-b9e2-f2f4-aa40-3478534eaad7">CorporateTime Server 6.0 Alpha</p>
+</li>
+<li><p id="_28a61d92-6bdb-f0e7-cb53-2a25e3e0e63e">CorporateTime Outlook Connector 3.0</p>
+</li>
+<li><p id="_a849968c-c915-df31-fc62-dbb7b08b536c">CorporateTime Native Client 6.0 Alpha</p>
+</li>
+<li><p id="_a0424bba-5d64-fd69-a5a6-da2ab6e38505">CorporateTime iMIP/iTIP Alpha Helper Application</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_lotusiris" obligation="informative">
+<title>Lotus/Iris</title>
+<ul id="_eec761f4-3cf0-ea3e-c14e-ea348c2c2d9d"><li><p id="_57abaee9-7156-f00f-9a84-6221f8dac9b0">Lotus Domino and Notes Release RNext</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_iplanet" obligation="informative">
+<title>iPlanet</title>
+<ul id="_2241fed4-c631-1c78-f2b9-96ab97e46863"><li><p id="_8759ea26-bc7a-2761-4e2e-a9c056d79138">Calendar Server Version 5.next</p>
+</li>
+</ul>
+</clause>
+</clause>
+</introduction></preface><sections>
+<clause id="_general_summary" obligation="normative">
+<title>General Summary</title>
+<p id="_13bd06f7-7957-446a-41b7-5407767b2def">These notes are “homogenized” — in other words, names of vendors have been removed so you can’t tell who is who. Once the draft moves forward, we will post which vendor supports which component. For purposes of this document, I will call them Vendor 1, Vendor 2 and Vendor 3. I have also included a section with general notes as related by each vendor.</p>
+
+<clause id="_vendor_1_notesresults" obligation="normative">
+<title>Vendor 1 notes/results</title>
+<p id="_3171388d-f056-cac4-cf2a-9b9544b2ebfe">Overall there was good interoperability. In general the vendors were able to interoperate. They were able to invite, reply, reschedule, and cancel to single instance meetings. There was some problems with the timezones that were used in recurrence rules, as a result only minimal testing was done with events with multiple occurrences. Finally, even though Microsoft was not there, some interoperability was done with Outlook.</p>
+
+<table id="_1df3699e-0501-146c-6307-6d38608270e8" unnumbered="true"><thead><tr><th valign="top" align="left"/><th colspan="2" valign="top" align="left">Vendor 1</th>
+<th colspan="2" valign="top" align="left">Vendor 2</th>
+<th colspan="2" valign="top" align="left">Vendor 3</th>
+</tr><tr><th valign="top" align="left">iTIP Methods</th>
+<th valign="top" align="left">Send</th>
+<th valign="top" align="left">Accept</th>
+<th valign="top" align="left">Send</th>
+<th valign="top" align="left">Accept</th>
+<th valign="top" align="left">Send</th>
+<th valign="top" align="left">Accept</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Request (Single Instance Event)</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+</tr><tr><td valign="top" align="left">Request (Multiple Instance Event without <tt>RRULE</tt>)</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+</tr><tr><td valign="top" align="left">Request (Multiple Instance Event with <tt>RRULE</tt>)</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes</td>
+</tr><tr><td valign="top" align="left">Reply</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes</td>
+</tr><tr><td valign="top" align="left">Add</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_9c1212f9-6ada-55b3-5c57-51fcd1bfd92b">untested</p>
+</fn></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_f3d4557d-3b79-d33e-8f26-380bbb55a354">untested</p>
+</fn></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+</tr><tr><td valign="top" align="left">Cancel</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">?</td>
+</tr><tr><td valign="top" align="left">Counter</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_f2e1ba5e-ea9c-24fc-8280-6dcdf1615aa8">untested</p>
+</fn></td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+</tr><tr><td valign="top" align="left">Decline-Counter</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_4283d63d-4a05-9960-ad43-b278be929534">untested</p>
+</fn></td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+</tr><tr><td valign="top" align="left">Refresh</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_1913888e-bdb8-9f26-4c55-e93a79424cc6">untested</p>
+</fn></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+</tr><tr><td valign="top" align="left">Publish</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_def20120-b763-ac23-dfb1-9432b19beb08">untested</p>
+</fn></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_f269d084-9a47-3949-fbac-aea9b822a675">untested</p>
+</fn></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes</td>
+</tr><tr><th colspan="7" valign="top" align="left">Components</th>
+</tr><tr><td valign="top" align="left"><tt>VEVENT</tt></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+</tr><tr><td valign="top" align="left"><tt>VJOURNAL</tt></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+</tr><tr><td valign="top" align="left"><tt>VTODO</tt></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_9bb6c1bf-100d-4ffb-1367-3acccbd3fade">untested</p>
+</fn></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_d3285437-4736-6cad-d1ce-b948bad96b38">untested</p>
+</fn></td>
+</tr><tr><td valign="top" align="left"><tt>VTIMEZONE</tt></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes</td>
+</tr><tr><td valign="top" align="left"><tt>VALARMS</tt></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_a6839813-a3b9-ef12-7659-71b35fe8ca2a">untested</p>
+</fn></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">yes<fn reference="a"><p id="_eb065192-bf3b-488b-29c8-9c32f221e2d0">untested</p>
+</fn></td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left">no</td>
+</tr></tbody>
+<note id="_feada4f4-1dd3-a179-35a4-4ceaf6adf466"><p id="_eb29996e-7867-650d-1e23-2dce1c40549a">“no” indicates that a vendor was unable to support a feature due to not implementing it, bugs, or due to misinterpretation of the RFCs</p>
+</note></table>
+
+
+
+<clause id="_other_things_that_worked" obligation="normative">
+<title>Other Things That Worked</title>
+<ul id="_181be7af-6605-7f1b-a2e2-719448551016"><li><p id="_d20b9bb6-f613-3db1-475c-f70807112ff3">Vendor1 was able to invite using recurrence rules</p>
+</li>
+<li><p id="_9e882435-b8b0-9c69-5cea-9ad28f1cbc9d">Vendor2 was able to delegate</p>
+</li>
+<li><p id="_adf8426e-e870-5f30-c597-ead72defdf5f">Vendor2 was able to send <tt>VTODO</tt>s</p>
+</li>
+</ul>
+
+<p id="_a6cddee1-e847-4799-c2ca-fa81cbc9329c">What did not work:</p>
+
+<ul id="_5b52dc9b-358b-d92c-12bf-1d00e3ae167d"><li><p id="_2590d64a-0d8c-1fca-6478-7ec0dd65d039">Vendor 2 was unable to support more than one instance on the same day</p>
+</li>
+<li><p id="_9125bebf-7090-2181-96dd-084ffa380f19">No one supported sending floating time events</p>
+</li>
+<li><p id="_da55f843-92db-798b-773c-481fb7a1ff72">Vendor 2 did not support event duration less than fifteen minutes</p>
+</li>
+<li><p id="_20451f0c-d2c2-1c79-2f93-5b26fbb8ff21">Vendor 3 did not support slash format in <tt>RDATE</tt>s</p>
+</li>
+<li><p id="_53c4dc6c-5795-ee15-ac92-b5e9a486f4c9">Vendor 2 was unable to send a response if <tt>RSVP</tt> was false (point for future discussion about meaning of RSVP)</p>
+</li>
+<li><p id="_3e444c4d-fd4c-3c2e-ef11-87b6ce4860d1">Vendor 3 did not escape any of their special characters</p>
+</li>
+<li><p id="_da7ba536-75cc-39bb-0bf2-1047887b0579">Some of Vendor 2’s lines were longer than permitted in iCalendar</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_vendor_2_notesresults" obligation="normative">
+<title>Vendor 2 notes/results</title>
+<table id="_540023b6-37f1-db7e-6e59-f71c55d13d67" unnumbered="true"><thead><tr><th valign="top" align="left">iCalendar Method</th>
+<th valign="top" align="left">Vendor 2 supported</th>
+<th valign="top" align="left">Test with Vendor 1</th>
+<th valign="top" align="left">Test with Vendor 3</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><strong>Event Publish</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Event Publish</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Event Request</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left">New Event</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><em>non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RRULE</tt> repeating no exceptions</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><em>`RRULE` repeating no exceptions</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RRULE</tt> with <tt>EXRULE</tt></strong></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>`RRULE` with `EXRULE`</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RRULE</tt> with <tt>EXDATE</tt>s</strong></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>`RRULE` with <tt>EXDATE</tt>s</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RDATE</tt>s repeating no exceptions</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em><tt>RDATE</tt>s repeating no exceptions</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RDATE</tt>s with <tt>EXRULE</tt></strong></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em><tt>RDATE</tt>s with `EXRULE`</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RDATE</tt>s with <tt>EXDATE</tt>s</strong></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em><tt>RDATE</tt>s with <tt>EXDATE</tt>s</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>with attachment</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>with attachment</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Broadcast</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">?</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RRULE</tt> repeating no exceptions</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>`RRULE` repeating no exceptions</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RRULE</tt> with <tt>EXRULE</tt></strong></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>`RRULE` with `EXRULE`</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RRULE</tt> with <tt>EXDATE</tt>s</strong></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>`RRULE` with <tt>EXDATE</tt>s</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RDATE</tt>s with no exceptions</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em><tt>RDATE</tt>s with no exceptions</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RDATE</tt>s with <tt>EXRULE</tt></strong></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em><tt>RDATE</tt>s with `EXRULE`</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong><tt>RDATE</tt>s with <tt>EXDATE</tt>s</strong></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em><tt>RDATE</tt>s with <tt>EXDATE</tt>s</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>with attachment</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>with attachment</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Reschedule</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>Non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Repeating all</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Repeating all</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Individual event of repeat set</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Individual event of repeat set</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Update</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>Non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Repeating all</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Repeating all</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Individual event of repeat set</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Individual event of repeat set</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Event Reply</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left">Accept</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>Non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><em>Non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><strong>Repeating all</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><em>Repeating all</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><strong>Individual event from repeat set</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Individual event from repeat set</em></td>
+<td valign="top" align="left"/><td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Decline</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>Non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">?</td>
+</tr><tr><td valign="top" align="left"><em>Non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">?</td>
+</tr><tr><td valign="top" align="left"><strong>Repeating all</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">?</td>
+</tr><tr><td valign="top" align="left"><em>Repeating all</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">?</td>
+<td valign="top" align="left">?</td>
+</tr><tr><td valign="top" align="left"><strong>Individual event from repeat set</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Individual event from repeat set</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Delegate</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>Non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Repeating all</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Repeating all</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Individual event from repeat set</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Individual event from repeat set</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Event Refresh Request</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>Non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Repeating all</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Repeating all</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Event Counter</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>Non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Repeating all</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Repeating all</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Individual event from repeat set</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Individual event from repeat set</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Event DeclineCounter</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Event DeclineCounter</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Event Add</strong></td>
+<td valign="top" align="left">not supported</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Event Add</em></td>
+<td valign="top" align="left">not supported</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">Event Cancel</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>Cancel Non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><em>Cancel Non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><strong>Cancel Repeating all</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><em>Cancel Repeating all</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">tested</td>
+<td valign="top" align="left">tested</td>
+</tr><tr><td valign="top" align="left"><strong>Cancel Individual event from repeat set</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Cancel Individual event from repeat set</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Remove individual from non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Remove individual from non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Remove individual from entire repeat set</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Remove individual from entire repeat set</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>Remove individual from individual event of RS</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Remove individual from individual event of RS</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><strong>ToDo Publish</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>ToDo Publish</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left">ToDo Request</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left">New ToDo</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left"><strong>Non repeating</strong></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><em>Non repeating</em></td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left">not tested</td>
+<td valign="top" align="left">not tested</td>
+</tr><tr><td valign="top" align="left"><tt>RRULE</tt> repeating no exceptions</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><tt>RRULE</tt> with <tt>EXRULE</tt></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><tt>RRULE</tt> with <tt>EXDATE</tt>s</td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><tt>RDATE</tt> repeating no exceptions</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><tt>RDATE</tt>s with <tt>EXRULE</tt></td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><tt>RDATE</tt>s with <tt>EXDATE</tt>s</td>
+<td valign="top" align="left">will not create</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Reschedule</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left">Non repeating</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Repeating all</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Individual event of repeat set</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Update</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">ToDo Reply</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left">Accept</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left">Non repeating</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Repeating all</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Individual event from repeat set</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Decline</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left">Non repeating</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Repeating all</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Individual event from repeat set</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">ToDo Add</td>
+<td valign="top" align="left">no</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">ToDo Cancel</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left">Cancel Non repeating</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Cancel Repeating all</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Cancel Individual event from repeat set</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Remove individual from non repeating</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Remove individual from entire repeat set</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Remove individual from individual event of RS</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">ToDo Refresh Request</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">ToDo Counter</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+<td valign="top" align="left">-</td>
+</tr><tr><td valign="top" align="left">Non Repeating</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Repeating all</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Individual event from repeat set</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">ToDo DeclineCounter</td>
+<td valign="top" align="left">yes</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">FreeBusy Publish</td>
+<td valign="top" align="left">not yet</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">FreeBusy Request</td>
+<td valign="top" align="left">not yet</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">FreeBusy Reply</td>
+<td valign="top" align="left">not yet</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">VJournal Publish</td>
+<td valign="top" align="left">no planned support</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">VJournal Add</td>
+<td valign="top" align="left">no planned support</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">VJournal Cancel</td>
+<td valign="top" align="left">no planned support</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">Status Reply</td>
+<td valign="top" align="left">not yet</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr></tbody>
+<note id="_e53c4be0-e36d-67fd-1a0a-1d017cae680c"><dl id="_ff64606e-68d6-4b56-5ea5-d9ce9598f137"><dt><strong>Sending</strong></dt>
+<dd><p id="_13c2faa3-c5ae-4fbd-8b3c-5a7096cd4756"><strong>in this font</strong>;</p>
+</dd>
+<dt><em>Receiving</em></dt>
+<dd><p id="_4c2b5aa0-c5c4-9f80-3702-ffe71a8ad900"><em>in italics</em>.</p>
+</dd>
+</dl>
+</note></table>
+
+
+
+<p id="_0103faba-db46-e506-d119-bfb5f4e99b1f">Some issues found were UID problems and then in timezone problems.</p>
+
+<p id="_ea96a581-feba-8ef2-a421-c4ff6a44f828">The only other interesting problem was distinguishing between removing a person and canceling. From my point of view we did not end up doing a lot of testing. I am including a table of what we support and what we tested. The table is not completed except for  <tt>EVENTS</tt></p>
+
+<p id="_5a343fad-b07e-e652-e5ba-9eb29afd36d5">Other Issues encountered while doing iCAL testing at CalConnect2.</p>
+
+<ol id="_4750207e-dd19-786e-3d84-de55e4294430" type="arabic"><li><p id="_abc7e2e5-dcd1-8df5-2f49-c01bc61199b1">Sent to a Bcc user via Location Doc: “Through xxxx Server/MIME format”; Person Doc: “Prefers MIME”. The Bcc user receives an invitation with all of the Typical Workflow actions. Error: S/he should only have the “Add to Calendar” action.</p>
+</li>
+<li><p id="_fbf5ff03-74e6-1d78-7f36-29492eea56df">Reschedule notices are not displaying invitee response actions.</p>
+</li>
+<li><p id="_e564eedf-8471-b429-4c6e-1b4cd6b61f51">Invitations from a French Vendor 3 client are received with no subject or date/time fields.</p>
+</li>
+<li><p id="_07dc3eb5-cc1f-e769-96cf-5fae0ae2fcd5">Cancellation notices being received as Updates from vendor 1. Upon opening notice, you get the correct pop-up indicating that the meeting has been cancelled and the entry is removed from the Calendar. However, the “Update Calendar” button is not hidden, and if you click on it it will recreate the entry.</p>
+</li>
+<li><p id="_54bd314c-4fdd-e2fb-959e-7ffb7a64780f">Cancellation of a repeating meeting from Vendor 3 doesn’t remove entries from Calendar.</p>
+</li>
+<li><p id="_5415a1ce-fc34-4d8d-0850-1e7b92014d16">Custom repeats from Vendor 3 (<tt>RDATE</tt>s) only display the first date in the “Repeat Options” dialog in invitee’s Calendar entry.</p>
+</li>
+</ol>
+</clause>
+
+<clause id="_vendor_3_results" obligation="normative">
+<title>Vendor 3 Results</title>
+<p id="_152a89d8-1b20-4044-2fce-0da6ffe8b1cc">Comments from Vendor 3.</p>
+
+<ol id="_c8c9dc76-049b-77da-d8fb-62773a2c0210" type="arabic"><li><p id="_0ffb5a01-850c-f899-2640-7125b4bbb1a2">Vendor 2 and Vendor 1 can retrieve <tt>EVENT REQUEST</tt> messages from Vendor 3 Server — But they would prefer that the Vendor 3 IMIP messages come in the “multipart/mixed” MIME format. We have included this item in our bug list.</p>
+</li>
+<li><p id="_4f87ad89-55ff-5d49-a7ff-e5fe46aabe80">We tried to import a <tt>REPLY</tt> from the other vendors. We were able to import Vendor 2’s <tt>REPLY</tt>. However, we could not import Vendor 1’s <tt>REPLY</tt> messages. This was because they were inserting the Recurrence-ID in the event  <tt>REPLY</tt> message even though it was a non-recurring  <tt>VEVENT</tt>. Also, we had a bug in handling <tt>RSVP</tt>. We were saving the change in the  <tt>RSVP</tt> value of the attendee, which caused a UI bug. (In our User Interface, the attendee was moved to an  <tt>INFORM</tt>)</p>
+</li>
+<li><p id="_635df71b-bd33-9db6-5d05-86af63f88441">Vendor 1 and 2 can receive our recurring <tt>EVENT REQUEST</tt> invitations.</p>
+</li>
+<li><p id="_c934b204-fe18-ee57-2c35-1216595297d1">We can import Vendor 1 and 2’s recurring <tt>REPLY</tt> messages. However, we get the same number of e-mails as instances (i.e. 60 replies (messages) to 1 recurring event)</p>
+</li>
+<li><p id="_cea87ed1-70a1-4c43-2c05-9e2d54ad60c3">We can import <tt>CANCEL</tt> messages from Vendor 1</p>
+</li>
+<li><p id="_94b9811d-c831-4abd-19c9-d0264425bfad">Vendor 2 could not import our mail messages from a Spanish or French user. — Vendor 1 can display them OK using the Eudora mail program.</p>
+</li>
+<li><p id="_619d36de-a033-424e-8018-ee19b6c0570f">We can import a recurring <tt>REQUEST</tt> from Vendor 2</p>
+</li>
+<li><p id="_5cb4ad1c-4427-5fce-c5bc-291fbd3502bc">Vendor 4 created an event. They sent two <tt>REQUEST</tt> messages, sequence=0, sequence=1, the first one sent  <tt>RECURRENCE-ID</tt>, the second one did not. This is Vendor 1’s bug, and they may have fixed it.</p>
+</li>
+</ol>
+
+<p id="_f815803a-bd31-6f9a-ff21-9a9bb7d01e98">What about others:</p>
+
+<ol id="_e76d854c-2baa-7c3d-374c-b4a7400c4b30" type="arabic"><li><p id="_121a515a-e5a5-7454-cced-561f2e1318a5">No one implemented <tt>ADD</tt>.</p>
+</li>
+<li><p id="_9b21be95-397b-c050-fb75-d103fe7d2670">No one tested <tt>COUNTER</tt> or <tt>DECLINECOUNTER</tt></p>
+</li>
+</ol>
+
+<p id="_9ff43998-8ea0-260f-ac30-7ca58ccb1ba6">The Vendor 3 team is working on fixing CalConnect-related bugs and will include the fixes in future releases.</p>
+</clause>
+
+<clause id="_chair_comments" obligation="normative">
+<title>Chair Comments</title>
+<p id="_b9d32e93-f76a-efc7-ec11-2a30b02e64a3">This interop compared to the first one was a world of difference. Many many more things worked and we were able to spend more time testing elements.</p>
+
+<p id="_0ee9f145-3430-32d5-c2e1-5505af0fd8a0">While Vendor 2 shows a lot “Untested”, after reading notes, I believe many of these items were indeed tested. We have developed a new testing form that will be used on the next interop test. I know one vendor felt we had not done enough testing — I think he really wanted to prove it all works. Well, most of it did! We still have a ways to go, but for the first time, everyone feels that we have made progress and there is a light at the end of the tunnel. The best part of the interop was the interactions between the attendees. That will help ongoing efforts tremendously. Everyone wants to do the next interop within the next 6-9 months. We don’t want to wait too long now that we have momentum.</p>
+
+<p id="_42a0c490-5075-d430-aca2-7842610bf102">By Patricia Egen</p>
+</clause>
+</clause>
+</sections>
+</csd-standard>

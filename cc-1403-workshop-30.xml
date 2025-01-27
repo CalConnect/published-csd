@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Workshop on the Veterans Administration Scheduling System Challenge, CalConnect XXX, Dulles, Virginia, May 21 2014</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1403:2014</docidentifier><docnumber>1403</docnumber><date type="published"><on>2014-06-01</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1.1</edition><version><revision-date>2014-06-01</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2014</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_05279a05-0a0b-6451-fbd4-fbd6ac0103f2" obligation="normative">
+<p id="_5ec0293a-3e54-b21d-4834-71c6677c8e06">© 2014 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_cd7a32e1-f010-c7a3-8f8f-69ef652fc260">CalConnect sponsored an open half-day workshop on the Veterans Administration Scheduling System Challenge on Wednesday afternoon 21 May 2014 as part of CalConnect XXX, hosted by AOL in Dulles, Virginia. Registered attendance for the event was 47, of which 26 came for the workshop; a few also registered for part of the Conference taking place on Thursday and Friday. The preliminary agenda and notes about the panelists may be found at VA Scheduling System Workshop.</p>
+</introduction></preface><sections>
+
+<clause id="_why_we_convened_this_workshop" obligation="normative">
+<title>Why we convened this workshop</title>
+<p id="_80c9148a-c964-1485-205d-88b432cda666">In late 2012, The U.S. Veterans Administration announced a “prize contest” to “…​encourage creation of systems that help Veterans make appointments to receive outpatient and ambulatory care from the Veterans Health Administration” and ultimately “…​to replace the current Medical Scheduling Package (MSP) with a scheduling product which is a standards-based, modular, extensible and scalable…​”. Recently, when the winning proposals were announced, we decided to use the VA Scheduling Contest as a jump point to explore the importance of open calendaring and scheduling standards with respect to Healthcare IT.</p>
+
+<p id="_9a05e65f-fc59-c071-b1c0-fcf2e9abd160">CalConnect’s goal for the workshop, and especially the Panel Discussion, was to engage our membership with the panelists and other attendees in a discussion of Health Care scheduling needs and requirement in the context of calendaring and scheduling standards and interoperability. We hoped to learn at a functional level what Health Care has today in Calendaring and Scheduling, what it needs in the Calendaring and Scheduling standards and specifications that it does not have today, and what its needs will be tomorrow.</p>
+
+<p id="_386e778a-4175-f8f8-bf14-5dba23ac01e5">In turn, from the discussion we hoped would come better understanding, an initial insight as to what areas of the calendaring and scheduling work we are undertaking were relevant to Health Care, and how they may need to be changed or extended to better address the needs of the Health Care community.</p>
+</clause>
+
+<clause id="_meeting_summary" obligation="normative">
+<title>Meeting Summary</title>
+<clause id="_part_1_presentations" obligation="normative">
+<title>Part 1 — Presentations</title>
+<p id="_514d060a-9bb3-5e14-44da-3a8702b567d0">Gary Schwartz, CalConnect President: Welcome and Contextualizing the Workshop</p>
+
+<p id="_042f10fc-488d-27c2-7936-b0cf293e7639">Wes Turner, OSEHRA: Introduction to VistA and OSEHRA’s role in the VA Scheduling Contest</p>
+
+<p id="_9fdeae5e-ff7c-9077-9aa6-faaba28e53a7">Dr. William Smith, MedRed, and Ryan Lehman, BT Global Services: Health eTime Solution for the VA 21st Century Medical Scheduling Contest together with a Video of Health e-Time.</p>
+
+<p id="_faf816c9-dde5-2c8b-a5b4-9b6edd9f40e8">Doug Golub, MediSked: Scheduling for Home and Community-based Services</p>
+</clause>
+
+<clause id="_part_2_panel_discussions" obligation="normative">
+<title>Part 2 — Panel Discussions</title>
+<p id="_041d83a2-8431-05ee-974e-cfde2913a57b">The panel was moderated by Scott Mace, Senior Editor-Technology at HealthLeaders Media and a Director of CalConnect, and included:</p>
+
+<ul id="_28e65814-1441-bc71-8bc2-985c0deb0f0b"><li><p id="_92c88a82-2ee6-46e2-ae7c-545d718369d4">Toby Considine (TC9)</p>
+</li>
+<li><p id="_a7c5ccf2-af9c-d6a4-92a0-e62736cd9cf2">William Cox (Cox Software Architects)</p>
+</li>
+<li><p id="_51e657be-01ee-e812-7253-2a61a94bdb91">Doug Golub (MediSked)</p>
+</li>
+<li><p id="_93ecb8dc-3a95-213c-1837-f0d8e3989148">Mike Henderson (OSEHRA)</p>
+</li>
+<li><p id="_49b0af4f-bf5b-6494-8030-154b07d398b7">Ken Rubin (HP Enterprise Services)</p>
+</li>
+<li><p id="_56ad2203-5860-432c-7527-f9e278108463">Wilfredo Sánchez Vega (CalConnect)</p>
+</li>
+<li><p id="_67d00d07-5e8d-b8f4-c376-029f4e8646f0">Dr. William Smith (MedRed)</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_attending_and_participating_organizations" obligation="normative">
+<title>Attending and Participating Organizations</title>
+<p id="_7adbef7b-f83e-0c4b-85d9-204bc95c078e">Participants and attendees for the Workshop came from the following organizations and companies</p>
+
+<ul id="_e4cbd34c-50a7-50b3-08ba-7d51007c9d75"><li><p id="_845f91f6-70ae-dcb0-5255-4424f291c164">1and1<fn reference="1"><p id="_47ac861e-85b1-ecac-de73-0bd832524c56">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_b9fb5eca-8a76-fb69-ffa6-bbfa207a15be">Accenture Federal Services</p>
+</li>
+<li><p id="_f7cd61f6-1d5f-6170-dbc1-7ee7b8c8c5f8">AOL<fn reference="1"><p id="_33f0b0fb-609b-c86a-6b13-f889efab9ade">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_518da56d-5f24-8359-8d51-3bcf4ad92ed1">Apple<fn reference="1"><p id="_7c7c44d5-c8a7-37f5-ba3b-10b153b9c99d">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_5f826aa2-a763-8eb1-f4a7-654c13736ae1">BT Global Services</p>
+</li>
+<li><p id="_34e906bd-edb6-37ff-303d-87c59d4deb2b">BusyMac<fn reference="1"><p id="_809cc235-3b18-375f-10b3-79238de3f5fe">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_f23c1fe0-ccf1-2f6f-31f8-a4793ebce389">Carnegie Mellon University<fn reference="1"><p id="_98095aaf-5636-fd47-df92-67d208d5bb65">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_1babf7eb-4147-6635-c2cd-a59176ead83e">Cox Software Architects LLC</p>
+</li>
+<li><p id="_a05a8255-5e94-9e54-6454-5c0a93979978">Department of Veterans Affairs</p>
+</li>
+<li><p id="_65f2a600-4260-bbdc-53e2-b719c4f08a0a">DSS Inc.</p>
+</li>
+<li><p id="_1f6ad671-1526-7ab7-88e0-3f6d5b2989bc">fruux GMBH<fn reference="1"><p id="_f650dfd3-87b5-96f8-853f-43dceea2215d">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_dd75be1e-6f04-a4ba-e0e2-631531ad392c">Google<fn reference="1"><p id="_71521936-affd-c43d-b624-8689fb40d6ce">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_4e731a45-4135-5184-fabc-85c84b69013e">HealthLeaders Media</p>
+</li>
+<li><p id="_54b46b28-96a2-9480-285c-94169e9d8d75">HP Enterprise Services</p>
+</li>
+<li><p id="_43c7e921-c552-ebf2-e802-99190c7fde43">Marten Gajda<fn reference="1"><p id="_d4663655-acd2-7cc9-8cfc-71ff12a721f9">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_44bedc0c-6832-8e10-dff9-7bd51838d26c">Leidos</p>
+</li>
+<li><p id="_a5406e86-65bf-ebb4-6583-6ea3daf3e25a">MedicaSoft LLC</p>
+</li>
+<li><p id="_fbbc69ab-a841-cd76-6e7b-c8b9ce47c7e9">MediSked</p>
+</li>
+<li><p id="_ada049f2-0f22-a951-eb01-1ba0d76bae4e">MedRed</p>
+</li>
+<li><p id="_2c962516-8eff-1d99-2522-7c907b891a29">Mozilla<fn reference="1"><p id="_c05544c2-3287-aca8-4a2f-113333ddf7c1">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_b203e6de-1167-dd5d-d90a-a1a1a2b62508">OSEHRA</p>
+</li>
+<li><p id="_cad384af-2198-b61b-983c-8be2e6a7b62d">PriceWaterhouseCoopers</p>
+</li>
+<li><p id="_56f7311e-a296-f9ae-b00c-938fca5f2adc">Rensselaer Polytechnic Institute<fn reference="1"><p id="_64b9fcc8-fdcf-b6a6-e126-4efbfbe7fb7f">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_b31ab75d-67fb-06db-4bcc-13c61e6e9028">SchedJoules<fn reference="1"><p id="_7ef72000-a89e-af39-b298-5a276c24398f">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_ee6ae1e7-b9ce-3e22-7418-088795429a36">Systems Made Simple</p>
+</li>
+<li><p id="_0aa3653c-78ba-6b6c-e093-8eab3f62cdd5">TC9</p>
+</li>
+<li><p id="_22c731d8-e67a-ca8a-3497-b5f6a60c7cf9">TimeTrade Systems<fn reference="1"><p id="_445a2f27-4bab-4e57-4d3d-b09a0cdd4a15">CalConnect Participant</p>
+</fn></p>
+</li>
+<li><p id="_8d0bc202-186f-60bf-cf2a-88724a5b9c14">Univesity of California, Berkeley<fn reference="1"><p id="_c188a167-d7ee-136e-f602-f8430abb7779">CalConnect Participant</p>
+</fn></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_mailing_list_for_workshop_attendees" obligation="normative">
+<title>Mailing List for Workshop Attendees</title>
+<p id="_5bacdaa5-7546-7667-2df1-a03dcc34f143">Following the Panel Discussion, CalConnect offered to arrange a limited-life mailing list for everyone who attended the workshop to be able to interact. The e-mails of everyone registered for the workshop have been entered into the list; anyone who is not interested in being on the list may remove themselves or send Dave Thewlis a request to be removed. We anticipate the mailing list will be shut down by the end of the summer unless there is some need to keep it available.</p>
+</clause>
+
+<clause id="_conclusions_and_thanks" obligation="normative">
+<title>Conclusions and Thanks</title>
+<p id="_93063b70-48d1-d283-76c4-09a2d00e4ba2">Although it is too early to identify specific areas for collaboration and work, it is clear that CalConnect’s work in scheduling, in particular the applicability of some of the protocols we are developing such as <tt>VPOLL</tt> and <tt>VAVAILABILITY</tt> to such needs as machine-to-machine scheduling, are extremely pertinent, and as our understanding increases we look forward to making these tools more usable and available to the Health Care community. Of course, involvement by interested members of the Health Care community in this work will be essential both for understanding and resources and we invite members of that Health Care community to get involved with us.</p>
+
+<p id="_a653bad1-384c-14c4-3f0b-ec937a4d59c8">CalConnect thanks all of the participants in the workshop and everyone who worked to make it a success.</p>
+</clause>
+</sections>
+</csd-standard>

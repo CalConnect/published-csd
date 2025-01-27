@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">CalDav Use Cases</title>
+<docidentifier primary="true" type="CalConnect">CC/S 0507:2005</docidentifier><docnumber>0507</docnumber><date type="published"><on>2005-09-26</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Bernard Desruisseaux</completename></name>
+<affiliation><organization>
+<name>Oracle</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2005-09-26</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2005</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="S">specification</doctype><flavor>cc</flavor><editorialgroup><committee>CALDAV</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7fbaec4b-0250-84e7-0e43-81775debe8a4" obligation="normative">
+<p id="_cdc4fc6d-0ab8-7040-218a-aee9d6fd453d">© 2005 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_a2cf4615-7506-3772-0634-441a88052e18" obligation="informative">
+<title>Foreword</title>
+<p id="_37d24d7f-7010-1c0f-4b5f-a96fcda39f50">This document is one in a series of use case documents that the Calendaring and Scheduling Consortium is developing to help better define the needs of different calendaring and scheduling user groups. As such, this document provides a list of use cases for a calendar access protocol only. Other use case documents will cover different areas of calendaring and scheduling, and will be made available by the Consortium in the usual manner.</p>
+
+<p id="_23b192e8-a0bf-01ec-e6e6-48ae9cbccfe2">While this list of use cases was developed to assist in the development of the CalDAV protocol, none of the use cases are specific to CalDAV, that is, this list of use cases should apply to any calendar access protocol. It is expected that this document will be used as a basis to further develop technical requirements for a calendar access protocol such as CalDAV.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_2364386e-85b0-6801-9721-75c6a8a76065">This document provides a list of use cases that the members of the Calendaring and Scheduling Consortium believe should be covered by a calendar access protocol. While this list of use cases was developed to assist in the development of the CalDAV protocol, none of the use cases are specific to CalDAV, that is, this list of use cases should apply to any calendar access protocol. It is expected that this document will be used as a basis to further develop technical requirements for a calendar access protocol such as CalDAV.</p>
+
+<p id="_7ce8c862-194f-3900-7d26-95ee9fc4eda9">All the use cases involves any of the following <em>actors</em>:</p>
+
+<ul id="_a21f301a-8a2c-2e03-343a-7bd3896da6a7"><li><p id="_0ac85e0b-3783-15c5-93df-54939cbb886b"><strong>Attendee</strong>: a user who is invited to a given calendar object;</p>
+</li>
+<li><p id="_351febe6-5505-dd31-eea5-42034af17a86"><strong>Organizer</strong>: a user that act as the organizer of a given calendar object.</p>
+</li>
+<li><p id="_08a9bf02-aac8-8209-e316-791ee5542403"><strong>User</strong>: a user accessing or managing a calendar store;</p>
+</li>
+</ul>
+
+<p id="_919398d8-54cd-6a3d-ef0f-d75deeaa5319">Unless stated otherwise, the actor in any use case could also be a user authorized to work on behalf of the actor specified in each use case.<note id="_84eec5fc-926f-7179-6911-d6402e35081d"><p id="_25ac9148-aff0-8a0e-90c6-89f111721369">The use cases only covers functionality related to events and tasks, that is, there are no use cases related to journal entries.</p>
+</note></p>
+
+
+</introduction></preface><sections>
+
+<terms id="_terminology" obligation="normative">
+<title>Terms and definitions</title><p id="_9ebbb531-2d3e-eb13-6a3c-ec26454a48d4">For the purposes of this document, the following terms and definitions apply.</p>
+
+<term id="term-Access-Control-List"><preferred><expression>
+<name>Access Control List</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_be312871-79ce-e218-ca11-fcb7ff88ab25">Set of all privileges granted or denied to any “security principal” on a given “calendar” or “calendar object”;</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar"><preferred><expression>
+<name>Calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_c0e74046-122d-516c-4e27-9e52dbe700f3">Container of “calendar objects”;</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-object"><preferred><expression>
+<name>Calendar object</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a4395efb-3093-77a1-489d-d9bfa775ef89">Resource defining calendar components such as events and tasks;</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Security-principal"><preferred><expression>
+<name>Security principal</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_8a9c1a1d-5a85-b748-905a-bf0e67505f90">An actor or a group of actors that initiates calendar operations. Security principals may either be: (a) authenticated users, (b) unauthenticated users, © specific users, or (d) specific groups of security principals.</p></verbal-definition></definition>
+ </term>
+</terms>
+
+<clause id="_calendar_access" obligation="normative">
+<title>Calendar Access</title>
+<clause id="_create_calendar_object" obligation="normative">
+<title>Create calendar object</title>
+<clause id="_3793eff1-c7ab-27af-afad-e50635c6b5a2" obligation="normative">
+<p id="_f1bd73a4-b098-15c3-88fa-ac43dd0b75e5">A user wants to create a new event/task in a given calendar.</p>
+</clause>
+
+<clause id="_2" obligation="normative">
+<p id="_93e2e430-c1cc-642d-fb73-e470ddd8a7f4">A user wants to mark a period of time as busy in a given calendar.</p>
+</clause>
+</clause>
+
+<clause id="_modify_calendar_object" obligation="normative">
+<title>Modify calendar object</title>
+<clause id="_3" obligation="normative">
+<p id="_87b28b9e-32dd-f95e-4f46-c6470995885a">A user wants to create/delete one or multiple instances of an existing calendar object.</p>
+</clause>
+
+<clause id="_4" obligation="normative">
+<p id="_742ef583-8072-8f4c-f4d4-5d37c6740e8d">A user wants to add/modify/delete information (e.g., summary, location, start time, status, access classification, list of attendees, participation status, attachment, etc.) for one or multiple instances of an existing calendar object.</p>
+</clause>
+
+<clause id="_5" obligation="normative">
+<p id="_bc6e11b0-053d-4f09-e91f-0bec427464ec">A user wants to create/delete an alarm for one or multiple instances of an existing calendar object.</p>
+</clause>
+
+<clause id="_6" obligation="normative">
+<p id="_b2616701-e959-4190-480a-d38b1fb6aee2">A user wants to modify the information (e.g., reminder lead time, etc.) of the alarms of one or multiple instances of an existing calendar object.</p>
+</clause>
+
+<clause id="_7" obligation="normative">
+<p id="_5b65318d-65c7-35bf-da05-cffb2c109b89">A user wants to create/modify/delete an alarm on a calendar object, on which he has at least read access, in a way that the alarm will only apply to him, will only be visible to him and can only be modified or deleted by him (or deleted by the system if the associated calendar object has been deleted).</p>
+</clause>
+
+<clause id="_8" obligation="normative">
+<p id="_0861f81b-296c-cc52-1060-beb8f9593f05">A user wants to mark a calendar object, on which he has at least read access, to specify that it should impact his free busy time info.</p>
+</clause>
+</clause>
+
+<clause id="_delete_calendar_object" obligation="normative">
+<title>Delete calendar object</title>
+<clause id="_9" obligation="normative">
+<p id="_8cc2302f-9040-1a6f-f5e0-81eb97738538">A user wants to mark for deletion one or multiple instances of an existing event/task in a way that the information for the marked instances will be preserved.</p>
+</clause>
+
+<clause id="_10" obligation="normative">
+<p id="_6709c319-5cfd-f93f-776b-48c5765fdec6">A user wants to unmark one or multiple instances of an existing event/task that are marked for deletion.</p>
+</clause>
+
+<clause id="_11" obligation="normative">
+<p id="_a66db10e-c38d-d411-df9b-5d9d8963a3a3">A user wants to delete a calendar object.</p>
+</clause>
+
+<clause id="_12" obligation="normative">
+<p id="_7d6c9d9d-809f-8b22-7f96-e6e6c8ebc2cb">A user wants to delete one or multiple calendar objects based on search criteria (e.g., all events that occurred more than six months ago).</p>
+</clause>
+
+<clause id="_13" obligation="normative">
+<p id="_c1c13049-4702-4a53-14d6-63dd4d1fc497">A user wants to delete (permanently remove) all the calendar objects marked for deletion in his calendar.</p>
+</clause>
+</clause>
+
+<clause id="_query_calendar_object" obligation="normative">
+<title>Query calendar object</title>
+<clause id="_14" obligation="normative">
+<p id="_e8bcc11c-48be-f117-ef11-14574b1494f6">A user wants to find all the events or tasks in a given calendar.</p>
+</clause>
+
+<clause id="_15" obligation="normative">
+<p id="_a1315edc-d6b3-4462-b094-5772abf2d68d">A user wants to find all the events in a given calendar that have an instance scheduled to overlap a given time period (e.g., a day, a week, a month, etc.).</p>
+</clause>
+
+<clause id="_16" obligation="normative">
+<p id="_632bfa1b-5176-d700-77b3-796f01ef4e7a">A user wants to find all the tasks in a given calendar that have an instance with a start date or due date included in a given time period (e.g., a day, a week, a month, etc.).</p>
+</clause>
+
+<clause id="_17" obligation="normative">
+<p id="_b46aba39-80df-e661-63c9-e363defc3501">A user wants to find all the tasks in a given calendar that have a pasted due date and that are not completed.</p>
+</clause>
+
+<clause id="_18" obligation="normative">
+<p id="_fea8fb24-284c-bc2c-c568-b40af636ac3c">A user wants to find all the events/tasks in a given calendar that have an instance with an alarm scheduled to trigger during a given time period (e.g., later today).</p>
+</clause>
+
+<clause id="_19" obligation="normative">
+<p id="_436a6a75-098d-fd58-9a71-5f4d107bd892">A user wants to find all the events in a given calendar for which a particular user is the organizer.</p>
+</clause>
+
+<clause id="_20" obligation="normative">
+<p id="_2a894e15-6798-d74a-0cb2-0c6078bb7ce8">A user wants to find all the events in a given calendar for which he needs to respond to confirm his participation status.</p>
+</clause>
+
+<clause id="_21" obligation="normative">
+<p id="_7599ac11-1df3-191f-ebd5-e9f1a0f496c4">A user wants to find all the events in a given calendar for which a specific user was an attendee.</p>
+</clause>
+
+<clause id="_22" obligation="normative">
+<p id="_5c02468e-0ef2-9801-fdb8-0d268c5f2f50">A user wants to find all the events in a given calendar for which there are attendees that have not yet confirmed their participation status.</p>
+</clause>
+
+<clause id="_23" obligation="normative">
+<p id="_7e6d347f-fc30-236f-bb25-e1d3f1df8958">A user wants to find all the events in a given calendar for which the summary or description or location contains a given sub-string (e.g., “Project ABC”).</p>
+</clause>
+
+<clause id="_24" obligation="normative">
+<p id="_4612a27b-2ce2-1d3d-7082-1fa9785c5979">A user wants to find all the events/tasks in a given calendar that have a specific category.</p>
+</clause>
+</clause>
+
+<clause id="_synchronization" obligation="normative">
+<title>Synchronization</title>
+<clause id="_25" obligation="normative">
+<p id="_15603fae-1a84-b356-f6bc-0ce65bcd0f09">A user wants to synchronize in an efficient matter the calendar objects in the cache of his calendar client application with the calendar objects currently stored in his calendar on the calendar server.</p>
+</clause>
+
+<clause id="_26" obligation="normative">
+<p id="_e1d369fe-8285-ae07-470a-d09c9df6dad7">A user wants to synchronize in an efficient matter the calendar objects, scheduled to overlap a given time period, in the cache of his calendar client application with the calendar objects currently stored in his calendar on the calendar server.</p>
+</clause>
+</clause>
+
+<clause id="_importexport" obligation="normative">
+<title>Import/Export</title>
+<clause id="_27" obligation="normative">
+<p id="_15dd9ec8-8846-7c52-4b02-d0f75cf210bf">A user wants to import an entire calendar, or series of calendars, from another system.</p>
+</clause>
+
+<clause id="_28" obligation="normative">
+<p id="_239cceee-4345-9957-eace-c31354d144b0">A user wants to export an entire calendar, or series of calendars, to another system.</p>
+</clause>
+
+<clause id="_29" obligation="normative">
+<p id="_9726d742-6ff7-83b5-e127-878d1ab147fc">A user wants to export calendar objects that meet a certain set of restrictions (e.g., calendar objects with the category “Business”) from a calendar to another system.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_calendar_management" obligation="normative">
+<title>Calendar Management</title>
+<clause id="_create_calendar" obligation="normative">
+<title>Create calendar</title>
+<clause id="_30" obligation="normative">
+<p id="_76cfb15a-e1b2-c14f-a1da-3ebc61a8a7f4">A user wants to create a calendar.</p>
+</clause>
+</clause>
+
+<clause id="_modify_calendar" obligation="normative">
+<title>Modify calendar</title>
+<clause id="_31" obligation="normative">
+<p id="_25b1d903-7f0c-31af-4294-1dd979e026b4">A user wants to rename a calendar.</p>
+</clause>
+
+<clause id="_32" obligation="normative">
+<p id="_3e88786c-2589-7964-0302-36cfd88c921a">A user wants to modify the description of a calendar.</p>
+</clause>
+</clause>
+
+<clause id="_delete_calendar" obligation="normative">
+<title>Delete calendar</title>
+<clause id="_33" obligation="normative">
+<p id="_348005aa-7f4b-47b3-f580-3d80af5b8e8b">A user wants to delete a calendar.</p>
+</clause>
+</clause>
+
+<clause id="_find_calendar" obligation="normative">
+<title>Find calendar</title>
+<clause id="_34" obligation="normative">
+<p id="_2fa963d5-c4f9-fca0-67af-91a7901e9eb8">A user would like to find the calendars of other users that may be visible to him.</p>
+</clause>
+
+<clause id="_35" obligation="normative">
+<p id="_5263d7c4-8731-8afb-6dab-35f3667901cb">A user would like to find the calendars, of a given user, that may be visible to him.</p>
+</clause>
+</clause>
+
+<clause id="_copy_and_move_calendar" obligation="normative">
+<title>Copy and Move calendar</title>
+<clause id="_36" obligation="normative">
+<p id="_23655150-4e39-5e5a-5693-25f71b8cfa2e">A user would like to copy / move an entire calendar in a different location in a hierarchy.</p>
+</clause>
+</clause>
+
+<clause id="_copy_and_move_calendar_objects_between_calendar" obligation="normative">
+<title>Copy and Move calendar objects between calendar</title>
+<clause id="_37" obligation="normative">
+<p id="_2cd205b3-a957-a59b-0264-0948db4b6287">A user wants to copy / move one or more calendar objects from one calendar to another calendar.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_scheduling" obligation="normative">
+<title>Scheduling</title>
+<clause id="_event_and_task" obligation="normative">
+<title>Event and Task</title>
+<clause id="_38" obligation="normative">
+<p id="_25e5c0d8-9264-5d5d-f201-fd663eea991d">A user wants to submit an event / task announcement to one or more users.</p>
+</clause>
+
+<clause id="_39" obligation="normative">
+<p id="_aa834709-b2ba-7a7f-8664-767a3864251e">An organizer wants to invite one or multiple users to an event.</p>
+</clause>
+
+<clause id="_40" obligation="normative">
+<p id="_0536a005-adc0-f8f4-fbbe-8939f372293f">An organizer wants to assign a task to one or more users.</p>
+</clause>
+
+<clause id="_41" obligation="normative">
+<p id="_7329616d-9e24-cad9-893a-bfb86520b1b1">An attendee wants to respond to an event invitation / task assignment.</p>
+</clause>
+
+<clause id="_42" obligation="normative">
+<p id="_289b9a27-7a18-fa82-ef14-5ab7d6ec5cd9">An organizer wants to reschedule an existing event / task.</p>
+</clause>
+
+<clause id="_43" obligation="normative">
+<p id="_cb8a4674-6968-f864-36e2-45955653b2f9">An attendee of an existing event / task wants to request an updated description of the event / task from the organizer.</p>
+</clause>
+
+<clause id="_44" obligation="normative">
+<p id="_d3ffcaba-c203-a671-07a0-cc15ba934a8c">An organizer wants to respond to the request of an attendee to get an updated description of an event / task.</p>
+</clause>
+
+<clause id="_45" obligation="normative">
+<p id="_4adc458c-e6a2-b0bc-d43f-d0cc3ac9c6e8">An organizer wants to change the organizer for an existing event / task.</p>
+</clause>
+
+<clause id="_46" obligation="normative">
+<p id="_b14ff152-f70d-9a44-33ad-257ff400a492">An organizer wants to update the status of attendees of an existing event / task, without rescheduling it.</p>
+</clause>
+
+<clause id="_47" obligation="normative">
+<p id="_d339278c-497c-648b-096c-3282278cab9a">An organizer wants to update the details of an existing event / task, without rescheduling it.</p>
+</clause>
+
+<clause id="_48" obligation="normative">
+<p id="_377880c3-4f31-431d-6b0d-33a8a3e7d4f9">An organizer wants to reconfirm an existing event / task, without rescheduling it.</p>
+</clause>
+
+<clause id="_49" obligation="normative">
+<p id="_445e612e-f6d8-9adb-8f4e-9eec85644646">An organizer wants to request an updated status from one or more attendees of an event / task.</p>
+</clause>
+
+<clause id="_50" obligation="normative">
+<p id="_287be341-d90d-b888-8b8c-1e2ea748fe9e">A user wants to delegate / re-assign an existing event / task to another user.</p>
+</clause>
+
+<clause id="_51" obligation="normative">
+<p id="_603f09cd-b02c-2faa-723a-9fcb9601547c">A user wants to respond to an event / task delegation request.</p>
+</clause>
+
+<clause id="_52" obligation="normative">
+<p id="_61812eb5-c9ec-206e-0812-9729839c800f">A user wants to forward an event / task to another uninvited user.</p>
+</clause>
+
+<clause id="_53" obligation="normative">
+<p id="_fac36ce1-d717-b0eb-2d24-1a7bd7b621a7">An organizer wants to add one or more instances to an existing event / task.</p>
+</clause>
+
+<clause id="_54" obligation="normative">
+<p id="_8eb65783-0af8-e372-e1b1-94704a9e513a">An organizer wants to send a cancellation notice for one or more instances of an existing event / task.</p>
+</clause>
+
+<clause id="_55" obligation="normative">
+<p id="_1def214b-a1a1-cd60-d24d-b09cec65eafd">An attendee of an existing event / task wants to send a counter proposal to the event / task description (e.g., different start time) to the organizer.</p>
+</clause>
+
+<clause id="_56" obligation="normative">
+<p id="_319a102a-8bf1-9924-610c-f3f7c0d685c2">An organizer of an existing event / task wants to reject a counter proposal submitted by an attendee.</p>
+</clause>
+</clause>
+
+<clause id="_freebusy" obligation="normative">
+<title>Free/Busy</title>
+<clause id="_57" obligation="normative">
+<p id="_c5b4ee06-8351-ffc1-5a66-c03091376eee">A user wants to send busy time data to one or more users.</p>
+</clause>
+
+<clause id="_58" obligation="normative">
+<p id="_f20f6c2f-4ee0-c16a-629a-430352a964b4">A user wants to ask one or more users their busy time information (for a specific date and time interval or not).</p>
+</clause>
+
+<clause id="_59" obligation="normative">
+<p id="_76e94370-37d5-56c0-decc-b0227fb0fe67">A user wants to respond to a busy time request of another user.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_access_control" obligation="normative">
+<title>Access Control</title>
+<clause id="_access_control_for_calendars" obligation="normative">
+<title>Access control for calendars</title>
+<clause id="_60" obligation="normative">
+<p id="_0739b54c-e7ad-dee7-8e50-c5c3c7a86042">A user wants to grant/deny to security principals the right to create/read/modify/delete calendars on his behalf.</p>
+
+<admonition id="_9eca7948-9a67-46b7-ef70-cb5cbab95f85" type="editorial"><p id="_354cf2fa-5573-7fd0-1917-c98140656471">read and modify operations on calendars are limited to attributes of the calendars themselves such as their name, description, creation date, etc.</p>
+</admonition></clause>
+
+<clause id="_61" obligation="normative">
+<p id="_959e5b9a-2244-bae1-266d-a8b6b9d16b18">A user wants to know which security principals are granted/denied the right to create/read/modify/delete calendars on his behalf.</p>
+</clause>
+
+<clause id="_62" obligation="normative">
+<p id="_4731f084-742d-5a55-1674-b50e53ac1ce4">A user wants to know whether he is granted/denied the right to create/read/modify/delete a given calendar.</p>
+</clause>
+
+<clause id="_63" obligation="normative">
+<p id="_4b81444d-2531-eb61-8529-63d479a81505">A user wants to know whether a given user is granted/denied the right to create/read/modify/delete one of his calendar.</p>
+</clause>
+
+<clause id="_64" obligation="normative">
+<p id="_900f9ee0-a91c-8ffb-67e2-d8117d8f3438">A user wants to grant/deny to security principals the right to read/modify the access control lists of his calendars.</p>
+</clause>
+
+<clause id="_65" obligation="normative">
+<p id="_7e68871c-ef3d-7406-46ca-0da6bb2c4142">A user wants to know which security principals are granted/denied the right to read/modify the access control lists of his calendars.</p>
+</clause>
+
+<clause id="_66" obligation="normative">
+<p id="_0703ecaf-fcd1-c047-71df-3697b33bd642">A user wants to know whether he is granted/denied the right to read/modify the access control list of a given calendar.</p>
+</clause>
+
+<clause id="_67" obligation="normative">
+<p id="_bebed595-6cd9-e317-e9c3-dca101f65fa2">A user wants to know the set of privileges that applies to him on a given calendar.</p>
+</clause>
+</clause>
+
+<clause id="_access_control_for_calendar_objects" obligation="normative">
+<title>Access control for calendar objects</title>
+<clause id="_68" obligation="normative">
+<p id="_ecef4fe3-dea1-a05e-bc35-3b951af25658">A user wants to grant/deny to security principals the right to create new events / tasks that meets a certain set of restrictions (e.g., events / tasks that are classified as confidential) in his calendar.</p>
+</clause>
+
+<clause id="_69" obligation="normative">
+<p id="_2dd0a994-8310-adde-455e-4ccb7b392181">A user wants to know which security principals are granted/denied the right to create new events / tasks that meet a certain set of restrictions (e.g., events / tasks that are classified as confidential) in his calendar.</p>
+</clause>
+
+<clause id="_70" obligation="normative">
+<p id="_9c8b313b-fbe2-ac7f-ef4b-f689f351305c">A user wants to know whether he is granted/denied the right to create new events / tasks that meet a certain set of restrictions (e.g., events / tasks that are classified as confidential) in a given calendar.</p>
+</clause>
+
+<clause id="_71" obligation="normative">
+<p id="_c6c3e4ec-20d4-7bdb-bd1c-f52367e577e8">A user wants to know whether a given user is granted/denied the right to create new events / tasks that meet a certain set of restrictions (e.g., events / tasks that are classified as confidential) in a given calendar.</p>
+</clause>
+
+<clause id="_72" obligation="normative">
+<p id="_57e2f7af-4978-a1f7-8fe6-917b91058bec">A user wants to grant/deny to the right to read/modify/delete a subset (or all) of his events / tasks (e.g., events / tasks classified as private) in his calendar.</p>
+</clause>
+
+<clause id="_73" obligation="normative">
+<p id="_4cdff0e1-95a0-1216-c6b6-c01483a6c923">A user wants to know which security principals are granted/denied the right to read/modify/delete a subset (or all) of his events / tasks (e.g., events / tasks classified as private) in his calendar.</p>
+</clause>
+
+<clause id="_74" obligation="normative">
+<p id="_95d3a730-e4a1-972a-bc21-c88c2da1c9ab">A user wants to know whether he is granted/denied the right to read/modify/delete a subset (or all) of his events / tasks (e.g., events / tasks classified as private) in a given calendar.</p>
+</clause>
+
+<clause id="_75" obligation="normative">
+<p id="_a0cde5b1-83e7-e0d8-b257-e183cf203f26">A user wants to know whether a given user is granted/denied the right to read/modify/delete a subset (or all) of his events / tasks (e.g., events / tasks classified as private) in a given calendar.</p>
+</clause>
+
+<clause id="_76" obligation="normative">
+<p id="_96fa006e-8db4-ceb1-68a3-44051f77ea21">A user wants to grant/deny to security principals the right to obtain free/busy information derived from a specific subset (or all) of the events (e.g., events classified as public) in a given calendar.</p>
+</clause>
+
+<clause id="_77" obligation="normative">
+<p id="_566eb2c8-3eec-bfaa-a045-278478b1cbe2">A user wants to know which security principals are granted/denied the right to obtain free/busy information derived from a specific subset (or all) of the events (e.g., events classified as public) in a given calendar.</p>
+</clause>
+
+<clause id="_78" obligation="normative">
+<p id="_cdde8833-66ef-9c79-6e3a-fdaf691cc747">A user wants to know whether he is granted/denied the right to obtain free/busy information derived from a specific subset (or all) of the events (e.g., events classified as public) in a given calendar.</p>
+</clause>
+
+<clause id="_79" obligation="normative">
+<p id="_63c28206-7668-eb55-27a6-ab8b4cf5af5b">A user wants to know whether a given user is granted/denied the right to obtain free/busy information derived from a specific subset (or all) of the events (e.g., events classified as public) in a given calendar.</p>
+</clause>
+
+<clause id="_80" obligation="normative">
+<p id="_0555054d-cddf-fde6-3b1a-bf428f9b1747">A user wants to know the set of privileges that applies to him on a given event or tasks in a given calendar.</p>
+</clause>
+
+<clause id="_81" obligation="normative">
+<p id="_75f475c2-e573-6cc2-4d08-1391e4e61130">A user wants to grant/deny to security principals the right to read/modify the access control lists of a subset (or all) of his events / tasks (e.g., events / tasks classified as private) in a given calendar.</p>
+</clause>
+
+<clause id="_82" obligation="normative">
+<p id="_61b3f75b-f9c3-d3ea-05e2-f5324aa4a686">A user wants to know which security principals are granted/denied the right to read/modify the access control lists of a subset (or all) of his events / tasks (e.g., events / tasks classified as private) in a given calendar.</p>
+</clause>
+
+<clause id="_83" obligation="normative">
+<p id="_ade9a719-5bdf-8724-5489-884f284318c5">A user wants to know whether he is granted/denied the right to read/modify the access control lists of a subset (or all) of events / tasks (e.g., events / tasks classified as private) in a given calendar.</p>
+</clause>
+
+<clause id="_84" obligation="normative">
+<p id="_a402acfb-ec4f-edc9-73d6-961bb1660541">A user wants to know whether a given user is granted/denied the right to read/modify the access control lists of a subset (or all) of events / tasks (e.g., events / tasks classified as private) in a given calendar.</p>
+</clause>
+</clause>
+
+<clause id="_scheduling_access_control" obligation="normative">
+<title>Scheduling Access Control</title>
+<clause id="_85" obligation="normative">
+<p id="_ef404565-a97a-ce22-9bcd-de1bc910bb9e">A user wants to grant/deny to security principals the right to invite him to events.</p>
+</clause>
+
+<clause id="_86" obligation="normative">
+<p id="_a723e076-aa35-6d60-0fd6-1f29fc98dced">A user wants to know which security principals are granted/denied the right to invite him to events.</p>
+</clause>
+
+<clause id="_87" obligation="normative">
+<p id="_f6249b6f-1d01-5e90-cb18-373bb95cb2dc">A user wants to know whether he is granted/denied the right to invite a given user to events.</p>
+</clause>
+
+<clause id="_88" obligation="normative">
+<p id="_d75a290e-222d-0570-86b7-5351d9df0033">A user wants to grant/deny to security principals the right to assign him tasks.</p>
+</clause>
+
+<clause id="_89" obligation="normative">
+<p id="_c6155619-e851-bf20-69bc-704de8582eb5">A user wants to know which security principals are granted/denied the right to assign him tasks.</p>
+</clause>
+
+<clause id="_90" obligation="normative">
+<p id="_f89ea005-6b04-3d3c-2e27-10e81f6b327f">A user wants to know whether he is granted/denied the right to assign tasks to a given user.</p>
+</clause>
+
+<clause id="_91" obligation="normative">
+<p id="_459dec37-a78c-2c4c-cf00-f4f740a12488">A user wants to grant/deny to security principals the right to reply to events / tasks that meet a certain set of restrictions (e.g., events / tasks that are classified as confidential) on his behalf.</p>
+</clause>
+
+<clause id="_92" obligation="normative">
+<p id="_37b68c1f-3f97-c4ee-d632-c858d1bf9c2d">A user wants to know which security principals are granted/denied the right to reply to events / tasks that meet a certain set of restrictions (e.g., events / tasks that are classified as confidential) on his behalf.</p>
+</clause>
+
+<clause id="_93" obligation="normative">
+<p id="_180ee2d8-d519-0feb-436e-cc23e1f48824">A user wants to know whether he is granted/denied the right to reply to events / tasks that meet a certain set of restrictions (e.g., events / tasks that are classified as confidential) on behalf of a given user.</p>
+</clause>
+
+<clause id="_94" obligation="normative">
+<p id="_5454bf36-cc40-6121-45f3-5f153d555cb0">A user wants to grant/deny to security principals the right to send event invitations that meet a certain set of restrictions (e.g., events that are classified as confidential) on his behalf.</p>
+</clause>
+
+<clause id="_95" obligation="normative">
+<p id="_d91e57e6-56e8-49d4-e9b9-fba35423441c">A user wants to know which security principals are granted/denied the right to send event invitations that meet a certain set of restrictions (e.g., events that are classified as confidential) on his behalf.</p>
+</clause>
+
+<clause id="_96" obligation="normative">
+<p id="_16f8a6d9-b003-732d-12ac-89edb5fa77d6">A user wants to know whether he is granted/denied the right to send event invitations that meet a certain set of restrictions (e.g., events that are classified as confidential) on behalf of a given user.</p>
+</clause>
+
+<clause id="_97" obligation="normative">
+<p id="_1b5d1a7f-32d0-6e93-25fe-2e5d7bad8dee">A user wants to know whether a given user is granted/denied the right to send event invitations that meet a certain set of restrictions (e.g., events that are classified as confidential) on his behalf.</p>
+</clause>
+
+<clause id="_98" obligation="normative">
+<p id="_80df1d70-8c7e-d368-e5ab-6f5781094fcd">A user wants to grant/deny to security principals the right to assign tasks that meet a certain set of restrictions (e.g., tasks that are classified as private) to other users on his behalf.</p>
+</clause>
+
+<clause id="_99" obligation="normative">
+<p id="_3ca84b2d-0ebc-4122-7086-c7828a2f267a">A user wants to know which security principals are granted/denied the right to assign tasks that meet a certain set of restrictions (e.g., tasks that are classified as private) to other users on his behalf.</p>
+</clause>
+
+<clause id="_100" obligation="normative">
+<p id="_91b3e874-ef83-b916-e94e-48a9052b0bc8">A user wants to know whether he is granted/denied the right to assign tasks that meet a certain set of restrictions (e.g., tasks that are classified as private) to other users on behalf of a given user.</p>
+</clause>
+
+<clause id="_101" obligation="normative">
+<p id="_b9755e13-2cbc-e87b-5be7-1f3865d7d90d">A user wants to know whether a given user is granted/denied the right to assign tasks that meet a certain set of restrictions (e.g., tasks that are classified as private) to other users on his behalf.</p>
+</clause>
+</clause>
+</clause>
+</sections>
+</csd-standard>

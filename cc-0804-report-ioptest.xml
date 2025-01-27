@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">June 2008 CalConnect Mobile Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0804:2008</docidentifier><docnumber>0804</docnumber><date type="published"><on>2008-08-31</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Bruno Browning</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Mike Douglass</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Gren Elliot</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>John Holder</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Florian von Kurnatowski</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Emil Lundberg</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Jong Yoon Lee</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1.3</edition><version><revision-date>2008-08-31</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2008</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_907f9be5-eb56-eaba-9be2-d2f72bcb5dcb" obligation="normative">
+<p id="_97a3febc-f821-69e7-8ed2-9465d2853728">© 2008 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<clause id="_participants" obligation="normative">
+<title>Participants</title>
+<table id="_05d86153-3abf-287e-5474-8ab1f1145340">
+<name>Participants</name>
+<thead><tr><th valign="top" align="left">Organization</th>
+<th valign="top" align="left">Participants</th>
+<th valign="top" align="left">Products Tested</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><p id="_8df80aa2-ea2a-ce81-811f-5610c2568362">Apple</p>
+</td>
+<td valign="top" align="left"><p id="_b0101cde-0211-b3fd-8779-6e45bcd493e7">Cyrus Daboo</p>
+</td>
+<td valign="top" align="left"><p id="_bbfbc3c5-3893-20b9-b6aa-4f03de9625d1">iCal Server and client — OS X 10.5.3<br/> iCal client 3.03</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_ad473373-3f6c-33ca-1151-309598a13e8e">Mozilla</p>
+</td>
+<td valign="top" align="left"><p id="_d48caf59-e6b3-b3a9-35e6-9c47593afca1">Bruno Browning</p>
+</td>
+<td valign="top" align="left"><p id="_7368a5e5-cef9-d9b3-ff78-8b2e29d2b1f8">Sunbird/Lightning 0.9pre<br/> Mozilla Calendar CVS pull (mid-May sometime)</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_cadce0ca-86d5-ed9a-ac3b-198054c25fe8">RPI/Bedework</p>
+</td>
+<td valign="top" align="left"><p id="_5faed4e7-ec2b-939d-f737-68db2ad72240">Mike Douglass</p>
+</td>
+<td valign="top" align="left"><p id="_c8b02204-3caf-9af0-2f4b-dbc24fe4ce7e">Bedework server 3.5</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_a8fd5b23-870f-08c1-774e-97d16bce93ed">Scalix</p>
+</td>
+<td valign="top" align="left"><p id="_2cafd41a-eb94-44a2-614f-523b20e21512">Florian von Kurnatowski<br/> Gren Elliot</p>
+</td>
+<td valign="top" align="left"><p id="_81c01d95-155e-2743-e87a-8e5f3ae4f9fb">11.4.1 pre-release</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_de7cd309-f3aa-c858-ed55-ee211d4419a4">Zimbra Yahoo</p>
+</td>
+<td valign="top" align="left"><p id="_022d4ce1-b5dc-793f-d00e-ff7648c044b3">John Holder<br/> Jong Yoon Lee</p>
+</td>
+<td valign="top" align="left"><p id="_340693b7-7fba-7d3e-74de-696f1d29d213">Zimbra Server pre 5.0.7 (nightly)</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_db9907af-ae14-88d4-5749-a78ae0540936">Uppsala University, Sweden</p>
+</td>
+<td valign="top" align="left"><p id="_271366b5-7da2-b537-3a32-7e06d983ae69">Emil Lundberg — Observer</p>
+</td>
+<td valign="top" align="left"><p id="_3a11a826-1dd8-f50e-598f-d77d0f09b4c2">iCal 3.0.3 (1244)</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_8ca27424-6855-4e92-f686-606fc9ae7e2c">CalConnect Reps</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_579a5da4-da6e-d071-f5b7-474157a997e5">Interop Manager<br/> Logistics</p>
+</td>
+<td valign="top" align="left"><p id="_7e7d79f5-48df-1213-4d4e-7b80f38a7f33">Pat Egen<br/> Dave Thewlis</p>
+</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+
+<clause id="_introduction" obligation="normative">
+<title>Introduction</title>
+<p id="_cc482855-4b0f-1d2d-63df-3fa5bfe37314">Participants of the testing event used predetermined test scenarios. Rather than post the full scenarios in this document, they can be found on the CalConnect website at the following URL: <link target="http://www.calconnect.org/ioptesting.shtml"/>. The documents used in this testing event was the CalConnect CalDAV Matrix for Draft 08, in particular the scheduling section. This was one of the first interops where we had clients that supported the scheduling portion of CALDAV. Summaries and specific findings and issues found are noted in this document.</p>
+</clause>
+
+<clause id="_participant_comments_and_findings" obligation="normative">
+<title>Participant Comments and Findings</title>
+<clause id="_vendor_1" obligation="normative">
+<title>Vendor 1</title>
+<p id="_9791dbc4-b6fc-1f2d-1188-befa69808647">This vendor stated they were pleased to take part in the CalConnect interoperability event. Their testing focused on a server product with a client to ensure their scheduling support was working well and they certainly made big strides there. Other server vendors were doing a lot of their own testing with a client and they were able to help them out on a few issues.</p>
+
+<p id="_b21dd895-4dac-12cf-df33-db45ac0d8919">No major issues were found, though some follow-up is needed on specific client behaviors that other vendors asked about. Now looking forward to the next event.</p>
+</clause>
+
+<clause id="_vendor_2" obligation="normative">
+<title>Vendor 2</title>
+<p id="_b01aeb73-8ad1-870e-2cec-f569b85b3c4a">The vendor was mostly testing a client and their implementation of scheduling.</p>
+
+<p id="_38aac289-6748-7af0-b3b6-573524266a4f">Generally the baseline CalDAV stuff worked well with all the servers present for testing. They did see some oddities interacting with recurring items on one server but otherwise all was good.</p>
+
+<p id="_dc4295d0-f764-9b9f-88a6-43da8e17c6fe">CalDAV-sched was also working well after some bugs were fixed at the interop. This was tested most thoroughly with another vendor offering but was able to send invitations successfully with two other servers as well; they did not test those for  <tt>REPLY</tt> creation or handling.</p>
+
+<p id="_d23b8709-83cb-5cab-d40c-2938180df445">CalDAV-sched (including <tt>freebusy</tt>) is not yet working with one of the vendors present. The tester felt the chance to meet and interact with the other developers as well as their code was invaluable and has continued to be a benefit since the event. The only ways they can think of to improve it would be to increase some parameters: length of event, number of participants, and frequency of occurrence. However, they realize that all of those are difficult.</p>
+</clause>
+
+<clause id="_vendor_3" obligation="normative">
+<title>Vendor 3</title>
+<p id="_11e0bbf9-050f-efbe-3205-6b5d451814fe">The main value of the interop to this vendor was being in the same room as some of the other developers. This was invaluable for learning about how to configure better logging and also in diagnosing issues in both clients and our server.</p>
+
+<p id="_9539d416-a210-8810-b343-49fb732f59ca">Their CalDAV Schedule support did not work at all with one of the clients and they spent a lot of time diagnosing issues with that and fixing them. They didn’t support principal-property-search reports, for instance, which was a major blocker.</p>
+
+<p id="_a73f5bef-47ce-85d5-8006-eb05c90b7c48">When updating a calendar entry, the server was using the HTTP status code of Created, which is incorrect for an update. The other vendor application was unhappy with this status code. It was creating meetings without an  <tt>ORGANIZER</tt> at one point and this resulted in the server creating corrupt <tt>ORGANIZER</tt> fields in subsequent accesses.</p>
+
+<p id="_cbbf86c4-41cc-04e9-e17f-82d36bade1c0">Initial testing yet another vendor showed that the test version of that vendor’s application was not recognizing our Meeting Requests at all. This was subsequently fixed by them.</p>
+
+<p id="_16b9256a-bc3e-9b13-4fae-cb0b45fd02a5">A lack of iMip support prevented IOP testing with two of the server applications at the event.</p>
+</clause>
+
+<clause id="_vendor_4" obligation="normative">
+<title>Vendor 4</title>
+<p id="_4e61ee02-3224-17c9-9a2d-1164809c1e32">This was a relatively quiet CITE but useful nonetheless.</p>
+
+<p id="_400e7a93-415e-926b-9e37-1fc852c300b9">One of the other vendors managed to find some CalDAV issues with our application. Those that were bugs were fixed and retried.</p>
+
+<p id="_f08be8cb-eaa2-3001-89a1-ffb94d20b7e5">The one specific bug that might affect others is that our application wasn’t always handling content-type correctly when the character set was appended.</p>
+
+<p id="_a011928e-360d-bdc1-bb9d-c37ca449d78e">Scheduling using another vendor seemed to work fine.</p>
+
+<p id="_488190df-31a2-51d8-d110-35589f7309c0">This vendor also was pleased with the interop event.</p>
+</clause>
+
+<clause id="_vendor_5" obligation="normative">
+<title>Vendor 5</title>
+<p id="_b5e693b5-b86b-055a-f228-9a3bf1360043">During the interop testing, this vendor found four significant issues of mention. Their application performed well in general testing against three other clients.</p>
+
+<p id="_d71e3edb-d620-2394-b660-5a165081a8bb">We also took the time to test free busy interop as well as iCal compatibility with two vendors. Their application performed well under these tests.</p>
+
+<p id="_97499f2d-9a32-d8d5-3033-189673dc1b25">We also discussed the need to validate the need to validate (in some capacity) the changes that are pushed out on events that have multiple attendees.</p>
+
+<clause id="_issues_found" obligation="normative">
+<title>Issues Found</title>
+<ol id="_800bbde7-862a-8215-c3ca-684e2bc5ac41" type="arabic"><li><p id="_b870feaa-2204-5cc1-e134-dcd4541726a8">Creating a New Calendar, the event will throw 500</p>
+<ul id="_1aec4b28-3824-51e5-0745-202057481c80"><li><p id="_9556074b-d7ad-d8c4-cefd-96ed99d61ea6"><tt>Error: dav - error handling method PUT com.xxxx.xx.dav.DavException: cannot create</tt></p>
+</li>
+<li><p id="_00d5b8a2-9877-549b-1345-5e8ae66d36d9">Summary: When creating a new collection, the server may not return the correct collection type.</p>
+</li>
+</ul>
+</li>
+<li><p id="_08adb114-b06d-7985-df60-5f4e6cdb9396">When Adding an Attendee to an Event on another Domain, <tt>PERM_DENIED</tt></p>
+<ul id="_c351ed59-1ec4-e598-5657-406aec26f256"><li><p id="_acfab838-7745-2f65-e21c-1ab119b32829"><tt>Error: calendar - Unable to process iCalendar attachment</tt> <tt>com.xxxxxxx.common.service.ServiceException: permission denied: calendar invite not allowed from (Sender)</tt></p>
+</li>
+<li><p id="_2f69fa58-7d8e-ef1a-c1c1-1622a462546e">Summary: When creating an event via CalDAV, and adding an attendee that is not part of the domain, the server will throw this error. No impact on delivery/event.</p>
+</li>
+</ul>
+</li>
+<li><p id="_06598334-ff67-e50c-766d-b25791fa48cb">MultiGet Problem with Calendars that have encoding\Characters that have encoding are escaped twice</p>
+<ul id="_078255f8-80bd-a89b-28ad-799e1c1bc102"><li><p id="_a19a1297-716d-c2d9-0337-381660c55efc"><tt>Error: &lt;status&gt;HTTP/1.1 404 Not Found&lt;/status&gt;</tt></p>
+</li>
+<li><p id="_303a3c5a-ef71-1015-80e7-3e09e9e8c111">Summary: When using multiget clients and/or if user’s have calendars that have names that have characters that must be encoded, the calendar isn’t visible.</p>
+</li>
+</ul>
+</li>
+<li><p id="_d2c7bc5d-c8ee-948b-1c95-1ad0415c0609">Validation of incoming iMIP messages and calendar <tt>SPAM</tt></p>
+<ul id="_9bfd8b13-aa6e-131e-eccf-60718d0d1f22"><li><p id="_fee6a249-f121-95cc-5a91-8bbf9642a7a8">Error: None, but impact is invalidated users can edit/change events; unscrupulous individuals can add spam events to calendars, unchecked.</p>
+</li>
+</ul>
+</li>
+</ol>
+</clause>
+</clause>
+
+<clause id="_a_neutral_observer" obligation="normative">
+<title>A Neutral Observer</title>
+<p id="_f47a2b9f-33bb-cf93-2edb-db7c1534819c">It is common for us to have observers to the interop. This time the observer chose to actually do some “neutral testing” on their own. These are their comments.</p>
+
+<p id="_04de9503-e351-ea89-1081-7463ddadd2be">This organization is interested in implementing a university-wide (and possibly inter-university) calendaring service to complement the web, e-mail, and other services (IM also coming), so we are interested in calendaring standards for two reasons:</p>
+
+<ol id="_6170879f-29e3-a8f5-0ad6-83658194dc8b" type="arabic"><li><p id="_6a9face1-7d10-8b6f-53a7-c4f30314e321">Can we hope to implement open and common standards for calendaring usable by multiple clients and/or are there third party vendors that can offer this capability, as well as interacting with proprietary protocols?</p>
+</li>
+<li><p id="_5bc18c29-a142-a488-7e8f-2aad619ca904">If so, we are (or should be) willing to contribute to the evolution of such standards, to the best of our ability.</p>
+</li>
+</ol>
+
+<p id="_8581371d-9673-977f-c757-1124ec4edfe0">Generally, the IOP event was a rewarding exercise, stressing our own test environment (iCal server) as well as different vendors’ servers and taking part in the discussions that followed. As discussed with the Executive Director previously, we will consider joining either as an individual university.</p>
+</clause>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_7cca26dd-c9ca-0737-2cc8-030347595311">While the event was smaller than usual, this was our first event where we were able to test scheduling with CALDAV clients. Several vendors tested client and server scheduling.</p>
+
+<p id="_96e44a99-d244-57a3-103f-5cdbb576046a">Several items were uncovered and generally it was very successful. As usual, it would be nice to have more time.</p>
+
+<p id="_937491a8-46e4-2457-53f4-2027ee20ebdb">We are continuing our work on a virtual testing environment to enable ongoing, interim testing via the internet to public servers. This will improve the ability to test more applications during our onsite testing events.</p>
+
+<p id="_612347c5-7fb0-2e39-8682-de823e7bc8d8">Thank you to all the participants and their willingness to take time out of busy schedules to help CalConnect forward the usage of calendaring standards.</p>
+
+<p id="_e03bb13e-a326-6344-43ef-295bbab63bed">Respectfully submitted by Pat Egen, CalConnect Interop Manager.</p>
+</clause>
+
+
+</sections><annex id="_uppsala_university_sweden" obligation="normative">
+<title>Uppsala University, Sweden</title>
+<table id="_f02698f1-15ea-cb2f-2da5-6b73422ccb6c"><thead><tr><th colspan="5" valign="top" align="center">Servers</th>
+<th colspan="2" valign="top" rowspan="2" align="left"/><th valign="top" rowspan="2" align="left">Comments</th>
+</tr><tr><th valign="top" align="left"><p id="_9a6b66e7-2d06-c2fd-2729-339164e499b5">One</p>
+</th>
+<th valign="top" align="left"><p id="_d5d0f555-4873-5b5b-85aa-bf4004aac047">Two</p>
+</th>
+<th valign="top" align="left"><p id="_22a5d02b-939e-a13b-a2a0-4275c8b564a3">Three</p>
+</th>
+<th valign="top" align="left"><p id="_915a99a3-8ad3-074d-639f-73a96629475e">Four</p>
+</th>
+<th valign="top" align="left"><p id="_dd796ab9-f9db-11c9-4236-3eb05b8d1b4d">Five</p>
+</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><th valign="top" align="left">1.</th>
+<th valign="top" align="left">Event creation.</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_8cdf7348-886c-8648-16af-f7c312732bf7">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_11134603-af37-cce0-8722-b0e96c3e86d8">P</p>
+</td>
+<td valign="top" align="left"><p id="_e18eabb5-6092-940f-06fe-b322520fd5d9">P</p>
+</td>
+<td valign="top" align="left"><p id="_3d7d9cb0-c15b-2438-f6fe-e7c8312f0eb4">P</p>
+</td>
+<td valign="top" align="left"><p id="_0cb29f45-1116-bf3e-1867-5604b4b02137">1.1.</p>
+</td>
+<td valign="top" align="left"><p id="_2961ba77-b335-ec49-7416-7acf5ac132d4">Create new single-instance meeting titled “Meeting 1.1” with the location “Durham”.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_8f0bc0c9-1c9f-6028-39c6-2a213767faf2">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_b0b9c611-7626-fd47-80c9-ac6766d2d5d5">P</p>
+</td>
+<td valign="top" align="left"><p id="_dd8a0a5f-b174-70fe-e4c7-33a866bc7401">P</p>
+</td>
+<td valign="top" align="left"><p id="_2e42fc4b-451a-7f4d-527a-021bb8b24971">P</p>
+</td>
+<td valign="top" align="left"><p id="_a7ab0c8e-21bd-4b85-8802-1dbf770d375d">1.2.</p>
+</td>
+<td valign="top" align="left"><p id="_f10944f3-d2b7-fdbe-7849-f7581bcd03f6">Create new meeting titled “Meeting 1.2” recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_1e39d801-b82c-c301-05d8-afbd1f97e0e8">P*</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_1754a5d4-bae5-aa0d-ebf3-6e4785719417">P</p>
+</td>
+<td valign="top" align="left"><p id="_73d6a3f8-fa88-c423-abb6-ef2b6db3979a">P**</p>
+</td>
+<td valign="top" align="left"><p id="_0fa69def-f811-ca30-40e2-02489f742065">P</p>
+</td>
+<td valign="top" align="left"><p id="_8c22bf55-6272-ef2b-b3aa-935a218e16ec">1.3.</p>
+</td>
+<td valign="top" align="left"><p id="_be3e5419-6505-4921-6f1e-39c2b256da18">Create new single-instance meeting titled “Meeting 1.3” with 2 other attendees.</p>
+</td>
+<td valign="top" align="left"><p id="_a35b711f-0edc-c0af-8b0e-b817173e5190">* &amp; ** No cuaddr to test with, used CalDAV1 &amp; CalDAV2, got ‘?’. Could use iMIP, and update status though email. NB: for iMip, e-mail address of sender/organizer must match cuaddr (problem w/ many e-mail addresses configured on either client)</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_6c847a5a-46d7-88e5-4d7c-53910f98c625">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_2f485742-a2ef-63ec-9192-a9db6dfa7c9a">P</p>
+</td>
+<td valign="top" align="left"><p id="_5c07b509-2102-cec6-0a5b-aa4904882a6c">P</p>
+</td>
+<td valign="top" align="left"><p id="_d566b89a-d439-8105-6dc0-c0b14790b505">P</p>
+</td>
+<td valign="top" align="left"><p id="_3e285769-336d-cd9d-b726-509edae14f90">1.4.</p>
+</td>
+<td valign="top" align="left"><p id="_871212ab-0573-306e-0a7d-8beb0895d486">Create new single-instance meeting titled “Meeting 1.4” with an alarm set to trigger 15 minutes prior to the schedule time of the meeting.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><th valign="top" align="left">2.</th>
+<th valign="top" align="left">Event modification</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_b0851df3-5e91-25e3-57e9-8ea6270a8b51">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_181c1e45-950a-59ed-ae8a-8a0d250f05cc">P</p>
+</td>
+<td valign="top" align="left"><p id="_3ba55d4b-0471-9baa-5058-78d24d095127">P</p>
+</td>
+<td valign="top" align="left"><p id="_0e1ada7e-e445-241e-9da4-c94e27a2ce9a">P</p>
+</td>
+<td valign="top" align="left"><p id="_bbf7d88d-b63e-ed76-2d55-4ffe7f691fc4">2.1.</p>
+</td>
+<td valign="top" align="left"><p id="_2ee37670-e349-1c5b-ab38-6a0fc4e47d40">Modify the title of meeting “Meeting 1.1” to “Meeting 1.1bis”.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_d103bf58-4f6d-3b54-43d9-ce491d6e29c6">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_21a2b6d7-ef74-d601-e010-dd7b7ae4c409">P</p>
+</td>
+<td valign="top" align="left"><p id="_1ea2b4e2-3084-e75b-3960-f7ed8cf600ad">P</p>
+</td>
+<td valign="top" align="left"><p id="_49b3a10b-e7af-c3c6-b5a3-e130dd9da215">P</p>
+</td>
+<td valign="top" align="left"><p id="_a6f81ce3-d00b-0165-1b86-9d04d9050efa">2.2.</p>
+</td>
+<td valign="top" align="left"><p id="_dcb7e009-92ff-4131-4acf-ddc6e9f22480">Modify the location of the meeting “Meeting 1.1bis” to “Seattle bis”.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_c3d7f983-2362-168d-a0de-01f5554df884">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_69caf44c-9769-c399-0b21-e13fdfe2a3f0">P</p>
+</td>
+<td valign="top" align="left"><p id="_7d0ea0a1-121a-dec4-fd0c-8acd694d7e88">P</p>
+</td>
+<td valign="top" align="left"><p id="_19b07951-dc64-2ac8-9042-c046f01321ac">P</p>
+</td>
+<td valign="top" align="left"><p id="_c7917971-99c8-8cef-6288-620d676815f9">2.3.</p>
+</td>
+<td valign="top" align="left"><p id="_3e1eb13d-bede-a369-1714-74e6b605942e">Reschedule meeting “Meeting 1.1bis” to the next day.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_dea9fe91-c317-d9e3-f7ff-aea1f422bc0e">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_1dbc971f-20ac-227d-392a-5a339330d1f9">P</p>
+</td>
+<td valign="top" align="left"><p id="_2bcda67c-ff4d-553f-47d7-871d7c35d2b9">P</p>
+</td>
+<td valign="top" align="left"><p id="_02e36496-ebbc-c114-0b8b-cce59fc1fd83">P</p>
+</td>
+<td valign="top" align="left"><p id="_c76cc75c-91c5-b973-e469-709956839bda">2.4.</p>
+</td>
+<td valign="top" align="left"><p id="_25cf1fc4-2059-ce7f-7b3c-9e40a013c8e8">Add an attendee to “Meeting 1.1bis”.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_c90c9376-995e-ae93-7842-1f7bdf8c0cb3">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_c11d3f3e-da9d-9ef0-c860-ee073760d5d2">P</p>
+</td>
+<td valign="top" align="left"><p id="_822fc7b4-3303-512b-e7ca-12e9af30b944">P</p>
+</td>
+<td valign="top" align="left"><p id="_602b9241-65e9-db35-22ef-3a33b7b1ff20">P</p>
+</td>
+<td valign="top" align="left"><p id="_144bfbf2-e401-2ddd-d218-cbcab3d356bf">2.5.</p>
+</td>
+<td valign="top" align="left"><p id="_eae453e5-44b1-3414-b79c-6974bb2f1b02">Add an alarm to “Meeting 1.1bis”.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_328b8400-7e7c-b6af-de2d-0de2c1343525">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_81ecb278-9324-fc64-65bb-caaeb0caab43">P</p>
+</td>
+<td valign="top" align="left"><p id="_694c6dc8-96a8-6b2a-a7a1-298f6fdb4e4e">P</p>
+</td>
+<td valign="top" align="left"><p id="_b8a128ed-9cb8-d45c-3e2f-36b7cab29892">P</p>
+</td>
+<td valign="top" align="left"><p id="_cd5a7bb7-c47e-d0df-c08a-cee13997af69">2.6.</p>
+</td>
+<td valign="top" align="left"><p id="_87ce020a-3ac9-76b7-7106-42d9f8e88778">Modify the title of the 1st instance of the recurring meeting created in 1.2.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_dc890fea-4fac-b6b4-6515-1bf1001c8442">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_200913bb-6611-c68c-da22-9b8db0eeb13a">P**</p>
+</td>
+<td valign="top" align="left"><p id="_31e8dbfb-fba4-3a14-ba24-1b35502b1a70">P</p>
+</td>
+<td valign="top" align="left"><p id="_8194238d-9c95-a9ed-f10f-bf3b1a899e46">P</p>
+</td>
+<td valign="top" align="left"><p id="_fb4ac891-92ce-4852-9625-1c9a46313188">2.7.</p>
+</td>
+<td valign="top" align="left"><p id="_ff2ff958-837f-58b4-023f-44c160a7365f">Modify the participation status of the 1st attendee in meeting 1.3 to <tt>DECLINED</tt>.</p>
+</td>
+<td valign="top" align="left"><p id="_091b0bf3-a5ad-6e8f-8abd-9f3d07d2801a">** iMIP broken on test server.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_b8af1e0a-9a89-6d94-3055-47ad98476023">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_6eb6e804-5684-43fe-feda-ef0c58f2c282">P</p>
+</td>
+<td valign="top" align="left"><p id="_ca19d5e0-a4a0-1ee0-49c7-ec5b0cb4949a">P</p>
+</td>
+<td valign="top" align="left"><p id="_b0f8d386-ede9-a050-3ab5-96f42e6b751a">P</p>
+</td>
+<td valign="top" align="left"><p id="_297df04e-0a79-d895-e099-de3cf0e405a0">2.8.</p>
+</td>
+<td valign="top" align="left"><p id="_8c2cee2f-9e09-a181-ac5e-16e3a34d7f0f">Cancel the 4th instance of the recurring meeting created in 1.2.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_158b37b9-afc0-6902-c997-13dd0015cccc">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_c874b4dd-84d0-e353-2e0a-0a6bf97be9e7">P</p>
+</td>
+<td valign="top" align="left"><p id="_b2d47393-2c84-c733-9a86-346de9a60818">P</p>
+</td>
+<td valign="top" align="left"><p id="_e4f975c2-06e9-e2f2-2907-52d5c2715d4d">P</p>
+</td>
+<td valign="top" align="left"><p id="_e90dd96d-be88-02d7-88b9-2c73cf605360">2.9.</p>
+</td>
+<td valign="top" align="left"><p id="_e6f66d5e-70ed-f9a2-d93c-c06a3ea04159">One client changes “Meeting 1.1bis” to a different time, second client ‘refreshes’ its display to see the modification.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><th valign="top" align="left">4.</th>
+<th valign="top" align="left">Event deletion</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_1bb45273-06de-9207-330a-bbd60975c7d3">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_97dc523e-0e12-88f8-ee28-a3d2d623487e">P</p>
+</td>
+<td valign="top" align="left"><p id="_79a5788e-f53c-fcff-5052-6c3ae2c84942">P</p>
+</td>
+<td valign="top" align="left"><p id="_610b43c4-dd2e-3e4d-893b-5adc7ef939c9">P</p>
+</td>
+<td valign="top" align="left"><p id="_69931bef-205f-212c-dfcf-ef2282c9c304">4.1.</p>
+</td>
+<td valign="top" align="left"><p id="_6bb33948-2832-6722-b3ac-d358e87e486a">Delete a single non-recurring meeting.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_ea727501-a656-091d-f8d2-64d8f310624c">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_cb729229-ecca-02d0-022d-4c00ba20bb03">P</p>
+</td>
+<td valign="top" align="left"><p id="_1c153bf7-f521-1f63-1fb9-47cd43ef9e78">P</p>
+</td>
+<td valign="top" align="left"><p id="_17acd0d6-2d80-4ba3-ad25-74225b658012">P</p>
+</td>
+<td valign="top" align="left"><p id="_aeb4f4ab-eaa0-ca60-469c-b23a20e51346">4.2.</p>
+</td>
+<td valign="top" align="left"><p id="_932366fd-0840-67ff-7cdf-90fb7ae2d946">Delete a single recurring meeting with no overridden instances.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_904f6282-859e-fbe1-af8e-3b769ae7737b">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_9161d0c5-5481-ca58-8b1d-c822378f3ea4">P</p>
+</td>
+<td valign="top" align="left"><p id="_57eb1c66-5b94-b26d-1e6d-e7c8fb6e9a95">P</p>
+</td>
+<td valign="top" align="left"><p id="_737bd846-ee81-8e18-86e5-87a8a656698b">P</p>
+</td>
+<td valign="top" align="left"><p id="_e81c3688-bebc-9502-14a4-62a3d8dbe0c0">4.3.</p>
+</td>
+<td valign="top" align="left"><p id="_242ed128-1467-fd03-99a7-2a4a85e07e80">Delete a single recurring meeting with overridden instances.</p>
+</td>
+<td valign="top" align="left"><p id="_15e67b2b-f233-0b38-feb5-f0d05addab01">Deleting all instances, even those that are already deleted.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_095cb1ce-1aa5-a79e-549c-1ef044c82929">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_dd00cb44-4552-7a4d-57ee-c9a0e7670c95">P</p>
+</td>
+<td valign="top" align="left"><p id="_43e4c670-608f-23f4-da44-5bf2eac60898">P</p>
+</td>
+<td valign="top" align="left"><p id="_2c1f86bf-3697-e66c-cad1-3bad98d13cca">P*</p>
+</td>
+<td valign="top" align="left"><p id="_96bd86d1-89da-8eee-ce71-3e6872cd7268">4.4.</p>
+</td>
+<td valign="top" align="left"><p id="_22d074ac-1562-6173-3885-ccb619474120">Delete a non-overridden instance of a recurring meeting.</p>
+</td>
+<td valign="top" align="left"><p id="_2efc5583-19df-0954-4781-012e45148f80">The FIRST time (only) a single but repeated instance is deleted, it comes back!</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_cb96aee7-b59f-98bd-49a9-06359a830175">N</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_49be9c18-9749-4927-4b9e-fa7c0f608afe">N</p>
+</td>
+<td valign="top" align="left"><p id="_719e56a1-9238-03aa-6ac6-0827a6580ab9">N</p>
+</td>
+<td valign="top" align="left"><p id="_893f1af0-fd77-f49a-c609-e78fdd1421c3">N</p>
+</td>
+<td valign="top" align="left"><p id="_bfbdfd6e-36a0-8219-e1ab-0585f66ab51d">4.5.</p>
+</td>
+<td valign="top" align="left"><p id="_cf55a3f8-9723-7363-8b77-f296818383f7">Delete an overridden instance of a recurring meeting.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><th valign="top" align="left">5.</th>
+<th valign="top" align="left">Access Control</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_425034bc-6097-5755-cc2a-205b53a6f0cb"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_77071954-4017-6a1c-72f3-ac2b1d504e3f"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_f48dc2e7-c7d9-c021-f700-3a345259d702"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_ddc6882a-3d69-2e45-0e89-341806e93ac5">N</p>
+</td>
+<td valign="top" align="left"><p id="_31f2eea0-ffc4-505b-fb5f-f9f1917cc338">5.1.</p>
+</td>
+<td valign="top" align="left"><p id="_e5dff1fc-6f48-2121-eaa6-98abc8dd006c">View access control details on current user’s main calendar.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_685fcc71-9d81-5696-2a5b-32a3f55177b6"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_d2f116fe-8c6f-231d-0fb7-88a4b943f924"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_e4335e5b-101e-10db-6545-f51942ad724e"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_9863567e-94e1-6621-a97d-7dabef0697fc">N</p>
+</td>
+<td valign="top" align="left"><p id="_393cd428-4122-68c1-c605-c1bf49283f94">5.2.</p>
+</td>
+<td valign="top" align="left"><p id="_10229a9b-47d2-08ed-105c-ced6f6f3d9bc">Change access control details on current user’s main calendar to add another user with read-only access. Verify that other user can view the calendar but not change it.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_df194371-cc12-5e58-7926-91826c3cf19e"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_43c8e92d-274c-ead8-b5e7-189b9008da97"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_2e0d0827-56da-02ac-f649-7538d259f99e"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_3c8053dc-8790-faa9-2ef2-e69812adcb00">N</p>
+</td>
+<td valign="top" align="left"><p id="_51c9f290-fecc-e4cc-4ca6-00ece14fdb06">5.3.</p>
+</td>
+<td valign="top" align="left"><p id="_044e63df-4dc7-0f65-975d-f00dd487f88e">Change access control details on current user’s main calendar to add another user with read-write access. Verify that other user can view the calendar and change it. Verify that changes done by one user are seen by the other.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_90fa9665-12d8-bf1d-f284-49bcbe069a07"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_1f585d04-d4d3-8c99-3d40-82d10f5e1efe"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_b047fa4d-7947-433f-74ee-bb7d73251460"><strong>N</strong></p>
+</td>
+<td valign="top" align="left"><p id="_8e6381d5-77a6-0533-78f0-0fbbf2c13f4a">N</p>
+</td>
+<td valign="top" align="left"><p id="_3ccedb18-1c49-2cd2-2fef-d986a4d94762">5.4.</p>
+</td>
+<td valign="top" align="left"><p id="_dad92027-8422-d02c-c17f-4581c305c654">Remove another user’s access to the current user’s main calendar and verify they can no longer access the calendar.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><th valign="top" align="left">6</th>
+<th valign="top" align="left">Calendar Management</th>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_bda4873b-c238-c4d8-f3d2-d2e7649482cc">N</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_486f4a44-d186-1a6a-bd43-32f1a26f297b">N</p>
+</td>
+<td valign="top" align="left"><p id="_e2d37e71-d908-b41f-8b8e-bc45ba62597a">N</p>
+</td>
+<td valign="top" align="left"><p id="_0a567940-2302-0699-6b27-a81bd423bf0c">N</p>
+</td>
+<td valign="top" align="left"><p id="_4f66046e-565f-3e63-ecc4-1daeb547806f">6.1</p>
+</td>
+<td valign="top" align="left"><p id="_5a49bf8e-4470-fc17-0e82-a9718df5e57f">Browse the list of calendars on the server, including the current user’s personal calendars.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_f786a86e-7f05-3d16-17ca-ea8e14a6ffae">P*</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_e850816c-d3e4-5e63-d233-7de7c1794be5">P</p>
+</td>
+<td valign="top" align="left"><p id="_b1b0b1f2-2664-6645-5cbf-6e8a4b356b5e">P</p>
+</td>
+<td valign="top" align="left"><p id="_602419ca-958f-aced-fddf-36ba6b6c0720">P</p>
+</td>
+<td valign="top" align="left"><p id="_21b2c325-84e3-fca7-93ec-20061c5377e5">6.2</p>
+</td>
+<td valign="top" align="left"><p id="_4a059628-2979-9ce7-a1b2-befb989b3704">Create a new calendar in the current user’s personal calendar space.</p>
+</td>
+<td valign="top" align="left"><p id="_c4db07e5-84fd-4390-8d7b-0615b3cf5b9b">* Can create calendar, but it not writable. Will do after restart of client. Bug fixed in server!</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_e5710616-abce-2094-c2e2-8e68cc91c8be">N</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_3e3a5e18-64a7-76d5-ccf9-1df59d56d98f">N</p>
+</td>
+<td valign="top" align="left"><p id="_a8dbdb67-da32-9f82-09c0-dc033cd86917">N</p>
+</td>
+<td valign="top" align="left"><p id="_85ea1eb6-308f-c6df-5b54-9fcd10ad4523">N</p>
+</td>
+<td valign="top" align="left"><p id="_bd24a3e6-96d0-03eb-0803-a758ca939899">6.3</p>
+</td>
+<td valign="top" align="left"><p id="_471c6208-299c-f9b1-df66-541a9dff45c4">Create a regular collection in the current user’s personal calendar space.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_f851f7ea-4de9-3062-e93c-7d9ee14aba05">N</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_d539d572-f441-43b9-57e7-91d98e4ed694">N</p>
+</td>
+<td valign="top" align="left"><p id="_71e6aa23-48cd-1645-5699-4632794e4b1b">N</p>
+</td>
+<td valign="top" align="left"><p id="_375899fa-91d1-ef06-32f2-02c865c72273">N</p>
+</td>
+<td valign="top" align="left"><p id="_9e52afd6-e197-74b5-6502-71a62fc83a1f">6.4</p>
+</td>
+<td valign="top" align="left"><p id="_f076b56a-817a-3dca-b7a4-dd924dc4ed48">Create a new calendar inside the collection created in 6.3.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_11749134-3e0c-2077-1554-3eee1ceb1afa">P</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_d60b9cde-bf38-1ef3-a3b3-74eb4e5cf5a1">P</p>
+</td>
+<td valign="top" align="left"><p id="_1041ad6d-6e7e-3ad5-63da-0622629c566e">P</p>
+</td>
+<td valign="top" align="left"><p id="_7fdb1f23-2ae5-1849-b4ba-d5fe9632e5cc">P</p>
+</td>
+<td valign="top" align="left"><p id="_812e77b4-491b-a259-3cf1-e2ce7464e825">6.5</p>
+</td>
+<td valign="top" align="left"><p id="_5e3f3adb-e1aa-300e-a641-4c44e1c02a52">Delete the calendar created in 6.2.</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_41c8a100-6b86-ffb1-999c-a194c1d2de78">N</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"><p id="_82de4fa6-f5d6-f136-b2bf-870e47d8cdc0">N</p>
+</td>
+<td valign="top" align="left"><p id="_046c96f0-9dce-9834-8e74-c634a242fb63">N</p>
+</td>
+<td valign="top" align="left"><p id="_05f6e6e4-a3ac-2a1c-90c0-41087f77c47d">N</p>
+</td>
+<td valign="top" align="left"><p id="_e3469729-9f04-f2b5-22ca-9aa89a594a57">6.6</p>
+</td>
+<td valign="top" align="left"><p id="_e3894085-2b82-e167-389e-7dc1cfb9923f">Delete the collection created in 6.3.</p>
+</td>
+<td valign="top" align="left"/></tr></tbody>
+<dl id="_d9a7dbeb-e94c-c1f9-8f6a-53bc219fc66f" key="true"><dt>P</dt>
+<dd><p id="_7fb83801-f1c0-55c9-d18f-061cef63708b">Pass</p>
+</dd>
+<dt>F</dt>
+<dd><p id="_8574c793-9b5b-7be9-c11a-12f8f511313f">Fail</p>
+</dd>
+<dt>N</dt>
+<dd><p id="_f69fd62a-f6e6-af94-57c9-1fc150e8e86b">Not supported (by client)</p>
+</dd>
+</dl></table>
+
+
+</annex>
+</csd-standard>

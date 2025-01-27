@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">A Recommendation for Minimum Interoperability of Resource Information</title>
+<docidentifier primary="true" type="CalConnect">CC/R 0907:2009</docidentifier><docnumber>0907</docnumber><date type="published"><on>2009-06-10</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Andrew Laurence</completename></name>
+<email>atlauren@uci.edu</email></person></contributor><contributor><role type="editor"/><person>
+<name><completename>Mimi Mugler</completename></name>
+<email>mmugler@berkeley.edu</email></person></contributor><contributor><role type="editor"/><person>
+<name><completename>Guy Stalnaker</completename></name>
+<email>jstalnak@wisc.edu</email></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2009-06-10</revision-date></version><language>en</language><script>Latn</script><abstract><p>This document is a recommendation from the CalConnect USECASE Technical Committee regarding the minimum interoperability of resources in the calendaring and scheduling domain.</p>
+</abstract><status><stage>published</stage></status><copyright><from>2009</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="R">report</doctype><flavor>cc</flavor><editorialgroup><committee>USECASE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_00b731d5-d923-19b5-259b-ba92f34b5407" obligation="normative">
+<p id="_2ff90088-afa3-d6ab-ae6c-e9f1e3224b5a">© 2009 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><abstract id="_abstract"><title>Abstract</title><p id="_faf6931a-7c46-acd8-bd8d-92ebfefe5ae3">This document is a recommendation from the CalConnect USECASE Technical Committee regarding the minimum interoperability of resources in the calendaring and scheduling domain.</p>
+</abstract><foreword id="_3c9ab6e1-f98c-8bf1-fc05-93e6ccbd87f6" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<admonition id="_efd931da-5a14-38ff-af26-158c2bba9e58" type="disclaimer"><p id="_f2aeb75b-9b17-1e22-1463-e4d6c96362da">This document is by The Calendaring and Scheduling Consortium. Permission is granted to potential members to reproduce and distribute this presentation within the member organization so long as the presentation is not altered in any way and the Consortium is acknowledged as the originator.</p>
+
+<p id="_c3a5f480-6906-28e9-731a-c1fe2af5d82d">Please send any changes or corrections to the document editor(s).</p>
+</admonition></foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_77c6ff24-e573-b20d-680a-78f9d503c594">This document was created by the USECASE Technical Committee of the Calendaring and Scheduling Consortium.The document presents a recommendation for enhancing inter-operability of resources within the calendaring and scheduling application domain. Minimum interoperability is the basic level of functionality our collective experience tells us is necessary to have a useful system. The thrust of this effort is to enable resource inter-operability such that, when a described event contains resources, the recipient of that event is able to make practical use of the described resources; ideally the recipient should be so enabled regardless of whether the recipient is within the same calendaring domain. The resulting recommendations rely in part upon adoption of standards revisions that are in draft as of this writing.</p>
+</introduction></preface><sections>
+
+
+<clause id="_methodology" obligation="normative">
+<title>Methodology</title>
+<p id="_e9c766ff-c9f0-89ff-d0dc-6750cbf4ca80">The set of properties determined to be the minimum set for interoperability was chosen via discussion at CalConnect Roundtables and in conference calls of the USECASE Technical Committee. We used a three-pronged process to inform our selection of properties.</p>
+
+<p id="_6b83b687-6aa8-a218-2655-770804de067d">First, we conducted an informal survey of properties that are built into existing software products that feature manipulation of resources, which formed a starting point for further winnowing of properties. The software products were not selected by any formal process, but were those available to which committee participants had access. However, we believe these to be a fair representation of the types of calendaring, scheduling, and project management products currently in use. The software applications are:</p>
+
+<ul id="_1f37d3cb-7b70-5afb-26a4-dacbfbf2eed1"><li><p id="_ec5f6e73-a5cc-7b93-788b-bab0535c68d5">Dotproject v.2x</p>
+</li>
+<li><p id="_c4599743-cb8f-badc-26c4-50bac66619f3">GroupWise 7</p>
+</li>
+<li><p id="_2180c857-db53-7c80-1633-e3b1f9411b4c">Kplato</p>
+</li>
+<li><p id="_ac984300-952d-571c-d858-041b709805e1">Lotus Domino 7</p>
+</li>
+<li><p id="_bf31e0b6-c730-e2e6-9363-6ae47f23b088">MeetingMaker 8.6</p>
+</li>
+<li><p id="_5aa0ee41-5152-f928-dd45-de3239d46c1e">Microsoft Exchange 2007</p>
+</li>
+<li><p id="_d6e56f65-cce3-0346-cef5-013bd6027d39">Microsoft Project 2002</p>
+</li>
+<li><p id="_04d3041f-aadf-1b64-d15d-903450d3ca2e">Oracle Calendar</p>
+</li>
+<li><p id="_9265e19f-fa75-16f9-e9fe-5c50f4cf0ab1">Planner</p>
+</li>
+<li><p id="_f73acb24-cba9-f71f-1d02-8c7fb597ca5e">TaskJuggler</p>
+</li>
+<li><p id="_510b9d70-627c-d18d-cc95-1c5b61f13587">Zimbra CS</p>
+</li>
+</ul>
+
+<p id="_25f87c55-6f45-0215-f747-f6136393b3bf">Secondly, we created a set of use cases and from them extracted a plausible set of properties for the resources in the use cases.</p>
+
+<p id="_0da3f375-0efc-d32b-4309-5208754ab28b">Thirdly, during discussions we came to view resource interoperability as a case where a lack of structured data prevents transmission of useful information between systems. As we looked at attributes for calendar users, we observed a great degree of commonality between calendar user attributes, directory attributes, and vCard attributes. We also observed that implementations effectively repurpose user attributes for use by resources. Given this practical similarity between users and resources, we looked to vCard as a source for structured data that might aid interoperability in resources.</p>
+
+<p id="_a87e1965-db16-34b7-60ad-d7c730467ec4">The result was a table of properties showing how many products used the property and the percentage of the total number of product that did so. (See Appendices)</p>
+</clause>
+
+<clause id="_observations" obligation="normative">
+<title>Observations</title>
+<p id="_c2f20975-5f8e-3461-cde4-dd4f9652feed">We observe that these fields are present, in one form or another, in all three sets of attributes:</p>
+
+<ul id="_7321cd4b-c530-eb8d-9d88-92f6c972e1c1"><li><p id="_1fb9015f-58b9-a3be-b239-27ed45ce7a83">Resource Name</p>
+</li>
+<li><p id="_e0e450b2-4fc1-b3e4-3075-5b1da6610cba">Address</p>
+</li>
+<li><p id="_33fcd4c5-ecdb-8dd6-8671-281791025447">Category</p>
+</li>
+<li><p id="_90f053f6-c1c1-3f20-8b5d-92ed523df470">Email</p>
+</li>
+<li><p id="_5ea3eb33-4f62-9937-c700-c0fa1309ee04">Notes/Description</p>
+</li>
+<li><p id="_74f7c592-ada5-9bcb-c32e-439a7f751697">Organizational Unit</p>
+</li>
+<li><p id="_ca6d475c-e5fa-94bf-311b-5015ef86ab46">Telephone</p>
+</li>
+<li><p id="_baa82abc-8374-7569-bbd0-fddbda183c48">Time Zone</p>
+</li>
+<li><p id="_73101a03-3064-1dec-d04f-bcadf66ab84b">URL</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_discussion" obligation="normative">
+<title>Discussion</title>
+<p id="_f1274335-e88c-e9a9-4fc0-9d1339ac558c">The core issue for resource interoperability is enabling resource information, when encapsulated in, or transmitted with, an iCalendar object, to be viewed and understood in a manner that is actionable for the recipient. If the resource is a location, the recipient should be able find it; if a projector, learn its connectors and resolutions; if a piece of transport equipment, learn its carrying capacity and any certifications required for its operation, etc. This goal requires either that sufficient resource data be encapsulated within an iCalendar object or that a reference may be resolved to its canonical source.</p>
+
+<p id="_738b25d9-e451-e015-5ca7-11eb67394846">Given these goals, our observations regarding the commonality of fields present in different recording systems, and the similarity between resource and user attributes, we looked to vCard as a mechanism for standardizing information for calendar resources. vCard and iCalendar have many similarities in their structured representation of localized data and data types, and they may prove highly compatible for resources as well as traditional users.</p>
+
+<p id="_668ca6a8-b00d-69a4-864d-c8f8c6328258">The congruence between vCard and iCalendar, and the loci that provide the possibility on which our recommendation is based, are found in the attributes of the  <tt>ATTENDEE</tt> iCalendar property (see <xref target="appendix-D"><location target="appendix-D" connective="and"/><location target="appendix-E" connective="and"/></xref> for the relevant sections of the Calsify and vCard drafts):</p>
+
+<ul id="_6bd13e0a-1d2c-bc9a-208b-bc43ae79a982"><li><p id="_dc3075ee-f944-422f-1a90-01bc48782b84">We observe that an attribute of the <tt>ATTENDEE</tt> property is <tt>DIR</tt>. <tt>DIR</tt> is similar to vCard’s <tt>SOURCE</tt> attribute in that both store a URI value that points to a directory entry.</p>
+</li>
+<li><p id="_aeccc2f8-7c01-2a38-ab85-705952ee6718">We observe also that iCalendar <tt>CUTYPE</tt> and vCard <tt>KIND</tt> play similar roles, being the classification of records in order to differentiate standard users from other types (e.g. group, organization). If there were direct mapping between their possible values, it would be possible to standardize the representation of resource information in vCard objects.</p>
+</li>
+</ul>
+
+<sourcecode id="_be6c7bf0-3c49-2337-e1b8-d044300b5249" unnumbered="true">CUTYPE valuesKIND ValuesINDIVIDUAL*individual*GROUPgroupRESOURCE-ROOMUNKNOWN--
+orgx-namex-nameiana-tokeniana-token
+* indicates default value</sourcecode>
+
+
+<p id="_a859c500-e43c-6022-07a1-cdf495fd0e0c">We thus have a remarkable congruence between the current iCalendar specification for the attributes of an <tt>ATTENDEE</tt> and the two vCard properties <tt>SOURCE</tt> and <tt>KIND</tt>:</p>
+
+<table id="_a2cf3fc3-b577-babd-6aab-4740fe507009" unnumbered="true"><tbody><tr><td valign="top" align="left">vCard</td>
+</tr><tr><td valign="top" align="left">Source=URI</td>
+</tr><tr><td valign="top" align="left">Kind=&lt;value&gt;</td>
+</tr></tbody>
+</table>
+
+<p id="_c22a9f12-9d10-ce5f-dd21-e7061aaa9b46">We observe, but have not met, a pragmatic need for additional metadata pursuant to resources. We observe that implementations leave the ResourceName field as an open text string. Customers may or may not have tools to classify their resources according to classes of local import. (e.g., cart, projector, dolly, laptop). We believe this area is ripe for improvement, perhaps in a series of customer-extensible key/value pairs, with population thereof and sorting exposed in the calendar user agents. Ideally, this information could also be encapsulated within an iCalendar object and available to external recipients.</p>
+</clause>
+
+<clause id="_recommendations" obligation="normative">
+<title>Recommendations</title>
+<p id="_b99bffe2-e501-7a51-fc52-685cc9e5e2a6">If an event participant’s vCard <tt>SOURCE</tt> is known, a calendaring system should populate the iCalendar <tt>ATTENDEE</tt> <tt>DIR</tt> field with that value. Calendar systems should enable the user to resolve and display the participant’s ( <tt>ATTENDEE</tt>‘s) data, as enabled and published by the vCard <tt>SOURCE</tt>. We observe that this functionality is equally valid for users and resources.</p>
+
+<p id="_922d56d6-5dc9-cbcc-06ee-eec6f80bd46d">The potential values of iCalendar <tt>CUTYPE</tt> and vCard <tt>KIND</tt> should be the same in both standards. This direct mapping allows for increased use of vCard as a structured source for storing resource information.</p>
+
+<p id="_503d087f-a66b-0fc0-cd79-a544c009c59a">We propose the <tt>CUTYPE</tt>/<tt>KIND</tt> attributes for “room” classification encapsulate the broader “venue” concept, perhaps leveraging work in  <tt>VVENUE</tt> as a template for potential schema.</p>
+</clause>
+
+
+
+
+
+
+
+
+
+
+
+
+</sections><annex id="appendix-A" obligation="normative">
+<title>Attributes in Vendor Implementations</title>
+<p id="_f8a95bd3-c146-5a7e-2e91-facadbda3fed">This table shows just those properties used by two or more applications:</p>
+
+<p id="_daaaa8f6-bfa5-9bd1-ce56-fa86161f6d46">AttributesNumber% UsageResource Name11100.0%Type981.8%Email654.5%Notes/Description654.5%Calendar436.4%Contact Information/Address/Phone/FAX/URL [7]654.5%Max Alloc Percent/Available436.4%Resource ID436.4%Capacity327.3%Hourly Rate/Cost/Use/Overtime436.4%Hourly Rate327.3%Initials327.3%Phone327.3%Working Hours327.3%Cost\Use218.2%External Address218.2%Organizational Unit218.2%Overtime Rate218.2%URL218.2%</p>
+</annex><annex id="appendix-B" obligation="normative">
+<title>Attributes observed in use cases</title>
+<ul id="_eb0bb010-8525-af4c-e824-2f5e4cba2c52"><li><p id="_cb7871e7-8855-0550-e5fc-040ba04ed699">accommodations (i.e., seating, tables, possible configurations)</p>
+</li>
+<li><p id="_e09ea4c5-9721-7f8b-1194-27cc6b768dff">address</p>
+</li>
+<li><p id="_02b11662-0416-6101-d069-d05acedfd4ba">audio input/outp&lt;snort&gt;ut connectors</p>
+</li>
+<li><p id="_23844143-c536-7453-88a9-43d4f2a6a5e8">audio/video cable connections</p>
+</li>
+<li><p id="_6448aa22-762c-376e-3f28-017406947cf1">audio/video codec</p>
+</li>
+<li><p id="_8e27bbd9-77c0-2f88-09b8-185684f05c15">capacity</p>
+</li>
+<li><p id="_967dadf6-8dec-322a-f2bf-0c37764f03fc">cargo capacity (cu ft)</p>
+</li>
+<li><p id="_47fec3e4-e843-5352-0732-3c53b33898e6">cargo capacity (weight)</p>
+</li>
+<li><p id="_3a2a76e9-abfa-dc60-01ef-c269f0e12388">case number</p>
+</li>
+<li><p id="_ce043a21-b09c-0468-cd7d-0b227ffb42b7">cases</p>
+</li>
+<li><p id="_0cc95463-e5db-6cbb-c112-e85db5a776cf">category (business type)</p>
+</li>
+<li><p id="_828eedca-0c6e-f835-e048-089b1560b86d">certifications</p>
+</li>
+<li><p id="_43e6d2f4-886a-693b-269f-fdb514792110">chat/presentation/VOIP software</p>
+</li>
+<li><p id="_debe958c-d58d-b94d-2de8-277dc0d094aa">contact</p>
+</li>
+<li><p id="_54a22a92-2c17-de54-f92c-65c539d7e152">contact (i.e., person designated as ‘owner’ — name, location, contact info)</p>
+</li>
+<li><p id="_471dabe4-f4e8-67ae-5661-8746988f5772">contact info: offc #, cell #, fax #</p>
+</li>
+<li><p id="_f5e7d50d-e431-0aee-5fa1-7e1d0dc176f3">contact * maintenance schedule[URL?]</p>
+</li>
+<li><p id="_00ed2c41-9f84-0528-f669-c2a8236e1b05">contact (name, location, contact info)</p>
+</li>
+<li><p id="_cc3771d3-288e-9b46-eff7-697d5b2de07e">date visited facility</p>
+</li>
+<li><p id="_68aa5851-e0d1-8a6c-12da-8198db2cb284">destination address for records (URL, email addr, postal addr)</p>
+</li>
+<li><p id="_54d97df8-e019-11d6-2d50-a2953f3b551d">directions</p>
+</li>
+<li><p id="_0e46e697-ed4f-7f0a-68f0-8272979756c5">discretion</p>
+</li>
+<li><p id="_7ab55cb4-e1c7-3fc8-9712-e8e87cc22660">driver</p>
+</li>
+<li><p id="_ee3ffc47-dcac-c48c-fe9e-005055929f75">facility visited (hospital, urgent care, emergency room, doctor’s office)</p>
+</li>
+<li><p id="_370ab2f0-0b72-9d66-195b-15e8fc58b7a7">facility visited (police station)</p>
+</li>
+<li><p id="_d663ba6c-9c93-4c06-e6d3-297aee25d6f6">if observation = yes, then observation room location</p>
+</li>
+<li><p id="_11e65059-71b5-1c88-4e2d-379f19a356d2">if type = tape, then tape type: small cassette, regular cassette</p>
+</li>
+<li><p id="_71750bbd-8c26-c0b9-fc94-8e636ad25a69">if type = tape, then transcriber name and location</p>
+</li>
+<li><p id="_23a6be00-5ca2-b0fe-8531-31a686d19e99">if type = video, then tape size required</p>
+</li>
+<li><p id="_7f8a328d-7ed9-962f-a017-7de6f2d48898">if type = video, then videographer name and location</p>
+</li>
+<li><p id="_89316e5b-7457-500a-2376-371ceec054cd">individual id number</p>
+</li>
+<li><p id="_27dc64e3-c276-43d1-943b-ee7c6ef84fba">individual name</p>
+</li>
+<li><p id="_4a07158b-19c6-b343-ca3f-99b56e496882">input connector types</p>
+</li>
+<li><p id="_698994c1-016a-5167-2c42-269025d8ca6f">IP address</p>
+</li>
+<li><p id="_b2f0b9ba-df63-0c21-b8e8-38b90d967dac">lift capacity</p>
+</li>
+<li><p id="_69494ba2-7f37-5696-7335-cfd1cce3fddc">Little room and projector are available.</p>
+</li>
+<li><p id="_ad1d4e75-e8d8-c833-5205-2e6227a17a5a">location</p>
+</li>
+<li><p id="_3fcac8f5-d62e-0d71-5c8e-738c99bf38b6">location: address, city, state, zip</p>
+</li>
+<li><p id="_a1e63749-3e10-a15a-fda9-196cdde0a6e7">location (for pickup and return)</p>
+</li>
+<li><p id="_140af6d2-7c22-28d6-dc9e-295eab6dab52">maintenance schedule[URL?]</p>
+</li>
+<li><p id="_058bbf5d-369e-96a0-7fff-14418af96124">manufacturer/model</p>
+</li>
+<li><p id="_fa15f753-efbe-8742-8b53-16ec8c496504">microphone (built-in)</p>
+</li>
+<li><p id="_34399c50-3aa2-c552-cf3c-9b9bb7c84463">microphone type</p>
+</li>
+<li><p id="_79590d9a-4d6f-fca7-a61d-3e6e44ea777b">name</p>
+</li>
+<li><p id="_5144808a-7271-40c3-e050-cf30a18eec2e">observation yes/no, (i.e., room has observation via one-way glass to an adjacent room)</p>
+</li>
+<li><p id="_032f3d24-0b83-e57f-2375-afb55a988141">Operating System</p>
+</li>
+<li><p id="_96b40440-5314-fc94-44c2-8d6cf414d15c">Organization (hospital, employer, firm, business)</p>
+</li>
+<li><p id="_fcd69232-38a6-cf77-3043-4dc17af0f924">parking space [location?]</p>
+</li>
+<li><p id="_122d6740-416c-341b-8366-00e20282f86d">patient id number</p>
+</li>
+<li><p id="_213edcea-86de-7706-9a2b-978500474a0a">patient name</p>
+</li>
+<li><p id="_ff5af51f-671b-21e3-7224-d06620642adc">personal assistant &amp; contact info</p>
+</li>
+<li><p id="_ada19a77-fbc1-50e5-f39b-7c38fdb05420">phone</p>
+</li>
+<li><p id="_7f1a046a-61b1-5db2-eeca-28deeb1727c4">physical carrying ability</p>
+</li>
+<li><p id="_642674c2-d714-6cae-c9de-7e2343999c64">portable/fixed?</p>
+</li>
+<li><p id="_ab04a88b-7aef-237e-a0d3-e900197ef52b">pre-use duration (time prior to event)</p>
+</li>
+<li><p id="_25f087ae-5e47-9fd6-b414-1ba6f3296b50">reason for request</p>
+</li>
+<li><p id="_90a6c48e-500c-c4be-529a-f9784181b91a">recorder type: tape, digital, video</p>
+</li>
+<li><p id="_9ea47723-a0b5-e6d5-743a-0700e684384b">records format required (print, electronic)</p>
+</li>
+<li><p id="_9465b05b-68d1-a4dd-acf8-3e85ff6f3a38">requester address</p>
+</li>
+<li><p id="_b29e2675-641e-a7d2-3e36-96aef215c950">requester contact info</p>
+</li>
+<li><p id="_6470e115-e6b4-24a2-ccf0-61367c855623">requester name</p>
+</li>
+<li><p id="_2da85f66-4d47-fae8-3eb3-78f263e430f8">resolution</p>
+</li>
+<li><p id="_ed20ff9d-1789-f4a0-8feb-62e63c2cd9fd">role</p>
+</li>
+<li><p id="_97b2a6ba-034b-17ec-77ea-efe3c21b2268">seating capacity</p>
+</li>
+<li><p id="_c81acb09-fcbb-5878-1455-96255b4122b3">software used</p>
+</li>
+<li><p id="_be204f43-b14e-0d7a-a1b9-f642d1251ffa">software version</p>
+</li>
+<li><p id="_ed8c9743-d44b-59d3-3b11-f586226da104">sound capability</p>
+</li>
+<li><p id="_e9b3e094-0aa3-4c3c-40fd-9844b583601e">speakers</p>
+</li>
+<li><p id="_30c8df84-35bc-93a4-6dac-418c340f0d77">status (active/inactive?)</p>
+</li>
+<li><p id="_f04d2d6a-0406-9b83-ce75-63defbb98d6c">Supervisor/Manager (contact info)</p>
+</li>
+<li><p id="_5c0f7e9d-ab56-50b6-1b9e-9b87e297d719">support contact (i.e., for problems about use or issues with device — name, location, contct info)</p>
+</li>
+<li><p id="_65e23516-f427-e5ba-a7b5-f131de2ed447">support contact (name, location, contact info)</p>
+</li>
+<li><p id="_affab37b-90c6-f0e5-6c6f-c6243caa5a08">test date</p>
+</li>
+<li><p id="_f3b78207-0b96-cb28-c982-e9bc5006dfbf">test proxies (per ea: name, location, contact info)</p>
+</li>
+<li><p id="_b2feaaad-1b1a-b3e9-40a9-4bf953751a2f">test results analyists (per ea: name, location, contact info)</p>
+</li>
+<li><p id="_1556a66f-b7c1-48ae-02c1-fa5c96227219">timezone</p>
+</li>
+</ul>
+</annex><annex id="appendix-C" obligation="normative">
+<title>Attributes in vCard 3.0</title>
+<ul id="_7af50b36-9963-83ba-5ecc-b12645e41ae7"><li><p id="_135d884c-c66f-a09a-366f-4ea07c06c304"><tt>BEGIN</tt></p>
+</li>
+<li><p id="_3ac9fdfd-2a44-5a11-ae62-1fa52d91b180"><tt>VERSION</tt></p>
+</li>
+<li><p id="_86566692-c485-0fdb-8db7-b9dada29f5e2"><tt>PRODID</tt></p>
+</li>
+<li><p id="_97097ef1-1043-3e74-241d-7c117c94e3c3"><tt>FN</tt></p>
+</li>
+<li><p id="_e0b39848-efed-45dd-9333-e7d466a91df0"><tt>N</tt></p>
+</li>
+<li><p id="_f577b6ab-4551-6f59-a9c7-4e0ff7b07b21"><tt>NICKNAME</tt></p>
+</li>
+<li><p id="_5523580b-6341-31a5-27d4-315996581fd6"><tt>PHOTO</tt></p>
+</li>
+<li><p id="_a539c4c1-3a1a-7b7f-0814-2bc7b1d86bfe"><tt>BDAY</tt></p>
+</li>
+<li><p id="_cee13bd5-97a9-a0ae-1def-ca819342d868"><tt>ADR</tt></p>
+</li>
+<li><p id="_8e214cdd-c6d5-5d2f-533b-f7dd0854072a"><tt>LABEL</tt></p>
+</li>
+<li><p id="_57d18be6-ab68-23cf-7272-688b00f8bdd3"><tt>TEL</tt></p>
+</li>
+<li><p id="_96885c4e-98f2-7df2-c5c7-f71a96fad51a"><tt>EMAIL</tt></p>
+</li>
+<li><p id="_8b28353d-35dc-76f5-85a5-91070ed5e352"><tt>MAILER</tt></p>
+</li>
+<li><p id="_f2681b4a-a6d1-50d5-854d-53de0d6e59d0"><tt>TZ</tt></p>
+</li>
+<li><p id="_2b25a434-23ab-b359-6dbd-00ae299f0d1f"><tt>GEO</tt></p>
+</li>
+<li><p id="_dc01643b-1069-c2a7-10d3-3e2571d76dc2"><tt>TITLE</tt></p>
+</li>
+<li><p id="_e420e6c1-0669-afa1-5095-469880e05dc6"><tt>ROLE</tt></p>
+</li>
+<li><p id="_e999ebe0-f644-ca0f-444a-83f2ec129cc5"><tt>LOGO</tt></p>
+</li>
+<li><p id="_c624a596-0ca3-9562-4c35-3dc336e92bba"><tt>AGENT</tt></p>
+</li>
+<li><p id="_5a75811d-ba01-1be7-0057-a0b8cb87b38a"><tt>ORG</tt></p>
+</li>
+<li><p id="_2d9e8348-5b19-1af6-3f71-97d7a3b08628"><tt>CATEGORIES</tt></p>
+</li>
+<li><p id="_656a783b-9458-bddd-badd-5b0b403b4f34"><tt>NOTE</tt></p>
+</li>
+<li><p id="_8001d07f-d133-e966-05d5-228f881f683e"><tt>REV</tt></p>
+</li>
+<li><p id="_cdbfceaa-926d-0fc8-0249-3167027d92cf"><tt>SORT-STRING</tt></p>
+</li>
+<li><p id="_b3b5c829-13ea-159d-b72f-4f29493f7dd2"><tt>SOUND</tt></p>
+</li>
+<li><p id="_647dfa98-73eb-156f-9cd6-e0cc2fe2e7ff"><tt>UID</tt></p>
+</li>
+<li><p id="_cffb83db-67d0-aa7d-26fe-fa56015f2086"><tt>URL</tt></p>
+</li>
+<li><p id="_01b06f55-243f-c962-3f6e-8d2618480d5c"><tt>CLASS</tt></p>
+</li>
+<li><p id="_927f6f84-289c-2a85-1a8a-a199ebe4e5fe"><tt>KEY</tt></p>
+</li>
+<li><p id="_1d229f37-555b-7a69-d336-43d6b3c9f9c4"><tt>END</tt></p>
+</li>
+</ul>
+</annex><annex id="appendix-D" obligation="normative">
+<title>draft-ietf-calsify-rfc2445bis-08</title>
+<p id="_0612afe8-7ad9-5dd0-e655-6c1fa9e53c00">3.8.4.1. Attendee</p>
+
+<dl id="_f03987e9-66dd-7193-5f4d-89ce13cf21d4"><dt>Property Name</dt>
+<dd><p id="_b4f9ae07-6f2d-b549-ae25-bf8322f1ca34"><tt>ATTENDEE</tt></p>
+</dd>
+<dt>Purpose</dt>
+<dd><p id="_2b157951-5d40-efd2-2892-49f13efc62c8">This property defines an “Attendee” within a calendar component.</p>
+</dd>
+<dt>Value Type</dt>
+<dd><p id="_74c7c2df-9021-8fb3-7611-e4f0afb82ee5"><tt>CAL-ADDRESS</tt></p>
+</dd>
+<dt>Property Parameters</dt>
+<dd><p id="_bff4ecf4-3b8c-f753-bf6f-8c5e28203eb2">IANA, non-standard, language, calendar user type, group or list membership, participation role, participation status, RSVP expectation, delegatee, delegator, sent by, common name or directory entry reference property parameters can be specified on this property.</p>
+</dd>
+</dl>
+
+<p id="_62efceaa-2495-14dd-8578-18e21a793481">…​</p>
+
+<dl id="_4c5c579c-7e23-2811-d5d5-6c5cd9ca39c8"><dt>Description</dt>
+<dd><p id="_1bc277ad-04d4-6d1e-d204-679e14a58d04">This property <tt>MUST</tt> only be specified within calendar components to specify participants, non-participants and the chair of a group scheduled calendar entity. The property is specified within an “EMAIL” category of the “VALARM” calendar component to specify an email address that is to receive the email type of iCalendar alarm.</p>
+</dd>
+</dl>
+
+<p id="_ff41ae0c-b023-010f-c12d-65abd8449987">3.2.6. Directory Entry Reference</p>
+
+<dl id="_5eec7462-f265-8af8-602f-38d7242c7062"><dt>Parameter Name</dt>
+<dd><p id="_643b967a-491b-b4a6-9bd3-fdda6b011c6c"><tt>DIR</tt></p>
+</dd>
+<dt>Purpose</dt>
+<dd><p id="_dbb94360-b36f-76b1-6aa1-ba0a1ca26658">To specify reference to a directory entry associated with the calendar user specified by the property.</p>
+</dd>
+<dt>Format Definition</dt>
+<dd><p id="_e08da007-60cf-aa5a-90f4-2323324eefbf">This property parameter is defined by the following notation: <tt>dirparam = "DIR" "=" DQUOTE uri DQUOTE</tt></p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_a0adcab8-75cd-3f2b-0226-793a0a5b0b66">This parameter can be specified on properties with a <tt>CAL-ADDRESS</tt> value type. The parameter specifies a reference to the directory entry associated with the calendar user specified by the property. The parameter value is a URI. The URI parameter value  <tt>MUST</tt> be specified in a quoted-string.</p>
+</dd>
+</dl>
+
+<example id="_1217d5bf-701b-3238-c0c9-3918a5277492"><sourcecode id="_c4e73a30-bc3b-ea59-49d2-79bb3b4b02e1" unnumbered="true">ORGANIZER;DIR="ldap://example.com:6666/o=ABC%20Industries,c=US???(cn=Jim
+%20Dolittle)":mailto:jimdo@example.com</sourcecode> </example>
+
+<p id="_51ac3e49-12f3-194c-ce14-8a9835a2adb8">3.2.3. Calendar User Type</p>
+
+<dl id="_4fccd185-22ef-a9ad-b74b-7a8415d5c080"><dt>Parameter Name</dt>
+<dd><p id="_c48df69e-558e-9e73-7054-91c6c08878f3"><tt>CUTYPE</tt></p>
+</dd>
+<dt>Purpose</dt>
+<dd><p id="_8106e8af-a15a-7590-5a3d-57879f2ab891">To specify the type of calendar user specified by the property.</p>
+</dd>
+<dt>Format Definition</dt>
+<dd><p id="_ba5d6e0c-5b56-1936-d217-1ef787a42352">This property parameter is defined by the following notation:</p>
+<sourcecode id="_4a61e832-9dae-0cbc-1cce-8a1ba72da3e5" unnumbered="true">cutypeparam = "CUTYPE" "="
+("INDIVIDUAL" ; An individual
+/ "GROUP" ; A group of individuals
+/ "RESOURCE" ; A physical resource
+/ "ROOM" ; A room resource
+/ "UNKNOWN" ; Otherwise not known
+/ x-name ; Experimental type
+/ iana-token) ; Other IANA registered
+; type
+; Default is INDIVIDUAL</sourcecode>
+
+</dd>
+<dt>Description</dt>
+<dd><p id="_d0b6d3e8-a83b-885b-84f9-352b33419487">This parameter can be specified on properties with a <tt>CAL-ADDRESS</tt> value type. The parameter identifies the type of calendar user specified by the property. If not specified on a property that allows this parameter, the default is  <tt>INDIVIDUAL</tt>. Applications MUST treat x-name and iana-token value they don’t recognized the same way as they would the  <tt>UNKNOWN</tt> value.</p>
+</dd>
+</dl>
+
+<example id="_77e94572-6b24-45f6-778a-b1c8fbbc330a"><sourcecode id="_1660e32c-e37c-f458-03d8-aaa73b7ebad3" unnumbered="true">ATTENDEE;CUTYPE=GROUP:mailto:ietf-calsch@example.org</sourcecode> </example>
+</annex><annex id="appendix-E" obligation="normative">
+<title>draft-ietf-vcarddav-vcardrev-03</title>
+<p id="_693be4ff-7bb2-ae3d-fca1-3dbe8e1eae71">7.1.3. <tt>SOURCE</tt></p>
+
+<dl id="_30ca6e73-8cd2-1dc6-ef0a-50a2a5e2c9fb"><dt>Purpose</dt>
+<dd><p id="_2499b7fc-191f-81ec-c103-8451e3c17233">To identify the source of directory information contained in the content type.</p>
+</dd>
+<dt>Value type</dt>
+<dd><p id="_8104adc1-b0a8-7870-01b3-f60253365a8f">uri</p>
+</dd>
+<dt>Special notes</dt>
+<dd><p id="_fc2ebed0-92ff-24c1-32ae-9177cee8590f">The <tt>SOURCE</tt> property is used to provide the means by which applications knowledgeable in the given directory service protocol can obtain additional or more up-to-date information from the directory service. It contains a URI as defined in  <eref type="inline" bibitemid="rfc3986" citeas="IETF RFC 3986"/> and/or other information referencing the vCard to which the information pertains. When directory information is available from more than one source, the sending entity can pick what it considers to be the best source, or multiple  <tt>SOURCE</tt> properties can be included.</p>
+</dd>
+</dl>
+
+<example id="_51ff6d8c-980e-3894-085f-0ed53cea14b2"><sourcecode id="_0ec7ae43-6047-5f5b-3193-fd5206ff4b94" unnumbered="true">SOURCE:ldap://ldap.example.com/cn=Babs%20Jensen,%20o=Babsco,%20c=US
+SOURCE:http://directory.example.com/addressbooks/jdoe/Jean%20Dupont.vcf</sourcecode> </example>
+
+<p id="_4d753c1b-c759-db7d-f120-173958eae8bd">7.1.5. KIND</p>
+
+<dl id="_6697cafb-d972-700f-8f0f-bd415d5f9a95"><dt>Purpose</dt>
+<dd><p id="_f8e03df7-e576-18c0-19c2-e2edc8a9b8a7">To specify the kind of object the vCard represents.</p>
+</dd>
+<dt>Value type</dt>
+<dd><p id="_083e6496-0816-ff49-4902-7ad7039fa8a6">A single text value.</p>
+</dd>
+<dt>Special notes</dt>
+<dd><p id="_ebdc493c-6e2a-ed24-a416-02360edfa259">The value may be one of: “individual” for a single person, “group” for a group of people, “org” for an organization, an x-name or an iana-token. If this property is absent, “individual”  <tt>MUST</tt> be assumed as default.</p>
+</dd>
+</dl>
+
+<example id="_da106213-d386-cc1f-e31f-01177f8ba6d5"><p id="_fb73c2f4-21c0-83cc-2805-02277d10dfa6">This represents someone named Jane Doe working in the marketing department of the North American division of ABC Inc.</p>
+
+<sourcecode id="_ffd992a6-a4b5-3168-30ab-fb7f9faed549" unnumbered="true">BEGIN:VCARD
+VERSION:4.0
+KIND:individual
+FN:Jane Doe
+ORG:ABC\, Inc.;North American Division;Marketing
+END:VCARD</sourcecode>
+
+
+<p id="_dd6525b7-bbe2-fd4d-976a-8c43ca8950d9">This represents the department itself, commonly known as ABC Marketing.</p>
+
+<sourcecode id="_4ad17597-c0c9-5a47-90a0-61d8df998e94" unnumbered="true">BEGIN:VCARD
+VERSION:4.0
+KIND:org
+FN:ABC Marketing
+ORG:ABC\, Inc.;North American Division;Marketing
+END:VCARD</sourcecode>
+
+</example>
+</annex><bibliography><references id="_bibliography" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc3986" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Uniform Resource Identifier (URI): Generic Syntax</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3986</uri>
+  <docidentifier type="IETF" primary="true">RFC 3986</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3986</docidentifier>
+  <docnumber>RFC3986</docnumber>
+  <date type="published">
+    <on>2005-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_7e93d209-5d73-579b-aaa9-e986626650c4">A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource. This specification defines the generic URI syntax and a process for resolving URI references that might be in relative form, along with guidelines and security considerations for the use of URIs on the Internet. The URI syntax defines a grammar that is a superset of all valid URIs, allowing an implementation to parse the common components of a URI reference without knowing the scheme-specific requirements of every possible identifier. This specification does not define a generative grammar for URIs; that task is performed by the individual specifications of each URI scheme. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">RFC1738</formattedref>
+      <docidentifier type="IETF" primary="true">RFC1738</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">STD</title>
+
+    <number>66</number>
+  </series>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3986</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Internet protocol</keyword>
+  <keyword>IP</keyword>
+  <keyword>uniform resource identifier</keyword>
+  <keyword>URI</keyword>
+  <keyword>www</keyword>
+  <keyword>world wide web</keyword>
+</bibitem>
+
+</references></bibliography>
+</csd-standard>

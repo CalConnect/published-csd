@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on TIMEZONE Questionnaire Results</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0510:2005</docidentifier><docnumber>0510</docnumber><date type="published"><on>2005-10-03</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2005-10-03</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2005</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>TIMEZONE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7fbaec4b-0250-84e7-0e43-81775debe8a4" obligation="normative">
+<p id="_cdc4fc6d-0ab8-7040-218a-aee9d6fd453d">© 2005 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_ea79d935-0f22-3ecd-5dd3-43e034ad14b9" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<p id="_6659253e-cab6-8693-4161-1fce9842e12e">This document is one in a series of documents summarizing the results of questionnaires that the Calendaring and Scheduling Consortium has conducted to help better understand the requirements, problems and needs for calendaring and scheduling solutions. It is expected that the results of these questionnaires will be used to help define requirements and recommendations for calendaring  scheduling products.</p>
+
+<p id="_b7959548-4b2c-e344-2f71-a31148258926">This particular document summarizes the results of the Timezone Technical Committee’s questionnaire on Timezone support in iCalendar products. Other questionnaire summary documents will cover different areas of calendaring and scheduling, and will be made available by the Consortium.</p>
+</foreword></preface><sections>
+<clause id="_report_on_timezone_questionnaire_results" obligation="normative">
+<title>Report on Timezone Questionnaire Results</title>
+<clause id="_introduction" obligation="normative">
+<title>Introduction</title>
+<p id="_16073c03-4892-f831-325e-12444ffa37c0">The Timezone Technical Committee of the Calendaring  Scheduling Consortium ( <link target="http://www.calconnect.org"/>) developed a questionnaire about timezone usage in iCalendar products. The goal of this questionnaire was to determine how and to what extent timezones are being used, with a view to using those results to aid in the development of recommendations on how to improve timezone support in iCalendar.</p>
+
+<p id="_81742866-ce00-efa8-281c-de80eb3ebaff">A number of responses were received, and summary and conclusions drawn from these results. This document presents a summary of the results and brief conclusions based on those results.</p>
+
+<p id="_5c52c5b5-4f21-0ea5-6eda-14e0ddb405a4">Whilst each vendor submitted their own results, the summary presented here is an aggregate of those results, and has any information that could identify vendors removed.</p>
+</clause>
+
+<clause id="_summary_of_individual_responses" obligation="normative">
+<title>Summary of individual responses</title>
+<p id="_1ca67d9d-1256-9978-dafe-e31cfd0ef255">A total of 19 responses were received from a total of 17 vendors over a period of about 1 month. The products covered by these responses include clients (both desktop and web-based), servers and libraries (which are used by different clients and servers). Both commercial and open source vendors are represented. Many responses were based on currently shipping products, and some were based on products currently under development.</p>
+
+<p id="_22d54cb0-a9aa-3431-73c8-64fe5b3a904f">Of these products, a total of 7 did not implement timezone support at all, either because it was not relevant (e.g. timezone was left as a presentation issue for clients) or because the feature had not currently been implemented, but plans were in place to eventually do so.</p>
+</clause>
+
+<clause id="_results" obligation="normative">
+<title>Results</title>
+<p id="_8a915895-c45b-f4ab-6c95-d3695273e029">The results of the questionnaire are tabulated below.</p>
+
+<p id="_6a77bfcc-354f-55b8-7ca7-5fd3d019217c">A number of questions required a “yes”, “no”, “other” response. Products that did not support timezones at all (answered “no” to all such questions) were moved into the “other” column. The percentage totals were calculated from the number of “yes” answers compared to the total of “yes” and “no” answers. The “other” value was excluded from the percentage. In other words, the percentage represents the amount of support for timezones by those who have made some attempt to support it.</p>
+
+<p id="_5e1aa2ef-1911-6511-c300-1fe9adde1b61">Descriptive answers and comments in the table below are summaries of each result received.</p>
+
+<pagebreak orientation="landscape"/>
+<clause id="_questionnaire_results_questions_14" obligation="normative">
+<title>Questionnaire Results (Questions 1 — 4)</title>
+<table id="_034a4311-a447-bdd4-379a-8d7bcd3ef3c2" unnumbered="true"><thead><tr><th valign="top" rowspan="2" align="left">Question</th>
+<th valign="top" rowspan="2" align="left">Description</th>
+<th colspan="8" valign="top" align="left">Answers</th>
+</tr><tr><th valign="top" align="left">CONSUME(y)</th>
+<th valign="top" align="left">CONSUME(n)</th>
+<th valign="top" align="left">CONSUME(o)</th>
+<th valign="top" align="left"><strong>CONSUME %</strong></th>
+<th valign="top" align="left">PRODUCE(y)</th>
+<th valign="top" align="left">PRODUCE(n)</th>
+<th valign="top" align="left">PRODUCE(o)</th>
+<th valign="top" align="left"><strong>PRODUCE</strong></th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"/><th valign="top" align="left">Components supported:</th>
+<td colspan="8" valign="top" align="left"/></tr><tr><td valign="top" align="left">Q1</td>
+<td valign="top" align="left"><tt>VTIMEZONE</tt></td>
+<td valign="top" align="left">12</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>100%</strong></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+</tr><tr><td valign="top" align="left">Q1.1</td>
+<td valign="top" align="left"><tt>STANDARD</tt></td>
+<td valign="top" align="left">12</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>100%</strong></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+</tr><tr><td valign="top" align="left">Q1.2</td>
+<td valign="top" align="left"><tt>DAYLIGHT</tt></td>
+<td valign="top" align="left">12</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>100%</strong></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+</tr><tr><td valign="top" align="left"/><th valign="top" align="left">Properties supported:</th>
+<td colspan="8" valign="top" align="left"/></tr><tr><td valign="top" align="left"/><th valign="top" align="left">In <tt>VTIMEZONE</tt></th>
+<td colspan="8" valign="top" align="left"/></tr><tr><td valign="top" align="left">Q2.1</td>
+<td valign="top" align="left"><tt>TZID</tt></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+</tr><tr><td valign="top" align="left">Q2.2</td>
+<td valign="top" align="left"><tt>LAST-MODIFIED</tt></td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>50%</strong></td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>50%</strong></td>
+</tr><tr><td valign="top" align="left">Q2.3</td>
+<td valign="top" align="left"><tt>TZURL</tt></td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>42%</strong></td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">10</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>17%</strong></td>
+</tr><tr><td valign="top" align="left">Q2.4</td>
+<td valign="top" align="left"><tt>XPROP</tt></td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>42%</strong></td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>8%</strong></td>
+</tr><tr><td valign="top" align="left"/><th valign="top" align="left">In <tt>STANDARD</tt></th>
+<td colspan="8" valign="top" align="left"/></tr><tr><td valign="top" align="left">Q3.1</td>
+<td valign="top" align="left"><tt>DTSTART</tt></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+<td valign="top" align="left">10</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>83%</strong></td>
+</tr><tr><td valign="top" align="left">Q3.2</td>
+<td valign="top" align="left"><tt>TZOFFSETTO</tt></td>
+<td valign="top" align="left">12</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>100%</strong></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+</tr><tr><td valign="top" align="left">Q3.3</td>
+<td valign="top" align="left"><tt>TZOFFSETFROM</tt></td>
+<td valign="top" align="left">12</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>100%</strong></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+</tr><tr><td valign="top" align="left">Q3.4</td>
+<td valign="top" align="left"><tt>COMMENT</tt></td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>42%</strong></td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left">8</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>33%</strong></td>
+</tr><tr><td valign="top" align="left">Q3.5</td>
+<td valign="top" align="left"><tt>RDATE</tt></td>
+<td valign="top" align="left">8</td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>67%</strong></td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>42%</strong></td>
+</tr><tr><td valign="top" align="left">Q3.6</td>
+<td valign="top" align="left"><tt>RRULE</tt></td>
+<td valign="top" align="left">12</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>100%</strong></td>
+<td valign="top" align="left">10</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>83%</strong></td>
+</tr><tr><td valign="top" align="left">Q3.7</td>
+<td valign="top" align="left"><tt>TZNAME</tt></td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>50%</strong></td>
+<td valign="top" align="left">8</td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>67%</strong></td>
+</tr><tr><td valign="top" align="left">Q3.8</td>
+<td valign="top" align="left"><tt>XPROP</tt></td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>50%</strong></td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">10</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>17%</strong></td>
+</tr><tr><td valign="top" align="left"/><th valign="top" align="left">In <tt>DAYLIGHT</tt></th>
+<td colspan="8" valign="top" align="left"/></tr><tr><td valign="top" align="left">Q4.1</td>
+<td valign="top" align="left"><tt>DTSTART</tt></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+<td valign="top" align="left">10</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>83%</strong></td>
+</tr><tr><td valign="top" align="left">Q4.2</td>
+<td valign="top" align="left"><tt>TZOFFSETTO</tt></td>
+<td valign="top" align="left">12</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>100%</strong></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+</tr><tr><td valign="top" align="left">Q4.3</td>
+<td valign="top" align="left"><tt>TZOFFSETFROM</tt></td>
+<td valign="top" align="left">12</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>100%</strong></td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>92%</strong></td>
+</tr><tr><td valign="top" align="left">Q4.4</td>
+<td valign="top" align="left"><tt>COMMENT</tt></td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>50%</strong></td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>42%</strong></td>
+</tr><tr><td valign="top" align="left">Q4.5</td>
+<td valign="top" align="left"><tt>RDATE</tt></td>
+<td valign="top" align="left">8</td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>67%</strong></td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>42%</strong></td>
+</tr><tr><td valign="top" align="left">Q4.6</td>
+<td valign="top" align="left"><tt>RRULE</tt></td>
+<td valign="top" align="left">12</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>100%</strong></td>
+<td valign="top" align="left">10</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>83%</strong></td>
+</tr><tr><td valign="top" align="left">Q4.7</td>
+<td valign="top" align="left"><tt>TZNAME</tt></td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>50%</strong></td>
+<td valign="top" align="left">8</td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>67%</strong></td>
+</tr><tr><td valign="top" align="left">Q4.8</td>
+<td valign="top" align="left"><tt>XPROP</tt></td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>50%</strong></td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">10</td>
+<td valign="top" align="left">7</td>
+<td valign="top" align="left"><strong>17%</strong></td>
+</tr></tbody>
+</table>
+
+<pagebreak orientation="portrait"/></clause>
+
+<clause id="_questionnaire_results_questions_5_onwards" obligation="normative">
+<title>Questionnaire Results (Questions 5 onwards)</title>
+<table id="_573afd67-6dc7-3032-e9a8-903840624532" unnumbered="true"><thead><tr><th valign="top" align="left">Question</th>
+<th valign="top" align="left">Description</th>
+<th colspan="3" valign="top" align="left">Answers</th>
+<th valign="top" align="left"/></tr></thead>
+<tbody><tr><td valign="top" align="left"/><th valign="top" align="left">General:</th>
+<td valign="top" align="left">(y)</td>
+<td valign="top" align="left">(n)</td>
+<td valign="top" align="left">(o)</td>
+<td valign="top" align="left">%</td>
+</tr><tr><td valign="top" align="left">Q5</td>
+<td valign="top" align="left">Do you always send <tt>DATE-TIME</tt> values with a timezone?</td>
+<td valign="top" align="left">9</td>
+<td valign="top" align="left">9</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left"><strong>47%</strong></td>
+</tr><tr><td valign="top" align="left">Q6</td>
+<td valign="top" align="left">Do you always send <tt>DATE-TIME</tt> values in UTC or floating?</td>
+<td valign="top" align="left">9</td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left"><strong>47%</strong></td>
+</tr><tr><td valign="top" align="left">Q7</td>
+<td valign="top" align="left">Do you provide a standard set of timezones built-in to your product?</td>
+<td valign="top" align="left">16</td>
+<td valign="top" align="left">3</td>
+<td valign="top" align="left">0</td>
+<td valign="top" align="left"><strong>84%</strong></td>
+</tr><tr><td valign="top" align="left">Q8</td>
+<td valign="top" align="left">Where did you get your timezone definitions?</td>
+<td colspan="3" valign="top" align="left">Most come from Olsen. Some from Windows. Others from Java.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">Q9</td>
+<td valign="top" align="left">How many timezone definitions do you have?</td>
+<td colspan="3" valign="top" align="left">Varies from about 50 to about 380</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">Q10</td>
+<td valign="top" align="left">Do you have a special naming scheme for <tt>TZID</tt>s, and if so what is it?</td>
+<td colspan="3" valign="top" align="left">Olsen naming e.g. America/New_York. Windows naming. Tzid: URI. Tzid with vendor prefix.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">Q11</td>
+<td valign="top" align="left">Do you provide a mechanism for updating built-in timezones?</td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">9</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left"><strong>33%</strong></td>
+</tr><tr><td valign="top" align="left">Q12</td>
+<td valign="top" align="left">Do you adjust future times to account for timezone definition changes?</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">3</td>
+<td valign="top" align="left">3</td>
+<td valign="top" align="left"><strong>25%</strong></td>
+</tr><tr><td valign="top" align="left">Q13</td>
+<td valign="top" align="left">Do you accept and use timezone definitions from imported iCalendar data?</td>
+<td valign="top" align="left">10</td>
+<td valign="top" align="left">5</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left"><strong>63%</strong></td>
+</tr><tr><td valign="top" align="left">Q14</td>
+<td valign="top" align="left">Do you attempt to merge timezone definitions with the same <tt>TZID</tt> when importing iCalendar data?</td>
+<td colspan="3" valign="top" align="left">Some do, some don’t (about 50%). Also: “We match it to our internal list by ID first and then by rule”.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">Q15</td>
+<td valign="top" align="left">When exporting timezones in iCalendar data (either to a file or via iTIP) do you send the entire timezone definition or just the set of dates needed for coverage of the event?</td>
+<td colspan="3" valign="top" align="left">Those that do it export the entire timezone definition.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">Q16</td>
+<td valign="top" align="left">Would you use timezone definitions from a standard timezone registry if one were created?</td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left"><strong>65%</strong></td>
+</tr><tr><td valign="top" align="left">Q17</td>
+<td valign="top" align="left">What problems would be involved in changing a timezone definition if DST was changed at some point in the future?</td>
+<td colspan="3" valign="top" align="left">Most would need to get new definitions and update with automatically or manually. There was some concern about how the new definitions would look (e.g. some could not support more than one <tt>STANDARD</tt> or DAYLIGHT component).</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">C1</td>
+<td valign="top" align="left">Comments on specific answers (include Q number for cross-reference to original question):</td>
+<td colspan="3" valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">C2</td>
+<td valign="top" align="left">Comments on the format and ease of use of this questionnaire:</td>
+<td colspan="3" valign="top" align="left">Most liked email (though some wanted text/plain and not text/html). A few preferred web-based. One wanted MS Word file.</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">C3</td>
+<td valign="top" align="left">Are there any additional questions we should be asking, and if so what are they?</td>
+<td colspan="3" valign="top" align="left">Should have asked: Do any applications support multiple <tt>STANDARD</tt> and <tt>DAYLIGHT</tt> components? Should have asked: how do you treat ‘foreign’ <tt>TZID</tt>s (e.g. map to own internal <tt>TZID</tt> etc)? Would like TZID on RRULE to simplify some problems.Should have asked: are timezones used on simple non-recurring events, or only recurring events?</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+
+<clause id="_other_comments" obligation="normative">
+<title>Other Comments</title>
+<p id="_0b881f5a-7e56-7f16-80f2-681616c35eeb">RFCs tend to describe the expected behaviour, but leave the implementations up to the authors. This is understandable, but when all the developers have to reinvent the processing algorithms you get flaky results. I notice that the experience with TCP and DNS, for example, has led to RFCs that are increasingly specific in giving guidance to implementors.</p>
+
+<p id="_327f49bc-18b5-f000-5e02-c5dc54e49646">This is the main reason I haven’t implemented <tt>VTIMEZONE</tt> yet. With the exception of <tt>RRULE</tt> (see comment below), most of the rest of iCalendar is a fairly straight forward task of writing a codec for the data structures. Everything I need to know is in the RFCs. If there was a description of how to implement  <tt>VTIMEZONE</tt>, I would have done it.</p>
+
+<p id="_29913fe2-9dbd-feb5-4439-b1dabc72616f">I strongly suggest that the CalConnect group go to greater effort to offer implementation guidance to further interop. This could include pseudo-code processing models, warnings about problems and corner cases to look out for, and should particularly involve test suites.  <tt>RRULE</tt>, for example, would be unimplementable without its extensive set of examples. iTIP needs a similar suite of examples, too.</p>
+</clause>
+</clause>
+
+<clause id="_conclusions" obligation="normative">
+<title>Conclusions</title>
+<clause id="_basic_timezone_support" obligation="normative">
+<title>Basic Timezone Support</title>
+<p id="_d7e54f42-f2d0-be4d-f20a-512fb29f6a28">Support for the basic <tt>VTIMEZONE</tt> component and properties seemed to be fairly complete, with most vendors both consuming and producing such components. Note that “producing” a  <tt>VTIMEZONE</tt> component usually means copying a component out of a standard library provided in the product. We are not aware of any iCalendar products that generate  <tt>VTIMEZONE</tt> components on-the-fly from some other data source.</p>
+
+<p id="_b3f11456-66cf-1dd8-9eb0-dbd678299c94">It was clear that a number of products prefer to operate in UTC and will “downgrade”  <tt>DATE-TIME</tt> values to UTC if a timezone was included.</p>
+
+<p id="_52989115-18dc-e7c1-4678-9e7c4d347850">Most products include a built-in set of timezone definitions, ranging in number from 50 to 380. These came from a variety of different sources, including the Olsen timezone database, timezone information built into OS’s (e.g. Windows), those provided with other environments (Java). The naming of these components usually followed the scheme of the original data source. In one case a private namespace was used for timezone names.</p>
+
+<p id="_c5bf2ef5-c377-854a-38d5-8281766cc53a">Only 1/3 of products provide a way to update the built-in timezone via some automated process.</p>
+
+<p id="_3587cf1f-7305-4708-67f5-2e466fdb849e">Only 1/4 of products were able to adjust future events, tasks etc when a timezone definition changed.</p>
+
+<p id="_14b1c7b4-c54f-194b-1162-666a80c8f33c">About 2/3 products would take in timezone definitions from outside sources. A number of products would attempt to match an “external” definition to the builtin ones and substitute any matching built-in definition in place of the “external” one.</p>
+</clause>
+
+<clause id="_timezone_registry" obligation="normative">
+<title>Timezone Registry</title>
+<p id="_eae51d40-13de-1f79-c0f8-8db5a1372c2a">About 2/3 of respondents said they would use a standard timezone registry if one were available. However, given the wide variety of timezone naming schemes for built-in timezones, its not clear how long it would take for products to adopt any registry scheme if it were to become available.</p>
+</clause>
+
+<clause id="_other_comments_2" obligation="normative">
+<title>Other Comments</title>
+<p id="_cfa78a57-03db-5051-2b59-35ba69f0f3fd">One issue that was raised and not answered, was whether products are capable of handling multiple  <tt>STANDARD</tt> and <tt>DAYLIGHT</tt> components in a single <tt>VTIMEZONE</tt>. That is important for dealing with timezone definition changes.</p>
+</clause>
+
+<clause id="_future_work" obligation="normative">
+<title>Future Work</title>
+<p id="_63a55043-8d44-a0ff-fd59-849d24b32e44">The Timezone Technical Committee is using the results of this questionnaire to formulate its recommendations document that will be made available by the Consortium.</p>
+</clause>
+</clause>
+</clause>
+
+
+</sections><annex id="_the_questionnaire_as_sent_via_email" obligation="normative">
+<title>The questionnaire as sent via email</title>
+<p id="_c8832539-e327-a9b6-4b48-94a7709e0603">Questionnaire on Timezones in iCalendar</p>
+
+<clause id="_introduction_2" obligation="normative">
+<title>Introduction</title>
+<p id="_005fc50b-2970-5304-5fc2-fb4863656187">This questionnaire is being used to determine support for iCalendar (RFC2445) timezone support. The specific sections in RFC2445 that are being queried are:</p>
+
+<ul id="_3f59ad55-66e6-238e-e058-d767362debe2"><li><p id="_eb6914a5-9d4b-d137-b5fd-a3a2d8db5743">4.6.5 Time Zone Component</p>
+</li>
+<li><p id="_c87e8942-bc4a-fe64-a0f2-2e94324bfa2f">4.8.2.4 Date/Time Start</p>
+</li>
+<li><p id="_08b8d14a-fd29-98d5-b16f-c0f935bb5a41">4.8.3 Time Zone Component Properties<br/> ( and sub-sections )</p>
+</li>
+<li><p id="_e4293709-2f52-bdb9-5f48-1d138add35b4">4.8.5.3 Recurrence Date/Times</p>
+</li>
+<li><p id="_0a7d5a2c-04f9-b645-55d0-d0c25913ff84">4.8.5.4 Recurrence Rule</p>
+</li>
+<li><p id="_f8fe463d-8215-c156-135c-307032e4c15b">4.8.7.3 Last Modified</p>
+</li>
+<li><p id="_1e4a97a0-6b1c-e406-ac57-f212989f4e2c">4.8.8.1 Non-standard Properties</p>
+</li>
+</ul>
+
+<p id="_cfe4fb12-cab7-e78b-b118-af554b68a1d3">These may involve reference to other sections.</p>
+</clause>
+
+<clause id="_how_to_answer" obligation="normative">
+<title>How to answer</title>
+<p id="_a17daf1d-c0d2-83dd-c2e6-8ba4fa866ce8">Please copy the text from the ‘———-’ divider below to the end of this message into a new message and address it to: <br/><link target="mailto:questionnaire@calconnect.org"/></p>
+</clause>
+
+<clause id="_to_fill_it_out" obligation="normative">
+<title>To fill it out</title>
+<p id="_ca7c6a3b-9116-8e1f-10b5-56e7986f2d4f">For ‘y/n/o’:</p>
+
+<ul id="_5e6c862a-b67b-2848-6196-d13046fcff43"><li><p id="_3c63e4b1-5882-e18e-83fc-fb4911670b8c">‘y’ means yes</p>
+</li>
+<li><p id="_4dc77199-e94f-2385-86d1-f0d791e7bce9">‘n’ means no</p>
+</li>
+<li><p id="_46d001ba-5d25-4093-f023-dd8f01d0ccf0">‘o’ means other or not applicable</p>
+</li>
+</ul>
+
+<p id="_6a753fa8-b8f8-535a-0ba5-d9c179574d36">Delete two letters to leave the one for your answer.</p>
+
+<p id="_b89ce55e-12e3-837d-11a6-096c80b9c842">If you have specific comments you can add about your answers, please do so at the end and reference the question number to which the comment applies.</p>
+
+<p id="_5c7c95b8-2d7d-816a-2b78-affbdff8f2a1">For <em>___________________</em>: enter text for the answer.</p>
+</clause>
+
+<clause id="_product_details" obligation="normative">
+<title>Product Details</title>
+<dl id="_2306017f-b88b-3554-e6ca-6343bf87660c"><dt>P1</dt>
+<dd><p id="_dcb49e95-96c0-b688-77be-4664d49638c7">Product/Implementation Name:</p>
+</dd>
+</dl>
+
+<p id="_7a9f298e-413e-61fb-7ed3-9230dfa9c759"><em>___________________</em></p>
+
+<table id="_60e3f628-5353-cd40-27cb-b67017f2dc5b">
+<name>Components supported</name>
+<tbody><tr><td valign="top" align="left"/><td valign="top" align="left">Consume</td>
+<td valign="top" align="left">Produce</td>
+</tr><tr><td valign="top" align="left">Q1: <tt>VTIMEZONE</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q1.1: <tt>STANDARD</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q1.2: <tt>DAYLIGHT</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr></tbody>
+</table>
+
+<table id="_3494ca62-9b8b-3de5-2e36-400dda1424c0">
+<name>Properties supported</name>
+<tbody><tr><th colspan="3" valign="top" align="left">In <tt>VTIMEZONE</tt></th>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left">Consume</td>
+<td valign="top" align="left">Produce</td>
+</tr><tr><td valign="top" align="left">Q2.1: <tt>TZID</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q2.2: <tt>LAST-MODIFIED</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q2.3: <tt>TZURL</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q2.4: <tt>XPROP</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><th colspan="3" valign="top" align="left">In <tt>STANDARD</tt></th>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left">Consume</td>
+<td valign="top" align="left">Produce</td>
+</tr><tr><td valign="top" align="left">Q3.1: <tt>DTSTART</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q3.2: <tt>TZOFFSETTO</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q3.3: <tt>TZOFFSETFROM</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q3.4: <tt>COMMENT</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q3.5: <tt>RDATE</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q3.6: <tt>RRULE</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q3.7: <tt>TZNAME</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q3.8: <tt>XPROP</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><th colspan="3" valign="top" align="left">In <tt>DAYLIGHT</tt></th>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left">Consume</td>
+<td valign="top" align="left">Produce</td>
+</tr><tr><td valign="top" align="left">Q4.1: <tt>DTSTART</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q4.2: <tt>TZOFFSETTO</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q4.3: <tt>TZOFFSETFROM</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q4.4: <tt>COMMENT</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q4.5: <tt>RDATE</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q4.6: <tt>RRULE</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q4.7: <tt>TZNAME</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr><tr><td valign="top" align="left">Q4.8: <tt>XPROP</tt></td>
+<td valign="top" align="left">y/n/o</td>
+<td valign="top" align="left">y/n/o</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_general" obligation="normative">
+<title>General</title>
+<figure id="_51e347bc-4922-8104-a26e-aebf31b34b10" unnumbered="true" class="pseudocode"><p id="_dd5f0c55-05a1-236c-0fe3-ca4fbef81717">Q5: Do you always send DATE-TIME values with a timezone? y/n/o</p>
+
+<p id="_00195d37-094e-3ca0-af3b-09e49c94af99">Q6: Do you always send DATE-TIME values in UTC or floating? y/n/o</p>
+
+<p id="_b8f3a444-8e75-3966-08f4-f1ad00e2078c">Q7: Do you provide a standard set of timezones built-in to your product? y/n/o</p>
+
+<p id="_265116f0-f242-492e-0791-d888ce3890f6">if yes to Q7, then<br/> { <br/>   Q8: Where did you get your timezone definitions?</p>
+
+<p id="_ec4cd908-cb90-e131-26a7-60f6f8858a57">  <em>___________________</em></p>
+
+<p id="_6ac034b4-47de-b6c2-261a-68425b511c99">  Q9: How many timezone definitions do you have?</p>
+
+<p id="_dbc06944-7bb4-f50b-569d-8df17f708eb7">  <em>___________________</em></p>
+
+<p id="_243789db-cf6d-0527-7248-7c32ec96d335">  Q10: Do you have a special naming scheme for <tt>TZID</tt>s, and if so what is it?</p>
+
+<p id="_1454fbf7-7393-679b-d584-a83d001b1f82">  <em>___________________</em></p>
+
+<p id="_ece1a64d-5086-26eb-7305-b4489b53c98b">  Q11: Do you provide a mechanism for updating built-in timezones? y/n/o</p>
+
+<p id="_0e9c23b9-f212-263e-2807-8f320637f566">  if yes to Q11, then<br/>   { <br/>     Q12: Do you adjust future times to account for timezone definition changes? y/n/o <br/>   } <br/> }</p>
+
+<p id="_2ab23466-3275-8091-3634-1a1932d23dc8">Q13: Do you accept and use timezone definitions from imported iCalendar data? y/n/o</p>
+
+<p id="_7abc0e8c-a4d9-ebd4-c833-257e6378eba3">if yes to Q13, then<br/> { <br/>   Q14: Do you attempt to merge timezone definitions with the same  <tt>TZID</tt> when importing iCalendar data? y/n/o<br/> }</p>
+
+<p id="_05274394-ce17-70c2-ac78-cf8bcb188df4">Q15: When exporting timezones in iCalendar data (either to a file or via iTIP) do you send the entire timezone definition or just the set of dates needed for coverage of the event?</p>
+
+<p id="_a2240df0-4419-846c-0ccc-5930c3f0e24f"><em>___________________</em></p>
+
+<p id="_739d05e0-58d8-bd36-1e14-5498cd5ba0b8">Q16: Would you use timezone definitions from a standard timezone registry if one were created? y/n/o</p>
+
+<p id="_aca2c161-bf42-016f-5d9c-b828d8aeb9ec">Q17: What problems would be involved in changing a timezone definition if DST was changed at some point in the future?</p>
+
+<p id="_7ae4fcd5-340c-2956-542f-4921bcbd9e38"><em>___________________</em></p>
+
+<p id="_195fda4c-7e60-0a8d-948d-b6d4e92fee9e">C1: Comments on specific answers (include Q number for cross-reference to original question):</p>
+
+<p id="_9200401e-4f8b-2da8-c6e1-18b449b646ef"><em>___________________</em></p>
+
+<p id="_658e3487-e5b2-45d0-3788-26dbfe4fda13">C2: Comments on the format and ease of use of this questionnaire:</p>
+
+<p id="_e7d17ab0-a4da-d1a9-babb-44353827ff8b"><em>___________________</em></p>
+
+<p id="_f5d76aa4-5a4a-98d2-2205-1d311a637f4d">C3: Are there any additional questions we should be asking, and if so what are they?</p>
+
+<p id="_ba9dc64a-6f6c-eb27-ea64-78650c8c3bbf"><em>___________________</em></p>
+</figure>
+</clause>
+</annex>
+</csd-standard>

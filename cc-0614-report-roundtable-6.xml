@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Roundtable VI, 22-25 May 2006</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0614:2006</docidentifier><docnumber>0614</docnumber><date type="published"><on>2006-05-23</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2006-05-23</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_5db03f53-a84a-c100-5bb5-692a23f583bb">Roundtable VI took place on May 22-25, 2006, hosted by IBM/Lotus in Cambridge, Massachusetts. Monday May 22nd and Tuesday morning the 23rd were a dedicated CalConnect Interoperability Event where participating organizations performed interoperability testing on their calendaring and scheduling implementations.</p>
+
+<p id="_4c095f5a-7c5b-92aa-0eac-352644b7ad9b">Tuesday morning a pair of Practicums on iCalendar standards and on CalDAV were offered. The Roundtable itself convened midday on Tuesday the 23rd and closed midday on Thursday the 25th.</p>
+
+<p id="_f64455f0-e8da-633c-9d31-0a066185f69d">Tuesday afternoon was dedicated to a Mobile Calendaring Workshop, sponsored by TC-MOBILE (and replacing TC MOBILE’s regular working session).</p>
+
+<p id="_3700a95d-f74d-2539-f696-1f43aa6051e3">Wednesday, and part of Thursday morning, were dedicated to the other technical committee sessions, with an all-hands Plenary meeting at the end. The Technical Committee sessions were organized sequentially, to allow all attendees who wished to be involved in the discussions of a Technical Committee the opportunity to do so.</p>
+</introduction></preface><sections>
+
+<clause id="_update_on_technical_committees_and_initiatives" obligation="normative">
+<title>Update on Technical Committees and Initiatives</title>
+<p id="_edc2db4e-f4a8-aa90-132a-880b361ccb1e"><strong>Work Products</strong>: Since Roundtable V, <em>Recurrence Problems and Recommendations</em> document and the  <em>Timezone Registry and Service Recommendations</em> have been published. The <em>Calendaring Glossary </em> should proceed to last call shortly, as should the <em>Mobile Calendaring Questionnaire Results </em> Document.</p>
+
+<p id="_8ec96cec-8767-34cd-5580-25bde8406f09"><strong>TC-AUTHENTICATE</strong> is monitoring discussion on the issues of http authentication leading up to the IETF meeting in July.</p>
+
+<p id="_7d09f74e-2b53-2618-35a4-94eddf03727d"><strong>TC-CALDAV</strong> is working on requirements for CalDAV Scheduling as input to the development of the scheduling draft for CalDAV.</p>
+
+<p id="_8cded656-ebaa-f8cc-fdda-0f9381bf7f3b"><strong>TC-EVENTPUB</strong> has developed a proposal for a <tt>VVENUE</tt> extension to iCalendar to support event publication with expanded information, and plans to submit it as an individual draft to the IETF.</p>
+
+<p id="_3c9ea6fa-8bc7-73ca-5ae3-9e2a7f92059a"><strong>TC-FREEBUSY</strong> was formed at this Roundtable to coordinate CalConnect efforts associated with The Open Group Federated Free/Busy Challenge, leading to a proof of concept demonstration in Mid-July.</p>
+
+<p id="_418c7212-fbc0-5f11-c55f-86e392a1dd89"><strong>TC-MOBILE</strong> conducted its Mobile Calendaring Workshop at this Roundtable and will publish the results of its mobile calendaring questionnaire shortly. The TC is beginning work on a white paper delineating the reasons for (especially) mobile device and software manufacturers and operators to migrate to iCalendar from vCalendar.</p>
+
+<p id="_57ed50f6-cd43-0ca5-2576-0200105b0a7a"><strong>TC-REALTIME</strong> is actively working on the issues associated with server to server communication.</p>
+
+<p id="_e43912cc-57ef-7eab-76a1-b17ac63f74e3"><strong>TC-RECURR</strong> was disbanded, having completed its charter.</p>
+
+<p id="_f0bc606f-59c1-0ee1-2946-99e348a3ac4a"><strong>TC-TIMEZONE</strong> was disbanded, having completed its charter.</p>
+
+<p id="_a14e7c84-8dc8-eee9-de8b-cff7776e9be9"><strong>TC-USECASE</strong> has completed work on the Calendaring Glossary document, which will go to Last Call in the Consortium shortly, and has begun work on the minimum interoperable subset for tasks ( <tt>VTODO</tt>s).</p>
+
+<p id="_48dfd657-f068-db0f-9c1d-df09c109d032"><strong>CalATOM Ad Hoc Group</strong>: A discussion mailing list on CalATOM and associated issues such as RSS was formed at this Roundtable. The discussion list is open to interested individuals whether or not they represent CalConnect members.</p>
+
+<p id="_6dea9219-5392-d701-fc97-85a2fd95d81f"><strong>CalConnect Interoperability Event</strong>: Participants in the interoperability testing event included EVDB, Oracle, OSAF and RPI (Rensselaer Polytechnic Institute). Results from the event will be posted at Past IOP Reports.</p>
+</clause>
+
+<clause id="_future_meetings" obligation="normative">
+<title>Future Meetings</title>
+<p id="_b604118d-3fbb-73d3-78bd-dd61495fc805">The next meeting (Roundtable VII) will take place 26-29 September 2006 in the San Francisco Bay Area. The following meeting (Roundtable VIII) will take place in mid-January, probably on the East Coast.</p>
+</clause>
+</sections>
+</csd-standard>

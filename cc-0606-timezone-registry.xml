@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Timezone Registry and Service Recommendations</title>
+<docidentifier primary="true" type="CalConnect">CC 0606:2006</docidentifier><docnumber>0606</docnumber><date type="published"><on>2006-04-17</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Simon Vaillancourt</completename></name>
+<affiliation><organization>
+<name>Oracle Corporation</name>
+</organization></affiliation><email>simon.vaillancourt@oracle.com</email></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2006-04-17</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype>standard</doctype><flavor>cc</flavor><editorialgroup><committee>TIMEZONE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_038ad781-6eba-f3c4-fb3c-34d5b5236d87">This document contains technical recommendations on implementing a time zone registry and a time zone service.</p>
+
+<p id="_ada79ed4-f974-aa86-9035-a22fba173bd0">Why are standardized time zones needed?</p>
+
+<ul id="_c3d1f3ab-e106-e706-9d81-79ff090da0d8"><li><p id="_3bf9f874-4450-8add-c244-41af2b129a88">For improved interoperability: Calendar applications need to have a reliable list of time zones and their associated rules in order to avoid the following common problems:</p>
+<ul id="_049cdf1e-f0c7-9f97-ddde-95038a75cdfe"><li><p id="_ab2f94a4-42de-27d0-a014-da7a2a25c28e">Consuming unknown time zones.</p>
+</li>
+<li><p id="_712a2424-47be-23b0-36f4-f2a41b501729">Consuming known time zones with identical <tt>TZID</tt>s but different rule.</p>
+</li>
+</ul>
+</li>
+<li><p id="_dfc16216-afd2-f733-38af-dd4c75d90e85">Calendar applications need to have means of updating time zones and all affected data (i.e.: Previously created recurring meetings.) in an efficient and correct manner.</p>
+</li>
+<li><p id="_cbfc5736-d31a-ccc0-0d37-97d20d70f280">Having standardized time zones would open the door to using time zones by reference rather than by value (Sending only the time zone id rather than the whole time zone with its rules). This could potentially help applications where bandwidth usage is important such as mobile devices.</p>
+</li>
+<li><p id="_8d1e5748-c2ea-2363-b0af-909ce36aeae6">Any other non-iCalendar products having to deal with time zones could also benefit from it (Operating systems, java…​).</p>
+</li>
+</ul>
+</introduction></preface><sections>
+<clause id="_time_zone_registry" obligation="normative">
+<title>Time zone registry</title>
+<clause id="_implementation_recommendations_for_a_time_zone_registry" obligation="normative">
+<title>Implementation recommendations for a time zone registry</title>
+<recommendation id="_cc6bb917-e13a-15f0-8690-b525543107f8" model="default"><specification exclude="false"><p id="_38d4637e-2390-d303-d1e9-d34162b59a89">The registry should contain both the name and the rules of the time zones. Storing only the names of the time zones or the names of the rule would mean having some other sort of registry to map these names to meaningful values.</p>
+</specification></recommendation>
+
+<recommendation id="_afdee492-8637-a8ea-79c8-72878af7bca7" model="default"><specification exclude="false"><p id="_cfa61a5c-dba4-8d14-0af5-e03486cdf74b">Leveraging what already exists in terms of time zone database should be seriously considered in order to speed up the process of establishing the time zone registry standard. As of now, the Olson Database seems to be the most widely used “source of truth” in the software world.</p>
+</specification></recommendation>
+
+<recommendation id="_cf767f8e-f4da-84c8-f230-2dc4efd7f8d6" model="default"><specification exclude="false"><p id="_7df59cb3-2746-dc49-9bb5-2b940689f088">Adding a version per time zone is not seen as a requirement because time zone changes usually occur in the future which means that past events will remain the same even if a new rule is added to an existing time zone. A time stamp should be sufficient for most use cases.</p>
+</specification></recommendation>
+
+<recommendation id="_38ec7ce2-93a7-f680-7bee-11503a501c6c" model="default"><specification exclude="false"><p id="_c76b7eff-f8fe-3d3e-a447-b6838d1c7986">Final implementation should be done using a standardized process, the new time zone registry should be coordinated by IANA.</p>
+</specification></recommendation>
+
+<recommendation id="_09d95204-a8ee-1405-766e-88515e55f586" model="default"><specification exclude="false"><p id="_ba282801-0ccc-d3ad-3d46-bd2f1ba722ce">Updates of the registry could be done through: RFC, informational RFC, appointed/elected committee/individual who approves updates to the list.</p>
+</specification></recommendation>
+</clause>
+</clause>
+
+<clause id="_time_zone_service" obligation="normative">
+<title>Time zone service</title>
+<clause id="_implementation_recommendations_for_a_time_zone_service" obligation="normative">
+<title>Implementation recommendations for a time zone service</title>
+<recommendation id="_92f54970-ce0d-a43b-f9ab-6802956da75f" model="default"><specification exclude="false"><p id="_2835574b-5133-e7bc-22a9-cbec35fb2fbd">The time zone should be in a <tt>VTIMEZONE</tt> format as defined in RFC 2445.</p>
+</specification></recommendation>
+
+<recommendation id="_3f8b4134-cd50-7865-625a-714a3ab0e87a" model="default"><specification exclude="false"><p id="_4e8423bb-01c4-0c83-f64a-dbd0f988ba28">The time zone service should be build on top of a known platform such as: HTTP, CalDAV, DNS, or ITIP.</p>
+</specification></recommendation>
+
+<recommendation id="_751151e2-64c6-f43a-8325-1721b9880746" model="default"><specification exclude="false"><p id="_336f794a-d955-b542-8a36-35a52530c96d">The time zone service should be able to return only modified time zones; given the last time the time zone were fetched from the service and/or a list of  <tt>TZID</tt>-TimeStamp, return the time zones that have changed.</p>
+</specification></recommendation>
+
+<recommendation id="_32683813-0b3c-4a95-35f8-1534d944315e" model="default"><specification exclude="false"><p id="_9d52f0bd-63a5-2163-e719-5501f42a3db9">The time zone service should be able to return a time zone based on a supplied alias; given an OS based time zone name, return the corresponding  <tt>VTIMEZONE</tt> object. For example: The windows time zone name:”(GMT -05:00) Eastern Time (US  Canada)” would return the  <tt>VTIMEZONE</tt> Object with the <tt>TZID: "/IANA/America/New_York"</tt>.</p>
+</specification></recommendation>
+
+<recommendation id="_9eb34216-d264-7ba9-db20-046e2aa6ff1c" model="default"><specification exclude="false"><p id="_fd4794f7-0a21-b83f-1de6-1f0d33720d91">The time zone service should be able to return a time zone based on a supplied <tt>TZID</tt>.</p>
+</specification></recommendation>
+
+<recommendation id="_09b4791f-b254-f8d2-b969-d0dce986d9f1" model="default"><specification exclude="false"><p id="_5f611733-0396-2948-d1af-535e4185d62c">The time zone service should be able to return a time zone based on a <tt>VTIMEZONE</tt> object (Closest match). The “closest match” feature would be useful for consuming iCalendar objects originating from applications that don’t have any time zone service knowledge.</p>
+</specification></recommendation>
+</clause>
+</clause>
+
+<clause id="_incremental_implementation_proposal" obligation="normative">
+<title>Incremental implementation proposal</title>
+<p id="_b531bbc8-feae-9ad4-3b3d-30c79502f43c">Implementing a standardized time zone registry and service is no easy task. Here is a tentative proposal on how it could be done incrementally by leveraging what already exists. This is just describing how it could be done and is by no means set in stone.</p>
+
+<clause id="_milestone_1_publish_the_registry_file" obligation="normative">
+<title>Milestone 1: Publish the registry file</title>
+<recommendation id="_bc4c3cba-5d26-aac1-b50a-0b8e4769aef0" model="default"><specification exclude="false"><p id="_11b06caa-429f-069a-65bc-721e8e1b4f05">A group (Let’s call it the TZ Group) agrees to generate a <tt>VTIMEZONE</tt> object file every time a new TZDB (Olson database) file is released we’ll cal that file the “TZ registry file”.</p>
+</specification></recommendation>
+
+<recommendation id="_b41353b7-10df-055d-b6db-f364e8845e2d" model="default"><specification exclude="false"><p id="_f19c072b-ee22-f172-e14c-36943b70fd0b">The TZ Group registers a domain name to host the TZ Group web site. This site is to be used for the distribution of the newest “TZ registry file”.</p>
+</specification></recommendation>
+</clause>
+
+<clause id="_milestone_2_define_and_setup_the_time_zone_service" obligation="normative">
+<title>Milestone 2: Define and setup the time zone service</title>
+<recommendation id="_8cd87605-6fcf-77aa-28ce-afd9b65d5f21" model="default"><specification exclude="false"><p id="_b6c8d29f-6f0a-73bf-1b2b-9765e611baec">A new RFC is written using CalDAV as a base protocol, that draft would describe how to search based on time zone ids, how to retrieve all time zones, how to return only time zones whose time stamp has changed…​</p>
+</specification></recommendation>
+
+<recommendation id="_288c611e-cc40-2389-223f-426e12463c33" model="default"><specification exclude="false"><p id="_8fe2f6c9-8d9f-eec5-e3fa-76e91ed3eb5c">Current implementers of CalDAV servers and clients implement their first iteration of the new draft.</p>
+</specification></recommendation>
+
+<recommendation id="_452f0f42-9f83-f544-479e-e3138945bab2" model="default"><specification exclude="false"><p id="_4779dbdc-da95-5722-bc71-5440bee4999b">The RFC draft becomes an official standard.</p>
+</specification></recommendation>
+
+<recommendation id="_17deb1c0-b427-396b-e396-ace4fc56e63c" model="default"><specification exclude="false"><p id="_8bb816d7-f8d5-b275-618e-24168d845570">Implementers release their applications.</p>
+</specification></recommendation>
+</clause>
+
+<clause id="_milestone_3_formalizing_the_registry" obligation="normative">
+<title>Milestone 3: Formalizing the registry</title>
+<recommendation id="_37ec976d-469d-cac8-7afa-827d9ec69b73" model="default"><specification exclude="false"><p id="_d38b5d96-9d64-c268-428e-3dea635a6ce7">The TZ Group takes steps to standardize the way the “TZ registry file” is generated and distributed.</p>
+</specification></recommendation>
+
+<recommendation id="_8738ea54-0ab2-5941-2cef-3a45a1c4c19f" model="default"><specification exclude="false"><p id="_b601b2ca-c9cb-edc7-f5b8-bb3996cd3ece">Another RFC is created to define and setup the IANA time zone registry.</p>
+</specification></recommendation>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="tz-draft">
+  <formattedref format="application/x-isodoc+xml">Time zone registry draft <link target="http://ietfreport.isoc.org/idref/draft-royer-timezone-registry/"/></formattedref>
+  <docidentifier type="metanorma">[1]</docidentifier>
+</bibitem><bibitem id="tz-database">
+  <formattedref format="application/x-isodoc+xml">Time zone database <link target="http://www.twinsun.com/tz/tz-link.htm"/></formattedref>
+  <docidentifier type="metanorma">[2]</docidentifier>
+</bibitem><bibitem id="windows-tz">
+  <formattedref format="application/x-isodoc+xml">Windows time zones to TZID mapping <link target="http://unicode.org/cldr/data/diff/supplemental/supplemental.html"/> — windows___tzid</formattedref>
+  <docidentifier type="metanorma">[3]</docidentifier>
+</bibitem><bibitem id="caldav">
+  <formattedref format="application/x-isodoc+xml">CalDAV Draft <link target="http://ietfreport.isoc.org/idref/draft-dusseault-caldav/"/> 
+RFC 2445 <link target="http://www.ietf.org/rfc/rfc2445.txt"/></formattedref>
+  <docidentifier type="metanorma">[4]</docidentifier>
+</bibitem><bibitem id="tz-problems">
+  <formattedref format="application/x-isodoc+xml">Time zone problems and recommendations document <link target="http://www.calconnect.org/publications/icalendartimezoneproblemsandrecommendationsv1.0.pdf"/></formattedref>
+  <docidentifier type="metanorma">[5]</docidentifier>
+</bibitem>
+
+
+
+
+
+</references></bibliography>
+</csd-standard>

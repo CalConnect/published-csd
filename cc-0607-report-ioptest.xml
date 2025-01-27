@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">May 2006 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0607:2007</docidentifier><docnumber>0607</docnumber><date type="published"><on>2007-06-12</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Simon Vaillancourt</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Chuck Norris</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Mike Douglass</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Patricia Egen</completename></name>
+<affiliation>
+<name>IOP Test Manager</name>
+<organization>
+<name>CalConnect</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1.1</edition><version><revision-date>2007-06-12</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2007</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7809dbe8-e645-5f85-32ad-f71bc98571d1" obligation="normative">
+<p id="_50f4b52f-8422-795d-1913-62a3d383a692">© 2007 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_0a2f512c-92c7-459e-205c-bcd6ec4f7ffb">This document contains notes and results from the May 2006 calendar interoperability test event held at the IBM/Lotus complex in Boston, MA. The basic purpose of the event was to start testing Free Busy, which has recently been added to the CALDAV specification. In addition, there was continued testing of iCalendar events by the Eventful organization.</p>
+
+<p id="_e906f53c-b30f-aa1a-7b97-17435c732aff">The chart below shows the attendees, their organization and the products they were testing.</p>
+
+<clause id="_attendees" obligation="informative">
+<title>Attendees</title>
+<table id="_19fd86e2-33ad-c9fc-e377-eb34103254a2" unnumbered="true"><thead><tr><th valign="top" align="left">Attendees</th>
+<th valign="top" align="left">Organization</th>
+<th valign="top" align="left">Products</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Chuck Norris</td>
+<td valign="top" align="left">EVDB</td>
+<td valign="top" align="left">CALDAV server</td>
+</tr><tr><td valign="top" align="left">Simon Vaillancourt</td>
+<td valign="top" align="left">Oracle</td>
+<td valign="top" align="left">Oracle CALDAV server</td>
+</tr><tr><td valign="top" align="left">Jeffrey Harris</td>
+<td valign="top" align="left">OSAF</td>
+<td valign="top" align="left">Chandler and Cosmo</td>
+</tr><tr><td valign="top" align="left">Mike Douglass</td>
+<td valign="top" align="left">RPI</td>
+<td valign="top" align="left">Bedework CALDAV Server</td>
+</tr><tr><td valign="top" align="left">Dan Gurney</td>
+<td valign="top" align="left">IBM</td>
+<td valign="top" align="left">Lotus Notes (mostly an observer)</td>
+</tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_general_comments" obligation="normative">
+<title>General Comments</title>
+<p id="_e812908d-4ab7-1642-9519-3db1c1ed4760">Free Busy is a very recent addition to CALDAV. As such, there are only a few clients that are available for testing interoperability. The following is what was tested: Three CALDAV servers, One CALDAV client and absorbing Recurrence rules (RFC 2445 and RFC 2447).</p>
+
+<clause id="_vendor_1_testing" obligation="normative">
+<title>Vendor 1 Testing</title>
+<p id="_71249e3a-fa7b-9b47-fd78-83ed1d765932">Using a sample Free Busy demo client, Vendor 1 tested the CalDAV servers. The demo application is designed to show how to connect to different CALDAV servers to do free busy, acting like a small client. The following chart shows how this client worked against various CALDAV servers.</p>
+
+<table id="_13d5953b-a070-26b9-402f-320d43d9acc6">
+<name>Free Busy Report Chart</name>
+<thead><tr><th valign="top" align="center">Vendor1</th>
+<th valign="top" align="center">Vendor2</th>
+<th valign="top" align="center">Vendor3</th>
+<th valign="top" align="center">7</th>
+<th valign="top" align="left">Free Busy Reports</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">Setup</td>
+<td valign="top" align="left"><p id="_db0810fe-b4a4-e163-f6f7-4f3206e5ba38">Create a new calendar and populate it with the following for one week:</p>
+
+<p id="_d88c4a18-d71b-be6c-4234-338674b1de70">Event on Monday, 9 am — 11 am, recurs every day for five times <br/> Event on Monday, 12 pm — 1 pm, status tentative <br/> Event on Monday, 2 pm — 3 pm, status cancelled <br/> Event on Tuesday, 11 am — 12 pm <br/> Event on Tuesday, 2 pm — 4 pm, recurs every day for four times <br/> Event on Tuesday, 3 pm — 5 pm <br/> Event on Wednesday, 11 am — 12 pm, status tentative <br/> Event on Wednesday, 3 pm — 5 pm, status tentative <br/> Event on Thursday, 11 am — 12 pm, status cancelled <br/> Event on Thursday, 3 pm — 5 pm, status cancelled</p>
+</td>
+</tr><tr><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">7.1</td>
+<td valign="top" align="left">Run a free-busy report for the entire week.</td>
+</tr><tr><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">7.1.1</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Monday, the second is <tt>BUSY-TENTATIVE</tt>.</td>
+</tr><tr><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">7.1.2</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Tuesday.</td>
+</tr><tr><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">7.1.3</td>
+<td valign="top" align="left">Verify four <tt>FREEBUSY</tt> periods for Wednesday, second and fourth are <tt>BUSY-TENTATIVE</tt> and one hour long.</td>
+</tr><tr><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">7.1.4</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Thursday.</td>
+</tr><tr><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">7.1.5</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Friday.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_vendor_4_testing" obligation="normative">
+<title>Vendor 4 Testing</title>
+<p id="_c0a12f4a-e346-ab84-dc35-61dc322df140">Since the Vendor 4 organization joined the interoperability testing events after several other organizations had done their testing, they were very happy to exchange iCalendar objects to send to their server. Several attendees sent objects to help them test their iCalendar support, in particular recurring events. They found issues when absorbing iCalendar recurrence events. These will be useful in helping them streamline their software.</p>
+</clause>
+
+<clause id="_vendor_3_testing" obligation="normative">
+<title>Vendor 3 Testing</title>
+<p id="_d2eb8100-e0b4-18fc-f12a-44c669bc7b86">Vendor 3 noted that the Vendor2 server sent items that caused issues on the Vendor 3 server. They resolved several of them onsite and uncovered a few more problems that they will work on later. Vendor 3 uses write content. They noted that we may want to prevent users from updating Calendar structures based on role. It should be that they can create events but not collections.</p>
+</clause>
+
+<clause id="_vendor_2_testing" obligation="normative">
+<title>Vendor 2 testing</title>
+<p id="_338cccc0-74fc-6af4-baa7-468c15513116">Vendor 2 tested their brand new support for free busy in their client. Rather than work on the test scenarios, since their product is brand new, they spent time fixing bugs involving subscription to other servers in their client. What they did determine, though, is that the testing they did do did work with all three servers for timed events of whatever status. All-day events didn’t work on Vendor1 with the way their server serializes them. Vendor 1 will work on fixing that. It was noted while testing their version that sub collections are not supported by Vendor1 and Vendor 3. Therefore, they had to do some work on read write capabilities. By the next Interop they will do current user privilege sets. This is needed for Access Control. Generally speaking,  <tt>freebusy</tt> works. Vendor 2 suggests that next time we should test infinite depth, or “rollup”,  <tt>freebusy</tt> reports, if anybody other than Vendor 2 supports them.</p>
+</clause>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_3b607c62-226e-51e9-dc6e-ac07449ef0c9">As usual, the interoperability testing revealed problems with servers that no one knew about. These were resolved quickly in many cases or will be resolved when the attendees get back to their respective facilities. It is always better to test something before it goes production and that is one of the things we can provide — a safe, non-public forum and environment for testing software interoperability.</p>
+
+<p id="_028f8356-169d-5b84-5ef1-73a308c6fcca">Since this was, again as stated above, early in the Free Busy on CALDAV cycle, it was not as busy an interop as past events. However, it was a productive one, provided valuable feedback and helped the developers improve their products. In summary, the Vendor 3 and Vendor 1 servers can do free busy. The Vendor 2 client is a work in progress and is well on it’s way.</p>
+
+<p id="_9da07b20-7803-5927-dcac-d64d8bb9b97b">Vendor 3 spent part of time on Free busy query items and found their “usual bugs.” Vendor 1 spent most of the time on their Free Busy demo and their server. They also worked on a known problem with embryonic ACLs.</p>
+
+<p id="_1c25ab9b-1736-da73-0255-17c59f381b0b">Vendor 2 found that their Free Busy broadly works.</p>
+
+<p id="_ac853eff-9e19-7310-3aa3-b3f3f483cbd7">Vendor 4 said they came in with something brand new and fragile and wanted to bounce their software off real world scenarios. This is an example of exactly what an Interoperability event should be — testing code that is not only complete but in development as well. It’s better to know that something is not working as expected before committing an extensive amount of time in development. Vendor 4 found the event very valuable.</p>
+
+<p id="_0f0ba3f0-27e8-dc76-5407-2ae4e235779f">The next CalConnect Interoperability Testing Event (CITE) will spend more time focusing on Free Busy.</p>
+</clause>
+
+<clause id="_the_future" obligation="normative">
+<title>The Future</title>
+<p id="_33b5368f-7280-96f9-f529-2bfc4af08d7d">Some time was spent discussing the mobile space so we are starting a dialog on testing mobile devices and iCalendar, CALDAV, etc. This year is first year there are multiple phones with ical parsers. We will need to look for definitions of test cases. We will look at announcing early that we are embarking on this space to gather potential participants.</p>
+
+<p id="_70c2151b-b644-7ac1-ba5f-28c32b517e90">One of our first items will be to look at basic ical data and determine whether it gets rendered correctly on a certain number of devices. We will also need to look at transport mechanisms. Pat will work with Symbian who volunteered to help come up with test scenarios. The aim is to start the interop testing at the January meeting.</p>
+
+<p id="_e2fcf21b-0814-292f-5e90-b0da908e9ec8">By September MIT might have ical export function from event calendar and will be interested in testing with clients. CMU might be interested in testing also.</p>
+
+<p id="_06a38566-2d2d-7b34-c8c0-4b649c40e3cf">My thanks to everyone who furnished their notes and results.</p>
+
+<p id="_d821cded-6ca0-d97a-6952-6a0f8424e985">Respectfully submitted,<br/> Pat Egen. <br/> Interoperability Event Manager</p>
+</clause>
+</sections>
+</csd-standard>

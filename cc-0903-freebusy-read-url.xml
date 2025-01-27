@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Freebusy Read URL</title>
+<docidentifier primary="true" type="CalConnect">CC/S 0903:2009</docidentifier><docnumber>0903</docnumber><date type="published"><on>2009-04-15</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Eric York</completename></name>
+<affiliation><organization>
+<name>Apple Inc.</name>
+<address><street>1 Infinite Loop</street><city>Cupertino</city><country>USA</country><postcode>95014</postcode></address></organization></affiliation><email>eyork@apple.com</email><uri>http://www.apple.com/</uri></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2009-04-15</revision-date></version><language>en</language><script>Latn</script><abstract><p>This document defines a standardized form of Freebusy read URL to improve interoperability between client and server implementations, while extending the functionality and utility through the use of optional parameters.</p>
+</abstract><status><stage>published</stage></status><copyright><from>2009</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="S">specification</doctype><flavor>cc</flavor><editorialgroup><committee>FREEBUSY</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_00b731d5-d923-19b5-259b-ba92f34b5407" obligation="normative">
+<p id="_2ff90088-afa3-d6ab-ae6c-e9f1e3224b5a">© 2009 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><abstract id="_abstract"><title>Abstract</title><p id="_832f08c0-7988-820c-6387-b49dd66d8c48">This document defines a standardized form of Freebusy read URL to improve interoperability between client and server implementations, while extending the functionality and utility through the use of optional parameters.</p>
+</abstract><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_a8dbb016-085b-1377-696d-b9e5a2f6b64a">The foundation of scheduling is the availability of information about those periods when an attendee or resource is available to be scheduled and when that attendee or resource is not available to be scheduled. This information is referred to in calendaring and scheduling as “Freebusy” time, and is most commonly expressed as an  <eref type="inline" bibitemid="RFC2445" citeas="IETF RFC 2445"/> <tt>VFREEBUSY</tt> object, which can be a request for Freebusy time, a response to a request, or a published set of busy time.</p>
+
+<p id="_b9b56c88-6681-561e-d885-f637931022f8">Calendaring standards, such as <eref type="inline" bibitemid="RFC2445" citeas="IETF RFC 2445"/>, <eref type="inline" bibitemid="RFC2446" citeas="IETF RFC 2446"/>, <eref type="inline" bibitemid="RFC2447" citeas="IETF RFC 2447"/>, <eref type="inline" bibitemid="RFC4791" citeas="IETF RFC 4791"/>, and the draft CalDAV Scheduling ( <link target="http://tools.ietf.org/html/draftdesruisseaux-"/> caldav-sched.txt) provide mechanisms for publishing, retrieving, and interrogating Freebusy status.</p>
+
+<p id="_f1f3ab60-c065-1a0f-4c36-1f46dcaff0e9">Outside these specifications, another mechanism for sharing Freebusy information is widely used — Freebusy URL. Freebusy URL typically allows for the publication and/or retrieval of Freebusy information via HTTP. The exact form of the URL, the specifics of the data actually returned (such as the period, format, etc), and error handling are all proprietary to each product or server. In most instances, a URL is stored, most often in an addressbook of some kind. This does not accommodate requests for Freebusy information across specific periods of time.</p>
+
+<p id="_4df42bb0-bbd0-34c3-ed25-0340a62f8f54">Freebusy URL is a weak form of calendar sharing which does not provide for interoperability across the range of calendaring products and services, but it is a very useful form of sharing, nonetheless:</p>
+
+<ul id="_d4b97a50-aca8-1d5a-5fc1-5d84cb4f0e28"><li><p id="_c207729b-0bb0-6c05-2ef5-0cf80313cbf2">It is simple (in many respects)</p>
+</li>
+<li><p id="_18657067-21d8-f5a2-3620-b540d854e9db">It is relatively easy to implement Freebusy URL</p>
+</li>
+<li><p id="_4078e02b-c78b-880e-aad5-ebdd95370c94">It facilitates scheduling in the non-enterprise, standalone calendaring client scenario.</p>
+</li>
+<li><p id="_b25e0aea-f324-bc74-f735-a52ac87127fe">Microsoft Outlook supports a form of Freebusy URL in the “Internet Free/Busy” feature</p>
+</li>
+</ul>
+
+<p id="_1d05a40f-3dc0-8c22-7900-35ec95174e50">The objective of this specification is to preserve the simplicity, ease of implementation, and compatibility with Outlook, while providing additional benefits and functionality:</p>
+
+<ul id="_91858352-4361-4dac-26fb-8b324a02ab91"><li><p id="_0377bf7f-58a7-d4ca-dc73-f7c1dc5ff0fb">Standardize and normalize parameters, using a template approach.</p>
+</li>
+<li><p id="_5d9a2395-6f7a-7323-75e6-a514dda17177">Provide greater flexibility and functionality through the use of optional parameters</p>
+</li>
+<li><p id="_c1dbc102-06bb-544d-1004-2bd56344b568">Standardize error handling</p>
+</li>
+<li><p id="_1fa5cbfc-f007-ccd6-8849-d3882d42ec1b">Allow for strong, weak, and no authentication</p>
+</li>
+<li><p id="_b3e14b6b-043f-5fdf-7e30-7ee43e0b5a16">Standardize formats for returned Freebusy data</p>
+</li>
+</ul>
+
+<p id="_71249791-347d-eb3e-3646-1f859ebaeaf7">Freebusy URL potentially bridges the divide between enterprise calendaring and calendar/scheduling augmentation/aggregation sites, and standalone calendaring clients (no server).</p>
+
+<p id="_a468ac89-caa8-8e98-5fe9-9adfc4c12c9e">This document deals only with the Freebusy Read URL, used to retrieve Freebusy information from servers. Other documents will describe publishing of Freebusy information and discovery issues.</p>
+</introduction><acknowledgements id="_acknowledgments" obligation="informative">
+<title>Acknowledgements</title>
+<p id="_1b62793a-45a3-0094-64f2-8cc24020395a">The author would like to thank the members of the Calendaring and Scheduling Consortium Freebusy technical committee and the following individuals for contributions: Gary Schwartz, Michael Douglass, Cyrus Daboo.</p>
+</acknowledgements></preface><sections>
+
+
+<clause id="_conventions_used_in_this_document" obligation="normative">
+<title>Conventions Used in This Document</title>
+<p id="_1ca8b8a9-cfbc-0b0e-315b-42f5fe11133e">The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “NOT RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in  <eref type="inline" bibitemid="RFC2119" citeas="IETF RFC 2119"/>.</p>
+
+<clause id="_glossary_of_terms" obligation="normative">
+<title>Glossary of terms</title>
+<p id="_73b7f5c7-7c4e-8fa5-0ef5-6e1088316aa5">Refer to <eref type="inline" bibitemid="CalConnectGlossary" citeas="CC/R 0610:2006"/> for the terms used in this document.</p>
+</clause>
+</clause>
+
+<clause id="_freebusy_read_url" obligation="normative">
+<title>Freebusy Read URL</title>
+<p id="_f30392cc-894d-85f8-b714-cc7b911c59a4">The read URL is used to get Freebusy information for a single user. (Note this document does not define a read URL to get the Freebusy information for a group.) A client or user could use this URL by putting it into an <tt>FBURL</tt> property of a <tt>VCARD</tt> as defined in <eref type="inline" bibitemid="RFC2739" citeas="IETF RFC 2739"><localityStack><locality type="section"><referenceFrom>2.3.1</referenceFrom></locality></localityStack></eref>, or it could be published in a <tt>calFBURL</tt> attribute of an LDAP directory record for a user as defined in  <eref type="inline" bibitemid="RFC2739" citeas="IETF RFC 2739"><localityStack><locality type="section"><referenceFrom>2.4.4.2</referenceFrom></locality></localityStack></eref>.</p>
+
+<p id="_fdb60d2d-0681-721a-d358-914ac8cd4cbf">This document does not address how the URL is obtained, either by the owner of the Freebusy information or by the user of that information.</p>
+
+<p id="_916d1348-7d68-98f9-5034-f822218ac9ed">It is assumed that the owner has some means of obtaining a URL from the calendaring client and that they can transfer it to interested users through some means, such as email.</p>
+
+<p id="_d7a3ea84-952f-c2f6-a5cb-0716ac5c50d8">When the content of a Freebusy URL is accessed, Freebusy information can be returned as  <tt>VFREEBUSY</tt> iCalendar components, as defined by  <eref type="inline" bibitemid="RFC2445" citeas="IETF RFC 2445"/>. Such a  <tt>VFREEBUSY</tt> iCalendar component is not meant to conform to the requirements of  <tt>VFREEBUSY</tt> components in  <eref type="inline" bibitemid="RFC2446" citeas="IETF RFC 2446"/>. The <tt>VFREEBUSY</tt> component  <tt>SHOULD</tt> conform to section “4.6.4 Free/Busy Component” of  <eref type="inline" bibitemid="RFC2445" citeas="IETF RFC 2445"/>. The <tt>VFREEBUSY</tt> component <tt>SHOULD NOT</tt> have a <tt>METHOD</tt> property, a client MUST ignore the  <tt>METHOD</tt> property, if one is present. The  <tt>VFREEBUSY</tt> component <tt>MAY</tt> follow the publish setting in regards to the  <tt>ORGANIZER</tt> field. A client  <tt>SHOULD</tt> ignore the <tt>ORGANIZER</tt> field. Since a Freebusy URL can only refer to a single user, a client will already know how to match the requested <tt>VFREEBUSY</tt> component to a user. A server <tt>MUST</tt> only return a single  <tt>VFREEBUSY</tt> component.</p>
+</clause>
+
+<clause id="_url_query_parameters" obligation="normative">
+<title>URL Query Parameters</title>
+<p id="_de5f4cf0-f4ec-dd63-d682-52c38281d0bf">These are the recognized parameters for the Freebusy read URL which relate to the desired range and format of the returned data.</p>
+
+<p id="_de4f9ab4-cdd4-f6b9-da77-09a1894dfbdd">None of these parameters are required except for the conditions noted below. Appropriate defaults will be supplied by the server.</p>
+
+<p id="_34eac0a1-75c4-e5bf-b0ad-5450502915fb">Implementation Notes: Date-only start and end times, i.e. a date/time value without a time component (e.g. 20080101), are not supported because time zone support would be required.</p>
+
+<clause id="_start" obligation="normative">
+<title><tt>start</tt></title>
+<dl id="_7764af2d-e213-3d5d-51bb-81050c5d4890"><dt>Default</dt>
+<dd><p id="_19c24dfc-ad72-1c74-5501-72dd4dee023e">The default value is left up to the server. It may be the current day, start of the current month, etc.</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_19fa8729-4ff7-20ce-e41a-b265724f6c8c">Specifies the start date for the Freebusy data. The server is free to ignore this value and return data in any time range. The client must check the data for the returned time range.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_e0c6c2d0-13cb-7d4a-e3ea-eab3b5dae2fa">A profile of an <eref type="inline" bibitemid="RFC3339" citeas="IETF RFC 3339"/> Date/Time. Fractional time is not supported. The server <tt>MUST</tt> support the expanded version e.g. 2007-01-02T13:00:00-08:00 It is up to the server to interpret local date/times.</p>
+</dd>
+</dl>
+
+<example id="_7e1892af-e66c-b29a-d952-8d030ef8c5a6"><p id="_6ab0f3b5-a68d-455c-9acb-7f19dd765764">2007-02-03T15:30:00-0800<br/> 2007-12-01T10:15:00Z</p>
+</example>
+
+<note id="_1d4a697a-892f-411b-7acc-e4a0540e0b01"><p id="_84f2df27-3b2d-9687-a137-4f717af6edb9">Specifying only a start date/time without specifying an end-date/time or period should be interpreted as in  <eref type="inline" bibitemid="RFC2445" citeas="IETF RFC 2445"/>. The effective period should cover the remainder of that day.</p>
+</note>
+
+<note id="_768c67e9-3511-c386-d78e-ce2201f4d581"><p id="_b59cd18e-2a1f-60ec-9e81-f6e271ccfb04">Date-only values are disallowed as the server cannot determine the correct start of the day. Only UTC or date/time with offset values are permitted.</p>
+</note>
+</clause>
+
+<clause id="_end" obligation="normative">
+<title><tt>end</tt></title>
+<dl id="_60065db7-755f-b184-2e30-177c7f036d6e"><dt>Default</dt>
+<dd><p id="_44c1ce14-dd52-3d43-b86b-460a52225213">Same as <tt>start</tt></p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_35926daa-8f56-3e6f-5939-50bda86d6e9a">Specifies the end date for the Freebusy data. The server is free to ignore this value.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_14887095-a06c-813a-23a2-c611dcf88519">Same as <tt>start</tt></p>
+</dd>
+<dt>Example</dt>
+<dd><p id="_79a5bec5-1cc6-7679-08a2-8229a49a725b">Same as <tt>start</tt></p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_period" obligation="normative">
+<title><tt>period</tt></title>
+<dl id="_2e5ec51f-9a5b-db42-e31a-d0536679acaf"><dt>Default</dt>
+<dd><p id="_2fa83dba-3fbb-4806-ec84-b90fddeba681">The default value is left up to the server. The recommended value is “P42D”.</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_19375b71-c7e3-f1e5-a355-8d047f7baab7">Specifies the amount of Freebusy data to return. A client cannot specify both a period and an end date. Period is relative to the start parameter.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_4b39c775-a53f-8f0c-1352-badab2488522">An RFC 2445 Duration as defined in section 4.3.6 of <eref type="inline" bibitemid="RFC2445" citeas="IETF RFC 2445"/></p>
+</dd>
+</dl>
+
+<example id="_2a3489ad-f9af-b07e-7f3a-e600426094bd"><p id="_5882daad-6463-4168-5549-604948328ed8">P42D</p>
+</example>
+</clause>
+
+<clause id="_format" obligation="normative">
+<title><tt>format</tt></title>
+<dl id="_76db4ee8-6330-a1d9-b32d-0718b1905d1e"><dt>Default</dt>
+<dd><p id="_6dde7d28-399e-a09f-1911-f25843442511">“text/calendar”</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_897d3a3a-0848-9e76-ebb8-07f877a42c2c">Specifies the output format as a MIME type. A server MUST support the default “text/calendar” which will return a <tt>VFREEBUSY</tt> object. Support for other formats is optional.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_52aad44a-2966-f677-1244-b3929a5d6012">A MIME type</p>
+</dd>
+</dl>
+
+<example id="_46c2050a-f290-5381-fdd6-ef39614f1cad"><p id="_94911e7b-2719-8782-2b85-603aa028c0f3">text/calendar</p>
+
+<p id="_5418500e-61a1-008c-91d7-59122c98c9fa">text/html (This format is intended to be viewed by a user in a browser)</p>
+</example>
+
+<note id="_879249e3-a96d-2e5c-f171-b9f0f3d1fd79"><p id="_0bb95636-76e4-0f58-bb0d-88a6cbb312f8">We anticipate future support for XML and JSON formats.</p>
+</note>
+</clause>
+
+<clause id="_url_parameters_notes" obligation="normative">
+<title>URL Parameters: Notes</title>
+<p id="_3980c8bc-b246-90ca-0acc-fa96ebf951c7">The server is free to ignore the start, end and period parameters. It is recommended that the server return at least 6 weeks of data from the current day.</p>
+
+<p id="_73fd40f3-9dd6-65c9-cbb3-1db901ce8f2b">A client <tt>MUST</tt> check the time range in the <tt>VFREEBUSY</tt> response as a server may return a different time range than the requested range.</p>
+</clause>
+</clause>
+
+<clause id="_url_identity_parameters" obligation="normative">
+<title>URL Identity Parameters</title>
+<p id="_e9cc0894-c620-bb62-8328-583133d915f8">These are the recognized parameters for the Freebusy read URL which deal with the identity of the requestor and the user for whom Freebusy data is being requested and the security of the transaction. These parameters may be encoded in a URL or as query parameters as defined in <xref target="section8"/></p>
+
+<p id="_81c7239e-70c9-4828-972c-476021d5b276">Some services may require the presence of a token and/or the user parameter as a form of low-level security.</p>
+
+<clause id="_token" obligation="normative">
+<title><tt>token</tt></title>
+<dl id="_19b5a446-90dc-5c9f-6e39-bfdee354e37a"><dt>Default</dt>
+<dd><p id="_e4b49c0d-0793-710a-b320-d09d69ffde11">None</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_601a4b3a-23c1-d00f-d1f9-effe9ccadb4a">An opaque token that will be recognized by the server. It is generally used for authentication and access control.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_e16a569f-a623-735f-73bc-7062ec8942a9">A URL encoded string.</p>
+</dd>
+</dl>
+
+<example id="_2d4e1c0e-da43-8d9b-d40f-aa278839e43d"><p id="_943c03d6-d574-83be-5776-ce2841aca402">XfHG65hsjF43</p>
+</example>
+</clause>
+
+<clause id="_user" obligation="normative">
+<title><tt>user</tt></title>
+<dl id="_69412304-31ef-daac-af0c-64cac20fc3e2"><dt>Default</dt>
+<dd><p id="_00c97982-c911-7d16-1a64-ac623c2c6544">None</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_1fd77701-565a-5192-cf31-b6ecadb03d53">A token representing the target user of this Freebusy request. This token may also be referred to as a “userid”. It is expected that some services will use a token which appears to be an email address.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_7f890101-b0ea-c482-f983-9c65552edfcc">A UTF-8 URL encoded string.</p>
+</dd>
+</dl>
+
+<example id="_18f03a23-fe4c-c9b7-919d-42bcefedc856"><p id="_a02c6e8e-b2c3-82ba-52f5-331fcf5b47ed"><link target="mailto:user1@example.com"/></p>
+
+<p id="_f2b119d2-3a86-1c2c-4e7f-84a9efc716e6"><link target="mailto:user%201@example.com"/></p>
+
+<p id="_33f591cd-a052-410a-b53d-dc7951293de0">jdhdyerhdk (a <tt>userid</tt> may be an opaque token.)</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_http_operations" obligation="normative">
+<title>HTTP Operations</title>
+<p id="_9a9076fe-bda5-3440-bc35-0e1d973511a0">The server <tt>SHOULD</tt> return an Etag response header for a successful  <tt>GET</tt> request targeting a Freebusy read URL. Clients  <tt>MAY</tt> use the ETag response header value to do subsequent “conditional”  <tt>GET</tt> requests that will avoid re-sending the Freebusy data again if it has not changed. The read URL is only valid when used with an HTTP <tt>GET</tt> <eref type="inline" bibitemid="RFC2616" citeas="IETF RFC 2616"/>.</p>
+
+<clause id="_response_codes" obligation="normative">
+<title>Response Codes</title>
+<p id="_e71c9074-aec8-ee17-7c27-5b81be1676ba">Below are the typical status codes returned by a <tt>GET</tt> request targeting a Freebusy URL. Note that other HTTP status codes not listed here might also be returned by a server.</p>
+
+<table id="_c0e66fcb-4300-8522-97ea-f5f444b3a881" unnumbered="true"><thead><tr><th valign="top" align="left">Status Code</th>
+<th valign="top" align="left">Message</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">200</td>
+<td valign="top" align="left">OK</td>
+</tr><tr><td valign="top" align="left">302</td>
+<td valign="top" align="left">Redirect</td>
+</tr><tr><td valign="top" align="left">400</td>
+<td valign="top" align="left">Start parameter could not be understood / End parameter could not be understood / Period parameter could not be understood</td>
+</tr><tr><td valign="top" align="left">401</td>
+<td valign="top" align="left">Unauthorized</td>
+</tr><tr><td valign="top" align="left">403</td>
+<td valign="top" align="left">Forbidden</td>
+</tr><tr><td valign="top" align="left">404</td>
+<td valign="top" align="left">The data for the requested <tt>userid</tt> is not currently available, but may be available later.</td>
+</tr><tr><td valign="top" align="left">406</td>
+<td valign="top" align="left">The requested format in the Format parameter is not supported.</td>
+</tr><tr><td valign="top" align="left">410</td>
+<td valign="top" align="left">The data for the requested <tt>userid</tt> is no longer available</td>
+</tr><tr><td valign="top" align="left">500</td>
+<td valign="top" align="left">General server error</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+
+<clause id="_examples" obligation="normative">
+<title>Examples</title>
+<p id="_73bde467-784b-da0e-d500-e4d48f912a2e">The following are examples of URLs used to retrieve Freebusy data for a user:</p>
+
+<example id="_89e61390-57ef-c19f-647a-cb48f52925ec"><p id="_7ebb1501-1a8a-38c5-5635-dabdf74b0862"><link target="http://www.example.com/freebusy/user1@example.com?start=2007-09-01T00:00:00-08:00&amp;end=2007-09-31T00:00:00-08:00"/></p>
+
+<p id="_47ded7fd-8aed-df4d-2b62-9193787eab66"><link target="http://www.example.com/freebusy/user1@example.com?start=2007-09-01T00:00:00-08:00&amp;end=2007-09-31T00:00:00-08:00&amp;format=text/calendar"/></p>
+
+<p id="_3cf694c0-afe0-8444-49ad-8ee0e415c7b9"><link target="http://www.example.com/calendar/user1@example.com?start=2007-09-01T00:00:00-08:00&amp;end=2007-09-31T00:00:00-08:00&amp;format=text/javascript"/></p>
+
+<p id="_cd683bf6-cfd0-c4ce-2e41-df33d98a97ef"><link target="http://www.example.com/freebusy/user1@example.com"/></p>
+
+<p id="_fd84164b-b740-30e9-ee66-097b21fc139b"><link target="http://www.example.com/freebusy?user=user1@example.com&amp;#x26;token=xcsfdgetdh&amp;start=2008-01-01T00:00:00Z&amp;end=2008-12-31T00:00:00Z"/></p>
+
+<p id="_7d3fe3f4-27c6-dcdc-7bed-6beebb0c0c40"><link target="http://www.example.com/freebusy?user=user%201@example.com&amp;start=2008-01-01T00:00:00Z&amp;end=2008-12-31T00:00:00Z"/></p>
+</example>
+
+<p id="_a7c3b700-3768-38d1-2b21-da6c3980010d">The following are examples of URLs used to retrieve Freebusy data for a user where the  <tt>userid</tt> has been obfuscated:</p>
+
+<example id="_f8157ae7-9c53-68d3-a64a-bd4a4e71d690"><p id="_cf978ba1-3c00-c79b-aa7f-e0c06705b842"><link target="http://www.example.com/freebusy/cbGf65Rfh?start=2007-09-01T00:00:00-08:00&amp;end=2007-09-31T00:00:00-08:00&amp;format=text/calendar"/></p>
+
+<p id="_449c6ed4-c707-fbdd-9aec-b964474fbd55"><link target="http://www.example.com/calendar/freebusy/cbGf65Rfh"/></p>
+</example>
+
+<p id="_bf4fed0d-05f5-1580-1ab1-9a3a6260d2dc">Some Request/Response Examples:</p>
+
+<example id="_3ad64a75-a6f4-3164-e919-73ef3fad42ea">
+<name>An URL with no query parameters</name>
+<p id="_7590c934-6dcd-70f4-d144-a4639e3306b8">&gt;&gt; Request &lt;&lt;</p>
+
+<sourcecode id="_72400880-6670-db54-6ac0-732a4766c4e1" unnumbered="true">GET /freebusy/bernard/ HTTP/1.1
+Host: www.example.com</sourcecode>
+
+
+<p id="_b9015f9f-6a63-c669-519b-351da3dcd613">&gt;&gt; Response &lt;&lt;</p>
+
+<sourcecode id="_835e32c1-13f7-2ff0-530f-b23979824a25" unnumbered="true">HTTP/1.1 200 OK
+Content-Type: text/calendar; charset="utf-8"
+Content-Length: xxxx
+
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Example Corp.//CalDAV Client//EN
+BEGIN:VFREEBUSY
+ORGANIZER;CN="Bernard
+Desruisseaux":mailto:bernard@example.com
+UID:76ef34-54a3d2@example.com
+DTSTAMP:20050530T123421Z
+DTSTART:20060101T000000Z
+DTEND:20060108T000000Z
+FREEBUSY:20050531T230000Z/20050601T010000Z
+FREEBUSY;FBTYPE=BUSYTENTATIVE:
+20060102T100000Z/20060102T120000Z
+FREEBUSY:20060103T100000Z/20060103T120000Z
+FREEBUSY:20060104T100000Z/20060104T120000Z
+FREEBUSY;FBTYPE=BUSYUNAVAILABLE:
+20060105T100000Z/20060105T120000Z
+FREEBUSY:20060106T100000Z/20060106T120000Z
+END:VFREEBUSY
+END:VCALENDAR</sourcecode>
+
+</example>
+
+<example id="_3a262bfd-c3a0-8e8b-5c71-8cb618909839">
+<name>An URL with start and end parameters</name>
+<p id="_de9e7688-984c-af3a-096d-012f4990445d">&gt;&gt; Request &lt;&lt;</p>
+
+<sourcecode id="_c91ac82e-34b2-4e13-2939-8db04a89b64e" unnumbered="true">GET /freebusy/user1@example.com?start=2007-09-
+01T00:00:00-08:00&amp;end=2007-09-31T00:00:00-08:00
+HTTP/1.1
+Host: www.example.com</sourcecode>
+
+
+<p id="_8b8c81f9-8e82-8bfa-ed80-7e399970bd6e">&gt;&gt; Response &lt;&lt;</p>
+
+<sourcecode id="_25e48d57-8ede-ff1b-23a7-b6a9c3cec432" unnumbered="true">HTTP/1.1 200 OK
+Content-Type: text/calendar; charset="utf-8"
+Content-Length: xxxx
+
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Example Corp.//CalDAV Client//EN
+BEGIN:VFREEBUSY
+ORGANIZER:
+UID:76ef34-54a3d3@example.com
+DTSTAMP:20070905T100000Z
+DTSTART:20070901T080000Z
+DTEND:20070931T080000Z
+FREEBUSY:20070903T230000Z/20070904T010000Z
+FREEBUSY;FBTYPE=BUSYTENTATIVE:
+20070906T100000Z/20070906T120000Z
+FREEBUSY:20070908T100000Z/20070908T120000Z
+FREEBUSY:20070909T100000Z/20070909T120000Z
+FREEBUSY;FBTYPE=BUSYUNAVAILABLE:
+20070915T100000Z/20070917T120000Z
+FREEBUSY:20070920T100000Z/20070922T120000Z
+END:VFREEBUSY
+END:VCALENDAR</sourcecode>
+
+</example>
+
+<example id="_fc2e5fb4-bcf0-cd88-c54b-0cc309cf26fb">
+<name>An URL for which the server does not have any data for that user</name>
+<p id="_b111f686-2e0a-8409-0311-f78e1dc28db1">&gt;&gt; Request &lt;&lt;</p>
+
+<sourcecode id="_50dcce5d-af35-db07-798b-8ce1c243e2d8" unnumbered="true">GET /freebusy/user1@example.com?start=2012-12-
+01T00:00:00-08:00&amp;end=2012-12-31T00:00:00-08:00
+HTTP/1.1
+Host: www.example.com</sourcecode>
+
+
+<p id="_8d9884d0-b2ad-0766-9835-0107eeca7b28">&gt;&gt; Response &lt;&lt;</p>
+
+<sourcecode id="_d0af46f7-b00d-21f8-6389-1c1975b5be95" unnumbered="true">HTTP/1.1 404 No Data</sourcecode>
+
+</example>
+</clause>
+
+<clause id="section8" obligation="normative">
+<title>Template URLs</title>
+<p id="_88cb65ba-fba7-1b39-f74c-61427d7509a0">In some cases, it may be useful for a client to understand the structure of the read URLs. One such example is a CalDAV server that publishes Freebusy data for an entire group of users.</p>
+
+<p id="_dfc7dea0-db46-8be4-68c2-718712e1fa52">Template URLs are defined in a draft specification available at  <link target="https://bitworking.org/projects/URI-Templates/draft-gregorio-uritemplate-00.html">URI-Templates</link>. A client can request a read template URL that the client can then use to create normal, i.e. non template, URLs for different users on the same Freebusy server. The following table defines those keys clients must understand to successfully build a URL from a template.</p>
+
+<table id="_899b4daf-11b4-d8a6-2824-fd5d84237171" unnumbered="true"><thead><tr><th valign="top" align="left">Template Key</th>
+<th valign="top" align="left">Meaning</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>userid</tt></td>
+<td valign="top" align="left">The full <tt>userid</tt> such as “<link target="mailto:user1@example.com"/>”</td>
+</tr><tr><td valign="top" align="left"><tt>user</tt></td>
+<td valign="top" align="left">A <tt>userid</tt> without a domain, such as “user1”</td>
+</tr><tr><td valign="top" align="left"><tt>domain</tt></td>
+<td valign="top" align="left">The domain part of a <tt>userid</tt>, such as “example.com”</td>
+</tr><tr><td valign="top" align="left"><tt>token</tt></td>
+<td valign="top" align="left">An auth token that identifies the requesting user.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_iana_considerations" obligation="normative">
+<title>IANA Considerations</title>
+<p id="_4c1df51c-3f73-ece6-c0dc-95f54e58911b">This document does not require any actions on the part of IANA.</p>
+</clause>
+
+<clause id="_security_considerations" obligation="normative">
+<title>Security Considerations</title>
+<p id="_ff97faf1-e78c-b6e9-c2c8-461ecdb1233e">For servers using the token approach for authentication, the token should be considered private. A client should take steps to safeguard the token. The token approach isn’t perfect security; a token could become more widely distributed than intended or anticipated.</p>
+
+<p id="_6d05674d-0383-3d0a-50ca-b223ce5f606a">Servers <tt>SHOULD</tt> provide a means for token values to be automatically or manually expired. Services  <tt>SHOULD</tt> consider obfuscating the <tt>userid</tt> in a Freebusy URL. A service  <tt>SHOULD</tt> prevent a client from probing for valid  <tt>userid</tt>s which might reveal private information about users such as their email address. A server  <tt>MAY</tt> return an HTTP 404 error rather than an HTTP 403 error when the requester does not have permission to view the Freebusy information of the requested user.</p>
+
+<p id="_11320a2d-472c-39cc-fd96-7337dc55b830">Servers <tt>MAY</tt> support HTTP Authentication <eref type="inline" bibitemid="RFC2616" citeas="IETF RFC 2616"/> for access to the Freebusy URL content.</p>
+
+<p id="_91ecb792-3f06-a741-c824-afda959605e5">HTTP protocol transactions are sent in the clear over the network unless protection from snooping is negotiated. This can be accomplished by use of TLS, as defined in  <eref type="inline" bibitemid="RFC2818" citeas="IETF RFC 2818"/>. In particular, HTTP Basic authentication, as defined in  <eref type="inline" bibitemid="RFC2616" citeas="IETF RFC 2616"/>, <tt>MUST NOT</tt> be used unless TLS is in effect.</p>
+
+<p id="_b8afe021-a654-c432-fced-1b8b12f52b99">Servers <tt>MUST</tt> take adequate precautions to ensure that clients cannot consume excessive server resources (CPU, memory, disk, etc.) through intentionally malicious requests. For example, a request may be made for an inappropriate amount of time, e.g. 100 years. A server is free to fail such a request.</p>
+
+<p id="_c2f3049c-d3de-5f3d-7aa6-86135848ff01">When rolling up Freebusy information, more information than necessary about a user’s events is exposed if busy periods overlap or are adjacent (this tells the client requesting the Freebusy information that the calendar owner has at least two events, rather than knowing only that the calendar owner has one or more events during the busy period).</p>
+
+<p id="_cb37ae50-86fe-8ed9-8da4-a3028417dd0b">Thus, a conservative approach to calendar data privacy would have servers always coalesce such busy periods when they are the same type. Security considerations described in iCalendar  <eref type="inline" bibitemid="RFC2445" citeas="IETF RFC 2445"/> and iTIP <eref type="inline" bibitemid="RFC2446" citeas="IETF RFC 2446"/> are also applicable.</p>
+</clause>
+
+
+<clause id="_references" obligation="normative">
+<title>References</title>
+<references id="_normative_references" normative="true" obligation="informative">
+<title>Normative References</title>
+<bibitem id="RFC2119" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Key words for use in RFCs to Indicate Requirement Levels</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2119</uri>
+  <docidentifier type="IETF" primary="true">RFC 2119</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2119</docidentifier>
+  <docnumber>RFC2119</docnumber>
+  <date type="published">
+    <on>1997-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Bradner</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_c12614e7-7445-703b-1e5d-88682499f6a1">In many standards track documents several words are used to signify the requirements in the specification. These words are often capitalized. This document defines these words as they should be interpreted in IETF documents. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">BCP</title>
+
+    <number>14</number>
+  </series>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2119</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Standards</keyword>
+  <keyword>Track</keyword>
+  <keyword>Documents</keyword>
+</bibitem>
+<bibitem id="RFC2445" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2445</uri>
+  <docidentifier type="IETF" primary="true">RFC 2445</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2445</docidentifier>
+  <docnumber>RFC2445</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Stenerson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_d2eccf87-6d95-b027-c5c9-c631e902e6a2">This memo has been defined to provide the definition of a common format for openly exchanging calendaring and scheduling information across the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2445</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ICALENDAR</keyword>
+  <keyword>interoperable</keyword>
+  <keyword>mime</keyword>
+  <keyword>multipurpose internet mail extensions</keyword>
+</bibitem>
+<bibitem id="RFC2446" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP) Scheduling Events, BusyTime, To-dos and Journal Entries</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2446</uri>
+  <docidentifier type="IETF" primary="true">RFC 2446</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2446</docidentifier>
+  <docnumber>RFC2446</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Hopson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_d02032fb-e62e-fa32-00fa-fe5632c8cf99">This document specifies how calendaring systems use iCalendar objects to interoperate with other calendar systems. It does so in a general way so as to allow multiple methods of communication between systems. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5546</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5546</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2446</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ITIP</keyword>
+  <keyword>iCalendar Transport-Independent Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>systems</keyword>
+</bibitem>
+<bibitem id="RFC2447" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2447</uri>
+  <docidentifier type="IETF" primary="true">RFC 2447</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2447</docidentifier>
+  <docnumber>RFC2447</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_f65ad78d-7ec6-c15d-7bfb-fa265577517b">This document specifies a binding from the iCalendar Transport- independent Interoperability Protocol (iTIP) to Internet email-based transports. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC6047</formattedref>
+      <docidentifier type="IETF" primary="true">RFC6047</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2447</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>IMIP</keyword>
+  <keyword>iCalendar Message-Based Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>electronic</keyword>
+  <keyword>mail</keyword>
+  <keyword>transport</keyword>
+</bibitem>
+<bibitem id="RFC2616" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Hypertext Transfer Protocol — HTTP/1.1</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2616</uri>
+  <docidentifier type="IETF" primary="true">RFC 2616</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2616</docidentifier>
+  <docnumber>RFC2616</docnumber>
+  <date type="published">
+    <on>1999-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Gettys</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Mogul</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">H. Frystyk</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">P. Leach</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_5b22ff7e-7478-3e0b-3ceb-b379f586a55e">HTTP has been in use by the World-Wide Web global information initiative since 1990. This specification defines the protocol referred to as “HTTP/1.1”, and is an update to RFC 2068. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7230</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7230</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7231</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7231</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7232</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7232</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7233</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7233</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7234</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7234</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7235</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7235</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2616</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>HTTP</keyword>
+  <keyword>Hypertext Transfer Protocol</keyword>
+  <keyword>World Wide Web</keyword>
+  <keyword>WWW</keyword>
+  <keyword>hypermedia</keyword>
+</bibitem>
+<bibitem id="RFC2818" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">HTTP Over TLS</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2818</uri>
+  <docidentifier type="IETF" primary="true">RFC 2818</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2818</docidentifier>
+  <docnumber>RFC2818</docnumber>
+  <date type="published">
+    <on>2000-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">E. Rescorla</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_4b0c4144-5175-ab29-5703-d382236d36cc">This memo describes how to use Transport Layer Security (TLS) to secure Hypertext Transfer Protocol (HTTP) connections over the Internet. This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC9110</formattedref>
+      <docidentifier type="IETF" primary="true">RFC9110</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2818</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>hypertext</keyword>
+  <keyword>transfer</keyword>
+  <keyword>protocol</keyword>
+  <keyword>transport</keyword>
+  <keyword>layer</keyword>
+  <keyword>security</keyword>
+</bibitem>
+<bibitem id="RFC3339" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Date and Time on the Internet: Timestamps</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3339</uri>
+  <docidentifier type="IETF" primary="true">RFC 3339</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3339</docidentifier>
+  <docnumber>RFC3339</docnumber>
+  <date type="published">
+    <on>2002-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Klyne</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Newman</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_4ac9ea75-099d-38d9-16af-8ff2f9020618">This document defines a date and time format for use in Internet protocols that is a profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3339</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Timestamps</keyword>
+  <keyword>gregorian calendar</keyword>
+  <keyword>iso</keyword>
+  <keyword>International Organization for Standardization</keyword>
+</bibitem>
+</references>
+
+<references id="_informative_references" normative="false" obligation="informative">
+<title>Informative References</title><bibitem id="CalConnectGlossary" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Calendaring and Scheduling Glossary of Terms V1.0 (Obsoleted by CD1102) (CD 0610)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Calendaring and Scheduling Glossary of Terms V1.0 (Obsoleted by CD1102) (CD 0610)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0610%20Calendaring%20and%20Scheduling%20Glossary%20of%20Terms%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/R 0610:2006</docidentifier>
+  <version>
+    <revision-date>2006-10-24</revision-date>
+  </version>
+</bibitem><bibitem id="I-D.ietf-vcarddavvcardrev">
+  <formattedref format="application/x-isodoc+xml">Perreault, S. and P. Resnick, “vCard Format Specification,” draft-ietf-vcarddav-vcardrev-06 (work in progress), March 2009 (TXT).</formattedref>
+  <docidentifier type="metanorma">[2]</docidentifier>
+</bibitem><bibitem id="RFC2739" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Calendar Attributes for vCard and LDAP</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2739</uri>
+  <docidentifier type="IETF" primary="true">RFC 2739</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2739</docidentifier>
+  <docnumber>RFC2739</docnumber>
+  <date type="published">
+    <on>2000-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Small</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Hennessy</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_ae3466b7-2390-0bfd-87a1-5cefbd405ab7">This memo defines three mechanisms for obtaining a URI to a user’s calendar and free/busy time. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2739</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>LDAP</keyword>
+  <keyword>lightweight directory access protocol</keyword>
+  <keyword>calendar</keyword>
+</bibitem><bibitem id="RFC4791" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Calendaring Extensions to WebDAV (CalDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4791</uri>
+  <docidentifier type="IETF" primary="true">RFC 4791</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4791</docidentifier>
+  <docnumber>RFC4791</docnumber>
+  <date type="published">
+    <on>2007-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Dusseault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_d3fbf3d5-e812-51f3-3c7d-bc14e8aa3e19">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing calendaring and scheduling information based on the iCalendar format. This document defines the “calendar-access” feature of CalDAV. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4791</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>calcav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>webdav</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>http</keyword>
+</bibitem>
+
+
+
+
+</references>
+</clause>
+</sections>
+</csd-standard>

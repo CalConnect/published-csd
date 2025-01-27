@@ -1,0 +1,2818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Index to Calendaring and Scheduling Standards</title>
+<docidentifier primary="true" type="CalConnect">CC/R 1104:2011</docidentifier><docnumber>1104</docnumber><date type="published"><on>2011-05-18</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>2</edition><version><revision-date>2011-05-18</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2011</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="R">report</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_d3d51098-43f8-8ea0-ff8e-f76eabd026d9" obligation="normative">
+<p id="_2e1cdf70-c030-e883-9e15-3028de343bcc">© 2011 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_ceb4ccb9-81b0-31e5-4229-351ba232a54e" obligation="informative">
+<title>Foreword</title>
+<p id="_5b8a269a-901f-6c6e-e716-17467721fce2">This page provides links, titles, and very brief abstracts of Calendaring and Calendaring-related (e.g. WebDAV, vCard) standards, specifications, and guides. The material is divided by category and subdivided in turn to base standards, additions and extensions, and work in progress. Entries are alphabetical by title within section. The material linked is largely but not entirely IETF and CalConnect.</p>
+
+<p id="_1c2596b6-e0d3-02b6-c43e-75ba671069a7">We would appreciate additions and corrections to the list; please send any recommendations to  <link target="mailto:info@calconnect.org">Standards Recommendations to CalConnect</link>.</p>
+</foreword></preface><sections>
+<clause id="_general" obligation="normative">
+<title>General</title>
+<clause id="_an_introduction_to_internet_calendaring" obligation="normative">
+<title>An Introduction to Internet Calendaring</title>
+<p id="_878cd5dd-7c2b-33de-5938-6a7ff671da2f">This CalConnect guide introduces internet calendaring and the major standards and specifications related to calendaring and scheduling.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="cc1012" type="inline" citeas="CC/R 1012:2011"/></termsource>
+</clause>
+
+<clause id="_calendaring_and_scheduling_glossary_of_terms" obligation="normative">
+<title>Calendaring and Scheduling Glossary of Terms</title>
+<p id="_b855d0fe-863f-bd16-791f-132e4ddae181">A Glossary of Calendaring and Scheduling Terms, developed by CalConnect.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="cc1102" type="inline" citeas="CC/R 1102:2013"/></termsource>
+</clause>
+</clause>
+
+<clause id="_icalendar" obligation="normative">
+<title>iCalendar</title>
+<clause id="_base_standards" obligation="normative">
+<title>Base Standards</title>
+<clause id="_internet_calendaring_and_scheduling_core_object_specification_icalendar_rfc_5545" obligation="normative">
+<title>Internet Calendaring and Scheduling Core Object Specification (iCalendar) RFC 5545</title>
+<p id="_66f14087-051e-fa7a-9837-c4a622c09c8a">iCalendar is the core data schema for calendaring information. This is the new version and obsoletes RFC 2445.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc5545" type="inline" citeas="IETF RFC 5545"/></termsource>
+</clause>
+
+<clause id="_icalendar_transport_independent_interoperability_protocol_itip_scheduling_events_busytime_to_dos_and_journal_entries_rfc_5546" obligation="normative">
+<title>iCalendar Transport-Independent Interoperability Protocol (iTIP) — Scheduling  Events, BusyTime, To-dos and Journal Entries RFC 5546</title>
+<p id="_3273c236-5a1b-039b-b8e7-46d4a8dd447a">Specifies the mechanisms for calendaring event interchange between calendar servers. This is the new version and obsoletes RFC 2446.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc5546" type="inline" citeas="IETF RFC 5546"/></termsource>
+</clause>
+
+<clause id="_icalendar_message_based_interoperability_protocol_imip_rfc_6047" obligation="normative">
+<title>iCalendar Message-Based Interoperability Protocol (iMIP) RFC 6047</title>
+<p id="_11b537f4-e01e-a393-4b7d-13d49861d037">Specifies how to exchange calendaring data via e-mail. This is the new version and obsoletes RFC 2447.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc6047" type="inline" citeas="IETF RFC 6047"/></termsource>
+</clause>
+
+<clause id="_xcal_the_xml_format_for_icalendar_rfc_6321" obligation="normative">
+<title>xCal: The XML format for iCalendar RFC 6321</title>
+<p id="_19aa8aea-912c-e9f1-db77-e8762b4ae697">This specification defines a format for representing iCalendar data in XML. More specifically, is to define an XML format that allows iCalendar data to be converted to XML, and then back to iCalendar, without losing any semantic meaning in the data. Anyone creating XML calendar data according to this specification will know that their data can be converted to a valid iCalendar representation as well.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc6321" type="inline" citeas="IETF RFC 6321"/></termsource>
+</clause>
+</clause>
+
+<clause id="_additional_and_extensions" obligation="normative">
+<title>Additional and Extensions</title>
+<clause id="_calws_restful_web_services_protocol_for_calendaring" obligation="normative">
+<title>CalWS RESTful Web Services Protocol for Calendaring</title>
+<p id="_a4fb10be-8790-b14d-00f8-7d5a5f573ebd">This document, developed by the XML Technical Committee, specifies a RESTful web services Protocol for calendaring operations. This protocol has been contributed to OASIS  <tt>WS-CALENDAR</tt> as a component of the <tt>WS-CALENDAR</tt> Specification under development by OASIS.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="cc1011" type="inline" citeas="CC/R 1011:2010"/></termsource>
+</clause>
+
+<clause id="_freebusy_read_url" obligation="normative">
+<title>Freebusy Read URL</title>
+<p id="_9e1d9120-39f3-0df8-4db0-656187dce5ab">This proposal, developed by the Freebusy Technical Committee, defines a standardized form of Freebusy Read URL to improve interoperability between client and server implementations, while extending functionality and utility through the use of optional parameters.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="cc0903" type="inline" citeas="CC/S 0903:2009"/></termsource>
+</clause>
+
+<clause id="_hcalendar_1_0_microformat" obligation="normative">
+<title>hCalendar 1.0 microformat</title>
+<p id="_74246aa1-5c72-fe38-03ad-c80317b07e32">hCalendar is a simple, open, distributed calendaring and events format, using a 1:1 representation of standard iCalendar (RFC 2445)  <tt>VEVENT</tt> properties and values in semantic HTML or XHTML.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="hcal" type="inline" citeas="hCalendar"/></termsource>
+</clause>
+
+<clause id="_iana_registration_of_enumservices_for_internet_calendaring_rfc_5333" obligation="normative">
+<title>IANA Registration of Enumservices for Internet Calendaring RFC 5333</title>
+<p id="_459b010e-55aa-d3b3-bc96-f35d8903c9f5">This document registers Enumservices for Internet calendaring. Specifically, this document focuses on Enumservices for scheduling with iMIP (iCalendar Message-Based Interoperability Protocol) and for accessing Internet calendaring information with CalDAV (Calendaring Extensions to WebDAV).</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc5333" type="inline" citeas="IETF RFC 5333"/></termsource>
+</clause>
+</clause>
+
+<clause id="_work_in_progress" obligation="normative">
+<title>Work in Progress</title>
+<clause id="_calendar_availability" obligation="normative">
+<title>Calendar Availability</title>
+<p id="_3d22a424-1185-76b8-eb36-8ddbe27fc814">This document specifies a new iCalendar calendar component <tt>VAVAILABILITY</tt> that allows the publication of available and unavailable time periods associated with a calendar user. This component can be used in standard iCalendar free-busy lookups, including iTIP free-busy requests, to generate repeating blocks of available or busy time with exceptions as needed.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="ietf-cala" type="inline" citeas="Internet-Draft draft-daboo-calendar-availability-05"/></termsource>
+</clause>
+
+<clause id="_event_publication_extensions_to_icalendar" obligation="normative">
+<title>Event Publication Extensions to iCalendar</title>
+<p id="_e2120dfc-1648-c2f3-9ad6-6e5402ad76fc">This specification introduces a number of new iCalendar properties which are of particular use for event publishers and in social networking.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="ietf-douglass" type="inline" citeas="Internet-Draft draft-douglass-calendar-extension-06"/></termsource>
+</clause>
+
+<clause id="_internet_calendar_scheduling_protocol_ischedule" obligation="normative">
+<title>Internet Calendar Scheduling Protocol (iSchedule)</title>
+<p id="_70f253e9-0640-ccfe-1336-5386a8f9c279">This document defines the Internet Calendar Scheduling Protocol (iSchedule), which is a binding from the iCalendar Transport- independent Interoperability Protocol (iTIP) to the Hypertext Transfer Protocol (HTTP) to enable interoperability between calendaring and scheduling systems over the Internet.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="ietf-desruisseaux" type="inline" citeas="Internet-Draft draft-desruisseaux-ischedule-05"/></termsource>
+</clause>
+
+<clause id="_link_property_extension_to_icalendar" obligation="normative">
+<title><tt>LINK</tt> Property Extension to iCalendar</title>
+<p id="_4a736f02-a65b-db80-2565-7ad99cc7cfc0">This specification introduces a new iCalendar property <tt>LINK</tt> to provide ancillary information for iCalendar components.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="ietf-link" type="inline" citeas="Internet-Draft draft-douglass-link-extension-01"/></termsource>
+</clause>
+
+<clause id="_masking_existing_meetings_in_icalendar_free_busy_requests" obligation="normative">
+<title>Masking existing meetings in iCalendar free busy requests</title>
+<p id="_b17fa717-2733-010b-8680-14baf43a5336">This document defines an extension to the iTIP calendar scheduling protocol to allow an organizer to have a specific event that may exist on an attendee’s calendar ignored when the attendee calculates and returns their free-busy information after a request from the organizer.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="maskuids" type="inline" citeas="iCalendar mask UIDs"/></termsource>
+</clause>
+
+<clause id="_new_properties_for_icalendar" obligation="normative">
+<title>New Properties for iCalendar</title>
+<p id="_f154d032-bd64-f174-01f9-8a31b6a15ef2">This document defines a set of new properties for iCalendar data.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="ietf-cal" type="inline" citeas="Internet-Draft draft-daboo-icalendar-extensions-09"/></termsource>
+</clause>
+
+<clause id="_schema_for_representing_resources_for_calendaring_and_scheduling_services" obligation="normative">
+<title>Schema for representing resources for calendaring and scheduling services</title>
+<p id="_bae6d872-933d-fadc-3e82-279766b8933d">This specification describes a schema for representing resources for calendaring and scheduling. A resource in the scheduling context is any shared entity that can be scheduled by a calendar user, but does not control its own attendance status.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="ietf-res-schema" type="inline" citeas="Internet-Draft draft-cal-resource-schema-06"/></termsource>
+</clause>
+
+<clause id="_valarm_extensions_for_icalendar" obligation="normative">
+<title><tt>VALARM</tt> Extensions for iCalendar</title>
+<p id="_41c5a5f0-76ab-b4c1-2d3a-38c7267d0120">This document defines a set of extensions to the iCalendar <tt>VALARM</tt> component to enhance use of alarms and improve interoperability between clients and servers.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="ietf-valarm" type="inline" citeas="Internet-Draft draft-daboo-valarm-extensions-05"/></termsource>
+</clause>
+</clause>
+</clause>
+
+<clause id="_caldav" obligation="normative">
+<title>CalDAV</title>
+<clause id="_base_standards_2" obligation="normative">
+<title>Base Standards</title>
+<clause id="_calendaring_extensions_to_webdav_caldav_rfc_4791" obligation="normative">
+<title>Calendaring Extensions to WebDAV (CalDAV) RFC 4791</title>
+<p id="_32ff35b7-b42d-5673-b178-08739e14da5e">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing calendaring and scheduling information based on the iCalendar format. This document defines the “calendar-access” feature of CalDAV.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc4791" type="inline" citeas="IETF RFC 4791"/></termsource>
+</clause>
+</clause>
+
+<clause id="_additional_and_extensions_2" obligation="normative">
+<title>Additional and Extensions</title>
+</clause>
+
+<clause id="_work_in_progress_2" obligation="normative">
+<title>Work in Progress</title>
+<clause id="_calendar_collection_entity_tag_ctag_in_caldav" obligation="normative">
+<title>Calendar Collection Entity Tag (CTag) in CalDAV</title>
+<p id="_a19320a1-4af2-5868-2af7-5e18681add56">This specification defines an extension to CalDAV that provides a fast way for a client to determine whether the contents of a calendar collection may have changed.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="ctag" type="inline" citeas="CalDAV CTag"/></termsource>
+</clause>
+
+<clause id="_calendar_usery_proxy_functionality_in_caldav" obligation="normative">
+<title>Calendar Usery Proxy Functionality in CalDAV</title>
+<p id="_4411b994-f205-b966-b983-aa70ac1e6dfd">This specification defines an extension to CalDAV that makes it easy for clients to setup and manage calendar user proxies, using the WebDAV Access Control List extension as a basis.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="proxy" type="inline" citeas="CalDAV Proxy"/></termsource>
+</clause>
+
+<clause id="_locating_caldav_and_carddav_services" obligation="normative">
+<title>Locating CalDAV and CardDAV Services</title>
+<p id="_e43a2f21-e946-911c-de93-bde7935ca7c0">This specification describes how DNS SRV records, DNS TXT records and well-known URIs can be used together or separately to locate Calendaring Extensions to WebDAV (CalDAV) or vCard Extensions to WebDAV (CardDAV) services.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="srv-caldav" type="inline" citeas="Internet-Draft draft-daboo-srv-caldav-10"/></termsource>
+</clause>
+
+<clause id="_scheduling_extensions_to_caldav" obligation="normative">
+<title>Scheduling Extensions to CalDAV</title>
+<p id="_24705fd0-81d0-671f-1b8e-2849dd7ad4b8">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of exchanging and processing scheduling messages based on the iCalendar Transport-Independent Interoperability Protocol (iTIP). This document defines the “calendar-schedule” feature of CalDAV.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="caldav-sched" type="inline" citeas="Internet-Draft draft-desruisseaux-caldav-sched-12"/></termsource>
+
+<p id="_dd5250ca-936e-cf0a-0fae-cf3d33f16ef8">Also see <eref type="inline" bibitemid="cc1104" citeas="CC/R 1104:2018"/>.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_vcard" obligation="normative">
+<title>vCard</title>
+<clause id="_base_standards_3" obligation="normative">
+<title>Base Standards</title>
+<clause id="_vcard_format_specification_rfc_6350" obligation="normative">
+<title>vCard Format Specification RFC 6350</title>
+<p id="_585af999-58db-4242-e759-fb479c7c5563">This document defines the vCard data format for representing and exchanging a variety of information about individuals and other entities (e.g., formatted and structured name and delivery addresses, email address, multiple telephone numbers, photograph, logo, audio clips, etc.). This is the new version and obsoletes RFCs 2425, 2426, and 4770, and updates RFC 2739.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc6350" type="inline" citeas="IETF RFC 6350"/></termsource>
+</clause>
+
+<clause id="_xcard_vcard_xml_representation_rfc_6351" obligation="normative">
+<title>xCard: vCard XML Representation RFC 6351</title>
+<p id="_e59de545-8164-efb6-fe9d-71c3a4dbaa3d">This document defines the XML schema of the vCard data format.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc6351" type="inline" citeas="IETF RFC 6351"/></termsource>
+</clause>
+</clause>
+
+<clause id="_additional_and_extensions_3" obligation="normative">
+<title>Additional and Extensions</title>
+<clause id="_calendar_attributes_for_vcard_and_ldap_rfc_2739" obligation="normative">
+<title>Calendar Attributes for vCard and LDAP RFC 2739</title>
+<p id="_e0064a6f-9531-350b-a68f-981b2d32f232">This memo defines three mechanisms for obtaining a URI to a user’s calendar and free/busy time. These include manual transfer of the information, personal data exchange using the vCard format, and directory lookup using the LDAP protocol.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc2739" type="inline" citeas="IETF RFC 2739"/></termsource>
+</clause>
+
+<clause id="_hcard_1_0_microformat" obligation="normative">
+<title>hCard 1.0 microformat</title>
+<p id="_29b269b1-6329-9d3e-cf49-9332d2cf5396">hCard is a simple, open, distributed format for representing people, companies, organizations, and places, using a 1:1 representation of vCard (RFC2426) properties and values in semantic HTML or XHTML.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="hcard" type="inline" citeas="hCard"/></termsource>
+</clause>
+</clause>
+
+<clause id="_work_in_progress_3" obligation="normative">
+<title>Work in Progress</title>
+<clause id="_vcard_service_type_parameter" obligation="normative">
+<title>vCard Service Type Parameter</title>
+<p id="_d6584295-c171-80a6-d5df-b88bf93eb4ea">This document defines a “Service Type” parameter for use on various vCard properties to help clients distinguish between different types of communication services that may be using the same protocol, yet are distinct.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="vcard-serv" type="inline" citeas="Internet-Draft draft-daboo-vcard-service-type-00"/></termsource>
+</clause>
+</clause>
+</clause>
+
+<clause id="_carddav" obligation="normative">
+<title>CardDAV</title>
+<clause id="_base_standards_4" obligation="normative">
+<title>Base Standards</title>
+<clause id="_carddav_vcard_extensions_to_web_distributed_authoring_and_versioning_webdav_rfc_6352" obligation="normative">
+<title>CardDAV: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV) RFC 6352</title>
+<p id="_f1057b2d-8f7e-cfb4-3afa-3ade74210324">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing contact information based on the vCard format.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc6352" type="inline" citeas="IETF RFC 6352"/></termsource>
+</clause>
+</clause>
+
+<clause id="_additional_and_extensions_4" obligation="normative">
+<title>Additional and Extensions</title>
+</clause>
+
+<clause id="_work_in_progress_4" obligation="normative">
+<title>Work in Progress</title>
+<clause id="_carddav_directory_gateway_extension" obligation="normative">
+<title>CardDAV Directory Gateway Extension</title>
+<p id="_fc37f24a-bbf4-66ce-cf9d-cebca1dca606">This document defines an extension to the vCard Extensions to WebDAV (CardDAV) protocol that allows a server to expose a directory as a read-only address book collection.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="carddav-dir" type="inline" citeas="Internet-Draft draft-daboo-carddav-directory-gateway-02"/></termsource>
+
+<p id="_e930e4bb-ad53-3480-c5a7-6686cdd36ec8">Also see <eref type="inline" bibitemid="cc1104" citeas="CC/R 1104:2018"/>.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_webdav" obligation="normative">
+<title>WebDAV</title>
+<clause id="_base_standards_5" obligation="normative">
+<title>Base Standards</title>
+<clause id="_http_extensions_for_web_distributed_authoring_and_versioning_webdav_rfc_4918" obligation="normative">
+<title>HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) RFC 4918</title>
+<p id="_00ba670a-3c9a-5c05-34ab-4c7fb319a71b">Web Distributed Authoring and Versioning (WebDAV) consists of a set of methods, headers, and content-types ancillary to HTTP/1.1 for the management of resource properties, creation and management of resource collections, URL namespace manipulation, and resource locking (collision avoidance).</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc4918" type="inline" citeas="IETF RFC 4918"/></termsource>
+</clause>
+</clause>
+
+<clause id="_additional_and_extensions_5" obligation="normative">
+<title>Additional and Extensions</title>
+<clause id="_binding_extensions_to_webdav_rfc_4842" obligation="normative">
+<title>Binding Extensions to WebDAV RFC 4842</title>
+<p id="_54ba1760-df9a-bf7d-9995-5e8fdd3111c9">This specification defines bindings, and the <tt>BIND</tt> method for creating multiple bindings to the same resource. Creating a new binding to a resource causes at least one new URI to be mapped to that resource. Servers are required to ensure the integrity of any bindings that they allow to be created.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc4842" type="inline" citeas="IETF RFC 4842"/></termsource>
+</clause>
+
+<clause id="_extended_mkcol_for_web_distributed_authoring_and_versioning_webdav_rfc_5689" obligation="normative">
+<title>Extended <tt>MKCOL</tt> for Web Distributed Authoring and Versioning (WebDAV) RFC 5689</title>
+<p id="_cf7bde6c-b0e8-2fce-7355-1e46bb78c9f7">This specification extends the Web Distributed Authoring and Versioning (WebDAV) <tt>MKCOL</tt> (Make Collection) method to allow collections of arbitrary resource-type to be created and to allow properties to be set at the same time.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc5689" type="inline" citeas="IETF RFC 5689"/></termsource>
+</clause>
+
+<clause id="_quota_and_size_properties_for_distributed_authoring_and_versioning_dav_collections_rfc_4331" obligation="normative">
+<title>Quota and Size Properties for Distributed Authoring and Versioning (DAV) Collections RFC 4331</title>
+<p id="_0bd8e31f-d630-c918-9999-535d877db58c">This document discusses the properties and minor behaviors needed for clients to interoperate with quota (size) implementations on WebDAV repositories.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc4331" type="inline" citeas="IETF RFC 4331"/></termsource>
+</clause>
+
+<clause id="_using_post_to_add_members_to_webdav_collectons_rfc_5995" obligation="normative">
+<title>Using <tt>POST</tt> to Add Members to WebDAV Collectons RFC 5995</title>
+<p id="_bc1218e9-6a96-d772-d897-8f67ea0ae4ad">This specification defines a discovery mechanism through which servers can advertise support for  <tt>POST</tt> requests with the aforementioned “add collection member” semantics.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc5995" type="inline" citeas="IETF RFC 5995"/></termsource>
+</clause>
+
+<clause id="_versioning_extensions_to_webdav_rfc_3253" obligation="normative">
+<title>Versioning Extensions to WebDAV RFC 3253</title>
+<p id="_43a4c796-f526-57b5-85b9-a150b1f9cec8">This document specifies a set of methods, headers, and resource types that define the WebDAV (Web Distributed Authoring and Versioning) versioning extensions to the HTTP/1.1 protocol.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc3253" type="inline" citeas="IETF RFC 3253"/></termsource>
+</clause>
+
+<clause id="_web_distributed_authoring_and_versioning_webdav_search_rfc_5323" obligation="normative">
+<title>Web Distributed Authoring and Versioning (WebDAV) SEARCH RFC 5323</title>
+<p id="_dfa87697-243e-caad-594f-6a2ff6399dff">This document specifies a set of methods, headers and properties composing WebDAV <tt>SEARCH</tt>, an application of the HTTP/1.1 protocol to efficiently search for DAV resources based upon a set of client- supplied criteria.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc5323" type="inline" citeas="IETF RFC 5323"/></termsource>
+</clause>
+
+<clause id="_webdav_access_control_protocol_rfc_3744" obligation="normative">
+<title>WebDAV Access Control Protocol RFC 3744</title>
+<p id="_e7760dad-6dcd-7b60-1cec-98250bdfde80">This specification extends the Web Distributed Authoring and Versioning (WebDAV) Protocol to support the server-side ordering of collection members.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc3744" type="inline" citeas="IETF RFC 3744"/></termsource>
+</clause>
+
+<clause id="_webdav_current_principal_extension_rfc_5397" obligation="normative">
+<title>WebDAV Current Principal Extension RFC 5397</title>
+<p id="_d72515bc-1a4f-7c96-60ac-bb292f5c7e81">This specification defines a new WebDAV property that allows clients to quickly determine the principal corresponding to the current authenticated user.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc5397" type="inline" citeas="IETF RFC 5397"/></termsource>
+</clause>
+
+<clause id="_webdav_ordered_collections_protocol_rfc_3648" obligation="normative">
+<title>WebDAV Ordered Collections Protocol RFC 3648</title>
+<p id="_f2f543a3-fbd0-1a3f-d8f2-8839c2f751dd">This specification extends the Web Distributed Authoring and Versioning (WebDAV) Protocol to support the server-side ordering of collection members.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc3648" type="inline" citeas="IETF RFC 3648"/></termsource>
+</clause>
+</clause>
+
+<clause id="_work_in_progress_5" obligation="normative">
+<title>Work in Progress</title>
+<clause id="_collection_synchronization_for_webdav" obligation="normative">
+<title>Collection Synchronization for WebDAV</title>
+<p id="_8001ce35-efab-cfc8-85d5-885ecdb92524">This specification defines an extension to WebDAV that allows efficient synchronization of the contents of a WebDAV collection.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="webdav-sync" type="inline" citeas="Internet-Draft draft-daboo-webdav-sync-08"/></termsource>
+</clause>
+</clause>
+</clause>
+
+<clause id="_related" obligation="normative">
+<title>Related</title>
+<clause id="_base_standards_6" obligation="normative">
+<title>Base Standards</title>
+<clause id="_date_and_time_on_the_internet_timestamps_rfc_3339" obligation="normative">
+<title>Date and Time on the Internet: Timestamps RFC 3339</title>
+<p id="_1e8849ec-fe3f-5347-f048-e1b8a11813ac">This document defines a date and time format for use in Internet protocols that is a profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="rfc3339" type="inline" citeas="IETF RFC 3339"/></termsource>
+</clause>
+</clause>
+
+<clause id="_additional_and_extensions_6" obligation="normative">
+<title>Additional and Extensions</title>
+</clause>
+
+<clause id="_work_in_progress_6" obligation="normative">
+<title>Work in Progress</title>
+<clause id="_portable_contacts" obligation="normative">
+<title>Portable Contacts</title>
+<p id="_31fb2a53-2269-e246-d6b3-0eb88fe06b74">The Portable Contacts specification is designed to make it easier for developers to give their users a secure way to access the address books and friends lists they have built up all over the web. Specifically, it seeks to create a common access pattern and contact schema that any site can provide, well-specified authentication and access rules, standard libraries that can work with any site, and absolutely minimal complexity, with the lightest possible toolchain requirements for developers.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="draft-spec" type="inline" citeas="Portable Contacts"/></termsource>
+</clause>
+
+<clause id="_timezone_service_protocol" obligation="normative">
+<title>Timezone Service Protocol</title>
+<p id="_eb476868-3ecd-e8f0-2daf-fe68ac49cb8b">This document defines a timezone service protocol that allows reliable, secure and fast delivery of timezone information to client systems such as calendaring and scheduling applications or operating systems.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="tz-service" type="inline" citeas="Internet-Draft draft-douglass-timezone-service-11"/></termsource>
+</clause>
+
+<clause id="_timezone_xml_specification" obligation="normative">
+<title>Timezone XML Specification</title>
+<p id="_352f210f-a4c9-315d-5800-b0e03060d881">This specification describes a format for describing timezone information for software and services.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="tz-xml" type="inline" citeas="Internet-Draft draft-douglass-timezone-xml-00"/></termsource>
+</clause>
+
+<clause id="_ws_calendar" obligation="normative">
+<title>WS-Calendar</title>
+<p id="_7e60290b-670f-ab9d-a5c1-efd0b578c438">WS-Calendar is an OASIS cross-domain standard for passing schedule and interval information between and within services.</p>
+
+<termsource status="identical" type="authoritative"><origin bibitemid="ws-cal" type="inline" citeas="WS-Calendar"/></termsource>
+</clause>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_bibliography" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc2739" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Calendar Attributes for vCard and LDAP</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2739</uri>
+  <docidentifier type="IETF" primary="true">RFC 2739</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2739</docidentifier>
+  <docnumber>RFC2739</docnumber>
+  <date type="published">
+    <on>2000-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Small</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Hennessy</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_01f80455-8231-fcbb-88d9-32d2b173eddf">This memo defines three mechanisms for obtaining a URI to a user’s calendar and free/busy time. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2739</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>LDAP</keyword>
+  <keyword>lightweight directory access protocol</keyword>
+  <keyword>calendar</keyword>
+</bibitem><bibitem id="rfc3253" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Versioning Extensions to WebDAV (Web Distributed Authoring and Versioning)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3253</uri>
+  <docidentifier type="IETF" primary="true">RFC 3253</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3253</docidentifier>
+  <docnumber>RFC3253</docnumber>
+  <date type="published">
+    <on>2002-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Clemm</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Amsden</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Ellison</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Kaler</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Whitehead</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_171a9bdd-004c-c8b4-7153-31f3f41163a2">This document specifies a set of methods, headers, and resource types that define the WebDAV (Web Distributed Authoring and Versioning) versioning extensions to the HTTP/1.1 protocol. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3253</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>HTTP</keyword>
+  <keyword>hypertext transfer protocol</keyword>
+  <keyword>clients</keyword>
+  <keyword>label</keyword>
+  <keyword>configuration</keyword>
+  <keyword>management</keyword>
+  <keyword>WebDAV</keyword>
+  <keyword>Web Distributed Authoring and Versioning</keyword>
+</bibitem><bibitem id="rfc3339" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Date and Time on the Internet: Timestamps</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3339</uri>
+  <docidentifier type="IETF" primary="true">RFC 3339</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3339</docidentifier>
+  <docnumber>RFC3339</docnumber>
+  <date type="published">
+    <on>2002-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Klyne</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Newman</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_8f78a9f6-b878-f205-51ff-a76505ff4fb7">This document defines a date and time format for use in Internet protocols that is a profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3339</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Timestamps</keyword>
+  <keyword>gregorian calendar</keyword>
+  <keyword>iso</keyword>
+  <keyword>International Organization for Standardization</keyword>
+</bibitem><bibitem id="rfc3648" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Web Distributed Authoring and Versioning (WebDAV) Ordered Collections Protocol</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3648</uri>
+  <docidentifier type="IETF" primary="true">RFC 3648</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3648</docidentifier>
+  <docnumber>RFC3648</docnumber>
+  <date type="published">
+    <on>2003-12</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Whitehead</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Reschke</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_b4806c10-48d5-61fd-fa37-07559beb53a4">This specification extends the Web Distributed Authoring and Versioning (WebDAV) Protocol to support the server-side ordering of collection members. Of particular interest are orderings that are not based on property values, and so cannot be achieved using a search protocol’s ordering option and cannot be maintained automatically by the server. Protocol elements are defined to let clients specify the position in the ordering of each collection member, as well as the semantics governing the ordering.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3648</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>WebDAV</keyword>
+  <keyword>Web Distribution Authoring and Versioning</keyword>
+  <keyword>server client semantics</keyword>
+  <keyword>ordering</keyword>
+  <keyword>orderpatch method</keyword>
+  <keyword>position header</keyword>
+  <keyword>ordering-type header</keyword>
+</bibitem><bibitem id="rfc3744" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Web Distributed Authoring and Versioning (WebDAV) Access Control Protocol</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3744</uri>
+  <docidentifier type="IETF" primary="true">RFC 3744</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3744</docidentifier>
+  <docnumber>RFC3744</docnumber>
+  <date type="published">
+    <on>2004-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Clemm</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Reschke</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">E. Sedlar</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Whitehead</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_5f1d10e0-0817-6ada-366c-5bd6ab544249">This document specifies a set of methods, headers, message bodies, properties, and reports that define Access Control extensions to the WebDAV Distributed Authoring Protocol. This protocol permits a client to read and modify access control lists that instruct a server whether to allow or deny operations upon a resource (such as HyperText Transfer Protocol (HTTP) method invocations) by a given principal. A lightweight representation of principals as Web resources supports integration of a wide range of user management repositories. Search operations allow discovery and manipulation of principals using human names. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3744</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>WebDAV</keyword>
+  <keyword>Web Distributed Authoring and Versioning</keyword>
+  <keyword>Access Control</keyword>
+</bibitem><bibitem id="rfc4331" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Quota and Size Properties for Distributed Authoring and Versioning (DAV) Collections</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4331</uri>
+  <docidentifier type="IETF" primary="true">RFC 4331</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4331</docidentifier>
+  <docnumber>RFC4331</docnumber>
+  <date type="published">
+    <on>2006-02</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Korver</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Dusseault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_5ff26d24-b69b-e3e1-5c6e-9e9f4a2db070">Web Distributed Authoring and Versioning (WebDAV) servers are frequently deployed with quota (size) limitations. This document discusses the properties and minor behaviors needed for clients to interoperate with quota (size) implementations on WebDAV repositories. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4331</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>webdav</keyword>
+</bibitem><bibitem id="rfc4791" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Calendaring Extensions to WebDAV (CalDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4791</uri>
+  <docidentifier type="IETF" primary="true">RFC 4791</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4791</docidentifier>
+  <docnumber>RFC4791</docnumber>
+  <date type="published">
+    <on>2007-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Dusseault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_9fa5ba56-425e-cc6c-94e6-378ab729a898">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing calendaring and scheduling information based on the iCalendar format. This document defines the “calendar-access” feature of CalDAV. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4791</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>calcav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>webdav</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>http</keyword>
+</bibitem><bibitem id="rfc4842" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Synchronous Optical Network/Synchronous Digital Hierarchy (SONET/SDH) Circuit Emulation over Packet (CEP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4842</uri>
+  <docidentifier type="IETF" primary="true">RFC 4842</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4842</docidentifier>
+  <docnumber>RFC4842</docnumber>
+  <date type="published">
+    <on>2007-04</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Malis</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">P. Pate</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Cohen</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Zelig</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_239ac5ae-cc1e-2e00-3045-47980f259979">This document provides encapsulation formats and semantics for emulating Synchronous Optical Network/Synchronous Digital Hierarchy (SONET/SDH) circuits and services over MPLS. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4842</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>multiprotocol label switching</keyword>
+</bibitem><bibitem id="rfc4918" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4918</uri>
+  <docidentifier type="IETF" primary="true">RFC 4918</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4918</docidentifier>
+  <docnumber>RFC4918</docnumber>
+  <date type="published">
+    <on>2007-06</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Dusseault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_495e32ab-f76b-bbf2-3d7a-75e1a68c2cf7">Web Distributed Authoring and Versioning (WebDAV) consists of a set of methods, headers, and content-types ancillary to HTTP/1.1 for the management of resource properties, creation and management of resource collections, URL namespace manipulation, and resource locking (collision avoidance).</p>
+
+    <p id="_554e18b9-e44d-3d83-39e3-79ae7049cfdf">RFC 2518 was published in February 1999, and this specification obsoletes RFC 2518 with minor revisions mostly due to interoperability experience. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4918</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>WEBDAV</keyword>
+  <keyword>hypertext</keyword>
+  <keyword>transfer</keyword>
+  <keyword>protocol</keyword>
+  <keyword>web</keyword>
+  <keyword>content</keyword>
+</bibitem><bibitem id="rfc5323" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Web Distributed Authoring and Versioning (WebDAV) SEARCH</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5323</uri>
+  <docidentifier type="IETF" primary="true">RFC 5323</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5323</docidentifier>
+  <docnumber>RFC5323</docnumber>
+  <date type="published">
+    <on>2008-11</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Reschke</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Reddy</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Davis</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Babich</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_ec865d45-1164-add3-9007-9a7b3a1c21ad">This document specifies a set of methods, headers, and properties composing Web Distributed Authoring and Versioning (WebDAV) SEARCH, an application of the HTTP/1.1 protocol to efficiently search for DAV resources based upon a set of client-supplied criteria. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5323</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>HTTP</keyword>
+  <keyword>Query</keyword>
+  <keyword>Properties</keyword>
+</bibitem><bibitem id="rfc5333" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">IANA Registration of Enumservices for Internet Calendaring</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5333</uri>
+  <docidentifier type="IETF" primary="true">RFC 5333</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5333</docidentifier>
+  <docnumber>RFC5333</docnumber>
+  <date type="published">
+    <on>2009-10</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Mahy</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Hoeneisen</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_1b25fe63-77a0-935a-124a-f774c8478029">This document registers Enumservices for Internet calendaring. Specifically, this document focuses on Enumservices for scheduling with iMIP (iCalendar Message-Based Interoperability Protocol) and for accessing Internet calendaring information with CalDAV (Calendaring Extensions to WebDAV). [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5333</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ENUM</keyword>
+  <keyword>iCal</keyword>
+  <keyword>iMIP</keyword>
+  <keyword>i TIP</keyword>
+  <keyword>CalDAV</keyword>
+</bibitem><bibitem id="rfc5397" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">WebDAV Current Principal Extension</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5397</uri>
+  <docidentifier type="IETF" primary="true">RFC 5397</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5397</docidentifier>
+  <docnumber>RFC5397</docnumber>
+  <date type="published">
+    <on>2008-12</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">W. Sanchez</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_4d355a3f-9797-60ec-7c83-06d37f948a84">This specification defines a new WebDAV property that allows clients to quickly determine the principal corresponding to the current authenticated user. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5397</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>http</keyword>
+  <keyword>webdav</keyword>
+  <keyword>access control</keyword>
+  <keyword>acl</keyword>
+  <keyword>authentication</keyword>
+</bibitem><bibitem id="rfc5545" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>
+  <docidentifier type="IETF" primary="true">RFC 5545</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5545</docidentifier>
+  <docnumber>RFC5545</docnumber>
+  <date type="published">
+    <on>2009-09</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_a6008c03-0757-2194-ee86-65a9f7fb536f">This document defines the iCalendar data format for representing and exchanging calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information, independent of any particular calendar service or protocol. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5545</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsify</keyword>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>caldav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>meeting</keyword>
+  <keyword>event</keyword>
+  <keyword>task</keyword>
+  <keyword>to-do</keyword>
+  <keyword>journal</keyword>
+  <keyword>appointment</keyword>
+  <keyword>agenda</keyword>
+  <keyword>schedule</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>ischedule</keyword>
+  <keyword>xCalendar</keyword>
+</bibitem><bibitem id="rfc5546" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5546</uri>
+  <docidentifier type="IETF" primary="true">RFC 5546</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5546</docidentifier>
+  <docnumber>RFC5546</docnumber>
+  <date type="published">
+    <on>2009-12</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_71481746-8cb7-57bc-c6a8-4444add03dd1">This document specifies a protocol that uses the iCalendar object specification to provide scheduling interoperability between different calendaring systems. This is done without reference to a specific transport protocol so as to allow multiple methods of communication between systems. Subsequent documents will define profiles of this protocol that use specific, interoperable methods of communication between systems.</p>
+
+    <p id="_729ee146-dc1a-4827-cc03-a2adecd7d245">The iCalendar Transport-Independent Interoperability Protocol (iTIP) complements the iCalendar object specification by adding semantics for group scheduling methods commonly available in current calendaring systems. These scheduling methods permit two or more calendaring systems to perform transactions such as publishing, scheduling, rescheduling, responding to scheduling requests, negotiating changes, or canceling. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5546</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calendar</keyword>
+  <keyword>scheduling</keyword>
+</bibitem><bibitem id="rfc5689" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Extended MKCOL for Web Distributed Authoring and Versioning (WebDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5689</uri>
+  <docidentifier type="IETF" primary="true">RFC 5689</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5689</docidentifier>
+  <docnumber>RFC5689</docnumber>
+  <date type="published">
+    <on>2009-09</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_bfc15f3b-2107-bb5d-4876-4f98d8b569e3">This specification extends the Web Distributed Authoring and Versioning (WebDAV) MKCOL (Make Collection) method to allow collections of arbitrary resourcetype to be created and to allow properties to be set at the same time. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">RFC4791</formattedref>
+      <docidentifier type="IETF" primary="true">RFC4791</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">RFC4918</formattedref>
+      <docidentifier type="IETF" primary="true">RFC4918</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5689</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>webdav</keyword>
+  <keyword>HTTP</keyword>
+</bibitem><bibitem id="rfc5995" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Using POST to Add Members to Web Distributed Authoring and Versioning (WebDAV) Collections</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5995</uri>
+  <docidentifier type="IETF" primary="true">RFC 5995</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5995</docidentifier>
+  <docnumber>RFC5995</docnumber>
+  <date type="published">
+    <on>2010-09</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Reschke</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_f84f6e5e-1987-4932-d1c1-3e96e702a71a">The Hypertext Transfer Protocol (HTTP) Extensions for the Web Distributed Authoring and Versioning (WebDAV) do not define the behavior for the “POST” method when applied to collections, as the base specification (HTTP) leaves implementers lots of freedom for the semantics of “POST”.</p>
+
+    <p id="_7e157021-9d49-27fc-97e3-eebd977c6c74">This has led to a situation where many WebDAV servers do not implement POST for collections at all, although it is well suited to be used for the purpose of adding new members to a collection, where the server remains in control of the newly assigned URL. In fact, the Atom Publishing Protocol (AtomPub) uses POST exactly for that purpose. On the other hand, WebDAV-based protocols, such as the Calendaring Extensions to WebDAV (CalDAV), frequently require clients to pick a unique URL, although the server could easily perform that task.</p>
+
+    <p id="_a99004ff-71ef-10da-793d-9e72fe08e037">This specification defines a discovery mechanism through which servers can advertise support for POST requests with the aforementioned “add collection member” semantics. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5995</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>HTTP</keyword>
+  <keyword>POST</keyword>
+  <keyword>WebDAV</keyword>
+  <keyword>Collections</keyword>
+  <keyword>Collection Members</keyword>
+</bibitem><bibitem id="rfc6047" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc6047</uri>
+  <docidentifier type="IETF" primary="true">RFC 6047</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6047</docidentifier>
+  <docnumber>RFC6047</docnumber>
+  <date type="published">
+    <on>2010-12</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Melnikov</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_00b9b6eb-bbb3-b01d-0855-dff47b2069ec">This document, “iCalendar Message-Based Interoperability Protocol (iMIP)”, specifies a binding from the iCalendar Transport-independent Interoperability Protocol (iTIP) to Internet email-based transports. Calendaring entries defined by the iCalendar Object Model (iCalendar) are wrapped using constructs from RFC 5322 and MIME (RFC 2045, RFC 2046, RFC 2047, and RFC 2049), and then transported over SMTP. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>6047</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>IMIP]</keyword>
+  <keyword>electronic mail</keyword>
+  <keyword>transport</keyword>
+  <keyword>itip</keyword>
+  <keyword>iCalendar Transport-independent Interoperability Protocol</keyword>
+  <keyword>iCalendar Object Model</keyword>
+</bibitem><bibitem id="rfc6321" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">xCal: The XML Format for iCalendar</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc6321</uri>
+  <docidentifier type="IETF" primary="true">RFC 6321</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6321</docidentifier>
+  <docnumber>RFC6321</docnumber>
+  <date type="published">
+    <on>2011-08</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">M. Douglass</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Lees</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_e3786d89-4647-04d1-08de-30620726d0bd">This specification defines “xCal”, an XML format for iCalendar data. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>6321</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>extensible markup language</keyword>
+</bibitem><bibitem id="rfc6350" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">vCard Format Specification</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc6350</uri>
+  <docidentifier type="IETF" primary="true">RFC 6350</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6350</docidentifier>
+  <docnumber>RFC6350</docnumber>
+  <date type="published">
+    <on>2011-08</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Perreault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_e2ba8135-1472-878a-783d-1b1640286997">This document defines the vCard data format for representing and exchanging a variety of information about individuals and other entities (e.g., formatted and structured name and delivery addresses, email address, multiple telephone numbers, photograph, logo, audio clips, etc.). This document obsoletes RFCs 2425, 2426, and 4770, and updates RFC 2739. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">RFC2739</formattedref>
+      <docidentifier type="IETF" primary="true">RFC2739</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>6350</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>vCard</keyword>
+</bibitem><bibitem id="rfc6351" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">xCard: vCard XML Representation</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc6351</uri>
+  <docidentifier type="IETF" primary="true">RFC 6351</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6351</docidentifier>
+  <docnumber>RFC6351</docnumber>
+  <date type="published">
+    <on>2011-08</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Perreault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_90498cc3-03e4-d3b2-8729-2418d9f086c3">This document defines the XML schema of the vCard data format. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>6351</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>vCard</keyword>
+</bibitem><bibitem id="rfc6352" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">CardDAV: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc6352</uri>
+  <docidentifier type="IETF" primary="true">RFC 6352</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6352</docidentifier>
+  <docnumber>RFC6352</docnumber>
+  <date type="published">
+    <on>2011-08</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_9c0ea194-0b6f-9451-a640-c812b52a7e9b">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing contact information based on the vCard format. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>6352</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>address</keyword>
+  <keyword>address book</keyword>
+  <keyword>contact</keyword>
+</bibitem><bibitem id="ietf-cala" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Calendar Availability</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-calendar-availability-05</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-calendar-availability-05</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-calendar-availability</docidentifier>
+  <docnumber>I-D.daboo-calendar-availability</docnumber>
+  <date type="published">
+    <on>2014-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>RPI</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>05</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_b14da038-36d4-4e29-f0f7-56e8425a5053">This document specifies a new iCalendar calendar component that allows the publication of available and unavailable time periods associated with a calendar user. This component can be used in standard iCalendar free-busy lookups, including iTIP free-busy requests, to generate repeating blocks of available or busy time with exceptions as needed. This document also defines extensions to CalDAV calendar-access and calendar-auto-schedule which specify how this new calendar component should be used when doing free-busy time evaluation in CalDAV.</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">draft-daboo-calendar-availability-04</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-daboo-calendar-availability-04</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-calendar-availability-05</number>
+  </series>
+</bibitem><bibitem id="ietf-douglass" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Event Publishing Extensions to iCalendar</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-douglass-calendar-extension-06</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-douglass-calendar-extension-06</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.douglass-calendar-extension</docidentifier>
+  <docnumber>I-D.douglass-calendar-extension</docnumber>
+  <date type="published">
+    <on>2016-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Michael Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Spherical Cow Group</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>06</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_de42b440-a954-0494-950a-48b314cc0302">This specification introduces a number of new iCalendar properties which are of particular use for event publishers and in social networking. This specification also defines a new STRUCTURED-DATA property for iCalendar (RFC 5545) to allow for data that is directly pertinent to an event or task to be included with the calendar data.</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">draft-douglass-calendar-extension-05</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-douglass-calendar-extension-05</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-douglass-calendar-extension-06</number>
+  </series>
+</bibitem><bibitem id="ietf-desruisseaux" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Internet Calendar Scheduling Protocol (iSchedule)</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-desruisseaux-ischedule-05</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-ischedule-05</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.desruisseaux-ischedule</docidentifier>
+  <docnumber>I-D.desruisseaux-ischedule</docnumber>
+  <date type="published">
+    <on>2013-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Bernard Desruisseaux</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Oracle</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>05</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_a1f1906e-8cc9-a04e-6aa2-be0d64267496">This document defines the Internet Calendar Scheduling Protocol (iSchedule), which is a binding from the iCalendar Transport- independent Interoperability Protocol (iTIP) to the Hypertext Transfer Protocol (HTTP) to enable interoperability between calendaring and scheduling systems over the Internet.</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">draft-desruisseaux-ischedule-04</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-ischedule-04</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-desruisseaux-ischedule-05</number>
+  </series>
+</bibitem><bibitem id="ietf-link" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Link Extension to Icalendar</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-douglass-link-extension-01</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-douglass-link-extension-01</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.douglass-link-extension</docidentifier>
+  <docnumber>I-D.douglass-link-extension</docnumber>
+  <date type="published">
+    <on>2011-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>RPI</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>01</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_4aaffb06-a76b-5377-ad13-0554aeccfc9e">This specification introduces new iCalendar property LINK to provide ancillary information for iCalendar components and changes RELATED-TO to define temporal relationships.</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-douglass-link-extension-01</number>
+  </series>
+</bibitem><bibitem id="maskuids">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="https://svn.macosforge.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/icalendar-maskuids.txt"/>
+  </formattedref>
+  <docidentifier>iCalendar mask UIDs</docidentifier>
+  
+</bibitem><bibitem id="ietf-res-schema" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Schema for representing resources for calendaring and scheduling services</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-cal-resource-schema-06</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-cal-resource-schema-06</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.cal-resource-schema</docidentifier>
+  <docnumber>I-D.cal-resource-schema</docnumber>
+  <date type="published">
+    <on>2011-10</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Ciny Joy</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Oracle</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>RPI</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>06</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_901a8b4f-f3f0-549d-3f01-a80ea10f3834">This specification describes a schema for representing resources for calendaring and scheduling. A resource in the scheduling context is any shared entity that can be scheduled by a calendar user, but does not control its own attendance status.</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-cal-resource-schema-06</number>
+  </series>
+</bibitem><bibitem id="ietf-cal" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">New Properties for iCalendar</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-icalendar-extensions-09</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-icalendar-extensions-09</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-icalendar-extensions</docidentifier>
+  <docnumber>I-D.daboo-icalendar-extensions</docnumber>
+  <date type="published">
+    <on>2014-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>09</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_d89fb4a7-aab9-2af6-60cc-b07cfecd0581">This document defines a set of new properties for iCalendar data as well as extending the use of some existing properties to the entire iCalendar object.</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">draft-daboo-icalendar-extensions-08</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-daboo-icalendar-extensions-08</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-icalendar-extensions-09</number>
+  </series>
+</bibitem><bibitem id="ietf-valarm" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">VALARM Extensions for iCalendar</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-valarm-extensions-05</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-valarm-extensions-05</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-valarm-extensions</docidentifier>
+  <docnumber>I-D.daboo-valarm-extensions</docnumber>
+  <date type="published">
+    <on>2019-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Kenneth Murchison</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>FastMail US LLC</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>05</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_7e685966-1084-81a3-4305-69de117235b9">This document defines a set of extensions to the iCalendar VALARM component to enhance use of alarms and improve interoperability between clients and servers.</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">draft-daboo-valarm-extensions-04</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-daboo-valarm-extensions-04</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-valarm-extensions-05</number>
+  </series>
+</bibitem><bibitem id="ctag">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://trac.calendarserver.org/browser/CalendarServer/trunk/doc/Extensions/caldav-ctag.txt"/>
+  </formattedref>
+  <docidentifier>CalDAV CTag</docidentifier>
+  
+</bibitem><bibitem id="proxy">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="https://svn.macosforge.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldav-proxy.txt"/>
+  </formattedref>
+  <docidentifier>CalDAV Proxy</docidentifier>
+  
+</bibitem><bibitem id="srv-caldav" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Locating Services for Calendaring Extensions to WebDAV (CalDAV) and vCard Extensions to WebDAV (CardDAV)</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-srv-caldav-10</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-srv-caldav-10</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-srv-caldav</docidentifier>
+  <docnumber>I-D.daboo-srv-caldav</docnumber>
+  <date type="published">
+    <on>2010-09</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>10</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_1f8b3e6d-e100-d1e6-42d2-781d006bca51">This specification describes how DNS SRV records, DNS TXT records, and well-known URIs can be used together or separately to locate CalDAV (Calendaring Extensions to Web Distributed Authoring and Versioning (WebDAV)) or CardDAV (vCard Extensions to WebDAV) services.</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-srv-caldav-10</number>
+  </series>
+</bibitem><bibitem id="caldav-sched" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Scheduling Extensions to CalDAV</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-desruisseaux-caldav-sched-12</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-caldav-sched-12</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.desruisseaux-caldav-sched</docidentifier>
+  <docnumber>I-D.desruisseaux-caldav-sched</docnumber>
+  <date type="published">
+    <on>2012-04</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Bernard Desruisseaux</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Oracle</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>12</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_6bb61cc9-b649-6983-860f-9e55c07a7989">This document defines extensions to the Calendaring Extensions to WebDAV (CalDAV) “calendar-access” feature to specify a standard way of performing scheduling operations with iCalendar-based calendar components. This document defines the “calendar-auto-schedule” feature of CalDAV. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">draft-desruisseaux-caldav-sched-11</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-caldav-sched-11</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-desruisseaux-caldav-sched-12</number>
+  </series>
+</bibitem><bibitem id="hcard">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://microformats.org/wiki/hcard"/>
+  </formattedref>
+  <docidentifier>hCard</docidentifier>
+  
+</bibitem><bibitem id="vcard-serv" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">vCard: Service Type Parameter</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-vcard-service-type-00</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-vcard-service-type-00</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-vcard-service-type</docidentifier>
+  <docnumber>I-D.daboo-vcard-service-type</docnumber>
+  <date type="published">
+    <on>2010-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>00</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_7ea643bf-21ea-9f5d-4373-4edea1dcf9de">This document defines a “Service Type” parameter for use on various vCard properties to help clients distinguish between different types of communication services that may be using the same protocol, yet are distinct.</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-vcard-service-type-00</number>
+  </series>
+</bibitem><bibitem id="carddav-dir" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">CardDAV Directory Gateway Extension</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-carddav-directory-gateway-02</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-carddav-directory-gateway-02</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-carddav-directory-gateway</docidentifier>
+  <docnumber>I-D.daboo-carddav-directory-gateway</docnumber>
+  <date type="published">
+    <on>2010-08</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>02</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_92acd761-4ff6-2991-702a-f0958f47aa5a">This document defines an extension to the vCard Extensions to WebDAV (CardDAV) protocol that allows a server to expose a directory as a read-only address book collection.</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-carddav-directory-gateway-02</number>
+  </series>
+</bibitem><bibitem id="webdav-sync" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Collection Synchronization for Web Distributed Authoring and Versioning (WebDAV)</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-webdav-sync-08</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-webdav-sync-08</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-webdav-sync</docidentifier>
+  <docnumber>I-D.daboo-webdav-sync</docnumber>
+  <date type="published">
+    <on>2012-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Arnaud Quillaud</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Oracle</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>08</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_a265502e-4ea9-7e3a-21a4-23f7445a5525">This specification defines an extension to Web Distributed Authoring and Versioning (WebDAV) that allows efficient synchronization of the contents of a WebDAV collection. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-webdav-sync-08</number>
+  </series>
+</bibitem><bibitem id="draft-spec">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://portablecontacts.net/draft-spec.html"/>
+  </formattedref>
+  <docidentifier>Portable Contacts</docidentifier>
+  
+</bibitem><bibitem id="tz-service" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Timezone Service Protocol</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-douglass-timezone-service-11</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-douglass-timezone-service-11</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.douglass-timezone-service</docidentifier>
+  <docnumber>I-D.douglass-timezone-service</docnumber>
+  <date type="published">
+    <on>2014-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>RPI</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>11</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_28892583-c313-d4af-f01e-6b5904b7cec6">This document defines a timezone service protocol that allows reliable, secure and fast delivery of timezone data to client systems such as calendaring and scheduling applications or operating systems.</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">draft-douglass-timezone-service-10</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-douglass-timezone-service-10</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-douglass-timezone-service-11</number>
+  </series>
+</bibitem><bibitem id="tz-xml" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Timezone XML Specification</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-douglass-timezone-xml-00</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-douglass-timezone-xml-00</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.douglass-timezone-xml</docidentifier>
+  <docnumber>I-D.douglass-timezone-xml</docnumber>
+  <date type="published">
+    <on>2010-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>RPI</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>00</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_ed25f556-3102-2cae-ae6b-68c7655adc1a">This specification describes a format for describing timezone information for software and services.</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-douglass-timezone-xml-00</number>
+  </series>
+</bibitem><bibitem id="ws-cal">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://docs.oasis-open.org/ws-calendar/ws-calendar/v1.0/ws-calendar-1.0-spec.html"/>
+  </formattedref>
+  <docidentifier>WS-Calendar</docidentifier>
+  
+</bibitem><bibitem id="cc0903" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Freebusy Read URL V1.0 (CD 0903)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Freebusy Read URL V1.0 (CD 0903)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0903%20Freebusy%20Read%20URL%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/S 0903:2009</docidentifier>
+  <version>
+    <revision-date>2009-04-15</revision-date>
+  </version>
+  <abstract format="text/plain">This document, developed by the Freebusy Technical Committee, defines a standardized form of Freebusy read URL to improve interoperability between client and server implementations, while extending the functionality and utility through the use of optional parameters.</abstract>
+</bibitem><bibitem id="cc1012" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">An Introduction to Internet Calendaring and Scheduling V1.1 (CD 1012)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">An Introduction to Internet Calendaring and Scheduling V1.1 (CD 1012)</title>
+
+  <docidentifier type="CC" primary="true">CC/R 1012:2011</docidentifier>
+  <version>
+    <revision-date>2011-10-20</revision-date>
+  </version>
+  <abstract format="text/plain">This CalConnect guide introduces internet calendaring and the major standards and specifications related to calendaring and scheduling.</abstract>
+</bibitem><bibitem id="cc1011" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">CalWS-Rest Restful Web Services Protocol for Calendaring V1.0.1 (CD 1011)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">CalWS-Rest Restful Web Services Protocol for Calendaring V1.0.1 (CD 1011)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20Web%20Services%20Protocol%20for%20Calendaring%20V1.0.1.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/R 1011:2010</docidentifier>
+  <version>
+    <revision-date>2010-02-22</revision-date>
+  </version>
+  <abstract format="text/plain">This document, developed by the XML Technical Committee, specifies a RESTful web services Protocol for calendaring operations. This protocol has been contributed to OASIS WS-CALENDAR as a component of the WS-CALENDAR Specification under development by OASIS.
+CalConnect and OASIS have agreed that any future work by CalConnect TC XML or OASIS WS-Calendar (or other committees in CalConnect and OASIS) on their respective versions of CalWS will be harmonized to maintain consistency between the versions. CalConnect and OASIS reserve the right to jointly and formally agree to fork the specifications at some point in the future if need arises.</abstract>
+</bibitem><bibitem id="cc1102" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Calendaring and Scheduling Glossary of Terms V2.2 (CD 1102)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Calendaring and Scheduling Glossary of Terms V2.2 (CD 1102)</title>
+
+  <docidentifier type="CC" primary="true">CC/R 1102:2013</docidentifier>
+  <version>
+    <revision-date>2013-05-02</revision-date>
+  </version>
+  <abstract format="text/plain">A Glossary of Calendaring and Scheduling Terms.</abstract>
+</bibitem><bibitem id="cc1104" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Index to Calendaring and Scheduling Standards (CD 1104)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Index to Calendaring and Scheduling Standards (CD 1104)</title>
+
+  <docidentifier type="CC" primary="true">CC/R 1104:2018</docidentifier>
+  <version>
+    <revision-date>2018-06-22</revision-date>
+  </version>
+</bibitem><bibitem id="hcal">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="https://microformats.org/wiki/hcalendar"/>
+  </formattedref>
+  <docidentifier>hCalendar</docidentifier>
+  
+</bibitem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</references></bibliography>
+</csd-standard>

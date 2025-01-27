@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Use Cases for Resources</title>
+<docidentifier primary="true" type="CalConnect">CC/S 0906:2009</docidentifier><docnumber>0906</docnumber><date type="published"><on>2009-06-10</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Andrew Laurence</completename></name>
+<email>alaurence@ucirvine.edu</email></person></contributor><contributor><role type="editor"/><person>
+<name><completename>Mimi Mugler</completename></name>
+<email>mmugler@berkeley.edu</email></person></contributor><contributor><role type="editor"/><person>
+<name><completename>Guy Stalnaker</completename></name>
+<email>jstalnak@wisc.edu</email></person></contributor><contributor><role type="editor"/><person>
+<name><completename>Ciny Joy</completename></name>
+<email>ciny.joy@sun.com</email></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2009-06-10</revision-date></version><language>en</language><script>Latn</script><abstract><p>This document lists use cases that utilize resources within the calendaring and scheduling application domain.</p>
+</abstract><status><stage>published</stage></status><copyright><from>2009</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="S">specification</doctype><flavor>cc</flavor><editorialgroup><committee>USECASE</committee></editorialgroup></ext></bibdata>
+<termdocsource bibitemid="glossary"/><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension><boilerplate><copyright-statement>
+
+<clause id="_00b731d5-d923-19b5-259b-ba92f34b5407" obligation="normative">
+<p id="_2ff90088-afa3-d6ab-ae6c-e9f1e3224b5a">© 2009 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><abstract id="_abstract"><title>Abstract</title><p id="_54e3acb4-6fc6-adf1-be11-5309095dffff">This document lists use cases that utilize resources within the calendaring and scheduling application domain.</p>
+</abstract><foreword id="_a5eafd67-94db-633a-a59d-1344a21b277e" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<admonition id="_347f6bc7-f807-2322-daf5-2292e8c0593a" type="disclaimer"><p id="_f2aeb75b-9b17-1e22-1463-e4d6c96362da">This document is by The Calendaring and Scheduling Consortium. Permission is granted to potential members to reproduce and distribute this presentation within the member organization so long as the presentation is not altered in any way and the Consortium is acknowledged as the originator.</p>
+
+<p id="_e99e181e-9c74-d213-2817-124b3d788d00">Please send any changes or corrections to the document editors.</p>
+</admonition></foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_ee502ff2-0c9e-efb1-f834-3a29e6911aea">This document was created by the USECASE Technical Committee of the Calendaring and Scheduling Consortium. The document lists use cases that utilize resources within the calendaring and scheduling application domain. We realize that some of the use cases presented may include workflow or ideas beyond what is offered by current calendaring and scheduling applications.</p>
+</introduction></preface><sections>
+
+
+<clause id="_methodology" obligation="normative">
+<title>Methodology</title>
+<p id="_e789711d-f86a-a781-b374-2c633a91b104">The USECASE Technical Committee regularly met in conference call to discuss the use of resources in the calendaring and scheduling domain. When we decided to draft resource use cases we each chose a perspective from which to view the use of resources. One of us chose the role of a social worker in the medical profess while another chose the role of social worker in the justice/social services field while another chose the perspective of a business man working on a construction project. Other perspectives were also chosen. The resulting use cases were then organized by number and a category supplied for each use case.</p>
+
+<p id="_32ee38a9-727d-6a7a-d8e4-7b798d87549e">The categories selected for the use case organization reflect a grouping of resources into sets differentiated by type. Each of these categories touches on an area discussed by the Technical Committee over the course of our deliberations about resources in calendaring.</p>
+
+<ol id="_9b879ab0-1ae4-36c8-8697-fac43223a0d9" type="arabic"><li><p id="_9f64ec08-0f7f-9646-d89b-39afbd25ae10">Person — People can properly be thought of as resources, especially given the knowledge and skills they have which may be unique to them or to the position they hold (e.g., project manager for a particular project).</p>
+</li>
+<li><p id="_9d25a6f8-3a25-53fc-2353-918803a803e3">Location — Rooms and places are a particularly important resource category and are presently found in nearly every major calendaring and scheduling product.</p>
+</li>
+<li><p id="_c77d8ec6-c008-092e-0096-af885a5f4153">Equipment — Things or objects which can be scheduled (e.g., projectors, laptops, vans).</p>
+</li>
+<li><p id="_3cf8abd1-a736-5c55-c35c-877c4da29a65">Material — Things necessary for a meeting that must be reserved or checked out (e.g., documents, personnel files, records).</p>
+</li>
+<li><p id="_62b01213-f4fc-d66e-7132-facd798908dd">Role — The term ‘role’ is used to cover attributes common to a collective from among the resource categories which can be used to schedule one or more from among the collective (e.g., fork lifts with a particular lifting capacity, waitresses, waiters, front desk clerks).</p>
+</li>
+<li><p id="_50bcb124-51cb-2ec5-4707-12758f6ae661">Other — Schedulable ‘things’ not covered by the other five categories (e.g., a staff in/out calendar).</p>
+</li>
+</ol>
+</clause>
+
+<clause id="_use_cases" obligation="normative">
+<title>Use Cases</title>
+<table id="_01a44232-c9b1-a0e3-0cea-5409f6280337">
+<name>Use Cases</name>
+<thead><tr><th valign="top" align="left">Use Case</th>
+<th valign="top" align="left">Resource Category</th>
+<th valign="top" align="left">Number</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">1. Schedule the beginning of a pilot for a set of equipment.</td>
+<td valign="top" align="left">Equipment</td>
+<td valign="top" align="left">1</td>
+</tr><tr><td valign="top" align="left">2. Reserve Test checking and analysis equipment for test materials.</td>
+<td valign="top" align="left">Equipment</td>
+<td valign="top" align="left">1</td>
+</tr><tr><td valign="top" align="left">3. Schedule demo equipment including prep time of equipment (e.g. large computer disk storage arrays for customer data).</td>
+<td valign="top" align="left">Equipment</td>
+<td valign="top" align="left">1</td>
+</tr><tr><td valign="top" align="left">4. Orders food and prepares coffee for the number of people who accept a lunch invitation with the client.</td>
+<td valign="top" align="left">Person</td>
+<td valign="top" align="left">1</td>
+</tr><tr><td valign="top" align="left">5. Frances is expecting a large shipment of widgets. She needs a forklift with a lifting capacity from their fleet of forklifts to handle moving the shipment from the trucks to a storage area. She creates an event and adds Forklift indicating that it needs to be able to handle lifting two ton pallets. The Forklift fleet manager assigns Fred to drive the forklift on the specified day by adding him to the event along with the needed Forklift No.4.</td>
+<td valign="top" align="left">Equipment, role</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">6. Reserve tape recorder for police interview in Interview Room C.</td>
+<td valign="top" align="left">location, equipment</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">7. Reserve video recording for client X interview in Interview Room A.</td>
+<td valign="top" align="left">location, equipment</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">8. Schedules work with employee skill set (e.g. bulldozer operator)? who brings the equipment.</td>
+<td valign="top" align="left">person, equipment</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">9. Schedules work with employees and a mid-sized crane (resource).</td>
+<td valign="top" align="left">person, equipment</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">10. Meeting with client X to discuss present state of situation.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">11. Trip to prison M to visit incarcerated parent requires first a meeting with some agency G to determine fitness for visit (or provide information relevant to visit — expected behavior, limitations, etc.).</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">12. Meeting with family counselor and client with their family.</td>
+<td valign="top" align="left">Person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">13. Meeting with Halfway House abuse shelter agent Calvin about short-term placement of client X’s family.</td>
+<td valign="top" align="left">Person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">14. Add to Staff In/Out resource calendar absence from office that afternoon.</td>
+<td valign="top" align="left">Person, other</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left">15. Meeting with client’s Attorney Cynthia about client X’s family situation.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">16. Setting up meeting/responding to meeting (off blackberry or in office) — sales follow up — lunch meeting.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">17. Mtg with supervisor about Person X in Room A</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">18. Schedules meeting with colleagues.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">19. Has name of person to schedule for meeting — needs telephone number &gt; email address [e.g., Jim supplies pipes, but all you have is a telephone number — how can one schedule a meeting with him?).</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">20. Receives invitation to meet client at another site (travel required before and after event).</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">21. Needs to schedule four drainage experts for a return field inspection, but two of them do not use calendar systems.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">22. Five colleagues are invited to a half-day meeting at a satellite location. They are not familiar with the satellite office, and the invitation’s location text is only parsable in local (satellite) parlance. In addition, they may either take private cars (and be reimbursed for mileage) or a company van. They must select a mode of transportation and secure usable directions.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">23. Schedules meeting with sub-contractors.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">24. Schedules meeting with client and engineer in main conference room at the office (location).</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">25. Meeting with District Attorney Dennis about potential charges against client X’s parent regarding client X’s situation.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">26. Meeting with Halfway House abuse shelter agent Danielle about finding apartment for client X’s family.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">27. Meet with Kaiser (HMO — pays for treatment) representative and patient at Kaiser facility. (Kaiser has an online appointment system for clients).</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">28. Receives verbal invitation to meet seismic expert at specific location on-site.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">29. Meeting with psychiatrist Ann to discuss client X testing results and request Ann conduct her own evaluations.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">2</td>
+</tr><tr><td valign="top" align="left">30. Schedules meeting with colleague, company car and noise measuring equipment (field equipment).</td>
+<td valign="top" align="left">person, equipment</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">31. Reserve Testing Room D and Testing Equipment 001 for client X testing — add Andrew to proxy test.</td>
+<td valign="top" align="left">person, location, equipment</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">32. Jack creates meeting with John and Jan in Room 3209. Jack needs a teleconferencing system, to allow his offsite colleague to participate. There are three resources added to the meeting: the room, the teleconferencing system, and the room setup monitor.</td>
+<td valign="top" align="left">person, location, equipment</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">33. Paul works in User Services and reserves Van No. 2 for use. He creates the meeting, inviting Pamela in the Department of Finance (who is their local IT staff) and Priscilla (who is the Dept. Finance office manager so she can alert the individuals who will have their day disrupted by the installation), and the resource “FleetPrep???” so the vehicle can be prepped for use. There are two resources added to the meeting: the Fleet vehicle, Van No. 2 and fleetPrep???.</td>
+<td valign="top" align="left">person, location, equipment</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">34. Amy creates meeting with Andy and Ann (local), and Alan (remote) in Room 3213. She needs a teleconferencing system, and video projection system, and a laptop equipped with remote conferencing software to allow Alan (who is their off-site colleague) to make a presentation. There are four resources added to the meeting: the room, the teleconferencing system, the video projection system, and the room setup monitor.</td>
+<td valign="top" align="left">person, location, equipment</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">35. Medical social worker sets up intake interview with prospective patient and his/her family. Appointment time and meeting room sent out with invitation. Resources needed are meeting room and patient’s medical records.</td>
+<td valign="top" align="left">person, location, materials</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">36. Meeting with Police Officer Benjamin about initial officer response to client situation; request police report materials.</td>
+<td valign="top" align="left">person, location, materials</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">37. Meeting with psychiatrist Ann to discuss Ann’s evaluations and potential medical recommendation for drug therapies for client X, if indicated; request testing results.</td>
+<td valign="top" align="left">person, location, materials</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">38. Meeting with Doctor Bonnie about client medical exam regarding client’s Emergency Room visit following situation; request medical records.</td>
+<td valign="top" align="left">person, location, materials</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">39. Medical social worker needs to find temporary housing for a patient’s family (husband and two children). She reviews availability of local hotel rooms and on-site family housing and picks one that is available and contains adequate beds and a kitchenette.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">40. A medical social worker for the bone marrow transplant unit is told by one of the unit’s doctors that a patient has not responded to treatment and is not expected to live. The medical social worker looks for a hospice in the patient’s home region (he is from a different area than the hospital). Issues to consider in selecting a hospice are availability, philosophy (religion-based?) if any, cost, contract or other payment agreement with patient’s health insurance company, and ability to provide care needed with patient’s particular condition.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">41. A case manager for the bone marrow transplant unit needs to arrange a hospital-to-hospital transfer for an incoming patient within a particular time frame. Medical transportation via ambulance is needed. Ambulance service is available from several private companies. Issues to consider in selecting an ambulance are availability, whether the ambulance company services the two hospitals, which ambulance companies have a contract with the patient’s health insurance company, and what particular medical care will be needed by the patient during the transfer.</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">42. A patient in the bone marrow transplant unit is doing well after treatment and is ready to released to his home. For some period of time, he will need to have home care visits from a qualified medical professional. Considerations in scheduling will include level of assistance needed (RN, LVN, physician’s assistant?), what health insurance will pay for, and what care is actually needed (change of dressings, IV insertion/maintenance, etc.).</td>
+<td valign="top" align="left">person, location</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">43. Shift/Retail scheduling (3 out of 10 cooks in weekday shift, 4 out of 10 on weekends)</td>
+<td valign="top" align="left">person, location, role</td>
+<td valign="top" align="left">3</td>
+</tr><tr><td valign="top" align="left">44. Gracie wants to host a party, but she knows that her husband’s colleague W.C. drinks so much gin that he wears a special coat with hidden bottles, as people never have enough; as a gracious host, she wants him to feel comfortable enough that he’ll leave his coat behind. As a responsible host, she also knows she’ll need a car and driver to get W.C. home; the driver must be capable of wrangling a sizable adult male.</td>
+<td valign="top" align="left">person, location, equipment</td>
+<td valign="top" align="left">4</td>
+</tr><tr><td valign="top" align="left">45. Andrew needs to schedule a meeting for 14 people from disparate organizations, with an on-projector presentation. The ‘big’ room is booked, but the ‘little’ room is available. The big room has an in-ceiling projector, but the little room requires bringing in a portable unit. Andrew knows from experience that the little room will work, with an alternate chair layout and if folks get cozy. He also knows of an alternate room, in another building and owned by an external organization, which can easily accommodate the crowd and provide a projector; the third room has the advantage of better signage and more available/convenient parking. Andrew needs to determine if the “big” room is actually being used? Can I bump them to a different location? Is the portable projector available? Is the external room available?</td>
+<td valign="top" align="left">person, location, equipment</td>
+<td valign="top" align="left">4</td>
+</tr></tbody>
+</table>
+</clause>
+
+<terms id="_glossary" obligation="normative">
+<title>Terms and definitions</title><p id="_154a4a8c-8229-712d-bcdc-3682cf8b63a7">For the purposes of this document, the terms and definitions given in <eref bibitemid="glossary" citeas="CC/R 0610:2006"/> and the following apply.</p>
+
+<term id="term-Calendar"><preferred><expression>
+<name>Calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_cc39a1e7-ab14-4fe3-fe63-6659c891f1cc">A collection of events, tasks, journal entries, etc. A calendar could be the content of a person or resource’s agenda; it could also be a collection of data serving a more specialized need. Calendars are the basic storage containers for calendaring information.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Calendar-User"><preferred><expression>
+<name>Calendar User</name>
+</expression>
+</preferred><admitted><expression>
+<name>CU</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_f5fef43e-909c-3300-b7c7-65816cae7e0a">An entity (often a human) that accesses calendar information.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Calendaring"><preferred><expression>
+<name>Calendaring</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_db45cacf-abb4-970a-91cc-d2596fc4d4a8">An application domain that covers systems that allow the interchange, access and management of calendar data.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-CalConnect"><preferred><expression>
+<name>CalConnect</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_b7ae9e97-9081-4d2e-122d-ad6e95d4e7b6">The Calendaring and Scheduling Consortium consisting of vendors and user groups interested in promoting and improving calendaring and scheduling standards and interoperability.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Component"><preferred><expression>
+<name>Component</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_df713523-4333-cfa0-c621-e8342a9ea5c6">A piece of calendar data such as an event, a task, or an alarm. Information about components is stored as properties of those components.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Event"><preferred><expression>
+<name>Event</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_5bf99d37-7465-c369-b10d-d07d0a8f0bd7">A calendar object that usually takes up time on an individual calendar. Events are commonly used to represent meetings, appointments, anniversaries, and day events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Free-time-search"><preferred><expression>
+<name>Free time search</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_efe2c934-a44f-84f7-1b61-5c9ee54b7881">(Bounded) common free time. This is typically a search generated by an application to show time on a calendar that is available or open.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Freebusy"><preferred><expression>
+<name>Freebusy</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_90fa2448-2dcb-2d91-c8d6-1bcc410e2605">A database and/or listing of times when a potential attendee or resource is free or busy. Used when scheduling calendar events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iCalendar"><preferred><expression>
+<name>iCalendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_bb617578-29d6-2799-8191-70287e1da63f">The Internet Calendaring and Scheduling Core Object Specification. An IETF standard (RFC 2445) for a text representation of calendar data ( <tt>VEVENT</tt>, <tt>VTODO</tt>, <tt>VALARM</tt>, etc.).</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Instance"><preferred><expression>
+<name>Instance</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_6ac7cac2-dbfa-c4e1-248c-2254467113c8">When used with recurrences, an instance refers to an item in the set of recurring items.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Invite"><preferred><expression>
+<name>Invite</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_b506358f-e9ff-fb3b-be3b-1eac1e0f823a">To request the attendance of someone to a calendar event.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Negotiation"><preferred><expression>
+<name>Negotiation</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e0e378d9-bc48-402a-be9c-078be06cffd6">Resource conflict resolution. Negotiation is the process of resolving conflicts either programmatically or via direct communication with the participants and invitees of meetings and events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Notification"><preferred><expression>
+<name>Notification</name>
+</expression>
+</preferred>
+<definition><verbal-definition><ol id="_a05c359b-4bba-a266-777f-babc52341f0d" type="arabic"><li><p id="_827572e7-a82f-39ae-5055-ae8b79e3b497">The action of making known, an intimation, a notice.</p>
+</li>
+<li><p id="_2514c741-165b-0f50-67b0-0d5df07d4718">Reminder or alarm sent when any resource or parties interested in the resource need an indicator that some attention is required. Possible notification methods include email, paging, audible signal at the computer, visual indicator at the computer, voice mail, telephone.</p>
+</li>
+</ol></verbal-definition></definition>
+ </term>
+
+<term id="term-Organizer"><preferred><expression>
+<name>Organizer</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_8535a556-5cc3-2d9d-16ab-7307a9e13571">The originator of a calendar event typically involving more than one attendee.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Property"><preferred><expression>
+<name>Property</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_b4fee50e-cd2d-6d77-5acf-ed84d60f1be5">A description of some element of an component, such as a start time, title, or location. Properties can have parameters associated with them to modify or add to their meaning.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Publish"><preferred><expression>
+<name>Publish</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_6dbb39b0-16b2-0d85-378a-61a78c48bbc1">Make known publicly calendar information such as <tt>freebusy</tt> times.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Reminders"><preferred><expression>
+<name>Reminders</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_11fbdb6f-6cf9-85a8-d3c7-a1baf6bd0132">See <concept><refterm>Notification</refterm><renderterm>Notification</renderterm><xref target="term-Notification"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Task"><preferred><expression>
+<name>Task</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_7dd1a96c-f321-0755-a40a-001fa5a18df0">A calendar object that is commonly used to represent work items.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Text_calendar"><preferred><expression>
+<name>Text/calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_d7603091-81df-26dd-9c86-0f671b67de53">The MIME content type for encoding iCalendar objects. Example usage includes: email, web pages.</p></verbal-definition></definition>
+ </term>
+</terms>
+
+
+</sections><bibliography><references id="_bibliography" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc3283" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Guide to Internet Calendaring</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3283</uri>
+  <docidentifier type="IETF" primary="true">RFC 3283</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3283</docidentifier>
+  <docnumber>RFC3283</docnumber>
+  <date type="published">
+    <on>2002-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Mahoney</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Babics</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Taler</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_adf9eac6-31d0-08b4-d4dd-e0a468c8f427">This document describes the various Internet calendaring and scheduling standards and works in progress, and the relationships between them. Its intent is to provide a context for these documents, assist in their understanding, and potentially aid in the design of standards-based calendaring and scheduling systems. The standards addressed are RFC 2445 (iCalendar), RFC 2446 (iTIP), and RFC 2447 (iMIP). The work in progress addressed is “Calendar Access Protocol” (CAP). This document also describes issues and problems that are not solved by these protocols, and that could be targets for future work. This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3283</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>scheduling systems</keyword>
+  <keyword>cap</keyword>
+  <keyword>calendar access protocool</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+</bibitem><bibitem id="glossary" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Calendaring and Scheduling Glossary of Terms V1.0 (Obsoleted by CD1102) (CD 0610)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Calendaring and Scheduling Glossary of Terms V1.0 (Obsoleted by CD1102) (CD 0610)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0610%20Calendaring%20and%20Scheduling%20Glossary%20of%20Terms%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/R 0610:2006</docidentifier>
+  <version>
+    <revision-date>2006-10-24</revision-date>
+  </version>
+</bibitem>
+
+
+</references></bibliography>
+</csd-standard>

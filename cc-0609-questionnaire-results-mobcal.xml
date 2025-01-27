@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Mobile Calendaring Questionnaire V2 Results</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0609:2006</docidentifier><docnumber>0609</docnumber><date type="published"><on>2006-07-24</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Chris Dudding</completename></name>
+<affiliation><organization>
+<name>Symbian Ltd</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2006-07-24</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>MOBILE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_771cc4d4-16dd-154f-f365-9fcd4576e477">The Mobile Technical Committee of the Calendaring  Scheduling Consortium ( <link target="http://www.calconnect.org"/>) developed a questionnaire about mobile devices currently being used, their capabilities, and the extent of their support for calendaring applications.</p>
+
+<p id="_dad9a5ef-152f-6a44-6cdb-4e928d07dd89">The goal of this questionnaire was to determine how and to what extent Calendaring is being used on mobile devices, with a view to using those results to aid in the development of recommendations on how to address any problem areas.</p>
+
+<p id="_4e2bb1e7-6ebd-a3d1-75ca-a193670661ce">A number of responses were received to the online questionnaire, and a summary and brief conclusion of these results is presented, along with the raw results themselves.</p>
+
+<p id="_9dc5df13-43d0-3714-7a11-133056576601">Respondents to the questionnaire answered based on the capabilities of their device. The results show an aggregate of these results.</p>
+</introduction></preface><sections>
+
+<clause id="_questionnaire_background" obligation="normative">
+<title>Questionnaire Background</title>
+<p id="_94f9e949-f91b-8de3-3a98-08057219c802">The questionnaire was answered by 60 respondents, which covered 14 different device manufacturers and 40 different devices. Most of the devices were high-end mobile devices released in the last few years. The respondents come from a spread of localities, with 40% of respondents from America and 38% from the UK.</p>
+
+<p id="_dd1868b1-e938-3dfc-6dc2-78a000102652">The questionnaire consists of 53 questions. The bulk of the questions required a “yes”, “no” or “don’t know” response. 15 of the questions were text based. Some questions allowed the user to respond with more than one response (e.g. from a pick list). The percentage totals for most questions were calculated from the number of answers compared to the total of all possible answers (typically “yes”, “no” or “don’t know”).</p>
+
+<p id="_1b63c979-945c-c312-e4ac-ea1b0dd09613">Where the answers are mutually exclusive the total answer percentages add up to 100% (with +/- 1% for rounding errors). For questions where multiple responses are possible the percentages still show the answer compared to the total of all possible answers, but the total percentage will not be 100%.</p>
+</clause>
+
+<clause id="_summary_of_results" obligation="normative">
+<title>Summary of Results</title>
+<clause id="_section_1general_information" obligation="normative">
+<title>Section 1 — General Information</title>
+<ul id="_326a5dc8-f27d-deb6-162c-e8e83581e888"><li><p id="_4a4bcb75-e20e-cd30-f57a-668a57f56d88">There is a good spread of respondent’s geographic location (though lacking input from Japanese and South Korean users).</p>
+</li>
+<li><p id="_e935f2d1-74f6-6770-5b6a-cdb5f9d9bf3e">Good spread of devices — reasonably representative of (smart) phones for the sample though generally Palm is much over-represented and Samsung especially is much underrepresented.</p>
+</li>
+<li><p id="_5c80ce33-62d0-0738-5394-c724411f7ede">30% of respondents intend to replace their device soon. This is similar to the yearly replacement average for US/Europe.</p>
+</li>
+<li><p id="_9101784b-e076-881d-d757-e9be253ed623">Balance in usage business / personal use of devices is 50/50</p>
+</li>
+<li><p id="_a5479263-94be-9df3-0331-038fc03bb36e">A quarter of respondents do not travel. Northern hemisphere continents (Europe, Asia, N America) are all travelled to by a large majority of respondents.</p>
+</li>
+<li><p id="_4ac3bbf4-824c-be20-2f18-3ef8b9118229">18% of respondents travelling to Asia (given only 3% are in Asia) is high</p>
+</li>
+<li><p id="_7b6a6bfd-5df9-1fdf-c7d6-d27eb1c64a5d">Of the 28% who do not know if their devices would work out of their primary location, not all are the 27% who do not travel with their device. 8% of these do travel with their device</p>
+</li>
+<li><p id="_9d600334-541e-b749-7160-b5d5747dffbe">A large range of primary desktop Calendar applications is used. Slightly surprising there are not more respondents using Outlook (17%).</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_section_2general_device_capabilities" obligation="normative">
+<title>Section 2 — General Device Capabilities</title>
+<ul id="_ec1e4b45-f514-a9ca-0c59-e01454971b27"><li><p id="_67093f50-e7ef-0e90-6f11-16ed8040f45b">High percentage of “high end” devices in survey, which is supported by a large percentage of devices having QWERTY keyboards (37%).</p>
+</li>
+<li><p id="_62079126-814b-c44b-6450-6ab618ba3a33">Large amount of perception involved in respondents ranking their devices as low, mid or high range. The same device is often ranked differently by different respondents</p>
+</li>
+<li><p id="_deaa2aab-307a-dfc5-bbee-ae609ec03eca">Large amount of perception involved in respondents describing the screen size. The same device is often ranked differently by different respondents</p>
+</li>
+<li><p id="_7663c1e4-2600-b335-e02b-89fb847bee1c">Only 12% of respondents thought their screen “small”.</p>
+</li>
+<li><p id="_c9e036ac-df3b-6cb6-b05f-33c9961bcaa3">32% have run out of space or memory. This is obviously dependent on phone usage. The results seem to show this is more prevalent on the lower spec phones. However, this is encountered on the higher end devices too.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_section_3access_to_calendar_information" obligation="normative">
+<title>Section 3 — Access to Calendar Information</title>
+<ul id="_867c69fd-221a-f07e-606a-e0419c394109"><li><p id="_387f94b1-2060-a55b-912a-a35c24e8b87f">95% of respondents normally use their device’s Calendar application</p>
+</li>
+<li><p id="_606c105a-5dfa-0116-17a2-ceda40234344">Large number (83%) of devices can run third party apps but 37% don’t know if there are third party calendar apps or not</p>
+</li>
+<li><p id="_f0fa73d3-4c7a-5e80-f506-7aff2f7024a4">10% use a third party application of their phone</p>
+</li>
+<li><p id="_e8bd84bd-0bce-ec4e-b71f-382243d80789">43% don’t know if they can use a web based calendar. 47% know they can on their device</p>
+</li>
+<li><p id="_357410c9-d12c-4e9a-3968-71f9fe6262e1">But no respondents normally use web based calendaring on their device</p>
+</li>
+<li><p id="_9cdadc00-2029-8cd7-a4a2-4480012b9b04">Respondent / questionnaire confusion over: How to respond to whether they use the Calendar to View, Edit or View and Edit their data</p>
+</li>
+<li><p id="_3d75ca6d-fabc-5790-02bf-d606c6ad9004">87% of respondents use their device’s Calendar application at least once a day</p>
+</li>
+<li><p id="_32d97f09-9aa7-bdf8-30c9-66870a73cecc">Almost half of respondents say the experience of using the device’s calendar application is worse than their desktop application. There is some very negative feedback in this area.</p>
+</li>
+<li><p id="_f86bb5a8-20ed-17e7-cc48-aa79fe97c327">However 20% said it was better than their desktop application</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_section_4calendar_application" obligation="normative">
+<title>Section 4 — Calendar Application</title>
+<ul id="_a31d48bf-9df5-e1ab-3a1a-5bb68d7c7a99"><li><p id="_0b53e832-0e44-e2d3-2ea7-3c1bd76c36e8">The sophistication of repeat rules seems to be subjective, however some devices don’t support any repeat rules and some devices don’t support “second Tuesday in month” type repeats typically simple (MS Outlook type) functionality seems to be supported</p>
+</li>
+<li><p id="_c915957f-bebd-a9a3-b940-5a99483e0e64">No-one said alarms can’t be created on their entries</p>
+</li>
+<li><p id="_c46de7ff-b4dc-0b5c-e9fb-865ccf81dd40">67% can’t invite other people to events — only 18% can. Implies almost all phones don’t support Group Scheduling. Indeed, some of the devices that claim to support this only support it in a limited way (e.g. Nokia 9500, 9300)</p>
+</li>
+<li><p id="_84a9f6ee-1df8-fa31-b74a-6fb91be312ff">ToDos widely supported (83%)</p>
+</li>
+<li><p id="_4370647b-6d29-0462-837a-fca3c99d56df">67% use Data Sync out of the 87% of phones that support Sync</p>
+</li>
+<li><p id="_88b1a959-680d-43b0-d644-a2316a6b113a">Numerous different suggestions for Sync improvement</p>
+</li>
+<li><p id="_bcee8931-c8cc-2df3-bc33-071b1646a7b2">Most affecting current behaviour — duplicating entries, slow, poor (or no) interoperability with desktop apps, poor support for recurrence and no support for syncing multiple calendars.</p>
+</li>
+<li><p id="_259f95ee-1144-dbe9-dd72-b1777de76370">Automatic sync also requested (e.g. over BT)</p>
+</li>
+<li><p id="_136a33aa-ccf2-c638-b5fa-7b37c20d6798">Much comment on Data Sync being a limitation for the device:</p>
+</li>
+<li><p id="_3080a484-a0e7-c4be-afaa-850f94dc9efb">30% saying it was the main thing they wanted to do that they currently couldn’t do</p>
+</li>
+<li><p id="_f7cce993-f72d-c9e9-c274-692629530766">93% of respondents only have one Calendar on their device</p>
+</li>
+<li><p id="_ab06e93d-f5db-a455-41b6-3242ec0bbccb">58% would like to overlay different calendars on top of the existing one</p>
+</li>
+<li><p id="_e3a42708-249a-e532-0b48-af5237e762b6">Respondents wish to be notified of events with functionality (sounds, alerts, vibrate) that are currently available on their devices.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_section_5calendar_date_and_timezone_support" obligation="normative">
+<title>Section 5 — Calendar Date and Timezone Support</title>
+<ul id="_884f35b6-ddbc-49ac-81d2-7da1f125d419"><li><p id="_9a0dcded-7f97-6c60-d32b-7c262166b370">Only 42% of respondents say their device knows what the timezone is automatically. Though some of the replies (compared with the devices in question) are not correct</p>
+</li>
+<li><p id="_069ec09a-f49a-174c-7d65-d7010d66b95f">Only 7% of respondents say their device allows timezones to be set on events other than the current timezone</p>
+</li>
+<li><p id="_5525f52c-9a58-5dfc-26cc-14c9fa878461">Despite the fact that only 28% of respondents don’t visit other timezones (*) 32% don’t know if their device adjusts the events for the local timezone. 47% of respondents say their device does do this</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_section_6security" obligation="normative">
+<title>Section 6 — Security</title>
+<ul id="_186a555b-2d24-5e07-a1c9-b102c15a97a7"><li><p id="_5312c6f0-b1e6-ce97-e743-08e51796c08e">53% of respondents are concerned about security</p>
+</li>
+<li><p id="_cce5c20e-058b-712d-4dfa-cfa2cc308cdf">77% say their calendar content is confidential (business or personal) — surprisingly high, but the only other choice was “non-confidential public data”</p>
+</li>
+<li><p id="_68130b97-2fdd-a840-d47d-3e8d5939dbf0">However, 55% did not respond on what security features they would like.</p>
+<ul id="_21d6f644-9663-8d88-c620-7337bc68677a"><li><p id="_04001270-b2c3-d175-2c45-808a7902e772">13% wanted SSL and/or encrypted data</p>
+</li>
+<li><p id="_2c96ae2a-2d55-083d-1849-cf66e8cb6eac">12% wanted Password protection at phone or application level</p>
+</li>
+<li><p id="_0474ea9e-d44d-468b-6217-daf20fd9d028">7% wanted biometric security</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+
+<clause id="_section_7what_would_you_like_to_do_with_your_mobile_calendar" obligation="normative">
+<title>Section 7 — What would you like to do with your mobile calendar?</title>
+<p id="_9931005c-f137-3b57-e92e-f74bdd35eaa5">On aggregate, Free / Busy time viewing is rated as the most important use case (of five)</p>
+
+<p id="_44743254-35a7-baac-0054-1d58ce3ee67e">On aggregate, Adding events downloaded from mobile browser second most important — this is more important to respondents than basic Group Scheduling. However, in a straight listing respondents also ranked this the joint least most important use case</p>
+</clause>
+
+<clause id="_areas_of_ignorance_for_the_respondents" obligation="normative">
+<title>Areas of ignorance for the respondents</title>
+<ul id="_2cb9dc0f-4c48-5768-ff74-87d4fddb1a95"><li><p id="_747cb153-c0f5-a235-9687-7bddc1854143">The existence of third party calendars for the device (37% don’t know)</p>
+</li>
+<li><p id="_cf90f803-ffd6-33c6-f9e2-078eef68355b">If web calendars can be used on the device (43% don’t know)</p>
+</li>
+<li><p id="_6c20405c-5c9d-9ef2-1c2c-ddfd6226cbd3">If timezones can be set on events other than the current timezone (47% don’t know)</p>
+</li>
+<li><p id="_19ed3d2e-e7b3-301a-335a-7ce7ace86430">How good the documentation/manual is (27% don’t know)</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_results" obligation="normative">
+<title>Results</title>
+<clause id="_section_1_general_information" obligation="normative">
+<title>Section 1 — General Information</title>
+<clause id="_q1_1_who_is_your_device_manufacturer" obligation="normative">
+<title>Q1.1. Who is your device manufacturer?</title>
+<dl id="_e2713a2c-e5f4-129f-61d3-3673339ab160"><dt>Nokia</dt>
+<dd><p id="_3cf717ea-98d6-1d06-4594-488efcfc76cd">35%</p>
+</dd>
+<dt>Palm</dt>
+<dd><p id="_df2f5bca-318d-339b-143e-9cea9270caca">23%</p>
+</dd>
+<dt>Sony Ericsson</dt>
+<dd><p id="_b7a2479f-2f6d-3da1-85f7-6b2e8b763d55">13%</p>
+</dd>
+<dt>HTC</dt>
+<dd><p id="_3569b17c-cd66-476e-05f4-64f53ef90402">7%</p>
+</dd>
+<dt>Motorola</dt>
+<dd><p id="_c2e0b6f6-cdd2-c0bc-916c-496f5e5c948f">3%</p>
+</dd>
+<dt>Panasonic</dt>
+<dd><p id="_ca882874-2f7a-97ef-02a8-68d5339a8864">3%</p>
+</dd>
+<dt>Siemens</dt>
+<dd><p id="_872acd03-f0b0-0950-2d22-e902b03131f5">3%</p>
+</dd>
+<dt>HP</dt>
+<dd><p id="_68383e00-9fde-5819-b767-2ef532b47caf">2%</p>
+</dd>
+<dt>Kyocera</dt>
+<dd><p id="_f6a73af4-0c5e-549b-3483-5bcd35f84902">2%</p>
+</dd>
+<dt>Samsung</dt>
+<dd><p id="_7624797a-f2c0-a72a-9375-2a561a1bc566">2%</p>
+</dd>
+<dt>RIM</dt>
+<dd><p id="_86c8df94-dc4e-74ee-8c35-fd5d2f6f1813">2%</p>
+</dd>
+<dt>Apple</dt>
+<dd><p id="_57e78fc2-6f2c-742e-01f6-f82e5ae163c7">2%</p>
+</dd>
+<dt>Audiovox</dt>
+<dd><p id="_e377a7d5-43f1-4d92-b8c7-dd2bdaa8d151">2%</p>
+</dd>
+<dt>Dell</dt>
+<dd><p id="_fccdcd86-54c7-2f41-c9fc-5769cec378f1">2%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q1_2_what_model_is_your_device" obligation="normative">
+<title>Q1.2. What model is your device?</title>
+<p id="_856cbfdc-9103-f576-47a7-bc84ad7835f1">Results not summarised</p>
+</clause>
+
+<clause id="_q1_3_who_is_your_service_provider" obligation="normative">
+<title>Q1.3. Who is your service provider?</title>
+<dl id="_2ad394fe-eff5-b18b-d0bb-fefce0bd5b87"><dt>Vodafone</dt>
+<dd><p id="_a25509fb-5c47-34ad-b70c-55f08bacc50c">30%</p>
+</dd>
+<dt>Cingular</dt>
+<dd><p id="_fe9ce7ec-5387-c0ef-7357-90b1927282e2">17%</p>
+</dd>
+<dt>T-Mobile</dt>
+<dd><p id="_d3da9dc3-f5f2-8894-cb22-31c412f4bc9e">7%</p>
+</dd>
+<dt>Fido</dt>
+<dd><p id="_8a312d5a-88bd-ad9b-5d3e-ab5f29ce5060">7%</p>
+</dd>
+<dt>O2</dt>
+<dd><p id="_b1bc8bc8-d7e5-e4eb-f9f5-69c3e48765f6">7%</p>
+</dd>
+<dt>Verizon</dt>
+<dd><p id="_c044f64d-b929-46e3-302c-d5ba57764170">5%</p>
+</dd>
+<dt>Sprint</dt>
+<dd><p id="_b7a6054a-59d7-dc2b-b479-e5244f5a1a02">5%</p>
+</dd>
+<dt>Orange</dt>
+<dd><p id="_855c323d-eb6d-a2c5-4083-71415d354348">3%</p>
+</dd>
+<dt>Hutch</dt>
+<dd><p id="_094c8d5a-883c-4b64-fad9-ca9834e107a3">3%</p>
+</dd>
+<dt>AT&amp;T</dt>
+<dd><p id="_1583687f-b7e4-4ac0-98e4-ff44d625b26d">2%</p>
+</dd>
+<dt>Telus</dt>
+<dd><p id="_912f4ba8-93ac-f8a0-d4af-09399494fa2c">2%</p>
+</dd>
+<dt>Virgin Mobile</dt>
+<dd><p id="_eb15bbe8-cfb3-d9c0-2a91-1e51fb1606fb">2%</p>
+</dd>
+<dt>Elisa</dt>
+<dd><p id="_805d04de-5d51-d99f-2d13-86dff062c3d3">2%</p>
+</dd>
+<dt>Other</dt>
+<dd><p id="_572fb27c-bcba-c16f-7fba-99447e447403">10%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q1_4_how_long_have_you_had_this_device_years" obligation="normative">
+<title>Q1.4. How long have you had this device? (years)</title>
+<p id="_2c88da45-9be1-40b6-7de8-a75ae53267bf">The average was 1.5 years. 25% of responses were under 1 year.</p>
+</clause>
+
+<clause id="_q1_5_do_you_intend_to_replace_it_soon" obligation="normative">
+<title>Q1.5. Do you intend to replace it soon?</title>
+<dl id="_cd752414-fd43-1f34-6339-731a3aeec5c5"><dt>Yes</dt>
+<dd><p id="_5ec16bc8-ab67-4c15-4a43-0d784c75e258">30%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_ab092a37-f2e4-54f0-a0d2-ac4ccf820b74">43%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_47cbb227-effb-62c2-24b3-a56fa45bf42a">27%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q1_6_how_would_you_rate_the_documentationmanual_that_came_with_the_device" obligation="normative">
+<title>Q1.6. How would you rate the documentation/manual that came with the device?</title>
+<dl id="_08db4758-431d-865a-5047-e050380f664b"><dt>Good</dt>
+<dd><p id="_870713b9-2717-1fa8-3823-301d47076845">22%</p>
+</dd>
+<dt>Average</dt>
+<dd><p id="_fbc2ae39-3940-c941-3130-007f475094dc">47%</p>
+</dd>
+<dt>Poor</dt>
+<dd><p id="_ab200a46-7cf1-07fe-edaf-234e58b3221b">5%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_ae450a6f-6922-f411-e33f-de52f12b554a">27%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q1_7_what_is_the_primary_use_of_this_device" obligation="normative">
+<title>Q1.7. What is the primary use of this device?</title>
+<dl id="_efc67a1e-9f2f-e19e-14da-bd0f8d0f069b"><dt>Business</dt>
+<dd><p id="_aa999d8f-fe47-e6f6-c2d0-57abc172533f">51%</p>
+</dd>
+<dt>Personal</dt>
+<dd><p id="_3cc0d843-f4bc-13bc-6e55-61f1aa35c8ca">47%</p>
+</dd>
+<dt>Other</dt>
+<dd><p id="_0e914c6e-1f1b-7dbd-3f8c-cc37d3dd443e">2%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q1_8_what_is_the_primary_desktop_calendar_application_that_you_use" obligation="normative">
+<title>Q1.8. What is the primary desktop calendar application that you use?</title>
+<dl id="_0dc21aeb-eb47-75de-78e6-fef66df1764c"><dt>Lotus Notes</dt>
+<dd><p id="_744e0502-35c4-19d5-de6a-6fef1fee9527">27%</p>
+</dd>
+<dt>Oracle Calendar</dt>
+<dd><p id="_b555fab8-b18e-152b-5b06-5d76fa7f8846">20%</p>
+</dd>
+<dt>Microsoft Outlook</dt>
+<dd><p id="_7c3faa35-44b9-7888-b478-9a9ec8a96c65">17%</p>
+</dd>
+<dt>Mac iCal</dt>
+<dd><p id="_6f1e0122-68c5-6e53-4877-01178b255b49">12%</p>
+</dd>
+<dt>Meeting Maker</dt>
+<dd><p id="_f23b1a6f-8746-dddf-5181-8941426ea882">7%</p>
+</dd>
+<dt>Mozilla Sunbird</dt>
+<dd><p id="_50a7c16c-aad8-5f55-9d26-a81332e7373e">5%</p>
+</dd>
+<dt>Other</dt>
+<dd><p id="_31935b88-05f1-e0d2-d864-9c4c3f6ebaf1">13%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q1_9_what_type_of_organization_do_you_work_in" obligation="normative">
+<title>Q1.9. What type of organization do you work in?</title>
+<dl id="_a9ed8cc9-56d3-9d39-7e7a-44d77f2c5b50"><dt>Business</dt>
+<dd><p id="_cb25eee4-a8f0-10db-c73e-6ffc575296fe">30%</p>
+</dd>
+<dt>Mobile software vendor</dt>
+<dd><p id="_50869b18-8039-bb6e-21fd-31a8d8355069">30%</p>
+</dd>
+<dt>Education</dt>
+<dd><p id="_1d211fae-5ebe-1feb-1187-ed9ca2d15ab9">28%</p>
+</dd>
+<dt>Other</dt>
+<dd><p id="_e5b4cecb-129f-cc85-134b-06e80e2bafa2">7%</p>
+</dd>
+<dt>Government</dt>
+<dd><p id="_e70e3155-dba7-ac38-b255-da175f57b5c0">3%</p>
+</dd>
+<dt>Mobile device manufacturer</dt>
+<dd><p id="_a71d65cb-9384-3545-c422-676b69155427">2%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q1_10_what_is_your_primary_geographic_location" obligation="normative">
+<title>Q1.10. What is your primary geographic location?</title>
+<dl id="_60d47525-051f-9854-9f37-b0f5b9b97cf1"><dt>USA</dt>
+<dd><p id="_e6bf46dd-708e-7f4f-05ba-eb5ce90a036c">40%</p>
+</dd>
+<dt>UK</dt>
+<dd><p id="_012c482a-31b6-7479-7bc4-6020577082ce">38%</p>
+</dd>
+<dt>Canada</dt>
+<dd><p id="_569849fb-506f-3b80-a8c9-dce9ee5ffd30">10%</p>
+</dd>
+<dt>India</dt>
+<dd><p id="_0d1bb9b8-b2a5-9858-a1cc-84414915c3ee">3%</p>
+</dd>
+<dt>Other</dt>
+<dd><p id="_bab27089-b398-b291-2c4a-36604a6e9659">3%</p>
+</dd>
+<dt>UAE</dt>
+<dd><p id="_fb6ae9e2-2dc0-f891-9c6f-dec30144192d">2%</p>
+</dd>
+<dt>Finland</dt>
+<dd><p id="_9dbeecc2-f6f6-1ab0-2f2d-7a02d0fdb216">2%</p>
+</dd>
+<dt>Anguilla</dt>
+<dd><p id="_4063097b-20ad-a524-bbb0-b11f7c9762a9">2%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q1_11_which_other_geographic_locations_do_you_travel_to" obligation="normative">
+<title>Q1.11. Which other geographic locations do you travel to?</title>
+<dl id="_f57bed59-a710-e64e-eb87-87056d550601"><dt>Europe</dt>
+<dd><p id="_a7d8f6ef-d511-f11f-846b-99a98c37c7cc">43%</p>
+</dd>
+<dt>N America</dt>
+<dd><p id="_1b1c5eda-b643-5556-13ec-dce455aaec63">28%</p>
+</dd>
+<dt>None</dt>
+<dd><p id="_e0cae528-c849-5013-3add-0de437f8fa29">27%</p>
+</dd>
+<dt>Asia</dt>
+<dd><p id="_669b68b2-611b-d31a-b099-95885b0885ca">18%</p>
+</dd>
+<dt>Australasia</dt>
+<dd><p id="_0754a078-3211-a80c-ff53-4024931604f6">5%</p>
+</dd>
+<dt>S America</dt>
+<dd><p id="_b172fe32-aba0-f7ce-5168-1a2f5ad0920a">2%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q1_12_does_your_service_provider_provide_support_outside_your_primary_geographic_location" obligation="normative">
+<title>Q1.12. Does your service provider provide support outside your primary geographic location?</title>
+<dl id="_fd87857e-a28c-6160-bc2b-a45fcdf62093"><dt>Yes</dt>
+<dd><p id="_0e3e2135-ade2-aebf-cfe4-9386315532f3">63%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_2042d2f5-a655-ed92-94dc-468bc9ec51b6">8%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_cc79a202-0f57-60d5-5ad1-7dc80c95535c">28%</p>
+</dd>
+</dl>
+</clause>
+</clause>
+
+<clause id="_section_2_general_device_capabilities" obligation="normative">
+<title>Section 2 — General Device Capabilities</title>
+<clause id="_q2_1_how_would_you_describe_the_capabilities_of_this_device_as_a_whole" obligation="normative">
+<title>Q2.1. How would you describe the capabilities of this device as a whole?</title>
+<dl id="_247159fd-54c7-54b1-00ba-10271152e823"><dt>High-end</dt>
+<dd><p id="_ecf1bcf9-1f7b-e73d-9c7f-69bd2152ccfa">60%</p>
+</dd>
+<dt>Mid-range</dt>
+<dd><p id="_d2c02960-758d-db55-e34f-f713ddb925a6">37%</p>
+</dd>
+<dt>Low-end</dt>
+<dd><p id="_0eb4efd8-0603-3d31-51a0-322571c61dfd">3%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q2_2_what_size_screen_does_it_have" obligation="normative">
+<title>Q2.2. What size screen does it have?</title>
+<dl id="_aef32131-9ec2-1fa0-c8b4-9768555295d7"><dt>Large</dt>
+<dd><p id="_4c5a6679-241d-7460-91df-96915791852b">28%</p>
+</dd>
+<dt>Medium</dt>
+<dd><p id="_ac0aabef-c46f-8e72-c620-f112b72697bd">57%</p>
+</dd>
+<dt>Small</dt>
+<dd><p id="_678cdebe-3523-eb4f-1190-42bf6a35d3ba">12%</p>
+</dd>
+<dt>Unspecified</dt>
+<dd><p id="_abe34c6d-9035-e835-2597-78829d6c63ab">3%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q2_3_what_type_of_keypad_does_it_have" obligation="normative">
+<title>Q2.3. What type of keypad does it have?</title>
+<dl id="_1fd0a2e8-9aab-0394-890d-a52e97f869d6"><dt>Phone</dt>
+<dd><p id="_c51611ae-23ca-ddca-cc90-85905a327ac1">48%</p>
+</dd>
+<dt>Qwerty</dt>
+<dd><p id="_0cba4751-a69f-e3b1-2863-7af23abf61a3">37%</p>
+</dd>
+<dt>Other</dt>
+<dd><p id="_2e09bf32-6aed-8443-e0aa-7ffcde320b2f">15%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q2_4_have_you_found_that_you_run_out_of_storage_space_or_memory_for_your_data_and_applications" obligation="normative">
+<title>Q2.4. Have you found that you run out of storage space or memory for your data and applications?</title>
+<dl id="_d8f66e27-6296-752d-5d63-8e8b3c96058d"><dt>Yes</dt>
+<dd><p id="_a6fbffb0-f840-ec0c-f930-50cc09fedc9b">32%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_1e37c583-de45-d769-2203-673da925cb5e">68%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q2_5_does_it_allow_third_party_applications_to_be_used" obligation="normative">
+<title>Q2.5. Does it allow third-party applications to be used?</title>
+<dl id="_b2a00661-efc4-5d98-50b2-bba9a6d68e03"><dt>Yes</dt>
+<dd><p id="_6d63830c-3e53-c63e-3d7b-bd6fa1b96b62">83%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_381848c8-33fd-475a-3057-7f87363d8808">10%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_295ffdbf-6b8d-731e-74e6-e0073cdbb276">7%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q2_6_what_are_the_standard_set_of_applications_on_the_device" obligation="normative">
+<title>Q2.6. What are the standard set of applications on the device?</title>
+<p id="_33a13faa-492d-b264-e228-28969c6f9ecf">Results not summarised</p>
+</clause>
+
+<clause id="_q2_7_what_are_its_multimedia_capabilities" obligation="normative">
+<title>Q2.7. What are its multimedia capabilities?</title>
+<dl id="_07e5e43f-bc2d-603f-4819-c379def01869"><dt>Camera</dt>
+<dd><p id="_737befd7-d9d6-3eef-565d-2fceaa6cf7c9">87%</p>
+</dd>
+<dt>Audio Player</dt>
+<dd><p id="_58504168-3185-f522-b98e-7a05c131d1e0">65%</p>
+</dd>
+<note id="_b5b4b1c8-ac59-2278-bf06-bf79edba15d8"><p id="_14955618-0758-61e9-2763-2c1b754e08d9">Summary of main responses.</p>
+</note></dl>
+
+
+</clause>
+
+<clause id="_q2_8_which_multimedia_capabilities_do_you_actually_use" obligation="normative">
+<title>Q2.8. Which multimedia capabilities do you actually use?</title>
+<dl id="_8323354b-10ff-a830-a30a-b94cd48f8afe"><dt>Camera</dt>
+<dd><p id="_ff736ffc-6b6d-ec69-9457-96b23b72145d">67%</p>
+</dd>
+<dt>Play Audio</dt>
+<dd><p id="_51f96469-3250-119b-dea9-237f23ea2e33">38%</p>
+</dd>
+<note id="_f49dbaae-e5a0-b9ec-9d99-a1914f565899"><p id="_689a52b9-0080-0878-1373-5b451e2a9de6">Summary of main responses.</p>
+</note></dl>
+
+
+</clause>
+
+<clause id="_q2_9_which_multimedia_capabilities_would_you_like_to_have" obligation="normative">
+<title>Q2.9. Which multimedia capabilities would you like to have?</title>
+<dl id="_3cb28571-5ce3-5c96-11e6-d8e34515cc31"><dt>Better Music Player</dt>
+<dd><p id="_9862e621-7f2a-dba5-f00b-60906d1e2088">35%</p>
+</dd>
+<dt>Better Video</dt>
+<dd><p id="_c1ed1940-4150-501d-5969-0ec33270cc09">33%</p>
+</dd>
+<dt>Better Camera</dt>
+<dd><p id="_b036d627-0452-bad5-9f34-b9fa3f2400ad">33%</p>
+</dd>
+<dt>VOIP</dt>
+<dd><p id="_ec73036b-8ce5-f40c-0756-1f80331ab8f2">5%</p>
+</dd>
+</dl>
+</clause>
+</clause>
+
+<clause id="_section_3_access_to_calendar_information" obligation="normative">
+<title>Section 3 — Access to Calendar Information</title>
+<clause id="_q3_1_does_the_device_have_a_built_in_calendar_application" obligation="normative">
+<title>Q3.1. Does the device have a built-in calendar application?</title>
+<dl id="_23329131-effb-a7ea-7b8d-7f79211bd4d6"><dt>Yes</dt>
+<dd><p id="_7d6064df-a9e9-fa1a-5843-337a8ea77ac7">98%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_237353f7-021e-caa3-f384-21032d03554e">0%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_64f2b244-28e9-c73a-95a5-3002ed790a2f">2%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q3_2_are_there_third_party_calendar_applications_for_the_device" obligation="normative">
+<title>Q3.2. Are there third-party calendar applications for the device?</title>
+<dl id="_dee0a486-a60b-91b6-29bf-0fb176e49b9c"><dt>Yes</dt>
+<dd><p id="_39c4ce7d-3e21-e382-4754-4b47d629f7d1">53%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_84cc6397-11bd-5f5b-a68e-1251e9c5f881">10%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_2dca13a3-ee51-c3eb-111a-b0a25794e110">37%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q3_3_can_you_use_a_web_based_calendar_with_this_device" obligation="normative">
+<title>Q3.3. Can you use a web-based calendar with this device?</title>
+<dl id="_9da28d18-143a-b5c8-2105-41962628c348"><dt>Yes</dt>
+<dd><p id="_a530e44b-7da3-2f8e-6f84-d645c8ff6d90">47%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_00a64c2f-affa-f422-85c2-0bd7753c4557">10%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_3fc3f739-eb69-15dd-f82f-3a9985b5bde9">43%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q3_4_do_you_normally_use_any_calendaring_applications_on_this_device" obligation="normative">
+<title>Q3.4. Do you normally use any calendaring applications on this device?</title>
+<dl id="_d235b79f-8e2b-9a8d-4f5a-f7b4cc9104d1"><dt>Yes</dt>
+<dd><p id="_1b02538c-5d98-68bf-8c30-4e1e4b0a5d39">95%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_0b4f1e66-6d83-b857-4aab-41e5c4cbd567">3%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_f57564ef-447a-f532-2cc4-94ecdd123de5">2%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q3_5_do_you_normally_use_a_web_based_calendar_on_this_device" obligation="normative">
+<title>Q3.5. Do you normally use a web-based calendar on this device?</title>
+<dl id="_889ee94c-a60e-b312-1e6d-68aac1c245d4"><dt>Yes</dt>
+<dd><p id="_f2e0cf72-714d-92c6-062f-e062f5d459cd">0%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_c99dbf1f-3865-fd67-2c0c-423b2627814c">93%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_695d5015-c438-3bc7-02cf-666bbbe37bf8">7%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q3_6_do_you_use_the_calendar_feature_to_just_view_a_calendar_or_to_also_edit_it_e_g_create_new_events" obligation="normative">
+<title>Q3.6. Do you use the calendar feature to just view a calendar or to also edit it (e.g. create new events)?</title>
+<dl id="_cc4ef591-7010-1e2d-8111-29706da828d9"><dt>View &amp; Edit</dt>
+<dd><p id="_a12f4623-9b21-e31d-3bd6-a8735626af50">43%</p>
+</dd>
+<dt>Edit</dt>
+<dd><p id="_9f755e3d-634b-e53c-d4d0-28f8bf1a4a98">33%</p>
+</dd>
+<dt>View</dt>
+<dd><p id="_3f739095-3eb6-b8ff-4dd8-a1c7a210f311">23%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q3_7_how_often_do_you_use_the_calendar_feature_on_this_device" obligation="normative">
+<title>Q3.7. How often do you use the calendar feature on this device?</title>
+<dl id="_ad52306c-73fc-9621-102f-e6959e9d10a9"><dt>Several times a day</dt>
+<dd><p id="_32668edf-f2d8-4a92-46ed-2945ae719827">62%</p>
+</dd>
+<dt>Once a day</dt>
+<dd><p id="_098bacf4-046b-c535-0f99-78613795a455">25%</p>
+</dd>
+<dt>Once a week</dt>
+<dd><p id="_04bad9ad-86c3-8d5b-bc2e-00b9e0eedfb8">5%</p>
+</dd>
+<dt>Not very often</dt>
+<dd><p id="_341ae03b-5af8-c006-8331-09b0b2ac6f53">5%</p>
+</dd>
+<dt>Only when travelling</dt>
+<dd><p id="_5f008c39-222d-d52f-ba5b-37a468bb1660">3%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q3_8_do_you_use_the_built_in_or_a_third_party_application" obligation="normative">
+<title>Q3.8. Do you use the built-in or a third-party application?</title>
+<dl id="_62af222d-a1fb-5bee-c3a4-9d423fbb93c0"><dt>Built-in</dt>
+<dd><p id="_34fa18b6-f9c0-19ca-dd2a-6701fdaa51a1">90%</p>
+</dd>
+<dt>Third party</dt>
+<dd><p id="_eab19257-c31e-f5f5-dd4b-8bb9f2866df6">10%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q3_9_how_would_you_compare_the_experience_of_using_the_calendar_application_on_this_device_with_using_one_on_a_desktop_computer" obligation="normative">
+<title>Q3.9. How would you compare the experience of using the calendar application on this device with using one on a desktop computer?</title>
+<dl id="_c89863c2-8ff0-6813-6210-a0cce541d912"><dt>Worse</dt>
+<dd><p id="_682f13e1-faa3-5398-eddf-fb8cf4e9ba89">48%</p>
+</dd>
+<dt>Similar</dt>
+<dd><p id="_7e288b1e-543d-b4d2-c781-d3da645c7241">13%</p>
+</dd>
+<dt>Better</dt>
+<dd><p id="_49030291-1ba0-31d5-7f73-f60f26fe903b">20%</p>
+</dd>
+<dt>Other</dt>
+<dd><p id="_36e0977b-13ee-874c-2b39-9993c0933eed">19%</p>
+</dd>
+</dl>
+</clause>
+</clause>
+
+<clause id="_section_4_calendar_application" obligation="normative">
+<title>Section 4 — Calendar Application</title>
+<clause id="_q4_1_does_it_support_creation_of_recurring_events" obligation="normative">
+<title>Q4.1. Does it support creation of recurring events?</title>
+<dl id="_64052075-a8cc-cbd4-301c-5944e4eb4a11"><dt>Yes</dt>
+<dd><p id="_cbd2559f-7b99-6697-57e2-6ac8b16465e7">68%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_7bae4376-8947-7b0f-ad6e-608ee5c51ff9">18%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_e27709c1-4e11-6172-9d09-a1744edcc0b2">13%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_2_how_sophisticated_is_the_recurrence_capability" obligation="normative">
+<title>Q4.2. How sophisticated is the recurrence capability?</title>
+<p id="_53b7be3e-dee9-2ae8-f5d3-0459a7c5a26e">Result not summarised</p>
+</clause>
+
+<clause id="_q4_3_does_it_support_creation_of_alarms_on_events" obligation="normative">
+<title>Q4.3. Does it support creation of alarms on events?</title>
+<dl id="_7d52f15f-670d-4382-3567-55e814fe079f"><dt>Yes</dt>
+<dd><p id="_97a78184-fc9c-16d7-e93a-a19ec72ec11b">92%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_633dbe5c-e1a9-1283-0f16-bb637d757c60">0%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_ae945ab1-4c16-d3ba-a1d4-68da47d7bd55">8%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_4_would_you_like_to_receive_notification_of_your_desktop_calendar_alarms_on_your_mobile_device" obligation="normative">
+<title>Q4.4. Would you like to receive notification of your desktop calendar alarms on your mobile device?</title>
+<dl id="_4f692bcb-2c2e-31a6-0cb4-f5446918e9d3"><dt>Yes</dt>
+<dd><p id="_69785f06-8c4e-c08b-9a05-65fea18b163f">75%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_91bd5e1e-18cd-cb4c-205d-28f2b3ebe2d0">22%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_6e4f9a5a-9058-d558-9f10-15d0f1a14c32">3%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_5_how_would_you_like_your_mobile_device_to_notify_you_about_events" obligation="normative">
+<title>Q4.5. How would you like your mobile device to notify you about events?</title>
+<dl id="_e6145da9-29bb-6d02-5108-026b6d0a16bf"><dt>Sound</dt>
+<dd><p id="_51708bcb-2294-86e0-e3c5-81beef64cc62">70%</p>
+</dd>
+<dt>Vibrate</dt>
+<dd><p id="_8559ff0b-7ff1-8e99-d906-988aa6b32ae1">32%</p>
+</dd>
+<dt>Pop-up</dt>
+<dd><p id="_a7d1da41-9274-d3a3-d651-cc83c845f053">21%</p>
+</dd>
+<dt>SMS/Email</dt>
+<dd><p id="_7ae58839-fbb6-9466-d327-c69b84403a8b">8%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_6_can_you_invite_other_people_to_events" obligation="normative">
+<title>Q4.6. Can you invite other people to events?</title>
+<dl id="_d41b63b1-72ea-70a8-c691-510d13841a0b"><dt>Yes</dt>
+<dd><p id="_939fd43a-1a59-6e46-e2e3-f1877692e109">18%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_00e61774-50e1-d352-2bb8-296a6baef23c">67%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_b307ae3f-aa1c-3c9d-efe4-bf0c9e210ab2">15%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_7_does_it_support_tasksto_dos" obligation="normative">
+<title>Q4.7. Does it support tasks/to-dos?</title>
+<dl id="_64e34876-db7d-62f3-77c1-de8f18d45d4a"><dt>Yes</dt>
+<dd><p id="_20a1b3fd-d755-62fe-67cf-d490bfdfac30">83%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_eec3cd8b-8035-293c-4d93-78e822e6edb4">8%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_5d8a5d95-3a76-daf8-af8f-06482ad7c85c">8%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_8_does_the_device_support_synchronization_of_your_phone_and_desktop_calendar" obligation="normative">
+<title>Q4.8. Does the device support synchronization of your phone and desktop calendar?</title>
+<dl id="_44651630-27af-b9d2-3c93-fc684bd39b9a"><dt>Yes</dt>
+<dd><p id="_32d0fd58-67e5-fab6-48e7-ffe1c75ff0a0">87%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_4c10579d-bc22-9c60-1e4c-01adabe2afe9">5%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_3b009b04-0592-d68a-d014-5e5f73c9b9e4">8%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_9_do_you_use_the_synchronization_support" obligation="normative">
+<title>Q4.9. Do you use the synchronization support?</title>
+<dl id="_4aa34f4a-84e5-c1e6-e3e8-6a8076c80b5d"><dt>Yes</dt>
+<dd><p id="_a54f2620-71e7-9abc-68ea-86da71b83238">67%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_e0554bbb-12b1-3864-09af-55b670db8f8d">32%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_d74f4dd4-00b8-eac9-9a57-56aff0439981">2%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_10_how_would_you_improve_the_synchronization_support_with_your_desktop_calendar" obligation="normative">
+<title>Q4.10. How would you improve the synchronization support with your desktop calendar?</title>
+<dl id="_4c02b1ad-d46a-8874-fdab-69abef7590fd"><dt>Interop with desktop apps</dt>
+<dd><p id="_a50130f3-8434-533c-207c-74453f7c4577">12%</p>
+</dd>
+<dt>Recurrence issues</dt>
+<dd><p id="_dcf25852-29fc-9e3d-04d5-504aad9bc839">10%</p>
+</dd>
+<dt>Automatic Sync (BT)</dt>
+<dd><p id="_fee068fc-adbc-06d9-df0a-7c242d9b9daf">8%</p>
+</dd>
+<dt>Speed</dt>
+<dd><p id="_9dcc0a2a-ba7e-cd58-fef8-7b5c594a764b">5%</p>
+</dd>
+<dt>Multiple Calendars</dt>
+<dd><p id="_5dfa6036-6fde-8622-7148-5a22bfb3e279">5%</p>
+</dd>
+<dt>Duplicates</dt>
+<dd><p id="_b490cf3a-27b3-01be-deb2-0fe8a88adf9f">5%</p>
+</dd>
+<dt>No Response</dt>
+<dd><p id="_652e42a3-35b7-0e84-e6c2-eba222366bea">30%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_11_how_many_different_calendars_do_you_have_on_your_mobile_device" obligation="normative">
+<title>Q4.11. How many different calendars do you have on your mobile device?</title>
+<dl id="_978b309e-8bde-edfd-e86f-19c79512abb8"><dt>1 calendar</dt>
+<dd><p id="_54a5101b-876a-d9eb-fd8a-b39049201ad5">93%</p>
+</dd>
+<dt>2 calendars</dt>
+<dd><p id="_45b01d5e-f226-c36a-49e5-72a4eaefac40">3%</p>
+</dd>
+<dt>3 calendars</dt>
+<dd><p id="_6032893c-c71f-fae1-d23e-9f332851fd88">2%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q4_12_would_you_like_the_ability_to_overlay_other_calendars_on_top_of_your_existing_events" obligation="normative">
+<title>Q4.12. Would you like the ability to overlay other calendars on top of your existing events?</title>
+<dl id="_d3ee97ba-8f13-59f4-b494-02065fe0c9f2"><dt>Yes</dt>
+<dd><p id="_33459aaf-904d-b798-5d77-dd392f9c0cc6">58%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_ae9debcf-860e-e0bc-1cac-b51e5267e481">22%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_1290f794-334d-08b2-a69f-d2b411cf16f6">20%</p>
+</dd>
+</dl>
+</clause>
+</clause>
+
+<clause id="_section_5_calendar_date_and_timezone_support" obligation="normative">
+<title>Section 5 — Calendar Date and Timezone Support</title>
+<clause id="_q5_1_does_the_device_itself_know_what_the_correct_time_is_automatically" obligation="normative">
+<title>Q5.1. Does the device itself know what the correct time is automatically?</title>
+<p id="_8f4eecc6-fd0e-5c46-12d1-72b633ccc4fa">Result not available</p>
+</clause>
+
+<clause id="_q5_2_does_the_device_itself_know_what_timezone_it_is_in_automatically" obligation="normative">
+<title>Q5.2. Does the device itself know what timezone it is in automatically?</title>
+<dl id="_c138a599-44e9-7cda-ba3a-0d83f1703a60"><dt>Yes</dt>
+<dd><p id="_7f6e9447-366d-3b1a-ab52-b80bf295a101">42%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_8890e4b5-78da-6bea-90bf-721a174979a0">48%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_2aed4ba2-8ca0-9ad9-5525-6250a8b34a13">10%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q5_3_can_you_configure_the_device_timezone_manually" obligation="normative">
+<title>Q5.3. Can you configure the device timezone manually?</title>
+<dl id="_84b6022c-db98-fa38-41f5-304f8d3b5146"><dt>Yes</dt>
+<dd><p id="_bb666e67-42c8-1e79-a6b7-70ad67a1150f">77%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_fcfacaa0-12bd-7d19-bebf-c575bca7f406">10%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_153604cb-ea57-5d96-4faf-97672ee5bbed">12%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q5_4_does_the_calendar_application_adjust_the_displayed_time_of_events_based_on_the_local_time_and_timezone_information" obligation="normative">
+<title>Q5.4 Does the calendar application adjust the displayed time of events based on the local time and timezone information</title>
+<dl id="_0c807a93-417b-1384-cd46-9bd578a6e92b"><dt>Yes</dt>
+<dd><p id="_ff9fe2e7-34a7-085a-b85c-1208103adcdd">47%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_3d11e4c4-942b-1bb6-950f-725cd0efe085">22%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_15f08259-c058-4d89-d4cb-0190cbe62bc4">32%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q5_5_does_the_calendar_application_allow_timezones_on_event_times_to_be_set_different_from_the_devices_own_timezone" obligation="normative">
+<title>Q5.5. Does the calendar application allow timezones on event times to be set different from the devices own timezone?</title>
+<dl id="_46d12b59-c89f-3094-b298-d420e86c9880"><dt>Yes</dt>
+<dd><p id="_8d590737-66f0-891f-a307-c8fd5d146bff">7%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_97437ca3-4319-0e8b-88c4-51fc2b74d1c7">47%</p>
+</dd>
+<dt>Don’t know</dt>
+<dd><p id="_6346ba11-5c62-384c-7ca0-9fa977fabe66">47%</p>
+</dd>
+</dl>
+</clause>
+</clause>
+
+<clause id="_section_6_security" obligation="normative">
+<title>Section 6 — Security</title>
+<clause id="_q6_1_are_you_concerned_about_the_security_of_the_calendar_data_stored_on_the_device" obligation="normative">
+<title>Q6.1. Are you concerned about the security of the calendar data stored on the device?</title>
+<dl id="_bb6636d4-2d83-7f97-30c0-515f4f21ff8d"><dt>Yes</dt>
+<dd><p id="_3210e0ea-5d1f-7157-4244-99e6c72d2a70">53%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_4568330a-df9b-670d-eb9a-1bbb2dec5636">47%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q6_2_how_sensitive_is_the_calendar_data_stored_on_the_device" obligation="normative">
+<title>Q6.2. How sensitive is the calendar data stored on the device?</title>
+<dl id="_3a7371be-edf4-6e1e-a371-17551ab3bb30"><dt>Confidential — personal</dt>
+<dd><p id="_527b7da9-c0a4-1df7-6e8f-ac4686536bf4">45%</p>
+</dd>
+<dt>Non-confidential</dt>
+<dd><p id="_15de9569-33c1-8c24-fa99-11b2818a42c0">33%</p>
+</dd>
+<dt>Confidential — business</dt>
+<dd><p id="_525208ce-cfb7-b96e-cc9a-f113e779d53f">22%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q6_3_are_there_any_security_features_you_would_like_to_have_on_your_mobile_device" obligation="normative">
+<title>Q6.3. Are there any security features you would like to have on your mobile device?</title>
+<dl id="_5111c414-d97c-a678-3144-92a6594caf6c"><dt>No Response</dt>
+<dd><p id="_c26939d3-1e64-1523-0c22-4ec03a0c3363">55%</p>
+</dd>
+<dt>SSL/Encryption</dt>
+<dd><p id="_4c975d15-51fd-a564-96b0-6e6991b41ad5">13%</p>
+</dd>
+<dt>Password control</dt>
+<dd><p id="_8de007fe-62f1-903a-67b7-7dcebe08be60">12%</p>
+</dd>
+<dt>No</dt>
+<dd><p id="_28920900-8822-0653-4c83-604f57260d88">8%</p>
+</dd>
+<dt>Biometric lock</dt>
+<dd><p id="_f5949dea-b74f-51bb-22f2-cc826349e83b">7%</p>
+</dd>
+</dl>
+</clause>
+</clause>
+
+<clause id="_section_7_what_would_you_like_to_do_with_your_mobile_calendar" obligation="normative">
+<title>Section 7 — What would you like to do with your mobile calendar?</title>
+<clause id="_q7_1_what_would_you_like_to_be_able_to_do_with_your_device_that_you_cannot_do_right_now" obligation="normative">
+<title>Q7.1 What would you like to be able to do with your device that you cannot do right now?</title>
+<dl id="_d8ce5c4c-030a-2fd3-f590-4b5c5990e148"><dt>Improve Sync</dt>
+<dd><p id="_1c697da4-fb8a-57ab-8b7f-7b10c1575edf">30% (of which use Web Sync) 12%</p>
+</dd>
+<dt>Group Scheduling</dt>
+<dd><p id="_ab3f9979-5def-39c7-9972-acfaae573e5d">12%</p>
+</dd>
+<dt>GUI issues</dt>
+<dd><p id="_a02ae732-30b9-c9a0-ea0a-1e1930661361">10%</p>
+</dd>
+<dt>Timezone support</dt>
+<dd><p id="_1e955784-6741-e521-93a6-df4a087e43b4">7%</p>
+</dd>
+<dt>View Others Calendars</dt>
+<dd><p id="_a2dc6999-5204-8502-3b7a-8e4f7a4852bd">7%</p>
+</dd>
+<dt>No Response</dt>
+<dd><p id="_5eaa31e8-5b65-04d6-ce25-ef10c1a87c93">37%</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_q7_2_please_rank_these_mobile_calendaring_use_cases_in_order_of_importance_to_you" obligation="normative">
+<title>Q7.2 Please rank these mobile calendaring use cases in order of importance to you</title>
+<p id="_6e4ffe9d-ecf9-40fd-27dc-cd8041fb064f">Overall result — most to least important:</p>
+
+<ul id="_0b9c1764-6d76-6c6a-172d-26bde340cb92"><li><p id="_e03ced64-e834-4e9f-03fe-74a408d47354">Sharing a calendar with colleague or spouse to identify free and busy time</p>
+</li>
+<li><p id="_d5b0db61-05a5-123d-a3ad-ef24faf786d2">Adding calendar events to your calendar that have been downloaded from a mobile web browser</p>
+</li>
+<li><p id="_1127fcd5-4b53-7609-0cea-69821bbaea96">Book appointments with other people using your mobile device</p>
+</li>
+<li><p id="_f50eb865-c516-1ad0-496e-91e1335ad4f2">Automatically arranging a meeting at a time convenient for meeting participants after they have agreed they want to meet</p>
+</li>
+<li><p id="_0bf3c36b-78c5-77e8-1ec4-b4d998dd6ddc">Accessing a public transport timetable on your mobile device that is relevant to your current location</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_section_8_about_this_questionnaire" obligation="normative">
+<title>Section 8 — About this Questionnaire</title>
+<clause id="_q8_what_do_you_think_of_this_questionnaire" obligation="normative">
+<title>Q8. What do you think of this questionnaire?</title>
+<dl id="_8cb17be3-3580-90d0-6e7c-ae7bc9c930da"><dt>Ok to Good</dt>
+<dd><p id="_1701edb2-aab5-bc70-6719-da24ccbb04ed">38%</p>
+</dd>
+<dt>No Response</dt>
+<dd><p id="_d888750f-8e81-9fd0-48b5-baec999c79ec">33%</p>
+</dd>
+<dt>Too Long/Detailed</dt>
+<dd><p id="_a7f576fd-704f-40c2-0bca-c9854265ea9d">8%</p>
+</dd>
+<dt>Unclear</dt>
+<dd><p id="_eb78a8a3-5a07-cecc-99d7-d4f20afbbfb3">5%</p>
+</dd>
+<dt>Other</dt>
+<dd><p id="_59eea14b-3af7-f6bc-378a-2db88bb924ef">15%</p>
+</dd>
+</dl>
+</clause>
+</clause>
+
+<clause id="_selected_answers_to_text_questions" obligation="normative">
+<title>Selected Answers to Text Questions</title>
+<clause id="_q3_9_how_would_you_compare_the_experience_of_using_the_calendar_application_on_this_device_with_using_one_on_a_desktop_computer_2" obligation="normative">
+<title>Q3.9. How would you compare the experience of using the calendar application on this device with using one on a desktop computer?</title>
+<quote id="_1b6af706-3179-7261-2958-d6aee1f45f66"><p id="_e85816f5-b75e-11ba-e866-ec2651947062">Substantially less useful. Due to synchronization problems with my calendar server, the inability to edit/schedule events is a major issue. Also, the web-based calendar provided by our calendar server uses frames, which makes browsing from the # device very cumbersome.</p>
+</quote>
+
+<p id="_7c619ab0-c3c5-1f06-2a77-b4193af6d3a0">Lots of comments on data entry and screen size</p>
+
+<quote id="_df199bc6-43a8-d949-2034-ad940e3f1387"><p id="_4809fcaa-5387-4496-5eda-894a21dc77ed">awkward to view some information, poor summary of information on phone, data input difficult, no group scheduling</p>
+</quote>
+</clause>
+
+<clause id="_q4_10_how_would_you_improve_the_synchronization_support_with_your_desktop_calendar_2" obligation="normative">
+<title>Q4.10. How would you improve the synchronization support with your desktop calendar?</title>
+<quote id="_08bd35e4-bff5-58dc-bde4-cf1962fadcd7"><p id="_40ef2b77-a9ec-d323-ecc3-283a863089fd">iCal supports multiple calendars (eg one for work, one for personal events etc..) — I wish the phone would support this too</p>
+</quote>
+
+<quote id="_6c3a05c1-eef4-a842-2576-cd6934f8d6a3"><p id="_c837caef-3f96-9ff7-68ab-efa83c7cdf85">Make it faster and more reliable — syncing sometimes create multiple enteries of the same entries</p>
+</quote>
+
+<quote id="_88d900b8-1a17-eb64-ea86-d2dbffcf6e23"><p id="_bda57ded-77b4-e104-1cdc-f4942ae0dc1f">I would add support to subscribe to iCal URL’s &amp; update at hotsync time</p>
+</quote>
+
+<quote id="_6b16ed75-a488-da91-ecea-21e538d838aa"><p id="_b29920b6-682a-f764-9a13-0117080192da">Works great!</p>
+</quote>
+
+<quote id="_f92d7f9b-cfd4-0bd1-f5c1-55338f92306c"><p id="_2bf1dd1f-20b7-d77b-5ded-cb7cf1e94bd5">Support undo, show user the data being synced — I don’t trust sync.</p>
+</quote>
+</clause>
+
+<clause id="_q7_1_what_would_you_like_to_be_able_to_do_with_your_device_that_you_cannot_do_right_now_2" obligation="normative">
+<title>Q7.1 What would you like to be able to do with your device that you cannot do right now?</title>
+<quote id="_b67fd6e8-b6a6-54b0-0686-5480cc24172f"><p id="_0f47b559-81c4-450c-a8f4-09237d9a9854">time zones on events. per-event alarm preferences (volume, etc). Share calendars (other people’s). Filter by category. link an event to contacts. want more than 30 chars in Location field (or link to metadata). show more than just calendar events (todos, for example, or TV listings). transparent negotiation of meeting times</p>
+</quote>
+
+<quote id="_a7a378c1-09b7-aecb-c587-36afefcd1c66"><p id="_989d2387-5803-33b3-544c-f294f497baa7">Sync properly to Oracle Calendar and other calendars. View other people’s calendars (not via web).</p>
+</quote>
+
+<quote id="_66cbca66-d157-b287-c15a-a7d8e02a8845"><p id="_30d313e6-7c7b-62bf-069c-0f4af2015a7a">push email and cal events. overlay calendars. access event calendars. better scheduling with corporate cal solution</p>
+</quote>
+
+<quote id="_0bd48c5f-bdd1-5bbb-b61a-398dcb14d550"><p id="_e882d85c-37bc-6197-3f29-da29692fb12d">It would be nice to have multiple calendars to categorise different events, each with there own sync source. For example work calendar events and personal calendar events, one syncing from my a work syncML server, the other from my home pc.As mentioned earlier, the ability to apply a pass code for a calendar with sensitive data (i.e. work related events) would be essential.</p>
+</quote>
+</clause>
+</clause>
+</clause>
+
+
+</sections><annex id="_calconnect_tc_mobile_questionnaire_v2" obligation="normative">
+<title>CalConnect TC-MOBILE Questionnaire V2</title>
+<p id="_ada1528c-8248-3f7a-3fff-6defde44d16f">This questionnaire is designed to give the Calendaring  Scheduling Consortium’s TC-MOBILE technical committee information about mobile devices currently being used, including specifics about the device capability as well as support for calendaring applications. The information provided in this form will be used to help guide the technical committees report on mobile calendaring. A summary of the results will be published by the Consortium through its usual process.</p>
+
+<p id="_c4d9c5e4-cf46-f86a-8368-f63f9cfd9dee">Please fill out this form with as much information as possible. If you are not sure of any answers, just leave that field empty or select the “Don’t Know”option.</p>
+
+<clause id="_personal_details_will_not_be_included_in_published_report" obligation="normative">
+<title>Personal Details (will not be included in published report)</title>
+<p id="_41815b83-37bb-d80a-0169-03be37758918">What is your name? <em>___________________</em></p>
+
+<p id="_8ea68e57-4c64-b87c-3038-05c6b56d32e6">What is your email address? <em>___________________</em></p>
+
+<p id="_4de2fa9d-4d03-9791-3695-0fd062dac592">What is your organization? <em>___________________</em></p>
+</clause>
+
+<clause id="_section_1_general_information_2" obligation="normative">
+<title>Section 1 General Information</title>
+<p id="_4f6abae9-6ca0-eb7a-5c79-32c132e2645e">Q1.1. Who is your device manufacturer? <em>___________________</em></p>
+
+<p id="_c9cc1fb1-a48e-d8ba-d819-8aef90cf914e">Q1.2. What model is your device? <em>___________________</em></p>
+
+<p id="_776c0092-44d9-d145-9afa-1343a868fcb7">Q1.3. Who is your service provider? <em>___________________</em></p>
+
+<p id="_d4edc99f-b9c1-0b6f-5cfc-41c8a715a373">Q1.4. How long have you had this device? <em>____</em> years</p>
+
+<p id="_02296d47-cff5-2d2f-69c6-05d46717a876">Q1.5. Do you intend to replace it soon?</p>
+
+<p id="_8dde87d0-b3bb-6aab-1a10-5e35f5925dca">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_7fd3e357-04b3-0d34-5c88-ec7092bfb2c8">Q1.6. How would you rate the documentation/manual that came with the device?</p>
+
+<p id="_7a267fae-dec9-8ded-b346-da2424f638a0">○ Good ○ Average ○ Poor ○ Don’t know</p>
+
+<p id="_f959842a-9eca-c367-dd6f-c411c268f5f7">Q1.7. What is the primary use of this device?</p>
+
+<p id="_7515f9b9-8001-d9a8-e521-2376b2d93f35">○ Personal ○ Business ○ Other</p>
+
+<p id="_08be5470-b95f-6705-0f08-73ad3fb9bf9c">Q1.8. What is the primary desktop calendar application that you use? <em>___________________</em></p>
+
+<p id="_0013e54c-7080-383b-98a2-c563d8910f50">Q1.9. What type of organization do you work in? <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAAAfCAYAAAB+mvY+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEFSURBVHhe7dZBCsJAEETRuVmOluu5dOF9IgN26BRGbaJWBv6DgiyGyeYT0hZgQISLIa3hzvPM2OkXNuFO08TYaXe7Xh61Ei778XpsR5fvCrvhAt8Q8eXnTxe/B4SLv9MYqyNcWGiI1REuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSH2tdZeLp8lXFjkCPOeBdun5wgXFhpidYQLCw0x793Xto9wYaEh6vaCjREuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSFWR7iwiPhyjJURLiwiviMrhRvFM3Zkuamj6/eFTbj6UsbOtrCGC4yEcDEkwsWAluUOQOQDdu0sScUAAAAASUVORK5CYII=" mimetype="image/png" id="_c0be9a8e-5b34-6113-73fe-fc18e0eb335e" height="auto" width="auto"/></p>
+
+<p id="_950d8c44-d34a-6a10-b4c0-c935aa0843c6">Q1.10. What is your primary geographic location? <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAAAfCAYAAAB+mvY+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEFSURBVHhe7dZBCsJAEETRuVmOluu5dOF9IgN26BRGbaJWBv6DgiyGyeYT0hZgQISLIa3hzvPM2OkXNuFO08TYaXe7Xh61Ei778XpsR5fvCrvhAt8Q8eXnTxe/B4SLv9MYqyNcWGiI1REuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSH2tdZeLp8lXFjkCPOeBdun5wgXFhpidYQLCw0x793Xto9wYaEh6vaCjREuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSFWR7iwiPhyjJURLiwiviMrhRvFM3Zkuamj6/eFTbj6UsbOtrCGC4yEcDEkwsWAluUOQOQDdu0sScUAAAAASUVORK5CYII=" mimetype="image/png" id="_6fe240df-2dac-e99f-1429-0396a1b17ed1" height="auto" width="auto"/></p>
+
+<p id="_d6415d91-1c78-be04-de3b-109d792f8f92">Q1.11. Which other geographic locations do you travel to? <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAAAfCAYAAAB+mvY+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEFSURBVHhe7dZBCsJAEETRuVmOluu5dOF9IgN26BRGbaJWBv6DgiyGyeYT0hZgQISLIa3hzvPM2OkXNuFO08TYaXe7Xh61Ei778XpsR5fvCrvhAt8Q8eXnTxe/B4SLv9MYqyNcWGiI1REuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSH2tdZeLp8lXFjkCPOeBdun5wgXFhpidYQLCw0x793Xto9wYaEh6vaCjREuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSFWR7iwiPhyjJURLiwiviMrhRvFM3Zkuamj6/eFTbj6UsbOtrCGC4yEcDEkwsWAluUOQOQDdu0sScUAAAAASUVORK5CYII=" mimetype="image/png" id="_41142b88-41f5-46df-3e47-f41068e7a0a8" height="auto" width="auto"/></p>
+
+<p id="_a5c01230-9dbe-0176-b1e5-2ceac80d0dbc">Q1.12. Does your service provider provide support outside your primary geographic location?</p>
+
+<p id="_82933356-b79d-b42c-28f9-d3a57a7e940c">○ Yes ○ No ○ Don’t know</p>
+</clause>
+
+<clause id="_section_2_general_device_capabilities_2" obligation="normative">
+<title>Section 2 General Device Capabilities</title>
+<p id="_061b2faf-8985-dbc5-5154-0a079c626fdb">Q2.1. How would you describe the capabilities of this device as a whole?</p>
+
+<p id="_fa20c8c2-4db9-f63c-4db5-3a1d34e74486">○ Low-end ○ Mid-range ○ High-end ○ Don’t know</p>
+
+<p id="_fc189857-c5dc-2805-18ed-dc9e256c1310">Q2.2. What size screen does it have?</p>
+
+<p id="_afb988f8-0331-d691-a764-58dd7e753dcd">○ Small ○ Medium ○ Large</p>
+
+<p id="_bbefd3f2-0fa1-af9b-e724-3d981fa929bf">Q2.3. What type of keypad does it have?</p>
+
+<p id="_9be3203a-f092-6d6a-90be-95e65fe6be24">○ Phone keys (0-9 etc) ○ Full qwerty ○ Other</p>
+
+<p id="_f14bd895-ce1d-e181-d211-b69e1636a861">Q2.4. Have you found that you run out of storage space or memory for your data and applications?</p>
+
+<p id="_93431c6a-e69e-d5a9-3650-4acb099d5aee">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_5c3233b4-12d8-5c9e-2cd2-a2f7da926528">Q2.5. Does it allow third-party applications to be used?</p>
+
+<p id="_55c657b8-425e-0247-b7f6-3bbd8a3a1833">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_1d17fdfd-0083-3020-fffa-ab100125e961">Q2.6. What are the standard set of applications on the device?</p>
+
+<p id="_f1140458-a6e5-3539-0164-7fb1b44f146b"><em>___________________</em><br/> (e.g. Contacts, calendar, email, alarm, games)</p>
+
+<p id="_c290e555-61b2-11bf-cd98-90cdfa6559ef">Q2.7. What are its multimedia capabilities?</p>
+
+<p id="_9cd9fd98-9f66-5ece-24be-a9c95773227a"><em>___________________</em><br/> (e.g. takes pictures, video playback)</p>
+
+<p id="_0dd89836-516a-0a0f-2a86-4c59db753041">Q2.8. Which multimedia capabilities do you actually use?</p>
+
+<p id="_c6ad8adf-db80-2156-06ae-c2a864e3a62a"><em>___________________</em><br/> (e.g. audio recording)</p>
+
+<p id="_3b6d7c79-07ff-315b-0db2-6524b38153a1">Q2.9. Which multimedia capabilities would you like to have?</p>
+
+<p id="_b3cfc63f-9e29-28af-fbae-2695fa07b0a4"><em>___________________</em><br/> (e.g. digital music playback)</p>
+</clause>
+
+<clause id="_section_3_access_to_calendar_information_2" obligation="normative">
+<title>Section 3 Access to Calendar Information</title>
+<p id="_c18d037c-cf6c-bad4-c4d3-1d13f35fef4a">Q3.1. Does the device have a built-in calendar application?</p>
+
+<p id="_76285187-2bda-bb32-d603-9229deb04421">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_a511c457-174f-20c8-0565-8fd37b9a2221">Q3.2. Are there third-party calendar applications for the device?</p>
+
+<p id="_d75a851c-a865-f56c-d44e-80e53bb32376">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_078a7fc3-acda-bcf4-dff0-1d1b49640171">Q3.3. Can you use a web-based calendar with this device?</p>
+
+<p id="_49b980b6-856b-b93a-83d4-3ab470adeb1b">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_80f60bbb-30d6-4f16-f23b-f425ecee5ee7">Q3.4. Do you normally use any calendaring applications on this device?</p>
+
+<p id="_05dcb857-48e7-4b11-58a7-b055aafccf79">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_2669ff3f-52d0-1230-8a83-96757c2c1901">Q3.5. Do you normally use a web-based calendar on this device?</p>
+
+<p id="_8f3d61e2-5bd1-6b69-f970-590503e99001">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_6836a66a-be4e-f1f2-afc2-2795630b8d77">Q3.6. Do you use the calendar feature to just view a calendar or to also edit it (e.g. create new events)?</p>
+
+<p id="_5f96c6fb-aa5c-006c-ff9b-d81eca36c784">○ View ○ Edit</p>
+
+<p id="_7bda1bc7-6d6a-29df-5019-c5fe34780d27">Q3.7. How often do you use the calendar feature on this device? <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAAAfCAYAAAB+mvY+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEFSURBVHhe7dZBCsJAEETRuVmOluu5dOF9IgN26BRGbaJWBv6DgiyGyeYT0hZgQISLIa3hzvPM2OkXNuFO08TYaXe7Xh61Ei778XpsR5fvCrvhAt8Q8eXnTxe/B4SLv9MYqyNcWGiI1REuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSH2tdZeLp8lXFjkCPOeBdun5wgXFhpidYQLCw0x793Xto9wYaEh6vaCjREuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSFWR7iwiPhyjJURLiwiviMrhRvFM3Zkuamj6/eFTbj6UsbOtrCGC4yEcDEkwsWAluUOQOQDdu0sScUAAAAASUVORK5CYII=" mimetype="image/png" id="_052e7640-1f70-72dc-a019-2bccf8aa0341" height="auto" width="auto"/></p>
+
+<p id="_f014f7e9-b6fb-2ea1-f2bc-da07bcfdaeb5">Q3.8. Do you use the built-in or a third-party application?</p>
+
+<p id="_0c85fd96-2a37-743d-73d0-93a0cb619be1">○ Built-in ○ Third-party</p>
+
+<p id="_1ee02b75-381d-e79f-390e-f02f1fd583fc">Q3.9. How would you compare the experience of using the calendar application on this device with using one on a desktop computer?</p>
+
+<p id="_683358fd-5624-4869-beb9-113fbf8f697c"><em>___________________</em></p>
+</clause>
+
+<clause id="_section_4_calendar_application_2" obligation="normative">
+<title>Section 4 Calendar Application</title>
+<p id="_1772d732-64c2-a30a-6264-3e039186e83b">Q4.1. Does it support creation of recurring events?</p>
+
+<p id="_9664f297-97fc-fb41-084c-b5e586a0f1db">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_066fa1f7-4eee-0945-42bf-31d0f6743345">Q4.2. How sophisticated is the recurrence capability?</p>
+
+<p id="_a4a58249-4bcf-440d-28dc-409b48b51425"><em>___________________</em><br/> (e.g. repeat daily, weekly, every n days etc.)</p>
+
+<p id="_ea833e5c-2f9d-3f89-f44f-0c9646283b75">Q4.3. Does it support creation of alarms on events?</p>
+
+<p id="_790f92d8-bb41-6d7f-dfa3-e4c7ae92d805">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_93b22c3b-323f-134e-1d78-0830f0d07dd1">Q4.4. Would you like to receive notification of your desktop calendar alarms on your mobile device?</p>
+
+<p id="_5d92c8bf-28e9-18f4-7912-dacaad774369">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_6a0aaa3f-469c-7249-5818-df145da75325">Q4.5. How would you like your mobile device to notify you about events?</p>
+
+<p id="_c44a1834-a80e-29e1-bd7b-5215f5c4e911"><em>___________________</em><br/> (e.g. play a sound, set-up a phone call etc.)</p>
+
+<p id="_8d3a3cc5-6e8c-b530-8a9d-8c4604d4dbe9">Q4.6. Can you invite other people to events?</p>
+
+<p id="_91f69c90-1e01-829c-c646-9ff169ede736">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_f555b45a-53ae-aa2a-ed47-079543ed19ba">Q4.7. Does it support tasks/to-dos?</p>
+
+<p id="_6f594726-5f9b-c3b0-7e58-967b27d967a9">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_7613133e-e3af-bbab-8b44-ee31a26b7e6d">Q4.8. Does the device support synchronization of your phone and desktop calendar?</p>
+
+<p id="_9fd38868-5e81-c046-492c-0557200c200c">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_ea3a5ed3-a015-75a8-8ed9-f019dbe926b9">Q4.9. Do you use the synchronization support?</p>
+
+<p id="_a04ef3fc-500a-10de-3e15-e3b9c1e2145b">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_dd5b34af-61d4-0fab-dfe0-97c441b14c10">Q4.10. How would you improve the synchronization support with your desktop calendar?</p>
+
+<p id="_54091771-bdb5-4d8c-64cd-f33f17c33ea5"><em>___________________</em></p>
+
+<p id="_f5fe2ad0-2c7d-c77a-c190-6e0287efafe9">Q4.11. How many different calendars do you have on your mobile device? <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAAAfCAYAAAB+mvY+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEFSURBVHhe7dZBCsJAEETRuVmOluu5dOF9IgN26BRGbaJWBv6DgiyGyeYT0hZgQISLIa3hzvPM2OkXNuFO08TYaXe7Xh61Ei778XpsR5fvCrvhAt8Q8eXnTxe/B4SLv9MYqyNcWGiI1REuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSH2tdZeLp8lXFjkCPOeBdun5wgXFhpidYQLCw0x793Xto9wYaEh6vaCjREuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSFWR7iwiPhyjJURLiwiviMrhRvFM3Zkuamj6/eFTbj6UsbOtrCGC4yEcDEkwsWAluUOQOQDdu0sScUAAAAASUVORK5CYII=" mimetype="image/png" id="_f291b980-415f-d60e-d007-f8f83f19fb22" height="auto" width="auto"/></p>
+
+<p id="_1e78a002-5341-5897-2b22-e2659389f1d9">Q4.12. Would you like the ability to overlay other calendars on top of your existing events?</p>
+
+<p id="_780fa6c8-54aa-da8f-9599-f461f2aa1665">○ Yes ○ No ○ Don’t know</p>
+</clause>
+
+<clause id="_section_5_calendar_date_and_timezone_support_2" obligation="normative">
+<title>Section 5 Calendar Date and Timezone Support</title>
+<p id="_8cbd62e5-ec88-6ca9-35b1-a36b932f62fb">Q5.1. Does the device itself know what the correct time is automatically?</p>
+
+<p id="_15be81c1-6e6c-a992-3836-d4f8fced6734">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_ecdc45ae-7e76-482c-45a3-99227ae42d68">Q5.2. Does the device itself know what timezone it is in automatically?</p>
+
+<p id="_bc552818-b46b-725f-9ae8-51e50fb88c92">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_ca7c8bfa-5aa8-8011-beb4-cb97b09283d7">Q5.3. Can you configure the device timezone manually?</p>
+
+<p id="_830e9c19-34a6-c6c7-d330-62bf210b4a59">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_f92f5c24-e316-b3c5-e863-45d73a1629e0">Q5.4 Does the calendar application adjust the displayed time of events based on the local time and timezone information</p>
+
+<p id="_10c1da85-44cc-5c52-4edc-ca72003a4203">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_f008cee2-7ea4-0041-2899-91147d09ac57">Q5.5. Does the calendar application allow timezones on event times to be set different from the devices own timezone?</p>
+
+<p id="_fca136d2-446c-8143-feae-f492ec6708ca">○ Yes ○ No ○ Don’t know</p>
+</clause>
+
+<clause id="_section_6_security_2" obligation="normative">
+<title>Section 6 Security</title>
+<p id="_42e5d112-2f43-d5b2-1555-7edcb24a308b">Q6.1. Are you concerned about the security of the calendar data stored on the device?</p>
+
+<p id="_c6f00899-fafc-4053-3473-9689b297fb1f">○ Yes ○ No ○ Don’t know</p>
+
+<p id="_4053fbd6-07e1-284d-6851-a8b07b59c38d">Q6.2. How sensitive is the calendar data stored on the device? <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAAAfCAYAAAB+mvY+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEFSURBVHhe7dZBCsJAEETRuVmOluu5dOF9IgN26BRGbaJWBv6DgiyGyeYT0hZgQISLIa3hzvPM2OkXNuFO08TYaXe7Xh61Ei778XpsR5fvCrvhAt8Q8eXnTxe/B4SLv9MYqyNcWGiI1REuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSH2tdZeLp8lXFjkCPOeBdun5wgXFhpidYQLCw0x793Xto9wYaEh6vaCjREuLDTE6ggXFhpidYQLCw2xOsKFhYZYHeHCQkOsjnBhoSFWR7iwiPhyjJURLiwiviMrhRvFM3Zkuamj6/eFTbj6UsbOtrCGC4yEcDEkwsWAluUOQOQDdu0sScUAAAAASUVORK5CYII=" mimetype="image/png" id="_c1ab6501-a4c9-e6be-202c-80067fadfce8" height="auto" width="auto"/></p>
+
+<p id="_0caa6818-c991-89f3-2d96-1886ed237792">Q6.3. Are there any security features you would like to have on your mobile device?</p>
+
+<p id="_07d534e9-0dc6-18b1-f8c1-0d1eb4f6e256"><em>___________________</em></p>
+</clause>
+
+<clause id="_section_7_what_would_you_like_to_do_with_your_mobile_calendar_2" obligation="normative">
+<title>Section 7 What would you like to do with your mobile calendar?</title>
+<p id="_6bbc89d9-6a28-278a-f4b8-ce79d322b656">Q7.1 What would you like to be able to do with your device that you cannot do right now?</p>
+
+<figure id="_85abef39-86bf-e1e8-5c51-6f563ee9ac97" unnumbered="true"><image src="data:image/png;base64,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" mimetype="image/png" id="_b058e483-597d-8849-ae65-dc2f7ec5208b" height="auto" width="auto"/></figure>
+
+<p id="_798a4028-5bd6-c14c-f143-41a804dd03aa">Q7.2 Please rank these mobile calendaring use cases in order of importance to you<br/> (mark the most important use case as 1, second most important as 2,…​. least important as 5)</p>
+
+<ol id="_46b26984-f915-69e8-111c-333144a8e978" type="arabic"><li><p id="_fcb623e7-c4c3-66e3-e5df-cc9c0651af6d">Sharing a calendar with colleague or spouse to identify free and busy time. <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAiCAYAAAAeXoQCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC3SURBVGhD7dBBDoQgEERRbsbRuJ5LF3MfRhI7YRAH7Vopv5K/M5h+ITP3wBMGnjDwhB3wUko0yNbFizHSSZ912aUmwitHq9k7tiHeW9ZCeJoezztzmRrPG3hC4AmBJwSeEHhC4AmBVxVCGFZ/D15TD8xqvwWv0xW4Enh/OkOzwBMCTwg8IfCEwBMCT2h6vHJbDXIn8LbblG7jmfzTq29SKm/Zunjtj+k32wGPXR94wsATBp57OX8BmEzCNicfk7oAAAAASUVORK5CYII=" mimetype="image/png" id="_00c6a32a-1258-4239-9195-7bd489dca5ef" height="auto" width="auto"/></p>
+</li>
+<li><p id="_287d2183-75b5-4c73-01ed-94dd9e53e988">Book appointments with other people using your mobile device (e.g. scheduling a follow-up meeting at the end of a meeting or making an appointment at the physican and the event automatically being added to your mobile calendar). <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAiCAYAAAAeXoQCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC3SURBVGhD7dBBDoQgEERRbsbRuJ5LF3MfRhI7YRAH7Vopv5K/M5h+ITP3wBMGnjDwhB3wUko0yNbFizHSSZ912aUmwitHq9k7tiHeW9ZCeJoezztzmRrPG3hC4AmBJwSeEHhC4AmBVxVCGFZ/D15TD8xqvwWv0xW4Enh/OkOzwBMCTwg8IfCEwBMCT2h6vHJbDXIn8LbblG7jmfzTq29SKm/Zunjtj+k32wGPXR94wsATBp57OX8BmEzCNicfk7oAAAAASUVORK5CYII=" mimetype="image/png" id="_9bedf7db-ebc5-f437-2f91-2c6ef13da630" height="auto" width="auto"/></p>
+</li>
+<li><p id="_e262da8a-7fe8-ea1e-d070-396c2bf6f7bd">Adding calendar events to your calendar that have been downloaded from a mobile web browser (e.g. adding your favourite team’s football matches or a list of public holidays to your calendar). <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAiCAYAAAAeXoQCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC3SURBVGhD7dBBDoQgEERRbsbRuJ5LF3MfRhI7YRAH7Vopv5K/M5h+ITP3wBMGnjDwhB3wUko0yNbFizHSSZ912aUmwitHq9k7tiHeW9ZCeJoezztzmRrPG3hC4AmBJwSeEHhC4AmBVxVCGFZ/D15TD8xqvwWv0xW4Enh/OkOzwBMCTwg8IfCEwBMCT2h6vHJbDXIn8LbblG7jmfzTq29SKm/Zunjtj+k32wGPXR94wsATBp57OX8BmEzCNicfk7oAAAAASUVORK5CYII=" mimetype="image/png" id="_03cb3d0f-289e-7003-cfdc-ad71b2271c14" height="auto" width="auto"/></p>
+</li>
+<li><p id="_ce5df5bb-0a48-bdf1-7d79-8ca469a51e86">Accessing a public transport timetable on your mobile device that is relevant to your current location (e.g. automatically downloading a timetable at bus stop or ticket office). <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAiCAYAAAAeXoQCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC3SURBVGhD7dBBDoQgEERRbsbRuJ5LF3MfRhI7YRAH7Vopv5K/M5h+ITP3wBMGnjDwhB3wUko0yNbFizHSSZ912aUmwitHq9k7tiHeW9ZCeJoezztzmRrPG3hC4AmBJwSeEHhC4AmBVxVCGFZ/D15TD8xqvwWv0xW4Enh/OkOzwBMCTwg8IfCEwBMCT2h6vHJbDXIn8LbblG7jmfzTq29SKm/Zunjtj+k32wGPXR94wsATBp57OX8BmEzCNicfk7oAAAAASUVORK5CYII=" mimetype="image/png" id="_5d8a47c4-c07d-ddd0-2125-ff40591ac0b2" height="auto" width="auto"/></p>
+</li>
+<li><p id="_19b853d6-96d6-36a1-ebf7-633086b1ebe0">Automatically arranging a meeting at a time convenient for meeting participants after they have agreed they want to meet. <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAiCAYAAAAeXoQCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC3SURBVGhD7dBBDoQgEERRbsbRuJ5LF3MfRhI7YRAH7Vopv5K/M5h+ITP3wBMGnjDwhB3wUko0yNbFizHSSZ912aUmwitHq9k7tiHeW9ZCeJoezztzmRrPG3hC4AmBJwSeEHhC4AmBVxVCGFZ/D15TD8xqvwWv0xW4Enh/OkOzwBMCTwg8IfCEwBMCT2h6vHJbDXIn8LbblG7jmfzTq29SKm/Zunjtj+k32wGPXR94wsATBp57OX8BmEzCNicfk7oAAAAASUVORK5CYII=" mimetype="image/png" id="_6efee6b4-381d-d022-2a28-0ddc21eb021e" height="auto" width="auto"/></p>
+</li>
+</ol>
+</clause>
+
+<clause id="_section_8_about_this_questionnaire_2" obligation="normative">
+<title>Section 8 About this Questionnaire</title>
+<p id="_ab923aea-5ffb-9b2a-c15c-e787cda322d4">Q8. What do you think of this questionnaire? (e.g. how long did it take to fill out, did you understand all the questions)</p>
+
+<figure id="_84ad9896-1597-cd45-3ef1-a56160b23455" unnumbered="true"><image src="data:image/png;base64,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" mimetype="image/png" id="_a0690176-db51-4ab7-14ba-a8963825142c" height="auto" width="auto"/></figure>
+
+<figure id="_847fee16-1c40-aa2a-4840-a965ad71bc12" unnumbered="true"><image src="data:image/png;base64,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" mimetype="image/png" id="_7afab888-420b-5378-be32-eda41b8b5128" height="auto" width="auto"/><note id="_029a8596-11bb-ee5f-3cfe-df25bc5cf1ec"><p id="_b5444324-72a4-88f9-9990-ae41015e81a1">If you press "Submit Questionnaire " and <strong>nothing happens</strong>, please shorten your free-form answers. Some browsers enforce an arbitrary limit on the amount of data that can be submitted via this form.</p>
+</note></figure>
+
+
+</clause>
+</annex>
+</csd-standard>

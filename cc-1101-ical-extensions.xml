@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Event Publishing Extensions to iCalendar</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1101:2011</docidentifier><docnumber>1101</docnumber><date type="published"><on>2011-02-16</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2011-02-16</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2011</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>EVENTPUB</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_d3d51098-43f8-8ea0-ff8e-f76eabd026d9" obligation="normative">
+<p id="_2e1cdf70-c030-e883-9e15-3028de343bcc">© 2011 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><sections><p id="_63c81da7-277a-4467-ff1b-b15dc64568fe">This proposal was submitted to the IETF as an Internet Draft for the Standards Track as of the date shown above, and may be found at the following URL:</p>
+
+<p id="_c7d1946c-a5e2-d71d-7b60-fc4a5d4a740f"><link target="https://datatracker.ietf.org/doc/draft-douglass-calendar-extension"/></p>
+
+<p id="_741579c1-175d-4994-a138-9f41aa8e8729">This specification introduces a number of new iCalendar properties which are of particular use for event publishers and in social networking.</p>
+</sections>
+</csd-standard>

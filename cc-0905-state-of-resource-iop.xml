@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">State of Resource Interoperability for Calendaring, Groupware, and Project Management</title>
+<docidentifier primary="true" type="CalConnect">CC/R 0905:2009</docidentifier><docnumber>0905</docnumber><date type="published"><on>2009-06-10</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Guy Stalnaker</completename></name>
+<email>jstalnak@wisc.edu</email></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2009-06-10</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2009</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="R">report</doctype><flavor>cc</flavor><editorialgroup><committee>USECASE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_00b731d5-d923-19b5-259b-ba92f34b5407" obligation="normative">
+<p id="_2ff90088-afa3-d6ab-ae6c-e9f1e3224b5a">© 2009 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_a69678d8-d73f-682d-bfc7-909b9da54015" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<p id="_5ad18594-c7fb-63dd-fae6-45080111969b">This document is by The Calendaring and Scheduling Consortium. Permission is granted to potential members to reproduce and distribute this presentation within the member organization so long as the presentation is not altered in any way and the Consortium is acknowledged as the originator.</p>
+
+<p id="_83d9f727-ab80-a1db-8c1d-caa0fed266f3">Please send any changes or corrections to the document editor.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_f8038abf-5bd9-2150-97e7-9b426fb87b3e">This document was created by the USECASE Technical Committee of the Calendaring and Scheduling Consortium. This document is a survey of the present state of resource interoperability for a representative sample of calendaring, groupware, and project management applications. “Interoperability of resources” within the domains surveyed is a level of functionality that allows the communication of resource information between applications that is humanly useful though not necessarily identical for both systems.</p>
+
+<p id="_f382b0c5-a197-3f63-0b8d-63f1354bbeea">The term resource is defined thus (taken from the “Calendaring and Scheduling Glossary of Terms,” version 1.0, October, 2006, from CalConnect):</p>
+
+<p id="_9f6aa49a-cbec-647a-cba3-9e654d6a8242">Resource — Shared equipment, materials, or facilities that can be scheduled for use by calendar users.</p>
+
+<p id="_f1dcabdb-5b9c-066f-bdb8-d1f9fe819946">Examples include: conference rooms, computers, audio visual equipment, and vehicles.</p>
+</introduction></preface><sections>
+
+<clause id="_methodology" obligation="normative">
+<title>Methodology</title>
+<p id="_3456a230-83be-a1d4-350b-9b9d0f0e5a6e">This is an informal survey of properties that are built into existing software products that have resource use and/or management features. The software products were not selected by any formal process, but were those available to which committee participants had access. However, we believe these to be a fair representation of the types of calendaring products currently in use and they include several that are either established or are ascendant in the industry.</p>
+
+<p id="_5b567090-2a4e-3380-83d1-ae8618512482">The applications surveyed are selected from the domains of calendaring software, groupware, and project management software written for the Microsoft Windows, MacOSX, and Linux operating systems. They are:</p>
+
+<ol id="_7d3d6525-4316-e8bd-fb85-1631d2d098d7" type="arabic"><li><p id="_74d0f111-622b-4552-4187-f9e60778c69f">Dotproject v2x (web-based open source)</p>
+</li>
+<li><p id="_73a2b538-83e3-4d79-3b0f-c05c201ed429">Microsoft Project 2002 (Microsoft Windows)</p>
+</li>
+<li><p id="_3c5294dd-2e35-eb23-ef1c-7d69842ca600">Kplato (Linux)</p>
+</li>
+<li><p id="_316153bb-a0f5-6396-161e-9c1e4dc9aed3">Planner (Linux)</p>
+</li>
+<li><p id="_e56b3b4a-4e30-81d8-f877-cdcb31dffca3">TaskJuggler (Linux)</p>
+</li>
+<li><p id="_dc84ff85-d40d-2272-5f00-b794ee97a7ed">OracleCalendar (MSWindows, MacOSX, Linux)</p>
+</li>
+<li><p id="_fbc4a38b-b3a2-3ba9-423f-0721acfbb2e5">GroupWise 7 (MSWindows, MacOSX)</p>
+</li>
+<li><p id="_1505989f-5331-7e7f-2055-d8d503d45047">Lotus Domino 7 (MSWindows, MacOSX)</p>
+</li>
+<li><p id="_fc26e86e-b1ca-9cc2-5047-62803f6dcb10">Microsoft Exchange 2007 (MSWindows)</p>
+</li>
+<li><p id="_c2a51ebc-d14e-38f8-5e89-af25055addd6">MeetingMaker 8.6 (MSWindows, MacOSX)</p>
+</li>
+<li><p id="_ec71effc-c2db-eb0c-38eb-dd9e02be6eda">ZimbraCS (web-based, MSWindows)</p>
+</li>
+</ol>
+
+<p id="_46623a77-9568-cea5-d256-815e412a18dd">We surveyed the applications and their administrative documentation to determine whether resources were a part of their product and what attributes were used for resources. This information was placed in a spreadsheet with an appropriate indicator of use to allow comparisons across the various applications. Using a grid made it easy to determine points of intersection where applications use the same or similar attributes.</p>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_26112a0e-de7e-b24d-ba6d-4dcab9584e31">Resource interoperability is pragmatically impossible in the current state of applications. Only two attributes are found among 80% of the eleven applications, name and type, which provide very little information of a truly useful nature to recipients of any data from an external calendar system. We conclude that for such limited available attributes to be of value, useful information would have to be encoded in the name attribute itself (e.g., “Rm3209CSS” would indicate room 3209 in the Computer Sciences and Statistics building, but users of that information would have to have external information, in either their head or in a directory of buildings etc., to know something more useful about the room).</p>
+
+<p id="_01d43777-664e-3c0c-8a15-9e68b06ab6c1">Across the eleven applications nearly fifty different attributes were used to define the constituent parts of a resource for the purposes of the applications. There are, however, only two attributes which are common among more than 80% the eleven applications surveyed and only an additional three more muster more than half of the eleven applications (and this only by using a broad definition of some attributes to collate then under one more general term, e.g., Contact Information included Address, Phone, FAX, and URL). These attributes with the percentages are listed in the following table.</p>
+</clause>
+
+<clause id="_attributes" obligation="normative">
+<title>Attributes</title>
+<table id="_17510315-5c6f-4079-297c-7244607f3244" unnumbered="true"><thead><tr><th valign="top" align="left">Attributes</th>
+<th valign="top" align="left">Number</th>
+<th valign="top" align="left">Usage</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">ResourceName</td>
+<td valign="top" align="left">11</td>
+<td valign="top" align="left">100.0%</td>
+</tr><tr><td valign="top" align="left">Type</td>
+<td valign="top" align="left">9</td>
+<td valign="top" align="left">81.8%</td>
+</tr><tr><td valign="top" align="left">Email</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">54.5%</td>
+</tr><tr><td valign="top" align="left">Notes/Description</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">54.5%</td>
+</tr><tr><td valign="top" align="left">Calendar</td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left">36.4%</td>
+</tr><tr><td valign="top" align="left">ContactInformation/Address/Phone/FAX/URL [7]</td>
+<td valign="top" align="left">6</td>
+<td valign="top" align="left">54.5%</td>
+</tr><tr><td valign="top" align="left">MaxAllocPercent/Available</td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left">36.4%</td>
+</tr><tr><td valign="top" align="left">ResourceID</td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left">36.4%</td>
+</tr><tr><td valign="top" align="left">Capacity</td>
+<td valign="top" align="left">3</td>
+<td valign="top" align="left">27.3%</td>
+</tr><tr><td valign="top" align="left">Hourly Rate/Cost/Use/Overtime</td>
+<td valign="top" align="left">4</td>
+<td valign="top" align="left">36.4%</td>
+</tr><tr><td valign="top" align="left">Hourly Rate</td>
+<td valign="top" align="left">3</td>
+<td valign="top" align="left">27.3%</td>
+</tr><tr><td valign="top" align="left">Initials</td>
+<td valign="top" align="left">3</td>
+<td valign="top" align="left">27.3%</td>
+</tr><tr><td valign="top" align="left">Phone</td>
+<td valign="top" align="left">3</td>
+<td valign="top" align="left">27.3%</td>
+</tr><tr><td valign="top" align="left">WorkingHours</td>
+<td valign="top" align="left">3</td>
+<td valign="top" align="left">27.3%</td>
+</tr><tr><td valign="top" align="left">Cost\Use</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">18.2%</td>
+</tr><tr><td valign="top" align="left">External Address</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">18.2%</td>
+</tr><tr><td valign="top" align="left">Organizational Unit</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">18.2%</td>
+</tr><tr><td valign="top" align="left">Overtime Rate</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">18.2%</td>
+</tr><tr><td valign="top" align="left">URL</td>
+<td valign="top" align="left">2</td>
+<td valign="top" align="left">18.2%</td>
+</tr><tr><td valign="top" align="left">AccrueAt</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Address</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">ApproverEmail</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">ApproverLang</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Audio/Video Support</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Available From</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Available Until</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Booking</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Building/Site/Floor</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">CalendarStatus</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Category</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Code</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">DoubleBookable</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Efficiency</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">FAX</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Flags</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">GlobalAgendaViewing</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">JournalEntry</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Limits</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Lotus Instant Msg Srv</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Material Label</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Online Meeting Database</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Owner Restrictions</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">ResourceID</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Shared</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">ShortName</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">TimeZone</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">User-ID</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Vacation</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr><tr><td valign="top" align="left">Visibility</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">9.1%</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_conclusion" obligation="normative">
+<title>Conclusion</title>
+<p id="_630d0fa3-3b49-719f-4c9d-5c94f6333569">If interoperability for calendar data is a goal, and if calendar systems are used to manage resources however minimal or extensive, then the state of resource implementations conclusively indicates that resource interoperability is not presently pragmatically possible. It is reasonable to conclude that the various applications surveyed did not implement resource use with any view of sharing resource information with users outside the application.</p>
+</clause>
+</sections>
+</csd-standard>

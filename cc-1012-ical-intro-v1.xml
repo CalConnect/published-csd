@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">An Introduction to Internet Calendaring</title>
+<docidentifier primary="true" type="CalConnect">CC/R 1012:2010</docidentifier><docnumber>1012</docnumber><date type="published"><on>2010-10-14</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2010-10-14</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2010</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="R">report</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_8f20ccc1-635d-bf2f-404a-72507af81e77" obligation="normative">
+<p id="_dcdc0398-a59b-3ae3-7a62-8128124a3fad">© 2010 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<clause id="_icalendar" obligation="normative">
+<title>iCalendar</title>
+<clause id="_history" obligation="normative">
+<title>History</title>
+<p id="_b4a73ca6-9317-d66c-3a58-b38b328e5c0f">The iCalendar specification was first produced by the IETF in 1998 as <eref type="inline" bibitemid="rfc2445" citeas="IETF RFC 2445"/>. Since then it has become the dominant standard for calendar data interchange on the internet and between devices (desktop computers, mobile phones etc). The specification was revised in 2009 as  <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>.</p>
+
+<p id="_9368d21f-e8d0-a063-6890-ca4f51461f2e">Alongside iCalendar is the iTIP specification (<eref type="inline" bibitemid="rfc2446" citeas="IETF RFC 2446"/> and revised as <eref type="inline" bibitemid="rfc5546" citeas="IETF RFC 5546"/>) that defines how iCalendar is used to carry out scheduling operations (for example, how an organizer can invite attendees to a meeting and receive their replies). This forms the basis for email-based scheduling using iMIP (the specification that describes how to use iTIP with email —  <eref type="inline" bibitemid="rfc2447" citeas="IETF RFC 2447"/>).</p>
+
+<p id="_977d8290-6162-7be9-6a58-97e5e8823e2f">iCalendar itself is a text-based data format. However, an XML format is also available, providing a one-to-one mapping to the text format ( <eref type="inline" bibitemid="draft" citeas="Internet-Draft draft-daboo-et-al-icalendar-in-xml-11"/>).</p>
+
+<p id="_0f8c4664-09fa-8f53-f073-ffd605ff2330">iCalendar data files typically have a .ics file name extension. Most desktop calendar clients can import or export iCalendar data, or directly access such data over the Internet using a variety of protocols.</p>
+</clause>
+
+<clause id="_data_model" obligation="normative">
+<title>Data model</title>
+<p id="_8850c123-0499-3524-29fd-37f3f93e04ac">The iCalendar data format has a well defined data model. “iCalendar objects” encompass a set of “iCalendar components” each of which contains a set of “iCalendar properties” and possibly other sub-components. An iCalendar property consists of a name, a set of optional parameters (specified as “key-value” pairs) and a value.</p>
+
+<p id="_4c8a14a1-2f28-64d0-6c81-acb169ac37d7">iCalendar components include:</p>
+
+<ul id="_78144ad9-e0bc-a9b6-7ff4-08dade106ee3"><li><p id="_5241b0df-f154-6d9b-013e-91057a451377">“VEVENT” which represents an event</p>
+</li>
+<li><p id="_bf8a1b59-b7e3-5466-34b6-e48c9061b179">“VTODO” which represents a task or to-do</p>
+</li>
+<li><p id="_09fd56fd-b96c-ff5a-c87c-b27efbf1fe3a">“VJOURNAL`” which represents a journal entry</p>
+</li>
+<li><p id="_fb7e172f-2c6f-3425-53ac-1028ad077a11">“VFREEBUSY” which represents periods of free or busy time information</p>
+</li>
+<li><p id="_2d075eb6-599a-271f-cb16-847a726b6302">“VTIMEZONE” which represents a timezone definition (timezone offset and daylight saving rules)</p>
+</li>
+<li><p id="_6a79cf7c-8e25-d585-c8c3-b0969208d985">“VALARM” is currently the only defined sub-component and is used to set alarms or reminders on events or tasks.</p>
+</li>
+</ul>
+
+<p id="_793184e4-e2bf-799a-88cc-1d4b9788c7b5">Properties include:</p>
+
+<ul id="_912b4363-48e8-c78d-b17e-0a4d7d04fd3c"><li><p id="_e7322e1a-017e-8057-b673-92b9b4123e78">“DTSTART” which represents a start time for a component</p>
+</li>
+<li><p id="_b2367567-a567-3dbf-32bf-b936f4767287">“DTEND” which represents an end time for a component</p>
+</li>
+<li><p id="_785ff8ec-d687-f0b2-931e-4dbaf8a09596">“SUMMARY” which represents a title or summary for a component</p>
+</li>
+<li><p id="_62cd27f2-8c2c-5d74-c4a6-8caadac5c480">“RRULE” which can specify rules for repeating events or tasks (for example, every day, every week on Tuesdays, etc)</p>
+</li>
+<li><p id="_79a2ad7f-0746-f221-da5b-0a672c6c4128">“ORGANIZER” which represents the calendar user who is organizing an event or assigning a task</p>
+</li>
+<li><p id="_b740cc09-2eab-2bba-4694-a9ecd6768ba4">“ATTENDEE” which represents calendar users attending an event or assigned a task</p>
+</li>
+</ul>
+
+<p id="_c5fb52a4-e0b8-f87b-6cc4-3f11ddd80ed3">In addition to this data model and the pre-defined properties, the specification defines how all those are used together to define the semantics of calendar objects and scheduling. The semantics are basically a set of rules stating how all the components and properties are used together to ensure that all iCalendar products can work together to achieve good interoperability. For example, a rule requires that all events must have one and only one “DTSTART” property. The most important part of the iCalendar specification is the semantics of the calendaring model that it represents. The use of text or XML to encode those is secondary.</p>
+</clause>
+
+<clause id="_scheduling" obligation="normative">
+<title>Scheduling</title>
+<p id="_5c17dca0-042e-490e-df86-2443ae193f40">The iTIP specification defines how iCalendar objects are exchanged in order to accomplish the key task needed to schedule events or tasks. An example of a simple workflow is as follows:</p>
+
+<ul id="_d93004ad-652a-23e0-8dac-ab0762dab487"><li><p id="_3b83b968-83f9-337a-f3ba-ec5616198331">To schedule an event, an organizer creates the iCalendar object representing the event and adds calendar users as attendees.</p>
+</li>
+<li><p id="_c22b429b-6f59-3551-2bf6-7b4310465f23">The organizer then sends an iTIP “REQUEST” message to all the attendees.</p>
+</li>
+<li><p id="_e66ed94a-6173-ed2c-615e-3fddee47db02">Upon receipt of the scheduling message, each attendee can decide whether they want to attend the meeting or not.</p>
+</li>
+<li><p id="_beb28d98-2ce7-b067-d83e-9ffd6fead869">Each attendee can then respond back to the organizer using an iTIP “REPLY” message indicating their own attendance status.</p>
+</li>
+</ul>
+
+<p id="_26eed646-906f-3511-49a1-30fadd1fe1db">iTIP supports other types of scheduling messages, for example, to cancel meetings, add new instances to a repeating meeting, etc.</p>
+</clause>
+
+<clause id="_extensibility" obligation="normative">
+<title>Extensibility</title>
+<p id="_27f8d49c-dc37-f669-3d1b-fe8213c1f56e">iCalendar was designed to be extensible, allowing for new components, properties and parameters to be defined as needed. A registry exists to maintain the list of standard extensions with references to their definitions to ensure anyone can use them and work well with others.</p>
+</clause>
+</clause>
+
+<clause id="_calendar_data_access_and_exchange_protocols" obligation="normative">
+<title>Calendar Data Access and Exchange Protocols</title>
+<clause id="_internet_calendar_downloads" obligation="normative">
+<title>Internet Calendar Downloads</title>
+<p id="_888ca3c9-f1ce-2a7d-7bdc-e12df4b53ef6">Calendar data can be downloaded from a web server via a web browser and then imported directly into an iCalendar aware client. Alternatively, calendar data could be retrieved in some other fashion from the Internet (e.g., sent via email as an attachment) and then imported into a calendar client.</p>
+
+<p id="_e89cd9c9-10db-d459-c12b-6f143e1f22bb">This solution works well for calendar data that is not likely to change over time (for example the list of national holidays for the next year).</p>
+</clause>
+
+<clause id="_internet_calendar_subscriptions" obligation="normative">
+<title>Internet Calendar Subscriptions</title>
+<p id="_e15928e4-f54e-a172-d3ff-42215ee11fbe">An Internet calendar subscription is simply an iCalendar data file made available on a web server. However, rather than using a web browser to download the calendar data, calendar clients can instead use the URL to the calendar data on the web server to download the calendar data themselves. Additionally, the clients can check the web server on a regular basis for updates to the calendar data, and then update their own cached copy of it. This allows calendar data that changes over time to be kept synchronized.</p>
+</clause>
+
+<clause id="_caldav" obligation="normative">
+<title>CalDAV</title>
+<p id="_712477e4-2b20-6e01-c790-18c03c583e3c">CalDAV is a calendar access protocol and is defined in <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"/>. The protocol is based on WebDAV which is an extension to HTTP that provides enhanced capabilities for document management on web servers.</p>
+
+<p id="_f97f1141-e030-5b83-d2c5-7dacfe0349b8">CalDAV is used in a variety of different environments, ranging from very large internet service providers, to large and small corporations or institutions, and to small businesses and individuals.</p>
+
+<p id="_a98582ef-62eb-5d5d-fb17-a4b90798f86e">CalDAV clients include desktop applications, mobile devices and browser-based solutions. It can also be used by “applets”, for example, a web page panel that displays a user’s upcoming events.</p>
+
+<p id="_c7312bb1-e390-c835-08e6-2a142b7667d2">One of the key aspects of CalDAV is its data model. Simply put, it defines a “calendar home” for each calendar user, within which any number of “calendars” can be created. Each “calendar” can contain any number of iCalendar objects representing individual events, tasks or journal entries. This data model ensures that clients and servers can interoperate well.</p>
+
+<p id="_86b409fb-1f6c-88f5-22d9-8ad32e844c32">In addition to providing simple operations to read, write and delete calendar data, CalDAV provides a querying mechanism to allow clients to fetch calendar data matching specific criteria. This is commonly used by clients to do “time-range” queries, i.e., find the set of events that occur within a given start/end time period.</p>
+
+<p id="_ffc11f01-853e-68bb-14d7-e4a1c18ffd70">CalDAV also supports access control allowing for features such as delegated calendars and calendar sharing.</p>
+
+<p id="_1e88ceeb-aecc-ca3e-3b3f-f789c86a9ea4">CalDAV also specifies how scheduling operations can be done using the protocol, rather than, for example, sending scheduling messages via email. Whilst it uses the semantics of the iTIP protocol, it simplifies the process by allowing simple calendar data write operations to trigger the sending of scheduling messages, and it has the server automatically process the receipt of scheduling messages. Scheduling can be done with other users on the CalDAV server or with calendar users on other systems (via some form of “gateway”).</p>
+</clause>
+
+<clause id="_activesyncsyncml" obligation="normative">
+<title>ActiveSync/SyncML</title>
+<p id="_db715cf2-7570-dc62-9d74-50f3b4a19543"><eref type="inline" bibitemid="ActiveSync" citeas="ActiveSync"/> and <eref type="inline" bibitemid="SyncML" citeas="SyncML"/> are technologies that allow multiple devices to synchronize data with a server, with calendar data being one of the classes of data supported. These have typically been used for mobile devices with a broad spectrum of capabilities, but most often in “smart” phones.</p>
+</clause>
+
+<clause id="_calws" obligation="normative">
+<title>CalWS</title>
+<p id="_345ef51c-4bd3-7235-d9ef-daa0ddaff610"><eref type="inline" bibitemid="restful" citeas="CC/R 1011:2010"/> is a web services calendar access application programming interface developed by The Calendaring and Scheduling Consortium and the OASIS organization, to be used as part of the OASIS WS-Calendar standard. It provides a programing interface to access and manipulate calendar data stored on a server that is more suited to a web services programming environment. It follows a similar data model to CalDAV and has been designed to co-exist with a CalDAV service offering the same data.</p>
+</clause>
+
+<clause id="_ischedule" obligation="normative">
+<title>iSchedule</title>
+<p id="_f767cfa6-4776-b438-3e4c-7aee7ae34509"><eref type="inline" bibitemid="ical-draft" citeas="Internet-Draft draft-desruisseaux-ischedule-01"/> is a protocol to allow scheduling between users on different calendaring systems and across different internet domains. It transports iTIP scheduling messages using HTTP between servers. Servers use DNS and various security mechanisms to determine the authenticity of messages received.</p>
+
+<p id="_83c91a94-6075-23b7-a235-1ff63c164f7e">It has been specifically designed to be independent of any calendar system in use at the endpoints, so that it is compatible with many different systems. This allows organizations with different calendar systems to exchange scheduling messages with each other, and also allows a single organization with multiple calendar systems (for example due to mergers, or different departmental requirements) to exchange scheduling messages between users of each system.</p>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc2445" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2445</uri>
+  <docidentifier type="IETF" primary="true">RFC 2445</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2445</docidentifier>
+  <docnumber>RFC2445</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Stenerson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_88bab3dc-0aad-01bb-6a2a-9a92c5a12308">This memo has been defined to provide the definition of a common format for openly exchanging calendaring and scheduling information across the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2445</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ICALENDAR</keyword>
+  <keyword>interoperable</keyword>
+  <keyword>mime</keyword>
+  <keyword>multipurpose internet mail extensions</keyword>
+</bibitem><bibitem id="rfc2446" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP) Scheduling Events, BusyTime, To-dos and Journal Entries</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2446</uri>
+  <docidentifier type="IETF" primary="true">RFC 2446</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2446</docidentifier>
+  <docnumber>RFC2446</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Hopson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_2f851637-3559-a254-b7e3-483efe023c19">This document specifies how calendaring systems use iCalendar objects to interoperate with other calendar systems. It does so in a general way so as to allow multiple methods of communication between systems. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5546</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5546</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2446</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ITIP</keyword>
+  <keyword>iCalendar Transport-Independent Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>systems</keyword>
+</bibitem><bibitem id="rfc2447" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2447</uri>
+  <docidentifier type="IETF" primary="true">RFC 2447</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2447</docidentifier>
+  <docnumber>RFC2447</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_9b12ac5e-96d0-a5c6-2693-e3d65da7304e">This document specifies a binding from the iCalendar Transport- independent Interoperability Protocol (iTIP) to Internet email-based transports. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC6047</formattedref>
+      <docidentifier type="IETF" primary="true">RFC6047</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2447</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>IMIP</keyword>
+  <keyword>iCalendar Message-Based Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>electronic</keyword>
+  <keyword>mail</keyword>
+  <keyword>transport</keyword>
+</bibitem><bibitem id="rfc5545" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>
+  <docidentifier type="IETF" primary="true">RFC 5545</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5545</docidentifier>
+  <docnumber>RFC5545</docnumber>
+  <date type="published">
+    <on>2009-09</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_e66726b8-7e52-9f8b-fade-bcc41cf15079">This document defines the iCalendar data format for representing and exchanging calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information, independent of any particular calendar service or protocol. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5545</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsify</keyword>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>caldav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>meeting</keyword>
+  <keyword>event</keyword>
+  <keyword>task</keyword>
+  <keyword>to-do</keyword>
+  <keyword>journal</keyword>
+  <keyword>appointment</keyword>
+  <keyword>agenda</keyword>
+  <keyword>schedule</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>ischedule</keyword>
+  <keyword>xCalendar</keyword>
+</bibitem><bibitem id="rfc5546" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5546</uri>
+  <docidentifier type="IETF" primary="true">RFC 5546</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5546</docidentifier>
+  <docnumber>RFC5546</docnumber>
+  <date type="published">
+    <on>2009-12</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_8d37e99e-f574-c6c3-706f-cb5a91b6833f">This document specifies a protocol that uses the iCalendar object specification to provide scheduling interoperability between different calendaring systems. This is done without reference to a specific transport protocol so as to allow multiple methods of communication between systems. Subsequent documents will define profiles of this protocol that use specific, interoperable methods of communication between systems.</p>
+
+    <p id="_1345baa3-6fec-f11c-b732-6683f8388e21">The iCalendar Transport-Independent Interoperability Protocol (iTIP) complements the iCalendar object specification by adding semantics for group scheduling methods commonly available in current calendaring systems. These scheduling methods permit two or more calendaring systems to perform transactions such as publishing, scheduling, rescheduling, responding to scheduling requests, negotiating changes, or canceling. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5546</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calendar</keyword>
+  <keyword>scheduling</keyword>
+</bibitem><bibitem id="rfc4791" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Calendaring Extensions to WebDAV (CalDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4791</uri>
+  <docidentifier type="IETF" primary="true">RFC 4791</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4791</docidentifier>
+  <docnumber>RFC4791</docnumber>
+  <date type="published">
+    <on>2007-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Dusseault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_b92ca569-9c29-76f9-e255-dd74e66ffcd3">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing calendaring and scheduling information based on the iCalendar format. This document defines the “calendar-access” feature of CalDAV. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4791</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>calcav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>webdav</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>http</keyword>
+</bibitem><bibitem id="draft" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">xCal: The XML Format for iCalendar</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-et-al-icalendar-in-xml-11</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-et-al-icalendar-in-xml-11</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-et-al-icalendar-in-xml</docidentifier>
+  <docnumber>I-D.daboo-et-al-icalendar-in-xml</docnumber>
+  <date type="published">
+    <on>2011-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>RPI</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple, Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Steven Lees</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Microsoft</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>11</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_c0aff978-f2a4-d21e-9413-fed3aa5f9886">This specification defines “xCal”, an XML format for iCalendar data. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-et-al-icalendar-in-xml-11</number>
+  </series>
+</bibitem><bibitem id="ActiveSync">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://msdn.microsoft.com/en-us/library/aa913903.aspx"/>
+  </formattedref>
+  <docidentifier>ActiveSync</docidentifier>
+  
+</bibitem><bibitem id="SyncML">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="http://www.openmobilealliance.org/tech/affiliates/syncml/syncmlindex.html"/>
+  </formattedref>
+  <docidentifier>SyncML</docidentifier>
+  
+</bibitem><bibitem id="restful" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">CalWS-Rest Restful Web Services Protocol for Calendaring V1.0.1 (CD 1011)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">CalWS-Rest Restful Web Services Protocol for Calendaring V1.0.1 (CD 1011)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20Web%20Services%20Protocol%20for%20Calendaring%20V1.0.1.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/R 1011:2010</docidentifier>
+  <version>
+    <revision-date>2010-02-22</revision-date>
+  </version>
+  <abstract format="text/plain">This document, developed by the XML Technical Committee, specifies a RESTful web services Protocol for calendaring operations. This protocol has been contributed to OASIS WS-CALENDAR as a component of the WS-CALENDAR Specification under development by OASIS.
+CalConnect and OASIS have agreed that any future work by CalConnect TC XML or OASIS WS-Calendar (or other committees in CalConnect and OASIS) on their respective versions of CalWS will be harmonized to maintain consistency between the versions. CalConnect and OASIS reserve the right to jointly and formally agree to fork the specifications at some point in the future if need arises.</abstract>
+</bibitem><bibitem id="ical-draft" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Internet Calendar Scheduling Protocol (iSchedule)</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-desruisseaux-ischedule-01</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-ischedule-01</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.desruisseaux-ischedule</docidentifier>
+  <docnumber>I-D.desruisseaux-ischedule</docnumber>
+  <date type="published">
+    <on>2010-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Bernard Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <version>
+    <draft>01</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_6f3dc5d9-8adc-ecf0-9172-a6b3f8bbc0c6">This document defines the Internet Calendar Scheduling Protocol (iSchedule), which is a binding from the iCalendar Transport- independent Interoperability Protocol (iTIP) to the Hypertext Transfer Protocol (HTTP) to enable interoperability between calendaring and scheduling systems over the Internet.</p>
+
+  </abstract>
+  <relation type="updatedBy">
+    <bibitem>
+      <formattedref format="text/plain">draft-desruisseaux-ischedule-02</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-desruisseaux-ischedule-02</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-desruisseaux-ischedule-01</number>
+  </series>
+</bibitem>
+
+
+
+
+
+
+
+
+
+
+
+</references></bibliography>
+</csd-standard>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Roundtable XXI, May 25-27, 2011</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1105:2011</docidentifier><docnumber>1105</docnumber><date type="published"><on>2011-06-20</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2011-06-20</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2011</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_d3d51098-43f8-8ea0-ff8e-f76eabd026d9" obligation="normative">
+<p id="_2e1cdf70-c030-e883-9e15-3028de343bcc">© 2011 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_b4f420a4-9cd7-10f8-b138-ac3babf4f57c">Roundtable XXI took place on May 25-27, 2011, hosted by NASA Ames at Moffett Field, Mountain View, California. The event was attended by 26 people from 16 organizations. The CalConnect Interoperability Test Event was held immediately prior to the Roundtable on May 23- 25. Ten people from three organizations were present onsite. plus two more remotely A Workshohp on Tasks was held Wednesday afternoon as part of the Roundtable; in addition to the Roundtable participants, several others were present just for the workshop or attended remotely.</p>
+
+<p id="_82042d33-6ce1-5e43-7dde-dae63239c18f">The Roundtable was dedicated to technical committee sessions, and informal discussions and networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical Committee sessions were as usual organized sequentially, without competing parallel sessions, as is our standard practice to allow all attendees who wished to be involved in the discussions of each Technical Committee the opportunity to do so.</p>
+</introduction></preface><sections>
+
+<clause id="_special_events" obligation="normative">
+<title>Special Events</title>
+<p id="_29911caf-b506-8cd4-67cc-dfc557779ecf">A Workshop on Tasks (VTODOs) was held Wednesday afternoon with the goal of determining what needs to be added to iCalendar and related specifications to improve and encourage the use of the standards for task and project management, as well as personal information management.</p>
+
+<p id="_434aa07b-d15e-b225-e475-1fb1737bea2c">The host presentation was given by Charlie xxxx, Assistant Project Manager of the Kepler Mission, focused on the secheduling and resource optimization issues (especially concerning the Deep Space Network) encountered with the mission. See  <link target="https://www.calconnect.org/presentations/Kepler%20Mission%20Operations%20Scheduling.pdf">Kepler Mission Operations Schedulilng</link>.</p>
+
+<p id="_96315c8e-4c16-54af-1d77-15c54f2f1452">Friday afternoon we were offered a tour of two simulation facilities, the Future Flight Center and the Crew-Vehicle systems Research Facility.</p>
+</clause>
+
+<clause id="_documents_published_or_updated_since_last_roundtable" obligation="normative">
+<title>Documents Published or Updated since Last Roundtable</title>
+<clause id="_published_documents" obligation="normative">
+<title>Published Documents</title>
+<ul id="_50fa78ba-5ef5-80b8-eac5-fbf45dda6498"><li><p id="_e1478602-ba3e-5453-9e4c-a07fc989f18c">Event Publishing Extensions to iCalendar</p>
+</li>
+<li><p id="_138ccd8a-2067-a87b-ac10-9d781443576f">Calendaring and Scheduling Glossary of Terms Version 2.0</p>
+</li>
+<li><p id="_21e67bbb-9b80-1fe9-ab95-2dfd74ec1bd1">Index to Calendaring and Scheduling Standards Version 2.0</p>
+</li>
+</ul>
+
+<p id="_8c9a720d-fd4a-0f74-6778-174f767e7b30">CalConnect has replaced the internal Interoperability Test Event Report with an internal wiki.</p>
+
+<p id="_7fd5d9f8-420e-716d-e25f-25a9c3adf2a3">CalConnect has replaced the public Interoperability Test Report with a section on the Test Event in the CalConnect  <em>Minutes</em> newsletter publised after each event.</p>
+</clause>
+
+<clause id="_updated_ietf_drafts_related_to_calconnect_includes_updates_to_published_calconnect_documents" obligation="normative">
+<title>Updated IETF Drafts Related to CalConnect (includes updates to published CalConnect documents)</title>
+<ul id="_464f4bc3-274c-bece-d758-e2f68317a9e4"><li><p id="_165ac4c6-c39b-a976-cd03-33f2c43935d0"><link target="http://tools.ietf.org/html/draft-daboo-webdav-sync"/></p>
+</li>
+<li><p id="_10fc3131-70eb-a254-6620-74950575c7f8"><link target="http://tools.ietf.org/html/draft-cal-resource-schema"/></p>
+</li>
+<li><p id="_cabb3fa8-93f2-f039-2a2b-f88dd050d58e"><link target="http://tools.ietf.org/html/draft-daboo-et-al-icalendar-in-xml"/></p>
+</li>
+<li><p id="_558dd4ae-1948-d175-daa0-f2e0e904d041"><link target="http://tools.ietf.org/html/draft-daboo-calendar-availability"/></p>
+</li>
+<li><p id="_82ff200e-db0c-b2d9-c833-87478a26e00b"><link target="http://tools.ietf.org/html/draft-douglass-link-extension"/></p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_update_on_technical_committee_work_and_initiatives" obligation="normative">
+<title>Update on Technical Committee Work and Initiatives</title>
+<p id="_813d61c6-2580-6689-6882-2e6bf3bc6b3a">Roundtable session summaries and activities may be found at <link target="http://calconnect.org/minutes/CalConnect%20Minutes%20May2011.pdf"/>.</p>
+</clause>
+
+<clause id="_future_events" obligation="normative">
+<title>Future Events</title>
+<ul id="_8070a55f-84ea-3827-2bbd-a88a9e2a8145"><li><p id="_50f584c5-a3b7-b037-a8eb-d136be7bb662">CalConnect XXII: October 3-7, 2011, Kerio Technologies, Czech Republic</p>
+</li>
+<li><p id="_f83c7b00-697f-0d6f-99c3-39b777e1c29b">CalConnect XXIII: January 30 — February 3, 2012, TBD</p>
+</li>
+<li><p id="_138ff13e-eb9c-dd8e-598d-f4e037aa6386">CalConnect XXIV: May 21-25, Patricia Egen Consulting, Chattanooga, TN</p>
+</li>
+</ul>
+
+<p id="_5a8f3052-cce4-2b8c-0678-346b1382756d">The general format of the CalConnect week is:</p>
+
+<ul id="_bea3c27d-c9d7-bf29-c071-2143d337fa50"><li><p id="_d430b203-7e4a-0736-c8e9-ca10c0c669b9">Monday morning through Wednesday noon, CalConnect Interoperability Test Event</p>
+</li>
+<li><p id="_8c7fd874-8532-4a6b-8f8c-e2272549e413">Wednesday noon through Friday afternoon, CalConnect Roundtable (presentations, TC sessions, BOFs, networking, Plenary)</p>
+</li>
+</ul>
+</clause>
+</sections>
+</csd-standard>

@@ -1,0 +1,3744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">CalWS-SOAP SOAP Web Services Protocol for Calendaring</title>
+<docidentifier primary="true" type="CalConnect">CC/S 1202:2012</docidentifier><docnumber>1202</docnumber><date type="published"><on>2012-06-08</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Michael Douglass</completename></name>
+<affiliation><organization>
+<name>Rensselaer Polytechnic Institute</name>
+</organization></affiliation><email>douglm@rpi.edu</email></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2012-06-08</revision-date></version><language>en</language><script>Latn</script><abstract><p>This document describes standard messages and interactions for service interactions with a system that hosts calendar-based information using SOAP. Hosted information can be either traditional personal and enterprise calendar information or services that support XML payloads developed in conformance with the WS-Calendar specification.</p>
+</abstract><status><stage>published</stage></status><copyright><from>2012</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="published">
+    <on>2011-03-15</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.0</edition>
+<amend change="modify"><description><p id="_5be59d5f-487e-9791-ff41-7d03fbf3843a">Initial publication — a first pass at a rewrite from CalWS-REST</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="updated">
+    <on>2011-07-15</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.1</edition>
+<amend change="modify"><description><p id="_8ce1e4c5-5d7f-ed69-9aaa-a2872c99b58c">Added etoken to ensure consistent updates.</p>
+
+<p id="_b0f6abc1-2647-b0a3-2891-a49fa7dcdadc">Added a multi op which allows the atomic processing of multiple operations in one request. Added an id attribute to requests and responses.</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="updated">
+    <on>2011</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.2</edition>
+<amend change="modify"><description><p id="_90b3ebb1-3788-1708-2b79-59cfa5c48dbd">Added href to fetch response. Change propstat to be extension of BaseResponseType</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="updated">
+    <on>2011-09-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.3</edition>
+<amend change="modify"><description><p id="_12667f54-0f95-ad71-181b-26c816763d0e">Add test attribute to calendar query elements.</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="updated">
+    <on>2011-11-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.4</edition>
+<amend change="modify"><description><p id="_c01b9dcc-7df6-45fb-8c83-76cc0bff36f8">Updated calendar query to use xcal types instead of names. Assumes a later version of the xcalendar schema to make this possible. Change references to “etoken” to “changeToken”, Update the error codes with descriptions and a type per error. Added some new errors.</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="updated">
+    <on>2011-12-15</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.5</edition>
+<amend change="modify"><description><p id="_33a06331-87a9-a385-2e43-a0b5eb737e02">Change example from CalDAV to CalWS</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="updated">
+    <on>2012-01-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.6</edition>
+<amend change="modify"><description><p id="_50b21a1a-ab31-0bd2-c197-9b4370de7d5e">Remove all references to XRD. Define CalWS properties in their place.</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="updated">
+    <on>2012-02-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.7</edition>
+<amend change="modify"><description><p id="_a4daa633-a28b-c110-4699-efff5fe8e09f">Align more closely with the OASIS template.</p>
+
+<p id="_2f4ea32b-39ea-0ff7-0dca-dc3add9f9eb0">Correct one or two minor spelling errors.</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="updated">
+    <on>2012-02-13</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.8</edition>
+<amend change="modify"><description><p id="_d63badbd-68cc-1714-9e50-7a1cd289478b">Initial hand-off from CalConnect to OASIS</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1202:2012</docidentifier>
+  <date type="updated">
+    <on>2012-02-14</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Michael Douglass</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Toby Considine</completename>       </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>0.9</edition>
+<amend change="modify"><description><p id="_aa84b70e-a877-245a-0fe8-f06609b1d4ec">Change namespace to <link target="http://docs.oasisopen.org/ws-calendar/ns/soap"/>.</p>
+
+<p id="_83f940f9-ba28-d7a7-36a1-6a112a99f7d6">Fixed example, broken references.</p>
+
+<p id="_7c284247-314c-a661-0847-52f03a4b41b6">Added namespace declaration.</p>
+
+<p id="_7880346f-6040-713c-0bc2-ac35a1858e3a">Added Summary.</p>
+</description></amend></bibitem></relation><ext><doctype abbreviation="S">specification</doctype><flavor>cc</flavor><editorialgroup><committee>XML</committee></editorialgroup></ext></bibdata><metanorma-extension><clause id="_document_history" obligation="normative">
+<title>document history</title>
+<sourcecode id="_fce2a082-48c1-4684-ada5-1152138a26ad" lang="yaml">- date:
+  - type: published
+    value:  2011-03-15
+  edition: 0.0
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Initial publication - a first pass at a rewrite from CalWS-REST
+- date:
+  - type: updated
+    value:  2011-07-15
+  edition: 0.1
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: |
+        Added etoken to ensure consistent updates.
+
+        Added a multi op which allows the atomic processing of multiple operations in one request. Added an id attribute to requests and responses.
+- date:
+  - type: updated
+    value:  2011
+  edition: 0.2
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Added href to fetch response. Change propstat to be extension of BaseResponseType
+- date:
+  - type: updated
+    value:  2011-09-07
+  edition: 0.3
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Add test attribute to calendar query elements.
+- date:
+  - type: updated
+    value:  2011-11-11
+  edition: 0.4
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Updated calendar query to use xcal types instead of names. Assumes a later version of the xcalendar schema to make this possible. Change references to "etoken" to "changeToken", Update the error codes with descriptions and a type per error. Added some new errors.
+- date:
+  - type: updated
+    value:  2011-12-15
+  edition: 0.5
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Change example from CalDAV to CalWS
+- date:
+  - type: updated
+    value:  2012-01-03
+  edition: 0.6
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Remove all references to XRD. Define CalWS properties in their place.
+- date:
+  - type: updated
+    value:  2012-02-07
+  edition: 0.7
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: |
+        Align more closely with the OASIS template.
+
+        Correct one or two minor spelling errors.
+- date:
+  - type: updated
+    value:  2012-02-13
+  edition: 0.8
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Initial hand-off from CalConnect to OASIS
+- date:
+  - type: updated
+    value:  2012-02-14
+  edition: 0.9
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - person:
+      name:
+        completename: Toby Considine
+  - organization:
+      name: CalConnect
+  amend:
+    - description: |
+        Change namespace to http://docs.oasisopen.org/ws-calendar/ns/soap.
+
+        Fixed example, broken references.
+
+        Added namespace declaration.
+
+        Added Summary.</sourcecode>
+
+</clause>
+<presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_4a78cf53-692a-d957-48ab-fc25883e994e" obligation="normative">
+<p id="_ead63c6d-16c1-5177-8eba-a2c1cbc5bc56">© 2012 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><abstract id="_abstract"><title>Abstract</title><p id="_9cfbc4ec-a853-f276-3a55-53f04922d0d0">This document describes standard messages and interactions for service interactions with a system that hosts calendar-based information using SOAP. Hosted information can be either traditional personal and enterprise calendar information or services that support XML payloads developed in conformance with the WS-Calendar specification.</p>
+</abstract><foreword id="_68e9e237-5545-c230-a75b-95ad0bf2d990" obligation="informative">
+<title>Foreword</title>
+<p id="_992ec66f-4c95-8158-0b65-43e4e72f362a">This document was subject to public review at the same time as the OASIS WSCalendar publication of CalWS-SOAP and contains the same content.</p>
+
+<p id="_365a1108-4295-d246-850f-76214edc607d">This document is copyright ©2012 by The Calendaring and Scheduling Consortium and is licensed under the Creative Commons 3.0 Unported License:</p>
+
+<p id="_3e48cbcb-f7c1-5faa-790d-058fff8b2408"><link target="http://creativecommons.org/licenses/by/3.0/"/>.</p>
+
+<dl id="_ebcc6597-170e-59e5-225a-abb869fd13b5"><dt>Chair(s)</dt>
+<dd><p id="_ef9e6b7d-c735-e73b-ae11-09a24c3c272f">Michael Douglass</p>
+</dd>
+<dt>Related work</dt>
+<dd><p id="_70c0fc27-865c-3c59-b1ce-1ac11bcc2301">This specification is related to:</p>
+
+<ul id="_d1e85be1-5efa-6f47-8569-2da8e6887917"><li><p id="_12164d05-672a-68be-4e23-fc4a56d24f14">RFC 6321 — xCal: iCalendar in XML. <link target="http://www.ietf.org/rfc/rfc6321.txt"/></p>
+</li>
+<li><p id="_c5ac24a6-038e-8593-29c0-a7b9e68220b7">WS-Calendar Version 1.0. Latest version.<link target="http://docs.oasis-open.org/ws-calendar/ws-calendar/v1.0/ws-calendar-1.0-spec.html"/></p>
+</li>
+</ul>
+</dd>
+</dl>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_e5accd28-d993-4b51-c4fa-00ce7cbee3e1">The CalWS SOAP protocol is built upon and makes the same assumptions about structure as the CalDAV protocol defined in  <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"/> and related specifications. It does NOT require nor assume the WebDAV nor CalDAV protocol.</p>
+
+<p id="_9d17daab-a77e-9264-60dd-a609c812e1d0">Calendar resources, for example events and tasks are stored as named resources (files) inside special collections (folders) known as “ <strong>Calendar Collections</strong>”.</p>
+
+<p id="_2a6a4c05-d26f-7e37-335a-f99733af0faa">This specification can be looked upon as a layer built on top of CalDAV and defines the basic operations which allow creation, retrieval, update and deletion. In addition, query and  <tt>freebusy</tt> operations are defined to allow efficient, partial retrieval of calendar data.</p>
+
+<p id="_b0637df8-7b7d-8179-7d7c-0e646e1e7f36">This does not mean that a CalWS service must be built on CalDAV, merely that a degree of conformity is established such that services built in that manner do not have a significant mismatch. It is assumed that some CalWS services will be built without any CalDAV support.</p>
+
+<clause id="_terminology" obligation="informative">
+<title>Terminology</title>
+<p id="_60f6c1f8-3456-1873-2379-33b3787afb36">The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in  <eref type="inline" bibitemid="rfc2119" citeas="IETF RFC 2119"/>.</p>
+</clause>
+
+<clause id="_namespace" obligation="informative">
+<title>Namespace</title>
+<p id="_d97ac1ed-1032-a9d0-e0aa-f57ccddcbb1a">XML namespaces and prefixes used in this standard:</p>
+
+<table id="_67700f52-d27e-a278-830e-dfc277d2e5ec">
+<name>XML Namespaces in this standard</name>
+<thead><tr><th valign="top" align="left">Prefix</th>
+<th valign="top" align="left">Namespace</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">xcal</td>
+<td valign="top" align="left">urn:ietf:params:xml:ns:icalendar-2.0</td>
+</tr><tr><td valign="top" align="left">CalWS</td>
+<td valign="top" align="left"><link target="http://docs.oasis-open.org/ws-calendar/ns/soap"/></td>
+</tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+
+
+
+
+<clause id="_issues_not_addressed_by_this_specification" obligation="normative">
+<title>Issues not addressed by this specification</title>
+<p id="_73b3a391-b5b5-7626-12f7-0eadeaaa7fda">A number of issues are not addressed by this version of the specification, either because they should be addressed elsewhere or will be addressed at some later date.</p>
+
+<clause id="_access_control" obligation="normative">
+<title>Access Control</title>
+<p id="_920bdb41-e442-77b5-be9d-f2e8f0e50bdb">It is assumed that the targeted server will set an appropriate level of access based on authentication. This specification will not attempt to address the issues of sharing or ACLs.</p>
+</clause>
+
+<clause id="_provisioning" obligation="normative">
+<title>Provisioning</title>
+<p id="_1887ecf7-410a-78af-89b5-d2f151f1b18a">The protocol will not provide any explicit provisioning operations. If it is possible to authenticate or address a principals calendar resources then they  <tt>MUST</tt> be automatically created if necessary or appropriate</p>
+</clause>
+
+<clause id="_copymove" obligation="normative">
+<title>Copy/Move</title>
+<p id="_67a81565-dac9-36ef-03df-f686c8f9314e">These operations are not yet defined for this version of the CalWS protocol. Both operations raise a number of issues. In particular implementing a move operation through a series of retrievals, insertions and deletions may cause undesirable side-effects. Both these operations will be defined in a later version of this specification.</p>
+</clause>
+
+<clause id="_creating_collections" obligation="normative">
+<title>Creating Collections</title>
+<p id="_f03d01fe-715e-4056-ab0c-24d46e036019">We will not address the issue of creating collections within the address space. The initial set is created by provisioning.</p>
+</clause>
+
+<clause id="_retrieving_collections" obligation="normative">
+<title>Retrieving collections</title>
+<p id="_73888443-95e9-2f98-319b-b261209f2160">This operation is currently undefined.</p>
+</clause>
+
+<clause id="_setting_service_and_resource_properties" obligation="normative">
+<title>Setting service and resource properties.</title>
+<p id="_5a762a9d-027e-a293-510f-151db4ed64c3">These operations are not defined in this version of the specification. In the future it will be possible to define or set the properties for the service or resources within the service.</p>
+</clause>
+</clause>
+
+<terms id="_calws_glossary" obligation="normative">
+<title>CalWS Glossary</title><p id="_9ebbb531-2d3e-eb13-6a3c-ec26454a48d4">For the purposes of this document, the following terms and definitions apply.</p>
+
+<term id="term-Calendar-Object-Resource"><preferred><expression>
+<name>Calendar Object Resource</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_0b73a12a-8d6d-d46c-fc76-b19029b7f077">A calendar object resource is an event, meeting or a task. Attachments are resources but NOT calendar object resources. An event or task with overrides is a single calendar resource entity.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-UID"><preferred><expression>
+<name>UID</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_c2c6a721-c8da-60c2-7230-8fbe8b222631">The UID of an event is defined in <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/> as a “persistent, globally unique identifier for the calendar component”. It is in fact, slightly more complicated in that all overrides to a recurring event have the same UID as the master event. Copies of a meeting invitation sent to attendees must also have the same UID. In this protocol the UID is the key by which we locate calendar object resources (see above) and any associated overrides within a calendar collection (see below).</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Collections"><preferred><expression>
+<name>Collections</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a2a09582-0d4d-05d6-3b13-2ed858c4f89b">A collection is a set of resources which may be entities or other collections. In file systems a collection is commonly referred to as a folder. Collections are referred to by a collection id which is specific to a service and may take any form. For many systems they will be path-like.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-Collection"><preferred><expression>
+<name>Calendar Collection</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_28443ef9-fa8b-a40d-b77a-8190a281182e">A collection only allowed to contain calendar object resources. The UIDs for components within a calendar collection must be unique. The combination of a calendar collection id and the UID  <tt>MUST</tt> be a unique key within a set of resources made available through this service.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Scheduling-Calendar-Collection"><preferred><expression>
+<name>Scheduling Calendar Collection</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_efd5a291-d2d5-f0b7-5088-c36a18e079fe">A folder only allowed to contain calendar resources which is also used for scheduling operations. Scheduling events placed in such a collection will trigger implicit scheduling activity on the server.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Principal-Home"><preferred><expression>
+<name>Principal Home</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_0a9e77c8-ef65-38bd-2d47-1878cc109251">The collection under which all the resources for a given principal are stored. For example, for principal “fred” the principal home might be “/user/fred/”</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Change-token"><preferred><expression>
+<name>Change token</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_737be251-c210-070b-0059-761e4220b97c">This is an opaque token returned to identify the current change status of an entity. Whenever an entity is changed the token will take on a new value. An unchanged token value DOES NOT imply byte-for-byte equality with the stored entity. The service may choose to modify properties under its control, for example last-modification times. However, an entity with an unchanged token can be safely updated by a client holding that token.</p></verbal-definition></definition>
+ </term>
+</terms>
+
+<clause id="_overview_of_the_calws_protocol" obligation="normative">
+<title>Overview of the CalWS protocol</title>
+<p id="_bceb0034-289c-5154-82f1-e7b75710a504">CalWS operations and data elements are defined in this specification. Many of the operations result in the transmission of data as defined in  <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>.</p>
+
+<p id="_3804d051-58ed-e847-c49f-429942e3fdeb">SOAP 1.1 messages consist of three elements: an envelope, header data, and a message body. CalWS request-response elements  <tt>MUST</tt> be enclosed within the SOAP message body. CalWS SOAP messages <tt>MUST</tt> conform to <eref type="inline" bibitemid="wti" citeas="WT-I-Basic"/> and <eref type="inline" bibitemid="wsib" citeas="WS-I-Bind"/>. A single CalWS SOAP message <tt>MUST</tt> contain only one service request or a single service response).</p>
+
+<p id="_6271273c-66ce-dadd-3c8f-d4c1b91b9a0f">The basic process for using SOAP for CalWS operations is:</p>
+
+<ul id="_1909cb4f-c59f-71ca-7823-a373e86c9078"><li><p id="_9dbfad06-08c1-fc2b-c6a9-0a0562dd9570">A system entity acting as a CalWS requester transmits a CalWS request element within the body of a SOAP message to a system entity acting as a CalWS responder. The CalWS requester  <tt>MUST NOT</tt> include more than one CalWS request per SOAP message or include any additional XML elements in the SOAP body (though see  <xref target="sec-14"/> for multiple messages packaged in one request).</p>
+</li>
+<li><p id="_d06ce6ef-897a-237a-a253-0a3218f6acf8">The CalWS responder <tt>MUST</tt> return either a CalWS response element within the body of another SOAP message or generate a SOAP fault. The CalWS responder  <tt>MUST NOT</tt> include more than one CalWS response per SOAP message or include any additional XML elements in the SOAP body. If a CalWS responder cannot, for some reason, process a CalWS request, it  <tt>MUST</tt> generate a SOAP fault. (SOAP 1.1 faults and fault codes are discussed in  <eref type="inline" bibitemid="soap" citeas="SOAP11"><localityStack><locality type="section"><referenceFrom>5.1</referenceFrom></locality></localityStack></eref>.)</p>
+</li>
+</ul>
+
+<clause id="_discovery" obligation="normative">
+<title>Discovery</title>
+<p id="_fd7a96a4-6497-9bbf-42eb-48fdb189be7d">CalWS implementers (service providers) <tt>MUST</tt> provide a WSDL WSDL11 to describe their implementations. This WSDL  <tt>MAY</tt> or may not be made public via a standard discovery mechanism (such as UDDI) or other method.</p>
+
+<p id="_0d52a871-fd25-3077-5a0b-14398ca6bdc2">In addition, it is <tt>REQUIRED</tt> that the CalWS implementation include the Properties operation to provide dynamic information regarding CalWS capabilities, options, etc. that are supported.</p>
+</clause>
+
+<clause id="_properties" obligation="normative">
+<title>Properties</title>
+<p id="_eddd7241-c6b5-9210-e1de-1149a7a74ce9">A service or resource will have a number of properties which describe the current state of that service or resource. These properties are accessed through the execution of a properties operation specifying the target resource. See <xref target="sec-7"/></p>
+</clause>
+
+<clause id="_operations" obligation="normative">
+<title>Operations</title>
+<p id="_a3486abc-21d5-44bf-037e-c38719d9c030">The following operations are defined by this specification:</p>
+
+<ul id="_274e5b9d-8ad7-e341-dd90-5358f9d68250"><li><p id="_f056f1d5-c055-f050-18c3-9e924e20e827">Retrieval and update of service and resource properties</p>
+</li>
+<li><p id="_1131a61f-cbf0-5e61-a7e6-b11148930397">Creation of a calendar object</p>
+</li>
+<li><p id="_87594225-bc28-cde7-500c-75c66abb54d9">Retrieval of a single calendar object</p>
+</li>
+<li><p id="_9c808ba3-3342-d684-71ab-3614ddccdc4e">Multiget of one or more calendar objects</p>
+</li>
+<li><p id="_04503cc9-998c-51da-0dbc-601612478474">Update of a calendar object</p>
+</li>
+<li><p id="_01470c89-0014-4110-ae50-14611cc76324">Deletion of a calendar object</p>
+</li>
+<li><p id="_a9de0e4b-f76e-9ced-a750-227fe5e3651b">Query</p>
+</li>
+<li><p id="_2d3324b2-5ef2-e39a-5477-9ce599708dcc">Free-busy query</p>
+</li>
+<li><p id="_6e30db52-a044-2ace-1888-c96fc44f0063">Multiple operations</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_calendar_object_resources" obligation="normative">
+<title>Calendar Object Resources</title>
+<p id="_4a5e9813-d064-638b-54db-fae2bc83fae0">The same restrictions apply to Calendar Object Resources as specified in CalDAV <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"><localityStack><locality type="section"><referenceFrom>4.2</referenceFrom></locality></localityStack></eref>. An additional constraint for CalWS is that no timezone specifications are transferred with the data.</p>
+</clause>
+
+<clause id="_timezone_information" obligation="normative">
+<title>Timezone information</title>
+<p id="_ae27ff09-ac49-cadd-effa-f1d80f8b2940">It is assumed that the client and server each have access to a full set of up to date timezone information.</p>
+
+<p id="_5d8c2a07-bc5c-a2f9-51da-e0bf7f8bfad1">Timezones will be referenced by a timezone identifier from the full set of Olson data together with a set of well-known aliases. CalWS services may advertise a timezone service (which may be the same service acting as a timezone server) through the server properties object. The timezone service operations are defined in  <eref type="inline" bibitemid="tz-service" citeas="Internet-Draft draft-douglass-timezone-service-04"/>. The service can provide a list of timezone identifiers and aliases.</p>
+</clause>
+
+<clause id="_error_conditions" obligation="normative">
+<title>Error conditions</title>
+<p id="_e42b2fcc-1afd-0cde-32b5-4ac63dbb81ea">Each operation on the calendar system has a number of pre-conditions and post-conditions that apply. If any of these are violated the response message will have a status code indicating an error occurred and will contain an error response element providing details.</p>
+
+<p id="_4933e2a9-d13d-b2ec-05ef-718cf331348c">A “precondition” for a method describes the state of the server that must be true for that method to be performed. A “postcondition” of a method describes the state of the server that must be true after that method has been completed. Any violation of these conditions will result in an error response in the message.</p>
+
+<p id="_11bfa65c-6c78-ae6c-0fe7-a6ece4d5eee6">Each method specification defines the preconditions that must be satisfied before the method can succeed. A number of postconditions are generally specified which define the state that must exist after the execution of the operation. Preconditions and postconditions are defined as error elements in the CalWS-SOAP XML namespace, “ <link target="http://docs.oasis-open.org/ws-calendar/ns/soap"/>”.</p>
+
+<clause id="_example_error_with_error_condition" obligation="normative">
+<title>Example: error with error condition</title>
+<sourcecode id="_52f1f237-5c64-a553-4e5a-c5cc08874c20" unnumbered="true">&lt;?xml version="1.0" encoding="utf-8"
+  xmlns:CW="http://docs.oasis-open.org/ws-calendar/ns/soap" ?&gt;
+&lt;CW:error&gt;
+  &lt;CW:uidConflict&gt;
+    &lt;CW:href&gt;/user/mike/calendar/abcd-0123456789.ics&lt;/CW:href&gt;
+  &lt;/CW:uidConflict&gt;
+  &lt;CW:description&gt;Unknown property &lt;/CW:description&gt;
+&lt;/CW:error&gt;</sourcecode>
+
+</clause>
+</clause>
+</clause>
+
+<clause id="_calws_soap_messages" obligation="normative">
+<title>CalWS-SOAP Messages</title>
+<p id="_ab40164b-f872-2874-f076-e3dec4253a63">This section describes the common elements and structure of CalWS-SOAP messages. The conventions followed are shown in <xref target="tab1"/></p>
+
+<table id="tab1">
+<name>Field column descriptions</name>
+<thead><tr><th valign="top" align="left">Header</th>
+<th valign="top" align="left">Description</th>
+<th valign="top" align="left">Values</th>
+<th valign="top" align="left">Meaning</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Field</td>
+<td valign="top" align="left">Name of the field.</td>
+<td valign="top" align="left"/><td valign="top" align="left">Prefixed with / to indicate a child-relationship Prefixed with # to indicate an attribute</td>
+</tr><tr><td valign="top" align="left">Type</td>
+<td valign="top" align="left">XML schema type</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" rowspan="4" align="left">#</td>
+<td valign="top" rowspan="4" align="left">Cardinality of the field</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">One occurrence</td>
+</tr><tr><td valign="top" align="left">0..1</td>
+<td valign="top" align="left">Zero or one occurrence</td>
+</tr><tr><td valign="top" align="left">0..*</td>
+<td valign="top" align="left">Zero or more occurrences</td>
+</tr><tr><td valign="top" align="left">1..*</td>
+<td valign="top" align="left">One or more occurrences</td>
+</tr><tr><td valign="top" rowspan="3" align="left">?</td>
+<td valign="top" rowspan="3" align="left">Presence</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Always required</td>
+</tr><tr><td valign="top" align="left">N</td>
+<td valign="top" align="left">Optional</td>
+</tr><tr><td valign="top" align="left">C</td>
+<td valign="top" align="left">Conditional — dependent on the message or other conditions</td>
+</tr><tr><td valign="top" align="left">Description</td>
+<td valign="top" align="left">A short description</td>
+<td valign="top" align="left"/><td valign="top" align="left"/></tr></tbody>
+</table>
+
+<clause id="_common_elements_and_types" obligation="normative">
+<title>Common Elements and types</title>
+<p id="_e5a3d871-c55e-c576-aa62-3fb5c2ad4e55">The following tables define the base types for requests and responses. All CalWS-SOAP messages and responses are based on these types.</p>
+
+<p id="_cfc7c558-5c2a-a345-7d93-16083aeef2e8">All requests must include an href which specifies the target for the request. There is also an id attribute which will be copied into the response to help identify it.</p>
+
+<table id="tab2">
+<name>BaseRequestType elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Required in each request to identify the target of the message.</td>
+</tr><tr><td valign="top" align="left">#id</td>
+<td valign="top" align="left">int</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Useful for tying responses to requests.</td>
+</tr></tbody>
+</table>
+
+<p id="_4310dc26-3506-27e3-147a-b1cc6e86fd5d">A response may include an error response element of type ErrorResponseType. This element will be returned in response messages when some form of processing error occurs and provides further information on the error beyond the basic status code.</p>
+
+<table id="tab3">
+<name>ErrorResponseType elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">?</td>
+<td valign="top" align="left">ErrorCodeType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">One of the error code elements defined below</td>
+</tr><tr><td valign="top" align="left">description</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Optional descriptive message</td>
+</tr></tbody>
+</table>
+
+<clause id="_errorcodetype" obligation="normative">
+<title>ErrorCodeType</title>
+<p id="_22e4b158-773e-2e8c-4b40-7da8e8e772ef">The following table defines the error codes that may be returned as an element of ErrorCodeType.</p>
+
+<table id="tab4">
+<name>ErrorCodeType definitions</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><p id="_80f080f7-a1ba-f6e0-0468-c233bed57307">forbidden</p>
+</td>
+<td valign="top" align="left"><p id="_63df7124-5494-a731-3353-12567a25115c">ForbiddenType</p>
+</td>
+<td valign="top" align="left"><p id="_cc9c4b0f-74cb-ccd4-468d-9875080e7cf3">Attempted to carry out a forbidden operation.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_070aee79-84c1-e809-8c46-f5cfd4f61680">targetExists</p>
+</td>
+<td valign="top" align="left"><p id="_549ae413-052d-0669-c233-e47d57af0216">TargetExistsType</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_05076f04-aed6-dcf6-989d-b414990d9671">targetDoesNotExist</p>
+</td>
+<td valign="top" align="left"><p id="_cd5bb60b-d95f-47d0-9576-e8fe2d028f85">TargetDoesNotExistType</p>
+</td>
+<td valign="top" align="left"><p id="_b6343468-5aca-fc28-d4d3-fa714800e921">The supplied href does not reference an existing resource.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_67a8239f-d4c5-5231-ef4f-0c2e0a65db01">targetNotEntity</p>
+</td>
+<td valign="top" align="left"><p id="_26f33523-5fc3-7147-d601-3992762b2955">TargetNotEntityType</p>
+</td>
+<td valign="top" align="left"><p id="_06292d91-fb65-8997-9909-916910205501">The supplied href does not target an entity. For example a fetch item was attempted against a collection.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_0c5f4a66-038e-9975-25d8-98c63944ddcb">notCalendarData</p>
+</td>
+<td valign="top" align="left"><p id="_f75a482f-d4bf-fcb0-ad03-1a1b41458f3b">NotCalendarDataType</p>
+</td>
+<td valign="top" align="left"><p id="_08e823f4-b9ae-9f97-a43d-98d36d24e6b7">The supplied entity is not calendar data.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_2ac44975-0e33-291d-834a-ba5d9524039b">invalidCalendarData</p>
+</td>
+<td valign="top" align="left"><p id="_39fea487-1a47-af22-5620-1aaaafad9389">InvalidCalendarDataType</p>
+</td>
+<td valign="top" align="left"><p id="_6709a802-721c-5bd1-703f-e5fdef4b7854">The supplied entity does not represent valid calendar data.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_cdae6167-7f2d-1c50-9a92-38a773f9b18f">invalidCalendarObjectResource</p>
+</td>
+<td valign="top" align="left"><p id="_d55f5774-7963-d752-e6ec-bb4be8509c71">InvalidCalendarObjectResourceType</p>
+</td>
+<td valign="top" align="left"><p id="_7f977d70-64f3-fc8d-7bcb-74f9a187a546">The supplied entity does not represent valid calendar data.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_e73af870-68e1-8de4-b5e5-b6e4ec07c757">unsupportedCalendarComponent</p>
+</td>
+<td valign="top" align="left"><p id="_60ba8035-bd9f-b4d4-5263-a64f19e1e646">UnsupportedCalendarComponentType</p>
+</td>
+<td valign="top" align="left"><p id="_7363bd60-6523-0d59-fadf-e2ecd86a91b4">Indicates that the calendar collection does not accept components of the type the client is attempting to store. The accepted component types can be determined by examining the calendar collection properties.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_907a1f3f-82cf-8df3-5f04-3972b2268cd2">invalidCalendarCollectionLocation</p>
+</td>
+<td valign="top" align="left"><p id="_6325349b-8b1f-7209-677c-fb87b1376830">InvalidCalendarCollectionLocationType</p>
+</td>
+<td valign="top" align="left"><p id="_04cf2504-ae0e-4da8-6bbe-52a03452ce0f">Error indicating at least one of two conditions:</p>
+
+<ol id="_70eb9d95-0710-4c85-063d-fae468b00040" type="arabic"><li><p id="_5448995c-f660-059c-883b-71d40c3e0502">The server does not allow the creation of calendar collections at the given location in its namespace, or</p>
+</li>
+<li><p id="_991ac52d-bd7d-ef23-dbec-18103bb88773">The parent collection of the Request-URI exists but cannot accept members</p>
+</li>
+</ol>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_4926c88a-df3f-5b44-a797-7b10c675bd78">exceedsMaxResourceSize</p>
+</td>
+<td valign="top" align="left"><p id="_d03c4382-7d83-9f99-d069-9ca88355cb3d">ExceedsMaxResourceSizeType</p>
+</td>
+<td valign="top" align="left"><p id="_1d2bc733-601c-9a0c-119f-b95146d219c4">Error indicating that the total size of the event or task is too large. The maximum size is set by the target system and can be determined from the properties.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_c65c1b17-f3ba-7eca-18f5-ac04aa24bca2">beforeMinDateTime</p>
+</td>
+<td valign="top" align="left"><p id="_fcddc55c-07f2-9cc5-f2ed-cbfd89ee1c3a">BeforeMinDateTimeType</p>
+</td>
+<td valign="top" align="left"><p id="_eba42fc3-3df3-f4fa-17e4-3fd29d88bae3">Error indicating that the start or end of an event or task is too far into the past.</p>
+
+<p id="_f95b78f1-4eb6-486f-7f10-0a5e1604e4ed">The minimum date is set by the target system and can be determined from the properties.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_ac46f4cc-370f-2e06-f6b5-0415b184e81b">afterMaxDateTime</p>
+</td>
+<td valign="top" align="left"><p id="_05de6c1f-0740-62d8-2d05-7d7b9ad8538d">AfterMaxDateTimeType</p>
+</td>
+<td valign="top" align="left"><p id="_40cf441b-ad19-ccc2-f881-dba01d4a4ea2">Error indicating that the start or end of an event or task is too far into the future.</p>
+
+<p id="_48f5c744-e549-2bf9-f701-618f20e71380">The maximum date is set by the target system and can be determined from the properties.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_53fc048b-3123-696f-6c7a-956ed67ce2f6">tooManyInstances</p>
+</td>
+<td valign="top" align="left"><p id="_1bca7dd7-ca98-848b-8c8a-0e3017e507a4">TooManyInstancesType</p>
+</td>
+<td valign="top" align="left"><p id="_3fb2dc2d-8b5a-0965-46ba-7680a5989a4d">Error indicating that a recurring event has too many instances.</p>
+
+<p id="_320e50b3-e3fe-a8b1-8256-2401eee20480">The maximum number is set by the target system and can be determined from the properties.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_1663249a-64ce-e9da-4820-1b5b04f934d0">tooManyAttendeesPerInstance</p>
+</td>
+<td valign="top" align="left"><p id="_e38d4cc2-24ce-6e99-633b-0aa9f0199cab">TooManyAttendeesPerInstanceType</p>
+</td>
+<td valign="top" align="left"><p id="_94a16eb5-9137-41a2-9916-897f0a58c8be">Error indicating that a scheduling message has too many attendees.</p>
+
+<p id="_005fb422-4904-e896-11e7-72e74c67a7e0">The maximum number is set by the target system and can be determined from the properties.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_0f9e6437-ae27-0da0-9868-46c7bc59b9b6">partialSuccess</p>
+</td>
+<td valign="top" align="left"><p id="_ae2ad90a-f200-c707-31eb-1250e096e94a">PartialSuccessType</p>
+</td>
+<td valign="top" align="left"><p id="_659c1c12-a0d9-3061-755c-cd5bdb5c38d3">Indicates that a MultiOpType operation was partially successful. Returned when the operation is marked as non-atomic and one or more sub-operations failed. The entire response needs to be examined to determine failing operations.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_06475295-69d3-a38c-bac1-38c0743dd71b">missingChangeToken</p>
+</td>
+<td valign="top" align="left"><p id="_13b6b32b-dc26-2f75-3e4e-038cdbc10e1e">MissingChangeTokenType</p>
+</td>
+<td valign="top" align="left"><p id="_e8c53221-c900-ce2a-6398-4473306d0111">An operation was attempted which required a change token but none was supplied.</p>
+
+<p id="_22ea4590-d2bf-7741-99cd-643155116aed">Note that it appears that the marshalling or demarshalling should handle this as the token is required. It doesn’t.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_9ffe5d78-ffeb-11ae-ce48-24cd497ac585">mismatchedChangeToken</p>
+</td>
+<td valign="top" align="left"><p id="_70a2fb31-f99f-cd31-685b-1f7c113d36c4">MismatchedChangeTokenType</p>
+</td>
+<td valign="top" align="left"><p id="_25927e1d-1fcf-9c5a-6440-74543efe9350">An update operation was attempted with a change token value which does not match that held by the service. The client must refetch the entity to refresh its cached value and token.</p>
+
+<p id="_42539c4d-d7bd-e49d-6cf4-9ebd3e052fcf">Note that matching of tokens is a server responsibility. The token is opaque to the client but probably structured to the server. Certain non-conflicting updates may be allowed even if the token has changed.</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_4691f092-b9dc-e895-6540-ab4f132cc786">invalidFilter</p>
+</td>
+<td valign="top" align="left"><p id="_cd894e25-e7ca-e87e-bd01-dc385afdae5f">InvalidFilterType</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_c40274ea-a9cb-a56e-4e20-4453763f5983">uidConflict</p>
+</td>
+<td valign="top" align="left"><p id="_6f61811b-0d35-b538-656a-6f980499972e">UidConflictType</p>
+</td>
+<td valign="top" align="left"><p id="_5b1b8fda-c724-c251-5cec-1bab433d8404">An attempt was made to store an entity which would result in more than one entity having equal uids. The entity uid must be unique within a collection. Recurring event or task overrides have the same uid and are considered part of a single entity.</p>
+</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_baseresponsetype" obligation="normative">
+<title>BaseResponseType</title>
+<table id="tab5">
+<name>BaseResponseType elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">#id</td>
+<td valign="top" align="left">int</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Copied over from the request</td>
+</tr><tr><td valign="top" align="left">status</td>
+<td valign="top" align="left">StatusType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Give the overall status of the response</td>
+</tr><tr><td valign="top" align="left">message</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Optional explanatory message</td>
+</tr><tr><td valign="top" align="left">errorResponse</td>
+<td valign="top" align="left">ErrorCodeType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Required for a status of Error.</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+</clause>
+
+<clause id="_properties_2" obligation="normative">
+<title>Properties</title>
+<p id="_7737bffe-30be-bcd3-28a2-712dc151626e">The getPropertiesReponse message contains 0 or more properties defined below. Some properties apply to the service as a whole while others apply only to the targeted resource. The targeted resource may have property values which override those for the service. For example, the timezone identifier for a particular collection may differ from the default timezone identifier for the system.</p>
+
+<p id="_dc974620-3d4f-bf22-6446-5235e29a7322">Each property is an XML complex type based on the GetPropertiesBasePropertyType.</p>
+
+<clause id="_childcollection" obligation="normative">
+<title>childCollection</title>
+<p id="_4c17b7f4-7e8d-9f1a-bd78-2171ee735f33">Provides information about a child collections for the target.</p>
+
+<table id="tab6">
+<name>ChildCollectionType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The URI of the collection.</td>
+</tr><tr><td valign="top" align="left">collection</td>
+<td valign="top" align="left">CollectionType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">This is a collection</td>
+</tr><tr><td valign="top" align="left">calendarCollection</td>
+<td valign="top" align="left">CalendarCollectionType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">If present this is a calendar collection</td>
+</tr></tbody>
+</table>
+
+<p id="_df1ec50d-3e37-9245-fccc-42749dbaea25">See <xref target="sec-resourceType"/> for descriptions of CollectionType and Calendar CollectionType.</p>
+</clause>
+
+<clause id="_creationdatetime" obligation="normative">
+<title>creationDateTime</title>
+<p id="_d794ff50-5140-c6bc-1e6f-764584780557">This property <tt>MAY</tt> be returned for the service and <tt>SHOULD</tt> be returned for any targeted resource.</p>
+
+<table id="tab7">
+<name>CreationDateTimeType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">dateTime</td>
+<td valign="top" align="left">dateTime</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">A date-time as defined in Error: Reference source not found Section 5.6.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_displayname" obligation="normative">
+<title>displayName</title>
+<p id="_ef520860-b592-09c7-2cd5-e4e5b1f4824c">This property <tt>SHOULD</tt> be returned for any targeted resource.</p>
+
+<table id="tab8">
+<name>DisplayNameType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">string</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The displayable name.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_lastmodifieddatetime" obligation="normative">
+<title>lastModifiedDateTime</title>
+<p id="_0c04d082-69cf-f420-f62f-a7fd60f1bf46">This property <tt>MAY</tt> be returned for the service and SHOULD be returned for any targeted resource.</p>
+
+<table id="tab9">
+<name>LastModifiedDateTimeType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">dateTime</td>
+<td valign="top" align="left">dateTime</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">A date-time as defined in <eref type="inline" bibitemid="wscal" citeas="WS-Calendar"/>.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_maxattendeesperinstance" obligation="normative">
+<title>maxAttendeesPerInstance</title>
+<p id="_7ddbb95f-f8c1-2620-d6f8-aa14e6a1b611">This property <tt>SHOULD</tt> be returned for the service and MAY be returned for any targeted collection resource.</p>
+
+<table id="tab10">
+<name>MaxAttendeesPerInstanceType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">integer</td>
+<td valign="top" align="left">integer</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The maximum number of attendees allowed per event or task instance.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_maxdatetime" obligation="normative">
+<title>maxDateTime</title>
+<p id="_65bc8d76-09e2-e1ca-0e81-885d55d9ff05">This property <tt>SHOULD</tt> be returned for the service and <tt>MAY</tt> be returned for any targeted collection resource.</p>
+
+<table id="tab11">
+<name>MaxDateTimeType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">dateTime</td>
+<td valign="top" align="left">dateTime</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The maximum date and time for an event.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_maxinstances" obligation="normative">
+<title>maxInstances</title>
+<p id="_2e34c85e-9a4d-e36d-9167-1f6c941564ba">This property <tt>SHOULD</tt> be returned for the service and <tt>MAY</tt> be returned for any targeted collection resource.</p>
+
+<table id="tab12">
+<name>MaxInstancesType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">integer</td>
+<td valign="top" align="left">integer</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The maximum number of instances for a recurring event.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_maxresourcesize" obligation="normative">
+<title>maxResourceSize</title>
+<p id="_5cf05542-4d78-e9b1-f34d-131f943d73e9">This property <tt>SHOULD</tt> be returned for the service and <tt>MAY</tt> be returned for any targeted collection resource.</p>
+
+<table id="tab13">
+<name>MaxResourceSizeType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">integer</td>
+<td valign="top" align="left">integer</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">An integer value defining the maximum size of a resource in octets that the server is willing to accept when a calendar object resource is stored in a calendar collection.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_mindatetime" obligation="normative">
+<title>minDateTime</title>
+<p id="_d1fec64d-6c20-9c59-cfa6-b8b5bd80c6d3">This property <tt>SHOULD</tt> be returned for the service and <tt>MAY</tt> be returned for any targeted collection resource.</p>
+
+<table id="tab14">
+<name>MinDateTimeType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">dateTime</td>
+<td valign="top" align="left">dateTime</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The minimum date and time for an event.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_principalhome" obligation="normative">
+<title>principalHome</title>
+<p id="_e69ae895-5c80-245f-9429-9c0669fe501e">This property <tt>SHOULD</tt> be returned for the service and <tt>MAY</tt> be returned for any targeted collection resource.</p>
+
+<table id="tab15">
+<name>PrincipalHomeType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">string</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The home path of the currently authenticated user.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_resourcedescription" obligation="normative">
+<title>resourceDescription</title>
+<p id="_1aea066d-3459-75a9-7e14-e2da78c36505">Provides some descriptive text for the targeted collection.</p>
+
+<table id="tab16">
+<name>ResourceDescriptionType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">string</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The descriptive text.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_resourceowner" obligation="normative">
+<title>resourceOwner</title>
+<p id="_3b53a0a2-6723-24c1-4e3f-65e7c459a5f1">This property <tt>SHOULD</tt> be returned for any targeted resource.</p>
+
+<table id="tab17">
+<name>ResourceownerType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">string</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The principal URL of the resource owner.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_resourcetimezoneid" obligation="normative">
+<title>resourceTimezoneId</title>
+<p id="_a9bced2a-0d8a-a6d8-55bd-6c4ea86f5374">This property <tt>SHOULD</tt> be returned for the service and <tt>MAY</tt> be returned for any targeted collection resource.</p>
+
+<table id="tab18">
+<name>ResourceTimezoneIdType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">string</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The timezone identifier.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="sec-resourceType" obligation="normative">
+<title>resourceType</title>
+<p id="_df7a631c-079d-98ed-9a42-9919df846cc4">Provides information about a targeted resource.</p>
+
+<table id="tab19">
+<name>ResourceTypeType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The URI of the collection.</td>
+</tr><tr><td valign="top" align="left">collection</td>
+<td valign="top" align="left">CollectionType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">If present this is a collection</td>
+</tr><tr><td valign="top" align="left">calendarCollection</td>
+<td valign="top" align="left">CalendarCollectionType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">If present this is a calendar collection</td>
+</tr><tr><td valign="top" align="left">inbox</td>
+<td valign="top" align="left">InboxType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">If present this is a scheduling inbox</td>
+</tr><tr><td valign="top" align="left">outbox</td>
+<td valign="top" align="left">OutboxType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">If present this is a scheduling outbox</td>
+</tr><tr><td valign="top" align="left">inbox</td>
+<td valign="top" align="left">InboxType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">If present this is a scheduling inbox</td>
+</tr><tr><td valign="top" align="left">xresource</td>
+<td valign="top" align="left">XresourceType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">If present provides further type information.</td>
+</tr></tbody>
+</table>
+
+<p id="_b5e829d5-c13a-5c45-d75b-96771facfd21">All the child types are empty elements with the exception of XresourceType.</p>
+
+<table id="tab20">
+<name>XresourceType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">string</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Extra information.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_supportedcalendarcomponentset" obligation="normative">
+<title>supportedCalendarComponentSet</title>
+<p id="_7384f59f-0477-3a11-3527-5b752ad882dc">This property identifies which component types the service is prepared to store. The allowable components may be different for different targets on the same service.</p>
+
+<table id="tab21">
+<name>SupportedCalendarComponentSetType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Any valid iCalendar component name</td>
+<td valign="top" align="left">xcal:BaseComponentType</td>
+<td valign="top" align="left">0..n</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">One or more empty iCalendar components.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_supportedfeatures" obligation="normative">
+<title>supportedFeatures</title>
+<p id="_d14b6713-be5a-8786-25b5-462588ac5969">This property <tt>SHOULD</tt> be returned for the service and <tt>MAY</tt> be returned for any targeted collection resource.</p>
+
+<p id="_cf0e873c-c5c5-83fe-6543-88437643397d">The property shows what protocol features are supported by the server.</p>
+
+<table id="tab22">
+<name>SupportedFeaturesType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">calendarAccessFeature</td>
+<td valign="top" align="left">CalendarAccessFeatureType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Indicates the service supports this protocol.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_timezoneserver" obligation="normative">
+<title>timezoneServer</title>
+<p id="_8bde7847-35a8-4d60-7461-eef586d4bc80">This property <tt>SHOULD</tt> be returned for the service and <tt>MAY</tt> be returned for any targeted collection resource.</p>
+
+<table id="tab23">
+<name>TimezoneServerType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">string</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The location of a timezone service used to retrieve timezone information and specifications. This may be an absolute URL referencing some other service or a relative URL if the current server also provides a timezone service.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_calwsprivilege_set_xml_element" obligation="normative">
+<title>CalWS:privilege-set XML element</title>
+<p id="_1aae3037-656e-31a2-4f77-b613e4fe3d5a"><link target="http://docs.oasis-open.org/ns/wscal/calws:privilege-set"/></p>
+
+<p id="_b38a0ba3-ff9f-3b54-faff-986de2131031">Appears within a link relation describing collections or entities and specifies the set of privileges allowed to the current authenticated principal for that collection or entity.</p>
+
+<sourcecode id="_1532c7fc-525a-aa29-0403-642c3ee6eab4" unnumbered="true">&lt;!ELEMENT calws:privilege-set (calws:privilege*)&gt;
+&lt;!ELEMENT calws:privilege ANY&gt;</sourcecode>
+
+
+<p id="_8ecd6ec9-66a7-b2b9-bf5a-d495c4caa5aa">Each privilege element defines a privilege or access right. The following set is currently defined</p>
+
+<ul id="_be870e9e-ac6b-b1ad-f0fe-71e28fc28b21"><li><p id="_05bb26fb-c74f-2ca8-fc26-1993dd58e912">CalWS: Read — current principal has read access</p>
+</li>
+<li><p id="_ebe19286-2810-beb9-d358-601158f4efec">CalWS: Write — current principal has write access</p>
+</li>
+</ul>
+
+<sourcecode id="_6a5929bc-5679-ca57-c62f-4f2f72640aa1" unnumbered="true">&lt;calWS:privilege-set&gt;
+  &lt;calWS:privilege&gt;&lt;calWS:read&gt;&lt;/calWS:privilege&gt;
+  &lt;calWS:privilege&gt;&lt;calWS:write&gt;&lt;/calWS:privilege&gt;
+&lt;/calWS:privilege-set&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="sec-7" obligation="normative">
+<title>Retrieving Collection and Service Properties</title>
+<p id="_9f83c561-b43b-2a3a-84f6-856ab7d60179">The CalWS-SOAP getProperties request is used to fetch properties. The href can target the service with a path of “/” or any entity within the service.</p>
+
+<p id="_f78a8073-9c47-6c44-7338-cc0be352767a">The service properties define the global limits and defaults. Any properties defined on collections within the service hierarchy override those service defaults. The service may choose to prevent such overriding of defaults and limits when appropriate. The tables below show the fields for request and response.</p>
+
+<table id="tab24">
+<name>GetPropertiesType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Identify the target of the request. “/” for the service.</td>
+</tr></tbody>
+</table>
+
+<table id="tab25">
+<name>GetPropertiesResponseType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Identify the target of the request. “/” for the service.</td>
+</tr><tr><td valign="top" align="left">?</td>
+<td valign="top" align="left">GetPropertiesBasePropertyType</td>
+<td valign="top" align="left">0..n</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">0 or more properties of the targeted resource</td>
+</tr></tbody>
+</table>
+
+<clause id="_example_retrieving_server_properties" obligation="normative">
+<title>Example — retrieving server properties</title>
+<sourcecode id="_2cc4657a-9c30-3177-e2e3-9966b1637bca" unnumbered="true">&gt;&gt;Request
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:getProperties xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+        xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/&lt;/ns2:href&gt;
+    &lt;/ns2:getProperties&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt;Response
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header /&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:getPropertiesResponse
+      xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+      xmlns:ns4="urn:ietf:params:xml:ns:icalendar-2.0"
+      id="0" &gt;
+      &lt;ns2:href&gt;/&lt;/ns2:href&gt;
+      &lt;ns2:lastModifiedDateTime&gt;
+        &lt;ns2:dateTime&gt;2012-01-04T18:21:14Z&lt;/ns2:dateTime&gt;
+      &lt;/ns2:lastModifiedDateTime&gt;
+      &lt;ns2:supportedCalendarComponentSet&gt;
+        &lt;ns4:vevent /&gt;
+        &lt;ns4:vtodo /&gt;
+        &lt;ns4:vavailability /&gt;
+      &lt;/ns2:supportedCalendarComponentSet&gt;
+      &lt;ns2:resourceType&gt;
+        &lt;ns2:collection /&gt;
+      &lt;/ns2:resourceType&gt;
+      &lt;ns2:supportedFeatures&gt;
+        &lt;ns2:calendarAccessFeature /&gt;
+      &lt;/ns2:supportedFeatures&gt;
+      &lt;ns2:maxInstances&gt;
+        &lt;ns2:integer&gt;1000&lt;/ns2:integer&gt;
+      &lt;/ns2:maxInstances&gt;
+      &lt;ns2:maxResourceSize&gt;
+        &lt;ns2:integer&gt;100000&lt;/ns2:integer&gt;
+      &lt;/ns2:maxResourceSize&gt;
+    &lt;/ns2:getPropertiesResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_creating_calendar_object_resources" obligation="normative">
+<title>Creating Calendar Object Resources</title>
+<p id="_40ef7eee-f4e8-479b-c816-5fc6f2357293">Creating calendar object resources is carried out by using a CalWS-SOAP addItem request targeted at the parent collection and containing the resource to be created. The response will contain the href of the newly created object.</p>
+
+<p id="_82893d82-361d-0dbf-663c-526fd1ef8761">The iCalendar entity in the request <tt>MUST</tt> contain only a single calendaring entity with any related overrides.</p>
+
+<table id="tab26">
+<name>AddItemType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Identify the target of the request.</td>
+</tr><tr><td valign="top" align="left">icalendar</td>
+<td valign="top" align="left">xcal:IcalendarType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The entity to be created</td>
+</tr></tbody>
+</table>
+
+<p id="_419572d1-e743-bb6c-f388-44da34a2bb62">The service will respond with an AddItemResponseType giving either the href and change token of the new entity or an error response.</p>
+
+<table id="tab27">
+<name>AddItemResponseType additional fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Href of the new entity for a successful request.</td>
+</tr><tr><td valign="top" align="left">changeToken</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Change token for the new entity</td>
+</tr></tbody>
+</table>
+
+<clause id="_preconditions_for_calendar_object_creation" obligation="normative">
+<title>Preconditions for Calendar Object Creation</title>
+<ul id="_fb482999-878e-62c3-779e-d02f007005bc"><li><p id="_23f49872-cc66-1e3b-8ce3-5cb44ad92301"><strong>CalWS:target-exists</strong>: The entity already exists.</p>
+</li>
+<li><p id="_42c48d89-7499-5935-73c1-88067d535a61"><strong>CalWS:not-calendar-data</strong>: The resource submitted <tt>MUST</tt> be a supported media type (i.e., iCalendar) for calendar object resources;</p>
+</li>
+<li><p id="_2cc9e6f6-fff7-4060-caf7-c5bce7cca12b"><strong>CalWS:invalid-calendar-data</strong>: The resource submitted <tt>MUST</tt> be valid data for the media type being specified (i.e.,  <tt>MUST</tt> contain valid iCalendar data);</p>
+</li>
+<li><p id="_45dc43e8-885f-0356-f61a-662eacb6fa3b"><strong>CalWS:invalid-calendar-object-resource</strong>: The resource submitted in the request <tt>MUST</tt> obey all restrictions specified in Calendar Object Resources (e.g., calendar object resources  <tt>MUST NOT</tt> contain more than one type of calendar component, calendar object resources  <tt>MUST NOT</tt> specify the iCalendar  <tt>METHOD</tt> property, etc.);</p>
+</li>
+<li><p id="_c4dc28d1-1240-f804-de86-43e98e615be9"><strong>CalWS:unsupported-calendar-component</strong>: The resource submitted in the request <tt>MUST</tt> contain a type of calendar component that is supported in the targeted calendar collection;</p>
+</li>
+<li><p id="_299d00c8-1af5-31da-de53-a1090c739fa2"><strong>CalWS:uid-conflict</strong>: The resource submitted in the request <tt>MUST NOT</tt> specify an iCalendar UID property value already in use in the targeted calendar collection or overwrite an existing calendar object resource with one that has a different UID property value. Servers  <tt>SHOULD</tt> report the URL of the resource that is already making use of the same UID property value in the CalWS:href element</p>
+<sourcecode id="_d195c0cb-3413-2b0d-ea86-85f7401b16ad" unnumbered="true">&lt;!ELEMENT uid-conflict (CalWS:href)&gt;</sourcecode>
+
+</li>
+<li><p id="_1929ab68-07b1-2b48-3e3c-af6712454977"><strong>CalWS:exceeds-max-resource-size</strong>: The resource submitted in the request <tt>MUST</tt> have an octet size less than or equal to the value of the CalDAV:max-resource-size property value on the calendar collection where the resource will be stored;</p>
+</li>
+<li><p id="_b497b84d-9d14-ba7e-165f-fb256eee33f1"><strong>CalWS:before-min-date-time</strong>: The resource submitted in the request <tt>MUST</tt> have all of its iCalendar <tt>DATE</tt> or <tt>DATE-TIME</tt> property values (for each recurring instance) greater than or equal to the value of the CalDAV:min-date-time property value on the calendar collection where the resource will be stored;</p>
+</li>
+<li><p id="_b747f318-82c1-4ff8-39f6-577403b8572e"><strong>CalWS:after-max-date-time</strong>: The resource submitted in the request <tt>MUST</tt> have all of its iCalendar <tt>DATE</tt> or <tt>DATE-TIME</tt> property values (for each recurring instance) less than the value of the CalDAV:max-date-time property value on the calendar collection where the resource will be stored;</p>
+</li>
+<li><p id="_fb925f41-0f5a-4dcd-afdb-6cc458a7b58c"><strong>CalWS:too-many-instances</strong>: The resource submitted in the request <tt>MUST</tt> generate a number of recurring instances less than or equal to the value of the CalDAV: max-instances property value on the calendar collection where the resource will be stored;</p>
+</li>
+<li><p id="_e839e6a4-9e38-9907-5cc1-9e1592fc0377"><strong>CalWS:too-many-attendees-per-instance</strong>: The resource submitted in the request <tt>MUST</tt> have a number of  <tt>ATTENDEE</tt> properties on any one instance less than or equal to the value of the CalDAV:max-attendees-per-instance property value on the calendar collection where the resource will be stored;</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_example_successful_additem" obligation="normative">
+<title>Example — successful addItem</title>
+<sourcecode id="_84dce092-b3b5-e564-323f-b20e9a3f474f" unnumbered="true">&gt;&gt;Request
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:addItem xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                 xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar&lt;/ns2:href&gt;
+      &lt;ns3:icalendar&gt;
+        &lt;ns3:vcalendar&gt;
+          &lt;ns3:components&gt;
+            &lt;ns3:vevent&gt;
+              &lt;ns3:properties&gt;
+                &lt;ns3:uid&gt;
+                  &lt;ns3:text&gt;1302064354993&lt;/ns3:text&gt;
+                &lt;/ns3:uid&gt;
+                &lt;ns3:summary&gt;
+                  &lt;ns3:text&gt;try this&lt;/ns3:text&gt;
+                &lt;/ns3:summary&gt;
+                &lt;ns3:dtstart&gt;
+                  &lt;ns3:date-time&gt;20110406T150000Z&lt;/ns3:date-time&gt;
+                &lt;/ns3:dtstart&gt;
+                &lt;ns3:dtend&gt;
+                  &lt;ns3:date-time&gt;20110406T160000Z&lt;/ns3:date-time&gt;
+                &lt;/ns3:dtend&gt;
+              &lt;/ns3:properties&gt;
+            &lt;/ns3:vevent&gt;
+          &lt;/ns3:components&gt;
+        &lt;/ns3:vcalendar&gt;
+      &lt;/ns3:icalendar&gt;
+    &lt;/ns2:addItem&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt;Response
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:addItemResponse xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                         xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:status&gt;OK&lt;/ns2:status&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar/1302064354993.ics&lt;/ns2:href&gt;
+      &lt;ns2:changeToken&gt;"20110406T155741Z-0"&lt;/ns2:changeToken&gt;
+    &lt;/ns2:addItemResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_retrieving_resources" obligation="normative">
+<title>Retrieving resources</title>
+<p id="_4970f9cd-cd4d-7dd0-9ead-aee17dc1f080">Fetching calendar object resources is carried out by using a CalWS-SOAP fetchItem request with an href specifying the entity to be fetched. The response will contain the calendaring entity with any related overrides.</p>
+
+<table id="tab28">
+<name>FetchItemType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Identify the target of the request.</td>
+</tr></tbody>
+</table>
+
+<p id="_121d74b9-9867-3827-dd8f-9361d568db40">The service will respond with a FetchItemResponseType containing either the change token, its href and the entity or an error response.</p>
+
+<table id="tab29">
+<name>FetchItemResponseType additional fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">changeToken</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">The change token for the fetched entity</td>
+</tr><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Identify the entity.</td>
+</tr><tr><td valign="top" align="left">icalendar</td>
+<td valign="top" align="left">xcal:IcalendarType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">The fetched entity</td>
+</tr></tbody>
+</table>
+
+<clause id="_example_successful_fetchitem" obligation="normative">
+<title>Example — successful fetchItem</title>
+<sourcecode id="_1d7ecc67-00ca-4b8c-6a78-8750460021e7" unnumbered="true">&gt;&gt;Request
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:fetchItem xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                   xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar/1302105461170.ics&lt;/ns2:href&gt;
+    &lt;/ns2:fetchItem&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt;Response
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:fetchItemResponse xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                           xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:status&gt;OK&lt;/ns2:status&gt;
+      &lt;ns2:changeToken&gt;"20110406T155741Z-0"&lt;/ns2:changeToken&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar/1302105461170.ics&lt;/ns2:href&gt;
+      &lt;ns3:icalendar&gt;
+        &lt;ns3:vcalendar&gt;
+          &lt;ns3:properties&gt;
+            &lt;ns3:prodid&gt;
+              &lt;ns3:text&gt;//Bedework.org//BedeWork V3.7//EN&lt;/ns3:text&gt;
+            &lt;/ns3:prodid&gt;
+            &lt;ns3:version&gt;
+              &lt;ns3:text&gt;2.0&lt;/ns3:text&gt;
+            &lt;/ns3:version&gt;
+          &lt;/ns3:properties&gt;
+          &lt;ns3:components&gt;
+            &lt;ns3:vevent&gt;
+              &lt;ns3:properties&gt;
+                &lt;ns3:created&gt;
+                  &lt;ns3:utc-date-time&gt;20110406T155741Z&lt;/ns3:utc-date-time&gt;
+                &lt;/ns3:created&gt;
+                &lt;ns3:dtend&gt;
+                  &lt;ns3:date-time&gt;20110406T160000Z&lt;/ns3:date-time&gt;
+                &lt;/ns3:dtend&gt;
+                &lt;ns3:dtstamp&gt;
+                  &lt;ns3:utc-date-time&gt;20110406T155741Z&lt;/ns3:utc-date-time&gt;
+                &lt;/ns3:dtstamp&gt;
+                &lt;ns3:dtstart&gt;
+                  &lt;ns3:date-time&gt;20110406T150000Z&lt;/ns3:date-time&gt;
+                &lt;/ns3:dtstart&gt;
+                &lt;ns3:last-modified&gt;
+                  &lt;ns3:utc-date-time&gt;20110406T155741Z&lt;/ns3:utc-date-time&gt;
+                &lt;/ns3:last-modified&gt;
+                &lt;ns3:summary&gt;
+                  &lt;ns3:text&gt;try this&lt;/ns3:text&gt;
+                &lt;/ns3:summary&gt;
+                &lt;ns3:uid&gt;
+                  &lt;ns3:text&gt;1302105461170&lt;/ns3:text&gt;
+                &lt;/ns3:uid&gt;
+              &lt;/ns3:properties&gt;
+            &lt;/ns3:vevent&gt;
+          &lt;/ns3:components&gt;
+        &lt;/ns3:vcalendar&gt;
+      &lt;/ns3:icalendar&gt;
+    &lt;/ns2:fetchItemResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+</clause>
+
+<clause id="_example_unsuccessful_fetchitem" obligation="normative">
+<title>Example — unsuccessful fetchItem</title>
+<sourcecode id="_4b1f0213-6d91-5868-38c3-55a4b6093687" unnumbered="true">&gt;&gt;Request
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:fetchItem xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                   xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar/nosuchevent.ics&lt;/ns2:href&gt;
+    &lt;/ns2:fetchItem&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt;Response
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:fetchItemResponse xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                           xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:status&gt;Error&lt;/ns2:status&gt;
+      &lt;ns2:errorResponse&gt;
+        &lt;ns2:targetDoesNotExist/&gt;
+      &lt;/ns2:errorResponse&gt;
+    &lt;/ns2:fetchItemResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_updating_resources" obligation="normative">
+<title>Updating resources</title>
+<p id="_b3a12dfa-fb85-8adc-9af2-34b05b7171f4">Calendar entity updates apply changes to a data model which has the form:</p>
+
+<ul id="_74b9959b-52ae-1b45-1f85-ff4cfb231d92"><li><p id="_64086f62-1208-5905-2f79-1cc86ae9f90b">An iCalendar element contains…​</p>
+</li>
+<li><p id="_b3599561-f27e-cdcc-b76e-8de5e5846580">a single vCalendar element which contains…​</p>
+</li>
+<li><p id="_9b84cc06-43cd-b394-c1b6-127a54c3ec06">one or more calendaring components, event, task etc each of which contain…​</p>
+</li>
+<li><p id="_44d4d22b-3d5b-df7d-b9c3-45c4715742e6">zero or more components, alarms etc or one or more properties each of which contains…​</p>
+</li>
+<li><p id="_f69be691-ed68-c0c9-7c12-a2bc235fb1b3">zero or more parameters and one or more values.</p>
+</li>
+</ul>
+
+<p id="_bbd59d0d-051e-f59b-00a6-5d8432072448">Thus we have a nested structure which does recurse to a limited extent and looks like</p>
+
+<sourcecode id="_af677005-a4ab-73f6-bc55-b07f2d27c9c9" unnumbered="true">&lt;icalendar&gt;
+  &lt;vcalendar&gt;
+    &lt;components&gt;
+      &lt;vevent&gt;
+        &lt;properties&gt;
+          &lt;uid&gt;
+            &lt;text&gt;1302064354993-a&lt;/text&gt;
+          &lt;/uid&gt;
+          &lt;summary&gt;
+            &lt;text&gt;try this&lt;/text&gt;
+          &lt;/summary&gt;
+          &lt;dtstart&gt;
+            &lt;date-time&gt;2011-07-18T15:00:00Z&lt;/date-time&gt;
+          &lt;/dtstart&gt;
+          &lt;dtend&gt;
+            &lt;date-time&gt;2011-07-18T16:00:00Z&lt;/date-time&gt;
+          &lt;/dtend&gt;
+        &lt;/properties&gt;
+      &lt;/vevent&gt;
+    &lt;/components&gt;
+  &lt;/vcalendar&gt;
+&lt;/icalendar&gt;</sourcecode>
+
+
+<p id="_ac53dc0e-ed72-56b2-97ea-52ec47169846">The update approach described here only allows for updating a single calendar entity, though that entity may consist of more than one component, for example an override to a repeating event.</p>
+
+<p id="_b6c7ee19-def8-aee9-3b97-cc8bfeb4561a">Resources are updated with the CalWS-SOAP updateItem request. The request contains the href of the entity to be updated, the current change token for that entity and the updates. The updates take the form of nested selections of an element from the current level in the data. The outermost selection is always for a vCalendar element — we ignore the iCalendar element. Nested within that outer selection is one for the components element followed by selections on the entity, event, task etc and so on.</p>
+
+<p id="_9a24e377-9e6a-f0c8-4efc-01242f7d6b99">Only 3 kinds of update may be applied at any point:</p>
+
+<ul id="_795aeef3-a3d9-f874-8edf-ccf8902cdf4d"><li><p id="_a49f3deb-d3ff-8d08-5a80-ded2d9b9b795">Remove — components, properties or parameters</p>
+</li>
+<li><p id="_d24d8cfb-e9f8-84cf-9bb6-12cb0c1a5d38">Add — components, properties or parameters</p>
+</li>
+<li><p id="_9d77fb24-be6b-4ca1-ad78-230019cd5a95">Change — property or parameter values</p>
+</li>
+</ul>
+
+<p id="_18fcbd0e-8498-2270-f289-0ddaf979b187">Removals <tt>MUST</tt> be processed ahead of additions.</p>
+
+<p id="_437c1905-0259-18f6-88a3-0140b8431a3d">Preconditions as specified in Preconditions for Calendar Object Creation are applicable. The response will indicate success or failure of the update. If the change token value does not match that held by the service a mismatchedChangeToken error status will be returned. The client should re-fetch the entity to refresh its cache and then retry the update based on the new entity values and change token.</p>
+
+<table id="tab30">
+<name>UpdateItemType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Identify the target of the request.</td>
+</tr><tr><td valign="top" align="left">changeToken</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">The change token held by the client for that entity</td>
+</tr><tr><td valign="top" align="left">select</td>
+<td valign="top" align="left">ComponentSelectionType</td>
+<td valign="top" align="left">1..*</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Must select vCalendar</td>
+</tr></tbody>
+</table>
+
+<p id="_339747fa-03dd-b02d-110c-bee43f381bcd">The ComponentsSelectionType contains three repeating child elements. The first allows for selection of nested components which can then be updated. The next allows addition of entire components and the last allows for the removal of components.</p>
+
+<table id="tab31">
+<name>ComponentsSelectionType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">component</td>
+<td valign="top" align="left">ComponentSelectionType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Used to match against a component in the target</td>
+</tr><tr><td valign="top" align="left">remove</td>
+<td valign="top" align="left">ComponentReferenceType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Supplies components to remove</td>
+</tr><tr><td valign="top" align="left">add</td>
+<td valign="top" align="left">ComponentReferenceType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Species components to add</td>
+</tr></tbody>
+</table>
+
+<p id="_119df060-848b-32c9-ffcc-dee0b90fbfcc">The PropertiesSelectionType follows the same pattern, selecting properties to update, add or remove.</p>
+
+<table id="tab32">
+<name>PropertiesSelectionType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">property</td>
+<td valign="top" align="left">PropertySelectionType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Used to match against a property in the target</td>
+</tr><tr><td valign="top" align="left">remove</td>
+<td valign="top" align="left">PropertyReferenceType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Supplies properties to remove</td>
+</tr><tr><td valign="top" align="left">add</td>
+<td valign="top" align="left">PropertyReferenceType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Species properties to add</td>
+</tr></tbody>
+</table>
+
+<p id="_dbfab955-e424-8929-3378-d23c393a0267">To complete that pattern there is also a ParametersSelectionType used to select property parameters for update or removal and to supply new parameters.</p>
+
+<table id="tab33">
+<name>ParametersSelectionType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">parameter</td>
+<td valign="top" align="left">ParameterSelectionType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Used to match against a parameter in the target</td>
+</tr><tr><td valign="top" align="left">remove</td>
+<td valign="top" align="left">ParameterReferenceType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Supplies parameters to remove</td>
+</tr><tr><td valign="top" align="left">add</td>
+<td valign="top" align="left">ParameterReferenceType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Species parameters to add</td>
+</tr></tbody>
+</table>
+
+<p id="_5cd921b2-488c-3c30-18c1-dba95007c75d">Each of these refers to a reference type. These either provide a complete entity for addition or identify the entity for removal. The three reference types are:</p>
+
+<table id="tab34">
+<name>ComponentReferenceType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Any valid iCalendar component name</td>
+<td valign="top" align="left">xcal:BaseComponentType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Either a complete component or sufficient to identify it.</td>
+</tr></tbody>
+</table>
+
+<table id="tab35">
+<name>PropertyReferenceType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Any valid iCalendar property name</td>
+<td valign="top" align="left">xcal:BasePropertyType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Either a complete property or sufficient to identify it or provide a new value, depending on usage.</td>
+</tr></tbody>
+</table>
+
+<table id="tab36">
+<name>ParameterReferenceType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Any valid iCalendar parameter name</td>
+<td valign="top" align="left">xcal:BaseParameterType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Either a complete parameter or sufficient to identify it or provide a new value, depending on usage.</td>
+</tr></tbody>
+</table>
+
+<p id="_b265cebe-0330-527e-f269-49b8d87e3b67">To complete the picture we have three selection types for component, property and parameter. Each of these identifies the entity to be updated, possible selections of the sub-elements and a possible change to values.</p>
+
+<p id="_15babbf4-18dc-b282-f9b3-9d7401715e06">ComponentSelectionType contains three child elements. The first is any valid iCalendar component element which is to be matched at the current level.</p>
+
+<p id="_869dbfe7-9d22-7ca3-e47c-0ec42f96e210">The optional properties selection allows selection and possible updates to the properties of the component. An iCalendar properties element cannot take a value so the only updates possible are addition and removal of properties. Nested properties may be selected for updates.</p>
+
+<p id="_9e647727-5735-dc8f-b020-47f96314067f">The optional components selection allows selection and possible updates to the nested iCalendar components element of the component. An iCalendar components element cannot take a value so the only updates possible are addition and removal of components. Nested components may be selected for updates.</p>
+
+<table id="tab37">
+<name>ComponentSelectionType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Any valid iCalendar component name</td>
+<td valign="top" align="left">xcal:VcalendarType<br/> xcal:BaseComponentType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Used to match against an element in the target</td>
+</tr><tr><td valign="top" align="left">properties</td>
+<td valign="top" align="left">PropertiesSelectionType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">To match the properties element</td>
+</tr><tr><td valign="top" align="left">components</td>
+<td valign="top" align="left">ComponentsSelectionType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">To match the components element</td>
+</tr></tbody>
+</table>
+
+<p id="_5137747e-4a67-5204-c5ce-529a08a6dddf">PropertySelectionType contains three child elements. The first is any valid iCalendar property element which is to be matched at the current level.</p>
+
+<p id="_ee5b76b1-84f9-76fd-bfda-a8192e8d8b8e">The optional parameters selection allows selection and possible updates to the parameters of the property. The optional change element allows a change to the value of the property. The new value is specified by supplying an iCalendar property with the desired value(s). Any parameters will be ignored.</p>
+
+<table id="tab38">
+<name>PropertySelectionType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Any valid iCalendar property name</td>
+<td valign="top" align="left">xcal:BasePropertyType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Used to match against an element in the target</td>
+</tr><tr><td valign="top" align="left">parameters</td>
+<td valign="top" align="left">ParametersSelectionType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">To match the parameters element</td>
+</tr><tr><td valign="top" align="left">change</td>
+<td valign="top" align="left">PropertyReferenceType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">To provide a new value</td>
+</tr></tbody>
+</table>
+
+<p id="_6a4554a8-bafb-5070-a130-34a2e326a099">Lastly, there is the ParameterSelectionType which contains two child elements. The first is any valid iCalendar parameter element which is to be matched at the current level. The optional change element allows a change to the value of the parameter. The new value is specified by supplying an iCalendar parameter with the desired value(s).</p>
+
+<table id="tab39">
+<name>ParameterSelectionType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Any valid iCalendar parameter name</td>
+<td valign="top" align="left">xcal:BaseParameterType</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Used to match against an element in the target</td>
+</tr><tr><td valign="top" align="left">change</td>
+<td valign="top" align="left">ParameterReferenceType</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">To provide a new value</td>
+</tr></tbody>
+</table>
+
+<p id="_25622cc9-4824-5582-873d-42749863a5c9">For a successful update the service will respond with a UpdateItemResponseType containing the status and the new change token.</p>
+
+<table id="tab40">
+<name>UpdateItemResponseType additional fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">changeToken</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">The new change token for the updated entity</td>
+</tr></tbody>
+</table>
+
+<p id="_07e86ff3-513d-e3fc-3fc0-4832c04bca97">The change token value should be used to replace the value held by the client.</p>
+
+<clause id="_change_tokens_and_concurrent_updates" obligation="normative">
+<title>Change tokens and concurrent updates</title>
+<p id="_020e5a15-44d8-7f14-bf27-64ed9e119e28">The change token is used to allow a service to determine whether or not it is safe to carry out an update requested by the client. The change token should be opaque to the client but will probably in fact be a structured value. Calendaring transactions have some special characteristics which make it desirable to allow certain non-conflicting updates to take place while other changes are taking place. For example, meeting requests with a large number of attendees can be frequently updated by the server as a result of attendee participation status changes. If we use an unstructured change token to represent all changes this can make it very difficult to update an event while those participation status changes are being made. If, on the other hand, the token has a section indicating that only participation status changes have been made, then other changes can take place. For a reference on implementing such a token see “Avoiding Conflicts when Updating Scheduling Object Resources” in  <eref type="inline" bibitemid="caldav-sched" citeas="IETF I-D draft-desruisseaux-caldav-sched-08"/>. This describes the use of a schedule-tag.</p>
+</clause>
+
+<clause id="_example_successful_update" obligation="normative">
+<title>Example — successful update</title>
+<p id="_a6050dc6-da80-76f1-eae5-80c4da017b6e">The event to be updated is represented by the following XML.</p>
+
+<sourcecode id="_8cd72161-2db0-865c-73f6-bf29c5640968" unnumbered="true">&lt;ns3:icalendar&gt;
+  &lt;ns3:vcalendar&gt;
+    &lt;ns3:components&gt;
+      &lt;ns3:vevent&gt;
+        &lt;ns3:properties&gt;
+          &lt;ns3:uid&gt;
+            &lt;ns3:text&gt;1302064354993-a&lt;/ns3:text&gt;
+          &lt;/ns3:uid&gt;
+          &lt;ns3:summary&gt;
+            &lt;ns3:text&gt;try this&lt;/ns3:text&gt;
+          &lt;/ns3:summary&gt;
+          &lt;ns3:dtstart&gt;
+            &lt;ns3:date-time&gt;2011-07-18T15:00:00Z&lt;/ns3:date-time&gt;
+          &lt;/ns3:dtstart&gt;
+          &lt;ns3:dtend&gt;
+            &lt;ns3:date-time&gt;2011-07-18T16:00:00Z&lt;/ns3:date-time&gt;
+          &lt;/ns3:dtend&gt;
+        &lt;/ns3:properties&gt;
+      &lt;/ns3:vevent&gt;
+    &lt;/ns3:components&gt;
+  &lt;/ns3:vcalendar&gt;
+&lt;/ns3:icalendar&gt;</sourcecode>
+
+
+<p id="_3c8c4c57-a46f-1607-157b-e7d16db0e8c6">In the following example we make the following changes to the above event:</p>
+
+<ul id="_74adbd9d-2de6-5d1d-5624-7a55db2766ff"><li><p id="_4fae8f03-d701-9a0f-2d60-353dda4190b5">Change the summary</p>
+</li>
+<li><p id="_b12e229d-34ea-0afd-d3f2-5454bf9871aa">Change the dtstart — add a tzid and change the value to local time</p>
+</li>
+<li><p id="_e9212634-13a1-1525-d9a6-414d26503252">Add some categories</p>
+</li>
+</ul>
+
+<p id="_aa6c4d07-518a-fd56-ff04-f7cbf00a8b6b">We first select an event by specifying the uid value and then, from that event, we select the properties, then select and change the appropriate properties.</p>
+
+<sourcecode id="_2af0fb39-17e1-5056-a413-28e5ba009616" unnumbered="true">&gt;&gt;Request
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:updateItem xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                    xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar/1302064354993-a.ics&lt;/ns2:href&gt;
+      &lt;ns2:changeToken&gt;"20110802T032608Z-0" null&lt;/ns2:changeToken&gt;
+      &lt;ns2:select&gt;
+        &lt;ns3:vcalendar/&gt;
+          &lt;ns2:components&gt;
+            &lt;ns2:component&gt;
+              &lt;ns3:vevent&gt;
+                &lt;ns3:properties&gt;
+                  &lt;ns3:uid&gt;
+                    &lt;ns3:text&gt;1302064354993-a&lt;/ns3:text&gt;
+                  &lt;/ns3:uid&gt;
+                &lt;/ns3:properties&gt;
+              &lt;/ns3:vevent&gt;
+            &lt;ns2:properties&gt;
+              &lt;ns2:property&gt;
+                &lt;ns3:dtstart&gt;
+                  &lt;ns3:date-time&gt;2011-07-18T15:00:00Z&lt;/ns3:date-time&gt;
+                &lt;/ns3:dtstart&gt;
+                &lt;ns2:parameters&gt;
+                  &lt;ns2:add&gt;
+                    &lt;ns3:tzid&gt;
+                      &lt;ns3:text&gt;America/New_York&lt;/ns3:text&gt;
+                    &lt;/ns3:tzid&gt;
+                  &lt;/ns2:add&gt;
+                &lt;/ns2:parameters&gt;
+                &lt;ns2:change&gt;
+                  &lt;ns3:dtstart&gt;
+                    &lt;ns3:date-time&gt;2011-07-18T11:00:00&lt;/ns3:date-time&gt;
+                  &lt;/ns3:dtstart&gt;
+                &lt;/ns2:change&gt;
+              &lt;/ns2:property&gt;
+              &lt;ns2:property&gt;
+                &lt;ns3:summary&gt;
+                  &lt;ns3:text&gt;try this&lt;/ns3:text&gt;
+                &lt;/ns3:summary&gt;
+                &lt;ns2:change&gt;
+                  &lt;ns3:summary&gt;
+                    &lt;ns3:text&gt;A changed summary - again and again and again&lt;/ns3:text&gt;
+                  &lt;/ns3:summary&gt;
+                &lt;/ns2:change&gt;
+              &lt;/ns2:property&gt;
+              &lt;ns2:add&gt;
+                &lt;ns3:categories&gt;
+                  &lt;ns3:text&gt;newcategory-2&lt;/ns3:text&gt;
+                  &lt;ns3:text&gt;resources&lt;/ns3:text&gt;
+                  &lt;ns3:text&gt;paper&lt;/ns3:text&gt;
+                &lt;/ns3:categories&gt;
+              &lt;/ns2:add&gt;
+            &lt;/ns2:properties&gt;
+          &lt;/ns2:component&gt;
+        &lt;/ns2:components&gt;
+      &lt;/ns2:select&gt;
+    &lt;/ns2:updateItem&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt;Response
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:updateItemResponse xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                            xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"id="0"&gt;
+      &lt;ns2:status&gt;OK&lt;/ns2:status&gt;
+    &lt;/ns2:updateItemResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+</clause>
+
+<clause id="_other_updates" obligation="normative">
+<title>Other updates</title>
+<p id="_56ef4109-4787-c8e9-f41b-69cc4eae25db">Based on the example above we present some XML fragments for different kinds of update. These include:</p>
+
+<ul id="_9f6e5256-f8be-cf84-b215-e54c5b60f97c"><li><p id="_d2fcc869-f60b-09e5-3ea6-c1bfb4d9d040">Addition of properties</p>
+</li>
+<li><p id="_4eddba2a-56b2-f1ef-3820-3b4b20171513">Removal of properties</p>
+</li>
+<li><p id="_049510f6-818f-46d4-75a5-70d5d003c110">Addition of parameters to properties</p>
+</li>
+<li><p id="_e6d796a3-467d-f921-15fa-9c75ee7972a0">Removal of parameters from properties</p>
+</li>
+<li><p id="_461e523c-445d-34f3-0d73-6bd0f46e7267">Changing parameter values.</p>
+</li>
+</ul>
+
+<p id="_f78ad6b4-d133-c59d-ddb8-b847420c33b7">The examples all start with the selection of the vevent properties element. First we have the XML for the addition of a tzid to the start date/time. Here we select the dtstart, then the parameters element then add a tzid parameter and change the value of the date and time</p>
+
+<sourcecode id="_8af74f27-03c9-6c06-cb3d-522908b93d41" unnumbered="true">&lt;ns2:properties&gt;
+  &lt;ns2:property&gt;
+    &lt;ns3:dtstart&gt;
+      &lt;ns3:date-time&gt;2011-07-18T15:00:00Z&lt;/ns3:date-time&gt;
+    &lt;/ns3:dtstart&gt;
+    &lt;ns2:parameters&gt;
+      &lt;ns2:add&gt;
+        &lt;ns3:tzid&gt;
+          &lt;ns3:text&gt;America/New_York&lt;/ns3:text&gt;
+        &lt;/ns3:tzid&gt;
+      &lt;/ns2:add&gt;
+    &lt;/ns2:parameters&gt;
+    &lt;ns2:change&gt;
+      &lt;ns3:dtstart&gt;
+        &lt;ns3:date-time&gt;2011-07-18T11:00:00&lt;/ns3:date-time&gt;
+      &lt;/ns3:dtstart&gt;
+    &lt;/ns2:change&gt;
+  &lt;/ns2:property&gt;
+&lt;/ns2:properties&gt;</sourcecode>
+
+
+<p id="_69c5d704-f8ce-eb5a-a44a-dbd72b98e8db">In this example we add two categories to the event.</p>
+
+<sourcecode id="_b007edbf-f7b4-061e-0b8e-10ea096b2cd8" unnumbered="true">&lt;ns2:properties&gt;
+  &lt;ns2:add&gt;
+    &lt;ns3:categories&gt;
+      &lt;ns3:text&gt;paper&lt;/ns3:text&gt;
+    &lt;/ns3:categories&gt;
+  &lt;/ns2:add&gt;
+  &lt;ns2:add&gt;
+    &lt;ns3:categories&gt;
+      &lt;ns3:text&gt;resources&lt;/ns3:text&gt;
+    &lt;/ns3:categories&gt;
+  &lt;/ns2:add&gt;
+&lt;/ns2:properties&gt;</sourcecode>
+
+
+<p id="_943f2afd-c255-1b32-4e5d-12ae206d3a71">In this example we add a duration and remove the dtend.</p>
+
+<sourcecode id="_ee57dbfd-8158-facb-c949-a5dbc0b3fd97" unnumbered="true">&lt;ns2:properties&gt;
+  &lt;ns2:remove&gt;
+    &lt;ns3:dtend&gt;
+      &lt;ns3:date-time&gt;2011-07-18T16:00:00Z&lt;/ns3:date-time&gt;
+    &lt;/ns3:dtend&gt;
+  &lt;/ns2:remove&gt;
+  &lt;ns2:add&gt;
+    &lt;ns3:duration&gt;
+      &lt;ns3:duration&gt;PT1H&lt;/ns3:duration&gt;
+    &lt;/ns3:duration&gt;
+  &lt;/ns2:add&gt;
+&lt;/ns2:properties&gt;</sourcecode>
+
+
+<p id="_83c9d94c-ceb7-de64-17a2-9e2da5affc77">In this example we change the dtstart timezone identifier.</p>
+
+<sourcecode id="_9ec03a6c-4c7c-4716-1703-12c1469b6692" unnumbered="true">&lt;ns2:properties&gt;
+  &lt;ns2:property&gt;
+    &lt;ns3:dtstart&gt;
+      &lt;ns3:parameters&gt;
+        &lt;ns3:tzid&gt;
+          &lt;ns3:text&gt;America/New_York&lt;/ns3:text&gt;
+        &lt;/ns3:tzid&gt;
+      &lt;/ns3:parameters&gt;
+      &lt;ns3:date-time&gt;2011-07-18T11:00:00&lt;/ns3:date-time&gt;
+    &lt;/ns3:dtstart&gt;
+  &lt;ns2:parameters&gt;
+    &lt;ns2:parameter&gt;
+      &lt;ns3:tzid&gt;
+        &lt;ns3:text&gt;America/New_York&lt;/ns3:text&gt;
+      &lt;/ns3:tzid&gt;
+      &lt;ns2:change&gt;
+        &lt;ns3:tzid&gt;
+          &lt;ns3:text&gt;America/Montreal&lt;/ns3:text&gt;
+        &lt;/ns3:tzid&gt;
+      &lt;/ns2:change&gt;
+    &lt;/ns2:parameter&gt;
+  &lt;/ns2:parameters&gt;
+  &lt;/ns2:property&gt;
+&lt;/ns2:properties&gt;</sourcecode>
+
+</clause>
+
+<clause id="_creating_an_update_message" obligation="normative">
+<title>Creating an update message</title>
+<p id="_ffc75e5b-ceb3-720b-279f-20b90bdf0e98">The update can be created in many ways but the most common approach is to build the update while modifications take place or to create one as the result of comparing old and new versions. It appears that comparing XML for differences is difficult. However, we can take advantage of the structure of calendaring entities to simplify the process. There are implementations available which take the diff approach to producing an update stream.</p>
+
+<p id="_73ba5115-8095-eeb7-0045-8b5fd3b9a5b8">There are some special cases to consider when comparing. Some properties are multi-valued and may themselves appear more than once. There is no semantic information implied by any grouping though parameters may need to be taken into account. These properties need to be normalized before comparison and when updating them we produce a change which treats each value as a single property.</p>
+
+<p id="_b4e5fcbf-c99e-3c21-31cd-42dcff093edd">These properties are:</p>
+
+<ul id="_32eacd27-b877-b490-9f51-1e3f4b887e35"><li><p id="_4d0cbc86-f6cd-36c5-41de-7fc062cfe106"><tt>categories</tt></p>
+</li>
+<li><p id="_4fd5026f-688f-2058-0a80-7104f7dfa30e"><tt>exdate</tt></p>
+</li>
+<li><p id="_5e74f5dd-fd3c-5620-9bde-7b16be599e4b"><tt>freebusy</tt></p>
+</li>
+<li><p id="_e70a3bc6-b53b-d800-51f8-212af64f1ed1"><tt>rdate</tt></p>
+</li>
+</ul>
+
+<p id="_c26a1252-3a5d-6a2b-d06e-0ae14ab1e0fc">This normalization can take place before comparison.</p>
+
+<p id="_a1616e30-83a2-a6ce-4e58-f5c004f39f75">Some properties are multi-valued and may only appear once. At the moment the only standard property is resource which may take a comma separated list. This should be treated as a single multi-valued property when comparing. The order is unimportant. Sorting the values may help.</p>
+
+<p id="_b06f2d70-bfe4-eda5-599b-7f84d104ce07">Some properties may appear multiple times, for example comment. Comparison should take account of parameters. Ordering all properties appropriately allows for relatively simple comparison.</p>
+</clause>
+</clause>
+
+<clause id="_deletion_of_resources" obligation="normative">
+<title>Deletion of resources</title>
+<p id="_44fa59a2-db21-fcd3-73a2-7d27b5f1cd33">Deletion of calendar object resources is carried out by using a CalWS-SOAP deleteItem request with an href specifying the entity to be deleted. The deleteItem request is not valid when the href specifies a collection.</p>
+
+<table id="tab41">
+<name>DeleteItemType fields</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">href</td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Identify the target of the request.</td>
+</tr></tbody>
+</table>
+
+<p id="_4c1cce23-9967-2537-cef5-8825711253e0">The service will respond with a DeleteItemResponseType containing the status and a possible error response. There are no additional elements.</p>
+
+<clause id="_example_successful_deleteitem" obligation="normative">
+<title>Example — successful deleteItem</title>
+<sourcecode id="_ae179a4f-b3b6-a1e1-f809-28bbe723a106" unnumbered="true">&gt;&gt;Request
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:deleteItem xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                    xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar/1302620814655.ics&lt;/ns2:href&gt;
+    &lt;/ns2:deleteItem&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt;Response
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:deleteItemResponse xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                            xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:status&gt;OK&lt;/ns2:status&gt;
+    &lt;/ns2:deleteItemResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+</clause>
+
+<clause id="_example_unsuccessful_deleteitem" obligation="normative">
+<title>Example — unsuccessful deleteItem</title>
+<sourcecode id="_50d01e88-9352-df1d-2883-99235d349f35" unnumbered="true">&gt;&gt;Request
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:deleteItem xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                    xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar/nosuchevent.ics&lt;/ns2:href&gt;
+    &lt;/ns2:deleteItem&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt;Response
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:deleteItemResponse xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                            xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:status&gt;Error&lt;/ns2:status&gt;
+      &lt;ns2:errorResponse&gt;
+        &lt;ns2:targetDoesNotExist/&gt;
+      &lt;/ns2:errorResponse&gt;
+    &lt;/ns2:deleteItemResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_querying_calendar_resources" obligation="normative">
+<title>Querying calendar resources</title>
+<p id="_79fa67cc-879b-a91b-75b9-edd5af510e58">Querying provides a mechanism by which information can be obtained from the service through possibly complex queries. A skeleton iCalendar entity can be provided to limit the amount of information returned to the client. A query takes the parts</p>
+
+<ul id="_46542c51-d994-7760-3681-58e0a8b573de"><li><p id="_3c2409de-8dde-9f86-9518-c899354f345e">Limitations on the data returned</p>
+</li>
+<li><p id="_257b4dad-5638-147a-78d2-a872fa37f172">Selection of the data</p>
+</li>
+<li><p id="_722f200a-1b52-d591-977f-e726848262c6">Optional timezone id for floating time calculations.</p>
+</li>
+</ul>
+
+<clause id="_calendar_query_common_types" obligation="normative">
+<title>Calendar Query common types</title>
+<p id="_ce8d371c-89bf-0cca-da96-ad2e06933c31">The <tt>UTCTimeRangeType</tt> is used in a number of places to define a time range within which components must appear or property values must lie. The values are UTC time-date, the start is inclusive and the end is exclusive.</p>
+
+<table id="tab42">
+<name><tt>UTCTimeRangeType</tt> elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>start</tt></td>
+<td valign="top" align="left">UTC date-time</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">UTC inclusive start</td>
+</tr><tr><td valign="top" align="left"><tt>end</tt></td>
+<td valign="top" align="left">UTC date-time</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">UTC exclusive end</td>
+</tr></tbody>
+</table>
+
+<p id="_59adfcb9-8199-81f8-6eb0-851959611089">The <tt>TextMatchType</tt> is used to match text values in properties and parameters. The collation attribute species a collation as defined in Error: Reference source not found.</p>
+
+<p id="_4c3d9e44-8dff-244b-9f03-5daa2d3ddd29">Servers are <tt>REQUIRED</tt> to support the “i;ascii-casemap” and “i;octet” collations which provide a basic case insensitive and case sensitive match respectively.</p>
+
+<p id="_fa7d8c61-0ced-9fd0-136f-4d557217ab6c">Elements of this type take a string value which is matched according to the attributes.</p>
+
+<table id="tab43">
+<name><tt>TextMatchType</tt> attributes</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>#collation</tt></td>
+<td valign="top" align="left">String</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Collation name from Error: Reference source not found. “</td>
+</tr><tr><td valign="top" align="left"><tt>#negate-condition</tt></td>
+<td valign="top" align="left">boolean</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">if “true” negates the condition</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_compfiltertype" obligation="normative">
+<title><tt>CompFilterType</tt></title>
+<p id="_ede9bdc2-3cb2-b932-a88a-0e7b163f3474">This type defines a search query for the calendar query operation. It specifies the component types to return, absence tests or basic matching operations on properties and time ranges.</p>
+
+<p id="_99a07639-b0c3-9918-198f-a8c84b2dca0f">The top level comp-filter element (which must match a vCalendar component may contain zero or more comp-filter elements to match events, tasks or other contained components. These in turn may contain further nested comp-filter elements to match further levels of nested components.</p>
+
+<p id="_88ed79cd-939a-c40f-d2b8-c1bcdedab554">Each may also contain prop-filter elements to test for the absence of properties or to match values. Only logical conjunctions are supported, that is, all elements of a comp-filter must match for the expression to match.</p>
+
+<table id="tab44">
+<name><tt>CompFilterType</tt> elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>anyComp</tt></td>
+<td valign="top" align="left"><tt>AnyCompType</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left"><p id="_43c8c8c3-17f6-446a-b864-77f203a62b5b">One of <tt>anyComp</tt>, vCalendar or a <tt>BaseComponentType</tt> must be supplied.</p>
+
+<p id="_ffc88295-6506-85cb-f5f3-ed8896e049fe"><tt>anyComp</tt> indicates that any component will match.</p>
+</td>
+</tr><tr><td valign="top" align="left"><tt>xcal:vcalendar</tt></td>
+<td valign="top" align="left"><tt>xcal:VcalendarType</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">Matches vCalendar at the top level. Must be provided</td>
+</tr><tr><td valign="top" align="left"><tt>xcal:baseComponent</tt></td>
+<td valign="top" align="left"><tt>xcal:BaseComponentType</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">C</td>
+<td valign="top" align="left">May be vEvent or vTODO for example.</td>
+</tr><tr><td valign="top" align="left"><tt>#test</tt></td>
+<td valign="top" align="left">String</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"><p id="_2fdd1c2f-cb65-3501-c01e-1c00bcbe7ef0">“anyof” is a logical <tt>OR</tt> of the child elements.</p>
+
+<p id="_c6edadd7-6060-fca5-cf19-bc7980c86e58">“allof” is a logical <tt>AND</tt> of the child elements.</p>
+</td>
+</tr><tr><td valign="top" align="left"><tt>is-not-defined</tt></td>
+<td valign="top" align="left">empty</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Only this element or one or more of time-range, prop-filter or comp-filter may be present</td>
+</tr><tr><td valign="top" align="left"><tt>time-range</tt></td>
+<td valign="top" align="left"><tt>UTCTimeRangeType</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><tt>comp-filter</tt></td>
+<td valign="top" align="left"><tt>CompFilterType</tt></td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Match against contained components</td>
+</tr><tr><td valign="top" align="left"><tt>prop-filter</tt></td>
+<td valign="top" align="left"><tt>PropFilterType</tt></td>
+<td valign="top" align="left">0..n</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Match against component properties</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_propfiltertype" obligation="normative">
+<title><tt>PropFilterType</tt></title>
+<p id="_5f049798-9276-4f94-be19-fea5138a44a2">The prop-filter element may test for the absence of a property or match values or specify zero or more <tt>ParamFilterType</tt> elements to match against parameters.</p>
+
+<p id="_abea2c5a-bc29-792d-1131-86df1d6a288d">Only logical conjunctions are supported, that is, all elements must match for the full expression to match.</p>
+
+<table id="tab45">
+<name>PropFilterType elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>xcal:baseProperty</tt></td>
+<td valign="top" align="left"><tt>xcal:BasePropertyType</tt></td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Specifies the property to be matched.</td>
+</tr><tr><td valign="top" align="left"><tt>#test</tt></td>
+<td valign="top" align="left">String</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"><p id="_54e1c6ea-1b28-8a7d-7f64-f4c02e23a9dd">“anyof” is a logical <tt>OR</tt> of the child elements.</p>
+
+<p id="_c21f6d27-74ce-54fe-2c37-47b102db7fbf">“allof” is a logical <tt>AND</tt> of the child elements.</p>
+</td>
+</tr><tr><td valign="top" align="left"><tt>is-not-defined</tt></td>
+<td valign="top" align="left">empty</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Only this element or optionally one of time-range or text-match followed by param-filter</td>
+</tr><tr><td valign="top" align="left"><tt>time-range</tt></td>
+<td valign="top" align="left"><tt>UTCTimeRangeType</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><tt>text-match</tt></td>
+<td valign="top" align="left"><tt>TextMatchtype</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><tt>param-filter</tt></td>
+<td valign="top" align="left"><tt>ParamFilterType</tt></td>
+<td valign="top" align="left">0..n</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Match against property parameters</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_paramfiltertype" obligation="normative">
+<title><tt>ParamFilterType</tt></title>
+<p id="_22255734-a8c1-3b97-ae5d-a967acb6c1e4">The <tt>ParamFilterType</tt> element may test for the absence of a parameter or match a value.</p>
+
+<table id="tab46">
+<name>ParamFilterType elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>xcal:baseParameter</tt></td>
+<td valign="top" align="left"><tt>xcal:BaseParameterType</tt></td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Specifies the parameter to be matched.</td>
+</tr><tr><td valign="top" align="left"><tt>is-not-defined</tt></td>
+<td valign="top" align="left">empty</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Only this element or text-match</td>
+</tr><tr><td valign="top" align="left"><tt>text-match</tt></td>
+<td valign="top" align="left"><tt>TextMatchtype</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+
+<clause id="_calendarquerytype_elements" obligation="normative">
+<title><tt>CalendarQueryType</tt> elements</title>
+<table id="tab47">
+<name><tt>CalendarQueryType</tt> elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>href</tt></td>
+<td valign="top" align="left">string</td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Identify the target of the request. “/” for the service.</td>
+</tr><tr><td valign="top" align="left"><tt>allprop</tt></td>
+<td valign="top" align="left">empty</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"><p id="_05b67b9e-f3fe-f917-ad37-5900c880cbe4">If present specifies all properties should be returned.</p>
+
+<p id="_b999ca14-57b6-1d3e-aa62-8b90cd91d15e">One or none of <tt>allprop</tt> or iCalendar.</p>
+</td>
+</tr><tr><td valign="top" align="left"><tt>xcal:icalendar</tt></td>
+<td valign="top" align="left"><tt>xcal:IcalendarType</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">If present is a valueless iCalendar skeleton entity defining which components and properties should be returned. If present <tt>allprop</tt> <tt>MUST NOT</tt> be present.</td>
+</tr><tr><td valign="top" align="left"><tt>expand</tt></td>
+<td valign="top" align="left"><tt>ExpandType</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"><p id="_99d30487-778e-98c4-46b1-d25e5119d872">A subclass of <tt>UTCTimeRangeType</tt>.</p>
+
+<p id="_a48498ee-098d-54d0-4b1e-3dd1b2c71557">Either expand or <tt>limitRecurrenceSet</tt> may be specified but not both.</p>
+
+<p id="_07310712-eb12-8bc7-8c85-91272f60b78b">If specified recurring events are expanded and limited to the supplied time-range. All events times are converted to UTC.</p>
+
+<p id="_4f2b1ffc-41ce-dc6d-e426-4c09d6d9d475">This option allows for simplified event handling for certain classes of client.</p>
+</td>
+</tr><tr><td valign="top" align="left"><tt>limitRecurrenceSet</tt></td>
+<td valign="top" align="left"><tt>LimitRecurrenceSetType</tt></td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left"><p id="_ead4f9a9-6e36-7286-2b1d-526a2aad52aa">A subclass of <tt>UTCTimeRangeType</tt>.</p>
+
+<p id="_84efed0f-b5e7-fded-49a6-f14dbb2c91e1">Either expand or <tt>limitRecurrenceSet</tt> may be specified but not both.</p>
+
+<p id="_54bae9a2-8a9b-4ee2-fe6e-4b38908d0ac6">If specified only overrides that fall within the specified time-range are returned.</p>
+
+<p id="_25a63796-ca13-10e7-07ca-908c9d1c039c">This helps to limit the size of the result-set when there are many overrides.</p>
+</td>
+</tr><tr><td valign="top" align="left"><tt>depth</tt></td>
+<td valign="top" align="left">String</td>
+<td valign="top" align="left">0..1</td>
+<td valign="top" align="left">N</td>
+<td valign="top" align="left">Species depth for query. “1” ⇒ just targeted collection, “infinity” ⇒ query targeted and all sub-collections.</td>
+</tr><tr><td valign="top" align="left"><tt>filter</tt></td>
+<td valign="top" align="left"><tt>FilterType</tt></td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Defines the search filter</td>
+</tr><tr><td valign="top" align="left"><tt>/comp-filter</tt></td>
+<td valign="top" align="left"><tt>CompFilterType</tt></td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Defines the top-level component</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_specifying_data_to_be_returned" obligation="normative">
+<title>Specifying data to be returned</title>
+<p id="_3ee52d44-56f0-bcfd-8acf-f22311fa02ef">This is achieved by specifying one of the following</p>
+
+<ul id="_4aafa0a3-08af-955b-6568-6b4c51901e74"><li><p id="_6eb81522-9f1f-11dc-dfa7-a4a09cde307c"><tt>allprop</tt>: return all properties and calendar data. (some properties are specified as not being part of the  <tt>allprop</tt> set so are not returned)</p>
+</li>
+<li><p id="_182e1b16-1939-bdfd-276d-d6d4dd21fbb3">Set the iCalendar element. This is an iCalendar valueless pattern entity which provides a map of the components and properties to be returned. Neither the pattern nor the returned result need to be valid iCalendar entities in that required properties may be absent if unselected.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_prepostconditions_for_calendar_queries" obligation="normative">
+<title>Pre/postconditions for calendar queries</title>
+<p id="_ae35ed6a-50ff-7d54-5099-8f361f6aa19e">The preconditions as defined in <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"><localityStack><locality type="section"><referenceFrom>7.8</referenceFrom></locality></localityStack></eref> apply here. CalWS errors may be reported by the service when preconditions or postconditions are violated.</p>
+</clause>
+
+<clause id="_time_range_limited_queries" obligation="normative">
+<title>Time range limited queries</title>
+<p id="_43771503-4192-967f-d536-c023a04157da">Time-range limited retrieval has some special characteristics. The simplest case is a single event or task which overlaps the requested time-period. Recurring items and other components such as alarms complicate the picture.</p>
+</clause>
+
+<clause id="_example_time_range_limited_retrieval" obligation="normative">
+<title>Example: time range limited retrieval</title>
+<p id="_d9a68fc0-6cae-afb5-da0a-2bcb06ef33fd">This example shows the time-range limited retrieval from a calendar which results in 2 events, one a recurring event and one a simple non-recurring event.</p>
+
+<sourcecode id="_0e8e3146-a9bc-ba4a-fb0d-fb85b8394a57" unnumbered="true">&gt;&gt; Request &lt;&lt;
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:calendarQuery xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                       xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar&lt;/ns2:href&gt;
+      &lt;ns3:icalendar&gt;
+        &lt;ns3:vcalendar&gt;
+          &lt;ns3:components&gt;
+            &lt;ns3:vevent&gt;
+              &lt;ns3:properties&gt;
+                &lt;ns3:summary/&gt;
+                &lt;ns3:dtstart/&gt;
+                &lt;ns3:dtend/&gt;
+                &lt;ns3:duration/&gt;
+                &lt;ns3:uid/&gt;
+                &lt;ns3:recurrence-id/&gt;
+                &lt;ns3:rrule/&gt;
+                &lt;ns3:rdate/&gt;
+                &lt;ns3:exdate/&gt;
+              &lt;/ns3:properties&gt;
+            &lt;/ns3:vevent&gt;
+          &lt;/ns3:components&gt;
+        &lt;/ns3:vcalendar&gt;
+      &lt;/ns3:icalendar&gt;
+      &lt;ns2:filter&gt;
+        &lt;ns2:compFilter test="anyof"&gt;
+          &lt;ns3:vcalendar /&gt;
+          &lt;ns2:compFilter&gt;
+            &lt;ns3:vevent /&gt;
+            &lt;ns2:time-range end="20110430T040000Z" start="20110401T040000Z"/&gt;
+          &lt;/ns2:compFilter&gt;
+        &lt;/ns2:filter&gt;
+    &lt;/ns2:calendarQuery&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt; Response &lt;&lt;
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:calendarQueryResponse
+                xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+                xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:status&gt;OK&lt;/ns2:status&gt;
+      &lt;ns2:response&gt;
+        &lt;ns2:href&gt;/user/douglm/calendar/1302105461170.ics&lt;/ns2:href&gt;
+        &lt;ns2:changeToken&gt;"20110406T155741Z-0"&lt;/ns2:changeToken&gt;
+        &lt;ns2:propstat&gt;
+          &lt;ns2:prop&gt;
+            &lt;ns2:calendar-data content-type="application/xml+calendar" version="2.0"&gt;
+              &lt;ns3:icalendar&gt;
+                &lt;ns3:vcalendar&gt;
+                  &lt;ns3:properties&gt;
+                    &lt;ns3:prodid&gt;
+                      &lt;ns3:text&gt;//Bedework.org//BedeWork V3.7//EN&lt;/ns3:text&gt;
+                    &lt;/ns3:prodid&gt;
+                    &lt;ns3:version&gt;
+                      &lt;ns3:text&gt;2.0&lt;/ns3:text&gt;
+                    &lt;/ns3:version&gt;
+                  &lt;/ns3:properties&gt;
+                  &lt;ns3:components&gt;
+                    &lt;ns3:vevent&gt;
+                      &lt;ns3:properties&gt;
+                        &lt;ns3:dtend&gt;
+                          &lt;ns3:date-time&gt;20110406T160000Z&lt;/ns3:date-time&gt;
+                        &lt;/ns3:dtend&gt;
+                        &lt;ns3:dtstart&gt;
+                          &lt;ns3:date-time&gt;20110406T150000Z&lt;/ns3:date-time&gt;
+                        &lt;/ns3:dtstart&gt;
+                        &lt;ns3:summary&gt;
+                          &lt;ns3:text&gt;try this&lt;/ns3:text&gt;
+                        &lt;/ns3:summary&gt;
+                        &lt;ns3:uid&gt;
+                          &lt;ns3:text&gt;1302105461170&lt;/ns3:text&gt;
+                        &lt;/ns3:uid&gt;
+                      &lt;/ns3:properties&gt;
+                    &lt;/ns3:vevent&gt;
+                  &lt;/ns3:components&gt;
+                &lt;/ns3:vcalendar&gt;
+              &lt;/ns3:icalendar&gt;
+            &lt;/ns2:calendar-data&gt;
+          &lt;/ns2:prop&gt;
+          &lt;ns2:status&gt;OK&lt;/ns2:status&gt;
+        &lt;/ns2:propstat&gt;
+      &lt;/ns2:response&gt;
+      &lt;ns2:response&gt;
+        &lt;ns2:href&gt;/user/douglm/calendar/CAL-00f1fc61-2f021bca-012f-022947f8-00000006.ics&lt;/ns2:href&gt;
+        &lt;ns2:changeToken&gt;"20110405T140920Z-0"&lt;/ns2:changeToken&gt;
+        &lt;ns2:propstat&gt;
+          &lt;ns2:prop&gt;
+            &lt;ns2:calendar-data content-type="application/xml+calendar" version="2.0"&gt;
+              &lt;ns3:icalendar&gt;
+                &lt;ns3:vcalendar&gt;
+                  &lt;ns3:properties&gt;
+                    &lt;ns3:prodid&gt;
+                      &lt;ns3:text&gt;//Bedework.org//BedeWork V3.7//EN&lt;/ns3:text&gt;
+                    &lt;/ns3:prodid&gt;
+                    &lt;ns3:version&gt;
+                      &lt;ns3:text&gt;2.0&lt;/ns3:text&gt;
+                    &lt;/ns3:version&gt;
+                  &lt;/ns3:properties&gt;
+                  &lt;ns3:components&gt;
+                    &lt;ns3:vevent&gt;
+                      &lt;ns3:properties&gt;
+                        &lt;ns3:duration&gt;
+                          &lt;ns3:duration&gt;PT1H&lt;/ns3:duration&gt;
+                        &lt;/ns3:duration&gt;
+                        &lt;ns3:dtstart&gt;
+                          &lt;ns3:parameters&gt;
+                            &lt;ns3:tzid&gt;
+                              &lt;ns3:text&gt;America/New_York&lt;/ns3:text&gt;
+                            &lt;/ns3:tzid&gt;
+                          &lt;/ns3:parameters&gt;
+                          &lt;ns3:date-time&gt;20110412T110000&lt;/ns3:date-time&gt;
+                        &lt;/ns3:dtstart&gt;
+                        &lt;ns3:summary&gt;
+                          &lt;ns3:text&gt;Test recurring event&lt;/ns3:text&gt;
+                        &lt;/ns3:summary&gt;
+                        &lt;ns3:uid&gt;
+                          &lt;ns3:text&gt;CAL-00f1fc61-2f021bca-012f-022947f8-00000006demobedework@mysite.edu&lt;/ns3:text&gt;
+                        &lt;/ns3:uid&gt;
+                        &lt;ns3:rrule&gt;
+                          &lt;ns3:recur&gt;
+                            &lt;ns3:freq&gt;WEEKLY&lt;/ns3:freq&gt;
+                            &lt;ns3:count&gt;2&lt;/ns3:count&gt;
+                            &lt;ns3:interval&gt;1&lt;/ns3:interval&gt;
+                          &lt;/ns3:recur&gt;
+                        &lt;/ns3:rrule&gt;
+                      &lt;/ns3:properties&gt;
+                    &lt;/ns3:vevent&gt;
+                    &lt;ns3:vevent&gt;
+                      &lt;ns3:properties&gt;
+                        &lt;ns3:recurrence-id&gt;
+                          &lt;ns3:parameters&gt;
+                            &lt;ns3:tzid&gt;
+                              &lt;ns3:text&gt;America/New_York&lt;/ns3:text&gt;
+                            &lt;/ns3:tzid&gt;
+                          &lt;/ns3:parameters&gt;
+                          &lt;ns3:date-time&gt;20110419T150000Z&lt;/ns3:date-time&gt;
+                        &lt;/ns3:recurrence-id&gt;
+                        &lt;ns3:duration&gt;
+                          &lt;ns3:duration&gt;PT1H&lt;/ns3:duration&gt;
+                        &lt;/ns3:duration&gt;
+                        &lt;ns3:dtstart&gt;
+                          &lt;ns3:parameters&gt;
+                            &lt;ns3:tzid&gt;
+                              &lt;ns3:text&gt;America/New_York&lt;/ns3:text&gt;
+                            &lt;/ns3:tzid&gt;
+                          &lt;/ns3:parameters&gt;
+                          &lt;ns3:date-time&gt;20110419T120000&lt;/ns3:date-time&gt;
+                        &lt;/ns3:dtstart&gt;
+                        &lt;ns3:summary&gt;
+                          &lt;ns3:text&gt;Test recurring event&lt;/ns3:text&gt;
+                        &lt;/ns3:summary&gt;
+                        &lt;ns3:uid&gt;
+                          &lt;ns3:text&gt;CAL-00f1fc61-2f021bca-012f-022947f8-00000006demobedework@mysite.edu&lt;/ns3:text&gt;
+                        &lt;/ns3:uid&gt;
+                      &lt;/ns3:properties&gt;
+                    &lt;/ns3:vevent&gt;
+                  &lt;/ns3:components&gt;
+                &lt;/ns3:vcalendar&gt;
+              &lt;/ns3:icalendar&gt;
+            &lt;/ns2:calendar-data&gt;
+          &lt;/ns2:prop&gt;
+          &lt;ns2:status&gt;OK&lt;/ns2:status&gt;
+        &lt;/ns2:propstat&gt;
+      &lt;/ns2:response&gt;
+    &lt;/ns2:calendarQueryResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+</clause>
+
+<clause id="_free_busy_queries" obligation="normative">
+<title>Free-busy queries</title>
+<p id="_df98d565-526b-16f4-e5b3-6b9592c16909">Freebusy queries are used to obtain <tt>freebusy</tt> information for a principal. The result contains information only for events to which the current principal has sufficient access and may be affected by components and rules available only to the server (for instance office hours availability).</p>
+
+<p id="_05bcb673-da88-d740-b94d-4847ae923c66">These queries are carried out by using a CalWS-SOAP <tt>freebusyReport</tt> request with an <tt>href</tt> specifying a principal. The  <tt>freebusyReport</tt> request is not valid when the <tt>href</tt> specifies any entity other than a principal. The query follows the specification defined in  <eref type="inline" bibitemid="fb" citeas="CC/S 0903:2009"/> with certain limitations. As an authenticated user to the CalWS service scheduling  <tt>read-freebusy</tt> privileges must have been granted. As an unauthenticated user equivalent access must have been granted to unauthenticated users.</p>
+
+<p id="_b32e81b1-cc69-41cc-e68e-8775a718d507">Freebusy information is returned by default as <tt>xcalendar</tt> <tt>vfreebusy</tt> components, as defined by <eref type="inline" bibitemid="rfc6321" citeas="IETF RFC 6321"/>. Such a component is not meant to conform to the requirements of <tt>VFREEBUSY</tt> components in Error: Reference source not found. The  <tt>VFREEBUSY</tt> component <tt>SHOULD</tt> conform to <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"><localityStack><locality type="section"><referenceFrom>4.6.4</referenceFrom></locality></localityStack></eref>. A client <tt>SHOULD</tt> ignore the <tt>ORGANIZER</tt> field.</p>
+
+<p id="_289015b9-d365-2ae8-3c7a-fdb93cd28bb3">Since a Freebusy query can only refer to a single user, a client will already know how to match the result component to a user. A server  <tt>MUST</tt> only return a single <tt>vfreebusy</tt> component.</p>
+</clause>
+
+<clause id="_element_values" obligation="normative">
+<title>Element values</title>
+<p id="_6f62d8a6-11fe-a941-048d-2ec2a6c9f460">Three values are provided: <tt>href</tt>; <tt>start</tt>; <tt>end</tt>. Only the <tt>href</tt> is required. The start and end are in XML UTC date/time format and are interpreted as follows:</p>
+
+<clause id="_start" obligation="normative">
+<title><tt>start</tt></title>
+<dl id="_e9f3719c-0c48-2e27-f682-6feb10679425"><dt>Default</dt>
+<dd><p id="_8fec1998-f502-16f8-1da8-e5850c6d51d9">If omitted the default value is left up to the server. It may be the current day, start of the current month, etc.</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_d5db56ee-356e-875c-5da5-e05dcc1be057">Specifies the start date for the Freebusy data. The server is free to ignore this value and return data in any time range. The client must check the data for the returned time range.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_0e871c3f-554a-1f6c-e7e0-6ab7d11cc1d6">An XML UTC date-time</p>
+</dd>
+</dl>
+
+<example id="_c788a509-ed6c-84e1-1fc0-2655fee8ae2b"><p id="_6c09f454-304f-0dcb-c91b-84033c965cee"><tt>2011-12-01T10:15:00Z</tt></p>
+</example>
+
+<note id="_a7f17baf-0a48-37ee-a9e1-78326b834c32"><p id="_3b20c808-14dd-4a67-1042-a2c5327124d7">Specifying only a start date/time without specifying an end-date/time or period should be interpreted as in  <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>. The effective period should cover the remainder of that day.</p>
+</note>
+</clause>
+
+<clause id="_end" obligation="normative">
+<title><tt>end</tt></title>
+<dl id="_c34f837e-4167-ce0d-a3c5-4205821001bc"><dt>Default</dt>
+<dd><p id="_209f512b-4a35-4f5c-0c09-47ba4ed0f270">Same as <tt>start</tt></p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_0d82618a-1558-34d3-ca57-b05283c3b6fa">Specifies the end date for the Freebusy data. The server is free to ignore this value.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_fe78e086-2a6c-8f58-94c3-62cc395679ee">Same as <tt>start</tt></p>
+</dd>
+<dt>Example</dt>
+<dd><p id="_a941826c-82f6-252e-3604-c015eb3429bf">Same as <tt>start</tt></p>
+</dd>
+</dl>
+
+<p id="_7f2cc819-9246-0553-d688-caf5051e3f00">The server is free to ignore the start, end and period parameters. It is recommended that the server return at least 6 weeks of data from the current day.</p>
+
+<p id="_26329762-6af3-9099-79b7-1ef8da9bacc5">A client <tt>MUST</tt> check the time range in the response as a server may return a different time range than the requested range.</p>
+</clause>
+</clause>
+
+<clause id="_examples" obligation="normative">
+<title>Examples</title>
+<p id="_91045fc2-2892-9255-d7a1-53cd30f995ae">The following is an unsuccessful request targeting an invalid resource.</p>
+
+<sourcecode id="_3546e977-4005-64ff-1bbf-4d1984749fc8" unnumbered="true">&gt;&gt; Request &lt;&lt;
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:freebusyReport
+          xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+          xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/user/douglm/calendar&lt;/ns2:href&gt;
+      &lt;ns2:time-range&gt;
+        &lt;ns2:start&gt;2011-04-01T04:00:00Z&lt;/ns2:start&gt;
+        &lt;ns2:end&gt;2011-04-30T04:00:00Z&lt;/ns2:end&gt;
+      &lt;/ns2:time-range&gt;
+    &lt;/ns2:freebusyReport&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt; Response &lt;&lt;
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:freebusyReportResponse
+          xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+          xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:status&gt;Error&lt;/ns2:status&gt;
+      &lt;ns2:message&gt;Only principal href supported&lt;/ns2:message&gt;
+    &lt;/ns2:freebusyReportResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+
+<p id="_3b541645-2cf5-86f8-46d5-c947d0ce46df">The following is an example of a request to retrieve Freebusy data for a user:</p>
+
+<sourcecode id="_133d19e8-ef6c-d594-f1cc-a6e4b41ec36d" unnumbered="true">&gt;&gt; Request &lt;&lt;
+
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:freebusyReport
+          xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+          xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:href&gt;/principals/users/douglm&lt;/ns2:href&gt;
+      &lt;ns2:time-range&gt;
+        &lt;ns2:start&gt;2011-04-01T04:00:00Z&lt;/ns2:start&gt;
+        &lt;ns2:end&gt;2011-04-30T04:00:00Z&lt;/ns2:end&gt;
+      &lt;/ns2:time-range&gt;
+    &lt;/ns2:freebusyReport&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+&gt;&gt; Response &lt;&lt;
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;ns2:freebusyReportResponse
+          xmlns:ns2="http://docs.oasis-open.org/ws-calendar/ns/soap"
+          xmlns:ns3="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+      &lt;ns2:status&gt;OK&lt;/ns2:status&gt;
+      &lt;ns3:icalendar&gt;
+        &lt;ns3:vcalendar&gt;
+          &lt;ns3:properties&gt;
+            &lt;ns3:prodid&gt;
+              &lt;ns3:text&gt;//Bedework.org//BedeWork V3.7//EN&lt;/ns3:text&gt;
+            &lt;/ns3:prodid&gt;
+            &lt;ns3:version&gt;
+              &lt;ns3:text&gt;2.0&lt;/ns3:text&gt;
+            &lt;/ns3:version&gt;
+          &lt;/ns3:properties&gt;
+          &lt;ns3:components&gt;
+            &lt;ns3:vfreebusy&gt;
+              &lt;ns3:properties&gt;
+                &lt;ns3:attendee&gt;
+                  &lt;ns3:parameters&gt;
+                    &lt;ns3:partstat&gt;
+                      &lt;ns3:text&gt;NEEDS-ACTION&lt;/ns3:text&gt;
+                    &lt;/ns3:partstat&gt;
+                  &lt;/ns3:parameters&gt;
+                  &lt;ns3:cal-address&gt;mailto:douglm@mysite.edu&lt;/ns3:cal-address&gt;
+                &lt;/ns3:attendee&gt;
+                &lt;ns3:created&gt;
+                  &lt;ns3:utc-date-time&gt;2011-06-30T15:45:56Z&lt;/ns3:utc-date-time&gt;
+                &lt;/ns3:created&gt;
+                &lt;ns3:dtend&gt;
+                  &lt;ns3:date-time&gt;2011-04-30T00:00:00Z&lt;/ns3:date-time&gt;
+                &lt;/ns3:dtend&gt;
+                &lt;ns3:dtstamp&gt;
+                  &lt;ns3:utc-date-time&gt;2011-06-30T15:45:56Z&lt;/ns3:utc-date-time&gt;
+                &lt;/ns3:dtstamp&gt;
+                &lt;ns3:dtstart&gt;
+                  &lt;ns3:date-time&gt;2011-04-01T00:00:00Z&lt;/ns3:date-time&gt;
+                &lt;/ns3:dtstart&gt;
+                &lt;ns3:freebusy&gt;
+                  &lt;ns3:parameters&gt;
+                    &lt;ns3:fbtype&gt;
+                      &lt;ns3:text&gt;BUSY&lt;/ns3:text&gt;
+                    &lt;/ns3:fbtype&gt;
+                  &lt;/ns3:parameters&gt;
+                  &lt;ns3:period&gt;
+                    &lt;ns3:start&gt;2011-04-06T15:00:00Z&lt;/ns3:start&gt;
+                    &lt;ns3:end&gt;2011-04-06T16:00:00Z&lt;/ns3:end&gt;
+                  &lt;/ns3:period&gt;
+                &lt;/ns3:freebusy&gt;
+                &lt;ns3:last-modified&gt;
+                  &lt;ns3:utc-date-time&gt;2011-06-30T15:45:56Z&lt;/ns3:utc-date-time&gt;
+                &lt;/ns3:last-modified&gt;
+                &lt;ns3:organizer&gt;
+                  &lt;ns3:parameters/&gt;
+                  &lt;ns3:cal-address&gt;mailto:douglm@mysite.edu&lt;/ns3:cal-address&gt;
+                &lt;/ns3:organizer&gt;
+                &lt;ns3:uid&gt;
+                  &lt;ns3:text&gt;2UTDVPZ9H0EQL9QISI44SP5IFPC4N75&lt;/ns3:text&gt;
+                &lt;/ns3:uid&gt;
+              &lt;/ns3:properties&gt;
+            &lt;/ns3:vfreebusy&gt;
+          &lt;/ns3:components&gt;
+        &lt;/ns3:vcalendar&gt;
+      &lt;/ns3:icalendar&gt;
+    &lt;/ns2:freebusyReportResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="sec-14" obligation="normative">
+<title>Multiple operations</title>
+<p id="_a339f231-d4db-982f-263f-56338bb7502c">Each of the previously described operations acts upon a single entity or resource only. Frequently we have the need to update an interconnected set of entities so that we maintain the consistency of the structure. This requires an atomic operation which can successfully update all the entities or roll back the operation on failure.</p>
+
+<p id="_17d64bc7-43aa-0aaf-b9ba-2b1ceef859ed">The <tt>MultiOpType</tt> operation provides such a feature. It is essentially a wrapper around any of the other operations which guarantees the success of the entire set or a roll back. Using the id attribute for requests, each individual response can be located in the result. The  <tt>MultiOpType</tt> request takes the following elements</p>
+
+<table id="tab48">
+<name><tt>MultiOpType</tt> elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>operations</tt></td>
+<td valign="top" align="left">Sequence of <tt>BaseOperationType</tt></td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Contains one or more operations</td>
+</tr></tbody>
+</table>
+
+<p id="_4832d7cb-59b0-f705-6c78-aac88b94f555">The response type is also simple containing a single element containing all the responses.</p>
+
+<table id="tab49">
+<name><tt>MultiOpResponseType</tt> elements</name>
+<thead><tr><th valign="top" align="left">Field</th>
+<th valign="top" align="left">Type</th>
+<th valign="top" align="left">#</th>
+<th valign="top" align="left">?</th>
+<th valign="top" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><tt>responses</tt></td>
+<td valign="top" align="left">Sequence of <tt>BaseResponseType</tt></td>
+<td valign="top" align="left">1</td>
+<td valign="top" align="left">Y</td>
+<td valign="top" align="left">Contains zero or more responses</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_conformance" obligation="normative">
+<title>Conformance</title>
+<p id="_91e87926-f24d-51ec-9b33-e5c5642c509b">The last numbered section in the specification must be the Conformance section. Conformance Statements/
+Clauses go here.<note id="_73fad615-f986-6337-5920-8be6540f8e7f"><p id="_7035155d-1fe7-fd3b-330e-5f5a533e339c">Remove the “#” marker and the text in the two sentences before this bracketed material, and the brackets, and the text inside the brackets.</p>
+</note></p>
+
+
+</clause>
+
+<clause id="_acknowledgments" obligation="normative">
+<title>Acknowledgments</title>
+<p id="_6e9707de-7c3b-731c-d2f0-3ecbd368c7ff">The following individuals have participated in the creation of this specification and are gratefully acknowledged:</p>
+
+<p id="_44ece518-7a00-fd99-702a-515a3904f406">Participants:</p>
+
+<ul id="_24bdbeed-fece-8a85-e231-be16a3c7b477"><li><p id="_e65e847a-bc22-31ad-12bc-7d55d0b1595a">Bruce Bartell, Southern California Edison</p>
+</li>
+<li><p id="_23322ae5-f2ef-2d99-4f95-bb279804bb39">Brad Benson, Trane</p>
+</li>
+<li><p id="_c168c170-430b-de85-265d-9e355c36a293">Edward Cazalet, Individual</p>
+</li>
+<li><p id="_9caec614-9578-92a7-b2b5-15298bf83fe6">Toby Considine, University of North Carolina at Chapel Hill</p>
+</li>
+<li><p id="_28311695-ea3a-d231-ee60-314162700466">William Cox, Individual</p>
+</li>
+<li><p id="_3df14225-7e6c-a080-6c81-b0c3392cf6b3">Sharon Dinges, Trane</p>
+</li>
+<li><p id="_12924f5b-3ed0-35e8-9c72-3ff773ba90cb">Mike, Douglass, Rensselaer Polytechnic Institute</p>
+</li>
+<li><p id="_91b947c2-c0e7-6579-4b0d-7c878209146d">Craig Gemmill, Tridium, Inc.</p>
+</li>
+<li><p id="_484f6684-7bc4-1795-fb75-abb3f3fd8edd">Girish Ghatikar, Lawrence Berkeley National Laboratory</p>
+</li>
+<li><p id="_2202eb05-7206-b1ef-f2b4-2061ef824d80">Gerald Gray, Southern California Edison</p>
+</li>
+<li><p id="_7137da7e-c696-c7f1-0957-46936f099aca">David Hardin, ENERNOC</p>
+</li>
+<li><p id="_61a5e6b0-6902-a09d-0cb1-7b2209e43a3e">Gale Horst, Electric Power Research Institute (EPRI)</p>
+</li>
+<li><p id="_5cf62129-b60b-f7b9-6a14-efc45e82c379">Gershon Janssen, Individual</p>
+</li>
+<li><p id="_f373161c-90a3-4a5a-2b70-4723e1a19694">Ed Koch, Akuacom Inc.</p>
+</li>
+<li><p id="_3d37622d-9295-4dfe-d065-73a65e40bf79">Benoit Lepeuple, LonMark International*</p>
+</li>
+<li><p id="_5ef72154-5b14-79a1-cda9-d3cad0fb7e10">Carl Mattocks, CheckMi*</p>
+</li>
+<li><p id="_b7261b73-6ed3-12b4-644a-26690e39874f">Robert Old, Siemens AG</p>
+</li>
+<li><p id="_844cb511-57d9-2bc7-5338-0a95562acce3">Alexander Papaspyrou, Technische Universitat Dortmund</p>
+</li>
+<li><p id="_e26d06d3-3383-ad2d-fe52-fe2fed0aa1c7">Joshua Phillips, ISO/RTO Council (IRC)</p>
+</li>
+<li><p id="_764be646-f078-7a17-17e9-ce537e5449e9">Jeremy J. Roberts, LonMark International</p>
+</li>
+<li><p id="_e8e941d8-206e-d245-2b05-432832156d8a">David Thewlis, CalConnect</p>
+</li>
+</ul>
+
+<p id="_da3c75c8-8b5b-126f-9409-44f3d1359f5b">The Calendaring and Scheduling Consortium (CalConnect) TC-XML committee worked closely with WSCalendar Technical Committee, bridging to developing IETF standards and contributing the services definitions that make up Services in Section 4. The Technical Committee gratefully acknowledges their assistance and cooperation as well. Contributors to TC XML include:</p>
+
+<ul id="_b40ba41e-0b18-f286-af10-eef85822e0e8"><li><p id="_881ee1d0-f874-ad68-bcf7-734c125bd880">Cyrus Daboo, Apple</p>
+</li>
+<li><p id="_85ba4a4b-cf74-9049-a105-cb10299163a2">Mike Douglass, Rensselaer Polytechnic Institute</p>
+</li>
+<li><p id="_8567edaa-cff2-bb59-41ed-15d9a235a9a1">Steven Lees, Microsoft</p>
+</li>
+<li><p id="_1754bf00-45f1-7a03-956b-6761f3c5281a">Tong Li, IBM</p>
+</li>
+</ul>
+</clause>
+
+
+</sections><bibliography><references id="_normative_references" normative="true" obligation="informative">
+<title>Normative references</title><p id="_7700c9c2-af66-2724-095b-c09172f235dc">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+<bibitem id="rfc2119" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Key words for use in RFCs to Indicate Requirement Levels</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2119</uri>
+  <docidentifier type="IETF" primary="true">RFC 2119</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2119</docidentifier>
+  <docnumber>RFC2119</docnumber>
+  <date type="published">
+    <on>1997-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Bradner</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_44a70b1b-d85b-f863-aaf4-9f1bae4d193c">In many standards track documents several words are used to signify the requirements in the specification. These words are often capitalized. This document defines these words as they should be interpreted in IETF documents. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">BCP</title>
+
+    <number>14</number>
+  </series>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2119</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Standards</keyword>
+  <keyword>Track</keyword>
+  <keyword>Documents</keyword>
+</bibitem>
+<bibitem id="rfc2616" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Hypertext Transfer Protocol — HTTP/1.1</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2616</uri>
+  <docidentifier type="IETF" primary="true">RFC 2616</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2616</docidentifier>
+  <docnumber>RFC2616</docnumber>
+  <date type="published">
+    <on>1999-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Gettys</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Mogul</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">H. Frystyk</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">P. Leach</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_448cf62a-8a80-8c29-91b8-49298cdf2b31">HTTP has been in use by the World-Wide Web global information initiative since 1990. This specification defines the protocol referred to as “HTTP/1.1”, and is an update to RFC 2068. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7230</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7230</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7231</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7231</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7232</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7232</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7233</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7233</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7234</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7234</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7235</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7235</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2616</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>HTTP</keyword>
+  <keyword>Hypertext Transfer Protocol</keyword>
+  <keyword>World Wide Web</keyword>
+  <keyword>WWW</keyword>
+  <keyword>hypermedia</keyword>
+</bibitem>
+<bibitem id="rfc4791" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Calendaring Extensions to WebDAV (CalDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4791</uri>
+  <docidentifier type="IETF" primary="true">RFC 4791</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4791</docidentifier>
+  <docnumber>RFC4791</docnumber>
+  <date type="published">
+    <on>2007-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Dusseault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_5c8db77e-a18e-09ca-9474-be82d39fa599">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing calendaring and scheduling information based on the iCalendar format. This document defines the “calendar-access” feature of CalDAV. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4791</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>calcav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>webdav</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>http</keyword>
+</bibitem>
+<bibitem id="caldav-sched"><formattedref format="application/x-isodoc+xml">[NO INFORMATION AVAILABLE]</formattedref><docidentifier type="IETF">IETF I-D draft-desruisseaux-caldav-sched-08</docidentifier><docnumber>08</docnumber></bibitem>
+<bibitem id="rfc5545" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>
+  <docidentifier type="IETF" primary="true">RFC 5545</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5545</docidentifier>
+  <docnumber>RFC5545</docnumber>
+  <date type="published">
+    <on>2009-09</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_93a75e89-bbce-8abe-5f47-38122e89eb61">This document defines the iCalendar data format for representing and exchanging calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information, independent of any particular calendar service or protocol. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5545</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsify</keyword>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>caldav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>meeting</keyword>
+  <keyword>event</keyword>
+  <keyword>task</keyword>
+  <keyword>to-do</keyword>
+  <keyword>journal</keyword>
+  <keyword>appointment</keyword>
+  <keyword>agenda</keyword>
+  <keyword>schedule</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>ischedule</keyword>
+  <keyword>xCalendar</keyword>
+</bibitem>
+<bibitem id="rfc6321" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">xCal: The XML Format for iCalendar</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc6321</uri>
+  <docidentifier type="IETF" primary="true">RFC 6321</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6321</docidentifier>
+  <docnumber>RFC6321</docnumber>
+  <date type="published">
+    <on>2011-08</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">M. Douglass</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Lees</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_6379cab4-d4c5-0f1f-a789-a9285c09d9b0">This specification defines “xCal”, an XML format for iCalendar data. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>6321</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>extensible markup language</keyword>
+</bibitem>
+<bibitem id="tz-service" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Timezone Service Protocol</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-douglass-timezone-service-04</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-douglass-timezone-service-04</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.douglass-timezone-service</docidentifier>
+  <docnumber>I-D.douglass-timezone-service</docnumber>
+  <date type="published">
+    <on>2012-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <version>
+    <draft>04</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_b1911d57-e009-87a1-6271-1f37c45bc064">This document defines a timezone service protocol that allows reliable, secure and fast delivery of timezone information to client systems such as calendaring and scheduling applications or operating systems.</p>
+
+  </abstract>
+  <relation type="updatedBy">
+    <bibitem>
+      <formattedref format="text/plain">draft-douglass-timezone-service-05</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-douglass-timezone-service-05</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-douglass-timezone-service-04</number>
+  </series>
+</bibitem>
+<bibitem id="fb" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Freebusy Read URL V1.0 (CD 0903)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Freebusy Read URL V1.0 (CD 0903)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0903%20Freebusy%20Read%20URL%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/S 0903:2009</docidentifier>
+  <version>
+    <revision-date>2009-04-15</revision-date>
+  </version>
+  <abstract format="text/plain">This document, developed by the Freebusy Technical Committee, defines a standardized form of Freebusy read URL to improve interoperability between client and server implementations, while extending the functionality and utility through the use of optional parameters.</abstract>
+</bibitem>
+<bibitem id="soap"><formattedref format="application/x-isodoc+xml">Simple Object Access Protocol (SOAP) 1.1, 8 May 2000
+<link target="http://www.w3.org/TR/2000/NOTE-SOAP-20000508/"/></formattedref><docidentifier>SOAP11</docidentifier><docnumber>11</docnumber></bibitem>
+<bibitem id="wsdl"><formattedref format="application/x-isodoc+xml">Web Services Description Language (WSDL) 1.1, 15 March 2001
+<link target="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/></formattedref><docidentifier>WSDL11</docidentifier><docnumber>11</docnumber></bibitem>
+<bibitem id="wscal"><formattedref format="application/x-isodoc+xml">WS-Calendar Version 1.0. 19 January 2011. OASIS Committee Specification
+<link target="http://docs.oasis-open.org/ws-calendar/ws-calendar-spec/v1.0/cs01/ws-calendarspec-v1.0-cs01.pdf"/>.</formattedref><docidentifier>WS-Calendar</docidentifier></bibitem>
+</references><references id="_non_normative_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="webl" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Web Linking</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-nottingham-http-link-header-10</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-nottingham-http-link-header-10</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.nottingham-http-link-header</docidentifier>
+  <docnumber>I-D.nottingham-http-link-header</docnumber>
+  <date type="published">
+    <on>2010-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mark Nottingham</completename>       </name>
+
+    </person>
+  </contributor>
+  <version>
+    <draft>10</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_a7fe1bb8-a130-edef-7c01-f92efc0f02e0">This document specifies relation types for Web links, and defines a registry for them. It also defines the use of such links in HTTP headers with the Link header field. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-nottingham-http-link-header-10</number>
+  </series>
+</bibitem><bibitem id="wsa">
+  <formattedref format="application/x-isodoc+xml">W3C Recommendation,Web Services Addressing 1.0 — Core, and Web Services Addressing 1.0 — SOAP Binding, 9 May 2006
+<link target="http://www.w3.org/2002/ws/addr/"/></formattedref>
+  <docidentifier>WS-Addr</docidentifier>
+  
+</bibitem><bibitem id="wti">
+  <formattedref format="application/x-isodoc+xml">Basic Profile Version 1.1, 10 April 2006
+<link target="http://www.ws-i.org/Profiles/BasicProfile-1.1-2006-04-10.html"/></formattedref>
+  <docidentifier>WT-I-Basic</docidentifier>
+  
+</bibitem><bibitem id="wsib">
+  <formattedref format="application/x-isodoc+xml">Web Services-Interoperability Organization (WS-I) Simple SOAP Binding Profile Version 1.0, 24 August 2004
+<link target="http://www.ws-i.org/Profiles/SimpleSoapBindingProfile-1.0-2004-08-24.html"/></formattedref>
+  <docidentifier>WS-I-Bind</docidentifier>
+  
+</bibitem>
+
+
+
+
+</references></bibliography>
+</csd-standard>

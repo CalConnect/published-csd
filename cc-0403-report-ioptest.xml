@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">July 2004 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0403:2004</docidentifier><docnumber>0403</docnumber><date type="published"><on>2004-07-30</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2004-07-30</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2004</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_82a46e87-ef01-780e-b856-9dc8e47f725f" obligation="normative">
+<p id="_fef2b9dd-f447-2c9f-fb28-ba4e81490543">© 2004 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<clause id="_report" obligation="normative">
+<title>Report</title>
+<clause id="_participants" obligation="normative">
+<title>Participants</title>
+<ul id="_6c804ba0-d788-7924-2774-9f3751bc43ea"><li><p id="_88655c15-2e2a-b3ab-ef84-0ef4318efc17">Dave Thewlis — Calendaring and Scheduling Consortium</p>
+</li>
+<li><p id="_3642ca8c-b64c-5621-4001-35b0d474e4b9">Pat Egen — IETF Co-chair and Calendaring and Scheduling Consortium</p>
+</li>
+<li><p id="_b31bdc4c-1019-0095-2f46-d57fcb2e7fe8">Nathaniel S. Borenstein, IBM</p>
+</li>
+<li><p id="_b335b7fd-3800-d01a-9c04-1a0472fc25c0">Chris Stoner — IBM</p>
+</li>
+<li><p id="_54390520-fdd9-7e24-1fcc-0989662bd331">Keith MacDonald — Oracle</p>
+</li>
+<li><p id="_d3be9ac9-47a5-5dfd-d308-1101eb85c24d">Simon Vaillancourt — Oracle</p>
+</li>
+<li><p id="_be22df20-69d5-a05e-9c06-f86ca9667ca2">Jeff McCullough — University of California at Berkeley — our host</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_products_tested" obligation="normative">
+<title>Products Tested</title>
+<ul id="_9d6fdf1e-d429-63b9-e84d-7ba57638d51a"><li><p id="_9424514d-2f59-de5f-79f9-14ee2bd8f5d5">Lotus Notes 7</p>
+</li>
+<li><p id="_015319af-966f-3132-1282-2241417dd621">Oracle Collaboration Suite</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_general_summary" obligation="normative">
+<title>General Summary</title>
+<p id="_a0767b98-efb9-1324-c95e-3fbe00aa52be">During our testing event at UC Berkeley two vendors participated. This was the fourth in a series of interoperability testing events for RFC 2445, 2446, and 2447. The first two were “onsite” events and the third was a “virtual” event with testing occurring via conference calls and email testing.</p>
+
+<p id="_93ebb36d-af2c-651e-7430-1b8497fde570">At the last three testing events, the testing done was more at a vendor to vendor level rather than at a pure IETF “RFC Conformance” level. By Conformance testing, we mean identifying support for and testing explicit  <tt>MUST</tt>/<tt>MUST NOT</tt>/<tt>SHOULD</tt>/<tt>SHOULD NOT</tt>/ and <tt>MAY</tt> requirements.</p>
+
+<p id="_79d7d59c-ef6f-c4fc-2c5b-0b05febf4536">In preparation for this interop event and to satisfy the requirement for RFC conformance testing, a matrix of all three RFC’s was prepared and this was used as our driver for testing compliance. We, as a group, went through each and every item and validated whether the requirement was supported by each vendor. In most cases, where both vendors did not support a particular requirement, we still tested the action to validate this “non-support.” From that perspective, this was probably the most productive interop of all the events.</p>
+
+<p id="_b99b24be-9763-e43b-6db9-f3d8cde70d6d">Since there were only two participants at this interop, we will need at least one more interoperability event to fully identify what needs to be removed from these drafts. Now that we have a complete set of matrices as well as test scenarios and scripts, we can fully define what works and doesn’t work. I have included the notes from the other three events at the end of this document for comparison.</p>
+
+<p id="_69e1e865-a957-dc9e-12dd-59d320dc7681">This document will highlight the key findings from this exercise. The matrix spreadsheet with all items noted is attached to this report. The spreadsheet shows what is and is not supported by the two participants. Based on past interops, and discussions held at this meeting we have ascertained the following:</p>
+
+<ul id="_6af20ad1-306d-677d-59c3-f8f0485d5e54"><li><p id="_73ca1ad9-87fe-d6b9-1341-4e4b282fdecb">Most vendors are not doing Journals. It appears we can probably remove any <tt>VJOURNAL</tt> items from all drafts without significant ramifications.</p>
+</li>
+<li><p id="_a53c2a64-bded-8e47-9956-f81c1ceb7fc8">Recurring and repeating meetings still have a bit of mystery and ambiguity associated with them. This was obvious during testing and is well documented and discussed on the various lists. We talked about the differences between recurring and repeating meetings and we look to see this discussed further on all the mailing lists.</p>
+</li>
+<li><p id="_29ba9e3e-2d79-74a0-9d1a-6bc0da18f1ef"><tt>VTODO</tt>‘s are not supported by either vendor and there were problems in past interops. This may be something that can be removed and added back as another draft that just pertains to <tt>VTODO</tt>s.</p>
+</li>
+</ul>
+
+<p id="_3a7b2c6a-ba2c-7bb4-51cd-04bf1af88452">The next page identifies the items that are supported by both vendors and the items not supported on the three drafts. Note — there are 201 specific items in RFC 2445, 74 items in RFC 2446, and 14 items in RFC 2447. Any item not shown on the summary page means only one of the two vendors during this interoperability event supports that item.</p>
+
+<p id="_521ecf09-47dc-3b38-5cba-ed8d7ce1fbf3">I created a table that counts the number of items supported and not supported by both vendors as well as a breakdown of how many of each item each vendor does or does not support. I also created a table that shows the specific items supported by both vendors and a table showing the specific items  <tt>NOT</tt> supported by both vendors.</p>
+
+<p id="_e84b1d69-fbcc-5876-db92-dd13841ae61a">In summary, we are farther along than we were during the first interop. But we have a ways to go. There was discussion at this interop about opening a new mailing list to work on simplification of these drafts in order to improve/enhance interoperability opportunities.</p>
+
+<p id="_46b0c6d0-dbca-77ee-23a4-0f279211cf45">The results for both vendors showed the following:</p>
+
+<table id="_e9d1ae30-7838-3549-9991-544527bc949e" unnumbered="true"><thead><tr><th valign="top" align="left">Draft</th>
+<th valign="top" align="left">Items Supported</th>
+<th valign="top" align="left">Items Not Supported</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">RFC 2445</td>
+<td valign="top" align="left">114</td>
+<td valign="top" align="left">26</td>
+</tr><tr><td valign="top" align="left">RFC 2446</td>
+<td valign="top" align="left">15</td>
+<td valign="top" align="left">5</td>
+</tr><tr><td valign="top" align="left">RFC 2447</td>
+<td valign="top" align="left">8</td>
+<td valign="top" align="left">5</td>
+</tr></tbody>
+</table>
+
+<p id="_ae7e7f0c-bae9-b026-e81c-388e96909f5c">By Vendor, the numbers look like this:</p>
+
+<table id="_1685ee21-4393-6669-beb4-d85a0b691c42" unnumbered="true"><thead><tr><th valign="top" align="left">Draft</th>
+<th valign="top" align="left">Items Supported</th>
+<th valign="top" align="left">Items Not Supported</th>
+</tr></thead>
+<tbody><tr><th colspan="3" valign="top" align="left">Vendor 1</th>
+</tr><tr><td valign="top" align="left">RFC 2445</td>
+<td valign="top" align="left">132</td>
+<td valign="top" align="left">69</td>
+</tr><tr><td valign="top" align="left">RFC 2446</td>
+<td valign="top" align="left">35</td>
+<td valign="top" align="left">39</td>
+</tr><tr><td valign="top" align="left">RFC 2447</td>
+<td valign="top" align="left">9</td>
+<td valign="top" align="left">5</td>
+</tr><tr><th colspan="3" valign="top" align="left">Vendor 2</th>
+</tr><tr><td valign="top" align="left">RFC 2445</td>
+<td valign="top" align="left">137</td>
+<td valign="top" align="left">64</td>
+</tr><tr><td valign="top" align="left">RFC 2446</td>
+<td valign="top" align="left">45</td>
+<td valign="top" align="left">29</td>
+</tr><tr><td valign="top" align="left">RFC 2447</td>
+<td valign="top" align="left">8</td>
+<td valign="top" align="left">6</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+
+<clause id="_identification_of_specific_items_on_the_drafts" obligation="normative">
+<title>Identification of Specific Items on the Drafts</title>
+<clause id="_items_supported_by_both_vendors" obligation="normative">
+<title>Items supported by BOTH vendors</title>
+<clause id="_icalendar_rfc_2445_114_items_out_of_201" obligation="normative">
+<title>iCalendar — RFC 2445 — 114 items out of 201</title>
+<ul id="_7ee70298-a98d-abab-0c28-35abb2205c07"><li><p id="_6ac94442-3e53-fd4d-0b7e-6cbd66c5474a">2.3 International Considerations</p>
+</li>
+<li><p id="_b05ce7d2-1c2b-0e7c-1d51-371a1bb09647">4.1 Content Lines</p>
+</li>
+<li><p id="_c25502e1-a7ea-3325-10a4-5daebcf91fdc">4.2 Property Parameters</p>
+</li>
+<li><p id="_dce88662-8423-3f65-5b9d-8582f5a7bc32">4.2.12 Participation Status</p>
+</li>
+<li><p id="_57b1d260-65fe-73db-4d6e-aefee278c521">4.2.19 Time Zone Identifier</p>
+</li>
+<li><p id="_4a14d6f4-6e6a-dd1e-e68f-693c8154a978">4.2.20 Value Data Types</p>
+</li>
+<li><p id="_89a44139-4c34-e246-74a1-14e0d5525642">4.3.3 Calendar User Address</p>
+</li>
+<li><p id="_0028fb3f-82c7-cf79-e0bb-bc296ea4ee33">4.3.5 Date-Time</p>
+</li>
+<li><p id="_a77af11b-6b36-4fd5-87a0-ee5af9f1b480">4.3.10 Recurrence Rule</p>
+</li>
+<li><p id="_689ff7c9-0898-3201-909d-bbdf0ca4ad0a">4.3.11 Text</p>
+</li>
+<li><p id="_2ab49c71-ece6-0aa2-5e7d-b451af9b6f87">4.3.12 Time</p>
+</li>
+<li><p id="_9de20806-9282-67ee-c8b9-b0a97f72cfe6">4.3.14 UTC Offset</p>
+</li>
+<li><p id="_6a0348a5-8f1c-6547-b4fb-fc5cb412f93f">4.4 iCalendar Object</p>
+</li>
+<li><p id="_3ab5c4c7-ea5d-2d89-e36f-d52f8866bb5b">4.6 Calendar Components</p>
+</li>
+<li><p id="_624f0cea-45c7-8e6c-44c7-4bc8f5d06437">4.6.1 Event Component</p>
+</li>
+<li><p id="_87da9fd7-71d1-26fb-7695-0707a0d2d1f1">4.6.2 To-do Component</p>
+</li>
+<li><p id="_90917ccd-289e-0db1-7573-7044b4520a6f">4.6.5 Time Zone Component</p>
+</li>
+<li><p id="_11849636-80fa-9ad3-fed4-2407bbe6f926">4.7 Calendar Properties</p>
+</li>
+<li><p id="_d2f5e6cf-8c0f-fa55-0d70-4d688b1d700c">4.7.2 Method</p>
+</li>
+<li><p id="_0767d5f8-965e-9097-5193-4e4bd154c938">4.7.3 Product Identifier</p>
+</li>
+<li><p id="_fe961d8a-8b8a-fb24-2612-c4da5a241db9">4.7.4 Version</p>
+</li>
+<li><p id="_5314a002-055d-3ce2-850b-97017f83f3f5">4.8.1.4 Comment</p>
+</li>
+<li><p id="_05513e36-7c0b-1f9d-b1b0-2487644b0192">4.8.1.5 Description</p>
+</li>
+<li><p id="_f4253198-9710-95a9-54d5-0d164b7d2b7f">4.8.1.6 Geographic Position</p>
+</li>
+<li><p id="_15d90ccd-6e66-d3c1-83f3-f4842047becb">4.8.1.7 Location</p>
+</li>
+<li><p id="_4781ba39-2aa9-770b-b8b2-ecc340e11031">4.8.1.10 Resources</p>
+</li>
+<li><p id="_2660cda7-7671-c318-0029-57f565d60913">4.8.1.12 Summary</p>
+</li>
+<li><p id="_1b9e3fff-01f9-8535-2609-74b0965f75b0">4.8.2.1 Date/Time Completed</p>
+</li>
+<li><p id="_ca959123-f00b-6b69-2504-16307bcfda16">4.8.2.2 Date/Time End</p>
+</li>
+<li><p id="_49673f65-a73b-e6e9-f40b-42f2cc5908fb">4.8.2.4 Date/Time Start</p>
+</li>
+<li><p id="_ccc71b9a-54c7-f779-6b8f-d63fedc25f4f">4.8.2.7 Time Transparency</p>
+</li>
+<li><p id="_9e35544c-8eb9-d11a-8bde-c35c9cc27b46">4.8.3.1 Time Zone Identifier</p>
+</li>
+<li><p id="_3025a7c6-a8a2-8c9d-12c2-e41ba929f8c0">4.8.3.2 Time Zone Name</p>
+</li>
+<li><p id="_4d233a6e-0fa7-9982-3c3c-490924249ba9">4.8.3.3 Time Zone Offset From</p>
+</li>
+<li><p id="_fc0dbfbe-9d4a-2717-e778-c3895fa47fd7">4.8.3.4 Time Zone Offset To</p>
+</li>
+<li><p id="_403c6c74-12ad-5d79-fc66-9d2504f4ef94">4.8.4.1 Attendee</p>
+</li>
+<li><p id="_036bfb1c-b5a1-3873-69ad-30e43bca5e2a">4.8.4.2 Contact</p>
+</li>
+<li><p id="_774c66c3-597b-72f2-0619-ec1396c4aa25">4.8.4.3 Organizer</p>
+</li>
+<li><p id="_8321473f-59d5-67bb-e025-7a9e86022053">4.8.4.4 Recurrence ID</p>
+</li>
+<li><p id="_c6a1f70d-2efe-a511-ec3c-b76106b189e7">4.8.4.7 Unique Identifier</p>
+</li>
+<li><p id="_da1489ad-0ae6-173b-e68f-a87caed5ee21">4.8.5.1 Exception Date/Times</p>
+</li>
+<li><p id="_e99b8936-cd49-ca78-c699-5618940bbb81">4.8.5.4 Recurrence Rule</p>
+</li>
+<li><p id="_ba936c81-50f4-e2c5-0f41-ba48efe99db0">4.8.6.1 Action</p>
+</li>
+<li><p id="_306dc97d-c299-fa8f-b189-ad3c96b10618">4.8.7.2 Date/Time Stamp</p>
+</li>
+<li><p id="_3ed0f379-33fb-1286-7848-5cff4d395369">4.8.7.4 Sequence Number</p>
+</li>
+<li><p id="_b750cfe3-4c82-30f3-6821-1bfcc66a79d4">4.8.8.2 Request Status</p>
+</li>
+<li><p id="_bab2bd99-15e0-9aac-3254-c16642f24c9a">6 Recommended Practices</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_itip_rfc_2446_15_items_out_of_74" obligation="normative">
+<title>iTIP — RFC 2446 — 15 items out of 74</title>
+<ul id="_36129e50-0bab-2b66-6bc5-6ef84741bad1"><li><p id="_ffa7cccf-6806-7646-6117-7ab248178133">3.1 Common Component Restrictions</p>
+</li>
+<li><p id="_7ef0f260-6dbe-9816-9c28-b7d2f136ff62">3.2.2 <tt>VEVENT REQUEST</tt></p>
+</li>
+<li><p id="_9840ed9a-d5c0-2510-3722-4148ba4c72ac">3.2.2.1 Rescheduling an Event</p>
+</li>
+<li><p id="_a457bef9-4c63-61fe-fd2d-9cde6e1dc936">3.2.2.2 Updating or Reconfirmation of an Event</p>
+</li>
+<li><p id="_99b9fe80-757d-e490-1097-8697917e44ec">3.2.3 <tt>VEVENT REPLY</tt></p>
+</li>
+<li><p id="_83468ec8-ba69-c46b-4b36-2144d4e1e859">3.2.4 <tt>VEVENT ADD</tt></p>
+</li>
+<li><p id="_c3a611e4-bbd0-49b1-05dd-9828ef54521b">3.2.4 <tt>VEVENT CANCEL</tt></p>
+</li>
+<li><p id="_0dc0a52e-379f-db3e-1f6c-9dd5264f7b9e">3.6 Status Replies</p>
+</li>
+<li><p id="_9c65a7f7-8638-66fe-593a-e993f04f55e7">3.7.2 Attendee Property Considerations</p>
+</li>
+<li><p id="_954242d8-a828-b255-79fa-414167a1cd39">5 Application Protocol Fallbacks</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_imip_rfc_2447_8_items_out_of_14" obligation="normative">
+<title>iMIP — RFC 2447 — 8 items out of 14</title>
+<ul id="_4fd2713d-d9de-5048-7a33-b0b77549c219"><li><p id="_abe2115e-a8ed-f735-7f81-8528a5fd4ab7">2.3 RFC 822 Addresses</p>
+</li>
+<li><p id="_4a74f850-45cd-7e1e-ab82-8afa023eaa15">2.4 Content Type (all)</p>
+</li>
+<li><p id="_0254a89e-11a6-28f4-0b16-6489e523a3d7">2.5 Content-Transfer-Encoding</p>
+</li>
+<li><p id="_7b863d37-4ecf-4321-1384-89025ced1902">2.6 Content-Disposition</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_items_not_supported_by_both_vendors" obligation="normative">
+<title>Items NOT supported by BOTH vendors</title>
+<clause id="_icalendar_rfc_2445_26_of_201_items" obligation="normative">
+<title>iCalendar — RFC 2445 — 26 of 201 items</title>
+<ul id="_4009e512-6496-845c-50c2-3c53e0280ebb"><li><p id="_b6222bec-732d-cc09-5335-bfa3553100dd">4.1.1 List and Field Separators</p>
+</li>
+<li><p id="_81013027-2a15-2668-6a69-264f4ce7029e">4.2.6 Directory Entry Reference</p>
+</li>
+<li><p id="_faab6951-9e99-c413-35bd-82e55362e79c">4.3.5 Date-Time</p>
+</li>
+<li><p id="_4179395c-c3b3-1b3b-ba17-1ec2579bff3d">4.3.9 Period of Time</p>
+</li>
+<li><p id="_fc1ad4cc-a51b-344b-4807-b62c086aca9e">4.6.3 Journal Component</p>
+</li>
+<li><p id="_49cc11c1-cb57-665a-8351-922e370ae150">4.6.5 Time Zone Component</p>
+</li>
+<li><p id="_fb853943-8c1f-f0ce-495d-02f6ca52e265">4.8.4.3 Organizer</p>
+</li>
+<li><p id="_2764827f-cc56-92a4-a08e-8c94ff4ce78d">4.8.4.5 Related To</p>
+</li>
+<li><p id="_3d49eb8e-de9a-cb34-2a43-3b631405abf7">4.8.6.3 Trigger</p>
+</li>
+<li><p id="_45ba8a6f-a8dd-d2fd-e21c-be68b3b0724e">4.8.7.4 Sequence Number</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_itip_rfc_2446_5_of_74_items" obligation="normative">
+<title>iTIP — RFC 2446 — 5 of 74 items</title>
+<ul id="_ea7b9c0a-2819-3acc-6e15-a8d934c85968"><li><p id="_1bcce4c4-3a1b-df5e-41d7-98c6bde89036">3.1 Common Component Restrictions</p>
+</li>
+<li><p id="_241a6320-dc59-4d6f-0653-461958c80b44">3.2.2.6 Forwarding to An Uninvited CU</p>
+</li>
+<li><p id="_4046e0f7-aa5e-486b-6738-4aee30466565">3.3 Methods For <tt>VFREEBUSY</tt> Components</p>
+</li>
+<li><p id="_04224e80-39b1-cec5-98b8-7955fcfe782c">3.3.2 <tt>VFREEBUSY REQUEST</tt></p>
+</li>
+<li><p id="_8fcb847a-b0c8-5c97-fadb-2158913208ea">3.3.3 <tt>VFREEBUSY REPLY</tt></p>
+</li>
+<li><p id="_03ac17f6-7983-b0b3-08f8-70be5c9a068f">3.4.2.4 <tt>REQUEST</tt> Forwarded To An Uninvited Calendar User</p>
+</li>
+<li><p id="_83356c13-11dc-665a-75e1-8e6de15cdd36">3.4.1 <tt>VTODO PUBLISH</tt></p>
+</li>
+<li><p id="_b08fab09-eb30-0517-dd02-9d8a20d7654f">3.4.5 <tt>VTODO CANCEL</tt></p>
+</li>
+<li><p id="_a80395f9-babe-89ec-e30e-0679e76e1d71">3.4.6 <tt>VTODO REFRESH</tt></p>
+</li>
+<li><p id="_4e8dd695-f853-8113-0e13-0704372be0d0">3.5.1 <tt>VJOURNAL PUBLISH</tt></p>
+</li>
+<li><p id="_11dd7bf1-978d-a8b1-968a-460f426a2a0d">3.5.2 <tt>VJOURNAL ADD</tt></p>
+</li>
+<li><p id="_81abca73-7b2f-ab96-82eb-82246d980544">3.5.3 <tt>VJOURNAL CANCEL</tt></p>
+</li>
+<li><p id="_aa07a03f-8d26-a7e2-120b-8e19b69173e8">3.7.2 Attendee Property Considerations</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_imip_rfc_2447_6_of_16_items" obligation="normative">
+<title>iMIP — RFC 2447 — 6 of 16 items</title>
+<ul id="_7e864935-b727-c2e4-c696-c0bc7f813e06"><li><p id="_507162cd-4846-e52b-9061-de9e526afa8f">Section 3 — security considerations</p>
+</li>
+</ul>
+</clause>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_bibliography" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="report-1">
+  <formattedref format="application/x-isodoc+xml">CalConnect I — April, 2000</formattedref>
+  <docidentifier type="metanorma">[1]</docidentifier>
+</bibitem><bibitem id="report-2">
+  <formattedref format="application/x-isodoc+xml">CalConnect II — April, 2001</formattedref>
+  <docidentifier type="metanorma">[2]</docidentifier>
+</bibitem><bibitem id="report-3">
+  <formattedref format="application/x-isodoc+xml">CalConnect III — Virtual interop, September, 2002</formattedref>
+  <docidentifier type="metanorma">[3]</docidentifier>
+</bibitem>
+
+
+
+</references></bibliography>
+</csd-standard>

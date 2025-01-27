@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">February 2008 CalConnect Interoperability Test Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0802:2008</docidentifier><docnumber>0802</docnumber><date type="published"><on>2008-04-09</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Firdosh Ghyara</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Gren Elliott</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Michael Douglass</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Mu Zhang</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Simon Vaillancourt</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Tomas Hnetila</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Tony Becker</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>2</edition><version><revision-date>2008-04-09</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2008</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_907f9be5-eb56-eaba-9be2-d2f72bcb5dcb" obligation="normative">
+<p id="_97a3febc-f821-69e7-8ed2-9465d2853728">© 2008 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<clause id="_participants" obligation="normative">
+<title>Participants</title>
+<table id="_8b1b5193-3886-0114-b5e2-49a37dd2db32">
+<name>Participants</name>
+<thead><tr><th valign="top" align="left">Organization</th>
+<th valign="top" align="left">Event Attended</th>
+<th valign="top" align="left">Participants</th>
+<th valign="top" align="left">Products Tested</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><p id="_8df80aa2-ea2a-ce81-811f-5610c2568362">Apple</p>
+</td>
+<td valign="top" align="left"><p id="_3ea0600e-137e-566f-0597-411c11e73aed">Regular</p>
+</td>
+<td valign="top" align="left"><p id="_684ae07e-6a86-6d58-9ee2-a524befa1665">Cyrus Daboo (iCal Server)<br/> Wilfredo Sanchez (iCal Server) <br/> Scott Adler (iCal Client) <br/> Matt Shephard (iCal Client) <br/> Haley Allen (iCal Client)</p>
+</td>
+<td valign="top" align="left"><p id="_17597106-bc34-60d7-3da5-ff63828760fc">iCal version 3.0.2 (1236)</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_259f24a7-0175-f064-6124-6e2183ba422b">Kerio Technologies</p>
+</td>
+<td valign="top" align="left"><p id="_e5ad97e1-ac5f-27f5-5771-ac8b2b087444">Both<br/> Both</p>
+</td>
+<td valign="top" align="left"><p id="_ed71808e-d477-a87d-7cc2-602eb68986ed">Tomas Hnetila<br/> Otakar Leopold</p>
+</td>
+<td valign="top" align="left"><p id="_b7012ea0-99cb-dd77-5fd1-459688fd7a1a">Kerio MailServer 6.5.0, a special build with CalDAV Realtime S2S Kerio Outlook Connector 6.5.0 (KOFF)</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_71a6ea3f-04dc-7383-9c9e-3b8eb1d57965">Marware</p>
+</td>
+<td valign="top" align="left"><p id="_4d65d03b-a3cd-373b-f5a2-718b48870511">Regular</p>
+</td>
+<td valign="top" align="left"><p id="_24baa685-a996-d6c5-1c63-1546067d49db">Tony Becker</p>
+</td>
+<td valign="top" align="left"><p id="_e9e87624-c0f2-848e-76fe-d631ec4f4961">Project X 1.3.2 (6043)</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_b4c2b329-edaa-cd71-b9fe-2243aa73302c">Microsoft</p>
+</td>
+<td valign="top" align="left"><p id="_4c3b9caf-c0a9-9973-0cb3-02699aad53ae">Regular</p>
+</td>
+<td valign="top" align="left"><p id="_1de51976-8c03-a926-5019-2edcd1660865">Firdosh Ghyara (Exchange)<br/> Mu Zhang (Entourage)</p>
+</td>
+<td valign="top" align="left"><p id="_c2b5cd03-2796-544d-a1f7-fb55e662a2cd">Entourage 2008<br/> Exchange 2007</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_e0123a7c-142c-e4ac-4637-1a020b97e9e1">Oracle</p>
+</td>
+<td valign="top" align="left"><p id="_bca231c8-2771-b396-6e42-ab8c0b0c8421">Regular<br/> Mobile</p>
+</td>
+<td valign="top" align="left"><p id="_71672066-aebf-4122-ec2b-4325a5b51bb6">Simon Vaillancourt<br/> Mike Zhou</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_f22e9605-b3a6-70dc-ad5f-757e326ff34c">RPI/Bedework</p>
+</td>
+<td valign="top" align="left"><p id="_d2d5863f-b7fc-b341-b1e6-9ef546bae449">Regular</p>
+</td>
+<td valign="top" align="left"><p id="_282a1ad5-b140-532b-8782-d296d3443c7a">Mike Douglass</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_73a530c8-6f0f-fbf2-1a62-dae797986bd0">Scalix</p>
+</td>
+<td valign="top" align="left"><p id="_420dc694-4034-4f97-cbe3-96f1d4a0a465">Regular</p>
+</td>
+<td valign="top" align="left"><p id="_a12d7d16-dc68-56fe-a8ce-dd09d324b40c">Florian von Kurnatowski<br/> Gren Elliot</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_bb59b1ed-75f7-4aa4-c83c-db4a96aa93a6">Sony Ericsson</p>
+</td>
+<td valign="top" align="left"><p id="_ccd885e9-e660-1cc7-5e71-97ac208c9040">Mobile</p>
+</td>
+<td valign="top" align="left"><p id="_da90dd6c-0494-4b33-f052-3b1e3b5484d9">David Colter</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_6c25b8f3-5e1a-2d49-00da-42e3bc440dc8">Sun Microsystems</p>
+</td>
+<td valign="top" align="left"><p id="_03edaa68-281c-45c9-225a-eb7e607538a3">Regular</p>
+</td>
+<td valign="top" align="left"><p id="_61f90a07-001a-8593-2acb-ead95a70780f">May Ma<br/> Erwin Rehme <br/> Yao Lu <br/> Yu Chen <br/> Robert Chien</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_ecd2950d-fc3b-3b85-f653-2f82a08a25a9">Zimbra Yahoo</p>
+</td>
+<td valign="top" align="left"><p id="_4a20c7d2-0b90-d814-030c-de6cfe03940d">Regular</p>
+</td>
+<td valign="top" align="left"><p id="_1165e1bb-bf77-e553-4d9c-f0906b3f9bbc">John Holder<br/> Hitaine Patel</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_bec0965c-d742-a4f8-8d10-5209bad4b9d9">CalConnect Reps</p>
+</td>
+<td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_dbf3f939-ea60-83ce-ca3f-40538a16b62e">Interop Manager<br/> Interop Assistant <br/> Logistics</p>
+</td>
+<td valign="top" align="left"><p id="_a02b8d1d-a584-5b37-96fc-12d5d056b815">Regular<br/> Mobile <br/> Both</p>
+</td>
+<td valign="top" align="left"><p id="_945eebb3-a360-17f6-b5e9-54bf81b42631">Pat Egen<br/> Don Egen <br/> Dave Thewlis</p>
+</td>
+<td valign="top" align="left"><p id="_cf17758d-aaa1-521e-84df-28c631c6cbba">Pat Egen “unofficially” tested Lotus Notes as part of the event</p>
+</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_introduction" obligation="normative">
+<title>Introduction</title>
+<p id="_0657f4f3-d8cc-b4b1-ec98-ad71d3e60601">Participants of the testing event used predetermined test scenarios. Rather than post the full scenarios in this document, they can be found on the CalConnect website at the following URL: <link target="http://www.calconnect.org/ioptesting.shtml"/>. The documents used in this testing event were the CalConnect CalDAV Matrix for Draft 08 and the iCalendar Testing Matrix. Summaries and specific findings and issues found are noted in this document.</p>
+</clause>
+
+<clause id="_comments_and_findings" obligation="normative">
+<title>Comments and Findings</title>
+<clause id="_caldav_testing" obligation="normative">
+<title>CALDAV testing</title>
+<clause id="_server_vendor_comments" obligation="normative">
+<title>Server vendor comments</title>
+<clause id="_server_1" obligation="normative">
+<title>Server 1</title>
+<p id="_000088a4-104a-bd3b-b11a-4fe87593c8c8">The Interop went very well; it was nice to see so many vendors present at the event. As products get more mature the issues found are more interesting and having a chance to discuss design implementation details with other vendors is a great opportunity to improve our products.</p>
+</clause>
+
+<clause id="_server_2" obligation="normative">
+<title>Server 2</title>
+<p id="_e888850e-c613-1524-90c7-813773a8315d">This server vendor was mostly focused on <tt>REALTIME</tt> Server-to-Sever Scheduling.</p>
+
+<ul id="_bc668391-1221-94c6-6e8d-869be811d8c4"><li><p id="_121a71a0-351b-d91b-680a-f2cc90bc43ea">Very difficult to do all tests.</p>
+</li>
+<li><p id="_5a7d95fe-20a2-b44e-e6fd-28d99115d8d1">One client’s recurrent event exception — deleted instance</p>
+<ul id="_4d182a79-8a3f-30bf-d6f1-30e61a722606"><li><p id="_4e3b3d42-70d6-e458-a54a-593f6efaa820"><tt>EXDATE</tt> is without time zone</p>
+</li>
+<li><p id="_5cbe7429-c07a-0c44-4316-7e3b7b297748">causes incompatibility with other clients</p>
+</li>
+</ul>
+</li>
+<li><p id="_68143693-7ec6-31ae-cbea-7f81b8ddc179">Another client app — recurrent event exception — an instance moved to different time</p>
+<ul id="_32f56084-2bd5-75e5-cd70-7855f457755d"><li><p id="_87d6b345-60cf-4d32-3ab2-405240fa3246">time is missing in <tt>RECURRENCE-ID</tt> ⇒ other clients are not able to recognize the instance</p>
+</li>
+<li><p id="_94b29441-969d-43c6-a53b-ca07fe5700e4">causes incompatibility with other apps</p>
+</li>
+</ul>
+</li>
+<li><p id="_6b934985-630e-9542-722e-1e27a1937bb3">Meeting requests/responses from a client are not recognized as iMIP messages</p>
+</li>
+<li><p id="_18a0f78a-d009-6858-ef61-7d4f63e1190b">One client had an issue with meeting requests on delegated accounts</p>
+</li>
+<li><p id="_a0fbce0b-9800-d8bf-0747-4cddf43b1601">One client shows organizer twice in attendee list for meeting requests</p>
+</li>
+<li><p id="_67f2e608-173e-0689-8316-ccda158431d7">One client doesn’t send update for declined meetings when location is changed</p>
+<ul id="_2c970806-cdb6-4749-1095-8bd69282dbbb"><li><p id="_504f2488-8024-d47e-ef9b-e4e8fff22e38">not possible to setup delegation without Open Directory</p>
+</li>
+<li><p id="_770b2bb1-1950-5bf1-a1e0-b56ecce73e36">puts invitation to calendar without asking or noticing user when attendee address doesn’t match</p>
+</li>
+</ul>
+</li>
+<li><p id="_c2292faf-6b47-2382-b0f9-9fb3685ae6e7">iCalendar and iTIP interoperability problem (upper case <tt>MAILTO:</tt>)</p>
+</li>
+<li><p id="_a48bb969-1266-2883-393b-b2485cf368ec">One CalDAV client requires full permissions to other people calendars</p>
+<ul id="_7d697c76-ba1f-08f0-ffe4-0add995817cc"><li><p id="_606a832f-a678-d997-cc8f-cbd2314efd2d">not possible to set permissions for others to create calendars</p>
+</li>
+</ul>
+</li>
+<li><p id="_1adf8f64-1fd7-586d-0983-8cc4efbe87eb">An iCalendar client has free/busy incompatibility — returns free/busy in XML format by default. Also had an issue with meeting</p>
+<p id="_6e296dc9-c988-4294-7477-878ab149879c">Realtime Server-to-Server scheduling</p>
+
+<ul id="_8ddfe4b4-30c6-82e5-d1dd-35e93010b274"><li><p id="_688211ac-d351-dcdb-71cd-5b190a0eb2b4">found &amp; fixed bug RealTime scheduling</p>
+<ul id="_c11c7582-b689-68f9-dc81-5448b9219c8b"><li><p id="_bd8da942-9e97-758f-924b-c6575c8a431a">missing <tt>DAV:href in &lt;C:recipient&gt;</tt></p>
+</li>
+<li><p id="_74094eec-7278-5d0d-c981-93d4cbaff9ee">NOT YET fixed — incorrect Originator: address when sending meeting response</p>
+</li>
+<li><p id="_83830bb1-67ed-dcb2-6a21-cd9216cbec97">two spaces before HTTP version causes problem with another server (<tt>POST</tt> <tt>/pubcaldav/rtsvc HTTP/1.1</tt>) — fixed in URL configuration</p>
+</li>
+<li><p id="_631d1298-fbec-a2bf-9323-a516aaa2c684">saw a minor issue in one server when timezone definition contains comma/spaces (generated by a client in European timezone)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+
+<clause id="_server_3" obligation="normative">
+<title>Server 3</title>
+<p id="_eced10c7-3bde-7dfa-c165-90b1786f61bf">We started discovering some extra bugs on Wednesday morning, mostly in the <tt>freebusy</tt> URI stuff. We did quite a bit of testing with another CalDAV client. After determining the client doesn’t support (valid) absolute URLs in DAV responses we changed our server to return relative urls. They tested and ran into a problem which prevented testing scheduling. We didn’t have time to deal with that. Since the interop this has been fixed and now works.</p>
+
+<p id="_4752b996-2a05-647f-d3c1-b23bb776bab3">Realtime server-server problems were generally small — problems with invalid certs from one client and handling of authentication by another CalDAV server.</p>
+
+<p id="_a46ff1b4-d8ab-5b57-2f21-d06a90d3b8c0">One server had a problem with invalid HTTP which was resolved.</p>
+</clause>
+
+<clause id="_server_4" obligation="normative">
+<title>Server 4</title>
+<p id="_5dff4913-39b4-237a-1287-f6d973cc45fd">A CalDAV client tested against our server using the CalDAV Draft 8 scenarios provided the following results. Please refer to the CalDAV document located on the CalConnect server as noted in the Introduction section.</p>
+
+<dl id="_b1e1c40a-7d1a-3711-022a-57ce7db84546"><dt>Section 1 — Event Creation</dt>
+<dd><p id="_832c7ff7-b42e-fa64-17a4-a7d796aed3b7">All items passed.</p>
+</dd>
+<dt>Section 4 — Event Deletion</dt>
+<dd><p id="_bbcf7556-71da-3b8e-79f7-5d3b5e5e9f60">All items passed except 4.5 which failed.</p>
+</dd>
+<dt>Section 5 — Access control</dt>
+<dd><p id="_4338f717-5b8b-c879-115d-5e708b55becd">N/A</p>
+</dd>
+<dt>Section 6 — Calendar Management</dt>
+<dd><dl id="_4069eba7-da9e-6a66-7413-0f6bbc2d28c7"><dt>6.1</dt>
+<dd><p id="_e2f12875-2f19-7436-481a-c40dde927c5c">passed</p>
+</dd>
+<dt>6.2</dt>
+<dd><p id="_a0118e49-567f-663d-2577-9aac0a738d30">failed</p>
+</dd>
+<dt>6.3 — 6.6</dt>
+<dd><p id="_31076ecc-ea1b-e406-4048-cef569941c40">N/.A</p>
+</dd>
+</dl>
+</dd>
+<dt>Section 7 — Free Busy Reports</dt>
+<dd><dl id="_c0a9729c-a2c0-71ed-212e-d83c872e5e62"><dt>Setup</dt>
+<dd><p id="_a916235d-2195-895f-f291-a0894feac83c">Passed</p>
+</dd>
+<dt>7.1</dt>
+<dd><p id="_aaacfb3a-797f-498d-7fe4-ffcbe36b83cf">N/A — Free busy sched works</p>
+</dd>
+<dt>7.1.1</dt>
+<dd><p id="_0479a687-8a29-e193-975d-e056d494d4f1">N/A</p>
+</dd>
+<dt>7.1.2</dt>
+<dd><p id="_79514da9-dc7d-ab15-1af2-ff3c932215d3">Passed</p>
+</dd>
+<dt>7.1.3</dt>
+<dd><p id="_a8328212-ecac-21b9-8c3b-3f47888d4462">N/A</p>
+</dd>
+<dt>7.1.4</dt>
+<dd><p id="_aebf4d64-f040-2db1-abb4-a3a00da8994e">Passed</p>
+</dd>
+<dt>7.1.5</dt>
+<dd><p id="_8332f300-0308-0eeb-ca54-4e51737eb9f5">Passed</p>
+</dd>
+</dl>
+</dd>
+<dt>Section 8 — Scheduling</dt>
+<dd><dl id="_40e80a08-ae85-fc07-10c4-6c63150f64be"><dt>Setup</dt>
+<dd><p id="_299b9f3d-0e4c-34e7-3daa-4d821b5a695a">Passed</p>
+</dd>
+<dt>8.1 through 8.2</dt>
+<dd><p id="_57a9ae35-1aa5-4883-6f9d-765de341b3ac">Passed</p>
+</dd>
+<dt>8.3</dt>
+<dd><p id="_75618a15-10f1-a31d-6b0c-2ae3727ac32c">N/A</p>
+</dd>
+<dt>8.4</dt>
+<dd><p id="_4d5a919d-3df3-7319-5ddb-2a7c28cd854d">Passed</p>
+</dd>
+<dt>8.5</dt>
+<dd><p id="_2b3bac7e-2896-09a8-be2c-f95880032d92">N/A</p>
+</dd>
+<dt>8.6</dt>
+<dd><p id="_73eb03a0-1a0b-9586-365c-41bcdebd42c1">Passed</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<admonition id="_09fec6d4-8ba6-ffd4-ee86-f8ff2b224b50" type="editorial"><p id="_4215052a-b432-97b3-8bf9-921e69ec9d28">Scheduling is new in CalDAV Draft 8. We are starting to see clients doing scheduling with servers. This is the first interop where we see scheduling actually being testing on servers and clients.</p>
+</admonition></clause>
+</clause>
+
+<clause id="_caldav_client_testing" obligation="normative">
+<title>CalDAV Client Testing</title>
+<clause id="_caldav_client_1" obligation="normative">
+<title>CalDAV Client 1</title>
+<p id="_00794a29-0eb8-34f2-ce24-3d806daf7134">The following are general things noted with our client testing.</p>
+
+<ul id="_23119729-c42c-c3c8-ccd4-989836439824"><li><p id="_b34c9387-afcc-86dd-042a-8b3be4b54217">network communication stopped after receiving a 50x errors.</p>
+</li>
+<li><p id="_e436a1ad-bf04-9137-f212-808ed91d02e9">did not treat calendar user addresses as case insensitive (e.g. <tt>MAILTO</tt> versus mailto).</p>
+</li>
+<li><p id="_8f000095-c28c-dc7b-f224-7237a2ba3593">did not send updates for declined meetings when the location is changed</p>
+</li>
+<li><p id="_52aeeb70-35e7-9c71-b60c-3e85f298c767">did not handle authentication with a username and no password specified for a CalDAV account.</p>
+</li>
+<li><p id="_b1b4e4b5-e379-2a1d-c4dc-04cb1ce4b374">did not handle absolute URLs for the calendar home set.</p>
+</li>
+<li><p id="_7355a447-149b-4c9e-a48e-14898d0381dd">did not handle retrieving events with inline attachments.</p>
+</li>
+<li><p id="_b2eec5fc-9dd5-f0a6-734b-161b738d1d6b">did not gracefully handle CalDAV servers that did not support CalDAV scheduling.</p>
+</li>
+<li><p id="_4f354591-de1b-5329-8e09-405bdc27ccd8">did not allow users to setup delegate access without Open Directory support.</p>
+</li>
+<li><p id="_f82a6eee-cbc4-8a16-a3e1-497f0ceef942">sent <tt>POST</tt>s for an overridden event using a <tt>RECURRENCE-ID</tt> with different a time zone then the  <tt>DTSTART</tt> of the master event.</p>
+</li>
+</ul>
+
+<p id="_0f432e40-f625-21f5-42af-f403b82e60ab">The following is a list of server issues that encountered during testing:</p>
+
+<ul id="_639bbd61-c452-e07d-7dce-6ce5983b9de6"><li><p id="_6cf3cb15-051b-e725-e068-6a1cd3f09f2d">Invitations were not put into the attendee’s inbox.</p>
+</li>
+<li><p id="_8f98f23e-2497-b841-447a-dbe0b6b81182">One CalDAV client tried to set an ACL on a new calendar and received a 501 error.</p>
+</li>
+<li><p id="_6b6afff0-b969-26e1-4a88-acbda9c0c0b1">Deleting calendar returned a 409 not a valid resource.</p>
+</li>
+<li><p id="_2c375a8b-fd2b-c396-ed6f-d148fb810be3">Free busy worked on the first calendar but not on additional calendars.</p>
+</li>
+<li><p id="_50d2f5bd-434d-5e34-fb26-01635179d8b4">Principal URLs don’t work as attendees. Only email addresses worked.</p>
+</li>
+<li><p id="_c2841cf1-2ef9-e0c3-544e-d2329ddec5a1">Free busy worked on the first calendar but not on additional calendars.</p>
+</li>
+<li><p id="_ecb54c35-d9b2-a9ff-f7d3-8750f2da47ea">Principal URLs don’t work as attendees. Only email addresses worked.</p>
+</li>
+<li><p id="_04daae83-5cd7-98fc-79c5-a51293b5fa57">did not receive any notifications for invitations or replies because no iTIP messages were placed in the inbox.</p>
+</li>
+<li><p id="_c98931ac-7d36-9f73-ad76-dd2b3bd71ced">Re-inviting an attendee to an event did not change the attendee’s <tt>PARTSTAT</tt> to <tt>NEEDS-ACTION</tt>.</p>
+</li>
+<li><p id="_5c43c33f-0171-5086-8129-27c15716e749">Server removed <tt>X-WR-iTIPALREADYSENT</tt> from the <tt>VEVENT</tt> when client does a <tt>PUT</tt>.</p>
+</li>
+<li><p id="_d699d9f7-741e-814c-8379-bb1aac160deb">not including a <tt>METHOD</tt> on iTIP messages placed in the <tt>INBOX</tt>. It appears that when doing a <tt>PROPFIND</tt> on the inbox, returns ICS data from a calendar instead.</p>
+</li>
+<li><p id="_a0a2b209-45e7-c42f-6f34-008aef159f11">A server failed to delete an overridden instance of a recurring meeting.</p>
+</li>
+<li><p id="_e5547520-0146-e38c-6bba-282aac98a809">When creating a new calendar, server did not maintain the displayname or calendar-color on the calendar.</p>
+</li>
+<li><p id="_7bb1bf9d-a621-f4e1-3938-39801d779cba">not including a <tt>METHOD</tt> on iTIP messages placed in the <tt>INBOX</tt>.</p>
+</li>
+<li><p id="_1f3c4e59-9061-cfac-7819-fb7ab7febc14">Deleting the fourth instance of a recurring meeting (Test 2.8) failed because server modified the time of the  <tt>EXDATE</tt>.</p>
+</li>
+<li><p id="_2288a544-c1ef-ef80-d3e5-ab015349dba8">Client tried to modify recurring events and overridden events but occasionally received a “304 not modified”.</p>
+</li>
+<li><p id="_3de0931e-c696-cc63-5dfc-0752c03e02c3">A server failed to create new calendars.</p>
+</li>
+<li><p id="_7552e32a-fd16-6114-0fb7-0f09990d8008">Client tried to delete events but occasionally received 500 errors.</p>
+</li>
+<li><p id="_01afd4e0-5116-2a2b-7c29-dc366627e6b1">Free busy didn’t work for recurring events.</p>
+</li>
+<li><p id="_179ba6b0-f7ca-7166-de06-65048b74237a">client tried to create a new calendar but received a 503 error.</p>
+</li>
+<li><p id="_a15349ae-9d7b-2803-a11f-f1e30f34f990">A server modified/removed the organizer property on a <tt>PUT</tt>.</p>
+</li>
+<li><p id="_120eeebd-711f-16bd-1c71-a51896c407de">Modifications to events immediately after creating them often resulted in the server not properly persisting the change. This made it difficult to proceed with the more advanced tests such as overriding recurring events.</p>
+</li>
+<li><p id="_0d0e380f-f1b2-3ece-f7eb-30f65d360a8d">Scheduling and <tt>FREE/BUSY</tt> wasn’t supported on some servers.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_caldav_client_2" obligation="normative">
+<title>CalDAV Client 2</title>
+<ul id="_fe8ddeec-fd45-0cde-b486-255c911a21b1"><li><p id="_a5dd5282-5d71-33c9-d9ce-dc731863bbe3">error message “Account information not found. Request encountered an unexpected error (domain (null) code 0)”</p>
+</li>
+<li><p id="_2b79b7bb-e7e4-84e0-b859-82fc923f29e9">doesn’t return Free/Busy data in correct format — probably we don’t use correct URL</p>
+</li>
+<li><p id="_3ef1a32b-286f-82fc-0f36-711ae2fe19be">error message when creating <tt>TODO</tt>:</p>
+<ul id="_e9011240-3923-303a-8a23-d610b321a336"><li><p id="_8b700cc6-4e85-96e7-a496-daae7321d89d">Request Error</p>
+</li>
+<li><p id="_ff0f32ae-6d41-4933-42b9-a67b395adc7c">Request for “New To Do” in “Calendar” in account “xxxxx” failed.</p>
+</li>
+<li><p id="_6e6d0b0b-6bbf-2039-f6e2-91a6480df985">The server responded with “HTTP/1.1 415 UnsupportedMediaType” to operation CalDAVWriteEntityQueueableOperation.</p>
+</li>
+<li><p id="_0e9152d2-5655-ad38-2cd5-e22c22843a6b">Scheduling not implemented</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+
+<clause id="_caldav_client_3" obligation="normative">
+<title>CalDAV Client 3</title>
+<p id="_615588eb-0b6c-8b93-3cf6-ab38f1527ccd">The following are testing comments.</p>
+
+<ul id="_bf7eb75c-1060-2da5-5a6a-f722a6c6350c"><li><p id="_f07d8965-0d62-c50a-286a-67d21cf700f3">The client works with several CalDAV servers.</p>
+</li>
+<li><p id="_9b369d01-5a19-1a38-f09f-1c5775e0985d">Doesn’t work with several other servers because of one having no <tt>MKCALENDAR</tt>, one having a bug with del/ mk calendar timing, which is being fixed), and with one that has a Character set issue — my bug.</p>
+</li>
+<li><p id="_68bd9853-79e2-7e42-fcf0-392522c156fc">My things to be fixed:</p>
+<ul id="_6e7a0084-4a97-1795-1097-922f9426f625"><li><p id="_ab8ad820-746a-6533-e99f-82a8bd61606f">Character set — from above</p>
+</li>
+<li><p id="_fbe04f98-6225-3ba6-6668-ccfb97adbef8">Get inbox from properties — server venders have different schemes</p>
+</li>
+</ul>
+</li>
+<li><p id="_3cfb8c2d-1e06-1ad0-2d4e-2ec741bdb38a">Overall things:</p>
+<ul id="_f1676683-b96d-e1a2-2c4d-13216c09a703"><li><p id="_b1ad4271-5269-3653-6ca9-b1104ef49451">Handling “floating” events, all-day, <tt>freebusy</tt>, etc.</p>
+</li>
+</ul>
+</li>
+<li><p id="_c0125984-6251-452e-836a-f104deaaacf6">Overall Client things:</p>
+<ul id="_f881b299-1e25-8d4e-3d27-ea87d479ea61"><li><p id="_13d6e235-cb54-b0c2-5440-677f45757d96">Self signed or expired certificates. Most servers are “Beta” at best.</p>
+</li>
+<li><p id="_3c99bf40-a77d-e635-a0ef-d46ff5a0698d">We clients need to be able to deal with “bad” certificate errors.</p>
+</li>
+<li><p id="_c2f30264-e5af-8472-0f77-db621e7b0620">207 response is “multipart” — must look deeper into body of response</p>
+<ul id="_3b704656-1ac0-2c13-0f33-284e410995b8"><li><p id="_a0be6466-9297-8ca6-3f0b-2cae9877c68e">could be all good/bad/mixed if asking for multiple properties.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p id="_f8f7b6ad-6c9f-915b-2df0-0f515f9f5405">Overall Server things:</p>
+<ul id="_053b9172-12a6-7bed-8f33-5f4b3d1e2bbb"><li><p id="_f98dd43a-0761-3802-e7b5-d59642ed2e02">Handling dates — there are a <tt>LOT</tt> of syntax options. For FreeBusy URL we were unable to find a syntax that all servers were happy with.</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_icalendar_testing" obligation="normative">
+<title>iCalendar Testing</title>
+<p id="_ea4ba06d-cf9f-8ce6-1245-9518e12130cc">During iCalendar, iMIP and iTIP testing the following items were identified.</p>
+
+<clause id="_icalendar_client_1" obligation="normative">
+<title>iCalendar Client 1</title>
+<ul id="_f3bd204d-8552-351c-4b5b-34c5a1311543"><li><p id="_ddf6c375-8e04-8a7b-9f4c-df03a4bf393a">The results noted are the behaviors that were observed when a message is sent/received.</p>
+<ul id="_34fd6611-48a8-36bd-dd5e-4d251bcb44c6"><li><p id="_f55bc9f4-b503-6460-ee86-85c328f4ca23">General — these apply for all vendor testing scenarios</p>
+<ul id="_f01ede59-9b2f-02eb-ab41-d16c928519b0"><li><p id="_a7b435bf-d376-ab1d-cc8f-6915c9b0134c">Requesting a refresh of an invitation is not supported</p>
+</li>
+<li><p id="_f267cd9e-8d38-4007-79e0-b056fb0e40ff">Countering an invitation is not supported</p>
+</li>
+<li><p id="_a7a67db0-a2ff-9ffb-56c8-6f526f6d2eac">Declining a counter is not supported</p>
+</li>
+<li><p id="_9729c943-d473-a226-49ae-3d3f346c2837">Delegate concept is different.</p>
+</li>
+<li><p id="_820d99f2-adb8-8261-3930-d94c2618344c">cancels don’t work with one application</p>
+</li>
+<li><p id="_8541729d-9bc7-ed89-2ec5-fa6a3a3ac6fa">Attachments not going through</p>
+</li>
+<li><p id="_d70a0417-15b9-f14f-9d1a-5af679ac8cc9">Accept invitation is not being processed properly. There is some problem converting response messages.</p>
+</li>
+<li><p id="_03ce42e3-53d4-676c-4209-93322379f601">Declining an invitation — same as above</p>
+</li>
+<li><p id="_81d9cba0-9aa0-58e5-c949-88ec4a258fcf">User C declines invitation — Responses fail iCalendar conversion</p>
+</li>
+<li><p id="_7bf6c242-24e7-6c53-116c-c3f8029e2ebc">User C accepts invitation — Responses from one vendor fail iCalendar conversion</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<clause id="_itip_testing" obligation="normative">
+<title>iTIP Testing</title>
+<ul id="_c24a9231-9c9f-f389-52b3-686c20f785bf"><li><p id="_2b1b9443-8683-f21c-3322-0945ba84ddc2">All items in the iTIP testing scenarios passed with the following notes:</p>
+<ul id="_3131615d-9f6b-1e61-306c-e0a7cb346b7f"><li><p id="_b01e5b0f-6cc3-2345-b434-2543feb5a75d">4.1.1 create single event. Pass — Ran scenario by manually dropping a MIME file in the pickup folder of the transport log.</p>
+</li>
+<li><p id="_12d29d20-7109-9dfe-0dec-e518a2af89b7">4.1.5 Create an event using the Value parameter — day events always have a timezone associated with it.</p>
+</li>
+<li><p id="_89d6fa2e-dce6-7b87-3499-d86002bf4142"><tt>RSVP</tt> responses to requests: client allows <tt>RSVP</tt> per email message and not per attendee. Other mail servers do not have any indication to show how whether a <tt>RSVP</tt> is required. One server sets the req and opt part as req participants — - this is a bug.</p>
+</li>
+<li><p id="_0b46e108-cd4d-45df-a5c2-dc3b0ffc90fd">4.2.4 Countering an Event — counter is not supported in one server</p>
+</li>
+<li><p id="_66886bd8-77f1-caa1-786b-02081e16355f">4.2.5 Delegating an Event — the concept of delegates is different than that of RFC2445.</p>
+</li>
+<li><p id="_b1d45b39-c1c6-11f6-8334-aea70155414e">4.3 — Publishing busy time — not supported</p>
+</li>
+<li><p id="_08227137-fd4a-cbce-2754-533b5f7b7a7d">4.4.6 — Add new instance to a recurring event: adding a single instance is not supported. The complete recurrence rule needs to be updated.</p>
+</li>
+<li><p id="_0faa209d-a430-732b-b164-83b9766ca98b">4.4.7 — Add a new series of instances to a recurring event: Adding is not allowed. You can change the recurrence object completely.  <tt>REFRESH</tt> is not supported.</p>
+</li>
+<li><p id="_e7888c25-5d3b-a226-bdce-b57108340110">4.4.8 Counter an instance of a recurring event: Not supported</p>
+</li>
+<li><p id="_2dc35e9a-2631-7d88-4932-4db3cb101ffe">4.7.2 Bad Recurrence-ID: If an invalid iCalender is received server fails the conversion of iCalendar and creates a simple IPM. Note message with the iCalendar body as an attachment.</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_icalender_client_2" obligation="normative">
+<title>iCalender Client 2</title>
+<p id="_0c7aa678-12bb-73a8-545b-8e0162ee85c9">The client went through a number of the iMip tests between their client and another iCalendar client. The following issues were spotted during that and also during client testing originated by other companies.</p>
+
+<ul id="_a30b9088-e60e-25bf-0fdd-26074b6b90e9"><li><p id="_d7d3cfad-1f76-5ea4-c1c4-ae36f17873a3">An original All day event sent in a UK timezone ended up with time shifted to a specific California timezone.</p>
+</li>
+<li><p id="_b9fdd482-6678-49fb-52d7-e237d49f5540">iCalendar sent on behalf of another user did not correctly specify this in the <tt>ORGANIZER</tt>, although the MIME Sender: and From: headers were correct.</p>
+</li>
+<li><p id="_ead1bd07-3504-30fa-9588-e8254ea05d06">Canceled messages from other server ended up with 2 iCAL “STATUS:CANCELED” entries (not in the original)</p>
+</li>
+<li><p id="_093d9b2a-1e63-2baa-c940-8e1d8957628d">Meeting acceptances and cancelled meetings from a server caused problems with incoming internet gateway.</p>
+</li>
+<li><p id="_93166ab0-86f3-24b2-c903-069ce5046298">An initial meeting request will often have a sequence number of 1, which another client considers to be an update.</p>
+</li>
+<li><p id="_dc430c1e-d10f-454e-8f34-3d7bd890c6be">Sequence numbers in Exceptions were not being updated when changes were made to them.</p>
+</li>
+<li><p id="_f1c5b346-5ae1-b2dc-cc88-5352e0d46d0e">One client discovered an issue where a cache of information for appointments was not being updated when changes were made. This showed up when 2 clients were accessing the same calendar, which may be quite a useful testing methodology as iCalendar. App’s own caching behaviour hides this bug in the originating client.</p>
+</li>
+<li><p id="_6b5d55a1-5116-b69d-dd9c-bbb36c523a1f">Thanks for all your work</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_icalendar_client_3" obligation="normative">
+<title>iCalendar Client 3</title>
+<p id="_e1d5b11f-015a-ecb8-0635-0fd984154179">Using the test scenarios provided, we did the client to client testing with several CalDAV server webmail clients and iCalendar clients to check compatibility. The testing generally covers basic calendar scenarios including:</p>
+
+<ol id="_002f1138-5aea-9fd4-68d3-b90dff7bb0ca" type="arabic"><li><p id="_48b7f8cb-f999-aad1-36b4-7025a3cf950e">Invite for Single event, Recurring event, all day event, hourly event, multiday event.</p>
+</li>
+<li><p id="_f3c5bda5-8117-36ce-e98b-21ff76a64e12">Update single event, series and occurrences in series by changing subject, location, time, date and attendee.</p>
+</li>
+<li><p id="_c905a311-cdfe-d3dd-f576-3eba66573227">Cancel single event, series, occurrences in series</p>
+</li>
+<li><p id="_86d20179-f384-347c-8dde-841f0d2d6b68">Meetings with Org and Attendee in different time zones</p>
+</li>
+<li><p id="_feb821e6-d63f-e3c0-4176-449668106947">Calendar responses tracking</p>
+</li>
+</ol>
+</clause>
+
+<clause id="_testing_results" obligation="normative">
+<title>Testing results</title>
+<p id="_ed0f05a8-ad7f-6edf-67cc-54b6feb3b681">Most tests passed. We are happy to see our application is compatible with most iCalendar formats generated by other applications.</p>
+
+<p id="_e876764b-d69f-7af6-1b3d-bd69d44b08d5">General issues are:</p>
+
+<ul id="_d94059e8-790f-7d7a-3e81-8aa58b88f9c0"><li><p id="_7d962ebf-406b-b953-726c-9f615e13875f">Sequence number:</p>
+<ul id="_7b570e00-2fb9-7b7d-c83a-3b15a06ff9f5"><li><p id="_19cc65d5-fad1-338b-0e1b-27475ec0eea0">Some CalDAV server/clients assume sequence number starts with 1 instead of 0. We will show a different banner for such case.</p>
+</li>
+<li><p id="_b1bf38b2-764d-c78f-409e-53ca84fad467">One client doesn’t have this entry in iCalendar. They said using <tt>SEQUENCE</tt> is optional for organizer according to RFC 2446.</p>
+</li>
+</ul>
+</li>
+<li><p id="_13ab5e78-fab5-e35f-f518-e9fee17c0609">New issues found in our application</p>
+<ul id="_0b4c38a5-6a39-8f65-5e7b-27e7c7a242a1"><li><p id="_8ecb5f4c-fccb-a4d8-d6d1-37ff061a242a">Dragging event in Month view will cause a wrong Recurrence-ID generated if the series is not in the same time zone as OS’. It doesn’t repro with other views.</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<p id="_7a71bc11-cec9-4468-446f-5381114fa70e">Detailed test results:</p>
+
+<ul id="_17774810-a949-87cc-9555-48f3a4b6a181"><li><p id="_93121081-2051-09bd-d48a-9db5e9863a5f">One client doesn’t support modified occurrence and negative exceptions well so far. So most testing is done in single event.</p>
+</li>
+<li><p id="_16d6078c-af99-585d-087e-069f7d5c6a9a">Sequence issue mentioned above</p>
+</li>
+<li><p id="_2ae19d79-9b18-d717-b722-4c124c526c0c">We have a known issue: <tt>EXDATE</tt> doesn’t have time zone information</p>
+</li>
+<li><p id="_8ae2cb1b-d3c3-14f9-5236-9242a31fedff">Another client said they support WebDAV but we couldn’t connect to it. Most likely they don’t support it fully. They will do more investigation.</p>
+<ul id="_2d7e1b5c-9f3a-1841-b4da-3b35fc09aff0"><li><p id="_86682a37-aa6a-a8d2-4658-c59fc5c1b02b">The exception doesn’t seem to relate to series much except in deletion. Opening or updating such occurrence doesn’t trigger the “for series or for this one” dialog. Important change made to the series(like start/end time or recurring mode) doesn’t overwrite the exceptions. This is a different behavior from other clients.</p>
+</li>
+</ul>
+</li>
+<li><p id="_5a717ecf-c680-ab28-86cd-2a538392a80a">Another client had Sequence inconsistency — single event or recurring series’ sequence starts from 1 and increases for updates. But exception’s in the series starts at 0 and never increases.</p>
+</li>
+<li><p id="_6c160214-b316-1792-7aec-dbf86a15b39e">Recurring All day event from our application is not recognized as “All day” in their application. It is shown as a 0 duration event happening each day. Same event synced to another client is displayed correctly and it doesn’t repro with single all day event in the tested application.</p>
+</li>
+<li><p id="_21ab4961-ac50-a0dc-4f46-bb1967c2ad6f">One CalDAV server uses <tt>RDATE</tt> which we do not support. The event can be displayed correctly but the time zone is not recognized.</p>
+</li>
+<li><p id="_90356c16-d6f4-2ef7-a79e-ac69395883dc">One client had issues with modifying an occurrence in a recurring series that uses a different time zone than calendar time zone. They generate a wrong Recurrence-ID sometimes. They have the same sequence issue noted above.</p>
+</li>
+</ul>
+
+<p id="_6e6adc9e-2938-110d-44ae-8121f27f6fbc">Overall this is a very interesting and useful InterOP event! Thanks for organizing it!</p>
+</clause>
+</clause>
+</clause>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_b20a329a-d048-a410-6e4e-b4fdf8c3492c">This was one of our largest interoperability testing events. Several items were uncovered and generally it was very successful. As usual, it would be nice to have more time. We will be investigating the concept of ongoing, interim testing via the internet to public servers. This will improve the ability to test more applications during our onsite testing events.</p>
+
+<p id="_eeac32c4-2d0e-86b5-7f6f-488248724085">Thank you to all the participants and their willingness to take time out of busy schedules to help CalConnect forward the usage of calendaring standards.</p>
+
+<p id="_998bb25a-1595-aa64-7581-53a267b698d3">Respectfully submitted by Pat Egen, CalConnect Interop Manager.</p>
+</clause>
+</sections>
+</csd-standard>

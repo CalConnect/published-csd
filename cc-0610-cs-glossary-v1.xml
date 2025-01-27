@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Calendaring and Scheduling Glossary of Terms</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0610:2006</docidentifier><docnumber>0610</docnumber><date type="published"><on>2006-10-12</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Jeff McCullough</completename></name>
+<affiliation><organization>
+<name>University of California at Berkeley</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2006-10-12</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>USECASE</committee></editorialgroup></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit id="U_NISTu149">
+        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitName lang="en">degree (degree of arc)</UnitName>
+        <UnitSymbol type="HTML">°</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">°</mi>
+          </math>
+        </UnitSymbol>
+      </Unit></UnitSet><QuantitySet><Quantity id="NISTq9" dimensionURL="#NISTd9" quantityType="base">
+        <QuantityName lang="en-US">plane angle</QuantityName>
+        <QuantityName lang="en-US">angle</QuantityName>
+      </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd9">
+        <PlaneAngle symbol="phi" powerNumerator="1"/>
+      </Dimension></DimensionSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_9fa180fd-5255-1b56-3232-45e5287f145e">This is Version 1.0 of the Glossary of Calendaring and Scheduling terms. It is a “living” document that will change over time as we add new terminology and enhance or improve upon existing terms.</p>
+
+<p id="_62c770f2-5bcc-8f46-5808-e21d3d2147ea">The document came about in an effort to compile, in one location, a common set of terminology with respect to calendaring and scheduling applications and standards. The document incorporates terminology already existing in calendaring standards such as RFC2445, RFC2446 and RFC2447as well as input from members of the Calendaring and Scheduling Consortium (CalConnect).</p>
+
+<p id="_793ed5ec-c50f-8518-4650-19afa339e858">Some glossary terms may not appear in published standards today. These are common calendaring terms that are included so that everyone refers to components in the same manner. As new standards evolve, the glossary will serve as a resource for those creating documents so that all the standards share a common set of terms.</p>
+
+<p id="_74c9adca-998c-af71-7305-0b4be47d68f0">Calendaring and scheduling implementers will be able to utilize the glossary to assist them as they read and decipher calendaring standards. Calendaring and scheduling users will be able to use the glossary to help them better understand the terminology deployed by applications written using calendaring standards.</p>
+
+<p id="_360ecef4-de72-e098-7e0b-491ba4e03498">Kindly forward any terms that should be added to the glossary to the Calendaring and Scheduling Consortium (calconnect.org) for approval and inclusion in the document.</p>
+</introduction></preface><sections>
+<terms id="_glossary_of_calendaring_and_scheduling_terms" obligation="normative">
+<title>Glossary of Calendaring and Scheduling Terms</title><p id="_9ebbb531-2d3e-eb13-6a3c-ec26454a48d4">For the purposes of this document, the following terms and definitions apply.</p>
+
+<term id="term-Access-control"><preferred><expression>
+<name>Access control</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_c7ba66a0-071d-0b21-53e4-fd8d585533fa">A mechanism to grant or deny privileges (Create, Read, Update, Delete) on calendars, events, tasks or journal entries to other calendar users.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Access-Control-List"><preferred><expression>
+<name>Access Control List</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_52e93d23-7509-db6b-7e81-3af2f28f7f9f">A set or list of privileges, granted or denied to other calendar users, that define access control to a particular calendar, event, task or journal entry.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Alarm"><preferred><expression>
+<name>Alarm</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_f74b8db7-eeb4-74bb-40e3-00f85da8c243">A reminder notification for an event or a task. An example, alarms, may be used to define a reminder for a pending event or an overdue task. Times may be relative or predetermined.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Attendee"><preferred><expression>
+<name>Attendee</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ed87dfb4-ce17-a285-c205-ab9b64f383b7">Participant of a calendar event or task. A participant can be the chair of a calendar event or task. That person’s participation may be required or optional.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-CalDAV"><preferred><expression>
+<name>CalDAV</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_aadf74f6-bb69-3c3e-5ede-e88edc3f7b4b">A standard protocol to allow calendaring and scheduling via extensions to the WebDAV protocol. Defined by two specifications, the first specifies a calendar access protocol that allows Calendar User Agents to access and manage calendar data in a calendar store accessible via a calendar service. The second specification defines how Calendar User Agents perform scheduling operations via a calendar service. The two drafts for these protocols can be found at  <link target="http://ietf.osafoundation.org/caldav/"/>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar"><preferred><expression>
+<name>Calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_84ab7559-b50d-13e5-4941-e68017169af9">A collection of events, tasks, journal entries, etc. Examples include a person’s or group’s schedule, resource availability, and event listings.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-Access-Rights"><preferred><expression>
+<name>Calendar Access Rights</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_cc610498-e5ca-ebb4-4191-5af96db31a07">A set of rules defining who may perform what operations, such as reading or writing information, on a given calendar. See also  <concept><refterm>Access Control List</refterm><renderterm>Access Control List</renderterm><xref target="term-Access-Control-List"/></concept>.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Calendar-Object"><preferred><expression>
+<name>Calendar Object</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ded06506-88ae-c903-1140-27117633378e">A collection of components containing calendaring and scheduling information.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-Service"><preferred><expression>
+<name>Calendar Service</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_79f115e1-f0eb-f866-fedc-4bb465cffe5f">A server application that provides calendar user agents access to calendar stores.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-Store-_CS_"><preferred><expression>
+<name>Calendar Store (CS)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_07e7d107-f8fe-7133-9a1d-78c942e3fcf0">A data repository that may contain several calendars as well as properties and components of those calendars.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-User-_CU_"><preferred><expression>
+<name>Calendar User (CU)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_82464308-5096-ab64-8557-404e897ef002">A person that accesses their calendar information.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar-User-Agent-_CUA_"><preferred><expression>
+<name>Calendar User Agent (CUA)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><ol id="_dfbcdece-a4ef-7d17-8724-b3a41f86db80" type="arabic"><li><p id="_1b132953-df31-40db-1fe0-b00941194e9f">Software with which the calendar user communicates with a calendar service or local calendar store to access calendar information.</p>
+</li>
+<li><p id="_2b5d4bb7-c61d-a19a-99ec-930ee8dba278">Software that gathers calendar data on the Calendar User’s behalf.</p>
+</li>
+</ol></verbal-definition></definition>
+ </term>
+
+<term id="term-CalConnect"><preferred><expression>
+<name>CalConnect</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_238ddb13-7d62-8d63-1ab1-0875e4122d20">The Calendaring and Scheduling Consortium consisting of vendors and user groups interested in promoting and improving calendaring and scheduling standards and interoperability.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Component"><preferred><expression>
+<name>Component</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a7be08eb-fbaa-78c1-280d-f2ecf12da5b6">A piece of calendar data such as an event, a task or an alarm. Information about components is stored as properties of those components.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Counter"><preferred><expression>
+<name>Counter</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ddd5abec-2c85-6439-d99b-2ba675b16604">A counter-proposal sent by a participant to an event or task organizer to suggest a change to the event or task such as the scheduled date/time, list of participants, etc.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Daylight-Saving-Time-_DST_"><preferred><expression>
+<name>Daylight Saving Time (DST)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_0861b534-f9a1-3542-26b4-b80b2112d4e3">The period of the year in which the local time is adjusted forward, most commonly by one hour.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Delegate"><preferred><expression>
+<name>Delegate</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_f0e332d1-7129-e5d4-7138-ba83106254e5">A calendar user who has been assigned to participate in an event or task in place of one of the attendees in that event or task. An example of a delegate is a team member sent to a particular meeting as a substitute for one of his or her colleagues.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Delegator"><preferred><expression>
+<name>Delegator</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_6257526d-d6ac-5e31-f8a1-899ae047e7ce">A calendar user who has assigned his or her participation in an event or task to another calendar user. An example of a delegator is a busy executive who sends an employee to a meeting in his or her place.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Designate"><preferred><expression>
+<name>Designate</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ca0a24d6-42db-5eb0-4c69-e36092af944d">A calendar user authorized to act on behalf of another calendar user. An example of a designate is an assistant who schedules meetings for his or her superior.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Event"><preferred><expression>
+<name>Event</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_3cb3a67c-6af9-7e4e-4208-7f199f48f1bd">A calendar object that is commonly used to represent things that mark time or use time. Examples include meetings, appointments, anniversaries, start times, arrival times, closing times.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Freebusy"><preferred><expression>
+<name>Freebusy</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_c40d72a7-4f9f-a63d-8d08-b34a93b7f867">A list of free and busy periods for a particular calendar user or resource. Primarily used for scheduling resources or meetings with other people. Time periods may be marked as busy, free, busy-unavailable (sometimes referred to as out of office) and busy-tentative.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iCal"><preferred><expression>
+<name>iCal</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_8a519114-8c92-67cb-3a20-9093d2b51482">The name of Apple Computer, Inc’s calendar client. Often used as the abbreviation of the iCalendar standard.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iCalendar"><preferred><expression>
+<name>iCalendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_4f1fcd5d-23c5-bcb6-5d1b-78b57695d3ea">The Internet Calendaring and Scheduling Core Object Specification. An IETF standard (RFC 2445) for a text representation of calendar data. Scheduling operations are specified in RFC 2446.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-IETF-_The-Internet-Engineering-Task-Force_"><preferred><expression>
+<name>IETF (The Internet Engineering Task Force)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_8b93601e-ae42-6e28-4659-1f0cc6d72b39">An International community organization that develops and maintains the architecture of the worldwide Internet. The IETF issues standards known as RFCs (Request For Comments), several of which pertain to calendaring and scheduling.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Instance"><preferred><expression>
+<name>Instance</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e3c9fa5b-3824-21f1-6e4e-2e273a66d4b8">A single occurrence in a recurring event.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iMIP-_iCalendar-Message-Based-Interoperability-Protocol_"><preferred><expression>
+<name>iMIP (iCalendar Message-Based Interoperability Protocol)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_9062f3c2-d4f6-0c63-555f-e91e5bf406de">An IETF standard (RFC 2447) for encapsulating iCalendar data in email messages.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Invite"><preferred><expression>
+<name>Invite</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_776996de-9075-1bcb-9965-aa520fe4157e">A request to attend a calendar event sent as structured iCalendar data. Invitations can be used to schedule both calendar users and resources.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Journal-entry"><preferred><expression>
+<name>Journal entry</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_61fe8c2a-8a29-08a0-4ebd-738c1e3c0763">A note associated with a date stored with other iCalendar data, e.g. a call log.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Local-Calendar-Store"><preferred><expression>
+<name>Local Calendar Store</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_8224912d-f27c-0670-fdfe-6d9f5d24fa77">A calendar store (CS) that is on the same device as the calendar user agent (CUA).</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-MIME"><preferred><expression>
+<name>MIME</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_66db6fbb-729a-12dd-26bc-1d023f8d961b">An acronym for Multipurpose Internet Mail Extensions, a specification for formatting non-ASCII messages, including iCalendar data, graphics, audio and video, so that they can be sent over the Internet. MIME is supported by email clients and web browsers.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Negotiation"><preferred><expression>
+<name>Negotiation</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_3538006b-c362-c1c3-35ad-186f5ef02e05">Dee <concept><refterm>Scheduling</refterm><renderterm>Scheduling</renderterm><xref target="term-Scheduling"/></concept></p></verbal-definition></definition>
+ </term>
+
+<term id="term-Notification"><preferred><expression>
+<name>Notification</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_cea9352b-9106-683a-53dc-7bd76a7619a8">An alert sent to a calendar user. Examples include alerts for new calendar items, changes to existing items, or reminders about existing items. Notification methods include: sound from the computer, visual feedback on the computer, email, paging, voicemail and telephone call.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Organizer"><preferred><expression>
+<name>Organizer</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_b5d6a3a4-8a97-6fa5-f994-ccdcfdde29fa">A calendar user who creates a calendar item.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Priority"><preferred><expression>
+<name>Priority</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e23bcfda-6910-4a8c-9e94-3e721ee64b67">A level of importance and/or urgency calendar users can apply to Tasks and Events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Property"><preferred><expression>
+<name>Property</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_dbfeaa72-e408-04de-4b54-3fdf0a50609b">A description of some element of a component, such as a start time, title or location. Properties can have parameters associated with them to modify or add to their meaning.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Publish"><preferred><expression>
+<name>Publish</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_9c749368-ea39-ba14-9a2b-7b67fb90e737">To make calendar information, such as <tt>freebusy</tt> time, available to a select group or to the public.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Recurring"><preferred><expression>
+<name>Recurring</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_3f72adb6-1b82-eeb5-e089-3ec8322c813b">An event or task that happens more than once either with a regular interval (ex. daily, weekly, monthly) that can be expressed by a rule or with an explicit series of dates/times.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Reminder"><preferred><expression>
+<name>Reminder</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_ef21d891-68f0-9cc3-195a-ada2e995f222">See <concept><refterm>Notification</refterm><renderterm>Notification</renderterm><xref target="term-Notification"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Remote-Store"><preferred><expression>
+<name>Remote Store</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_87c6bb60-9910-d5b6-7033-6349753a827c">A calendar store that is not on the same machine/device as the calendar user agent</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Repeating"><preferred><expression>
+<name>Repeating</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_cc6830fb-c37f-93b0-0186-42ef097ec18b">See <concept><refterm>Recurring</refterm><renderterm>Recurring</renderterm><xref target="term-Recurring"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Resource"><preferred><expression>
+<name>Resource</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e2975eff-826c-df0b-ab0a-1393aa7dd5c5">Shared equipment, materials, or facilities that can scheduled for use by calendar users. Examples include: conference rooms, computers, audio visual equipment, and vehicles.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-RFC-_Request-for-comments_"><preferred><expression>
+<name>RFC (Request for comments)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_7477e85c-b22b-2bdf-e959-6fda2e9c00fc">IETF and other standards bodies use RFCs to define Internet standards. They document most of the protocols, mechanisms, procedures and best practices in use on the Internet.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-RSVP"><preferred><expression>
+<name>RSVP</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_928000c7-f58e-d8fc-1739-630be4113644">A request for status updates sent by the organizer for event invitations or tasks.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Schedule"><preferred><expression>
+<name>Schedule</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_45aa9ccc-d8d7-ee30-ad32-893a1a430a4b">See <concept><refterm>Calendar</refterm><renderterm>Calendar</renderterm><xref target="term-Calendar"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Scheduling"><preferred><expression>
+<name>Scheduling</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_734d3b48-9180-4ba0-7272-4163391148bc">The exchange of request/invitations and responses between organizers and attendees of scheduled events, tasks or journal entries.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Standard-Time"><preferred><expression>
+<name>Standard Time</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_53338415-b851-9b2c-74ed-613dd180ec5c">Originally developed as a consistent time system for the railroads using Greenwich Mean Time (GMT) (see  <concept><refterm>UTC</refterm><renderterm>UTC</renderterm><xref target="term-UTC"/></concept> below). <concept><refterm>Time zone</refterm><renderterm>Time zones</renderterm><xref target="term-Time-zone"/></concept> (see below) and DST shifts are based upon standard time.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Task"><preferred><expression>
+<name>Task</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_9ddafb15-0a25-f8aa-02a2-993f41471229">A calendar object that is commonly used to represent work items.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Text_calendar"><preferred><expression>
+<name>Text/calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_11fc3c6b-d868-4d7b-3a9c-9314a0d9a9bd">The MIME content type for encoding iCalendar objects. Example usage includes: email, web pages.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Time-zone"><preferred><expression>
+<name>Time zone</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_9a81809f-a287-fb70-7137-500139c59781">Areas of the Earth that have adopted the same local time. Time zones are generally centered on meridians of a longitude, that is a multiple of  <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">    <mstyle displaystyle="false">      <mn>15</mn>      <mo rspace="thickmathspace">⁢</mo>      <mrow xref="U_NISTu149">        <mstyle mathvariant="normal">          <mi>°</mi>        </mstyle>                              </mrow>    </mstyle> </math><asciimath>15 "unitsml(deg)"</asciimath></stem>, thus making neighboring time zones one hour apart. However, the one hour separation is not universal and the shapes of time zones can be quite irregular because they usually follow the boundaries of states, countries or other administrative areas. Time zones are calendar components that define the time of an event relative to  <concept><refterm>UTC</refterm><renderterm>UTC</renderterm><xref target="term-UTC"/></concept> (see below).</p></verbal-definition></definition>
+ </term>
+
+<term id="term-To-do"><preferred><expression>
+<name>To-do</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_eaeceb43-eaa7-ae39-c26a-ecb9a811202e">See <concept><refterm>Task</refterm><renderterm>Task</renderterm><xref target="term-Task"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Transparency"><preferred><expression>
+<name>Transparency</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_3268f6bd-c367-73b8-9ef6-29b088fe8fa9">A property of an event that defines whether it will appear free or busy in free/busy time searches.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-UTC"><preferred><expression>
+<name>UTC</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_df6c068f-a876-0b9f-cda3-f4570116b69b">Coordinated Universal Time, abbreviated UTC. Also Zulu Time (alphabetized listing of time zones). UTC is designated to be at zero longitude, also Greenwich mean time (GMT). Is the basis for all local time offsets. Offsets are either positive or negative. An example is UTC-8 (Pacific Standard Time).</p><p id="_e469bd04-781a-29c1-24e5-59cb96ce6a15">Some iCalendar examples:</p><ul id="_e3cd1454-34d5-0468-d6ea-4deea6450107"><li><p id="_9606fdb5-91e2-ca20-3886-97fd9ceb4a7e"><tt>DTSTART:19970714T133000 ;Local time</tt></p>
+</li>
+<li><p id="_7d43012a-0436-bc04-dcc0-6da97c9e37bd"><tt>DTSTART:19970714T173000Z ;UTC time</tt></p>
+</li>
+<li><p id="_f2731991-cb15-ea5e-359d-08d4d89d0254"><tt>DTSTART;TZID=US-Eastern:19970714T133000 ;Local time and time zone reference</tt></p>
+</li>
+</ul></verbal-definition></definition>
+
+
+
+
+ </term>
+
+<term id="term-vCalendar"><preferred><expression>
+<name>vCalendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_14c8e99d-a254-3ec0-e1ca-d7cd7498837f">A text representation of calendar and scheduling data created by the Versit consortium. The iCalendar specification is based on the work of vCalendar.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-xCal"><preferred><expression>
+<name>xCal</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_682998a1-b43b-c283-10ea-4fa840de0c8f">Representing calendar data in XML which corresponds closely to the iCalendar standard. There is no current standard.</p></verbal-definition></definition>
+ </term>
+</terms>
+
+
+</sections><bibliography><references id="_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="caldav">
+  <formattedref format="application/x-isodoc+xml">CalDAV — <link target="http://ietf.osafoundation.org/caldav/"/></formattedref>
+  <docidentifier type="metanorma">[1]</docidentifier>
+</bibitem><bibitem id="ietf">
+  <formattedref format="application/x-isodoc+xml">IETF — <link target="http://www.ietf.org"/></formattedref>
+  <docidentifier type="metanorma">[2]</docidentifier>
+</bibitem><bibitem id="rfc">
+  <formattedref format="application/x-isodoc+xml">RFCs — <link target="http://www.ietf.org/rfc.html"/></formattedref>
+  <docidentifier type="metanorma">[3]</docidentifier>
+</bibitem><bibitem id="rfc3283" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Guide to Internet Calendaring</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3283</uri>
+  <docidentifier type="IETF" primary="true">RFC 3283</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3283</docidentifier>
+  <docnumber>RFC3283</docnumber>
+  <date type="published">
+    <on>2002-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Mahoney</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Babics</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Taler</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_8e83b1e5-058c-9c72-ecb7-37b07cc65a92">This document describes the various Internet calendaring and scheduling standards and works in progress, and the relationships between them. Its intent is to provide a context for these documents, assist in their understanding, and potentially aid in the design of standards-based calendaring and scheduling systems. The standards addressed are RFC 2445 (iCalendar), RFC 2446 (iTIP), and RFC 2447 (iMIP). The work in progress addressed is “Calendar Access Protocol” (CAP). This document also describes issues and problems that are not solved by these protocols, and that could be targets for future work. This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3283</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>scheduling systems</keyword>
+  <keyword>cap</keyword>
+  <keyword>calendar access protocool</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+</bibitem>
+
+
+
+
+</references></bibliography>
+</csd-standard>

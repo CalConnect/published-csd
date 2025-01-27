@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on CalConnect Conference XLVI, October 7-10 2019</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1903:2019</docidentifier><docnumber>1903</docnumber><date type="published"><on>2019-11-07</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2019-11-07</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2019</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_9d3161a3-88ec-1dd8-5802-8800fdb95fc0" obligation="normative">
+<p id="_847f818d-8c94-46e0-cb58-8cd8a55aed56">© 2019 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_ad9afd93-b149-e711-1cc3-d669c8797129">CalConnect XLVI took place October 7-10, 2019, hosted by Fastmail in Philadelphia, Pennsylvania. The conference was held on Fastmail’s premises, and was attended by a total of 10 people from 7 member organizations, plus 7 attendees to joint virtual working group sessions with the IETF CALEXT working group and with ISO/TC 154/ WG 5. attendees. The Conference focused on strategic and possible work items in addition to ongoing work, and finished with the CalConnect Plenary Session on Thursday. The schedule was rearranged during the week based on input from participants. The final pre-event Conference agenda with notes on the discussion topics may be found at  <link target="https://www.calconnect.org/events/calconnect-xlvi-october-7-11-2019#conference-schedule">CalConnect XLVI Conference Schedule</link>.</p>
+</introduction></preface><sections>
+
+<clause id="_status_of_documents_since_last_conference" obligation="normative">
+<title>Status of Documents since Last Conference</title>
+<p id="_9e1a7cf9-ebdb-00da-1d99-ec172c1611eb">This is the status of documents as of June 2019 as more recent information was not available when this report was prepared. There are no substantial changes at this point.</p>
+
+<p id="_2e37e03a-6607-16c6-d584-e078470445f2">Specifications in progress and not yet published are generally resident on GitHub either in our public or private areas.</p>
+
+<clause id="_documents_at_calconnect" obligation="normative">
+<title>Documents at CalConnect</title>
+<clause id="_published" obligation="normative">
+<title>Published</title>
+<ul id="_d9840252-3126-4f8e-e5f9-d5862846b30c"><li><p id="_545e6749-db39-98be-5dc1-26cf758a060b">CC/DIR 1005:2019 Guidelines for the implementation of the CalConnect Patent Policy</p>
+</li>
+<li><p id="_105fb08e-84b2-6f76-0656-b72f6cc51d97">CC/R 18003:2019 Calendar operator practices — Guidelines to protect against calendar abuse (TC CALSPAM)</p>
+</li>
+<li><p id="_3791ad31-5f15-1f0f-acc6-c249901e226d">CC/DIR 10001:2019 CalConnect Directive: Standardization and publication</p>
+</li>
+<li><p id="_df072892-004e-f327-8082-1573f703f7ad">CC/DIR 10002:2019 CalConnect Directive: Standard document requirements</p>
+</li>
+<li><p id="_6f77823e-af12-4ad0-ace4-0457dbc088b3">CC/DIR 10003:2018 CalConnect Directive: Patent policy</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_committee_drafts" obligation="normative">
+<title>Committee Drafts</title>
+<ul id="_1a3af869-69d9-f2ce-76fb-e79e2454a932"><li><p id="_cb53fbf6-6167-162b-4264-fb2163a65323">CC/CD 51003 Series in iCalendar</p>
+</li>
+<li><p id="_76baf041-5575-5d96-2e24-ce7f20753be1">CC/CD 51004 iCalendar Relationships</p>
+</li>
+<li><p id="_b80b9469-8891-1ca1-de1f-59b7a65e1094">CC/CD 51005 Calendar Subscription Upgrades</p>
+</li>
+<li><p id="_c5641406-1f8b-93dc-c543-3b6ca85cf057">CC/CD 51006 Consensus scheduling — iCalendar vPoll component</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_documents_at_iso" obligation="normative">
+<title>Documents at ISO</title>
+<ul id="_aa98b308-e1c9-b1ad-cef8-e5b669403a7c"><li><p id="_06a43124-8496-96e3-87db-ba6226427aec">ISO/CC 19160-1 “Addressing — Digital addresses” in working draft at ISO/TC 211</p>
+</li>
+<li><p id="_92fce445-bfdc-51a5-4733-d83426af5519">ISO/CC 34000 “Date and time — Concepts and vocabulary” is under NWIP</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_documents_at_the_ietf" obligation="normative">
+<title>Documents at the IETF</title>
+<clause id="_published_as_informational_rfc" obligation="normative">
+<title>Published as Informational RFC</title>
+<ul id="_1f695085-8c3d-5272-fe80-bf711009eec6"><li><p id="_4d9ba1de-3790-ff94-c1df-03d8bea49d76">CalDAV Managed Attachments RFC 8607</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_drafts_in_final_review" obligation="normative">
+<title>Drafts in Final Review</title>
+<ul id="_140a0cf5-fc87-e051-3923-be51bb45d93a"><li><p id="_2711c57e-97ef-ed9d-1dc9-b0dc2c9bf062">Event Publishing Extensions to iCalendar (TC CALENDAR)</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_drafts_in_calext_working_group_last_call" obligation="normative">
+<title>Drafts in CALEXT Working Group Last Call</title>
+<ul id="_24354f78-9791-da3e-bf92-f9fc853b5b3c"><li><p id="_4f973700-36f3-7497-71df-111c7c4f5e1a">Improved Support for iCalendar Relationships (TC CALENDAR</p>
+</li>
+<li><p id="_18bdb3bf-d1d8-8bdf-909c-1bfdaa82083c">JSCalendar: A JSON representation of Calendar data</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_assigned_to_calext_wg" obligation="normative">
+<title>Assigned to CALEXT WG</title>
+<ul id="_ded3d314-bb6f-7407-063b-f42183df1af7"><li><p id="_9f369704-1f32-cae2-06ec-6c62b4a91e89">CalDAV extension for scheduling controls</p>
+</li>
+<li><p id="_ca770519-7d6d-278a-2466-7d2f6b53a784">VLARM Extensions for iCalendar</p>
+</li>
+<li><p id="_aff22195-cdc7-29ce-eacb-c50d75c21ea8">Calendar Subscription Upgrades</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_pending_assignment_to_calext_wg" obligation="normative">
+<title>Pending Assignment to CALEXT WG</title>
+<ul id="_51b5073f-bf8e-754a-505b-c97ef574268d"><li><p id="_72eb6e72-e922-5161-d1f5-0331eec32c0f"><tt>VPOLL</tt>: Consensus Scheduling Component for iCalendar</p>
+</li>
+<li><p id="_e4bd7823-cb7a-c2a2-61f6-6202bdf3fb57">Support for Series in iCalendar</p>
+</li>
+</ul>
+</clause>
+</clause>
+</clause>
+
+<clause id="_calconnect_liaisons_as_of_october_2019" obligation="normative">
+<title>CalConnect Liaisons as of October 2019</title>
+<p id="_e664744b-6526-f7b6-2730-dbe4c73c5309">CalConnect has formal reciprocal membership liaisons with M3AAWG and OASIS, a strong working relationship with the IETF, and an External Cooperation Agreement with the ITU-T.</p>
+
+<p id="_33a81b97-2603-4072-26f7-52682111c781">CalConnect has established formal Category A Liaisons with the following ISO Committees:</p>
+
+<ul id="_a68db190-26a2-3c23-7823-81ee87741238"><li><p id="_280a4e6f-1d6d-dfdf-2b17-76abeb61fef7">ISO/IEC JTC 1/SC 27 IT Security Techniques</p>
+</li>
+<li><p id="_7b0f9b4b-67c5-8591-63c3-5607be39e9c6">ISO/PC 317 Consumer protection: privacy by design for consumer goods and services</p>
+</li>
+<li><p id="_01b0e987-2672-7d45-15ff-db1f82309763">ISO/TC 37 Language and terminology</p>
+</li>
+<li><p id="_bbcefc42-549d-807a-2c30-7b72613457fb">ISO/TC 37/SC 4 Language resource management</p>
+</li>
+<li><p id="_00183eda-491c-3d88-b906-f3258d68d207">ISO/TC 37/SC 5 Translation, interpreting and related technology</p>
+</li>
+<li><p id="_d2cfbb17-39b9-5a45-e2f0-5f24273fcc20">ISO/TC 46 Information and documentation</p>
+</li>
+<li><p id="_bbf5666e-a328-f7c3-2e9b-2c952882b2d1">ISO/TC 46/SC 4 Technical interoperability</p>
+</li>
+<li><p id="_b1af89b1-7de5-5698-59df-0852e29742a3">ISO/TC 46/SC 9 Identification and description</p>
+</li>
+<li><p id="_4c91302b-97bf-41f2-c74b-da12a7cf5ad5">ISO/TC 154 Processes, data elements and documents in commerce, industry and administration</p>
+</li>
+<li><p id="_11f8856f-94a1-f673-cfc0-29b55740aea3">ISO/TC 211 Geographic information/Geomatics</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_general_status_and_items_from_conference_xliv" obligation="normative">
+<title>General Status and Items from Conference XLIV</title>
+<clause id="_tc_api" obligation="normative">
+<title>TC-API</title>
+<p id="_db078e9d-cd12-a1cd-054e-6251984838b7">Work on JSCalendar and related JSxxx documents is progressing very well. Work on contact-related stuff in TC 211 and vCard has to be kept aligned and moving forward,, probably via JSContacts. See references under other TCs to JMAP and JSCalendar/ Contacts/etc.</p>
+</clause>
+
+<clause id="_tc_autodiscovery" obligation="normative">
+<title>TC-AUTODISCOVERY</title>
+<p id="_b184d5ae-2be9-726c-5d26-6203e582c402">Register MIME-type so a config could be email/etc and opening the attachment triggers the client(s) to be configured. Others are very interested in the work.</p>
+</clause>
+
+<clause id="_tc_calendar" obligation="normative">
+<title>TC-CALENDAR</title>
+<p id="_ed12729e-3b1f-df11-c85f-8c7e00e52bee">Scheduling on Shared Calendars: We believe that Apple use Calendar User Proxy (calendar-proxy capability) for handling secretary mode. Team sharing mode simply acts on behalf of the principal associated with that instance of the calendar</p>
+
+<p id="_e7a19ef1-7dc9-689a-3740-2cd5b322daac">JMAP Calendars: Several edits to be made based on discussions.</p>
+
+<p id="_40454b44-2364-4380-0324-6dfa124a73d6"><tt>VPOLL</tt>: Update draft using <tt>PARTICIPANT</tt> component rather than <tt>VVOTER</tt> component. Split  <tt>BASIC</tt> mode specific bits into their own section describing <tt>BASIC</tt> mode. Publish this draft ASAP unless we think we can add new poll mode(s) quickly.</p>
+
+<p id="_7b4870e7-3a9b-483f-12be-da604618ac6c">Second poll mode would be <tt>SIGNUP</tt> mode where a bunch of tasks need to be handled and voters choose 1 or more that they are willing to complete (e.g. preparing for and/or bringing items for a dinner party)</p>
+
+<p id="_a8d54cab-8164-873b-cc93-cc64f73da061">Third poll mode would be the case of asking dentist office (or hairdresser or automotive garage) for available time slots for a procedure</p>
+
+<p id="_4e868bfb-08cf-774a-5431-7bcd984414bb">Server-side subscriptions: Compare/contrast current draft with Apple telemetry.</p>
+
+<p id="_d03e9256-bb56-035b-c624-e6773580d1a7"><tt>VALARM</tt> Extensions: Add <tt>RELATED-TO</tt> back in. Add text on security considerations of proximity alarms.</p>
+</clause>
+
+<clause id="_tc_datetime" obligation="normative">
+<title>TC-DATETIME</title>
+<p id="_ce2553dc-d727-35b4-a18c-bc8b9c2518f3">Working on developing a relative date/time notation based on ISO grammar. Also would like to come up with a way to tag date/time values with calendar system, time system, and time zone id. Working on human representation. Decide to create proposals for ISO/TC 154 plenary.</p>
+</clause>
+
+<clause id="_tc_localization" obligation="normative">
+<title>TC-LOCALIZATION</title>
+<p id="_2e05859a-aff5-da8f-07c3-778f05579297">Writing conversion system codes. Moving forward, will be the third pillar of the trio of ISO 639 (language codes), ISO 15924 (script codes) and ISO 24229 (writing conversion system codes). Romanization of Cantonese will be re-balloted for participation. Name model proceeding in ISO/TC 37 pending ballot. Will accelerate solicitation/completion of cultural profiles</p>
+</clause>
+
+<clause id="_tc_push" obligation="normative">
+<title>TC-PUSH</title>
+<p id="_42b50a94-d68a-7f4f-5dfd-6f86acd812c9">Ask Chair to do the split of the draft and update with RFC 8030 references where needed. Interest in writing a server implementations, but is there any realistic chance of more client support? Need someone to review authentication/security. Align with Open-Xchange work on IMAP WebPush.</p>
+</clause>
+
+<clause id="_tc_usecase" obligation="normative">
+<title>TC-USECASE</title>
+<p id="_26c428e6-20ca-7652-6edc-3b94d01a6114">Define ‘client’ early in charter. Deal with interoperability issues — more work on CalDAV tester. Links to client libraries..</p>
+
+<p id="_a64fc148-d125-c792-4884-abb19f68ebe0">There was some discussion on incentives (reduced participant fee) for Open Source developers at Zürich conference. Also an interesting point regarding to try draw audience from the scientific community (e.g., inviting for scientific/industry paper submissions related to CalConnect topics) Decided to rename TC to TC-CLIENT</p>
+</clause>
+
+<clause id="_tc_vcard" obligation="normative">
+<title>TC-VCARD</title>
+<p id="_bf20ff10-f2d7-1851-9e22-d70d71edb3a0">JSContacts: Discussion about how best to do localizations. 2 different approaches. This will probably be hashed out in IETF JMAP WG once accepted</p>
+
+<p id="_58245102-30e8-db54-c45d-31d49087703e">No support for non-Westernized addresses yet. Specification of Groups needs more work</p>
+
+<p id="_0bb585c2-01ff-37f6-d788-cbbfba5dc816">Document models: Lightweight document model for Markdown, AsciiDoc, RTF as interchangeable rich text’</p>
+
+<p id="_b384088e-bd51-5938-1d6d-f5c6eb3897dd">Location vCard: Metadata for a location. vCard already contains “kind: location”, and defined  <tt>STRUCTURED-LOCATION</tt> in resource vCard work.</p>
+
+<p id="_4d90e363-f71f-15c2-436c-e2e0d041d51f">TC VCARD agreed to take over the joint work of OGC, ECCMA, W3C and ISO’s work on POI (point of interest) and develop with them as partners</p>
+
+<p id="_a1a9af5b-7f81-f4cb-78da-3e4b063b2e60">Enumerate use cases for industries: maps, navigation, travel, theme parks</p>
+
+<p id="_8f223769-13d4-3384-fbc0-925403f81c71">Will define method of place identification, including ISO 19155 (place identifier), ECCMA/OGC NLI (ECCMA 1 standard)</p>
+
+<p id="_a579fcdf-f7aa-4732-b808-4bc3470da548">Find additional collaborators: IATA, UN (for LOCODE).</p>
+
+<p id="_ccb38ec2-8916-bf99-55c6-71a6c644ec0e">Standardized profile and digital addresses proceeding.</p>
+</clause>
+</clause>
+
+<clause id="_joint_working_group_calls" obligation="normative">
+<title>Joint Working Group Calls</title>
+<p id="_4587687a-e51e-eb97-2947-cf2d492b7ae9">The joint working group calls with IETF CALEXT and ISO/TC 154/WG 5 went very well.</p>
+</clause>
+
+<clause id="_plenary_meeting" obligation="normative">
+<title>Plenary Meeting</title>
+<p id="_60549eb6-a470-56e9-ce1a-179928cdd412">CalConnect will hold two rather than three events in 2020: a spring event in April and an autumn event in late September/early October.</p>
+
+<p id="_822480bf-391a-c883-3ccd-bc916a1ae1dc">Interest in being involved in creating the scheduling agenda for future events; we plan to distribute the calls to meeting for Event Planning to the general calconnect-l mailing list and post event reports etc. on that list as well to try and get additional and early involvement, beginning with Event Planning calls in November for CalConnect XLVII.</p>
+</clause>
+
+<clause id="_confirmed_future_events" obligation="normative">
+<title>Confirmed Future Events</title>
+<ul id="_0b9a02f8-7c6a-e3d6-fc95-f91f2305115c"><li><p id="_967d5d47-e9d9-98f2-f3b3-a7483263cabd">Cronofy will host CalConnect XLVII on April 20-24, 2020 in Nottingham, United Kingdom.</p>
+</li>
+<li><p id="_d086fd05-cdff-a695-cc59-fec42fc3d515">CalConnect XLVIII will be in Autumn 2020, host, location and exact dates TBD.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_pictures_from_calconnect_xlvi" obligation="normative">
+<title>Pictures from CalConnect XLVI</title>
+<p id="_31746815-faa8-f83f-9534-e08523c49cd9">There were no pictures available from CalConnect XLVI.</p>
+</clause>
+</sections>
+</csd-standard>

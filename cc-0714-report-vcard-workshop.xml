@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on CalConnect vCard Workshop, September 18 2007</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0714:2007</docidentifier><docnumber>0714</docnumber><date type="published"><on>2007-09-18</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1.1</edition><version><revision-date>2007-09-18</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2007</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>VCARD WKSP</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7809dbe8-e645-5f85-32ad-f71bc98571d1" obligation="normative">
+<p id="_50f4b52f-8422-795d-1913-62a3d383a692">© 2007 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_bf320da2-2af0-221f-f996-de7285e2f7e2" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_f5f8fda5-5380-3852-ffda-b45b54f57125">This document was prepared by Technical Committee <em>VCARD WKSP</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<note id="_94993d97-4a55-0fd8-0303-0736e7bc7f5c"><p id="_a9ca93d7-8ad3-23a5-ee4f-0a57f80d6846">Update 13-Nov-2007: The Draft Charter for the CalConnect vCard Technical Committee has been added at the bottom of this web page.</p>
+</note>
+
+<p id="_357693c1-4a9c-2e2a-4990-11ed5e08c88c">CalConnect sponsored a open one-day workshop on vCard and what to do about it. The event was held September 18, 2007 at the Massachusetts Institute of Technology in Cambridge, Massachusetts. Registered attendance was about 20, but a few others sat in during some portion of the day. About 3/4 of the attendees were from CalConnect members, although not always a CalConnect representative from that member.</p>
+</introduction></preface><sections>
+
+<clause id="_meeting_summary" obligation="normative">
+<title>Meeting Summary</title>
+<p id="_13f9b362-560f-f879-a779-0b945d299423">The preliminary agenda is available at Prelminary Workshop Agenda. The workshop began with a welcome and introduction by Dave Thewlis, the Executive Director of CalConnect, who gave a brief overview of CalConnect, its relationship with the IETF, and how CalConnect got involved with vCard in the first place. (Summary: as soon as you start to do calendaring you get involved in address books and vCard pops up.) CalConnect members have expressed for some time that “something ought to be done about vCard” but CalConnect has not to this point had the resources to do anything, nor clarity on what ought to be done and what if anything should be undertaken by CalConnect. The goal of this workshop therefore was to see if there was general agreement on what the problems were, and what should be undertaken by the IETF. Then as an ancillary, what should additionally be undertaken by another entity (such as CalConnect) and is CalConnect the right place.</p>
+
+<p id="_ebca2722-9d52-5dce-f586-5e41745a94af">Cyrus Daboo of Apple provided an overview presentation of the problem and related issues, which included a summarization of the 25 or so responses to the CalConnect questionnaire on vCard issues. vCard Problems and Related Issues. This was followed by a  <link target="http://www.openmobilealliance.org/ftp/Public_documents/DS/DS_DO/2007/OMA-DS-DS_DO-2007-0002R01-INP_vCard_workshop.zip">presentation from the OMA DS</link> discussing vCard and OMA DS (formerly SyncML) issues, and a brief discussion on other related work or standards in other bodies.</p>
+
+<p id="_29535886-b77d-7e05-5907-94be0f067201">The group then conducted a considerable discussion of vCard problems, what needed to be fixed, and what should be done if a vCard revision was undertaken. There was considerable agreement that a new specification should have the name changed, possibly to “iCard”. The final list of identified items is at List of Desired Elements for a vCard Revision</p>
+
+<p id="_7f3eab09-dd36-f6c9-1489-6fd508fb764f">A key point was that if a vCard revision happens, the resultant specification needs to be significant enough and offer enough new things to make the business case for converting to it to the many organizations which support vCard today (most of which haven’t even gone to vCard 3 yet). Related to that is that promotion, publicity, use cases and requirements, and interoperability testing need to happen in parallel with the actual specification revision.</p>
+
+<p id="_b47db2d2-032d-58b9-78b6-4065305fcfea">The workshop discussed briefly whether the right thing to do was to scrap vCard and develop an entirely new specification, but the consensus was that while that might be the “right” thing to do from a theoretical viewpoint, it was probably not practical. On the other hand, as noted above we need to avoid simply tackling the easy bits because nobody will adopt what amounts to a minor revision — after all they didn’t do so the last time.</p>
+
+<p id="_63ba7953-a543-6619-5ea7-7b42606ba717">Chris Newman, IETF Area Director, stated that the amount of interest (and concern) had convinced him that the work should go forward in the IETF to revise vCard, and that he had possible candidates for document editors and co-chairs for a working group, so he intended to initiate the process of charter development.</p>
+
+<p id="_73ff3457-f591-1600-276c-db6e420683cf">Discussion on what needed to be done to provide input to the working group included use cases, requirements, results of interoperability testing to determine minimum interoperable subsets, etc., in addition to ultimately promoting the resultant specification. The first part of this needs to happen quickly, if possible no later than the March 2008 IETF meeting to provide something for the working group to start with. Discussion of possible venues for the work did not identify any significant alternatives to CalConnect presuming that CalConnect can undertake the work. The topic of allowing non-member-representatives to participate in the CalConnect work was discussed briefly without any final decisions; however CalConnect is in the process of adopting mechanisms to allow external public review and comment on selected work items and does have some other ways in which this could be enabled on a case-by-case basis (primarily the ability to include identified “industry experts” not from CalConnect members in the deliberations of a TC).</p>
+
+<p id="_0785de48-3e8f-3a92-2c69-f1c606c5e5f1">From the CalConnect perspective, undertaking the work requires new resources; the available technical resources are committed to existing Technical Committees. However, several non-members have indicated that they are interested enough in the work to consider joining CalConnect in order to participate.</p>
+
+<p id="_8f0ffb78-9529-918a-9060-6678253bdb7c">CalConnect will develop a draft charter for a vCard Technical Committee, which will identify the scope of the work, expected work products and timelines, and will do so on the public vcard-workshop-l mailing list which was set up to complement the vCard Workshop. This will allow all interested parties, by joining that list if they are not already subscribed, to be informed on what is being proposed and develop a clearer understanding of what their commitment might be if they decide to participate in the work. CalConnect expects that the development of this charter and solicitation of volunteers to help will take several weeks. The CalConnect TC CHAIRS and Steering Committee will then make a final decision on whether to undertake the work based on the availability of the necessary resources.</p>
+</clause>
+
+<clause id="_other_notes" obligation="normative">
+<title>Other Notes</title>
+<p id="_a0f13ce2-c965-dc65-a86f-6a28c6c02eac">CalConnect had planned to offer an Internet audio stream together with a jabber room to allow comments and to ask questions. However although several people indicated interest, repeated emails prior to the workshop didn’t elicit anyone saying they would use the facility, so we did not set it up.</p>
+
+<p id="_5ab9e304-dbb1-ad9d-cd32-a500e7d15098">CalConnect thanks all of the participants in the workshop and everyone who worked to make it a success.</p>
+</clause>
+
+<clause id="_workshop_presentations_and_materials" obligation="normative">
+<title>Workshop Presentations and Materials</title>
+<ul id="_c8008676-8d5e-a6d4-6764-02d2b717aa0e"><li><p id="_4b1de140-9715-8774-fddf-fa028add2723">Workshop Preliminary Agenda</p>
+</li>
+<li><p id="_93864954-18ad-0a2c-8842-34630f2fa716">Summary and Notes (text from this page)</p>
+</li>
+<li><p id="_6dd9de0b-0a9d-05c0-a5f0-764e3d190555">vCard Problems and Related Issues</p>
+</li>
+<li><p id="_a1a14e7e-3fe4-47da-9060-69d7e9f07307"><link target="http://www.openmobilealliance.org/ftp/Public_documents/DS/DS_DO/2007/OMA-DS-DS_DO-2007-0002R01-INP_vCard_workshop.zip">OMA DS Presentation</link></p>
+</li>
+<li><p id="_2715e32d-bc3e-0eab-5294-320267ad4a59">List of Desired Elements for a vCard Revision</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_draft_charter_for_calconnect_vcard_technical_committee_as_of_05_oct_2007" obligation="normative">
+<title>Draft Charter for CalConnect vCard Technical Committee (as of 05-Oct-2007)</title>
+<p id="_e7343ec7-a37d-aa69-bed7-6d54dcbc0e86">TC-VCard will provide support to the IETF vCard revision efforts by:</p>
+
+<ol id="_2c895cdc-472d-7e33-cd5c-80c9d09491f5" type="arabic"><li><p id="_32182be9-ae73-cb4f-ab1d-e6424f04582b">Determining specific problem areas in the current vCard specifications that need to be fixed. As input the TC will start with issues documented in the vCard workshop.</p>
+</li>
+<li><p id="_0ab4acbc-4d40-fad8-9ad2-64692de60550">Looking at enhancements to the specifications to address current needs.</p>
+</li>
+<li><p id="_87cd9ae8-b719-2b09-67e8-139cf4f7fe7a">Working on interoperability test cases to expose these problems and to provide a means to verify when they are fixed in the updated specifications.</p>
+</li>
+<li><p id="_d7504cd1-4693-48f0-f1d6-3eb2b42959ce">Work on an XML-syntax for a 1-to-1 mapping with vCard.</p>
+</li>
+</ol>
+
+<p id="_0116dbda-627c-8e6b-22b5-c2c451e3dce6">The technical committee will produce a recommendations document to the IETF describing the suggested fixes and enhancements felt necessary.</p>
+
+<p id="_f7114d48-39fc-5da6-bbf5-2f1eb929c586">The technical committee will work with other CalConnect technical committees to accomplish this work (e.g., TC-Mobile, TC-XML (proposed), TC-Eventpub (VVENUE overlap), TC-Ioptest (interoperability testing).</p>
+
+<p id="_082da651-c697-3fa9-2063-04cd10ead3f4">The technical committee will work on a “benefits” document to promote the new standard. It will also help promote this amoungst vendors to try and encourage rapid deployment of the new standard.</p>
+
+<p id="_4249d82c-3da1-c737-c8b6-951e8f5df646">Mirroring the consensus of the vCard workshop, this TC does not plan to examine a wholesale replacement of vCard.</p>
+
+<p id="_cb2f0332-4e74-7350-8a62-62e5867cca46">Milestones:</p>
+
+<ul id="_d3c19fc1-c1ee-20db-6337-ce71748261c6"><li><p id="_b4c3812e-1545-68fd-0602-67735378b020">Nov 2007 TC Setup</p>
+</li>
+<li><p id="_51ab58ce-1aad-c72a-ffdd-7711aec52cab">Jan 2008 Interoperability test cases.</p>
+</li>
+<li><p id="_d844e324-66a4-f4a0-0c4f-b82adce0b23b">Feb 2008 Interoperability event.</p>
+</li>
+<li><p id="_a8897b75-6276-4800-a352-4447aacac96a">Feb 2008 Draft of recommendations.</p>
+</li>
+<li><p id="_c4a6dbcf-ace6-a67e-eb7f-2f1c74a2a295">Mar 2008 Initial presentation to IETF.</p>
+</li>
+<li><p id="_168e5eb5-5ddb-bd23-5f54-32fb85e55faa">Jun 2008 Interoperability event.</p>
+</li>
+<li><p id="_1aaad0c4-82e3-621a-0619-395de93c2193">Jun 2008 Publish recommendations.</p>
+</li>
+<li><p id="_77228cec-c2b8-bafe-7819-7f465bd1ed46">Jul 2008 Final presentation to IETF</p>
+</li>
+<li><p id="_a95d2d87-1601-1071-9946-3092e4cda349">Oct 2008 Interoperability event.</p>
+</li>
+<li><p id="_eda0521d-e885-af23-f29e-84335ff65926">Oct 2008 Publish XML mapping document.</p>
+</li>
+<li><p id="_8ceba036-b684-1aae-3bc0-3bfe81346962">Oct 2008 Publish benefits document.</p>
+</li>
+<li><p id="_2ddccdc5-7d91-3340-4f69-675aa2ef2bc6">Oct 2008 Shutdown.</p>
+</li>
+<note id="_57b6b16a-c03f-1c6d-ea8b-8c44d98bd923"><p id="_a345197a-d919-d103-1587-df9a7a9f3008">Comments and suggestions on this Draft Charter should be posted on the vcard-workshop-l mailing list.</p>
+</note></ul>
+
+
+</clause>
+</sections>
+</csd-standard>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Interoperability Test Event XXXIII, May 18-20, 2015</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1504:2015</docidentifier><docnumber>1504</docnumber><date type="published"><on>2015-06-23</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2015-06-23</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2015</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_18c85bc2-7fe7-da90-e276-21b1c434f0d8" obligation="normative">
+<p id="_cf2cd1e6-0df3-6096-5f89-cc1ac3147aa1">© 2015 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_8d3a83de-c239-3714-aea1-2e845d7e2956" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_29007362-ac9c-24ea-99a6-e89b1f229577">This document was prepared by Technical Committee <em>IOPTEST</em>.</p>
+</foreword></preface><sections>
+<clause id="_report" obligation="normative">
+<title>Report</title>
+<p id="_eee9798f-4dcd-290d-6243-88f2b3b9dcb7">The interoperability test event at CalConnect I, hosted by 11 in their Bucharest, Romania office, took place on Monday May 18 through Wednesday noon May 20. The facilities were excellent and allowed all participants to begin testing immediately.</p>
+
+<p id="_c170a651-eb04-1155-8cbf-747695894d08">There were 6 members participating onsite represented by 12 individuals. Participating entities were:</p>
+
+<ul id="_e1fad9e5-40d5-cb3b-7fa9-cf37196527c8"><li><p id="_3f0dcb17-7e05-c73a-e08b-4d9709a77f74">1&amp;1 (the hosts)</p>
+</li>
+<li><p id="_87fe1294-3c31-0e74-799f-34064e9d3c11">Apple</p>
+</li>
+<li><p id="_154c8be5-e9fb-714b-e2c9-6c28100a64a0">fruux</p>
+</li>
+<li><p id="_e59fc558-c079-18da-22a7-a48d44d96c17">Google</p>
+</li>
+<li><p id="_75e1b3b3-dcbe-65b5-da91-faedc1024f8c">RPI (Bedework)</p>
+</li>
+<li><p id="_b0a827a1-cbd3-6cbd-0eb3-a587dee440a9">YouCanBook.me</p>
+</li>
+</ul>
+
+<p id="_674ec6cf-6521-3ca2-abb0-34aadd9b3c22">As is usual we spent some time on discussions — during the interoperability event these are often of a more technical and protocol oriented nature. These can involve the group as a whole or take the form of small break out discussions with a subset of the attendees. A brief discussion on API issues led to the decision that Evert Pot of fruux would produce some proposals for us to look at during the conference.</p>
+
+<p id="_eb3e1756-03c9-99a4-29f8-4090ad15a204">Following on from some previous testing there was a discussion on iMIP issues. Cyrus Daboo of Apple talked about his proposed mail header to identify calendar content in mail messages.</p>
+
+<p id="_7e9a725b-a969-d860-ed30-7325ef066185">There were also some discussions about the overall approach of CardDAV and in particular how to implement groups and how this would affect sharing. There was also some discussion about the CardDAV tests available in the Darwin calendar server test suite.</p>
+
+<p id="_7a61e4ce-55f8-3a31-0235-761167b631e5">YouCanBook.me felt this was “a really valuable session of testing”. Their service effectively acts as a client to a number of online calendar services and they carried out a significant amount of testing against those services. In particular they were carrying out final testing of their new CalDAV link which is now working well with fruux, iCloud and 11. Additionally:</p>
+
+<ul id="_7386c50b-55ec-3152-80e5-34712cc2143a"><li><p id="_ebf2a467-fa09-059b-53b8-0068cfd6b637">They improved their detection of the primary calendar status through CalDAV and are now filtering out non- <tt>VEVENT</tt> calendar collections properly</p>
+</li>
+<li><p id="_2a508c25-1ef7-eb5b-546e-8ebddea11663">They fixed a number of URL illegal character bugs and worked with fruux to signal their fruux interface</p>
+</li>
+<li><p id="_3ed41dbf-cbc5-ac6f-10bf-4790a19cecbe">They tuned the <tt>PROPFIND</tt> calls for 1&amp;1 and identified a missing slash issue</p>
+</li>
+<li><p id="_3482bfdc-5c35-1326-2ddf-51326a6c8fc4">They built a new link through to iCloud and logged a bug to do with descriptions on <tt>MKCALENDAR</tt> calls</p>
+</li>
+</ul>
+
+<p id="_7319d529-a181-ed57-7c61-8a3a6cbfb04c">The other big step forward for YouCanBook.me was talking to everyone about the main status property at the  <tt>VEVENT</tt> level — in particular for “tentative” status. This is something they hope to use, but need more support from clients. They expect to file bug reports or feature requests on this topic in the coming months. This, of course, is a feature which will be of use to many others.</p>
+
+<p id="_74a2bfa9-eb05-96a4-0b20-995d5370683b">As always, the result for many of the server developers were a number of bug fixes.</p>
+
+<p id="_50e10271-c5ea-6354-d761-64776de741e9">Mike Douglass, CalConnect Interoperability Test Manager</p>
+</clause>
+</sections>
+</csd-standard>

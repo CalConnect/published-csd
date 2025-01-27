@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Calendar Interoperability Test Report, September 26-27, 2006</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0612:2006</docidentifier><docnumber>0612</docnumber><date type="published"><on>2006-12-06</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Michael Douglass</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Grant Bailie</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Scott Adler</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Matt Willis</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Pat Egen</completename></name>
+<affiliation><organization>
+<name>CalConnect</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1.2</edition><version><revision-date>2006-12-06</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2006</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_431a5679-05d0-ecee-9453-74dd4bd8d7f9" obligation="normative">
+<p id="_f1d09183-9462-5366-367d-c2345d810390">© 2006 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_f06a0565-a2c1-f6d6-9d21-d30760f3d407" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<dl id="_f0a109c4-44a1-5ca5-5295-16abf5dce206"><dt>Chair(s)</dt>
+<dd><p id="_efe0a5fe-e59a-93b6-bcd4-bd9488b41575">Pat Egen</p>
+</dd>
+</dl>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_1f6d6695-6f38-99ff-4566-c2dec57156f6">This document contains notes and results from the September 2006 calendar interoperability event held at the Apple complex in Cupertino, CA. The basic purpose of the event was to start testing Free Busy and Scheduling in CALDAV. In addition, there was continued testing of iCalendar events by the Eventful organization.</p>
+
+<p id="_e906f53c-b30f-aa1a-7b97-17435c732aff">The chart below shows the attendees, their organization and the products they were testing.</p>
+
+<clause id="_attendees" obligation="informative">
+<title>Attendees</title>
+<table id="_dd7f962e-10d2-a350-aee2-f18526744280" unnumbered="true"><thead><tr><th valign="top" align="left">Attendees</th>
+<th valign="top" align="left">Organization</th>
+<th valign="top" align="left">Products</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Chuck Norris</td>
+<td valign="top" align="left">EVDB</td>
+<td valign="top" align="left">Eventful server</td>
+</tr><tr><td valign="top" align="left">Jeffrey Harris</td>
+<td valign="top" align="left">OSAF</td>
+<td valign="top" align="left">Chandler client</td>
+</tr><tr><td valign="top" align="left">Grant Baile</td>
+<td valign="top" align="left">OSAF</td>
+<td valign="top" align="left">Chandler client</td>
+</tr><tr><td valign="top" align="left">Mikael Rogers</td>
+<td valign="top" align="left">OSAF</td>
+<td valign="top" align="left">Chandler client</td>
+</tr><tr><td valign="top" align="left">Brian Mosely</td>
+<td valign="top" align="left">OSAF</td>
+<td valign="top" align="left">Cosmos server</td>
+</tr><tr><td valign="top" align="left">Mike Douglass</td>
+<td valign="top" align="left">RPI</td>
+<td valign="top" align="left">Bedework server</td>
+</tr><tr><td valign="top" align="left">Cyrus Daboo</td>
+<td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Apple server</td>
+</tr><tr><td valign="top" align="left">Wilfredo Sanchez</td>
+<td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Apple server</td>
+</tr><tr><td valign="top" align="left">Red Dutta</td>
+<td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Apple client — ical Version 3.0 (1118)</td>
+</tr><tr><td valign="top" align="left">Scott Adler</td>
+<td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Apple client</td>
+</tr><tr><td valign="top" align="left">Haley Allen</td>
+<td valign="top" align="left">Apple</td>
+<td valign="top" align="left">Apple client</td>
+</tr><tr><td valign="top" align="left">Dan Mosedale</td>
+<td valign="top" align="left">Mozilla</td>
+<td valign="top" align="left">Sunbird / Lightening 0.3 Release Candidate</td>
+</tr><tr><td valign="top" align="left">Matt Willis</td>
+<td valign="top" align="left">Mozilla</td>
+<td valign="top" align="left">Sunbird / Lightening 0.3 Release Candidate</td>
+</tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_general_comments" obligation="normative">
+<title>General Comments</title>
+<p id="_a38cd29d-cfa5-1b6f-c803-26de29311c47">The following applications and products were tested:</p>
+
+<ul id="_d71c3ef5-1e4c-896c-768b-ca130500b43b"><li><p id="_92d30474-ae91-7915-6c5f-0852fb9d7751">Four CALDAV servers — RPI, Oracle, Apple and OSAF (Cosmo)</p>
+</li>
+<li><p id="_e911f655-1dc3-57da-8da2-41087ebbcdb8">Three CALDAV clients — OSAF (Chandler), Mozilla, and Apple</p>
+</li>
+<li><p id="_4cd845e1-7271-5a05-337d-94e215577f65">Absorbing Recurrence rules (RFC 2445 and RFC 2447) by Eventful.</p>
+</li>
+</ul>
+
+<p id="_62255b0f-61c1-e83c-0bf6-df1a88b3e97b">Free Busy and Scheduling are recent additions to CALDAV. However, we had three clients testing CALDAV against four CALDAV servers this event. This is a three-fold increase over the last interop testing. Since scheduling is the most recent addition to CALDAV there was limited testing of that part of the specification.</p>
+
+<p id="_21049996-6a1b-7232-529b-9b8653fbf8c6">The following paragraphs discuss items tested during the interop. The actual matrix showing the specific test cases is provided at the end of this document.</p>
+
+<p id="_d3e1b7dc-542c-d6d5-fbef-bb3376cac22f">The first part of the testing covered Event creation and modification. Two of the vendors were able to pass and test all items against two servers. The other vendors were able to pass several, but not all of the items in the testing suite.</p>
+
+<p id="_a7d7e945-7236-812b-0d30-06f1417b07bf">The second part of the testing covered Event Modification. Again, two vendors supported and passed testing of the nine items against two servers. One vendor did not participate in this test.</p>
+
+<p id="_fe604ff0-4571-4727-963a-2256a9cf09d3">The third part of the testing covered Event Retrieval via CalDAV reports, which, at present no one supports and therefore was not tested.</p>
+
+<p id="_559b8be0-e2fd-46b6-286b-942487886604">The fourth part covered Event Deletion. There were five items to test and two vendors supported and passed testing against two servers.</p>
+
+<p id="_41e6f7d6-f247-36fb-cb20-6a62b44c06bc">The fifth part covered Access Control and no one either supports or tested any of the four test items.</p>
+
+<p id="_27b10477-011d-0e41-acdb-756a25bd8ee3">The sixth part covered Calendar Management. Two vendors do not have support for this and another vendor only supports two of the six test items.</p>
+
+<p id="_575d5104-8aaf-70c8-fa49-3cdc47caf6c2">The seventh part of the test was Free Busy Reports. Only one vendor supported and tested this section. They tested and passed eleven items against one of the testing servers.</p>
+
+<p id="_b1c04b27-74d2-c44c-f949-4f0d0ae58ea5">The eighth and final section tested Scheduling. There were 7 test cases and one vendor supported and passed four of the items against one server only. No other clients tested this section.</p>
+
+<p id="_3d3aef72-534b-b3cd-46cd-0a980fe92a84">Following now are comments submitted by the test participants.</p>
+
+<clause id="_first_set_of_comments" obligation="normative">
+<title>First set of comments</title>
+<p id="_b5508d9a-46a1-f6d0-7d20-5d1ae7d56821">We found the interoperability lab to be a very valuable exercise, and during the course of the two days were able to make changes in our current application. At then end of the two days we were communicating with all four servers, reading data, making changes with three of them. Most of the changes were based on incorrect assumptions, caused by developing with only one server. Moving forward, having access to multiple implementations will let us build a much more robust client.</p>
+
+<p id="_f17d5d07-068a-b3a0-64af-964ac47011f9">As for the event itself, having face to face contact, and immediate bug fixing on both sides was extremely valuable to a quick development process. Doing this remotely might work, but the fact that we can bring laptops right to the people writing the server, or ask the other clients to modify data made the whole event go smoothly.</p>
+
+<p id="_f21b0e9f-9ca6-cc0c-182a-85ca5c64e1dc">Some issues we encountered with specifically:</p>
+
+<ul id="_7f986475-9394-5805-6910-9bce36aeb01c"><li><p id="_a06a0e4a-bee4-dd7d-599e-5570fa098abf">Their application depends on valid principals with calendar- home-set properties; not all the servers had this set up.</p>
+</li>
+<li><p id="_95055e4a-650a-0336-bcb5-c8a4f1dbe723">Calendar User Addresses are an issue, the fact that they can be anything, even email addresses that they are using elsewhere in their application was causing them problems with scheduling.</p>
+</li>
+<li><p id="_c7305186-d67e-8ad1-2ada-0b126b56d74e">They were using relative paths in some cases where servers were expecting full paths</p>
+</li>
+<li><p id="_fd121b3e-787e-0f44-f929-1aa8a394d500">Also a couple of other minor issues, not really worth getting into here.</p>
+</li>
+</ul>
+
+<p id="_e0f9c184-9c87-542c-c2ce-5b0a7f09d4bd">We realize this interoperability meeting was focused on client/server compatibility. One thing we would like to see in the future is more multi-client read write access to the same data on the same server and then making sure that everything still works. For example, have one vendor create a lot of calendar data on their server with their client, then let our application read and modify the data, then see that it shows up correctly the receiving application.</p>
+
+<p id="_9cab6ed1-f06a-f3a7-6a30-2c6787d818b0">“Overall this was a great event, and we look forward to the next one.”</p>
+</clause>
+
+<clause id="_second_set_of_comments" obligation="normative">
+<title>Second set of comments</title>
+<p id="_8a37064b-f1d5-24ee-8a09-285e8f0c90d9">Our server team was pleased to participate in this CalConnect IOP. We had the absolute latest version of our CalDAV server available for testing on two machines.</p>
+
+<p id="_842af887-5855-dad9-a066-03c8e3d52234">All clients were tested against the server during the course of the event. No major problems were found in our server implementation. On the whole other clients do not yet support some of the more ‘advanced’ features such as access control and scheduling, so significant portions of the code were not exercised, but those portions that were performed as expected. We are not aware of any significant problems clients had with working with our server as compared to others.</p>
+
+<p id="_aa7695cf-3e30-02e1-a10e-3fcf447064d8">Overall we found this to be a valuable experience and look forward to participating again in the future.</p>
+</clause>
+
+<clause id="_third_set_of_comments" obligation="normative">
+<title>Third set of comments</title>
+<ol id="_f56c3016-1fe4-a414-732a-13e13f03972e" type="arabic"><li><p id="_074fd002-ec6c-feec-42d3-1d0ca2849dbc">One vendor requires a principal resource with the CALDAV:calendar-home-set property so that it can locate a user’s calendar collections. The developer added support to their application for WEBDAV principals (section 4 of the ACL spec).</p>
+<p id="_f56ae3b2-40b8-bdd7-c38e-de9682c19cbc">One application had problems renaming calendars. This operation uses WEBDAV <tt>MOVE</tt> underneath. It turns out that the application was sending a relative URI in the Destination header which RFC 2518 specifies must contain an absolute URI. The developer beefed up the code to handle both forms and I believe the folks changed to absolute, so all was well after that.</p>
+</li>
+<li><p id="_ca37ea23-3e29-ec03-1da7-9f866c846ef1">One vendor did some amount of testing with their application, but the developer wasn’t directly involved and they never communicated any issues to him.</p>
+</li>
+<li><p id="_b3ab45bf-4269-0d3e-ed49-bab59b510961">Another vendor ran the CALDAV test suite from their calendar server and found an issue when <tt>DELETE</tt>ing a null resource.</p>
+</li>
+<li><p id="_834934f7-46f0-32c8-4fc1-42d147228c18">An unknown party exposed a bug wherein a vendor application errored when receiving any CALDAV <tt>REPORT</tt> against a regular (non-calendar) collection.</p>
+</li>
+</ol>
+
+<p id="_932fc7c7-81f5-700e-bb43-b7afee839b15">The developer fixed all of these issues yesterday and then waited to hear about anything else that came up the next day. Nothing was reported.</p>
+</clause>
+
+<clause id="_fourth_set_of_comments" obligation="normative">
+<title>Fourth Set of Comments</title>
+<p id="_ea3df8fb-212b-824a-0f6f-33dc6b822cd5">One vendors application converts individual to UTC time. They also move floating recurr to UTC. Syncing unlimited recurrence fails. It also adds Alarms to every event. We found that this application rewrites exceptions as RDates and Exdates. Another vendor’s handling of modifications loses non-time pieces of these exceptions. All-day event creation fails on another vendors application. We also noted that another vendor does not send durations.</p>
+
+<p id="_2dd7fcb3-0d5c-e5bd-0339-cc7c91aac638">With regards to the specific items tested, they noted the following:</p>
+
+<ol id="_8e11b14f-9d8d-abcd-925d-913672d36f18" type="arabic"><li><p id="_0aa28104-9820-46db-3fc8-b79cfba1539b">While verifying two free busy periods, they actually got three free-busy periods noted. So far as they could tell, both forms are valid (i.e. servers  clients are free to coalesce free-busy as they see fit).</p>
+</li>
+<li><p id="_eaf5d512-b071-d3a8-5d8c-6152c07cb529">While testing against one vendor application they noted the following:</p>
+<ol id="_84503fc0-49ec-f4b2-5363-6adb41d94310" type="alphabet"><li><p id="_afd2e4f2-0d2a-7f69-07fa-1f1657a79bd8">The server deleted <tt>VALARM</tt>s stored with events</p>
+</li>
+<li><p id="_7ae573f7-158c-ab86-296a-bee9f5e95e71">Modifications to recurring events caused an internal server error (500 HTTP response)</p>
+</li>
+<li><p id="_88a5f081-eb65-9b21-566a-2d8bebb59406">The server never changes ETags, so a second client isn’t able to sync properly, since it thinks events haven’t changed since previous sync.</p>
+</li>
+<li><p id="_0a344d7c-6e78-78c4-b3af-7ebdfce95653">The HTTP <tt>DELETE</tt> request succeeded, but the collection stayed on the server.</p>
+</li>
+<li><p id="_07a18b7b-d15d-7202-f703-90400dc4d9b5">The server returned an empty (HTTP 204) response to a valid free-busy-request <tt>REPORT</tt>.</p>
+</li>
+</ol>
+</li>
+</ol>
+</clause>
+
+<clause id="_fifth_set_of_comments" obligation="normative">
+<title>Fifth Set of Comments</title>
+<p id="_46b27f98-0ed9-2c61-cb2d-765e6e8da6b3">They were very happy to exchange iCalendar objects to send to their server. Several attendees sent objects to help them test their iCalendar support, in particular recurring events. They found issues when absorbing iCalendar recurrence events. These will be useful in helping them streamline their software.</p>
+</clause>
+
+<clause id="_sixth_set_of_comments" obligation="normative">
+<title>Sixth Set of Comments</title>
+<p id="_98744ad8-db8b-cf4e-9f44-daa6510553a9">They tested their products against both servers. They also tested against another application. Not having stop time or no DTStart on timed event did cause some problems. They may need to put some kind of Note on events with no stop time or something like a ragged edge Icon on items with no end times. However, this may break scheduling with no end time. They also noted that the organizer object in one vendor’s application is an issue. Another vendor doesn’t allow the creator to update the principle.</p>
+</clause>
+
+<clause id="_seventh_set_of_comments" obligation="normative">
+<title>Seventh set of Comments</title>
+<p id="_8618897b-b22b-db59-2aae-bef45b7ce8ab">We assume testers will have found some problems in the area of recurrences when working with our product. They are currently working on rewriting that support.</p>
+
+<p id="_900312bb-7626-bf07-f374-fee6a6e55888">One vendor ran across a problem with a recurrent event that proved to be an ical4j bug. This is now fixed.</p>
+
+<p id="_2acc659e-55ce-1d95-4117-bd995bbc60e0">Another vendor’s application etags were broken and are now fixed.</p>
+
+<p id="_12f93122-154f-78dc-8e29-1f045de01255">We partially fixed a problem deleting calendars.</p>
+</clause>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_3b607c62-226e-51e9-dc6e-ac07449ef0c9">As usual, the interoperability testing revealed problems with servers that no one knew about. These were resolved quickly in many cases or will be resolved when the attendees get back to their respective facilities. It is always better to test something before it goes production and that is one of the things we can provide — a safe, non-public forum and environment for testing software interoperability.</p>
+
+<p id="_1006ecf2-2044-b856-b147-990d10738734">Issues that came out of the testing included principle support, attachments and calendar discovery. There needs to be something defined to better identify and discover calendar servers. In addition, there needs to be a better mechanism for handling attachments, including what kind of controls should be put in place. It was also noted that it would be good to have more report examples to help with development and testing.</p>
+
+<p id="_510ccfdb-2855-0524-82cb-5077762a8854">Following this document is a matrix of the CALDAV test matrix showing what items passed, failed or were not tested or supported.</p>
+
+<p id="_ca1a470e-a470-b628-53ca-bb9552b00426">Respectfully submitted, Pat Egen. Interoperability Event Manager</p>
+</clause>
+
+
+</sections><annex id="_caldav_testing_matrix" obligation="normative">
+<title>CalDAV Testing Matrix</title>
+<table id="_aae06b3a-01b9-3146-8f5f-09849c5ad8f1">
+<name>6<sup>th</sup> CalDAV Interop Testing Event — September 2006</name>
+<thead><tr><th valign="top" align="center"/><th valign="top" rowspan="2" align="left"/><th colspan="3" valign="top" align="center">Server 1</th>
+<th colspan="3" valign="top" align="center">Server 2</th>
+<th colspan="3" valign="top" align="center">Server 3</th>
+<th colspan="3" valign="top" align="center">Server 4</th>
+</tr><tr><th valign="top" align="center"/><th valign="top" align="left">A</th>
+<th valign="top" align="center">B</th>
+<th valign="top" align="center">C</th>
+<th valign="top" align="center">A</th>
+<th valign="top" align="center">B</th>
+<th valign="top" align="center">C</th>
+<th valign="top" align="center">A</th>
+<th valign="top" align="center">B</th>
+<th valign="top" align="center">C</th>
+<th valign="top" align="center">A</th>
+<th valign="top" align="center">B</th>
+<th valign="top" align="center">C</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="center">1.</td>
+<th valign="top" align="left">Event creation.</th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><td valign="top" align="center">1.1.</td>
+<td valign="top" align="left"><p id="_9c97d176-344f-9ec5-8896-45b156a49676">Create new single-instance meeting titled “Meeting 1.1” with the location “Durham”.</p>
+</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><th valign="top" align="center">1.2.</th>
+<td valign="top" align="left"><p id="_935df515-d58f-9c4a-08ad-fd7fcbb4a577">Create new meeting titled “Meeting 1.2” recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks</p>
+</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">1.3.</td>
+<td valign="top" align="left"><p id="_c0692fda-5d37-e667-f5ed-d1002f763a52">Create new single-instance meeting titled “Meeting 1.3” with 2 other attendees.</p>
+</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+</tr><tr><td valign="top" align="center">1.4.</td>
+<td valign="top" align="left"><p id="_0cabc862-09b4-7115-2d09-d37b2c014ee0">Create new single-instance meeting titled “Meeting 1.4” with an alarm set to trigger 15 minutes prior to the schedule time of the meeting</p>
+</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">2.</td>
+<th valign="top" align="left">Event modification</th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><td valign="top" align="center">2.1.</td>
+<td valign="top" align="left">Modify the title of meeting “Meeting 1.1” to “Meeting 1.1bis”.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">2.2.</td>
+<td valign="top" align="left">Modify the location of the meeting “Meeting 1.1bis” to “Seattle bis”.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">2.3.</td>
+<td valign="top" align="left">Reschedule meeting “Meeting 1.1bis” to the next day.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">2.4.</td>
+<td valign="top" align="left">Add an attendee to “Meeting 1.1bis”.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+</tr><tr><td valign="top" align="center">2.5.</td>
+<td valign="top" align="left">Add an alarm to “Meeting 1.1bis”.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">2.6.</td>
+<td valign="top" align="left">Modify the title of the 1st instance of the recurring meeting created in 1.2.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">F</td>
+</tr><tr><th valign="top" align="center">2.7.</th>
+<td valign="top" align="left">Modify the participation status of the 1st attendee in meeting 1.3 to <tt>DECLINED</tt>.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+</tr><tr><td valign="top" align="center">2.8.</td>
+<td valign="top" align="left">Cancel the 4th instance of the recurring meeting created in 1.2.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">V</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+</tr><tr><td valign="top" align="center">2.9.</td>
+<td valign="top" align="left">One client changes “Meeting 1.1bis” to a different time, second client ‘refreshes’ its display to see the modification.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">3.</td>
+<th valign="top" align="left">Event retrieval</th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.</td>
+<td valign="top" align="left">calendar-query <tt>REPORT</tt></td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.1.</td>
+<td valign="top" align="left">No filtering (match everything)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.1.1.</td>
+<td valign="top" align="left">Query all components and return all data. (tests <tt>&lt;calendar-query&gt;</tt> and <tt>&lt;filter&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.1.2.</td>
+<td valign="top" align="left">Query all components and return ETag WebDAV property and all data. (tests <tt>&lt;calendar-query&gt;+&lt;DAV:prop&gt;</tt> and <tt>&lt;filter&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.1.3.</td>
+<td valign="top" align="left">Query all components and return just entire <tt>VEVENT</tt> components. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;comp-filter&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.1.4.</td>
+<td valign="top" align="left">Query all components and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND</tt>/<tt>DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;comp-filter&gt;`, `&lt;calendar-data&gt;&lt;comp&gt;+&lt;prop&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.2.</td>
+<td valign="top" align="left">time-range filtering</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.2.1.</td>
+<td valign="top" align="left">Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;time-range&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.2.2.</td>
+<td valign="top" align="left">Query all components within a one week time-range and return just entire <tt>VEVENT</tt> components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;time-range&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.3.</td>
+<td valign="top" align="left">component based filtering</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.3.1.</td>
+<td valign="top" align="left">Query all components that contain an embedded <tt>VALARM</tt> component. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;+&lt;comp-filter&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.3.2.</td>
+<td valign="top" align="left">Query all components that contain  an embedded <tt>VALARM</tt> component whose trigger falls within a specific time-range. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;comp-filter&gt;&lt;prop-filter&gt;+&lt;time-range&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.4.</td>
+<td valign="top" align="left">property based filtering</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.4.1.</td>
+<td valign="top" align="left">Query all components that contain any <tt>ORGANIZER</tt> property. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;is-defined&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.4.2.</td>
+<td valign="top" align="left">Query all components that contain an <tt>ORGANIZER</tt> property with a specific CUA text value case-insensitively. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;+&lt;caseless&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.4.3.</td>
+<td valign="top" align="left">Query all components that contain an <tt>ORGANIZER</tt> property with a specific CUA text value case-sensitively. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;+&lt;caseless&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.5.</td>
+<td valign="top" align="left">parameter based filtering</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.5.1.</td>
+<td valign="top" align="left">Query all components that contain a <tt>DTSTART</tt> property with a <tt>TZID</tt> parameter. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;&lt;param-filter&gt;&lt;is-defined&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.1.5.2.</td>
+<td valign="top" align="left">Query all components that contain an <tt>ATTENDEE</tt> property with <tt>PARTSTAT=NEEDS-ACTION</tt> parameter. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;filter&gt;&lt;prop-filter&gt;&lt;text-match&gt;&lt;param-filter&gt;&lt;text-match&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.2.</td>
+<td valign="top" align="left">calendar-multiget <tt>REPORT</tt></td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.2.1.</td>
+<td valign="top" align="left">Query a specific <tt>href</tt> and return all data. (tests <tt>&lt;calendar-multiget&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.2.2.</td>
+<td valign="top" align="left">Query multiple <tt>href</tt>s (some of which do not exist) and return all data. (tests <tt>&lt;calendar-multiget&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.2.3.</td>
+<td valign="top" align="left">Query a specific <tt>href</tt> and return ETag WebDAV property and all data. (tests <tt>&lt;calendar-multiget&gt;+&lt;DAV:prop&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><th valign="top" align="center">3.2.4.</th>
+<td valign="top" align="left">Query multiple <tt>href</tt>s (some of which do not exist) and return ETag WebDAV property and all data. (tests <tt>&lt;calendar-multiget&gt;+&lt;DAV:prop&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.2.5.</td>
+<td valign="top" align="left">Query a specific <tt>href</tt> and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND</tt>/<tt>DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;calendar-data&gt;&lt;comp&gt;&lt;prop&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">3.2.6.</td>
+<td valign="top" align="left">Query multiple <tt>href</tt>s (some of which do not exist) and return <tt>VEVENT</tt> components with only <tt>DTSTART</tt>, <tt>DTEND</tt>/<tt>DURATION</tt>, <tt>SUMMARY</tt>, <tt>UID</tt>, <tt>SEQUENCE</tt>, <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXRULE</tt>, <tt>EXDATE</tt>, <tt>RECURRENCE-ID</tt>. (tests <tt>&lt;calendar-query&gt;</tt>, <tt>&lt;calendar-data&gt;&lt;comp&gt;&lt;prop&gt;</tt>)</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td colspan="2" valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">4.</td>
+<th valign="top" align="left">Event deletion</th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><td valign="top" align="center">4.1.</td>
+<td valign="top" align="left">Delete a single non-recurring meeting.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">4.2.</td>
+<td valign="top" align="left">Delete a single recurring meeting with no overridden instances.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><th valign="top" align="center">4.3.</th>
+<td valign="top" align="left">Delete a single recurring meeting with overridden instances.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">4.4.</td>
+<td valign="top" align="left">Delete a non-overridden instance of a recurring meeting.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">4.5.</td>
+<td valign="top" align="left">Delete an overridden instance of a recurring meeting.</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">5.</td>
+<th valign="top" align="left">Access Control</th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><td valign="top" align="center">5.1.</td>
+<td valign="top" align="left">View access control details on current user’s main calendar.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><th valign="top" align="center">5.2.</th>
+<td valign="top" align="left">Change access control details on current user’s main calendar to add another user with read-only access. Verify that other user can view the calendar but not change it.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">5.3.</td>
+<td valign="top" align="left">Change access control details on current user’s main calendar to add another user with read-write access. Verify that other user can view the calendar and change it. Verify that changes done by one user are seen by the other.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">5.4.</td>
+<td valign="top" align="left">Remove another user’s access to the current user’s main calendar and verify they can no longer access the calendar.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">6</td>
+<th valign="top" align="left">Calendar Management</th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><td valign="top" align="center">6.1</td>
+<td valign="top" align="left">Browse the list of calendars on the server, including the current user’s personal calendars.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">6.2</td>
+<td valign="top" align="left">Create a new calendar in the current user’s personal calendar space.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">6.3</td>
+<td valign="top" align="left">Create a regular collection in the current user’s personal calendar space.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><th valign="top" align="center">6.4</th>
+<td valign="top" align="left">Create a new calendar inside the collection created in 6.3.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">6.5</td>
+<td valign="top" align="left">Delete the calendar created in 6.2.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">6.6</td>
+<td valign="top" align="left">Delete the collection created in 6.3.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">7</td>
+<th valign="top" align="left">Free Busy Reports</th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><td valign="top" align="center">Setup</td>
+<td valign="top" align="left"><p id="_30f218c9-84b8-6406-ec2d-8f9d9911de34">Create a new calendar and populate it with the following for one week:</p>
+
+<p id="_3d75b8b4-47b6-c147-2945-b51e1a03a64e">Event on Monday, 9 am — 11 am, recurs every day for five times<br/> Event on Monday, 12 pm — 1 pm, status tentative <br/> Event on Monday, 2 pm — 3 pm, status cancelled <br/> Event on Tuesday, 11 am — 12 pm <br/> Event on Tuesday, 2 pm — 4 pm, recurs every day for four times <br/> Event on Tuesday, 3 pm — 5 pm <br/> Event on Wednesday, 11 am — 12 pm, status tentative <br/> Event on Wednesday, 3 pm — 5 pm, status tentative <br/> Event on Thursday, 11 am — 12 pm, status cancelled <br/> Event on Thursday, 3 pm — 5 pm, status cancelled</p>
+</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">7.1</td>
+<td valign="top" align="left">Run a free-busy report for the entire week.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">7.1.1</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Monday, the second is <tt>BUSY-TENTATIVE</tt>.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">7.1.2</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Tuesday.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">7.1.3</td>
+<td valign="top" align="left">Verify four <tt>FREEBUSY</tt> periods for Wednesday, second and fourth are <tt>BUSY-TENTATIVE</tt> and one hour long.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">7.1.4</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Thursday.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">7.1.5</td>
+<td valign="top" align="left"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">F</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center"/><td valign="top" align="left"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center"/><td valign="top" align="left"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center"/><td valign="top" align="left"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">7.1.5</td>
+<td valign="top" align="left">Verify two <tt>FREEBUSY</tt> periods for Friday.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+</tr><tr><td valign="top" align="center">8</td>
+<th valign="top" align="left">Scheduling</th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><td valign="top" align="center">Setup</td>
+<td valign="top" align="left">Three user accounts user1 (role Organizer), user2 (role Attendee), user3 (role Attendee) provisioned with suitable principal properties for calendar home, inbox, outbox and user addresses.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">8.1</td>
+<td valign="top" align="left">Organizer (user1) sends non-recurring message invite for Monday at 9am (1 hour) to each attendee. Verify that each attendee Inbox receives a copy of the invite.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">8.2</td>
+<td valign="top" align="left">Attendee (user2) accepts invite and sends back reply. Verify that reply is placed in Organizer Inbox.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">8.3</td>
+<td valign="top" align="left">Organizer (user1) updates invite with user2 accept state and resends invite. Verify that each attendee Inbox receives a copy of the new invite.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">8.4</td>
+<td valign="top" align="left">Attendee (user3) accepts updated invite and sends back reply. Verify that reply is placed in Organizer Inbox.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">8.5</td>
+<td valign="top" align="left">Organizer (user1) updates invite with user3 accept state and resends invite. Verify that each attendee Inbox receives a copy of the new invite.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="center">8.6</td>
+<td valign="top" align="left">Organizer (user1) cancels the invite. Verify that each attendee Inbox receives the cancellation.</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">P</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center">N</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">N</td>
+<td valign="top" align="center"/></tr></tbody>
+<dl id="_f006f731-8948-07d5-3803-14b1580ce346" key="true"><dt>A, B, C</dt>
+<dd><p id="_ddd1cc8c-5c92-5a68-33bf-55e0f5a2f7ce">Client implementations</p>
+</dd>
+<dt>P</dt>
+<dd><p id="_6348a9ce-72b3-241a-4c64-470509bd8443">Pass</p>
+</dd>
+<dt>F</dt>
+<dd><p id="_21d29e28-bf61-9ac2-6f1d-ca4979a61c72">Fail</p>
+</dd>
+<dt>N</dt>
+<dd><p id="_437aebc4-2fb4-3703-2c07-fe9409c70b8c">Not supported</p>
+</dd>
+</dl></table>
+
+
+</annex>
+</csd-standard>

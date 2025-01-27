@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Report on Roundtable XXIX, February 5-7, 2014</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1401:2014</docidentifier><docnumber>1401</docnumber><date type="published"><on>2014-02-26</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2014-02-26</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2014</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_05279a05-0a0b-6451-fbd4-fbd6ac0103f2" obligation="normative">
+<p id="_5ec0293a-3e54-b21d-4834-71c6677c8e06">© 2014 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0be727b6-af0b-9548-ec2c-96a90b3f413e" obligation="informative">
+<title>Foreword</title>
+<p id="_cdda8810-82e1-305b-a4eb-fecc8c09f7a6">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p>
+
+<p id="_b8d9b47b-6302-f557-b19f-87855d968ca2">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p>
+
+<p id="_d0e5a3e7-41d0-b48a-a21b-bcbd7640dac1">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p>
+
+<p id="_afd1b5cc-362a-e195-08ed-9588406087b6">In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p>
+
+<p id="_96af4db7-dcda-a6c4-93d5-4846c418988b">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p>
+
+<p id="_bcd9ce8a-4659-fa9d-3cbc-f45081112f9c">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+
+<p id="_9f169ca9-8a30-1999-3e18-48082391b613">This document was prepared by Technical Committee <em>CALCONNECT</em>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_77b53ec3-ed91-dbe8-5dd0-5e54a35f7a77">Roundtable XXIX took place on February 5-7, 2014, hosted by Mozilla in San Francisco, California. The Roundtable was attended by 31 people from 20 members and one first-time nonmember observer. The CalConnect Interoperability Test Event was held immediately prior to the Roundtable on February 3-5, and had 21 participants onsite from 11 members, plus two members testing remotely. In total, 36 people attended some portion of the week, including two from Hong Kong, one each from the Czech Republic, England, France, India, New Zealand and Switzerland, and the remainder from North America.</p>
+
+<p id="_9a719566-17cd-36f6-484a-066048482b27">The Roundtable consisted primarily of technical committee sessions, workshops and BOFs. In addition new member presentations were offered during the Opening Session, as was a special session dedicated to reviewing the ongoing work on restructuring the Steering Committee. The sessions were as usual organized sequentially without competing parallel sessions, as is our standard practice, to allow all attendees who wished to be involved in the discussions of each Technical Committee the opportunity to do so. The Roundtable finished with the CalConnect Plenary Session on Friday afternoon.</p>
+</introduction></preface><sections>
+
+<clause id="_special_events" obligation="normative">
+<title>Special Events</title>
+<p id="_9a61bd4b-63b2-0284-812d-e149a43714b0">A BOF on CardDAV Sharing led to the formation of a new Provisional Committee (formerly Ad Hoc) on Contacts Sharing to report out at CalConnect XXX in May.</p>
+
+<p id="_861c1902-ec7a-7207-af3d-8352c31a3226">A BOF on the iSchedule Domain Identifier led to agreement on a way forward with this contentions issue which will be integrated into the work of TC ISCHEDULE.</p>
+</clause>
+
+<clause id="_documents_since_last_roundtable" obligation="normative">
+<title>Documents since Last Roundtable</title>
+<p id="_ffabef1c-fc91-83ba-0b72-9d0de82182de">Much of the work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself.</p>
+
+<clause id="_published_documents" obligation="normative">
+<title>Published Documents</title>
+<ul id="_fa8f80a7-d60b-b915-d55b-c1bcbe6fe4a9"><li><p id="_50b6ebf5-6576-4aa1-ebd9-a1a2e5a41bd9">Calendaring Service Architecture</p>
+</li>
+<li><p id="_f4211e96-401c-3eb9-57a2-a1d7c81db099">Task Architecture V0.4</p>
+</li>
+<li><p id="_aa762b9b-585b-ef94-c267-786786cec8c6">Report on Roundtable XXIX</p>
+</li>
+<li><p id="_0ac33017-26e1-693a-acdb-128ecbcf31df">Report on Interoperability Test Event XXIX</p>
+</li>
+<li><p id="_218b24c6-03a4-f018-9d90-9d86189cb3cf">7 Things You Should Know About Digital Travel Itineraries</p>
+</li>
+<li><p id="_bde52edb-1116-baab-abab-3951f266cf00">7 Things You Should Know About Tasks</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_updated_internet_drafts_and_published_rfcs" obligation="normative">
+<title>Updated internet drafts and published RFCs</title>
+<ul id="_16bacc94-e128-04f8-5159-5865a017d601"><li><p id="_48e2a10b-3dbf-e94c-159a-27c143ac10f3"><link target="https://tools.ietf.org/html/rfc7095">jCard: The JSON Format for vCard</link> (RFC 7095)</p>
+</li>
+<li><p id="_ac36406c-40bc-e20f-9955-fce132eed0ff"><link target="https://tools.ietf.org/html/draft-daboo-icalendar-rscale-02">Non-Gregorian Recurrence Rules in iCalendar</link></p>
+</li>
+<li><p id="_ea19e19e-9afe-ba90-adb0-65da4cc101b0"><link target="https://tools.ietf.org/html/draft-douglass-ical-relations/">Support for iCalendar Relationships</link></p>
+</li>
+<li><p id="_fd393c2f-4941-22ab-fe08-10147647acb1"><link target="https://tools.ietf.org/html/draft-kewisch-et-al-icalendar-in-json/">jCal: The JSON format for iCalendar</link></p>
+</li>
+<li><p id="_072d6785-d973-cf8f-4d2b-6f29e941c01d"><link target="https://datatracker.ietf.org/doc/rfc8144/">Use of the Prefer Header Field in Web Distributed Authoring and Versioning (WebDAV)</link></p>
+</li>
+<li><p id="_fc36b0b1-ccef-84fe-6d0a-fdff7bc5a94c"><link target="https://tools.ietf.org/html/draft-daboo-caldav-attachments/">CalDAV Managed Attachments</link></p>
+</li>
+<li><p id="_99b52d1e-c520-d974-3b36-3cbcff185151"><link target="https://datatracker.ietf.org/doc/draft-daboo-icalendar-extensions/">New Properties for iCalendar</link></p>
+</li>
+<li><p id="_1f1c9df1-1bf5-0bbb-b09d-1458774cc992"><link target="https://tools.ietf.org/html/draft-douglass-timezone-service-10">Timezone Service Protocol</link></p>
+</li>
+<li><p id="_785b79d6-f665-2b70-d29f-97d8047a9aec"><link target="https://www.ietf.org/internet-drafts/draft-daboo-calendar-%20availability-04.txt">Calendar Availability</link>(VAVAILABILITY)</p>
+</li>
+<li><p id="_bad8f581-14a1-faa9-ef49-86b6fe52744d"><link target="https://www.ietf.org/internet-drafts/draft-douglass-calendar-%20extension-04.txt">Event Publishing Extensions to iCalendar</link></p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_update_on_technical_committee_work_and_initiatives_including_bofs_and_workshops" obligation="normative">
+<title>Update on Technical Committee Work and Initiatives Including BOFs and Workshops</title>
+<clause id="_api_ad_hoc" obligation="normative">
+<title>API Ad Hoc</title>
+<p id="_6deb3d1c-5a4d-2728-75e6-0f04eed9fcdc">The API Ad Hoc Committee was formed at CalConnect XXVIII to evaluate a work area for CalConnect on an Abstract API for Calendaring and Scheduling. The Ad Hoc recommended forming a Technical Committee and had produced a draft charter, an outline of an abstract API and some milestones, in addition to a draft Architecture for Calendaring and Scheduling. Deliverables are expected to be a well specified abstract API and a simple instantiation of that API — probably some sort of RESTful web api. Instantiation of the follow-on TC will occur shortly after the conference.</p>
+</clause>
+
+<clause id="_calscale_ad_hoc" obligation="normative">
+<title>CALSCALE Ad Hoc</title>
+<p id="_7083091d-2810-5638-1652-c7aaaaf9035b">The draft was updated following CalConnect XXVIII: <link target="https://tools.ietf.org/html/draft-daboo-icalendar-rscale-02">Non-Gregorian Recurrence Rules in iCalendar</link>. The Ad Hoc presented a short presentation was done of the RSCALE proposal and draft to do recurrences in different calendar scales and to do arithmetic in these scales. The primary requirement is to support non-Gregorian calendars while maintaining compatibility by using Gregorian dates in the actual calendar entries. There are still some compatibility issues, however one implementation has been done. The draft is moving forward at the IETF.</p>
+</clause>
+
+<clause id="_fsc_federated_shared_calendars_ad_hoc" obligation="normative">
+<title>FSC (Federated Shared Calendars) Ad Hoc</title>
+<p id="_13218304-5297-19b1-d29f-85e25628808c">The Ad Hoc continued the discussion of sharing and federated calendar sharing and alternative models, and agreed to continue to move forward as an Ad Hoc pending identification of an agreed common way forward.</p>
+</clause>
+
+<clause id="_itinerary_ad_hoc" obligation="normative">
+<title>Itinerary Ad Hoc</title>
+<p id="_745eae27-0a49-68d1-cc00-6582795d794f">No session was held at the conference. The goal is to improve the user experience with itinerary info from travel sites by extending iCalendar to incorporated needed information; however, we need input from travel industry experts on what is needed. The Ad Hoc continues to look for experts to inform the work.</p>
+</clause>
+
+<clause id="_tc_autodiscovery" obligation="normative">
+<title>TC AUTODISCOVERY</title>
+<p id="_a93de9d4-2d6f-f2b2-0fd8-b866b3897676">No TC session was held at this conference. The TC has produced an initial draft of a mechanism for multiple service discovery via a single protocol for client setup and submitted to the IETF: <link target="https://datatracker.ietf.org/doc/draft-daboo-aggregated-service-discovery/">Aggregated Service Discovery</link>. We are waiting for an opportunity to move this forward at the IETF.</p>
+</clause>
+
+<clause id="_tc_caldav" obligation="normative">
+<title>TC CALDAV</title>
+<p id="_b62a0891-448c-1514-9b99-4d658e713a97">The TC described the latest changes in the <tt>VALARM</tt> Extensions draft and introduced a new recurrence splitting topic which led to discussion on support for  <tt>RANGE</tt> and on invitations growing to unreasonable size. Additionally the latest changes to the managed attachments specification were reviewed, and a discussion initiated on rich capabilities: there seems to be enough interest to move forward with a spec.</p>
+</clause>
+
+<clause id="_tc_eventpub" obligation="normative">
+<title>TC EVENTPUB</title>
+<p id="_02409cdc-7d18-f866-86d1-702526b2c514">Summarized the state of the 2 drafts that have been worked on with this TC, <link target="https://tools.ietf.org/html/draft-douglass-calendar-extension/">Event Publication Extensions to iCalendar</link> and <link target="https://tools.ietf.org/html/draft-daboo-icalendar-extensions">New Properties for iCalendar</link>. Apart from a couple of changes both are essentially ready to move forward to Last Call, and we will be able to demonstrate the use of the new properties at the next interoperability test event.</p>
+</clause>
+
+<clause id="_tc_freebusy" obligation="normative">
+<title>TC FREEBUSY</title>
+<p id="_7474841d-8b0c-16e4-c4b5-976270f6e2e8">The TC reviewed <link target="https://tools.ietf.org/html/draft-york-vpoll-00">VPOLL: Consensus Scheduling Component for iCalendar</link> and had a demo of a prototype web client supporting  <tt>VPOLL</tt>.</p>
+</clause>
+
+<clause id="_tc_ioptest" obligation="normative">
+<title>TC IOPTEST</title>
+<p id="_76c90902-310a-e9ec-0f32-c947c42dc86c">Had a successful and well attended Interoperability Test Event featuring 13 organizations and 23 participants (2 remote). The test event will be reported on separately at <link target="http://www.calconnect.org/eventreports.shtml#ioptestevents">CalConnect Interoperability Test Event Reports</link>.</p>
+</clause>
+
+<clause id="_tc_ischedule" obligation="normative">
+<title>TC ISCHEDULE</title>
+<p id="_22b710ed-7577-ded9-d999-8625364d6895">TC ISCHEDULE offered a brief introduction to iSchedule and discussed the “identity crisis” (domain identifier) BOF and the results, followed by a discussion on Webfinger. Also discussed how to develop understanding of and interest in deploying iSchedule. The TC will begin work on a “7 things” document for iSchedule.</p>
+</clause>
+
+<clause id="_tc_push" obligation="normative">
+<title>TC PUSH</title>
+<p id="_f7eddbbd-f5cc-b6bc-4f02-608254e98101">CalConnect XXIX was the first conference since TC PUSH was established. The TC presented its charter and the initial work on requirements and a 7 Things document. Some Push basics and optimizations were discussed, as was HTTP long poll as a simple push protocol that serves as a specific example for the framework.</p>
+</clause>
+
+<clause id="_tc_resource" obligation="normative">
+<title>TC RESOURCE</title>
+<p id="_a939f804-5e48-e979-1162-835bbec47e49">The TC session focused on how to find the additional information required by attendees and organizers on locations and resources in calendar data and concluded that using the new structured properties that allow inclusion of a link to more information is the way to go. The use of information via vCards was preferred and clients will need to be able to parse vCard data and possibly cache it. Also identified a need for an extension of CalDAV to include a principal property pointing to related CardDAV.</p>
+</clause>
+
+<clause id="_tc_tasks" obligation="normative">
+<title>TC TASKS</title>
+<p id="_ff025460-a78d-947a-7056-4126220205cf">TC TASKS reviewed the work since CalConnect XXVII on relationships and the relationships draft, extensions related to  <tt>RELTYPE</tt> and defined formal versions to be registered, abd ab the ad hoc approach for namespace tokens for specific applications. Also looked at the Task Architecture V0.4 diagram worked on since the last conference</p>
+</clause>
+
+<clause id="_tc_timezone" obligation="normative">
+<title>TC TIMEZONE</title>
+<p id="_30ff27ef-68de-4655-df16-5cd7fae00f47">The TC reviewed the current state of the <link target="https://tools.ietf.org/html/draft-douglass-timezone-service-10">Timezone Service Protocol</link> draft, which has had moderate changes since the last meeting, and reported on the interoperability testing results. The service protocol draft is ready to move forward to informal last call in the IETF.</p>
+</clause>
+</clause>
+
+<clause id="_plenary_decisions" obligation="normative">
+<title>Plenary Decisions</title>
+<p id="_a26c507a-19bf-3cf9-4e79-3f752ed80dbb">The Contacts Sharing Provisional Committee was established. The API, FSC, and Itinerary Ad Hocs continue to explore these areas of work.</p>
+
+<p id="_b5e27f9b-6448-fd64-d379-a58dd5f2cac2">The Plenary decided to change the term “Roundtable”, used from CalConnect’s inception for its conference, to “CalConnect Conference” or “Conference”. The term Ad Hoc (Committee) was also changed to Provisional Committee. Going forward these terms will be used, although historical documents and pages will not be changed.</p>
+
+<p id="_2b02bb3a-7969-ff9a-521a-10aaf79de96d">The offer from Kerio to host the Winter, 2015 meeting in San Jose was accepted.</p>
+</clause>
+
+<clause id="_future_events" obligation="normative">
+<title>Future Events</title>
+<ul id="_2faf4c62-bd58-4f2e-d024-c5eacd2cda2a"><li><p id="_c9d67b49-9e71-3e48-e6df-41e6f49fea51">CalConnect XXX: May 19-23, 2014, AOL, Dulles, Virginia</p>
+</li>
+<li><p id="_8397e758-fffc-340a-3c6d-171638e7ae57">CalConnect XXXI: Autumn, 2014, Europe (host, location, exact dates TBD)</p>
+</li>
+<li><p id="_f58660e3-f6b5-4fc7-67c5-51a4b5e8a125">CalConnect XXXII: January 26-30, 2015, Kerio Technologies, San Jose, California</p>
+</li>
+</ul>
+
+<p id="_19f7cf31-c6fe-4ec4-a2c4-a164654e33f3">The general format of the CalConnect week is:</p>
+
+<ul id="_fbd95933-d25f-36a6-c0d2-3768a3c45939"><li><p id="_5f51df24-de04-3426-4cb1-1f8cdd1e22dc">Monday morning through Wednesday noon, CalConnect Interoperability Test Event</p>
+</li>
+<li><p id="_88f84b01-ef3a-8068-a280-fd79fb25dffa">Wednesday noon through Friday afternoon, CalConnect Roundtable (presentations, TC sessions, BOFs, networking, Plenary)</p>
+</li>
+</ul>
+
+<p id="_debe4eee-5ef1-1e8f-a67c-5ce7313b553c">The format for European events is to move TC sessions to the afternoon and offer symposia and BOFs during Thursday and Friday mornings.</p>
+</clause>
+</sections>
+</csd-standard>

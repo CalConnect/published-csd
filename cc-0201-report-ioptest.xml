@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">CalConnect III — Virtual interop, September, 2002</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0201:2002</docidentifier><docnumber>0201</docnumber><date type="published"><on>2002-09-01</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2002-09-01</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2002</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_af38718b-2005-b934-a8e7-d435d962ab1a" obligation="normative">
+<p id="_99ec87f3-423c-fdbf-6db3-2fab1b1b862c">© 2002 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><sections><clause id="_vendors_and_products" obligation="normative">
+<title>Vendors and Products</title>
+<ul id="_7705c333-ae92-1330-ee97-0dc21c636dcc"><li><p id="_5dae2a77-e7e9-e6a3-72ae-983d69ad7779">Oracle Collaboration Suite — Calendar Server 9.0.4 Alpha</p>
+</li>
+<li><p id="_06d1d650-8f56-d4dd-4d50-0578731334a7">Oracle Outlook Connector 3.3</p>
+</li>
+<li><p id="_bb91b5e8-c898-eb60-c195-7f91c79addb5">Oracle CorporateTime Native Client 6.1 Alpha</p>
+</li>
+<li><p id="_82490a47-bc58-9b5e-142c-1bc60597b349">Oracle CorporateTime iMIP/iTIP Helper Application</p>
+</li>
+<li><p id="_25977666-4318-39d7-dfa8-43b1dc6f6f3d">KOrganizer — CVS for 3.1</p>
+</li>
+<li><p id="_f8556417-aa68-f6fa-d09f-c2c705e60d6f">Lotus Notes/Domino — Ver 6.0</p>
+</li>
+<li><p id="_5b8cf8b1-66a3-e4f8-3865-68e0bf71001e">Novell NIMS</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_vendor1_notes" obligation="normative">
+<title>Vendor1 Notes</title>
+<ul id="_b3f282c2-027d-3d78-1f6a-c1b8782dc4ae"><li><p id="_71dbc88b-0fef-31e0-f178-78ab4cfeca1e">If the iCal-attachment is send MIME-encoded, in a form that affects it’s plain-text appearance (in the mail), Vendor1 can’t read it properly/at all. This occurred only with Vendor4-products.</p>
+</li>
+<li><p id="_5ca26955-e5ee-7f12-6706-49cc59befdbb">Vendor1 doesn’t send timezone information when dealing with recurring events.</p>
+</li>
+<li><p id="_db5d33a9-cbea-b63d-8208-21efdee3f7a0">“UNTIL” in <tt>RRULE</tt> isn’t set as correct UTC-value</p>
+</li>
+<li><p id="_c27426b9-a699-302e-1831-90b1fb35c531">Vendor1 can’t deal with ical-attachments</p>
+</li>
+<li><p id="_34898e8b-670c-566e-53d4-62f9eb9e3517">Almost all other bugs that occurred are fixed already</p>
+</li>
+</ul>
+
+<clause id="_other_problems" obligation="normative">
+<title>Other Problems</title>
+<ul id="_278fc95c-379b-4958-8980-866668f853be"><li><p id="_b4c2a9ba-2548-90ac-fefb-2c0cf10cb9d4">Vendor2’s Client didn’t send “Organizer”-information in their <tt>REPLY</tt>-messages as requested in RFC 2445 3.2.3 some more I can’t remember, and which may be fixed already</p>
+</li>
+<li><p id="_8803ddec-a349-bd11-d84c-f83c9fa810e4">Communication with Vendor3 had no problems.</p>
+</li>
+<li><p id="_3069ce98-00e4-fb3e-a1f7-ab9f4626efda">Communication with Vendor2 had only the one above mentioned <tt>REPLY</tt>-problem.</p>
+</li>
+<li><p id="_5ed2e9f3-622f-59ed-7af3-dfd825196ccc">Communication with Vendor4 is very limited (see MIME-problem).</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_personal_note" obligation="normative">
+<title>Personal note</title>
+<p id="_d9dd96e3-5e08-1a55-e398-35e8fd29ddba">It’s unlucky, that we had some technical problems, that handicapped communication,and stole a lot of time. So testing was limited to some basics of</p>
+</clause>
+
+<clause id="_results" obligation="normative">
+<title>Results</title>
+<p id="_23f65d9a-0343-6358-1ccb-a5ef5ff071cc">We were not able to test as much as in the previous CalConnect, which was more productive. We mostly tried creating and replying to events, thus the methods that were tested were  <tt>REQUEST</tt> and <tt>REPLY</tt>.</p>
+
+<table id="_1f7148c2-7bf7-ae60-80e6-df5b8ee88f2b">
+<name>Event With One Occurrence Created By Vendor4</name>
+<thead><tr><th valign="top" align="left"/><th valign="top" align="left">Vendor4</th>
+<th valign="top" align="left">Vendor2</th>
+<th valign="top" align="left">Vendor1</th>
+<th valign="top" align="left">Vendor3</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Able To Process <tt>REQUEST</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Able To Send <tt>REPLY</tt> to <tt>REQUEST</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Able To Process <tt>REPLY</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+</tr></tbody>
+</table>
+
+<table id="_8ccd0596-aa38-cc2c-1a24-34375bc224c3">
+<name>Event With One Occurrence Created By Other Vendor</name>
+<thead><tr><th valign="top" align="left"/><th valign="top" align="left">Vendor4</th>
+<th valign="top" align="left">Vendor2</th>
+<th valign="top" align="left">Vendor1</th>
+<th valign="top" align="left">Vendor3</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Vendor4 Able To Process <tt>REQUEST</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Vendor4 Able To Send <tt>REPLY</tt> to <tt>REQUEST</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Vendor Able To Process <tt>REPLY</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+</tr></tbody>
+</table>
+
+<table id="_5b22cd9f-94df-d6c7-b5b7-4ca2022fc16e">
+<name>Event With an <tt>RRULE</tt> Created By Vendor4</name>
+<thead><tr><th valign="top" align="left"/><th valign="top" align="left">Vendor4</th>
+<th valign="top" align="left">Vendor2</th>
+<th valign="top" align="left">Vendor1</th>
+<th valign="top" align="left">Vendor3</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Able To Process <tt>REQUEST</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">No</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Able To Send <tt>REPLY</tt> to <tt>REQUEST</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">No</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Able To Process <tt>REPLY</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">No</td>
+<td valign="top" align="left">Yes</td>
+</tr></tbody>
+</table>
+
+<table id="_a83df7e9-43f9-af17-306a-0953e8f1b91a">
+<name>Event With an <tt>RRULE</tt> Created By Other Vendor</name>
+<thead><tr><th valign="top" align="left"/><th valign="top" align="left">Vendor4</th>
+<th valign="top" align="left">Vendor2</th>
+<th valign="top" align="left">Vendor1</th>
+<th valign="top" align="left">Vendor3</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Vendor4 Able To Process <tt>REQUEST</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">No</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Vendor4 Able To Send <tt>REPLY</tt> to <tt>REQUEST</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">No</td>
+<td valign="top" align="left">Yes</td>
+</tr><tr><td valign="top" align="left">Vendor Able To Process <tt>REPLY</tt></td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">Yes</td>
+<td valign="top" align="left">No</td>
+<td valign="top" align="left">Yes</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_miscellaneous" obligation="normative">
+<title>Miscellaneous</title>
+<ul id="_a2307364-c437-789b-40cf-5bac5be63c48"><li><p id="_a0e8dac6-7d7c-ce30-109a-b90550fc13d4">We had some success with <tt>CANCEL</tt> and updates (<tt>REQUEST</tt>). However, we do not remember with which vendors. Vendor3 had success processing a  <tt>VEVENT</tt> that we sent to it that had different character set in it. Some vendors were also able to process a  <tt>REQUEST</tt> we sent that had multiple  <tt>RDATE</tt>s.</p>
+</li>
+<li><p id="_e825ce54-1089-97eb-41c8-15c855858598">Vendor2 had trouble with line folding, multipart/mixed, and they required that attendees have a common name (“CN”).</p>
+</li>
+<li><p id="_7961092a-fc26-a6f2-0563-b01f896520a5">Vendor1 had trouble with quoted-printable, and had a <tt>DTSTART</tt> in UTC for events with <tt>RRULE</tt>s. According to iCalendar, when a <tt>DTSTART</tt> is used with a recurrence rule, it must be specified local time.</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_vendor_3_notes" obligation="normative">
+<title>Vendor 3 Notes</title>
+<p id="_52beb006-de51-e682-d094-d470a6c0dcdb">Microsoft and 2 others were scheduled to participate but did not show up. Unfortunately we had some technical issues testing w/Vendor4 folks and there were some server uptime issues inhouse that increased the testing lag on our end.</p>
+
+<clause id="_the_good_news" obligation="normative">
+<title>The Good News</title>
+<p id="_d43dd5f8-825c-62b6-8bc7-b8de8d20574a">We were successfully able to do non-repeating and repeating meeting testing with all implementations. We were able to both send and receive invitations to single instance and repeating meetings just fine. We were also able to send attachments along with each type of invitation and they were at least received correctly by the other testers (although some did not know how to deal with multipart MIME data yet for assorted reasons).</p>
+</clause>
+
+<clause id="_particular_notes_relating_to_specific_implementations" obligation="normative">
+<title>Particular notes relating to specific implementations</title>
+<clause id="_vendor4" obligation="normative">
+<title>Vendor4</title>
+<p id="_e37865df-6534-bf27-0a88-88cd55876d03">Vendor4 did not send us any tests with attachments so we were not able to fully test that feature inbound to Notes.</p>
+</clause>
+
+<clause id="_vendor_1" obligation="normative">
+<title>Vendor 1</title>
+<p id="_000f7ebd-7c6f-d0d7-69ef-e5dfba9f2844">Vendor 1 is not multipart MIME savy given how it is wired into the mail client (via scripting). As such it has limitations on it that prevented it from dealing with any attachments we sent. This is not a failure of the test but a restriction of the receiving client.</p>
+</clause>
+
+<clause id="_vendor2" obligation="normative">
+<title>Vendor2</title>
+<p id="_ae011c59-c23b-7e7f-faf5-9f66b9bcf68e">Vendor2 was able to send back multiple responses to both the single and repeating instances; to Accept, Decline and Tentatively Accept. We were able to properly detect this status change and render it on our end.</p>
+</clause>
+</clause>
+
+<clause id="_the_not_so_good_news" obligation="normative">
+<title>The Not-so-good News</title>
+<p id="_be755b78-771d-a008-1a81-9a3398100ed6">The testing done was more at an vendor to vendor level than a pure IETF “RFC Conformance” test (where we test the explicit  <tt>MUST</tt>/<tt>SHOULD</tt>/<tt>MAY</tt>/etc. requirements). We need to find a way to identify all of the IETF requirements and map them to vendor to vendor tests that we generally do (or provide some matrix of what we must test to satisfy the IETF requirements for an interop event).</p>
+
+<p id="_eef59066-d6d7-fa59-8507-820589b1b3a3">We did not attempt any <tt>VTODO</tt> (aka Tasks) or <tt>VJOURNAL</tt> interop testing. Per IETF rules, if we do not get any implementations that support them then we must remove them from the standard in the future (but no timeframe for this removal is clear).</p>
+</clause>
+
+<clause id="_particular_notes_relating_to_specific_implementations_2" obligation="normative">
+<title>Particular notes relating to specific implementations</title>
+<clause id="_vendor4_2" obligation="normative">
+<title>Vendor4</title>
+<p id="_92c49dfd-92c9-30a9-d1fe-abd642dab70d">Vendor4 attempted to invite a Vendor3 user to a single instance of a repeating set by sending the correct iCalendar message that uniquely identified the single instance. We misconverted it to be a single instance meeting that repeated at the original date/time (which was before the actual instance date/time so that’s not so good).</p>
+</clause>
+
+<clause id="_vendor1" obligation="normative">
+<title>Vendor1</title>
+<p id="_cf208241-9cff-c19c-c867-923ebf1052d2">Vendor1 had some small issues with adhering to the RFCs. Guenter was very active in either fixing or explaining them. For example, Vendor1 sends back ALL invitees on a  <tt>REFRESH</tt> request but RFC 2446 expressly states that only the requestors  <tt>ATTENDEE</tt> info is allowed. As a result, we incorrectly identify the “Request for Update” as being from the 1st listed <tt>ATTENDEE</tt> rather than from the actual requestor.</p>
+</clause>
+
+<clause id="_vendor2_2" obligation="normative">
+<title>Vendor2</title>
+<p id="_fd1d9f39-56fb-1774-4718-1752397f5c44">Vendor2 does not have full featured workflow support in yet. They do not support delegation, counter proposals or anything associated with them. While they do support the basic accept, decline and tentative acceptances, the other iTIP messages are ignored or not supported so trying them against an invitation from VENDOR2 results in an undetermined state or loss of workflow (at least from the non-VENDOR2 POV). We did not receive any Vendor2 originating workflow, they simply responded to the ones we sent out. As such, we do not know how well we interoperate with them when they are the Organizer of an event or repeating event. I was not able to find out if this was because we did not have enough testing time or if they are unable to originate iCalendar workflow just yet</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_chair_summary" obligation="normative">
+<title>Chair Summary</title>
+<p id="_697a3fab-a871-10c7-1430-ad0582909ea1">Multipart support/formatting seems to be a source of confusion still given the discussions held during the interop and on the chats. This should  <tt>NOT</tt> be a repeat issue but since its come up again we need to draft some guidelines for the ‘proper’ multipart bundling of iCalendar above and beyond the flat ASCII messages.</p>
+
+<p id="_8ee8bdd8-af19-7569-ad4b-f474d9bcd5ce">By the next event we plan to have a formalized testing matrix and plan that we can all use to do interop testing. There needs to be some kind of mapping between what the IETF is looking for relating to standards acceptance and what we implementors are looking for such as feature C workflow level interop.</p>
+
+<p id="_47b7ff8b-3600-8b33-e902-6efae41955cb">I’m working on making an understandable matrix of the <tt>MUST</tt>/<tt>SHOULD</tt>/<tt>MAY</tt>/etc. clauses in the RFCs and what they mean for testing. Given our pending release schedules I did not have time to complete this lately. Hopefully I can get it done after some hard earned time off and before we spin up again.</p>
+
+<p id="_a4cd8866-df8e-d346-2105-44c2f3ae93ea">Submitted by Pat Egen</p>
+</clause>
+</sections>
+</csd-standard>

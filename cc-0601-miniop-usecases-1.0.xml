@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Min-IOP (Minimum Interoperable Subset) Use Cases</title>
+<docidentifier primary="true" type="CalConnect">CC/S 0601:2005</docidentifier><docnumber>0601</docnumber><date type="published"><on>2005-11-30</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Jeff McCullouch</completename></name>
+<affiliation><organization>
+<name>UC Berkeley</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2005-11-30</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2005</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="S">specification</doctype><flavor>cc</flavor><editorialgroup><committee>USECASE</committee></editorialgroup></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit id="U_NISTu149">
+        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitName lang="en">degree (degree of arc)</UnitName>
+        <UnitSymbol type="HTML">°</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">°</mi>
+          </math>
+        </UnitSymbol>
+      </Unit></UnitSet><QuantitySet><Quantity id="NISTq9" dimensionURL="#NISTd9" quantityType="base">
+        <QuantityName lang="en-US">plane angle</QuantityName>
+        <QuantityName lang="en-US">angle</QuantityName>
+      </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd9">
+        <PlaneAngle symbol="phi" powerNumerator="1"/>
+      </Dimension></DimensionSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7fbaec4b-0250-84e7-0e43-81775debe8a4" obligation="normative">
+<p id="_cdc4fc6d-0ab8-7040-218a-aee9d6fd453d">© 2005 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_eb6d9a0c-d005-620d-4b47-867d127bed41" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<p id="_23522949-3792-3ee0-1d49-5e88cb81bc2f">This document was created by the Use Case Technical Committee of the Calendaring and Scheduling Consortium. The document defines the use cases for minimum interoperability of calendaring and scheduling. Minimum interoperability is the basic level of functionality our collective experience tells us is necessary to have a useful system. We realize that in some cases it may be more than is currently offered by “basic” calendaring and scheduling applications.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_c9038ec0-9572-93b2-c0ca-3c437c95e2f9">This document was created by the Use Case Technical Committee of the Calendaring and Scheduling Consortium. The document defines the use cases for minimum interoperability of calendaring and scheduling. Minimum interoperability is the basic level of functionality our collective experience tells us is necessary to have a useful system. We realize that in some cases it may be more than is currently offered by “basic” calendaring and scheduling applications.</p>
+
+<p id="_cde90799-5f4f-c3c6-a10d-cae7e98a9718">Areas covered are:</p>
+
+<ol id="_ca5bb83d-8995-c7af-be5b-ccc021ecdef4" type="arabic"><li><p id="_2411f5ad-11f5-a54d-6c8d-199615c7e603">Setting up regularly scheduled events</p>
+</li>
+<li><p id="_316e29dd-64e5-9fe8-f029-2a738750590f">Scheduling with people in other timezones.</p>
+</li>
+<li><p id="_f251252c-a216-6dc4-0c5d-ef58700ebdaf">Scheduling while traveling to other timezones.</p>
+</li>
+<li><p id="_6198b1d2-2a07-12f9-93d8-2b0ebe2aae13">Scheduling and Negotiating meetings with others</p>
+</li>
+<li><p id="_727a8a4d-4641-365c-783d-90f1c78bf365">Announcing events</p>
+</li>
+</ol>
+
+<p id="_769a7a4b-e13b-f612-b405-304c04a66db0">Please send any changes or corrections to the document editor.</p>
+</introduction></preface><sections>
+
+<terms id="_definitions" obligation="normative">
+<title>Terms and definitions</title><p id="_22bbd802-ea18-b8b3-b961-888167aff3d7">For the purposes of this document, the following terms and definitions apply.</p>
+
+<p id="_e9510bc7-3bd2-3cf9-c766-d5f61beb43ca">The definitions below are taken from the “Calendaring and Scheduling Glossary of Terms” from CalConnect.</p>
+
+<term id="term-Alarm"><preferred><expression>
+<name>Alarm</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_4f544da4-8470-e68c-9f0b-25bacb497af0">A reminder for an event or a to-do. Alarms may be used to define a reminder for a pending event or an overdue to-do.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar"><preferred><expression>
+<name>Calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_2a4ba0ce-3683-5ea2-780e-994a21f81a54">A collection of events, to-dos, journal entries, etc. A calendar could be the content of a person or resource’s agenda; it could also be a collection of data serving a more specialized need. Calendars are the basic storage containers for calendaring information.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Calendar-User-_CU_"><preferred><expression>
+<name>Calendar User (CU)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a86b545c-3322-6fc2-f01f-a0d624f69a46">An entity (often a human) that accesses calendar information.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Calendaring"><preferred><expression>
+<name>Calendaring</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a5f5497e-9ded-d165-855b-bf24f65b06c2">An application domain that covers systems that allow the interchange, access and management of calendar data.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-CalConnect"><preferred><expression>
+<name>CalConnect</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_7d106c12-6745-920c-3f5e-cb6d4d418574">The Calendaring and Scheduling Consortium consisting of vendors and user groups interested in promoting and improving calendaring and scheduling standards and interoperability.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Coordinated-Universal-Time-_UTC_"><preferred><expression>
+<name>Coordinated Universal Time (UTC)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_f71cc8b2-315b-01c1-bc09-995575f50104">An atomic realization of Universal Time (UT) or Greenwich Mean Time, the astronomical basis for civil time. Time zones around the world are expressed as positive and negative offsets from UT. UTC differs by an integral number of seconds from International Atomic Time (TAI), as measured by atomic clocks and a fractional number of seconds from UT.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="wiki" type="inline" citeas="Wikipedia"/></termsource></term>
+
+<term id="term-Counter"><preferred><expression>
+<name>Counter</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_091afa24-0146-6d42-f704-e8a3c5ba551c">A counter-proposal request a participant may send to an event or task organizer to suggest a change to the event or task such as the scheduled date/time, list of participants, etc.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Daylight-Savings-Time-_DST_"><preferred><expression>
+<name>Daylight Savings Time (DST)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_8a516e9a-888f-ed4e-d4f2-7080ba0d1921">The period of the year in which the local time of a particular time zone is adjusted forward, most commonly by one hour, to account for the additional hours of daylight during summer months.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Event"><preferred><expression>
+<name>Event</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e128e239-7550-d7d5-1a54-b951176dba50">A calendar object that usually takes up time on an individual calendar. Events are commonly used to represent meetings, appointments, anniversaries, and day events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Free-time-search"><preferred><expression>
+<name>Free time search</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_18062c18-fb05-bc03-4a78-1bc555d5afb2">(Bounded) Common free time. This is typically a search generated by an application to show time on a calendar that is available or open.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Freebusy"><preferred><expression>
+<name>Freebusy</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_07fe8d1d-55a8-fa95-9bba-869ea0c24ace">A database and/or listing of times when a potential attendee or resource is free or busy. Used when scheduling calendar events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iCalendar"><preferred><expression>
+<name>iCalendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a96ca979-68e8-33ef-c595-1cf1908e52b9">The Internet Calendaring and Scheduling Core Object Specification. An IETF standard (RFC 2445) for a text representation of calendar data.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Instance"><preferred><expression>
+<name>Instance</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_12b73e7d-da5d-f6f5-1c41-5bb1e8c8e3fa">When used with recurrences, an instance refers to an item in the set of recurring items.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Invite"><preferred><expression>
+<name>Invite</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_988a9234-e3d3-d7c2-343b-33fe273c22ed">To request the attendance of someone to a calendar event.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Negotiation"><preferred><expression>
+<name>Negotiation</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_921aa2b6-5c31-b33a-a391-c1e616fc3400">Resource conflict resolution. Negotiation is the process of resolving conflicts either programmatically or via direct communication with the participants and invitees of meetings and events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Notification"><preferred><expression>
+<name>Notification</name>
+</expression>
+</preferred>
+<definition><verbal-definition><ol id="_33391c1c-eb35-ce1d-6322-c5efef78d5f0" type="arabic"><li><p id="_d4079569-337b-2242-9f74-ec3d591b4878">The action of making known, an intimation, a notice.</p>
+</li>
+<li><p id="_943d5081-e3f2-f0b5-ddc7-716280625cc2">Reminder or alarm sent when any resource or parties interested in the resource need an indicator that some attention is required. Possible notification methods include email, paging, audible signal at the computer, visual indicator at the computer, voice mail, telephone.</p>
+</li>
+</ol></verbal-definition></definition>
+ </term>
+
+<term id="term-Organizer"><preferred><expression>
+<name>Organizer</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_828599a1-b27e-e553-fafa-11c4503bcae3">The originator of a calendar event typically involving more than one attendee.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Publish"><preferred><expression>
+<name>Publish</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_42cb6e8e-2ea1-ec57-6569-8def67d40f02">Make known publicly calendar information such as <tt>freebusy</tt> times.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Recurring"><preferred><expression>
+<name>Recurring</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_37394c39-1cbd-f49d-9c07-e89dbc7602b7">Happening more than once over a specified interval, such as weekly, monthly, daily, etc. See  <concept><refterm>Repeating</refterm><renderterm>Repeating</renderterm><xref target="term-Repeating"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Repeating"><preferred><expression>
+<name>Repeating</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_c84caf5f-9dd6-8ef8-a02e-cca98a99267c">An event that happens more than once. You might want an event to occur on a regular basis. To do this you schedule a repeating event. Any changes you make to the event can automatically be made to all occurrences of the event. If necessary, changes can be made to individual events without affecting the others. For example, if you need to attend a weekly meeting, you can schedule a repeating event on your calendar. Using another example, if you want to schedule a five day vacation, schedule an all-day event that repeats daily for a total of five times. If you have to cancel one of the days, delete the one day without deleting the whole event.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Reminders"><preferred><expression>
+<name>Reminders</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_cc516374-ff88-dd80-9a2f-e36effcad01c">See <concept><refterm>Notification</refterm><renderterm>Notification</renderterm><xref target="term-Notification"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Time-zone"><preferred><expression>
+<name>Time zone</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_610f333a-6a43-364a-b8b6-a55203977e10">Areas of the Earth that have adopted the same local time. Time zones are generally centered on meridians of a longitude, that is a multiple of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">    <mstyle displaystyle="false">      <mn>15</mn>      <mo rspace="thickmathspace">⁢</mo>      <mrow xref="U_NISTu149">        <mstyle mathvariant="normal">          <mi>°</mi>        </mstyle>                              </mrow>    </mstyle> </math><asciimath>15 "unitsml(deg)"</asciimath></stem>, thus making neighboring time zones one hour apart. However, the one hour separation is not universal and the shapes of time zones can be quite irregular because they usually follow the boundaries of states, countries or other administrative areas.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="wiki" type="inline" citeas="Wikipedia"/></termsource></term>
+</terms>
+
+<clause id="_use_cases" obligation="normative">
+<title>Use Cases</title>
+<clause id="_general" obligation="normative">
+<title>General</title>
+<clause id="_d1d1d66f-4b42-1483-c2e0-8dee3c56b82b" obligation="normative">
+<p id="_8105ce37-b86b-8ef9-20cc-1c76b7e0598f">An organizer wants to invite attendees to a meeting on a single date</p>
+
+<example id="_47556c54-6f64-635b-198c-da3b003e40ff"><p id="_02b0c1ba-a7ed-0fbb-b360-2b92d5657d38">Let’s play tennis next Wednesday.</p>
+</example>
+</clause>
+
+<clause id="_2" obligation="normative">
+<p id="_0f3f8fac-5ab3-8278-5f0a-917bf716e91a">An organizer wants to setup an event with only a start time where there is no end time or the end time is unknown.</p>
+
+<example id="_e0244c07-01b0-9a7d-46c0-56a4242992a2"><p id="_8552ebb7-c030-d728-bd26-a2da8b49af46">At 2 pm I need to take my pills.</p>
+</example>
+
+<example id="_f5354f9f-2c43-cb8b-bb76-1a1bfea31232"><p id="_2771fb3a-3ba2-a790-b097-68ff893b649f">Party at my house starting at 6:30 pm.</p>
+</example>
+
+<example id="_ab023c31-c37d-6d4e-e85f-147c30ac4d90"><p id="_3a2df06d-30d3-f0a9-650d-da01dd201ca0">Rolling Stones, Red Rocks Ampitheatre, 12/14/05, 7:00 pm</p>
+</example>
+
+<example id="_9e75e0fe-f787-0bed-d04e-034cd29d8013"><p id="_8d4ccc46-0f3b-9ce0-f45a-7bc54684293a">Leave at 3:30 pm to go pickup the kids.</p>
+</example>
+
+<example id="_da52263d-b898-6045-5315-4631b18edd2c"><p id="_3030e81d-af3d-c037-b233-85f00ee370de">A reminder that I need to turn in a project report at 3pm</p>
+</example>
+</clause>
+
+<clause id="_3" obligation="normative">
+<p id="_7d88bc37-bd91-39bf-4788-aefb3b021fcd">A calendar user wants to set a personal alarm or reminder for an upcoming event with a specified lead time, and for the alarm or reminder to be triggered at the appropriate time.</p>
+
+<example id="_5e66ad3b-fe56-254e-c7df-75f9195cffa5"><p id="_d0a812d2-ea06-9e01-ceef-f154f30b7ecd">I want to be reminded 5 minutes before a meeting starts.</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_basic_recurrence" obligation="normative">
+<title>Basic Recurrence</title>
+<clause id="_intervals" obligation="normative">
+<title>Intervals</title>
+<p id="_86458d4e-51f0-68b0-3082-139200f318fa">For the basic recurrence intervals below, a calendar user/organizer may wish to create meetings/events that are unbounded, i.e. no clear end date. Some examples include birthdays, anniversaries, staff meetings. While different implementations may or may not allow creation of these types of meetings/events, the unboundedness should be retained when the meeting/event is transferred between systems.</p>
+
+<clause id="_every_nth_interval" obligation="normative">
+<title>Every Nth Interval</title>
+<p id="_15109801-1655-e659-fc36-bfac2e8504b7">An organizer wants to invite attendees to a meeting that repeats on a regular interval (hourly, daily, weekly, monthly, yearly).</p>
+
+<example id="_2bb45f16-30e2-fe4a-c061-1572e386f30a"><p id="_85a6080b-ee26-8f51-2b59-68978025fb88">Class is on Tue/Thu of each week</p>
+</example>
+
+<example id="_210c3895-bf09-b57e-bce7-284d485a39be"><p id="_b4e1d78b-6201-2d4f-6f7c-e85b8d8ac756">Every Wednesday we have a meeting</p>
+</example>
+
+<example id="_5d018761-c271-7d14-ad37-1813bbf4f179"><p id="_a292ecac-7613-3f79-808f-dfeb051bf3e7">Every year on July 4<sup>th</sup></p>
+</example>
+
+<example id="_33a0090f-b7de-09f5-5d2a-4d8acba9d9c5"><p id="_b17a36be-c684-a2c9-b30a-1bf99c2eaf4a">Every 3 Sundays play poker</p>
+</example>
+</clause>
+
+<clause id="_day_of_weekmonth" obligation="normative">
+<title>Day of week/month</title>
+<p id="_ec086087-1c97-c44c-b098-460d7b203aa0">An organizer wants to invite attendees to a meeting on a day of the Nth week/month.</p>
+
+<example id="_b0c7a2af-b437-029a-9550-bc292303e88f"><p id="_8b8a7926-a28e-4c93-8d14-2438624a0cc1">Every 3<sup>rd</sup> Tuesday of the month go to the beach</p>
+</example>
+
+<example id="_fb502288-ea8e-6c87-9628-629f8ad581cb"><p id="_984a9533-712a-4d2f-e2ea-af37aed087e9">The last Friday in November is black Friday</p>
+</example>
+</clause>
+
+<clause id="_nth_date_of_month" obligation="normative">
+<title>Nth date of month</title>
+<p id="_d0cf1a42-9f88-5fe3-a05e-fd74257cf3fa">An organizer wants to invite attendees to a meeting on the Nth date of a month or year.</p>
+
+<example id="_93a78ae2-3de2-ee00-8dfe-c53b760540e5"><p id="_f49e387a-e731-d964-994a-5735a0be015c">Pay bills on the 15<sup>th</sup> of the month.</p>
+</example>
+
+<example id="_98a69ae8-6458-e59d-9b11-324f980d023b"><p id="_f1d04862-fd4e-6fa4-6c6e-fcab2f23b07b">Pay day is the last day of the month.</p>
+</example>
+
+<example id="_b66ef600-b5d3-d25c-afce-c0d88bce9bf3"><p id="_4ca1bda5-c6a0-92b2-a0e7-e6b26847e991">Annual report due by end of February every year.</p>
+</example>
+</clause>
+
+<clause id="_custom_list_of_dates" obligation="normative">
+<title>Custom list of dates</title>
+<p id="_2ca52216-6f28-7af5-e282-dcac4d2a8026">An organizer wants to invite attendees to a meeting with a custom list of days/dates.</p>
+
+<example id="_d1746331-76fc-2b28-6b99-9bfc4336f5cb"><p id="_5e4c12ed-ad59-25ca-7499-d4631c3cb576">The dates for a lecture series: Tuesday this week, Wednesday next week,  Friday the following week.</p>
+</example>
+</clause>
+
+<clause id="_basic_combinations" obligation="normative">
+<title>Basic combinations</title>
+<p id="_7310ea09-d5f2-599a-d4d1-8f1c96e01a68">An organizer wants to invite attendees to a meeting that includes dates from a combination of regular intervals.</p>
+
+<example id="_34e9118f-66bf-daf0-1eba-171c46ed8f51"><p id="_f3fa7966-9dcd-a85f-6166-13c9ae2f6694">The 2<sup>nd</sup> Sunday every 3 months for a small church that only has communion every 3 months.</p>
+</example>
+
+<example id="_5dd84577-6508-c3a1-14b2-cc31eb182a6e"><p id="_62df38c3-83d6-79a7-4a04-e9c951bd313b">The 1<sup>st</sup> day of every other month</p>
+</example>
+</clause>
+
+<clause id="_exceptions" obligation="normative">
+<title>Exceptions</title>
+<p id="_d68fac41-6129-96cd-1207-ed0eca764d4d">An organizer wants to invite attendees to a meeting that includes dates from a regular interval with an exception.</p>
+
+<example id="_b8791a1b-5ad4-7bcd-0d66-c191249ac0df"><p id="_0348229a-7ce1-00a0-714d-f830f655fd4a">Last Friday every month except November</p>
+</example>
+
+<example id="_0658d6b0-943b-5d42-ec5e-a2d6d3d677d5"><p id="_58081a19-d70f-e423-e8c8-7dabe0d112a7">Meeting on Mondays January through March except for Monday holidays.</p>
+</example>
+
+<example id="_1301690a-735b-e8bf-bcc7-474024ae7e09"><p id="_8e616d5f-f899-d869-a7f3-0a2a68d77389">Moving a meeting. We have a status meeting every Monday except next Monday is Labor Day, so we’ll have to move that meeting to Tuesday.</p>
+</example>
+
+<example id="_deb6e942-e234-38e9-20bd-ca1c02eb70e1"><p id="_844a5fab-d094-1ac4-53fe-2ccb5df77994">Meeting every 5 weeks on Thursday plus next Wednesday.</p>
+</example>
+</clause>
+</clause>
+</clause>
+
+<clause id="_basic_time_zone" obligation="normative">
+<title>Basic Time Zone</title>
+<clause id="_meetings_across_time_zones" obligation="normative">
+<title>Meetings across time zones</title>
+<clause id="_repeating_meeting_involving_multiple_time_zones" obligation="normative">
+<title>Repeating meeting involving multiple time zones</title>
+<p id="_12c6126f-97cd-41d3-3200-50aee4a7365d">An organizer wants to schedule a repeating meeting (phone/video conference) with people working in many different time zones. Note: some time zones have fifteen or thirty minute offsets rather than the more standard one hour offset. Also some people may be in time zones currently in daylight savings time, while others may not.</p>
+
+<example id="_137118d4-700e-45e2-b5f1-42281e914d33"><p id="_5750263c-7be3-49e9-b706-c08e6277a992">A product manager wants to schedule several video conferences for 9am <tt>GMT0BST</tt> in a multi-national corporation across 10 time zones. One participant is in Chatham, New Zealand which has 12 hours, 45 minutes time zone offset from UTC.</p>
+</example>
+</clause>
+
+<clause id="_events_with_begin_and_end_times_in_different_time_zones" obligation="normative">
+<title>Events with begin and end times in different time zones</title>
+<p id="_9f8e62f1-151a-64ad-cacf-2c1eb1630dc4">An airline reservation system is used to book a flight which leaves at 1:10 pm PST from San Francisco, and arrives at 9:43 pm EST in New York, NY (5 hours 33 mins flying time) or one that leaves at 1:45 pm from Sydney, Australia and arrives in San Francisco, CA at 10:05 am PST(13 hours 20 mins flying time). An ICS file is sent to user to add to their calendar.</p>
+</clause>
+</clause>
+
+<clause id="_meetings_involving_daylight_savings_time" obligation="normative">
+<title>Meetings involving daylight savings time</title>
+<clause id="_monthly_meetings" obligation="normative">
+<title>Monthly meetings</title>
+<p id="_89a7d8ab-ee65-e461-5d6f-247bb63fa8e7">An organizer wants to create a monthly meeting between February and August with participants in United States, Germany and Japan. (Japan does not have daylight savings time).</p>
+</clause>
+
+<clause id="_shift_work" obligation="normative">
+<title>Shift work</title>
+<p id="_ec45541a-5ef9-9776-32f4-aae3cedf9d88">An organizer wants to create a schedule where the end time is fixed and the schedule crosses a daylight savings time change.</p>
+
+<example id="_fab0355e-65e8-9987-2390-6b9908d050ad"><p id="_9a39a454-23bd-74e3-4974-11ff71e2dd19">For hospital staff the shifts are normally 8 hours long. When there is a daylight savings time change, one of the shifts will be longer or shorter depending on the direction of the time change.</p>
+</example>
+</clause>
+
+<clause id="_flight_schedules" obligation="normative">
+<title>Flight schedules</title>
+<p id="_51799b21-6e0a-1eb4-bf3d-7a31c0b0b17e">An organizer wants to create a schedule where the duration is fixed and the schedule crosses a daylight savings time change.</p>
+
+<example id="_8d66c798-1f72-18f7-277b-afdf669f7b63"><p id="_68686a01-335d-12cb-fd88-262b0a0cc5fb">Flight schedules are dependent on the actual flight duration. The arrival time will need to be shifted across a daylight savings time change.</p>
+</example>
+</clause>
+
+<clause id="_changes_in_daylight_saving_time_definitions" obligation="normative">
+<title>Changes in Daylight Saving Time definitions</title>
+<p id="_b976788d-6f07-0041-0479-a3ed1980af4d">An organizer creates a meeting with a person in a different time zone where the government may change the dates for daylight savings time each year, and the time zone definition is changed after the meeting creation time.</p>
+
+<example id="_47ccb2ba-6dcf-9221-f90c-688d923738f0"><p id="_73041eef-9b59-a093-fb3a-d32aadfcdc83">Israel moves their DST time changes each year.</p>
+</example>
+
+<example id="_5106f462-5906-f447-8a33-1c3ff716360d"><p id="_21495b6d-27af-55c5-dc04-6f39b74689d9">Brazil once moved their DST time change to accommodate the arrival of the Pope.</p>
+</example>
+</clause>
+</clause>
+</clause>
+
+<clause id="_scheduling" obligation="normative">
+<title>Scheduling</title>
+<clause id="_inviting_attendees" obligation="normative">
+<title>Inviting attendees</title>
+<clause id="_4" obligation="normative">
+<p id="_3eba0d9f-17d2-0394-7fd0-86db680a8fa3">An organizer wants to send out an invitation to people that are both within and external to their calendar server.</p>
+</clause>
+
+<clause id="_5" obligation="normative">
+<p id="_b6ff7d5a-2dda-f681-61ad-db53832a2d09">An organizer wants to track responses or view the attendee list for their meeting invitation for both intra and external participants.</p>
+</clause>
+
+<clause id="_6" obligation="normative">
+<p id="_3ecc0a31-758a-cc34-5bc8-5f5101b5ba64">An organizer wants to modify the meeting, and have those changes reflected on all invitees calendars. (Start time, duration, date, location, invitees, body)</p>
+</clause>
+
+<clause id="_7" obligation="normative">
+<p id="_ce296b33-e38b-b08e-614f-20ea849c1ce6">An organizer wants to modify the meeting, and let the participants know about the change. (Start time, duration, date, location, invitees, body)</p>
+</clause>
+
+<clause id="_8" obligation="normative">
+<p id="_471b0d5f-268e-9e02-4b9c-9e584df031b7">An organizer wants to cancel a meeting.</p>
+</clause>
+</clause>
+
+<clause id="_responding" obligation="normative">
+<title>Responding</title>
+<clause id="_9" obligation="normative">
+<p id="_a95a3f75-20c4-e8a2-7def-f76f2bc6ee5b">An attendee wants to accept/decline a meeting invitation. They may wish to change their status later.</p>
+</clause>
+
+<clause id="_10" obligation="normative">
+<p id="_fa5bdb1a-c85b-e97f-3a44-302b310ce6e3">An attendee wants to counter a non-repeating invitation.</p>
+
+<example id="_1d66b59b-8b6b-da85-7f41-87b9fee3bb7e"><p id="_8b91fe66-64f3-65c2-e385-43868eb10f57">Joe creates a meeting and invites Mary. Mary can’t make it at the time Joe selected, and counters the meeting, offering a time 3 hours later in the day. Joe accepts the counter and the meeting is rescheduled to 3 hours later in the day.</p>
+</example>
+</clause>
+
+<clause id="_11" obligation="normative">
+<p id="_a5571971-e85c-2a9e-2262-ce0b40026f2c">An attendee wants to view the attendee list and/or acceptance of other attendees</p>
+
+<example id="_58a6b734-b794-0686-b7a2-3a7774c0126c"><p id="_eb70de6c-9032-5439-118e-f8e8bd7a695d">Joe wants to come to a proposed meeting only if the right people are attending, so Joe needs to see who is invited and who has accepted.</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_freebusy_time" obligation="normative">
+<title>Free/Busy Time</title>
+<clause id="_12" obligation="normative">
+<p id="_3859ddcd-f9e9-ed7d-c8e9-1a34720227c7">A calendar user wants to allow another calendar user to see their calendar.</p>
+
+<example id="_1b02f144-75fc-4886-57be-6b8083f1a253"><p id="_6ec3d6ea-f82d-72fc-2041-67a401b54a2e">While organizing a meeting, the organizer wants to view all the schedules of all the participants to determine when there are no conflicts.</p>
+</example>
+
+<example id="_9a1b8540-aeb4-c56e-d24f-7270cbdc18a6"><p id="_c47ade90-96a1-99ff-56a1-3d92089a12ad">Joe is wants to ask Sam a quick question. Joe looks at Sam’s calendar to determine if he might be available.</p>
+</example>
+
+<example id="_dfeffe57-8027-7386-10a9-3142046f1ef8"><p id="_5ec8483b-e496-841c-93c7-cde1b2f288b5">Samantha is analyzing how much time is spent on various projects. She looks at staff member calendars, and adds the time spent. She may need to view the details of meetings to determine this correctly.</p>
+</example>
+
+<example id="_e8251f1e-b24f-379f-a11d-68b0810bdcb1"><p id="_915f6698-f9a3-fabd-b3c0-a61bfa10d922">Your spouse wants to see if you can pickup the kids. They may notice that you have something else scheduled or that you already have marked it on your schedule. They don’t necessarily want to add anything to your schedule.</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_recurrence" obligation="normative">
+<title>Recurrence</title>
+<p id="_5c69bdce-190e-55e4-9698-866f54ab6a98">Similar to basic recurrence, changes to unbounded, repeating meetings/events should retain their unboundedness when a change is made to one or all instances of the meeting/event.</p>
+
+<clause id="_change_all_instances" obligation="normative">
+<title>Change all instances</title>
+<p id="_f56652ab-8649-9e09-bfad-0d8376c8bec7">An organizer wants to change all of the instances of a repeating meeting to another date/time.</p>
+
+<example id="_f32014b9-c9cb-be08-03c6-87feb00bcc80"><p id="_e83b3681-d43c-6d14-176a-4175504bd727">Chair sends recurring meeting to invitee that starts Monday April 11, 2005 and repeats every day for 5 days from 0900-1000. This should yield a recurring meeting with following date/times:</p>
+
+<dl id="_9353a246-2c07-6b6d-089d-bad60050760d"><dt>04/11/05</dt>
+<dd><p id="_6c108485-6605-a3d1-542f-5605ed7561de">0900-1000</p>
+</dd>
+<dt>04/12/05</dt>
+<dd><p id="_0722d846-9ef1-a790-caa3-b29ea5b7d2d3">0900-1000</p>
+</dd>
+<dt>04/13/05</dt>
+<dd><p id="_6e77de75-dad7-640b-1175-d26ae776eee8">0900-1000</p>
+</dd>
+<dt>04/14/05</dt>
+<dd><p id="_9b6081a2-f2bf-0bbd-8a0a-f87298524e3d">0900-1000</p>
+</dd>
+<dt>04/15/05</dt>
+<dd><p id="_dda67e46-91bc-1bb0-1004-a3aaf7eeab25">0900-1000</p>
+</dd>
+</dl>
+
+<p id="_4a00ee4d-6e87-51ff-a243-cf8793fb8c7f">Chair reschedules time portion for all instances of the recurring meeting +1 hr, so from 1000-1100. This should yield a recurring meeting with following date/times:</p>
+
+<dl id="_00e0b2d9-76dc-c6c0-efec-b2c3541c188c"><dt>04/11/05</dt>
+<dd><p id="_8d3a4b98-edec-1030-9c0c-a4ab8b237724">1000-1100</p>
+</dd>
+<dt>04/12/05</dt>
+<dd><p id="_5d6f33eb-df55-16f4-ecf8-8b01b8e414b3">1000-1100</p>
+</dd>
+<dt>04/13/05</dt>
+<dd><p id="_ae5add58-1590-9417-140d-48a4dae1fc11">1000-1100</p>
+</dd>
+<dt>04/14/05</dt>
+<dd><p id="_08866cd5-5994-d089-18bf-60e6461deffe">1000-1100</p>
+</dd>
+<dt>04/15/05</dt>
+<dd><p id="_5fe4a7dc-c493-0c17-75a6-11d424ee30c5">1000-1100</p>
+</dd>
+</dl>
+</example>
+</clause>
+
+<clause id="_change_one_instance" obligation="normative">
+<title>Change one instance</title>
+<p id="_d10486dd-2abd-dbbe-d1d8-df1f4f95fd30">An organizer wants to change one instance of a repeating meeting to another date/time.</p>
+
+<example id="_830de0e4-1aef-3446-e5a2-9118b1bd3c1c"><p id="_f7b0aaa5-3b92-8a09-bd76-4fb7f2b04a81">Chair sends recurring meeting to invitee that starts Monday April 25, 2005 and repeats everyday for 5 days from 0900-1000. This should yield a recurring meeting with following date/times:</p>
+
+<dl id="_4a247d12-64c2-5589-9143-8fa3fb61f07b"><dt>04/25/05</dt>
+<dd><p id="_87824ccb-41c4-1698-bde3-d3a56f34f2af">0900-1000</p>
+</dd>
+<dt>04/26/05</dt>
+<dd><p id="_19542dc8-8a0e-5192-1b67-8566a2d0f044">0900-1000</p>
+</dd>
+<dt>04/27/05</dt>
+<dd><p id="_ba1c17a5-5ab4-0c5c-3383-db430a02197d">0900-1000</p>
+</dd>
+<dt>04/28/05</dt>
+<dd><p id="_8dc11586-b0d0-8b27-6141-699fafab9d94">0900-1000</p>
+</dd>
+<dt>04/29/05</dt>
+<dd><p id="_99dc1f0d-7ebd-53a4-bc47-d2a986e15b04">0900-1000</p>
+</dd>
+</dl>
+
+<p id="_ef100201-c7f7-2480-d528-9e1780e4ad5e">Chair reschedules a single instance’s (Tuesday’s) time portion +1 hr, so from 1000-1100 on Tuesday April 26, 2005. This should yield a recurring meeting with following date/times:</p>
+
+<dl id="_76ab630d-99b6-e4e1-63b4-6577cd709257"><dt>04/25/05</dt>
+<dd><p id="_c24297eb-6b5a-5c8b-60d4-c6b99a970a1b">0900-1000</p>
+</dd>
+<dt>04/26/05</dt>
+<dd><p id="_3265e667-dd06-ae06-a877-b512bc36540f">1000-1100</p>
+</dd>
+<dt>04/27/05</dt>
+<dd><p id="_1c29888a-c987-c2ce-c647-e7d699e8c66e">0900-1000</p>
+</dd>
+<dt>04/28/05</dt>
+<dd><p id="_0c9af171-c986-830b-4014-aaeaf558df73">0900-1000</p>
+</dd>
+<dt>04/29/05</dt>
+<dd><p id="_27645345-55bb-30e7-1321-ea1067b5322a">0900-1000</p>
+</dd>
+</dl>
+</example>
+</clause>
+
+<clause id="_extending_a_series" obligation="normative">
+<title>Extending a series</title>
+<p id="_609aeb7c-7648-84db-987c-0a46dbad0c3e">An organizer creates a repeating meeting for some day of the week, then later needs to add another meeting to the series on the same day of the week.</p>
+
+<example id="_f17702a7-4733-5c21-4cdc-eba8d2c8764b"><p id="_7e936fdc-8cac-b9a5-2587-b38184007e14">Chair sends recurring meeting to invitee that starts Wednesday April 27, 2005 and repeats every Wednesday for the next 5 weeks from 0900-1000. This should yield a recurring meeting with following date/times:</p>
+
+<dl id="_3ad3cb24-ca64-621e-5748-fe41a2fc2ce5"><dt>04/27/05</dt>
+<dd><p id="_4a4693c5-42e2-21e5-c82d-adadefda3189">0900-1000</p>
+</dd>
+<dt>05/04/05</dt>
+<dd><p id="_a2167c27-61cf-712b-95c7-20d214145fae">0900-1000</p>
+</dd>
+<dt>05/11/05</dt>
+<dd><p id="_42f544db-ac9c-8fda-db9c-a465552acddd">0900-1000</p>
+</dd>
+<dt>05/18/05</dt>
+<dd><p id="_1aea20d7-6b4c-79bd-2a20-4d577fc89b1a">0900-1000</p>
+</dd>
+<dt>05/25/05</dt>
+<dd><p id="_f5dae6f5-45b8-0d74-90ac-69f52628f8c3">0900-1000</p>
+</dd>
+</dl>
+
+<p id="_40f81882-51db-6160-1f91-300c301b9d38">Chair extends the series of meetings to six weeks by adding a single instance, Wednesday June 1, 2005. All other attributes are the same. This should yield a recurring meeting with following date/times:</p>
+
+<dl id="_a6329119-f2f7-b839-0d14-fe6f40df201b"><dt>04/27/05</dt>
+<dd><p id="_20660754-10ff-5f00-1185-c0893f2f2bed">0900-1000</p>
+</dd>
+<dt>05/04/05</dt>
+<dd><p id="_e1df65a9-235a-aeec-75c1-30439c9e7e5a">0900-1000</p>
+</dd>
+<dt>05/11/05</dt>
+<dd><p id="_40366cad-6185-f048-4e63-cf1472b1b03a">0900-1000</p>
+</dd>
+<dt>05/18/05</dt>
+<dd><p id="_8607d0f2-e2ed-581c-8302-ac06c3914606">0900-1000</p>
+</dd>
+<dt>05/25/05</dt>
+<dd><p id="_4c9f0af6-2569-c834-3d75-7744932cf0cc">0900-1000</p>
+</dd>
+<dt>06/01/05</dt>
+<dd><p id="_7de891b7-2ae6-3860-0e91-50724c5c3165">0900-1000</p>
+</dd>
+</dl>
+</example>
+</clause>
+
+<clause id="_adding_an_extra_date_that_is_an_exception_to_a_series" obligation="normative">
+<title>Adding an extra date that is an exception to a series</title>
+<p id="_db4693a7-e219-4b98-dbf6-e02daa5ed210">An organizer creates a repeating meeting for some day of the week, then later needs to add another meeting to the series on a different day of the week.</p>
+
+<example id="_26ba1577-ccce-fffd-d58c-233a40d815d1"><p id="_8b3c152f-4c7b-4cd1-09a4-9a190bb69bfb">Chair sends recurring meeting to invitee that starts Wednesday April 27, 2005 and repeats every Wednesday for the next 5 weeks from 0900-1000. This should yield a recurring meeting with following date/times:</p>
+
+<dl id="_d5c30184-8c78-6b03-2b0c-59feff51f85b"><dt>04/27/05</dt>
+<dd><p id="_483a03c2-4273-5e22-41be-395f85ddd9b7">0900-1000</p>
+</dd>
+<dt>05/04/05</dt>
+<dd><p id="_01c67ee6-543b-57c5-ba6e-b00183cecb0d">0900-1000</p>
+</dd>
+<dt>05/11/05</dt>
+<dd><p id="_e22214fe-582d-82b6-c095-0f2f387f1dbf">0900-1000</p>
+</dd>
+<dt>05/18/05</dt>
+<dd><p id="_bcdf683b-822d-cfea-fe5b-f213fe3fbfd6">0900-1000</p>
+</dd>
+<dt>05/25/05</dt>
+<dd><p id="_f5433bae-57fc-a4df-db1b-945f35d80db0">0900-1000</p>
+</dd>
+</dl>
+
+<p id="_da4d1327-e8f3-b0c3-67dd-74b4d79dc97d">Chair adds a single instance, Tuesday May 31, 2005. This should yield a recurring meeting with following date/times:</p>
+
+<dl id="_09660fdc-9b0d-e5c9-314f-ef9725dc72e9"><dt>04/27/05</dt>
+<dd><p id="_7be47555-410e-0768-b237-82d7d4442178">0900-1000</p>
+</dd>
+<dt>05/04/05</dt>
+<dd><p id="_c2e14124-1bd8-707c-af50-733c06ac8710">0900-1000</p>
+</dd>
+<dt>05/11/05</dt>
+<dd><p id="_65f41908-8693-f80c-6a81-5b507d1c433d">0900-1000</p>
+</dd>
+<dt>05/18/05</dt>
+<dd><p id="_84115fa0-bee2-68be-2c31-f4c7cd47d50a">0900-1000</p>
+</dd>
+<dt>05/25/05</dt>
+<dd><p id="_4d142d7b-f3ff-b513-5d3f-6eeb4e2688d6">0900-1000</p>
+</dd>
+<dt>05/31/05</dt>
+<dd><p id="_33a5e5f6-b7c4-8343-eb55-878ae0089184">0900-1000</p>
+</dd>
+</dl>
+</example>
+</clause>
+
+<clause id="_change_the_body_of_all_instances" obligation="normative">
+<title>Change the body of all instances</title>
+<p id="_03a187fc-90fb-4dbf-3ad9-399fc7c09797">An organizer wants to change the body of all the instances of a repeating meeting.</p>
+
+<example id="_3805fb3a-b725-781c-255a-dc7f340f1c4a"><p id="_6f261be3-9a49-91db-8d23-b3ccb34df819">Chair sends recurring meeting to invitee that starts Monday April 18, 2005 and repeats everyday for 5 days from 0900-1000. This should yield a recurring meeting with following date/times:</p>
+
+<dl id="_2c663922-90fe-9453-299d-014c5889412b"><dt>04/18/05</dt>
+<dd><p id="_995e09e0-ca6f-8ef9-60a1-24781af0a84f">0900-1000</p>
+</dd>
+<dt>04/19/05</dt>
+<dd><p id="_e2a96f47-d16a-0ef8-15cb-b193eed7e368">0900-1000</p>
+</dd>
+<dt>04/20/05</dt>
+<dd><p id="_b5cf6c21-8d8a-1ce8-c5e5-f5ec538a9eb6">0900-1000</p>
+</dd>
+<dt>04/21/05</dt>
+<dd><p id="_e182eaee-92c7-7a01-8523-5f4ba85c3864">0900-1000</p>
+</dd>
+<dt>04/22/05</dt>
+<dd><p id="_d7073f1b-a87d-7c7d-0836-c41b77aa5886">0900-1000</p>
+</dd>
+</dl>
+
+<p id="_e279c085-ac02-0628-74df-afebd935b92d">Chair sends an update to the body part for all instances of the recurring meeting to add a rough agenda format to the description field.</p>
+</example>
+</clause>
+
+<clause id="_change_the_body_of_one_instance" obligation="normative">
+<title>Change the body of one instance</title>
+<p id="_1b269507-8a09-431e-020e-7be0fbb3635e">An organizer wants to change the body of one of the instances of a repeating meeting.</p>
+
+<example id="_923262ea-61d0-07fc-2dbe-9d2e64f9f2fd"><p id="_34864c36-0052-8ded-e442-54c015d29b19">Chair needs to make changes to individual meeting agendas before each meeting.</p>
+</example>
+</clause>
+
+<clause id="_addremove_attendee_to_all_instances" obligation="normative">
+<title>Add/Remove attendee to all instances</title>
+<p id="_f6e1e95d-25ef-ef82-12f1-e85d1f92883d">An organizer wants to add/remove an attendee to all the instances of a repeating meeting</p>
+</clause>
+
+<clause id="_addremove_attendee_to_one_instance" obligation="normative">
+<title>Add/Remove attendee to one instance</title>
+<p id="_3f790ac4-4bc9-557d-dc36-092795c5dc9f">An organizer wants to add/remove an attendee to/from one of the instances of a repeating meeting</p>
+</clause>
+
+<clause id="_this_and_future" obligation="normative">
+<title>This and future</title>
+<p id="_c4ffdf9b-321f-c15d-be1f-a78b505f3555">An organizer wants to change all dates/times for a meeting from now until the end of the interval.</p>
+
+<example id="_7925b588-80c2-0123-c2e1-75b968070353"><p id="_37108087-49f6-dc48-c48f-9dea16d11d4c">Joe creates a five day repeating meeting (M-F) and invites some people. Later, while trying to get a room, Joe needs to reschedule Weds and All Future to be an hour later in the day.</p>
+</example>
+
+<example id="_0d378ecc-a51a-c535-4574-5bff5a9523d8"><p id="_295b3793-b4dc-61de-f089-241af0420572">Susan created a repeating staff meeting on the first Monday of the month two months ago. She wants to change the meeting to be the first Tuesday of the month from now onward.</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_time_zone_2" obligation="normative">
+<title>Time Zone</title>
+<clause id="_repeating_meeting_across_time_zones_with_reschedule" obligation="normative">
+<title>Repeating Meeting across time zones with reschedule</title>
+<p id="_127dbf1d-6240-4ab7-7eb8-4dc4763915a2">An organizer has scheduled a repeating meeting (phone/video conference) with people working in many different time zones and wants to change the time of one of the meetings.</p>
+
+<example id="_33530df4-2335-6493-3ba2-964dd1195c37"><p id="_f5d18746-69df-c1ff-2e73-61884fb2f010">A product manager wants to schedule several video conferences for 9am
+<tt>GMT0BST</tt> on Tuesdays in a multi-national corporation across 10 time
+zones. One participant is in Chatham, New Zealand which has 12 hours,
+45 minutes time zone offset from UTC. The third in the series needs to be
+changed to Wednesday to accommodate two of the participants.<note id="_ce1f77a5-b8fe-57f1-a259-ebc11f95fc64"><p id="_68317a45-fda4-7eb9-70bd-b5e176862305">For this to work properly, the dates must be stored with time zone format</p>
+</note></p>
+
+
+</example>
+</clause>
+</clause>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_bibliography" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc3283" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Guide to Internet Calendaring</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3283</uri>
+  <docidentifier type="IETF" primary="true">RFC 3283</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3283</docidentifier>
+  <docnumber>RFC3283</docnumber>
+  <date type="published">
+    <on>2002-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Mahoney</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Babics</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Taler</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_adf9eac6-31d0-08b4-d4dd-e0a468c8f427">This document describes the various Internet calendaring and scheduling standards and works in progress, and the relationships between them. Its intent is to provide a context for these documents, assist in their understanding, and potentially aid in the design of standards-based calendaring and scheduling systems. The standards addressed are RFC 2445 (iCalendar), RFC 2446 (iTIP), and RFC 2447 (iMIP). The work in progress addressed is “Calendar Access Protocol” (CAP). This document also describes issues and problems that are not solved by these protocols, and that could be targets for future work. This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3283</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>scheduling systems</keyword>
+  <keyword>cap</keyword>
+  <keyword>calendar access protocool</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+</bibitem><bibitem id="wiki">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="https://www.wikipedia.org/"/>
+  </formattedref>
+  <docidentifier>Wikipedia</docidentifier>
+  
+</bibitem>
+
+
+</references></bibliography>
+</csd-standard>

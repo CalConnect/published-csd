@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">October 2010 CalConnect Interoperability Test Event Report</title>
+<docidentifier primary="true" type="CalConnect">CC/A 1014:2011</docidentifier><docnumber>1014</docnumber><date type="published"><on>2011-01-11</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Patricia Egen</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Nate Barry</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Cyrus Daboo</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Michael Douglass</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>Arnaud Quillaud</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2011-01-11</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2011</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_d3d51098-43f8-8ea0-ff8e-f76eabd026d9" obligation="normative">
+<p id="_2e1cdf70-c030-e883-9e15-3028de343bcc">© 2011 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_65c9354b-7869-52a3-a1ec-1b4f5052ff09">The October 2010 CalConnect Interoperability Testing Event was actually two distinct sets of testing. One set of vendors tested CalDAV and CardDAV. The second set of vendors tested iMIP.</p>
+
+<p id="_dd4a2ffa-fc02-0d7b-167f-a9846dae2a33">In addition to testing, a BOF (bird of a feather) session was held to discuss recurrence rules and issues pertaining to them. A summary of the session is included at the end of this report.</p>
+
+<clause id="_participants" obligation="informative">
+<title>Participants</title>
+<table id="_a8cbe13f-beed-cef0-9126-159225824602">
+<name>Participants</name>
+<thead><tr><th valign="top" align="left">Organization</th>
+<th valign="top" align="left">Participants</th>
+<th valign="top" align="left">Versions Tested</th>
+</tr><tr><th colspan="3" valign="top" align="left"><p id="_7fb87f5e-aa7d-41d4-e32e-26d977ddabd8">CalDAV / CARDDAV /IMIP Testing</p>
+</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left"><p id="_511e2cbf-1a09-9162-714b-43675b5480d6">Apple</p>
+</td>
+<td valign="top" align="left"><p id="_9ada1d28-1c54-8c6e-ec5d-cfd2597c1157">Cyrus Daboo</p>
+</td>
+<td valign="top" align="left"><p id="_0eb69292-7399-ae6e-7e35-36fa8613887d">iCal Server and client — OS X 10.6.1<br/> Apple iCal 4.0 (SnowLeopard)</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_21799566-6397-c47a-f4a9-03fb9c0076c8">Sun Server</p>
+</td>
+<td valign="top" align="left"><p id="_379fdf03-9fd2-ce0c-c6fd-453128ba86c3">Arnaud</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_986c3383-7e76-b065-5f14-151436f93e0c">IBM</p>
+</td>
+<td valign="top" align="left"><p id="_b798ce38-2fe2-3bca-7806-67a90bb09a50">Nate Barry</p>
+</td>
+<td valign="top" align="left"><p id="_fd3b074c-d066-8ebc-b8ac-4dc9c90e5c61">Lotus Notes/Domino 8.5.2</p>
+</td>
+</tr><tr><td valign="top" align="left"><p id="_30d9c2e5-1ce1-887e-7afe-70acb13f74c4">RPI</p>
+</td>
+<td valign="top" align="left"><p id="_61acff56-2eb4-c950-9949-8cd52b8244f3">Mike Douglass</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_208f276b-8135-663a-1e5f-e2ca15cff41c">Oracle</p>
+</td>
+<td valign="top" align="left"><p id="_a4cbeaad-e099-a881-c8ef-aaadcdc29e74">Simon Vaillancourt</p>
+</td>
+<td valign="top" align="left"/></tr><tr><td valign="top" align="left"><p id="_6c3cc326-648c-3581-7a0d-57c7a13d266b">Kerio</p>
+</td>
+<td valign="top" align="left"><p id="_219062ae-7c8f-de5b-7569-5baf0a71ed51">Tomas Hnetila<br/> Jakub Schwarzmeier</p>
+</td>
+<td valign="top" align="left"/></tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+<clause id="_general_testing_notes" obligation="normative">
+<title>General Testing Notes</title>
+<p id="_4f4bd61b-11f1-88e1-aaa1-f3f6f56adf0a">The participating vendors continued the ongoing testing of the CalDAV and CardDAV protocols, focusing on WebDAV sync, issues surrounding vendor-specific CalDAV extensions which needed more clarification, and iMIP recurrence issues.</p>
+
+<p id="_dd165b1a-718c-08b2-14ef-11dadaf9d582">As usual, participants found and corrected bugs during the course of the interop. This is always beneficial because an organization can have a significant testing environment at their location but when they test outside of their protected domain, unknown issues can bubble up to the surface and be resolved.</p>
+
+<p id="_8d3ea7ba-9cb4-582a-7ddb-ba556b22181c">Regarding iMIP, it was found that iMIP representations of the text/calendar section that have Content- Disposition: attachment are handled differently by different vendors. If there is Content-Disposition: attachment, then some vendors will attach the iCalendar as a file attachment and others will represent as a workflow item.</p>
+
+<p id="_40b40eed-5cbe-59fd-b8a9-db1b986d36b1">With respect to CardDAV, interoperability testing is just really starting and participants noted that the vCard 4 specification in CardDAV was invalid and time was spent discussion and writing changes to the actual specification.</p>
+
+<p id="_e034e249-804a-8ea1-db74-3736f140a2ec">This is exactly why face to face interoperability testing is so beneficial. It is possible to not only uncover issues but then work in a collegial environment to enhance, correct and improve the specifications being tested.</p>
+</clause>
+
+<clause id="_summary_of_recurrence_bof" obligation="normative">
+<title>Summary of recurrence BOF</title>
+<p id="_bbf0e3f9-0a27-fe1d-b6d3-85e0bfd0fe0d">On Monday, 10/4/10 CalConnect held a BOF session to discuss problems that different implementations have in the area of communicating and processing updates to recurring meetings. It was agreed that in general updates and reschedules to a single instance of a series works well.</p>
+
+<p id="_33b7fb62-5728-4767-8e95-d964353401e7">Problematic use cases:</p>
+
+<ul id="_bda08b73-72bb-b6e4-dc61-0d26ce2c34f0"><li><p id="_0d62410b-f30e-884d-25cd-7a5c634ad4ff">An instance is updated/rescheduled with <tt>THISANDFUTURE</tt> (with or without prior modification)</p>
+</li>
+<li><p id="_de46ab41-abae-f719-1ff7-4dccf18b3179">A series is updated/rescheduled (with no exceptional data)</p>
+</li>
+<li><p id="_6bf1d445-e408-a18e-4861-d6b753e3c6cc">A series is updated/rescheduled and maintains some prior exception data</p>
+</li>
+<li><p id="_4ec4e194-76ff-d9f4-fc8b-4469b74e46cf">A series is split, with a new UID being sent for a second half of the series: Truncation/Expansion (essentially capturing  <tt>THISANDFUTURE</tt> behavior)</p>
+</li>
+</ul>
+
+<clause id="_discussion" obligation="normative">
+<title>Discussion</title>
+<p id="_248852d8-9f57-c4f7-63c4-de8ff7f4af8b">There was a lot of discussion around the problematic use cases above and data models that differ and are the underlying cause to these. The result of this were a few specific takeaways.</p>
+</clause>
+
+<clause id="_takeaways" obligation="normative">
+<title>Takeaways</title>
+<ol id="_48baa8f4-4525-396b-2e4a-04428367af78" type="arabic"><li><p id="_4cb1b625-29e5-daad-092d-b43893810806">We would like to clarify wording in standard such that when an <tt>RRULE</tt> is modified, the <tt>SEQUENCE</tt> number  <tt>MUST</tt> be incremented (some implementations reset to 0), specifically Microsoft Exchange. This seems that it could probably be changed very easily by Microsoft, and would have little to no risk in causing any regressions. Incrementing the  <tt>RRULE</tt> allows other implementations to treat the change as an update rather than forcing the entire series to be blown away and recreated.</p>
+</li>
+<li><p id="_ecd309f5-da2b-a006-fd46-f1f6c18e1c8d">We would like to explore the concept of a iCalendar diff format. This would be a single <tt>VEVENT</tt> that contains ONLY data that was modified by that update. This probably requires some property level sequence tracking to correctly apply notices that arrive out of date. Many implementations already have such capabilities but do not share them in a standardized fashion. This would make update/reschedule transactions much simpler and much smaller. Additionally, it would conceptually be able to interoperate well with varying data models. Follow up is needed as to the specifics of this.</p>
+</li>
+<li><p id="_5872926e-a2aa-2b8d-44c0-ed9c1ba7d675">We would like to explore the concept of adding a <tt>SERIES</tt> ID to the iCalendar spec so that multiple UIDs could still be considered part of the same series. This would help in the implementation of <tt>THISANDFUTURE</tt>. Currently, the only ways to truly represent <tt>THISANDFUTURE</tt> changes are:</p>
+<ul id="_43275113-b0e8-4f81-63aa-177878c22f4a"><li><p id="_ae10b844-b7d7-d7a3-8987-0fe9753ffa0e">Modification of each effected instance as an exception</p>
+</li>
+<li><p id="_6c746c89-052e-68d2-9814-02bedac74130">Dynamic processing of data</p>
+</li>
+<li><p id="_0d298626-546c-dc36-40d3-832053be3fda">Splitting the meeting into multiple UIDs for each split. At this point, a subsequent <tt>THISANDFUTURE</tt> call across the two modified sets becomes problematic and there remains problems linking the two separate UIDs as they are actually representing the same meeting.</p>
+</li>
+</ul>
+</li>
+<li><p id="_d9e99a1c-30ad-b764-3257-b7be50e27587">IBM would like to re-add the deprecated <tt>THISANDPRIOR</tt>, as Notes/Domino does utilize this and is reliant upon it. It should be added as an addendum to RFC 5545 and remain in consideration as implementations handle  <tt>THISANDFUTURE</tt> going forward.</p>
+</li>
+</ol>
+</clause>
+</clause>
+
+<clause id="_summary" obligation="normative">
+<title>Summary</title>
+<p id="_a36de00f-d40d-acde-cec4-73e5a58c308d">As usual, all vendors learned a lot from the testing and actually fixed software onsite. These events are always useful and continue to ensure the protocol is tested appropriately.</p>
+
+<p id="_4f50d8d7-2ee8-2244-1a19-f3c6ef851bb3">Respectfully submitted by Patricia Egen.</p>
+</clause>
+</sections>
+</csd-standard>

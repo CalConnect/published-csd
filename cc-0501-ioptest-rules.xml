@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">January 2005 CalConnect Interoperability Test Scenarios</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0501:2005</docidentifier><docnumber>0501</docnumber><date type="published"><on>2005-01-12</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2005-01-12</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2005</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>IOPTEST</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7fbaec4b-0250-84e7-0e43-81775debe8a4" obligation="normative">
+<p id="_cdc4fc6d-0ab8-7040-218a-aee9d6fd453d">© 2005 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<clause id="_basic_calendar_access_test_scenarios" obligation="normative">
+<title>Basic Calendar Access Test Scenarios</title>
+<clause id="_event_creation" obligation="normative">
+<title>Event creation</title>
+<clause id="_854f340d-3041-23f1-7c3c-ac6c39d5467d" obligation="normative">
+<p id="_8e621dc4-57ed-9742-1240-47540e439d33">Create new single-instance meeting titled “Meeting 1.1” with the location “Seattle”.</p>
+</clause>
+
+<clause id="cls-1.2" obligation="normative">
+<p id="_21cb9664-4994-5f06-f35c-3e4646cbf346">Create new meeting titled “Meeting 1.2” recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks.</p>
+</clause>
+
+<clause id="_2" obligation="normative">
+<p id="_e62540ec-f9ec-e510-192e-fdb4b25ca9a6">Create new single-instance meeting titled “Meeting 1.3” with 2 other attendees.</p>
+</clause>
+
+<clause id="_3" obligation="normative">
+<p id="_374586a4-a17a-024d-cc31-6e073775fc26">Create new single-instance meeting titled “Meeting 1.4” with an alarm set to trigger 15 minutes prior to the schedule time of the meeting.</p>
+</clause>
+</clause>
+
+<clause id="_event_modification" obligation="normative">
+<title>Event modification</title>
+<clause id="_4" obligation="normative">
+<p id="_5571db18-bb29-75c9-3f11-504002be6d9c">Modify the title of meeting “Meeting 1.1” to “Meeting 1.1bis”.</p>
+</clause>
+
+<clause id="_5" obligation="normative">
+<p id="_f6bd0724-e65c-7931-542f-a91a27c01000">Modify the location of the meeting “Meeting 1.1bis” to “Seattle bis”.</p>
+</clause>
+
+<clause id="_6" obligation="normative">
+<p id="_bb16cc65-42f9-6ebc-f70b-38834cdfe38a">Reschedule meeting “Meeting 1.1bis” to the next day.</p>
+</clause>
+
+<clause id="_7" obligation="normative">
+<p id="_8ac8530b-8f21-3617-cef0-f9cb7e44a8b6">Add an attendee to “Meeting 1.1bis”.</p>
+</clause>
+
+<clause id="_8" obligation="normative">
+<p id="_4cb7ed89-8459-0a74-4828-2f6661d9ca61">Add an alarm to “Meeting 1.1bis”.</p>
+</clause>
+
+<clause id="_9" obligation="normative">
+<p id="_209a8bcf-3127-2b39-8080-9bcb70b3ae1c">Modify the title of the 1st instance of the recurring meeting created in <xref target="cls-1.2"/>.</p>
+</clause>
+
+<clause id="_10" obligation="normative">
+<p id="_8b8cb4e5-838c-3404-6f70-8b35f3b2d4d5">Modify the participation status of</p>
+</clause>
+
+<clause id="_11" obligation="normative">
+<p id="_d15e869f-07c5-dfa3-1db8-1fc7e0b7f9cf">Cancel the 4th instance of the recurring meeting created in <xref target="cls-1.2"/>.</p>
+</clause>
+
+<clause id="_12" obligation="normative">
+<p id="_1b012679-9caf-1185-bfef-7539f0c092ee">One client changes “Meeting 1.1bis” to a different time, second client ‘refreshes’ its display to see the modification.</p>
+</clause>
+</clause>
+
+<clause id="_event_retrieval" obligation="normative">
+<title>Event retrieval</title>
+<clause id="_13" obligation="normative">
+<p id="_8a6d5557-2aaa-2d4b-47d8-7eb3688314c8">Retrieve all the components and properties of the meetings scheduled for the current day (i.e., midnight to midnight local time).</p>
+</clause>
+
+<clause id="_14" obligation="normative">
+<p id="_3b79f529-dbfd-0021-2429-4ad3c6dca4c5">Retrieve all the components and properties of the meetings scheduled for the current week.</p>
+</clause>
+
+<clause id="_15" obligation="normative">
+<p id="_0a98f712-4cb5-58b1-c487-b44136f23d84">Retrieve all the components and properties of the meetings scheduled for the current month.</p>
+</clause>
+
+<clause id="_16" obligation="normative">
+<p id="_af53f536-4de2-76c0-d8cf-ef8653576e4f">Retrieve only the <tt>SUMMARY</tt>, <tt>DTSTART</tt> and <tt>DTEND</tt> (or  <tt>DURATION</tt>) properties of the meetings scheduled for the current week.</p>
+</clause>
+</clause>
+
+<clause id="_event_deletion" obligation="normative">
+<title>Event deletion</title>
+<clause id="_17" obligation="normative">
+<p id="_8dc7d8d1-d63c-6b7e-9101-2e641e3146a8">Delete the meeting titled “Meeting 1.1bis”</p>
+</clause>
+
+<clause id="_18" obligation="normative">
+<p id="_54026bc7-f5ab-12b8-6808-33909a1c7eb4">Delete the meeting titles “Meeting 1.2”</p>
+</clause>
+</clause>
+</clause>
+</sections>
+</csd-standard>

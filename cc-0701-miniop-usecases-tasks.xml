@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Min-IOP (Minimum Interoperable Subset) Use Cases for Tasks (VTODO)</title>
+<docidentifier primary="true" type="CalConnect">CC/S 0701:2007</docidentifier><docnumber>0701</docnumber><date type="published"><on>2007-04-19</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Mimi Mugler</completename></name>
+<affiliation><organization>
+<name>UC Berkeley</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2007-04-19</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2007</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="S">specification</doctype><flavor>cc</flavor><editorialgroup><committee>USECASE</committee></editorialgroup></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit id="U_NISTu149">
+        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitName lang="en">degree (degree of arc)</UnitName>
+        <UnitSymbol type="HTML">°</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">°</mi>
+          </math>
+        </UnitSymbol>
+      </Unit></UnitSet><QuantitySet><Quantity id="NISTq9" dimensionURL="#NISTd9" quantityType="base">
+        <QuantityName lang="en-US">plane angle</QuantityName>
+        <QuantityName lang="en-US">angle</QuantityName>
+      </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd9">
+        <PlaneAngle symbol="phi" powerNumerator="1"/>
+      </Dimension></DimensionSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7809dbe8-e645-5f85-32ad-f71bc98571d1" obligation="normative">
+<p id="_50f4b52f-8422-795d-1913-62a3d383a692">© 2007 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_0f2650b8-9cc9-5ca1-b301-b34e0049ef7f" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<p id="_b6663cb0-8fda-b562-0e55-5d70d6d9037f">This document was created by the Use Case Technical Committee of the Calendaring and Scheduling Consortium and defines the use cases for minimum interoperablity for tasks support (VTODO) for calendaring and scheduling. Minimum interoperability is the basic level of functionality our collective experience tells us is necessary to have a useful system. We realize that in some cases it may be more than is currently offered by “basic” calendaring and scheduling applications.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_c406b333-4b05-2346-1323-141787e4e46b">This document was created by the USECASE Technical Committee of the Calendaring and Scheduling Consortium. The document defines the use cases for minimum interoperability of tasks within the calendaring and scheduling application domain. Minimum interoperability is the basic level of functionality our collective experience tells us is necessary to have a useful system. We realize that in some cases it may be more than is currently offered by “basic” calendaring and scheduling applications.</p>
+
+<p id="_70698c09-db61-50fe-4440-1be1937d2c18">A word about the use of ‘task’ versus ‘todo’. In discussion it was determined that while RFC 2445 uses only ‘todo’ and RFC 3283 uses task (once), and in fact RFC 2445 defines the <tt>VTODO</tt> component of an iCalendar object, common usage by vendors and users turns more to the term ‘task’ than ‘todo’ (cp. for example the entry in Wikipedia, in which the entry for todo refers to the entry for Time Management, which uses the term ‘task’). This document defers to that common usage in the interest of clarity and, hopefully, usability.</p>
+</introduction><clause id="_methodology" obligation="informative">
+<title>Methodology</title>
+<p id="_c75b36e4-a72c-ef1e-bf30-2d44a6b70a3d">The set of properties determined to be the minimum set for interoperability was chosen via discussion at CalConnect’s Roundtables VI and VII and in conference calls of the USECASE Technical Committee. Additional contributions were provided in an informal survey of properties that are built into existing software products that have Task management features, which formed a starting point for further winnowing of properties. The software products were not selected by any formal process, but were those available to which committee participants had access. However, we believe these to be a fair representation of the types of calendaring products currently in use. Eventually the USECASE Technical Committee decided that it was advisable to proceed by accepting those properties which were implemented by more than fifty percent (&gt;50%) of the software surveyed as representing a minimum set for interoperability.</p>
+
+<p id="_bf37561f-7419-7ec0-7f8c-d1367711f9ec">The software applications are:</p>
+
+<ul id="_ed6af154-9978-9f4d-e0ae-e5d9757db9ea"><li><p id="_64515707-eeda-9fda-d8c3-54f8ae328dc1">Palm OS</p>
+</li>
+<li><p id="_23bb9376-269b-02f9-6925-23062ef3887f">Oracle Calendar</p>
+</li>
+<li><p id="_56d31f1a-9d06-f22a-7546-07b195c7da0f">Yahoo</p>
+</li>
+<li><p id="_d96e8166-3a05-bd04-0fda-bdb5adf048f4">Evolution</p>
+</li>
+<li><p id="_32d1e6eb-4d10-2499-d6ca-46fa75472227">KDE Kontact</p>
+</li>
+<li><p id="_c73de626-57a4-2f7a-28aa-49daa162ea28">Mozilla Sunbird</p>
+</li>
+<li><p id="_a8731cf5-74b6-b0e3-f7cb-8419ccc20359">Apple iCal</p>
+</li>
+<li><p id="_f8c8de97-8b98-7744-3fe1-902891320fd6">Microsoft Entourage</p>
+</li>
+<li><p id="_f7f1a668-fc26-ef3d-3883-4624cf674e2c">Microsoft Outlook</p>
+</li>
+<li><p id="_ea069f7c-a94e-0e38-3d75-d5519bd36368">Lotus Notes</p>
+</li>
+</ul>
+</clause></preface><sections>
+
+
+
+<terms id="_definitions" obligation="normative">
+<title>Terms and definitions</title><p id="_22bbd802-ea18-b8b3-b961-888167aff3d7">For the purposes of this document, the following terms and definitions apply.</p>
+
+<p id="_8af92ceb-d5df-48a7-bb78-80982d7d67ff">The definitions below are taken from the “Calendaring and Scheduling Glossary of Terms,” version 1.0, October, 2006, from CalConnect. In accordance with previous comments, the term ‘task’ has replaced ‘todo’ whereever ‘todo’ was found.</p>
+
+<term id="term-Alarm"><preferred><expression>
+<name>Alarm</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_83aa05bc-8d06-b799-2432-4980c0c3ad82">A reminder for an event or a task. Alarms may be used to define a reminder for a pending event or an overdue task.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Calendar"><preferred><expression>
+<name>Calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_26c6c376-7671-a491-5ca7-28bab92d5f88">A collection of events, tasks, journal entries, etc. A calendar could be the content of a person or resource’s agenda; it could also be a collection of data serving a more specialized need. Calendars are the basic storage containers for calendaring information.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Calendar-User-_CU_"><preferred><expression>
+<name>Calendar User (CU)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a86b545c-3322-6fc2-f01f-a0d624f69a46">An entity (often a human) that accesses calendar information.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Calendaring"><preferred><expression>
+<name>Calendaring</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_a5f5497e-9ded-d165-855b-bf24f65b06c2">An application domain that covers systems that allow the interchange, access and management of calendar data.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-CalConnect"><preferred><expression>
+<name>CalConnect</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_7d106c12-6745-920c-3f5e-cb6d4d418574">The Calendaring and Scheduling Consortium consisting of vendors and user groups interested in promoting and improving calendaring and scheduling standards and interoperability.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Component"><preferred><expression>
+<name>Component</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e4b820c2-57b4-842b-83a3-86325eb2423c">A piece of calendar data such as an event, a task, or an alarm. Information about components is stored as properties of those components.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="rfc3283" type="inline" citeas="IETF RFC 3283"/></termsource></term>
+
+<term id="term-Coordinated-Universal-Time-_UTC_"><preferred><expression>
+<name>Coordinated Universal Time (UTC)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_266d884e-6af7-2c1d-0d5e-bce7f147ea29">An atomic realization of Universal Time (UT) or Greenwich Mean Time, the astronomical basis for civil time. Time zones around the world are expressed as positive and negative offsets from UT. UTC differs by an integral number of seconds from International Atomic Time (TAI), as measured by atomic clocks and a fractional number of seconds from UT.</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="wiki" type="inline" citeas="Wikipedia"/></termsource></term>
+
+<term id="term-Counter"><preferred><expression>
+<name>Counter</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_fd65a32c-5314-b669-b288-42f480a553aa">A counter-proposal request a participant may send to an event or task organizer to suggest a change to the event or task such as the scheduled date/time, list of participants, etc.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Daylight-Saving-Time-_DST_"><preferred><expression>
+<name>Daylight Saving Time (DST)</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_c858fa85-b336-63d7-0af3-691e9a0a9343">The period of the year in which the local time of a particular time zone is adjusted forward, most commonly by one hour, to account for the additional hours of daylight during summer months.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Event"><preferred><expression>
+<name>Event</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_478964c9-e4e4-5533-74ac-d907de127da7">A calendar object that usually takes up time on an individual calendar. Events are commonly used to represent meetings, appointments, anniversaries, and day events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Free-time-search"><preferred><expression>
+<name>Free time search</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_8b082e4d-6954-e7d2-24f0-6da16f58c214">(Bounded) Common free time. This is typically a search generated by an application to show time on a calendar that is available or open.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Freebusy"><preferred><expression>
+<name>Freebusy</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_23bb240f-2ef8-5cae-02f8-3503cb18428b">A database and/or listing of times when a potential attendee or resource is free or busy. Used when scheduling calendar events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-iCalendar"><preferred><expression>
+<name>iCalendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_5c66e43b-a8f9-1af4-18a9-1ff8eb0f7aac">The Internet Calendaring and Scheduling Core Object Specification. An IETF standard (RFC 2445) for a text representation of calendar data ( <tt>VEVENT</tt>, <tt>VTODO</tt>, <tt>VALARM</tt>, etc.).</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Instance"><preferred><expression>
+<name>Instance</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_d34126e3-d545-d55d-c05b-6ab35b12bc20">When used with recurrences, an instance refers to an item in the set of recurring items.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Invite"><preferred><expression>
+<name>Invite</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_1bbe6fa8-601b-1bc9-a105-262d062358ed">To request the attendance of someone to a calendar event.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Negotiation"><preferred><expression>
+<name>Negotiation</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_efdf0011-39bc-a23e-e9c9-dac90e09076b">Resource conflict resolution. Negotiation is the process of resolving conflicts either programmatically or via direct communication with the participants and invitees of meetings and events.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Notification"><preferred><expression>
+<name>Notification</name>
+</expression>
+</preferred>
+<definition><verbal-definition><ol id="_909a1c42-1d68-f816-08f3-c9f6760b20b7" type="arabic"><li><p id="_a19f1efa-ff52-61b7-88ba-9683e307b4e5">The action of making known, an intimation, a notice.</p>
+</li>
+<li><p id="_25d5a4fe-5401-f86b-ad33-8aeca55941df">Reminder or alarm sent when any resource or parties interested in the resource need an indicator that some attention is required. Possible notification methods include email, paging, audible signal at the computer, visual indicator at the computer, voice mail, telephone.</p>
+</li>
+</ol></verbal-definition></definition>
+ </term>
+
+<term id="term-Organizer"><preferred><expression>
+<name>Organizer</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_9bca4099-219e-c9cf-9bad-a06be83ff99f">The originator of a calendar event typically involving more than one attendee.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Property"><preferred><expression>
+<name>Property</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_8da13d3d-3584-2db2-aa88-d3d1e245f788">A description of some element of an component, such as a start time, title, or location. Properties can have parameters associated with them to modify or add to their meaning.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Publish"><preferred><expression>
+<name>Publish</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_06807acb-6d52-542b-e5d1-703185eddfc3">Make known publicly calendar information such as <tt>freebusy</tt> times.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Recurring"><preferred><expression>
+<name>Recurring</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_34246f79-76d3-163e-fb68-6e05805ad936">Happening more than once over a specified interval, such as weekly, monthly, daily, etc. See  <concept><refterm>Repeating</refterm><renderterm>Repeating</renderterm><xref target="term-Repeating"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Repeating"><preferred><expression>
+<name>Repeating</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_67b138f2-ccac-f05e-9bcb-46b5f1aa54d8">An event that happens more than once. You might want an event to occur on a regular basis. To do this you schedule a repeating event. Any changes you make to the event can automatically be made to all occurrences of the event. If necessary, changes can be made to individual events without affecting the others. For example, if you need to attend a weekly meeting, you can schedule a repeating event on your calendar. Using another example, if you want to schedule a five day vacation, schedule an all-day event that repeats daily for a total of five times. If you have to cancel one of the days, delete the one day without deleting the whole event.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Reminders"><preferred><expression>
+<name>Reminders</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_b22f06c8-91d5-5b07-d5eb-60ca2899947a">See <concept><refterm>Notification</refterm><renderterm>Notification</renderterm><xref target="term-Notification"/></concept>.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Task"><preferred><expression>
+<name>Task</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_b51abafc-5afa-99d7-5fd5-f9d3c76034d1">A calendar object that is commonly used to represent work items.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Text_calendar"><preferred><expression>
+<name>Text/calendar</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_4305967b-f8b5-0a63-64c8-93f7326e1ed3">The MIME content type for encoding iCalendar objects. Example usage includes: email, web pages.</p></verbal-definition></definition>
+ </term>
+
+<term id="term-Time-zone"><preferred><expression>
+<name>Time zone</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_aa6e5e41-8f22-f823-bd40-344b4d8b6bdb">Areas of the Earth that have adopted the same local time. Time zones are generally centered on meridians of a longitude, that is a multiple of  <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">    <mstyle displaystyle="false">      <mn>15</mn>      <mo rspace="thickmathspace">⁢</mo>      <mrow xref="U_NISTu149">        <mstyle mathvariant="normal">          <mi>°</mi>        </mstyle>                              </mrow>    </mstyle> </math><asciimath>15 "unitsml(deg)"</asciimath></stem>, thus making neighboring time zones one hour apart. However, the one hour separation is not universal and the shapes of time zones can be quite irregular because they usually follow the boundaries of states, countries or other administrative areas. Time zones are calendar components that define the time of an event relative to UTC (see below).</p></verbal-definition></definition>
+ </term>
+
+<term id="term-To-do"><preferred><expression>
+<name>To-do</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_e88829d9-56c8-567e-cb77-6c06c15ca363">See <concept><refterm>Task</refterm><renderterm>Task</renderterm><xref target="term-Task"/></concept>.</p></verbal-definition></definition>
+ </term>
+</terms>
+
+<clause id="_properties_used" obligation="normative">
+<title>Properties Used</title>
+<p id="_be47028f-7202-16f2-cfe6-a034e8f10f3d">We’re using the following properties of a Task in this draft (iCalendar <tt>VTODO</tt> specification property name is in square brackets []):</p>
+
+<ol id="_2ef9c629-daf1-2c0f-622d-0202b45089b9" type="arabic"><li><p id="_366cbb5a-21a5-e0a3-09b7-626f77cc3cb4">Title [<tt>SUMMARY</tt>]</p>
+</li>
+<li><p id="_97b0d96e-0128-786f-5f29-0268816ca81a">Priority [<tt>PRIORITY</tt>: iCalendar supports values 1-9]</p>
+</li>
+<li><p id="_e2888098-21e9-5abd-c596-d1b5406f868c">Due/End Date [<tt>DTEND</tt>]</p>
+</li>
+<li><p id="_d0fcdfb7-e816-13a1-939e-ae867fb08549">Access/Privacy [<tt>CLASS</tt>]</p>
+</li>
+<li><p id="_f7aa9ec7-ea47-f3ac-5fcd-7db34802ee9c">Notes/Details/Desc [<tt>DESCRIPTION</tt>]</p>
+</li>
+<li><p id="_50808992-18e5-9725-363f-1219f9b7efbb">Category [<tt>CATEGORIES</tt>]</p>
+</li>
+<li><p id="_17b1ecd0-be04-9286-9e0c-b19ac5397b08">Start Date [<tt>DTSTART</tt>]</p>
+</li>
+<li><p id="_4a4f0bfc-0050-40a6-19ab-7554c9e30835">Percent Completed [<tt>COMPLETED</tt>: iCalendar support values 0-100%]</p>
+</li>
+<li><p id="_f032c11e-d854-6f87-b59a-8d89fea8667e">Alarm/Reminder [<tt>VALARM</tt>]</p>
+</li>
+</ol>
+
+<p id="_c3df8e84-9da3-9ff9-7457-edc25cb1240f">In the examples below, the Task property (as listed above) are indicated in square brackets []:</p>
+
+<ol id="_f91b67d6-3256-235f-a3e4-993925aac9a2" type="arabic"><li><p id="_f9fde5f1-5cfa-c4d0-6f14-66d53eafd53f">Explanatory text [property numbers]:</p>
+</li>
+</ol>
+
+<example id="_282481a6-626c-5739-3279-4bea6a262818"><ol id="_e4623d70-d5bb-9108-d36d-05c559680ecb" type="arabic"><li><p id="_2b9bc504-1df2-0cfa-13c8-f178df26b5f6">A calendar user wants to create a task that must be done by a particular date (but could be done sooner) [1,3]:</p>
+</li>
+</ol>
+</example>
+</clause>
+
+<clause id="_use_cases" obligation="normative">
+<title>Use Cases</title>
+<clause id="_general_tasks" obligation="normative">
+<title>General Tasks</title>
+<clause id="_task_can_be_done_any_time_1" obligation="normative">
+<title>Task can be done any time [1]</title>
+<example id="_e517e5b9-3c07-bcf0-d1e6-8b1a5ed3f0d6"><p id="_72f169d4-b47a-4ad4-baf9-8a3371aaa84c">File reports.</p>
+</example>
+
+<example id="_bbb6f12c-1db0-f437-6d01-22b99cde9fd1"><p id="_182bc5f0-265d-d049-c1f8-bc368f7a3558">Clean desk off.</p>
+</example>
+</clause>
+
+<clause id="_task_requires_more_description_15" obligation="normative">
+<title>Task requires more description [1,5]</title>
+<example id="_ed865424-96c2-0bfa-f3af-2f1389c126d3"><p id="_f6d0c980-e70f-6636-d63f-a30779d7d7fa">Pick up roast from Jacobsens [<tt>DESC</tt> — Brennans not the Jacobsens on Raymond Road].</p>
+</example>
+
+<example id="_f1845eb4-4bcf-8f86-9fbf-8e83d17df333"><p id="_c46a7264-5271-e8d7-ff42-bba88fe757fb">Pick up mail from post office box [<tt>DESC</tt> — combination is AB — F — IJ].</p>
+</example>
+</clause>
+
+<clause id="_task_indicates_that_it_was_completed_percentage_0_100_note_this_is_not_a_date_string_18" obligation="normative">
+<title>Task indicates that it was completed, (percentage 0-100%), NOTE: this is not a date string) [1,8]</title>
+<example id="_5d6d1712-e301-db34-a63f-27d7cb283ee9"><p id="_cfadaae1-63d7-2c34-3ebe-a98686b23f2b">Buy sister flowers for birthday [100%].</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_tasks_have_dueend_or_start_dates" obligation="normative">
+<title>Tasks have Due/End or Start Dates</title>
+<clause id="_task_must_be_done_by_a_particular_date_but_perhaps_could_be_done_sooner_13" obligation="normative">
+<title>Task must be done by a particular date (but perhaps could be done sooner) [1,3]</title>
+<example id="_2ad34c69-f036-3435-b455-84eee19c8326"><p id="_61cfe029-9bbc-c6fe-e243-e1a3f6b69885">File income taxes by April 15.</p>
+</example>
+
+<example id="_8388ba59-d84b-c748-839a-d219ed5841ad"><p id="_e3e74de5-97ba-a5b7-c42d-15f2015e9308">Deliver project scope to customer by March 1.</p>
+</example>
+
+<example id="_7e65675d-da57-fcd4-c3b3-e6d3b5a054ee"><p id="_c0eb5ac3-4a5d-f55f-d02a-7a6a8c25c64e">Give dog heartworm medicine on the 9th of the month.</p>
+</example>
+
+<example id="_f815c082-e4f1-4a24-ad2f-4015ec5d0a7b"><p id="_c1ca04b1-3946-af9d-b872-6f4dcde62ef8">Certificate for web server expires on the October 20, get new one to install by that date.</p>
+</example>
+</clause>
+
+<clause id="_task_cannot_begin_before_a_prior_task_concludes_1237" obligation="normative">
+<title>Task cannot begin before a prior task concludes [1,2,3,7]</title>
+<example id="_f0045039-6619-9474-6287-598f73ff8356"><p id="_6150caf2-f8d5-b432-9849-a6079f146ef1">Task 1 — Rewrite course schedule import code due to DST changes by January 22nd when classes start — priority 1.</p>
+
+<p id="_e6d6d299-31d8-1565-fa70-ac5a6a58a02b">Task 2 — Begin work on event data update on January 23rd after course schedule rewrite is done.</p>
+</example>
+
+<example id="_73ede3ff-9b83-f100-4569-73df2ab09cd7"><p id="_373f7749-2893-5d8c-2750-95a9f717b051">Task 1 — Install Solaris patch updates on test machines by September 15th.</p>
+
+<p id="_a596e0a4-4400-fa66-85db-a937c0eb3a6c">Task 2 — After Solaris patched, patch Oracle OCAS system (which requires the Solaris patches), begin September 16th.</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_tasks_have_limitedprivate_or_publicgroup_access" obligation="normative">
+<title>Tasks have limited/private or public/group access</title>
+<clause id="_task_that_can_only_be_viewed_by_creator_134" obligation="normative">
+<title>Task that can only be viewed by creator [1,3,4]</title>
+<example id="_10cde246-30e2-8014-82b4-6d7c959c0133"><p id="_1e1f2070-259b-f542-38b7-104ad03e684c">Take son to physical therapist for bum knee (private/personal).</p>
+</example>
+
+<example id="_e6509369-209d-b641-b92f-fbd570a9d5b5"><p id="_6d0cd004-eb21-fcdd-67a2-f90093596ac0">Buy train ticket for trip to Portland (personal/private).</p>
+</example>
+
+<example id="_ab23dc5e-82f2-7b06-29b1-eefda97d8880"><p id="_1f76444c-8c1b-9598-3a79-38ea2c122cf9">Vacation — Out of Town (Public)</p>
+</example>
+</clause>
+
+<clause id="_task_that_can_be_viewed_by_a_selected_group_of_others_14" obligation="normative">
+<title>Task that can be viewed by a selected group of others [1,4]</title>
+<example id="_c248b849-48f9-1736-f9ff-8a43592937af"><p id="_9f716d38-7c65-d7cb-2619-de0a1b82a4ed">Get figures together on revenue for 1st quarter for audit (Group).</p>
+</example>
+
+<example id="_06b33989-2915-ee18-e5e0-4113493939a8"><p id="_3b7758b3-843a-8a66-9b67-f69f8232ecca">Practice 1st 32 bars of dance program (Group).</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_prioritized_tasks" obligation="normative">
+<title>Prioritized Tasks</title>
+<clause id="_task_is_more_important_than_other_tasks_123" obligation="normative">
+<title>Task is more important than other tasks [1,2,3]</title>
+<example id="_79f300a3-6e6c-d1e4-ea4a-4c2604ddea86"><p id="_de3ab73f-d3e9-8f9d-da5b-f3a6dbfa1912">Prepare performance review documents for manager before March 1st — priority 1.</p>
+</example>
+
+<example id="_00153440-89e6-53c1-cc2b-5839bde17958"><p id="_5403a504-99a2-a251-a820-a148ec3ecc83">Research resource usage for CalConnect presentation before January 31st — priority 2.</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_task_categorization" obligation="normative">
+<title>Task categorization</title>
+<clause id="_task_categories_indicate_that_multiple_tasks_are_grouped_narrowly_defined" obligation="normative">
+<title>Task categories indicate that multiple tasks are grouped, narrowly defined</title>
+<example id="_fc90e42e-aa30-6cf0-5cda-3eae2e22e954"><p id="_28576372-b35b-e020-a396-ed0c04acc646">All tasks have category of ‘Set up web application’ [1,6]:</p>
+
+<p id="_8c734bfb-df24-d399-3c4e-eca6f1363987">Task 1 — Install apache 2 on test host ithilien.</p>
+
+<p id="_58ae011f-becd-fd94-6b50-8c41064bc55a">Task 2 — Install php5 on test host ithilien.</p>
+
+<p id="_62927e6e-4b9a-3d12-f4ac-8dfb787b7674">Task 3 — Install perl5 on test host ithilien.</p>
+
+<p id="_75c0da0e-f73e-ac3b-20eb-2d58ff32c26e">Task 4 — Install tomcat on test host ithilien.</p>
+
+<p id="_9d8bc6d2-ffd4-85ee-b15a-11a456ae0920">Task 5 — Install ant on test host ithilien.</p>
+
+<p id="_33e5b9b7-8829-d3ee-ddc6-66139223ea40">Task 6 — Install latest Java5 SDK on test host ithilien.</p>
+
+<p id="_56a78ede-7c71-1995-438f-5f0d542b9ba3">Task 7 — Install Oracle Java/SDK on test host ithilien.</p>
+
+<p id="_9fa1d3b4-000d-1836-46cd-f6b99284978b">Task 8 — Configure cvs.</p>
+
+<p id="_b8791d0b-e314-bc24-9ceb-f3e2bd84bdc9">Task 9 — Checkout web app code from cvs.</p>
+
+<p id="_0a288732-74c0-8910-6375-c8057c7c300f">Task 10 — Use ant and deploy code.</p>
+
+<p id="_dc7663e4-8eaa-3adb-baca-9b912f0a33cb">Task 11 — Confirm application is functioning correctly.</p>
+</example>
+
+<example id="_8b6d28a8-a330-0b91-66fb-8e220d4bc3aa"><p id="_0c5f4e86-4544-e661-aba2-1cba40cfb65c">All tasks have category of ‘Party Preparation’:</p>
+
+<p id="_63a7a1e9-08af-e730-534c-b5dce0cb447b">Task 1 — Hire house cleaner for day before party.</p>
+
+<p id="_82974b59-aeb5-212d-db34-d78095962959">Task 2 — Order flowers one week before party.</p>
+
+<p id="_9594a95a-466d-dd8b-7038-29b76def7047">Task 3 — Order appetizers from deli one week before party.</p>
+
+<p id="_b8f70568-3254-1e22-e3d5-6beab63ec5fe">Task 4 — Contact caterers about dinner options and make decision.</p>
+
+<p id="_e4bd0fba-ce5e-24da-b983-34eb47f611c5">Task 5 — Send out invitations.</p>
+
+<p id="_1e593f24-1d53-a465-4b86-cca319d3907e">Task 6 — Contact rental store about chairs and tables.</p>
+
+<p id="_01db2132-4dc5-17fd-a8a8-27aaa0ab386d">Task 7 — Arrange babysitting for pets and kids (grandparents).</p>
+</example>
+</clause>
+
+<clause id="_task_categories_of_a_more_general_nature_broadly_defined" obligation="normative">
+<title>Task categories of a more general nature (broadly defined)</title>
+<example id="_7443060f-6fc6-e04e-e181-322a5d580e7c"><p id="_6aaa1f34-18c9-8e40-5bae-2077dec84826">Personal/Family tasks are differentiated by category from work-related tasks.</p>
+
+<p id="_e6740ff7-5313-5da6-677f-38c18882165e">Task 1 — Personal: Make appt. with counselor</p>
+
+<p id="_a6410d9c-474c-899c-b0fc-68d09c49f05b">Task 2 — Work: Make sales calls.</p>
+</example>
+
+<example id="_b353ebb6-bcdd-cf3f-f57a-db906fcac12a"><p id="_0611cec3-17f3-8f66-a8e2-6d3dea7c9868">Tasks belong to long-term or permanent categories related to job areas (e.g., Calendaring, system administration, consulting)</p>
+
+<p id="_cdcc99d3-db56-5f24-e010-36fdc5669b5d">Task 1 — Calendaring: Attend calendaring conference</p>
+
+<p id="_59442411-323d-b2c1-b51d-72a6e8b6e1d2">Task 2 — System administration: patch OS</p>
+
+<p id="_502ef88d-93b4-8cd1-9db6-d3a40ddd41ab">Task 3 — Consulting: respond to client’s question</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_tasks_use_alarms" obligation="normative">
+<title>Tasks use alarms</title>
+<note id="_20d883a3-ac91-4b3c-af78-e81cd06f691e"><p id="_363b7602-3a82-cc34-14b9-46d5c2b42d58">Alarms are tied to the Due/End Date/Start Date attributes as one would expect.</p>
+</note>
+
+<example id="_440b551c-1956-250e-6d2b-68741033ea87"><p id="_bb6d34e2-297a-5da4-a77d-1570d3ae4c3a">Take the garbage to the curb on Mondays, start time of 8am, with alarm (<tt>VALARM</tt>: Audio prompt, with a trigger of one hour before the start time) [1,3,7,9].</p>
+</example>
+
+<example id="_e3db4aba-808b-41eb-4acc-f8114a0b2cec"><p id="_30912c19-e666-685e-7a5d-c2932ca59544">Give dog heartworm medicine on the 9th of the month, with alarm (<tt>VALARM</tt>: Email prompt, with a trigger of one day before due date) [1,3,7,9].</p>
+</example>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rfc2445" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2445</uri>
+  <docidentifier type="IETF" primary="true">RFC 2445</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2445</docidentifier>
+  <docnumber>RFC2445</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Stenerson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_88bab3dc-0aad-01bb-6a2a-9a92c5a12308">This memo has been defined to provide the definition of a common format for openly exchanging calendaring and scheduling information across the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2445</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ICALENDAR</keyword>
+  <keyword>interoperable</keyword>
+  <keyword>mime</keyword>
+  <keyword>multipurpose internet mail extensions</keyword>
+</bibitem><bibitem id="rfc3283" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Guide to Internet Calendaring</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3283</uri>
+  <docidentifier type="IETF" primary="true">RFC 3283</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3283</docidentifier>
+  <docnumber>RFC3283</docnumber>
+  <date type="published">
+    <on>2002-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Mahoney</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Babics</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Taler</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_070fe19b-8a4f-8e78-dd67-df71fc28a318">This document describes the various Internet calendaring and scheduling standards and works in progress, and the relationships between them. Its intent is to provide a context for these documents, assist in their understanding, and potentially aid in the design of standards-based calendaring and scheduling systems. The standards addressed are RFC 2445 (iCalendar), RFC 2446 (iTIP), and RFC 2447 (iMIP). The work in progress addressed is “Calendar Access Protocol” (CAP). This document also describes issues and problems that are not solved by these protocols, and that could be targets for future work. This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3283</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>scheduling systems</keyword>
+  <keyword>cap</keyword>
+  <keyword>calendar access protocool</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+</bibitem><bibitem id="cc-glossary" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Calendaring and Scheduling Glossary of Terms V1.0 (Obsoleted by CD1102) (CD 0610)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Calendaring and Scheduling Glossary of Terms V1.0 (Obsoleted by CD1102) (CD 0610)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0610%20Calendaring%20and%20Scheduling%20Glossary%20of%20Terms%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/R 0610:2006</docidentifier>
+  <version>
+    <revision-date>2006-10-24</revision-date>
+  </version>
+</bibitem><bibitem id="wiki">
+  <formattedref format="application/x-isodoc+xml">
+    <link target="https://www.wikipedia.org/"/>
+  </formattedref>
+  <docidentifier>Wikipedia</docidentifier>
+  
+</bibitem>
+
+
+
+
+</references></bibliography>
+</csd-standard>

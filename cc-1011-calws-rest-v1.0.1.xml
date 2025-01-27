@@ -1,0 +1,2679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">CalWS-Rest - Restful Web Services Protocol for Calendaring</title>
+<docidentifier primary="true" type="CalConnect">CC/R 1011:2012</docidentifier><docnumber>1011</docnumber><date type="published"><on>2012-02-22</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Michael Douglass</completename></name>
+<affiliation><organization>
+<name>Rensselaer Polytechnic Institute</name>
+</organization></affiliation><email>douglm@rpi.edu</email></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1.0.1</edition><version><revision-date>2012-02-22</revision-date></version><language>en</language><script>Latn</script><abstract><review reviewer="(Unknown)" date="2025-01-25T00:00:00Z" type="todo"><p>Summary of the technical purpose of the document.</p>
+</review></abstract><status><stage>draft</stage></status><copyright><from>2012</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/R 1011:2012</docidentifier>
+  <date type="published">
+    <on>2011-03-19</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Toby Considine</completename>       </name>
+    </person>
+  </contributor>
+  <edition>0.1</edition>
+<amend change="modify"><description><p id="_baccbfe1-1eea-1abf-8b51-42848191778e">ws-calendar-wd19 — Originally contributed by Mike Douglass as part of WS-Calendar v1.0 Specification. See full history in that document.</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/R 1011:2012</docidentifier>
+  <date type="updated">
+    <on>2012-02-13</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Toby Considine</completename>       </name>
+    </person>
+  </contributor>
+  <edition>0.2</edition>
+<amend change="modify"><description><p id="_2db8f075-3c81-087b-844a-09bf98e83516">Ported to separate document. “Promoted” all section headers.</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/R 1011:2012</docidentifier>
+  <date type="updated">
+    <on>2012-02-15</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Toby Considine</completename>       </name>
+    </person>
+  </contributor>
+  <edition>0.3</edition>
+<amend change="modify"><description><p id="_171f65a1-d40e-030d-9a1f-3f2d8ac57d7e">Added Intro, updated namespaces to meet OASIS standard</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/R 1011:2012</docidentifier>
+  <date type="updated">
+    <on>2012-02-17</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Toby Considine</completename>       </name>
+    </person>
+  </contributor>
+  <edition>0.4</edition>
+<amend change="modify"><description><p id="_c57c78e0-2692-5b23-43ea-befbfd3a0d77">Additional namespace clean-up in response to Cover comments.</p>
+
+<p id="_f5f4f976-2123-7cea-490b-73cfeae7ba9b">Consistent capitalization of calWS when used as a namespace identifier</p>
+
+<p id="_fbc1e3ad-ec1a-fd4c-9bd8-2a578d32cb54">Clean-up of CalWS discussion in appendix</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/R 1011:2012</docidentifier>
+  <date type="updated">
+    <on>2012-02-17</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>          <completename>Toby Considine</completename>       </name>
+    </person>
+  </contributor>
+  <edition>0.5</edition>
+<amend change="modify"><description><p id="_362b5c05-52f2-9799-8961-b685bd62e255">Types, capitalization, missing XRD reference</p>
+</description></amend></bibitem></relation><ext><doctype abbreviation="R">report</doctype><flavor>cc</flavor><editorialgroup><committee>XML</committee></editorialgroup></ext></bibdata><metanorma-extension><clause id="_document_history" obligation="normative">
+<title>document history</title>
+<sourcecode id="_fcdd7170-4130-6351-1751-61a9dd7bac74" lang="yaml">- date:
+  - type: published
+    value:  2011-03-19
+  edition: 0.1
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: ws-calendar-wd19 -- Originally contributed by Mike Douglass as part of WS-Calendar v1.0 Specification. See full history in that document.
+- date:
+  - type: updated
+    value:  2012-02-13
+  edition: 0.2
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: Ported to separate document. "Promoted" all section headers.
+- date:
+  - type: updated
+    value:  2012-02-15
+  edition: 0.3
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: Added Intro, updated namespaces to meet OASIS standard
+- date:
+  - type: updated
+    value:  2012-02-17
+  edition: 0.4
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: |
+        Additional namespace clean-up in response to Cover comments.
+
+        Consistent capitalization of calWS when used as a namespace identifier
+
+        Clean-up of CalWS discussion in appendix
+- date:
+  - type: updated
+    value:  2012-02-17
+  edition: 0.5
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: Types, capitalization, missing XRD reference</sourcecode>
+
+</clause>
+<presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_4a78cf53-692a-d957-48ab-fc25883e994e" obligation="normative">
+<p id="_ead63c6d-16c1-5177-8eba-a2c1cbc5bc56">© 2012 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_bff242ff-9444-a03f-7481-fbcbf6830c25" obligation="normative">
+<title>Warning for Drafts</title>
+<p id="_cc4d8c67-279a-85b4-0f49-fd97183ecc41">This document is not a CalConnect Standard. It is distributed for review and         comment, and is subject to change without notice and may not be referred to as         a Standard. Recipients of this draft are invited to submit, with their         comments, notification of any relevant patent rights of which they are aware         and to provide supporting documentation.</p>
+</clause>
+</license-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><abstract id="_abstract"><title>Abstract</title><review id="_98dc6e11-5c3c-cfcc-b946-65c8e1ada31c" reviewer="(Unknown)" date="2025-01-25T00:00:00Z" type="todo"><p id="_6de76779-972e-0e26-303c-046e6ae192db">Summary of the technical purpose of the document.</p>
+</review></abstract><foreword id="_f869c334-bc7f-5c18-8ccc-16460f162c13" obligation="informative">
+<title>Foreword</title>
+<p id="_35a41899-1755-fd8e-4995-7b96b0fd60ca">This document was editorially updated to ensure synchronization with the OASIS WS-Calendar publication of CalWS-SOAP as V1.0 for public review and contains the same content.</p>
+
+<p id="_365a1108-4295-d246-850f-76214edc607d">This document is copyright ©2012 by The Calendaring and Scheduling Consortium and is licensed under the Creative Commons 3.0 Unported License:</p>
+
+<p id="_3e48cbcb-f7c1-5faa-790d-058fff8b2408"><link target="http://creativecommons.org/licenses/by/3.0/"/>.</p>
+
+<dl id="_f3b60a80-bd3d-a64e-81d2-1d03d311c6d1"><dt>Chair(s)</dt>
+<dd><p id="_ef9e6b7d-c735-e73b-ae11-09a24c3c272f">Michael Douglass</p>
+</dd>
+<dt>Related work</dt>
+<dd><p id="_70c0fc27-865c-3c59-b1ce-1ac11bcc2301">This specification is related to:</p>
+
+<ul id="_d58f9daf-364f-f90a-4776-52ac6048fe90"><li><p id="_136b7948-4526-50b3-6cc7-064b73ed701c"><em>WS-Calendar Version 1.0</em>. Latest version.<br/><link target="http://docs.oasis-open.org/ws-calendar/ws-calendar/v1.0/ws-calendar-1.0-spec.html"/></p>
+</li>
+</ul>
+</dd>
+</dl>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_4aea529c-7255-faf7-5df3-2761afcdfb08">The CalWS REST protocol is built upon and makes the same assumptions about structure as the CalDAV protocol defined in  <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"/> and related specifications. It does NOT require nor assume the WebDAV nor CalDAV protocol.</p>
+
+<p id="_9d17daab-a77e-9264-60dd-a609c812e1d0">Calendar resources, for example events and tasks are stored as named resources (files) inside special collections (folders) known as “ <strong>Calendar Collections</strong>”.</p>
+
+<p id="_2a6a4c05-d26f-7e37-335a-f99733af0faa">This specification can be looked upon as a layer built on top of CalDAV and defines the basic operations which allow creation, retrieval, update and deletion. In addition, query and  <tt>freebusy</tt> operations are defined to allow efficient, partial retrieval of calendar data.</p>
+
+<p id="_646c3771-973e-9652-b775-3bf5470b38b8">This does not mean that a CalWS service must be built on CalDAV, merely that a degree of conformity is established such that services built in that manner do not have a significant mismatch. It is assumed that some CalWS REST services will be built without any CalDAV support.</p>
+
+<clause id="_terminology" obligation="informative">
+<title>Terminology</title>
+<p id="_3722ddbe-e996-c485-86a1-3528ff8b3a06">The keywords “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in  <eref type="inline" bibitemid="rfc2119" citeas="IETF RFC 2119"/>.</p>
+</clause>
+
+<clause id="_namespace" obligation="informative">
+<title>Namespace</title>
+<p id="_d97ac1ed-1032-a9d0-e0aa-f57ccddcbb1a">XML namespaces and prefixes used in this standard:</p>
+
+<table id="_f5ef331f-b928-71d0-d332-df55953a57dd">
+<name>XML Namespaces in this standard</name>
+<tbody><tr><td valign="top" align="left">Prefix</td>
+<td valign="top" align="left">Namespace</td>
+</tr><tr><td valign="top" align="left">xcal</td>
+<td valign="top" align="left">urn:ietf:params:xml:ns:icalendar-2.0</td>
+</tr><tr><td valign="top" align="left">calWS</td>
+<td valign="top" align="left"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST"/></td>
+</tr><tr><td valign="top" align="left">xrd</td>
+<td valign="top" align="left"><link target="http://docs.oasis-open.org/ns/xri/xrd-1.0"/></td>
+</tr></tbody>
+</table>
+</clause>
+</introduction></preface><sections>
+
+
+
+
+
+<clause id="_calendar_services" obligation="normative">
+<title>Calendar Services</title>
+<p id="_22edaa08-65bf-5048-6603-31602d94dc9e">The Service interactions are built upon and make the same assumptions about structure as the CalDAV protocol defined in  <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"/> and related specifications. It does NOT require nor assume the WebDAV nor CalDAV protocol but does make use of some of the same elements and structures in the CalDAV XML namespace.</p>
+
+<p id="_3bfa7b03-9efe-cbd6-30d9-529a433c94d8">Calendar resources, for example events and tasks are stored as named resources (files) inside special collections (folders) known as “ <strong>Calendar Collections</strong>”.</p>
+
+<p id="_5f630544-5b50-78f3-1802-d2bcf63c4f0e">These services can be looked upon as a layer built on top of CalDAV and defines the basic operations which allow creation, retrieval, update and deletion. In addition, query, and free-busy operations are defined to allow efficient, partial retrieval of calendar data.</p>
+
+<p id="_4fd0abce-dc25-793f-a281-b37834330619">These services assume a degree of conformity with CalDAV is established such that services built in that manner do not have a significant mismatch. It is assumed that some WS-Calendar services will be built without any CalDAV support.</p>
+
+<clause id="_overview_of_the_protocol" obligation="normative">
+<title>Overview of the protocol</title>
+<p id="_6a8d0f20-a9fa-2033-68c8-f4f01620fe6a">The protocol is an HTTP based RESTfull protocol using a limited set of methods. Each request may be followed by a response containing status information. The following methods are specified in the protocol description,  <tt>PUT</tt>, <tt>POST</tt>, <tt>GET</tt>, <tt>DELETE</tt>. To avoid various issues with certain methods being blocked clients may use the  <tt>X-HTTP-Method-Override:</tt> header to specify the intended operation. Servers  <tt>SHOULD</tt> behave as if the named method was used.</p>
+
+<sourcecode id="_c1726d74-4659-4f6b-fb12-fafb7fb2d0a6" unnumbered="true">POST /user/fred/calendar/ HTTP/1.1
+...
+X-HTTP-Method-Override: PUT
+Properties</sourcecode>
+
+
+<p id="_9f21185d-2b02-b447-7ec4-0b3048b2e326">A service or resource will have a number of properties which describe the current state of that service or resource. These properties are accessed through a  <tt>GET</tt> on the target resource or service with an <tt>ACCEPT</tt> header specifying <tt>application/xrd+xml</tt>. See <xref target="sec-2.1.3.6"/>.</p>
+
+<p id="_29df1d38-ef31-2259-a3bf-b76bd8209bf9">The following operations are defined by this specification:</p>
+
+<ul id="_a140eef8-daee-9082-37e6-0266f973ea41"><li><p id="_63d2928d-0780-96ae-8edc-ff19bc231889">Retrieval and update of service and resource properties</p>
+</li>
+<li><p id="_aa1c8075-b6f7-cfe7-663f-61ddeb2adec3">Creation of a calendar object</p>
+</li>
+<li><p id="_b2caf0d9-cee2-e9d3-1f9d-865051a12a51">Retrieval of a calendar object</p>
+</li>
+<li><p id="_3cadf6ef-03f7-5477-e934-5d39cd8a594f">Update of a calendar object</p>
+</li>
+<li><p id="_976c1695-8e94-d61a-887a-0dd6f73499d8">Deletion of a calendar object</p>
+</li>
+<li><p id="_6cde17f9-b7e2-8f6d-f2f4-a739523f2658">Query</p>
+</li>
+<li><p id="_889a877a-a6b7-05cf-49da-9b47be8a9383">Free-busy query</p>
+</li>
+</ul>
+
+<clause id="_calendar_object_resources" obligation="normative">
+<title>Calendar Object Resources</title>
+<p id="_f0c1d40d-a2cb-a521-b13f-923f49f33204">The same restrictions apply to Calendar Object Resources as specified in CalDAV <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"><localityStack><locality type="section"><referenceFrom>4.2</referenceFrom></locality></localityStack></eref>. An additional constraint for CalWS is that no timezone specifications are transferred.</p>
+</clause>
+
+<clause id="_timezone_information" obligation="normative">
+<title>Timezone information</title>
+<p id="_e147064c-b64c-8aa5-bb3a-9c0d3b1f31e7">It is assumed that the client and server each have access to a full set of up to date timezone information. Timezones will be referenced by a timezone identifier from the full set of Olson data together with a set of well-known aliases defined [TZDB]. CalWS services may advertise themselves as timezone servers through the server properties object.</p>
+</clause>
+
+<clause id="_issues_not_addressed_by_this_specification" obligation="normative">
+<title>Issues not addressed by this specification</title>
+<p id="_2f04215c-679d-6765-815d-4540bdf32859">A number of issues are not addressed by this version of the specification, either because they should be addressed elsewhere or will be addressed at some later date.</p>
+
+<clause id="_access_control" obligation="normative">
+<title>Access Control</title>
+<p id="_d43f07b7-da3f-dbd8-2d07-a4df39183661">It is assumed that the targeted server will set an appropriate level of access based on authentication. This specification will not attempt to address the issues of sharing or Access Control Lists (ACLs).</p>
+</clause>
+
+<clause id="_provisioning" obligation="normative">
+<title>Provisioning</title>
+<p id="_6101b3ef-8f6a-c748-54b0-a1da3941fe55">The protocol will not provide any explicit provisioning operations. If it is possible to authenticate or address a principals calendar resources then they  <tt>MUST</tt> be automatically created if necessary or appropriate</p>
+</clause>
+
+<clause id="_copymove" obligation="normative">
+<title>Copy/Move</title>
+<p id="_30c02a40-f566-0a0c-440a-c3aff67e1c1c">These operations are not yet defined for this version of the CalWS protocol. Both operations raise a number of issues. In particular implementing a move operation through a series of retrievals, insertions and deletions may cause undesirable side-effects. Both these operations will be defined in a later version of this specification.</p>
+</clause>
+
+<clause id="_creating_collections" obligation="normative">
+<title>Creating Collections</title>
+<p id="_04b32daa-f120-c19a-20b6-592f22b0f030">We will not address the issue of creating collections within the address space. The initial set is created by provisioning.</p>
+</clause>
+
+<clause id="_retrieving_collections" obligation="normative">
+<title>Retrieving collections</title>
+<p id="_28b39a0b-07ca-741b-ee7f-e40b89b8c3cf">This operation is currently undefined. A <tt>GET</tt> on a collection may fail or return a complete calendar object representing the collection.</p>
+</clause>
+
+<clause id="sec-2.1.3.6" obligation="normative">
+<title>Setting service and resource properties.</title>
+<p id="_57844e91-2e59-cc7f-cfa0-81799652289b">These operations are not defined in this version of the specification. In the future it will be possible to define or set the properties for the service or resources within the service.</p>
+</clause>
+</clause>
+
+<clause id="_calws_glossary" obligation="normative">
+<title>CalWS Glossary</title>
+<clause id="_hrefs" obligation="normative">
+<title>Hrefs</title>
+<p id="_e7cec4b2-ed40-65e8-729c-8d39ba51cddf">An <tt>href</tt> is a URI reference to a resource, for example</p>
+
+<sourcecode id="_0ffb09af-0be4-5d70-063e-6d9ccb63e848" unnumbered="true">"http://example.org/user/fred/calendar/event1.ics".</sourcecode>
+
+
+<p id="_4c8e68d4-7ced-f7b8-06bb-ff918a0b509b">The URL above reflects a possible structure for a calendar server. All URLs should be absolute or path-absolute following the rules defined in  <eref type="inline" bibitemid="rfc4918" citeas="IETF RFC 4918"><localityStack><locality type="section"><referenceFrom>8.3</referenceFrom></locality></localityStack></eref>.</p>
+</clause>
+
+<clause id="_calendar_object_resource" obligation="normative">
+<title>Calendar Object Resource</title>
+<p id="_5b0abc6f-11b2-8285-b261-37ae052763d9">A calendar object resource is an event, meeting or a task. Attachments are resources but NOT calendar object resources. An event or task with overrides is a single calendar resource entity.</p>
+</clause>
+
+<clause id="_calendar_collection" obligation="normative">
+<title>Calendar Collection</title>
+<p id="_1d732800-0bad-34a3-d74c-4a3d45a98f40">A folder only allowed to contain calendar object resources.</p>
+</clause>
+
+<clause id="_scheduling_calendar_collection" obligation="normative">
+<title>Scheduling Calendar Collection</title>
+<p id="_c2804f13-5602-352e-d178-a92128f2f676">A folder only allowed to contain calendar resources which is also used for scheduling operations. Scheduling events placed in such a collection will trigger implicit scheduling activity on the server.</p>
+</clause>
+
+<clause id="_principal_home" obligation="normative">
+<title>Principal Home</title>
+<p id="_e9406134-9310-e74b-fa8b-69d69c0ecad9">The collection under which all the resources for a given principal are stored. For example, for principal “fred” the principal home might be “/user/fred/”</p>
+</clause>
+</clause>
+</clause>
+</clause>
+
+<clause id="_error_conditions" obligation="normative">
+<title>Error conditions</title>
+<p id="_9b1e55e8-2723-bda0-bcf6-c75afb933c62">Each operation on the calendar system has a number of pre-conditions and post-conditions that apply.</p>
+
+<p id="_03c0dedc-cc3a-f154-46ed-a8d74e194e3b">A “precondition” for a method describes the state of the server that must be true for that method to be performed. A “post-condition” of a method describes the state of the server that must be true after that method has been completed. Any violation of these conditions will result in an error response in the form of a CalWS XML error element containing the violated condition and an optional description.</p>
+
+<p id="_5e9f3e0a-dcb7-5db8-3c80-b5483b3eee94">Each method specification defines the preconditions that must be satisfied before the method can succeed. A number of post-conditions are generally specified which define the state that must exist after the execution of the operation. Preconditions and post-conditions are defined as error elements in the CalWS XML namespace.</p>
+
+<clause id="_example_error_with_caldav_error_condition" obligation="normative">
+<title>Example: error with CalDAV error condition</title>
+<sourcecode id="_5be9026d-9055-4020-6bdd-0f8c521abd38" unnumbered="true">&lt;?xml version="1.0" encoding="utf-8"
+  xmlns:CW="Error! Reference source not found.""
+  xmlns:C="http://docs.oasis-open.org/ws-calendar/ns/REST" ?&gt;
+&lt;CW:error&gt;
+  &lt;C:supported-filter&gt;
+    &lt;C:prop-filter name="X-ABC-GUID"/&gt;
+  &lt;/C:supported-filter&gt;
+  &lt;CW:description&gt;Unknown property &lt;/CW:description&gt;
+&lt;/CW:error&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_properties_and_link_relations" obligation="normative">
+<title>Properties and link relations</title>
+<clause id="_property_and_relation_type_uris" obligation="normative">
+<title>Property and relation-type URIs</title>
+<p id="_d172b136-512d-ab75-2203-77bd4ddd3b1f">In the <tt>XRD</tt> entity returned properties and related services and entities are defined by absolute URIs which correspond to the extended relation type defined in  <eref type="inline" bibitemid="webl" citeas="Internet-Draft draft-nottingham-http-link-header-10"><localityStack><locality type="section"><referenceFrom>4.2</referenceFrom></locality></localityStack></eref>. These URIs do NOT correspond to any real entity on the server and clients should not attempt to retrieve any data at that target.</p>
+
+<p id="_58763774-f527-0a12-7333-45d966176072">Certain of these property URIs correspond to CalDAV preconditions. Each URL is prefixed by the CalWS relations and properties namespace  <link target="http://docs.oasis-open.org/ws-calendar/ns/REST/"/>. Those properties which correspond to CalDAV properties have the additional path element “ <strong>caldav/</strong>”, for example</p>
+
+<sourcecode id="_b8436a95-2b6c-c0d2-7e2e-5af32586a094" unnumbered="true">http://docs.oasis-open.org/ws-calendar/ns/REST/supported-calendar-data</sourcecode>
+
+
+<p id="_50072dce-3b69-a94f-9ec3-eff6c4b75b0e">corresponds to</p>
+
+<sourcecode id="_3e1fc009-a3be-3477-f1af-7ae1376b1528" unnumbered="true">CalDAV:supported-calendar-data</sourcecode>
+
+
+<p id="_25127bd5-caa6-577b-d52c-cdafd3569d61">In addition to those CalDAV properties, the CalWS specification defines a number of other properties and link relations with the URI prefix of  <link target="http://docs.oasis-open.org/ws-calendar/ns/REST"/>.</p>
+</clause>
+
+<clause id="_supported_features_property" obligation="normative">
+<title><tt>supported-features</tt> property</title>
+<p id="_3eb425dd-6056-8954-8459-f1dd4899e08d"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/supported-features"/></p>
+
+<p id="_b3c893d7-d2d9-0330-9140-e990f5b2e11f">This property defines the features supported by the target. All resources contained and managed by the service should return this property. The value is a comma separated list containing one or more of the following</p>
+
+<ul id="_a2954a22-7577-22c5-0073-cb97cefca044"><li><p id="_e166aeee-8477-23b4-e227-47bd10b004b2"><tt>calendar-access</tt> — the service supports all <tt>MUST</tt> requirements in this specification</p>
+<sourcecode id="_89cb80cc-db42-b632-521a-0291a02f59ab" unnumbered="true">&lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/supported-features"&gt;calendar-access&lt;/Property&gt;</sourcecode>
+
+</li>
+</ul>
+</clause>
+
+<clause id="_max_attendees_per_instance" obligation="normative">
+<title><tt>max-attendees-per-instance</tt></title>
+<p id="_34d5b1b6-a3a0-5966-7e21-9abf0549d8ba"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/max-attendees-per-instance"/></p>
+
+<p id="_44081d9d-4097-6858-53ec-0fef8d57e5f0">Defines the maximum number of attendees allowed per event or task.</p>
+</clause>
+
+<clause id="_max_date_time" obligation="normative">
+<title><tt>max-date-time</tt></title>
+<p id="_c7c4d7e0-9937-e969-3112-ae348735bf43"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/max-date-time"/></p>
+
+<p id="_6b842924-3f93-9ec7-fd0f-8337fec0fb49">Defines the maximum date/time allowed on an event or task</p>
+</clause>
+
+<clause id="_max_instances" obligation="normative">
+<title><tt>max-instances</tt></title>
+<p id="_cc3f2e38-c5a3-f62f-d270-3b4715bbba7a"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/max-instances"/></p>
+
+<p id="_8ce9bfc3-4bd4-be3f-2418-44ae7bc7e038">Defines the maximum number of instances allowed per event or task</p>
+</clause>
+
+<clause id="_max_resource_size" obligation="normative">
+<title><tt>max-resource-size</tt></title>
+<p id="_33a5de74-3636-89aa-ccf9-62bdc8116e31"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/max-resource-size"/></p>
+
+<p id="_5913329a-77e6-47b2-ba8c-d6bfe6942f5f">Provides a numeric value indicating the maximum size of a resource in octets that the server is willing to accept when a calendar object resource is stored in a calendar collection.</p>
+</clause>
+
+<clause id="_min_date_time" obligation="normative">
+<title><tt>min-date-time</tt></title>
+<p id="_3ed259a5-3f31-7242-a342-e9f18f91a018"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/min-date-time"/></p>
+
+<p id="_7fa891a5-1015-f469-cdea-d2a64982ac1e">Provides a <tt>DATE-TIME</tt> value indicating the earliest date and time (in UTC) that the server is willing to accept for any  <tt>DATE</tt> or <tt>DATE-TIME</tt> value in a calendar object resource stored in a calendar collection.</p>
+</clause>
+
+<clause id="_description" obligation="normative">
+<title><tt>description</tt></title>
+<p id="_b0080940-19b9-3c8a-1535-8ff282b0d6d1"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/description"/></p>
+
+<p id="_542e6b45-7afd-4004-977c-ea49c13d6b2c">Provides some descriptive text for the targeted collection.</p>
+</clause>
+
+<clause id="_timezone_service_relation" obligation="normative">
+<title><tt>timezone-service</tt> relation</title>
+<p id="_2db8a692-9de0-22c6-5235-b2a5f8af8a53"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/timezone-service"/></p>
+
+<p id="_919ddc91-1c70-41ab-1ee2-73db00ff723d">The location of a timezone service used to retrieve timezone information and specifications. This may be an absolute URL referencing some other service or a relative URL if the current server also provides a timezone service.</p>
+
+<sourcecode id="_7dd7cc75-8667-9cb3-1bf6-1459098cc8aa" unnumbered="true">&lt;Link rel="http://docs.oasis-open.org/ws-calendar/ns/REST/timezone-service"
+           href="http://example.com/tz" /&gt;</sourcecode>
+
+</clause>
+
+<clause id="_principal_home_relation" obligation="normative">
+<title><tt>principal-home</tt> relation</title>
+<p id="_38eeb109-63bb-92b4-9ae8-b7e47e6e3082"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/principal-home"/></p>
+
+<p id="_c8635bac-d3e1-faf8-e62d-394534f7a8b1">Provides the URL to the user home for the currently authenticated principal.</p>
+
+<sourcecode id="_64883a44-ef9c-3b2d-ddc3-4c48a5ebdc91" unnumbered="true">&lt;Link rel="http://docs.oasis-open.org/ws-calendar/ns/REST/principal-home"
+           href="http://example.com/user/fred" /&gt;</sourcecode>
+
+</clause>
+
+<clause id="_current_principal_freebusy_relation" obligation="normative">
+<title><tt>current-principal-freebusy</tt> relation</title>
+<p id="_aaca4181-fff8-c4f0-e51d-1b7a2a14153d"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/current-principal-freebusy"/></p>
+
+<p id="_234df305-349f-9887-a380-124bb9fe3492">Provides the URL to use as a target for <tt>freebusy</tt> requests for the current authenticated principal.</p>
+
+<sourcecode id="_4e1d836d-1bac-5644-4733-bd0ca2437424" unnumbered="true">&lt;Link rel="http://docs.oasis-open.org/ws-calendar/ns/REST/current-principal-freebusy"
+           href="http://example.com/freebusy/user/fred" /&gt;</sourcecode>
+
+</clause>
+
+<clause id="_principal_freebusy_relation" obligation="normative">
+<title><tt>principal-freebusy</tt> relation</title>
+<p id="_fadcb6aa-4c6e-52a3-c27d-b76b19cf3d17"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/principal-freebusy"/></p>
+
+<p id="_a30946db-2b78-3c8d-ecfb-3cc578ec87a2">Provides the URL to use as a target for <tt>freebusy</tt> requests for a different principal.</p>
+
+<sourcecode id="_0bf25dfc-524e-b915-a431-12b1bd20a880" unnumbered="true">&lt;Link rel="http://docs.oasis-open.org/ws-calendar/ns/REST/principal-freebusy"
+           href="http://example.com/freebusy" /&gt;</sourcecode>
+
+</clause>
+
+<clause id="_child_collection_relation" obligation="normative">
+<title><tt>child-collection</tt> relation</title>
+<p id="_82f89687-9958-eb05-7bad-7ce57edb66a8"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/child-collection"/></p>
+
+<p id="_b9785f3d-54e1-0b0e-b36c-2a8da738c4ce">Provides information about a child collections for the target. The <tt>href</tt> attribute gives the URI of the collection. The element should only have CalWS child elements giving the type of the collection, that is the  <tt>calWS:collection</tt> link property and the CalWS-calendar-collection link property. This allows clients to determine the structure of a hierarchical system by targeting each of the child collections in turn.</p>
+
+<p id="_8e48bd9e-286b-fdc4-02f5-cb2b7f9bdef5">The <tt>xrd:title</tt> child element of the link element provides a description for the child-collection.</p>
+
+<sourcecode id="_09913550-c9d1-9a09-96ec-0498c0e4158c" unnumbered="true">&lt;Link rel="http://http://docs.oasis-open.org/ws-calendar/ns/REST/child-collection"
+           href="http://example.com/calWS/user/fred/calendar"&gt;
+  &lt;Title xml:lang="en"&gt;Calendar&lt;/Title&gt;
+  &lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/collection"
+            xsi:nil="true" /&gt;
+  &lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/calendar-collection"
+            xsi:nil="true" /&gt;
+&lt;/Link&gt;</sourcecode>
+
+</clause>
+
+<clause id="_created_link_property" obligation="normative">
+<title><tt>created</tt> link property</title>
+<p id="_5a7d16d6-f0d8-57d4-4ce8-3e901f6ae19d"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/created"/></p>
+
+<p id="_3a9d68a5-feb5-4175-0665-c6ec89e47e24">Appears within a link relation describing collections or entities. The value is a date-time as defined in <eref type="inline" bibitemid="wscal" citeas="WS-Calendar"><localityStack><locality type="section"><referenceFrom>5.6</referenceFrom></locality></localityStack></eref>.</p>
+
+<sourcecode id="_dd3e7a5c-9125-e6c0-402b-5a7beffaf0f0" unnumbered="true">&lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/created"&gt;1985-04-12T23:20:50.52Z&lt;/Property&gt;</sourcecode>
+
+</clause>
+
+<clause id="_last_modified_property" obligation="normative">
+<title><tt>last-modified</tt> property</title>
+<p id="_5e771758-6ac2-c7e3-49d8-ae92b05d5f48"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/last-modified"/></p>
+
+<p id="_9b7685b8-cbc9-c1be-b7cf-287879673261">Appears within an <tt>xrd</tt> object describing collections or entities. The value is the same format as would appear in the Last-Modified header and is defined in  <eref type="inline" bibitemid="rfc2616" citeas="IETF RFC 2616"><localityStack><locality type="section"><referenceFrom>3.3.1</referenceFrom></locality></localityStack></eref></p>
+
+<sourcecode id="_94c402c0-d5b6-af68-dc77-339753ac879a" unnumbered="true">&lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/last-modified"&gt;Mon, 12 Jan 1998 09:25:56 GMT&lt;/Property&gt;</sourcecode>
+
+</clause>
+
+<clause id="_displayname_property" obligation="normative">
+<title><tt>displayname</tt> property</title>
+<p id="_0dbe5749-5361-eba5-ccd6-1699e2c23272"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/displayname"/></p>
+
+<p id="_d81d488a-950b-b0ec-472b-7fd1f8ca7f3a">Appears within an <tt>xrd</tt> object describing collections or entities. The value is a localized name for the entity or collection.</p>
+
+<sourcecode id="_93c80160-c6e9-d5c0-1060-552f628edbdf" unnumbered="true">&lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/displayname"&gt;My Calendar&lt;/Property&gt;</sourcecode>
+
+</clause>
+
+<clause id="_timezone_property" obligation="normative">
+<title><tt>timezone</tt> property</title>
+<p id="_16e775fe-35db-421f-353b-a44706a32cfc"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/timezone"/></p>
+
+<p id="_4d788b72-a6a6-e286-2ce2-eaea85c9b10c">Appears within an <tt>xrd</tt> object describing collections. The value is a text timezone identifier.</p>
+
+<sourcecode id="_498c2407-43ba-1146-3463-eaf1e1702cbc" unnumbered="true">&lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/timezone"&gt;America/New_York&lt;/Property&gt;</sourcecode>
+
+</clause>
+
+<clause id="_owner_property" obligation="normative">
+<title><tt>owner</tt> property</title>
+<p id="_6ed0ecf2-3576-254a-ded9-f9c413c09bec"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/owner"/></p>
+
+<p id="_5f3b1af4-d86b-79e2-fd79-f2fba84127a3">Appears within an <tt>xrd</tt> object describing collections or entities. The value is a server specific URI.</p>
+
+<sourcecode id="_b30d6659-57d8-e5d5-1eb3-df0010b3343b" unnumbered="true">&lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/owner"&gt;/principals/users/mike&lt;/Property&gt;</sourcecode>
+
+</clause>
+
+<clause id="_collection_link_property" obligation="normative">
+<title><tt>collection</tt> link property</title>
+<p id="_c179fe39-07e2-c1e2-bf9d-3214faf4edc2"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/collection"/></p>
+
+<p id="_5692c40c-0bb7-01da-2592-af8e5e7ff995">Appears within a link relation describing collections or entities. The property takes no value and indicates that this child element is a collection.</p>
+
+<sourcecode id="_2dadc5ce-c263-a53e-7427-040f2e188b8e" unnumbered="true">&lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/collection"
+          xsi:nil="true" /&gt;</sourcecode>
+
+</clause>
+
+<clause id="_calendar_collection_link_property" obligation="normative">
+<title><tt>calendar-collection</tt> link property</title>
+<p id="_0c5fb873-e1e5-9f23-46cf-4dc61159bdc4"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/calendar-collection"/></p>
+
+<p id="_b2cccd36-e063-78dc-268f-5cb727779c57">Appears within a link relation describing collections or entities. The property takes no value and indicates that this child element is a calendar collection.</p>
+
+<sourcecode id="_58364e9b-a2ab-63f3-0c29-ed997c63a59c" unnumbered="true">&lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/calendar-collection"
+          xsi:nil="true" /&gt;</sourcecode>
+
+</clause>
+
+<clause id="_calwsprivilege_set_xml_element" obligation="normative">
+<title><tt>calWS:privilege-set</tt> XML element</title>
+<p id="_abb257f1-f0dd-575b-64b4-c2e55d4ef198"><link target="http://docs.oasis-open.org/ws-calendar/ns/REST/calws:privilege-set"/></p>
+
+<p id="_b4de051c-3faa-d77e-1757-940b987ade7f">Appears within a link relation describing collections or entities and specifies the set of privileges allowed to the current authenticated principal for that collection or entity.</p>
+
+<sourcecode id="_f5374219-7310-3889-9596-f608728df07a" unnumbered="true">&lt;!ELEMENT calWS:privilege-set (calWS:privilege*)&gt;
+&lt;!ELEMENT calWS:privilege ANY&gt;</sourcecode>
+
+
+<p id="_b7eb2179-4a77-d74e-c09a-932adb831944">Each privilege element defines a privilege or access right. The following set is currently defined</p>
+
+<ul id="_edb5cb11-927e-231a-0ec9-cc9ef3aaf44c"><li><p id="_88806f46-ee89-3de3-2a1b-66c4596b5893">calWS: Read — current principal has read access</p>
+</li>
+<li><p id="_af7491ad-e2c8-9e37-d5de-9ad95afe7033">calWS: Write — current principal has write access</p>
+</li>
+</ul>
+
+<sourcecode id="_4cd98ba9-3be9-e445-a9c7-fcb5adee266c" unnumbered="true">&lt;calWS:privilege-set&gt;
+  &lt;calWS:privilege&gt;&lt;calWS:read&gt;&lt;/calWS:privilege&gt;
+  &lt;calWS:privilege&gt;&lt;calWS:write&gt;&lt;/calWS:privilege&gt;
+&lt;/calWS:privilege-set&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="sec-retrieving" obligation="normative">
+<title>Retrieving Collection and Service Properties</title>
+<p id="_0caf63fb-346e-b227-5090-9d55fe9ea475">Properties, related services and locations are obtained from the service or from service resources in the form of an XRD document as defined by  <eref type="inline" bibitemid="xrd" citeas="XRD-1.0"/>.</p>
+
+<p id="_e0d7fff8-b222-832f-cf4d-5051905b9ffc">Given the URL of a CalWS service a client retrieves the service XRD document through a <tt>GET</tt> on the service URL with an  <tt>ACCEPT</tt> header specifying <tt>application/xrd+xml</tt>.</p>
+
+<p id="_d0dbe9f7-acc5-8d55-b5af-ffb9be21f0f4">Retrieving resource properties is identical to obtaining service properties, that is, execute a <tt>GET</tt> on the target URL with an  <tt>ACCEPT</tt> header specifying <tt>application/xrd+xml</tt>.</p>
+
+<p id="_15dbf0ea-1ba8-997d-fc0b-585925f1415c">The service properties define the global limits and defaults. Any properties defined on collections within the service hierarchy override those service defaults. The service may choose to prevent such overriding of defaults and limits when appropriate.</p>
+
+<clause id="_request_parameters" obligation="normative">
+<title>Request parameters</title>
+<ul id="_f219f0d0-62c3-aa48-7882-a47f5988894d"><li><p id="_c4c1a98b-caca-130f-fa2a-e7040058b5ef">None</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_responses" obligation="normative">
+<title>Responses</title>
+<ul id="_bd1fe2ac-6333-21da-798b-af8e560251b2"><li><p id="_1295576e-594a-7e67-5260-772513b73cd2">200: OK</p>
+</li>
+<li><p id="_07d14735-ce1e-24aa-2fd5-15b3c5399dde">403: Forbidden</p>
+</li>
+<li><p id="_6a7dd071-1f83-b32a-90a7-2193473721d2">404: Not found</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_example_retrieving_server_properties" obligation="normative">
+<title>Example — retrieving server properties</title>
+<sourcecode id="_39046fdd-cfd4-7f94-29a3-b8a0fd4fa526" unnumbered="true">&gt;&gt;Request
+
+GET / HTTP/1.1
+Host: example.com
+ACCEPT:application/xrd+xml
+
+&gt;&gt;Response
+&lt;XRD xmlns="http://docs.oasis-open.org/ns/xri/xrd-1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;Expires&gt;1970-01-01T00:00:00Z&lt;/Expires&gt;
+  &lt;Subject&gt;http://example.com/calWS&lt;/Subject&gt;
+  &lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/created"&gt;1970-01-01&lt;/Property&gt;
+
+  &lt;Link rel="http://docs.oasis-open.org/ws-calendar/ns/REST/timezone-service"
+        href="http://example.com/tz" /&gt;
+
+  &lt;calWS:privilege-set&gt;
+    &lt;calWS:privilege&gt;&lt;calWS:read&gt;&lt;/calWS:privilege&gt;
+  &lt;/calWS:privilege-set&gt;
+
+  &lt;Link rel="http://docs.oasis-open.org/ws-calendar/ns/REST/principal-home"
+        type="collection"
+        href="http://example.com/calWS/user/fred"&gt;
+    &lt;Title xml:lang="en"&gt;Fred's calendar home&lt;/Title&gt;
+  &lt;/Link&gt;
+
+  &lt;Link rel="http://docs.oasis-open.org/ws-calendar/ns/REST/child-collection"
+        type="calendar,scheduling"
+        href="http://example.com/calWS/user/fred/calendar"&gt;
+    &lt;Title xml:lang="en"&gt;Calendar&lt;/Title&gt;
+  &lt;/Link&gt;
+
+  &lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/max-instances"&gt;1000&lt;/Property&gt;
+
+  &lt;Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/max-attendees-per-instance"&gt;100&lt;/Property&gt;
+    ...
+&lt;/XRD&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_creating_calendar_object_resources" obligation="normative">
+<title>Creating Calendar Object Resources</title>
+<p id="_a02c01bb-896d-27f8-822e-2a1e5a7d8a08">Creating calendar object resources is carried out by a <tt>POST</tt> on the parent collection. The body of the request will contain the resource being created. The request parameter “action=create” indicates this <tt>POST</tt> is a create. The location header of the response gives the URL of the newly created object.</p>
+
+<clause id="_request_parameters_2" obligation="normative">
+<title>Request parameters</title>
+<ul id="_759b3149-be63-4fc6-6752-18fe7ab740ed"><li><p id="_aa21f2a8-39c6-0a89-4601-1cd4a908492d">action=create</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_responses_2" obligation="normative">
+<title>Responses</title>
+<ul id="_d647c33e-1167-b513-70a1-714030ac49d1"><li><p id="_b108a0d4-4ae0-4d6b-81dc-1bc4164631bb">201: created</p>
+</li>
+<li><p id="_afa08bf2-6955-b2c6-5624-2a17f3a618a8">403: Forbidden — no access</p>
+</li>
+</ul>
+</clause>
+
+<clause id="sec-preconditions" obligation="normative">
+<title>Preconditions for Calendar Object Creation</title>
+<ul id="_758e1c04-3d4b-3bf8-1a97-9eeea352fc23"><li><p id="_5ccdfb5e-0218-0ae6-90c7-590acadfabfb"><strong><tt>calWS:target-exists</tt></strong>: The target of a <tt>PUT</tt> must exist. Use <tt>POST</tt> to create entities and <tt>PUT</tt> to update them.</p>
+</li>
+<li><p id="_3e77c4ce-0d67-99b5-d3bd-8c79ed6ea014"><strong><tt>calWS:not-calendar-data</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a <tt>COPY</tt> or <tt>MOVE</tt> request, <tt>MUST</tt> be a supported media type (i.e., iCalendar) for calendar object resources;</p>
+</li>
+<li><p id="_ae2570ec-8b5e-514b-ca19-c1b4aeb49e21"><strong><tt>calWS:invalid-calendar-data</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a <tt>COPY</tt> or  <tt>MOVE</tt> request, <tt>MUST</tt> be valid data for the media type being specified (i.e., <tt>MUST</tt> contain valid iCalendar data);</p>
+</li>
+<li><p id="_b78cdab8-a873-9761-fa62-95b5a8b9e74a"><strong><tt>calWS:invalid-calendar-object-resource</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a  <tt>COPY</tt> or <tt>MOVE</tt> request, <tt>MUST</tt> obey all restrictions specified in Calendar Object Resources (e.g., calendar object resources  <tt>MUST NOT</tt> contain more than one type of calendar component, calendar object resources  <tt>MUST NOT</tt> specify the iCalendar <tt>METHOD</tt> property, etc.);</p>
+</li>
+<li><p id="_38ca5380-2afd-4f52-8b80-61cb511357c4"><strong><tt>calWS:unsupported-calendar-component</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a  <tt>COPY</tt> or <tt>MOVE</tt> request, <tt>MUST</tt> contain a type of calendar component that is supported in the targeted calendar collection;</p>
+</li>
+<li><p id="_d1768a9d-c8c5-9e87-1479-c866917b44fd"><strong><tt>calWS:uid-conflict</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a <tt>COPY</tt> or <tt>MOVE</tt> request,  <tt>MUST NOT</tt> specify an iCalendar <tt>UID</tt> property value already in use in the targeted calendar collection or overwrite an existing calendar object resource with one that has a different UID property value. Servers  <tt>SHOULD</tt> report the URL of the resource that is already making use of the same UID property value in the  <tt>calWS:href</tt> element</p>
+<sourcecode id="_f4b98a94-1083-e2b3-df1e-bab707a06fa6" unnumbered="true">&lt;!ELEMENT uid-conflict (calWS:href)&gt;</sourcecode>
+
+</li>
+<li><p id="_32ae1854-5b54-9a02-c57c-3a47a4f56386"><strong><tt>calWS:invalid-calendar-collection-location</tt></strong>: In a <tt>COPY</tt> or <tt>MOVE</tt> request, when the Request- URI is a calendar collection, the Destination-URI  <tt>MUST</tt> identify a location where a calendar collection can be created;</p>
+</li>
+<li><p id="_f3ef8033-65ee-3986-cff5-58879feb1581"><strong><tt>calWS:exceeds-max-resource-size</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a <tt>COPY</tt> or <tt>MOVE</tt> request, <tt>MUST</tt> have an octet size less than or equal to the value of the <tt>CalDAV:max-resource-size</tt> property value on the calendar collection where the resource will be stored;</p>
+</li>
+<li><p id="_bcd72244-ff1a-9f1b-6717-ff2f67c2214c"><strong><tt>calWS:before-min-date-time</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a <tt>COPY</tt> or  <tt>MOVE</tt> request, <tt>MUST</tt> have all of its iCalendar <tt>DATE</tt> or <tt>DATE-TIME</tt> property values (for each recurring instance) greater than or equal to the value of the  <tt>CalDAV:min-date-time</tt> property value on the calendar collection where the resource will be stored;</p>
+</li>
+<li><p id="_05a645f1-fb61-41b8-a936-6a9f8d7ee7b4"><strong><tt>calWS:after-max-date-time</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a <tt>COPY</tt> or  <tt>MOVE</tt> request, <tt>MUST</tt> have all of its iCalendar <tt>DATE</tt> or <tt>DATE-TIME</tt> property values (for each recurring instance) less than the value of the  <tt>CalDAV:max-date-time</tt> property value on the calendar collection where the resource will be stored;</p>
+</li>
+<li><p id="_8481141b-adb2-c34e-0bf8-088ea7b80a92"><strong><tt>calWS:too-many-instances</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a <tt>COPY</tt> or  <tt>MOVE</tt> request, <tt>MUST</tt> generate a number of recurring instances less than or equal to the value of the  <tt>CalDAV:max-instances</tt> property value on the calendar collection where the resource will be stored;</p>
+</li>
+<li><p id="_82c137ce-f977-cf66-8d06-75bc407686ef"><strong><tt>calWS:too-many-attendees-per-instance</tt></strong>: The resource submitted in the <tt>PUT</tt> request, or targeted by a  <tt>COPY</tt> or <tt>MOVE</tt> request, <tt>MUST</tt> have a number of <tt>ATTENDEE</tt> properties on any one instance less than or equal to the value of the  <tt>CalDAV:max-attendees-per-instance</tt> property value on the calendar collection where the resource will be stored;</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_example_successful_post" obligation="normative">
+<title>Example — successful <tt>POST</tt></title>
+<sourcecode id="_121650bf-4682-bb1b-a5f2-76728e0cc28d" unnumbered="true">&gt;&gt;Request
+
+POST /user/fred/calendar/?action=create HTTP/1.1
+Host: example.com
+Content-Type: application/xml+calendar; charset="utf-8"
+Content-Length: ?
+
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+  &lt;vcalendar&gt;
+  ...
+  &lt;/vcalendar&gt;
+&lt;/icalendar&gt;
+
+&gt;&gt;Response
+
+HTTP/1.1 201 Created
+Location: http://example.com/user/fred/calendar/event1.ics</sourcecode>
+
+</clause>
+
+<clause id="_example_unsuccessful_post" obligation="normative">
+<title>Example — unsuccessful <tt>POST</tt></title>
+<sourcecode id="_423e8ee9-3776-4a67-2f52-421a432ea066" unnumbered="true">&gt;&gt;Request
+
+POST /user/fred/readcalendar/?action=create HTTP/1.1
+Host: example.com
+Content-Type: text/text; charset="utf-8"
+Content-Length: ?
+
+This is not an xml calendar object
+
+&gt;&gt;Response
+
+HTTP/1.1 403 Forbidden
+  &lt;?xml version="1.0" encoding="utf-8"
+    xmlns:D="DAV:"
+    xmlns:C="urn:ietf:params:xml:ns:caldav" ?&gt;
+&lt;D:error&gt;
+    &lt;C:supported-calendar-data/&gt;
+    &lt;D:description&gt;Not an icalendar object&lt;/D:description&gt;
+&lt;/D:error&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_retrieving_resources" obligation="normative">
+<title>Retrieving resources</title>
+<p id="_3490157a-3754-cbc5-0995-5739feed7a53">A simple <tt>GET</tt> on the href will return a named resource. If that resource is a recurring event or task with overrides, the entire set will be returned. The desired format is specified in the  <tt>ACCEPT</tt> header. The default form is  <tt>application/xml+calendar</tt></p>
+
+<clause id="_request_parameters_3" obligation="normative">
+<title>Request parameters</title>
+<ul id="_1e7f1fb0-d1c6-13dd-ff98-8899b6a7fa14"><li><p id="_c66a7bc3-babb-32ee-26fb-7805e9820c84">none</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_responses_3" obligation="normative">
+<title>Responses</title>
+<ul id="_11c9c8c4-94b3-524b-1ad7-db404c70b634"><li><p id="_20b85bc2-1a60-23f4-ad34-2956213c33e9">200: OK</p>
+</li>
+<li><p id="_f60b53bc-ed3f-fafd-6788-fb9d38266aea">403: Forbidden — no access</p>
+</li>
+<li><p id="_e634058f-adeb-db5c-0c85-7ffda862f9c7">406 The requested format specified in the accept header is not supported.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_example_successful_fetch" obligation="normative">
+<title>Example — successful fetch</title>
+<sourcecode id="_aa0639fa-d898-8101-f4e2-408f8ed28c3e" unnumbered="true">&gt;&gt;Request
+
+GET /user/fred/calendar/event1.ics HTTP/1.1
+Host: example.com
+
+&gt;&gt;Response
+
+HTTP/1.1 200 OK
+Content-Type: application/xml+calendar; charset="utf-8"
+Content-Length: ?
+
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+  &lt;vcalendar&gt;
+  ...
+  &lt;/vcalendar&gt;
+&lt;/icalendar&gt;</sourcecode>
+
+</clause>
+
+<clause id="_example_unsuccessful_fetch" obligation="normative">
+<title>Example — unsuccessful fetch</title>
+<sourcecode id="_c7e0ce8b-fb9f-dcf3-a91a-22a0fc760bfd" unnumbered="true">&gt;&gt;Request
+
+PUT /user/fred/calendar/noevent1.ics HTTP/1.1
+Host: example.com
+
+&gt;&gt;Response
+
+HTTP/1.1 404 Not found</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_updating_resources" obligation="normative">
+<title>Updating resources</title>
+<p id="_7ef58588-1b67-56bf-1681-079a82b01fe8">Resources are updated with the <tt>PUT</tt> method targeted at the resource <tt>href</tt>. The body of the request contains a complete new resource which effectively replaces the targeted resource. To allow for optimistic locking of the resource use the if-match header.</p>
+
+<p id="_7e504131-7700-2b1f-9b8c-d99c38074968">When updating a recurring event all overrides and master must be supplied as part of the content.</p>
+
+<p id="_b49dce2a-b175-e1b4-8733-a594b1b9bb32">Preconditions as specified in <xref target="sec-preconditions"/> are applicable.</p>
+
+<clause id="_responses_4" obligation="normative">
+<title>Responses</title>
+<ul id="_1d8a9c0e-935c-35af-346a-298d36a2d04a"><li><p id="_24668258-8bce-d1f7-c3d8-ca9512c0a8e8">200: OK</p>
+</li>
+<li><p id="_df8510e6-c11d-892e-f9ad-0c5f74138b7f">304: Not modified — entity was modified by some other request</p>
+</li>
+<li><p id="_816d649d-9182-c0ce-1c0a-470883aa1d93">403: Forbidden — no access, does not exist etc. See error response</p>
+</li>
+</ul>
+
+<example id="_bccffaf0-ff43-f145-1f25-f7889ca5e08c">
+<name>Successful update</name>
+<sourcecode id="_1727667a-b93f-7a83-aaee-c82d6538494b">&gt;&gt;Request
+
+PUT /user/fred/calendar/event1.ics HTTP/1.1
+Host: example.com
+Content-Type: application/xml+calendar; charset="utf-8"
+Content-Length: ?
+
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+  &lt;vcalendar&gt;
+  ...
+  &lt;/vcalendar&gt;
+&lt;/icalendar&gt;
+
+&gt;&gt;Response
+
+HTTP/1.1 200 OK</sourcecode>
+
+</example>
+
+<example id="_a0b10949-3f9e-c091-f55b-e033e082642b">
+<name>Unsuccessful update</name>
+<sourcecode id="_b853bce9-fff0-b12f-ee92-5cb02ed3c8df">&gt;&gt;Request
+
+PUT /user/fred/readcalendar/event1.ics HTTP/1.1
+Host: example.com
+Content-Type: application/xml+calendar; charset="utf-8"
+Content-Length: ?
+
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+  &lt;vcalendar&gt;
+  ...
+  &lt;/vcalendar&gt;
+&lt;/icalendar&gt;
+
+&gt;&gt;Response
+
+HTTP/1.1 403 Forbidden
+Content-Type: application/xml; charset="utf-8"
+Content-Length: xxxx
+
+&lt;?xml version="1.0" encoding="utf-8"
+  xmlns:D="DAV:"
+  xmlns:CW="http://docs.oasis-open.org/ws-calendar/ns/REST/calws" ?&gt;
+&lt;CW:error&gt;
+  &lt;CW:target-exists/&gt;
+  &lt;CW:description&gt;Target of update must exist&lt;/C:description&gt;
+&lt;/CW:error&gt;</sourcecode>
+
+</example>
+</clause>
+</clause>
+
+<clause id="_deletion_of_resources" obligation="normative">
+<title>Deletion of resources</title>
+<p id="_3695d565-44b0-0798-32a0-4943a92a0449">Delete is defined in <eref type="inline" bibitemid="rfc2616" citeas="IETF RFC 2616"><localityStack><locality type="section"><referenceFrom>9.7</referenceFrom></locality></localityStack></eref>. In addition to conditions defined in that specification, servers must remove any references from the deleted resource to other resources. Resources are deleted with the  <tt>DELETE</tt> method targeted at the resource URL. After a successful completion of a deletion a <tt>GET</tt> on that URL must result in a 404 — Not Found status.</p>
+
+<clause id="_delete_for_collections" obligation="normative">
+<title>Delete for Collections</title>
+<p id="_b60e52c7-6e21-f41f-eac3-08b8906c2bcb">Delete for collections may or may not be supported by the server. Certain collections are considered undeletable. On a successful deletion of a collection all contained resources to any depth must also be deleted.</p>
+</clause>
+
+<clause id="_responses_5" obligation="normative">
+<title>Responses</title>
+<ul id="_e511675b-a772-407d-a6c8-16bbdf18e3da"><li><p id="_e4e6b5f0-3146-a71e-6da4-0e3ecd57e98a">200: OK</p>
+</li>
+<li><p id="_4fa30320-83bb-4f55-6738-1fecadcc16f6">403: Forbidden — no access</p>
+</li>
+<li><p id="_5f12329d-a8a9-101d-3470-76df893289ab">404: Not Found</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_querying_calendar_resources" obligation="normative">
+<title>Querying calendar resources</title>
+<p id="_2a29569e-77c0-b7c6-f486-c30de2f59e93">Querying provides a mechanism by which information can be obtained from the service through possibly complex queries. A list of iCalendar properties can be specified to limit the amount of information returned to the client. A query takes the parts</p>
+
+<ul id="_6b6e4b34-35ee-cce0-2f06-77579826fefe"><li><p id="_e657ec08-7c80-1974-0a72-3a31adf29447">Limitations on the data returned</p>
+</li>
+<li><p id="_ff7542a4-b963-6f17-b232-81b08132bf0f">Selection of the data</p>
+</li>
+<li><p id="_e764b896-961e-46ce-8a2b-c63fdf705704">Optional timezone id for floating time calculations.</p>
+</li>
+</ul>
+
+<p id="_593dc9fc-b90d-70eb-f734-f1cfd7acb6ab">The current specification uses CalDAV <tt>multiget</tt> and <tt>calendar-query</tt> XML bodies as specified in <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"/> with certain limitations and differences.</p>
+
+<ol id="_f006fc22-2ea7-914a-2761-c15d71100232" type="arabic"><li><p id="_031ee4cd-d2ff-6c23-afce-1cf9e08da763">The <tt>POST</tt> method is used for all requests, the action being identified by the outer element.</p>
+</li>
+<li><p id="_9ee299ba-1ddb-bff0-0a22-7f3d7c309da9">While CalDAV servers generally only support <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/> and assume that as the default, the delivery format for CalWS will, by default, be  <eref type="inline" bibitemid="xcal" citeas="Internet-Draft draft-daboo-et-al-icalendar-in-xml-11"/>.</p>
+</li>
+<li><p id="_6dc8ab27-4dc1-7bd6-cd39-ea4bf703c3c3">The CalDAV query allows the specification of a number of <tt>DAV</tt> properties. Specification of these properties, with the exception of  <tt>DAV:getetag</tt>, is considered an error in CalWS.</p>
+</li>
+<li><p id="_b57f15ed-fde9-4f2b-a6f6-26c02d6b944e">The <tt>CalDAV:propnames</tt> element is invalid</p>
+</li>
+</ol>
+
+<p id="_69165684-96a7-a2f0-591f-7624eddfa251">With those differences, the CalDAV specification is the normative reference for this operation.</p>
+
+<clause id="_limiting_data_returned" obligation="normative">
+<title>Limiting data returned</title>
+<p id="_9cd1157a-36d5-ddc4-e898-fd44e99f13d5">This is achieved by specifying one of the following</p>
+
+<ul id="_bc8d0964-d42c-b083-3c35-03f3154618fd"><li><p id="_7aa2b8b6-1580-05cb-9813-0a9608b018e5"><tt>CalDAV:allprop</tt> return all properties (some properties are specified as not being part of the <tt>allprop</tt> set so are not returned)</p>
+</li>
+<li><p id="_f56fb8bb-3a67-69e4-4a73-ca3bcb079894"><tt>CalDAV:prop</tt> An element which contains a list of properties to be returned. May only contain <tt>DAV:getetag</tt> and <tt>CalDAV:calendar-data</tt></p>
+</li>
+</ul>
+
+<p id="_2db82120-b850-4414-aaf5-820b345a1064">Of particular interest, and complexity, is the calendar-data property which can contain a time range to limit the range of recurrences returned and/or a list of calendar properties to return.</p>
+</clause>
+
+<clause id="_prepostconditions_for_calendar_queries" obligation="normative">
+<title>Pre/postconditions for calendar queries</title>
+<p id="_c72e5ac8-7bd3-628a-ba72-67cced54f7bd">The preconditions as defined in <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"><localityStack><locality type="section"><referenceFrom>7.8</referenceFrom></locality></localityStack></eref> apply here. CalDav errors may be reported by the service when preconditions or postconditions are violated.</p>
+</clause>
+
+<clause id="_example_time_range_limited_retrieval" obligation="normative">
+<title>Example: time range limited retrieval</title>
+<p id="_da3dc649-9f8a-a691-f13f-49e3727935c7">This example shows the time-range limited retrieval from a calendar which results in 2 events, one a recurring event and one a simple non-recurring event.</p>
+
+<sourcecode id="_6aeda9ff-e4f9-5caf-1506-cbd8ed9d5c46" unnumbered="true">&gt;&gt; Request &lt;&lt;
+
+POST /user/fred/calendar/ HTTP/1.1
+Host: calWS.example.com
+Depth: 1
+Content-Type: application/xml; charset="utf-8"
+Content-Length: xxxx
+
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;C:calendar-query xmlns:D="DAV:"
+  xmlns:C="urn:ietf:params:xml:ns:caldav"&gt;
+  &lt;D:prop&gt;
+    &lt;D:getetag/&gt;
+    &lt;C:calendar-data content-type="application/xml+calendar" &gt;
+      &lt;C:comp name="VCALENDAR"&gt;
+        &lt;C:prop name="VERSION"/&gt;
+        &lt;C:comp name="VEVENT"&gt;
+          &lt;C:prop name="SUMMARY"/&gt;
+          &lt;C:prop name="UID"/&gt;
+          &lt;C:prop name="DTSTART"/&gt;
+          &lt;C:prop name="DTEND"/&gt;
+          &lt;C:prop name="DURATION"/&gt;
+          &lt;C:prop name="RRULE"/&gt;
+          &lt;C:prop name="RDATE"/&gt;
+          &lt;C:prop name="EXRULE"/&gt;
+          &lt;C:prop name="EXDATE"/&gt;
+          &lt;C:prop name="RECURRENCE-ID"/&gt;
+        &lt;/C:comp&gt;
+      &lt;/C:comp&gt;
+    &lt;/C:calendar-data&gt;
+  &lt;/D:prop&gt;
+  &lt;C:filter&gt;
+    &lt;C:comp-filter name="VCALENDAR"&gt;
+      &lt;C:comp-filter name="VEVENT"&gt;
+        &lt;C:time-range start="20060104T000000Z"
+                      end="20060105T000000Z"/&gt;
+      &lt;/C:comp-filter&gt;
+    &lt;/C:comp-filter&gt;
+  &lt;/C:filter&gt;
+&lt;/C:calendar-query&gt;
+
+&gt;&gt; Response &lt;&lt;
+
+HTTP/1.1 207 Multi-Status
+Date: Sat, 11 Nov 2006 09:32:12 GMT
+Content-Type: application/xml; charset="utf-8"
+Content-Length: xxxx
+
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;D:multistatus xmlns:D="DAV:"
+               xmlns:C="urn:ietf:params:xml:ns:caldav"&gt;
+  &lt;D:response&gt;
+    &lt;D:href&gt;http://cal.example.com/bernard/work/abcd2.ics&lt;/D:href&gt;
+    &lt;D:propstat&gt;
+      &lt;D:prop&gt;
+        &lt;D:getetag&gt;"fffff-abcd2"&lt;/D:getetag&gt;
+        &lt;C:calendar-data content-type="application/xml+calendar" &gt;
+          &lt;xc:icalendar
+            xmlns:xc="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+    &lt;xc:vcalendar&gt;
+      &lt;xc:properties&gt;
+      &lt;xc:calscale&gt;&lt;text&gt;GREGORIAN&lt;/text&gt;&lt;/xc:calscale&gt;
+      &lt;xc:prodid&gt;
+        &lt;xc:text&gt;-//Example Inc.//Example Calendar//EN&lt;/xc:text&gt;
+      &lt;/xc:prodid&gt;
+        &lt;xc:version&gt;&lt;xc:text&gt;2.0&lt;/xc:text&gt;&lt;/xc:version&gt;
+      &lt;/xc:properties&gt;
+      &lt;xc:components&gt;
+        &lt;xc:vevent&gt;
+          &lt;xc:properties&gt;
+            &lt;xc:dtstart&gt;
+              &lt;xc:parameters&gt;
+                &lt;xc:tzid&gt;US/Eastern&lt;xc:tzid&gt;
+              &lt;xc:parameters&gt;
+              &lt;xc:date-time&gt;20060102T120000&lt;/xc:date-time&gt;
+            &lt;/xc:dtstart&gt;
+            &lt;xc:duration&gt;&lt;xc:duration&gt;PT1H&lt;/xc:duration&gt;&lt;/xc:duration&gt;
+            &lt;xc:summary&gt;
+              &lt;xc:text&gt;Event #2&lt;/xc:text&gt;
+            &lt;/xc:summary&gt;
+            &lt;xc:uid&gt;
+              &lt;xc:text&gt;00959BC664CA650E933C892C@example.com&lt;/xc:text&gt;
+            &lt;/xc:uid&gt;
+            &lt;xc:rrule&gt;
+              &lt;xc:recur&gt;
+                &lt;xc:freq&gt;DAILY&lt;/xc:freq&gt;
+                &lt;xc:count&gt;5&lt;/xc:count&gt;
+              &lt;/xc:recur&gt;
+            &lt;/xc:rrule&gt;
+          &lt;/xc:properties&gt;
+        &lt;/xc:vevent&gt;
+
+        &lt;xc:vevent&gt;
+          &lt;xc:properties&gt;
+            &lt;xc:dtstart&gt;
+              &lt;xc:parameters&gt;
+                &lt;xc:tzid&gt;US/Eastern&lt;xc:tzid&gt;
+              &lt;xc:parameters&gt;
+              &lt;xc:date-time&gt;20060104T140000&lt;/xc:date-time&gt;
+            &lt;/xc:dtstart&gt;
+            &lt;xc:duration&gt;&lt;xc:duration&gt;PT1H&lt;/xc:duration&gt;&lt;/xc:duration&gt;
+            &lt;xc:summary&gt;
+              &lt;xc:text&gt;Event #2 bis&lt;/xc:text&gt;
+            &lt;/xc:summary&gt;
+            &lt;xc:uid&gt;
+              &lt;xc:text&gt;00959BC664CA650E933C892C@example.com&lt;/xc:text&gt;
+            &lt;/xc:uid&gt;
+            &lt;xc:recurrence-id&gt;
+              &lt;xc:parameters&gt;
+                &lt;xc:tzid&gt;US/Eastern&lt;xc:tzid&gt;
+              &lt;xc:parameters&gt;
+              &lt;xc:date-time&gt;20060104T120000&lt;/xc:date-time&gt;
+            &lt;/xc:recurrence-id&gt;
+            &lt;xc:rrule&gt;
+              &lt;xc:recur&gt;
+                &lt;xc:freq&gt;DAILY&lt;/xc:freq&gt;
+                &lt;xc:count&gt;5&lt;/xc:count&gt;
+              &lt;/xc:recur&gt;
+            &lt;/xc:rrule&gt;
+          &lt;/xc:properties&gt;
+        &lt;/xc:vevent&gt;
+
+        &lt;xc:vevent&gt;
+          &lt;xc:properties&gt;
+            &lt;xc:dtstart&gt;
+              &lt;xc:parameters&gt;
+                &lt;xc:tzid&gt;US/Eastern&lt;xc:tzid&gt;
+              &lt;xc:parameters&gt;
+              &lt;xc:date-time&gt;20060106T140000&lt;/xc:date-time&gt;
+            &lt;/xc:dtstart&gt;
+            &lt;xc:duration&gt;&lt;xc:duration&gt;PT1H&lt;/xc:duration&gt;&lt;/xc:duration&gt;
+            &lt;xc:summary&gt;
+              &lt;xc:text&gt;Event #2 bis bis&lt;/xc:text&gt;
+            &lt;/xc:summary&gt;
+            &lt;xc:uid&gt;
+              &lt;xc:text&gt;00959BC664CA650E933C892C@example.com&lt;/xc:text&gt;
+            &lt;/xc:uid&gt;
+            &lt;xc:recurrence-id&gt;
+              &lt;xc:parameters&gt;
+                &lt;xc:tzid&gt;US/Eastern&lt;xc:tzid&gt;
+              &lt;xc:parameters&gt;
+              &lt;xc:date-time&gt;20060106T120000&lt;/xc:date-time&gt;
+            &lt;/xc:recurrence-id&gt;
+            &lt;xc:rrule&gt;
+              &lt;xc:recur&gt;
+                &lt;xc:freq&gt;DAILY&lt;/xc:freq&gt;
+                &lt;xc:count&gt;5&lt;/xc:count&gt;
+              &lt;/xc:recur&gt;
+            &lt;/xc:rrule&gt;
+          &lt;/xc:properties&gt;
+        &lt;/xc:vevent&gt;
+      &lt;/xc:components&gt;
+    &lt;/xc:vcalendar&gt;
+  &lt;/xc:icalendar&gt;
+            &lt;/C:calendar-data&gt;
+          &lt;/D:prop&gt;
+          &lt;D:status&gt;HTTP/1.1 200 OK&lt;/D:status&gt;
+        &lt;/D:propstat&gt;
+      &lt;/D:response&gt;
+      &lt;D:response&gt;
+        &lt;D:href&gt;http://cal.example.com/bernard/work/abcd3.ics&lt;/D:href&gt;
+        &lt;D:propstat&gt;
+          &lt;D:prop&gt;
+            &lt;D:getetag&gt;"fffff-abcd3"&lt;/D:getetag&gt;
+            &lt;C:calendar-data content-type="application/xml+calendar" &gt;
+              &lt;xcal:icalendar
+                xmlns:xc="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+    &lt;xc:vcalendar&gt;
+      &lt;xc:properties&gt;
+        &lt;xc:calscale&gt;&lt;text&gt;GREGORIAN&lt;/text&gt;&lt;/xc:calscale&gt;
+        &lt;xc:prodid&gt;
+          &lt;xc:text&gt;-//Example Inc.//Example Calendar//EN&lt;/xc:text&gt;
+        &lt;/xc:prodid&gt;
+        &lt;xc:version&gt;&lt;xc:text&gt;2.0&lt;/xc:text&gt;&lt;/xc:version&gt;
+      &lt;/xc:properties&gt;
+      &lt;xc:components&gt;
+        &lt;xc:vevent&gt;
+          &lt;xc:properties&gt;
+            &lt;xc:dtstart&gt;
+              &lt;xc:parameters&gt;
+                &lt;xc:tzid&gt;US/Eastern&lt;xc:tzid&gt;
+              &lt;xc:parameters&gt;
+              &lt;xc:date-time&gt;20060104T100000&lt;/xc:date-time&gt;
+            &lt;/xc:dtstart&gt;
+            &lt;xc:duration&gt;&lt;xc:duration&gt;PT1H&lt;/xc:duration&gt;&lt;/xc:duration&gt;
+            &lt;xc:summary&gt;
+              &lt;xc:text&gt;Event #3&lt;/xc:text&gt;
+            &lt;/xc:summary&gt;
+            &lt;xc:uid&gt;
+              &lt;xc:text&gt;DC6C50A017428C5216A2F1CD@example.com&lt;/xc:text&gt;
+            &lt;/xc:uid&gt;
+            &lt;xc:rrule&gt;
+              &lt;xc:recur&gt;
+                &lt;xc:freq&gt;DAILY&lt;/xc:freq&gt;
+                &lt;xc:count&gt;5&lt;/xc:count&gt;
+              &lt;/xc:recur&gt;
+            &lt;/xc:rrule&gt;
+          &lt;/xc:properties&gt;
+        &lt;/xc:vevent&gt;
+      &lt;/xc:components&gt;
+    &lt;/xc:vcalendar&gt;
+  &lt;/xc:icalendar&gt;
+        &lt;/C:calendar-data&gt;
+      &lt;/D:prop&gt;
+      &lt;D:status&gt;HTTP/1.1 200 OK&lt;/D:status&gt;
+    &lt;/D:propstat&gt;
+  &lt;/D:response&gt;
+&lt;/D:multistatus&gt;</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_free_busy_queries" obligation="normative">
+<title>Free-busy queries</title>
+<p id="_2f422dc0-2f12-870d-4fba-a593643efec5">Freebusy queries are used to obtain <tt>freebusy</tt> information for a calendar-collection or principals. The result contains information only for events to which the current principal has sufficient access.</p>
+
+<p id="_8e21c948-8420-f3cd-911e-d4fa7ad63cf4">When targeted at a calendar collection the result is based only on the calendaring entities contained in that collection. When targeted at a principal  <tt>freebusy</tt> URL the result will be based on all information which affect the principals  <tt>freebusy</tt> status, for example availability.</p>
+
+<p id="_5f205b44-ceca-4dd7-8303-e5d55c5b88ec">The possible targets are:</p>
+
+<ul id="_78a94768-0353-c2f6-49a2-84000720b3e8"><li><p id="_ca5f4b88-295f-c862-9d4f-ee479b179372">A calendar collection URL</p>
+</li>
+<li><p id="_9023a2ac-ebe3-1991-45d9-47163db12a9a">The XRD link with relation <tt>CalWS/current-principal-freebusy</tt></p>
+</li>
+<li><p id="_14b3b82f-458b-d87c-b320-6d22338d7da8">The XRD link with relation <tt>CalWS/principal-freebusy</tt> with a principal given in the request.</p>
+</li>
+</ul>
+
+<p id="_2b102b4f-6b2a-1e43-44c5-ab47396415d4">The query follows the specification defined in <eref type="inline" bibitemid="fb" citeas="CC/S 0903:2009"/> with certain limitations. As an authenticated user to the CalWS service scheduling  <tt>read-freebusy</tt> privileges must have been granted. As an unauthenticated user equivalent access must have been granted to unauthenticated access.</p>
+
+<p id="_3b8e9c9a-79ba-622c-98cd-45d51d2d620e">Freebusy information is returned by default as <tt>xcalendar</tt> <tt>VFREEBUSY</tt> components, as defined by <eref type="inline" bibitemid="xcal" citeas="Internet-Draft draft-daboo-et-al-icalendar-in-xml-11"/>. Such a component is not meant to conform to the requirements of  <tt>VFREEBUSY</tt> components in <eref type="inline" bibitemid="rfc5546" citeas="IETF RFC 5546"/>. The <tt>VFREEBUSY</tt> component <tt>SHOULD</tt> conform to section “4.6.4 Free/Busy Component” of <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>. A client <tt>SHOULD</tt> ignore the <tt>ORGANIZER</tt> field.</p>
+
+<p id="_218bbf67-ddc8-9b44-779f-f463e2e8df14">Since a Freebusy query can only refer to a single user, a client will already know how to match the result component to a user. A server  <tt>MUST</tt> only return a single <tt>VFREEBUSY</tt> component.</p>
+
+<clause id="_accept_header" obligation="normative">
+<title><tt>ACCEPT</tt> header</title>
+<p id="_027ba8a2-4dee-d6ee-f65a-35dea3e0dec8">The Accept header is used to specify the format for the returned data. In the absence of a header the data should be returned as specified in  <eref type="inline" bibitemid="xcal" citeas="Internet-Draft draft-daboo-et-al-icalendar-in-xml-11"/>, that is, as if the following had been specified</p>
+
+<sourcecode id="_070f4db5-1d0f-a015-348d-a3c37f21dc9a" unnumbered="true">ACCEPT: application/xml+calendar</sourcecode>
+
+</clause>
+
+<clause id="_url_query_parameters" obligation="normative">
+<title>URL Query Parameters</title>
+<p id="_fe193840-3b73-4bea-b032-af4d59fffe87">None of these parameters are required except for the conditions noted below. Appropriate defaults will be supplied by the server.</p>
+
+<clause id="_start" obligation="normative">
+<title><tt>start</tt></title>
+<dl id="_e6ad6930-2814-5bdb-6572-dadefa0d4adc"><dt>Default</dt>
+<dd><p id="_cc519be5-92ef-fd67-29e7-e71dd1e899b2">The default value is left up to the server. It may be the current day, start of the current month, etc.</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_e07d2d30-e891-a89b-57be-656cffee3e60">Specifies the start date for the Freebusy data. The server is free to ignore this value and return data in any time range. The client must check the data for the returned time range.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_6e9ee118-9878-bed0-1c50-8ec35a54b4b5">A profile of an <eref type="inline" bibitemid="rfc3339" citeas="IETF RFC 3339"/> Date/Time. Fractional time is not supported. The server <tt>MUST</tt> support the expanded version e.g.</p>
+<p id="_a9ddd5b7-2700-ae66-fe43-88bb1f2de7ab"><tt>2007-01-02T13:00:00-08:00</tt></p>
+
+<p id="_9c32b91f-d11c-deab-15d3-9f05d86cfb41">It is up to the server to interpret local date/times.</p>
+</dd>
+</dl>
+
+<example id="_76c3c18b-388c-ed3a-5023-80bfa46a9c1e"><p id="_a6a716dd-56a4-b5eb-66dd-bb143a5e54e4"><tt>2007-02-03T15:30:00-0800</tt><br/> <tt>2007-12-01T10:15:00Z</tt></p>
+</example>
+
+<note id="_2d7ca040-73bf-03c1-637e-0b9a3790ca4a"><p id="_49802bec-84c7-1e42-b1c6-f6e7a8358c3c">Specifying only a start date/time without specifying an end-date/time or period should be interpreted as in  <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>. The effective period should cover the remainder of that day.</p>
+</note>
+
+<p id="_a13e5ace-6e1a-9bad-01da-cee177c446ed">Date-only values are disallowed as the server cannot determine the correct start of the day. Only UTC or date/time with offset values are permitted.</p>
+</clause>
+
+<clause id="_end" obligation="normative">
+<title><tt>end</tt></title>
+<dl id="_13e7eac5-79e4-9239-0015-0be47763eec2"><dt>Default</dt>
+<dd><p id="_6635948e-71c7-c23f-5f1a-924043da9cd4">Same as <tt>start</tt></p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_b438e24f-5b40-ae95-b01f-cddf1ffe3c45">Specifies the end date for the Freebusy data. The server is free to ignore this value.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_ae6fb1ef-47b1-86c3-1458-6382f6590b42">Same as <tt>start</tt></p>
+</dd>
+<dt>Example</dt>
+<dd><p id="_18370c07-4aad-6ffb-33ea-f775f81f16e4">Same as <tt>start</tt></p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_period" obligation="normative">
+<title><tt>period</tt></title>
+<dl id="_f863fe5c-d066-1498-b58b-5fa8afee09f4"><dt>Default</dt>
+<dd><p id="_42e046c7-e861-be55-4499-2ce4030d26c0">The default value is left up to the server. The recommended value is “P42D”.</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_deac51fc-1d46-659f-7e03-93824ba925a7">Specifies the amount of Freebusy data to return. A client cannot specify both a period and an end date. Period is relative to the start parameter.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_2936b38a-8216-2705-5253-380c665aac96">A duration as defined in <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"><localityStack><locality type="section"><referenceFrom>4.3.6</referenceFrom></locality></localityStack></eref></p>
+</dd>
+</dl>
+
+<example id="_2e2ea5b6-0cc2-30d4-e6f5-e1dbb8254dd7"><p id="_f6a9e6da-01b5-0832-79d9-f11b277dedb7"><tt>P42D</tt></p>
+</example>
+</clause>
+
+<clause id="_account" obligation="normative">
+<title><tt>account</tt></title>
+<dl id="_56fbec1e-faa6-59a6-7c52-e572600be7f4"><dt>Default</dt>
+<dd><p id="_8fa3b29f-aa6d-4a15-0beb-7c77773cfcce">none</p>
+</dd>
+<dt>Description</dt>
+<dd><p id="_1b8805bf-daf9-da9d-2077-75982c722799">Specifies the principal when the request is targeted at the XRD <tt>CalWS/principal-freebusy</tt>. Specification of this parameter is an error otherwise.</p>
+</dd>
+<dt>Format</dt>
+<dd><p id="_c05de8bb-77e0-7cb0-68a4-ff7238c6a1ab">Server specific</p>
+</dd>
+</dl>
+
+<example id="_dd83a935-62fc-f0a8-3f79-361c5fe800d5"><sourcecode id="_a25fde3f-60dc-ca5e-520a-0e0fb6c5ef50" unnumbered="true">fred
+/principals/users/jim
+user1@example.com</sourcecode> </example>
+</clause>
+</clause>
+
+<clause id="_url_parameters_notes" obligation="normative">
+<title>URL parameters — notes</title>
+<p id="_d410de82-a89e-16a1-ad4d-cc3a2e69f90e">The server is free to ignore the start, end and period parameters. It is recommended that the server return at least 6 weeks of data from the current day.</p>
+
+<p id="_f289baef-0a40-f8ff-0a28-8ed3610c572c">A client <tt>MUST</tt> check the time range in the <tt>VFREEBUSY</tt> response as a server may return a different time range than the requested range.</p>
+</clause>
+
+<clause id="_http_operations" obligation="normative">
+<title>HTTP Operations</title>
+<p id="_19361d84-db1e-8700-2aa1-ee4c220dfbca">The server <tt>SHOULD</tt> return an Etag response header for a successful <tt>GET</tt> request targeting a Freebusy read URL. Clients  <tt>MAY</tt> use the Etag response header value to do subsequent “conditional” <tt>GET</tt> requests that will avoid re-sending the Freebusy data again if it has not changed.</p>
+</clause>
+
+<clause id="_response_codes" obligation="normative">
+<title>Response Codes</title>
+<p id="_538fa369-4b1d-b3e7-6edb-36b460a39930">Below are the typical status codes returned by a <tt>GET</tt> request targeting a Freebusy URL. Note that other HTTP status codes not listed here might also be returned by a server.</p>
+
+<ul id="_203ee940-079b-8815-e479-10ee79ff3e4d"><li><p id="_9bab49b7-97ce-bbd5-39b5-d17c826eb11b">200 OK</p>
+</li>
+<li><p id="_681d535f-24d3-ea8e-7d11-f621cbaa96d4">302 Found</p>
+</li>
+<li><p id="_84a7958d-70b0-2d96-f151-194e4148c1e6">400 Start parameter could not be understood / End parameter could not be understood / Period parameter could not be understood</p>
+</li>
+<li><p id="_d46dc1d8-78f1-3adc-7ff6-9becfb8b95a3">401 Unauthorized</p>
+</li>
+<li><p id="_50ad33fe-cb3c-c45d-a5a7-793530fb7685">403 Forbidden</p>
+</li>
+<li><p id="_28011ce7-2b17-5166-bf2e-8d7aaa9b4c6b">404 The data for the requested principal is not currently available, but may be available later.</p>
+</li>
+<li><p id="_5e260eb5-0c8d-67f1-a314-262244d71d59">406 The requested format in the accept header is not supported.</p>
+</li>
+<li><p id="_ab5764fc-0760-598d-8c4e-0d1e4e3c4d9f">410 The data for the requested principal is no longer available</p>
+</li>
+<li><p id="_f0e3cb96-95f2-de16-4ca6-fd98f1d92639">500 General server error</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_examples" obligation="normative">
+<title>Examples</title>
+<p id="_8cb9bef8-eb9c-726e-5dae-469042441353">The following are examples of URLs used to retrieve Freebusy data for a user:</p>
+
+<example id="_1692bcd9-f632-e9b5-7d30-82f54c5cd06e"><sourcecode id="_4cf67565-bb5d-adab-3f0c-b0ace8291a32" unnumbered="true">http://www.example.com/freebusy/user1@example.com?
+start=2007-09-01T00:00:00-08:00&amp;end=2007-09-31T00:00:00-08:00
+
+http://www.example.com/freebusy/user1@example.com?
+start=2007-09-01T00:00:00-08:00&amp;end=2007-09-31T00:00:00-08:00
+
+http://www.example.com/freebusy/user1@example.com
+
+http://www.example.com/freebusy?user=user%201@example.com&amp;
+start=2008-01-01T00:00:00Z&amp;end=2008-12-31T00:00:00Z</sourcecode> </example>
+
+<p id="_66005bd2-f593-041d-9351-a36439a200f0">Some Request/Response Examples:</p>
+
+<example id="_f782b6a0-59c8-3a57-1f54-ec0efc41b570">
+<name>A URL with no query parameters</name>
+<sourcecode id="_cdb30fa5-78f5-b574-8ec8-aa6e3016c26a" unnumbered="true">&gt;&gt; Request &lt;&lt;
+GET /freebusy/bernard/ HTTP/1.1
+Host: www.example.com
+
+&gt;&gt; Response &lt;&lt;
+HTTP/1.1 200 OK
+Content-Type: application/xml+calendar; charset="utf-8"
+Content-Length: xxxx
+
+&lt;xc:icalendar xmlns:xc="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+  &lt;xc:vcalendar&gt;
+    &lt;xc:properties&gt;
+      &lt;xc:calscale&gt;&lt;text&gt;GREGORIAN&lt;/text&gt;&lt;/xc:calscale&gt;
+      &lt;xc:prodid&gt;
+        &lt;xc:text&gt;-//Example Inc.//Example Calendar//EN&lt;/xc:text&gt;
+      &lt;/xc:prodid&gt;
+      &lt;xc:version&gt;&lt;xc:text&gt;2.0&lt;/xc:text&gt;&lt;/xc:version&gt;
+    &lt;/xc:properties&gt;
+    &lt;xc:components&gt;
+      &lt;xc:vfreebusy&gt;
+        &lt;xc:properties&gt;
+          &lt;xc:uid&gt;
+            &lt;xc:text&gt;76ef34-54a3d2@example.com&lt;/xc:text&gt;
+          &lt;/xc:uid&gt;
+          &lt;xc:dtstart&gt;
+            &lt;xc:date-time&gt;20060101T000000Z&lt;/xc:date-time&gt;
+          &lt;/xc:dtstart&gt;
+          &lt;xc:dtend&gt;
+            &lt;xc:date-time&gt;20060108T000000Z&lt;/xc:date-time&gt;
+          &lt;/xc:dtend&gt;
+          &lt;xc:dtstamp&gt;
+            &lt;xc:date-time&gt;20050530T123421Z&lt;/xc:date-time&gt;
+          &lt;/xc:dtstamp&gt;
+          &lt;xc:freebusy&gt;
+            &lt;xc:parameters&gt;
+              &lt;xc:fbtype&gt;BUSYTENTATIVE&lt;xc:fbtype&gt;
+            &lt;xc:parameters&gt;
+            &lt;xc:period&gt;20060102T100000Z/20060102T120000Z&lt;/xc:period&gt;
+          &lt;/xc:freebusy&gt;
+          &lt;xc:freebusy&gt;
+            &lt;xc:period&gt;20060103T100000Z/20060103T120000Z&lt;/xc:period&gt;
+          &lt;/xc:freebusy&gt;
+          &lt;xc:freebusy&gt;
+            &lt;xc:period&gt;20060104T100000Z/20060104T120000Z&lt;/xc:period&gt;
+          &lt;/xc:freebusy&gt;
+          &lt;xc:freebusy&gt;
+            &lt;xc:parameters&gt;
+              &lt;xc:fbtype&gt;BUSYUNAVAILABLE&lt;xc:fbtype&gt;
+            &lt;xc:parameters&gt;
+            &lt;xc:period&gt;20060105T100000Z/20060105T120000Z&lt;/xc:period&gt;
+          &lt;/xc:freebusy&gt;
+          &lt;xc:freebusy&gt;
+            &lt;xc:period&gt;20060106T100000Z/20060106T120000Z&lt;/xc:period&gt;
+          &lt;/xc:freebusy&gt;
+        &lt;/xc:vfreebusy&gt;
+      &lt;/xc:components&gt;
+    &lt;/xc:vcalendar&gt;
+&lt;xc:icalendar&gt;</sourcecode>
+
+</example>
+
+<example id="_556984c1-5adb-1e63-816c-c54fb14d6e7e">
+<name>A URL with start and end parameters</name>
+<sourcecode id="_dd71da76-8466-db36-ae75-738c11eb1f6a" unnumbered="true">&gt;&gt; Request &lt;&lt;
+GET /freebusy/user1@example.com?start=2007-09-01T00:00:00-08:00&amp;end=2007-09-31T00:00:00-
+08:00
+HTTP/1.1
+Host: www.example.com
+
+&gt;&gt; Response &lt;&lt;
+HTTP/1.1 200 OK
+Content-Type: application/xml+calendar; charset="utf-8"
+Content-Length: xxxx
+
+&lt;xc:icalendar xmlns:xc="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+  &lt;xc:vcalendar&gt;
+    &lt;xc:properties&gt;
+       &lt;xc:calscale&gt;&lt;text&gt;GREGORIAN&lt;/text&gt;&lt;/xc:calscale&gt;
+       &lt;xc:prodid&gt;
+         &lt;xc:text&gt;-//Example Inc.//Example Calendar//EN&lt;/xc:text&gt;
+       &lt;/xc:prodid&gt;
+       &lt;xc:version&gt;&lt;xc:text&gt;2.0&lt;/xc:text&gt;&lt;/xc:version&gt;
+     &lt;/xc:properties&gt;
+     &lt;xc:components&gt;
+       &lt;xc:vfreebusy&gt;
+         &lt;xc:properties&gt;
+           &lt;xc:uid&gt;
+             &lt;xc:text&gt;76ef34-54a3d2@example.com&lt;/xc:text&gt;
+           &lt;/xc:uid&gt;
+           &lt;xc:dtstart&gt;
+             &lt;xc:date-time&gt;20070901T000000Z&lt;/xc:date-time&gt;
+           &lt;/xc:dtstart&gt;
+           &lt;xc:dtend&gt;
+             &lt;xc:date-time&gt;20070931T000000Z&lt;/xc:date-time&gt;
+           &lt;/xc:dtend&gt;
+           &lt;xc:dtstamp&gt;
+             &lt;xc:date-time&gt;20050530T123421Z&lt;/xc:date-time&gt;
+           &lt;/xc:dtstamp&gt;
+           &lt;xc:freebusy&gt;
+             &lt;xc:period&gt;20070915T230000Z/20070916T010000Z&lt;/xc:period&gt;
+           &lt;/xc:freebusy&gt;
+         &lt;/xc:vfreebusy&gt;
+       &lt;/xc:components&gt;
+     &lt;/xc:vcalendar&gt;
+&lt;xc:icalendar&gt;</sourcecode>
+
+</example>
+
+<example id="_5e0ee283-a6ad-b8cb-6793-1e15e9b81e13">
+<name>A URL for which the server does not have any data for that user</name>
+<sourcecode id="_b9060da5-ddba-6791-a556-330538b71ee0" unnumbered="true">&gt;&gt; Request &lt;&lt;
+GET /freebusy/user1@example.com?start=2012-12-01T00:00:00-08:00&amp;end=2012-12-31T00:00:00-
+08:00
+HTTP/1.1
+Host: www.example.com
+
+&gt;&gt; Response &lt;&lt;
+HTTP/1.1 404 No data</sourcecode>
+
+</example>
+</clause>
+</clause>
+
+<clause id="_conformance" obligation="normative">
+<title>Conformance</title>
+<p id="_ea8e513f-a4d1-5c9a-809b-eb376d786387">The last numbered section in the specification must be the Conformance section. Conformance Statements/Clauses go here.</p>
+</clause>
+
+<clause id="_acknowledgments" obligation="normative">
+<title>Acknowledgments</title>
+<p id="_a312819b-a040-cc25-7ecf-b86150e96941">The following individuals have participated in the creation of this specification and are gratefully acknowledged</p>
+
+<p id="_c89846b0-b452-64c9-1c3f-d17f8e3b9097">Participants:</p>
+
+<ul id="_344b81e8-eeb0-d4e2-3b4d-d4078e8af7be"><li><p id="_76659aa1-acc8-1cf9-c64c-8c1217e1d8a0">Bruce Bartell, Southern California Edison</p>
+</li>
+<li><p id="_9d8a0d16-5eee-a369-bdac-1a1b40aed678">Brad Benson, Trane</p>
+</li>
+<li><p id="_2e5852e9-71c0-30a0-6ae0-85d2751bec85">Edward Cazalet, Individual</p>
+</li>
+<li><p id="_ede5d868-c032-0940-d71a-04faa3f90572">Toby Considine, University of North Carolina at Chapel Hill</p>
+</li>
+<li><p id="_e524dc34-1074-1b8b-eda5-200b31c24d9c">William Cox, Individual</p>
+</li>
+<li><p id="_a493c0a4-1611-8c0c-77f8-9ab011bac5e9">Sharon Dinges, Trane</p>
+</li>
+<li><p id="_c2237f3c-769b-13c0-fc4f-7140519471b2">Mike, Douglass, Rensselaer Polytechnic Institute</p>
+</li>
+<li><p id="_fce9715f-b55c-6afa-3b39-a958a55d721d">Craig Gemmill, Tridium, Inc.</p>
+</li>
+<li><p id="_5fe2e7a8-66a2-69bc-7ec5-822c9db3d7db">Girish Ghatikar, Lawrence Berkeley National Laboratory</p>
+</li>
+<li><p id="_f7c2c067-ff0c-a79d-8988-76e5da68ebcc">Gerald Gray, Southern California Edison</p>
+</li>
+<li><p id="_833b39ed-7fc0-8546-939e-e8858b733b3c">David Hardin, ENERNOC</p>
+</li>
+<li><p id="_f36d1988-ed73-c04e-230a-5c6650c745ca">Gale Horst, Electric Power Research Institute (EPRI)</p>
+</li>
+<li><p id="_db6276c5-3ee1-d47b-a88c-0b286095ddc6">Gershon Janssen, Individual</p>
+</li>
+<li><p id="_7d18ad25-af64-4501-6560-055c3333f82f">Ed Koch, Akuacom Inc.</p>
+</li>
+<li><p id="_7b8a5340-8e16-75c0-4ced-e9a8b5878500">Benoit Lepeuple, LonMark International*</p>
+</li>
+<li><p id="_225d9542-034e-d5e6-a872-d5481b83ed3a">Carl Mattocks, CheckMi*</p>
+</li>
+<li><p id="_d4ac652e-0861-11ba-7929-2d604c2baccc">Robert Old, Siemens AG</p>
+</li>
+<li><p id="_e3f7cbb4-f98b-c365-977f-a68ebc4e0d08">Alexander Papaspyrou, Technische Universitat Dortmund</p>
+</li>
+<li><p id="_2f1571d0-58a3-2584-ae85-42895e98f4f0">Joshua Phillips, ISO/RTO Council (IRC)</p>
+</li>
+<li><p id="_b6617192-9e25-185c-d44d-c27ee5c6edbc">Jeremy J. Roberts, LonMark International</p>
+</li>
+<li><p id="_9bf1927c-66a3-cfb9-047f-18ab6cd9697a">David Thewlis, CalConnect</p>
+</li>
+</ul>
+
+<p id="_4eb29f5f-5f6c-7623-1277-ef8ec280caed">The Calendaring and Scheduling Consortium (CalConnect) TC-XML committee worked closely with WS1013 Calendar Technical Committee, bridging to developing IETF standards and contributing the services definitions that make up Services in Section 4. The Technical Committee gratefully acknowledges their assistance and cooperation as well. Contributors to TC XML include:</p>
+
+<ul id="_80d03a55-63b4-916e-676a-6322191222b4"><li><p id="_de710e4d-9393-ce92-2231-592a5623f61a">Cyrus Daboo, Apple</p>
+</li>
+<li><p id="_5b0799ba-01d1-040b-c77b-cf2e9f0b0fec">Mike Douglass, Rensselaer Polytechnic Institute</p>
+</li>
+<li><p id="_57d3209e-5bed-a982-b959-32fda42a7942">Steven Lees, Microsoft</p>
+</li>
+<li><p id="_0fb0ec60-c4bc-e3b8-02d1-df7daead6601">Tong Li, IBM</p>
+</li>
+</ul>
+</clause>
+
+
+
+
+</sections><annex id="_an_introduction_to_internet_calendaring" obligation="informative">
+<title>An Introduction to Internet Calendaring</title>
+<p id="_b7bab11c-d7b7-e7c1-136e-638f3abf7095"><em>The WS-Calendar Technical Committee thanks CalConnect for contributing this overview of iCalendar and its use.</em></p>
+
+<clause id="_icalendar" obligation="informative">
+<title>iCalendar</title>
+<clause id="_history" obligation="informative">
+<title>History</title>
+<p id="_18e4bd4f-a576-130f-a44c-5872279086f0">The iCalendar specification was first produced by the IETF in 1998 as <eref type="inline" bibitemid="rfc2445" citeas="IETF RFC 2445"/>. Since then it has become the dominant standard for calendar data interchange on the internet and between devices (desktop computers, mobile phones etc.). The specification was revised in 2009 as  <eref type="inline" bibitemid="rfc5545" citeas="IETF RFC 5545"/>.</p>
+
+<p id="_ef952909-4e1a-dd71-7394-3d77b29d502f">Alongside iCalendar is the iTIP specification (<eref type="inline" bibitemid="rfc2446" citeas="IETF RFC 2446"/> and revised as <eref type="inline" bibitemid="rfc5546" citeas="IETF RFC 5546"/>) that defines how iCalendar is used to carry out scheduling operations (for example, how an organizer can invite attendees to a meeting and receive their replies). This forms the basis for email-based scheduling using iMIP (the specification that describes how to use iTIP with email —  <eref type="inline" bibitemid="rfc6047" citeas="IETF RFC 6047"/>).</p>
+
+<p id="_f66cf759-3d55-e487-1f83-e4b6d9a443d7">iCalendar itself is a text-based data format. However, an XML format is also available, providing a one-to1034 one mapping to the text format ( <eref type="inline" bibitemid="draft" citeas="Internet-Draft draft-daboo-et-al-icalendar-in-xml-11"/>).</p>
+
+<p id="_3af8ef8c-c399-4c7d-a8cc-1c8ef3a0a4aa">iCalendar data files typically have a .ics file name extension. Most desktop calendar clients can import or export iCalendar data, or directly access such data over the Internet using a variety of protocols.</p>
+</clause>
+
+<clause id="_data_model" obligation="informative">
+<title>Data model</title>
+<p id="_ffa51cb3-2946-7312-1f6b-eac3e215acae">The iCalendar data format has a well defined data model. “iCalendar objects” encompass a set of “iCalendar Components” each of which contains a set of “iCalendar properties” and possibly other sub- Components. An iCalendar property consists of a name, a set of optional parameters (specified as “key1041 value” pairs) and a value.</p>
+
+<p id="_fbe54c24-e5c5-4296-8956-8910b6c6ce91">iCalendar Components include:</p>
+
+<ul id="_209c5124-8111-d0cf-7a93-234a74c7703b"><li><p id="_6feb4dad-f9c5-a6ba-ae92-bff6e64d5876">“VEVENT” which represents an event</p>
+</li>
+<li><p id="_9762fcf9-2c05-e16b-7a98-1ff83dcb44a9">“VTODO” which represents a task or to-do</p>
+</li>
+<li><p id="_ae52bd2b-6b58-3da6-26aa-9fb31d361014">“VJOURNAL” which represents a journal entry</p>
+</li>
+<li><p id="_5d24be6b-0a27-ce0a-3f41-ce11d4a763f8">“VFREEBUSY” which represents periods of free or busy time information</p>
+</li>
+<li><p id="_40c320e3-1aea-f74e-ac02-a701027a7b62">“VTIMEZONE” which represents a timezone definition (timezone offset and daylight saving rules)</p>
+</li>
+<li><p id="_aa95e8d1-0d5a-e906-9906-91f85d44aaf1">“VALARM” is currently the only defined sub-Component and is used to set alarms or reminders on events or tasks.</p>
+</li>
+</ul>
+
+<p id="_15341c49-032a-b33d-2dfc-09dad29ec7ee">Properties include:</p>
+
+<ul id="_916d5eaa-6feb-978b-39fe-c1905de39fe9"><li><p id="_1f248d1f-5c73-cf48-2dce-6e118c9b8316">“DTSTART” which represents a start time for a Component</p>
+</li>
+<li><p id="_a228aee5-3649-ae3e-d641-1d172ca6b874">“DTEND” which represents an end time for a Component</p>
+</li>
+<li><p id="_33809e24-157f-2a81-b5e6-3b2bc8221c3c">“SUMMARY” which represents a title or summary for a Component</p>
+</li>
+<li><p id="_b4d9e5da-0d8b-0dd4-c8cb-74dde4d6a682">“RRULE” which can specify rules for repeating events or tasks (for example, every day, every week on Tuesdays, etc.)</p>
+</li>
+<li><p id="_27ef453c-737a-2432-b58d-5680d0429682">“ORGANIZER” which represents the calendar user who is organizing an event or assigning a task</p>
+</li>
+<li><p id="_3e448264-70ea-2a8e-c5a4-41a36cc1d32b">“ATTENDEE” which represents calendar users attending an event or assigned a task</p>
+</li>
+</ul>
+
+<p id="_2f886278-20ac-2162-abe0-d5b69eb61114">In addition to this data model and the pre-defined properties, the specification defines how all those are used together to define the semantics of calendar objects and scheduling. The semantics are basically a set of rules stating how all the Components and properties are used together to ensure that all iCalendar products can work together to achieve good interoperability. For example, a rule requires that all events must have one and only one “DTSTART” property. The most important part of the iCalendar specification is the semantics of the calendaring model that it represents. The 1063 use of text or XML to encode those is secondary.</p>
+</clause>
+
+<clause id="_scheduling" obligation="informative">
+<title>Scheduling</title>
+<p id="_2c6b4c08-3b7a-0b31-b0c6-9500f3740bc5">The iTIP specification defines how iCalendar objects are exchanged in order to accomplish the key task needed to schedule events or tasks. An example of a simple workflow is as follows:</p>
+
+<ol id="_710931be-2571-2a51-1b84-b2562996100e" type="arabic"><li><p id="_4e65647a-c584-ad5f-b34f-356a8027e106">To schedule an event, an organizer creates the iCalendar object representing the event and adds calendar users as attendees.</p>
+</li>
+<li><p id="_f75126d3-ac64-39f6-0230-9aa160ab0495">The organizer then sends an iTIP “REQUEST” message to all the attendees.</p>
+</li>
+<li><p id="_4fe93438-dcba-fd8d-1239-c03e52a67368">Upon receipt of the scheduling message, each attendee can decide whether they want to attend the meeting or not.</p>
+</li>
+<li><p id="_83cd930e-ff5d-fd7a-88a7-0e33b111297c">Each attendee can then respond back to the organizer using an iTIP “REPLY” message indicating their own attendance status.</p>
+</li>
+</ol>
+
+<p id="_57b0f385-ddca-83a5-96f2-e968e575165a">iTIP supports other types of scheduling messages, for example, to cancel meetings, add new instances to a repeating meeting, etc.</p>
+</clause>
+
+<clause id="_extensibility" obligation="informative">
+<title>Extensibility</title>
+<p id="_e164bcdc-09d7-fa21-3a9b-4f760f66485c">iCalendar was designed to be extensible, allowing for new Components, properties and parameters to be defined as needed. A registry exists to maintain the list of standard extensions with references to their definitions to ensure anyone can use them and work well with others.</p>
+</clause>
+</clause>
+
+<clause id="_calendar_data_access_and_exchange_protocols" obligation="informative">
+<title>Calendar data access and exchange protocols</title>
+<clause id="_internet_calendar_subscriptions" obligation="informative">
+<title>Internet Calendar Subscriptions</title>
+<p id="_b78cc7c9-e0a8-5d26-0704-ef275d75adab">An Internet calendar subscription is simply an iCalendar data file made available on a web server. Users can use this data in two ways:</p>
+
+<ul id="_af430b8a-5b39-c16f-e5ae-f1f31cf4ac33"><li><p id="_98fbad61-c76d-2e25-892f-60704f89b977">The data can be downloaded from the web server and then imported directly into an iCalendar aware client. This solution works well for calendar data that is not likely to change over time (for example the list of national holidays for the next year).</p>
+</li>
+<li><p id="_ce61974d-5ef8-4c78-eb52-c9be6e79a4a8">Calendar clients that support “direct” subscriptions can use the URL to the calendar data on the web server to download the calendar data themselves. Additionally, the clients can check the web server on a regular basis for updates to the calendar data, and then update their own cached copy of it. This allows calendar data that changes over time to be kept synchronized.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_caldav" obligation="informative">
+<title>CalDAV</title>
+<p id="_7bd8646a-3c48-fa4f-a9bc-5aa99024d4e0">CalDAV is a calendar access protocol and is defined in <eref type="inline" bibitemid="rfc4791" citeas="IETF RFC 4791"/>. The protocol is based on WebDAV which is an extension to HTTP that provides enhanced capabilities for document management on web servers.</p>
+
+<p id="_71db259d-da11-d164-1ac9-0a5f87d41f21">CalDAV is used in a variety of different environments, ranging from very large internet service providers, to large and small corporations or institutions, and to small businesses and individuals.</p>
+
+<p id="_bbe96a28-54f6-e6c8-fff6-c697738fb915">CalDAV clients include desktop applications, mobile devices and browser-based solutions. It can also be used by “applets”, for example, a web page panel that displays a user’s upcoming events.</p>
+
+<p id="_4382d2ce-563b-1a7f-5eec-a73475a034fb">One of the key aspects of CalDAV is its data model. Simply put, it defines a “calendar home” for each calendar user, within which any number of “calendars” can be created. Each “calendar” can contain any number of iCalendar objects representing individual events, tasks or journal entries. This data model ensures that clients and servers can interoperate well.</p>
+
+<p id="_2fda4593-aacf-351c-85a9-f41b05a9a6ab">In addition to providing simple operations to read, write and delete calendar data, CalDAV provides a querying mechanism to allow clients to fetch calendar data matching specific criteria. This is commonly used by clients to do “time-range” queries, i.e., find the set of 1106 events that occur within a given start/end time period.</p>
+
+<p id="_72963503-8418-c256-9576-91fd3bbe6e74">CalDAV also supports access control allowing for features such as delegated calendars and calendar sharing.</p>
+
+<p id="_63eb35bc-d674-bd38-0e02-79e0ea35c2c8">CalDAV also specifies how scheduling operations can be done using the protocol. Whilst it uses the semantics of the iTIP protocol, it simplifies the process by allowing simple calendar data write operations to trigger the sending of scheduling messages, and it has the server automatically process the receipt of scheduling messages. Scheduling can be done with other users on the CalDAV server or with calendar users on other systems (via some form of “gateway”).</p>
+</clause>
+
+<clause id="_activesyncsyncml" obligation="informative">
+<title>ActiveSync/SyncML</title>
+<p id="_e6457217-7ad1-47f4-ffb3-01c8c7e792b4">ActiveSync and SyncML are technologies that allow multiple devices to synchronize data with a server, with calendar data being one of the classes of data supported. These have typically been used for low1118 end and high-end mobile devices.</p>
+</clause>
+
+<clause id="_calws" obligation="informative">
+<title>CalWS</title>
+<p id="_e16141e8-6614-351f-8672-6a7ed75b6eba">CalWS refers to a set of web services calendar access APIs developed under a cooperative agreement between The Calendaring and Scheduling Consortium (CalConnect) and OASIS, and being published as a work product of the WS-Calendar Technical Committee. CalWS defines an API to access and manipulate calendar data stored on a server. It follows a similar data model to CalDAV and has been designed to co-exist with a CalDAV service offering the same data.</p>
+
+<p id="_2f820b06-93e6-6f08-0dbe-c2544b2732c6">This specification is part of the CalWS set.</p>
+</clause>
+
+<clause id="_ischedule" obligation="informative">
+<title>iSchedule</title>
+<p id="_a243d5db-7312-40a3-c13c-a5aea0ead64e">iSchedule is a protocol to allow scheduling between users on different calendaring systems and across different internet domains. It transports iTIP scheduling messages using HTTP between servers. Servers use DNS and various security mechanisms to determine the authenticity of messages received.</p>
+
+<p id="_9e7e405a-a7f7-4727-7c0f-81e3490cad76">It has been specifically designed to be independent of any calendar system in use at the endpoints, so that it is compatible with many different systems. This allows organizations with different calendar systems to exchange scheduling messages with each other, and also allows a single organization with multiple calendar systems (for example due to mergers, or different departmental requirements) to exchange scheduling messages between users of each system.</p>
+</clause>
+</clause>
+</annex><bibliography><references id="_normative_references" normative="true" obligation="informative">
+<title>Normative references</title><p id="_7700c9c2-af66-2724-095b-c09172f235dc">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+<bibitem id="rfc2119" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Key words for use in RFCs to Indicate Requirement Levels</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2119</uri>
+  <docidentifier type="IETF" primary="true">RFC 2119</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2119</docidentifier>
+  <docnumber>RFC2119</docnumber>
+  <date type="published">
+    <on>1997-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Bradner</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_44a70b1b-d85b-f863-aaf4-9f1bae4d193c">In many standards track documents several words are used to signify the requirements in the specification. These words are often capitalized. This document defines these words as they should be interpreted in IETF documents. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">BCP</title>
+
+    <number>14</number>
+  </series>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2119</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Standards</keyword>
+  <keyword>Track</keyword>
+  <keyword>Documents</keyword>
+</bibitem>
+<bibitem id="rfc4791" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Calendaring Extensions to WebDAV (CalDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4791</uri>
+  <docidentifier type="IETF" primary="true">RFC 4791</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4791</docidentifier>
+  <docnumber>RFC4791</docnumber>
+  <date type="published">
+    <on>2007-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Dusseault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_5d0021d7-29a7-dcd0-83f9-ccdf3627296a">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing calendaring and scheduling information based on the iCalendar format. This document defines the “calendar-access” feature of CalDAV. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4791</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>calcav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>webdav</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>http</keyword>
+</bibitem>
+<bibitem id="wscal"><formattedref format="application/x-isodoc+xml"><em>WS-Calendar Version 1.0</em>. 19 January 2011. OASIS Committee Specification, <link target="http://docs.oasis-open.org/ws-calendar/ws-calendar-spec/v1.0/cs01/ws-calendar24spec-v1.0-cs01.pdf"/>.</formattedref><docidentifier>WS-Calendar</docidentifier></bibitem>
+<bibitem id="xrd"><formattedref format="application/x-isodoc+xml">E. Hammer, W. Norris, <em>Extensible Resource Descriptor (XRD) Version 1.0</em>, <link target="http://docs.oasis-open.org/xri/xrd/v1.0/xrd-1.0.html"/></formattedref><docidentifier>XRD-1.0</docidentifier><docnumber>1.0</docnumber></bibitem>
+<bibitem id="rfc4918" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4918</uri>
+  <docidentifier type="IETF" primary="true">RFC 4918</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4918</docidentifier>
+  <docnumber>RFC4918</docnumber>
+  <date type="published">
+    <on>2007-06</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Dusseault</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_16105700-ffff-4f1e-04ed-f7c22095976a">Web Distributed Authoring and Versioning (WebDAV) consists of a set of methods, headers, and content-types ancillary to HTTP/1.1 for the management of resource properties, creation and management of resource collections, URL namespace manipulation, and resource locking (collision avoidance).</p>
+
+    <p id="_ab3dee92-771d-f0ef-f34f-59a039e50a41">RFC 2518 was published in February 1999, and this specification obsoletes RFC 2518 with minor revisions mostly due to interoperability experience. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>4918</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>WEBDAV</keyword>
+  <keyword>hypertext</keyword>
+  <keyword>transfer</keyword>
+  <keyword>protocol</keyword>
+  <keyword>web</keyword>
+  <keyword>content</keyword>
+</bibitem>
+<bibitem id="rfc3339" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Date and Time on the Internet: Timestamps</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3339</uri>
+  <docidentifier type="IETF" primary="true">RFC 3339</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3339</docidentifier>
+  <docnumber>RFC3339</docnumber>
+  <date type="published">
+    <on>2002-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Klyne</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Newman</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_570c4e27-083d-e70f-490f-5d1b7981d299">This document defines a date and time format for use in Internet protocols that is a profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3339</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Timestamps</keyword>
+  <keyword>gregorian calendar</keyword>
+  <keyword>iso</keyword>
+  <keyword>International Organization for Standardization</keyword>
+</bibitem>
+<bibitem id="rfc2616" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Hypertext Transfer Protocol — HTTP/1.1</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2616</uri>
+  <docidentifier type="IETF" primary="true">RFC 2616</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2616</docidentifier>
+  <docnumber>RFC2616</docnumber>
+  <date type="published">
+    <on>1999-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Gettys</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Mogul</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">H. Frystyk</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">P. Leach</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_6991b387-22d7-6b96-012d-282e109768f8">HTTP has been in use by the World-Wide Web global information initiative since 1990. This specification defines the protocol referred to as “HTTP/1.1”, and is an update to RFC 2068. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7230</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7230</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7231</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7231</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7232</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7232</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7233</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7233</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7234</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7234</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7235</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7235</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2616</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>HTTP</keyword>
+  <keyword>Hypertext Transfer Protocol</keyword>
+  <keyword>World Wide Web</keyword>
+  <keyword>WWW</keyword>
+  <keyword>hypermedia</keyword>
+</bibitem>
+<bibitem id="xcal" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">xCal: The XML Format for iCalendar</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-et-al-icalendar-in-xml-11</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-et-al-icalendar-in-xml-11</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-et-al-icalendar-in-xml</docidentifier>
+  <docnumber>I-D.daboo-et-al-icalendar-in-xml</docnumber>
+  <date type="published">
+    <on>2011-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>RPI</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple, Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Steven Lees</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Microsoft</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>11</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_c1a266f7-bc56-b56d-0366-6025f92b8060">This specification defines “xCal”, an XML format for iCalendar data. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-et-al-icalendar-in-xml-11</number>
+  </series>
+</bibitem>
+<bibitem id="webl" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">Web Linking</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-nottingham-http-link-header-10</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-nottingham-http-link-header-10</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.nottingham-http-link-header</docidentifier>
+  <docnumber>I-D.nottingham-http-link-header</docnumber>
+  <date type="published">
+    <on>2010-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mark Nottingham</completename>       </name>
+
+    </person>
+  </contributor>
+  <version>
+    <draft>10</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_8a092fe5-4104-bba6-24a1-b6cf7635bd8c">This document specifies relation types for Web links, and defines a registry for them. It also defines the use of such links in HTTP headers with the Link header field. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-nottingham-http-link-header-10</number>
+  </series>
+</bibitem>
+<bibitem id="fb" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Freebusy Read URL V1.0 (CD 0903)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Freebusy Read URL V1.0 (CD 0903)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0903%20Freebusy%20Read%20URL%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/S 0903:2009</docidentifier>
+  <version>
+    <revision-date>2009-04-15</revision-date>
+  </version>
+  <abstract format="text/plain">This document, developed by the Freebusy Technical Committee, defines a standardized form of Freebusy read URL to improve interoperability between client and server implementations, while extending the functionality and utility through the use of optional parameters.</abstract>
+</bibitem>
+</references><references id="_non_normative_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="rest">
+  <formattedref format="application/x-isodoc+xml">T Fielding, Architectural Styles and the Design of Network-based Software Architectures, <link target="http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm"/>.</formattedref>
+  <docidentifier>REST</docidentifier>
+  
+</bibitem><bibitem id="rfc2445" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2445</uri>
+  <docidentifier type="IETF" primary="true">RFC 2445</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2445</docidentifier>
+  <docnumber>RFC2445</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Stenerson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_9f5d8b2f-c728-685b-6d1d-1940f668711f">This memo has been defined to provide the definition of a common format for openly exchanging calendaring and scheduling information across the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2445</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ICALENDAR</keyword>
+  <keyword>interoperable</keyword>
+  <keyword>mime</keyword>
+  <keyword>multipurpose internet mail extensions</keyword>
+</bibitem><bibitem id="rfc2446" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP) Scheduling Events, BusyTime, To-dos and Journal Entries</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2446</uri>
+  <docidentifier type="IETF" primary="true">RFC 2446</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2446</docidentifier>
+  <docnumber>RFC2446</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Silverberg</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Mansour</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Hopson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_2211e105-b9ea-78ef-5026-5ba044b9b747">This document specifies how calendaring systems use iCalendar objects to interoperate with other calendar systems. It does so in a general way so as to allow multiple methods of communication between systems. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5546</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5546</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2446</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ITIP</keyword>
+  <keyword>iCalendar Transport-Independent Interoperability Protocol</keyword>
+  <keyword>internet</keyword>
+  <keyword>systems</keyword>
+</bibitem><bibitem id="rfc6047" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc6047</uri>
+  <docidentifier type="IETF" primary="true">RFC 6047</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6047</docidentifier>
+  <docnumber>RFC6047</docnumber>
+  <date type="published">
+    <on>2010-12</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Melnikov</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_caca3082-0413-fd5d-d3d4-0f8f0920de28">This document, “iCalendar Message-Based Interoperability Protocol (iMIP)”, specifies a binding from the iCalendar Transport-independent Interoperability Protocol (iTIP) to Internet email-based transports. Calendaring entries defined by the iCalendar Object Model (iCalendar) are wrapped using constructs from RFC 5322 and MIME (RFC 2045, RFC 2046, RFC 2047, and RFC 2049), and then transported over SMTP. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>6047</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>IMIP]</keyword>
+  <keyword>electronic mail</keyword>
+  <keyword>transport</keyword>
+  <keyword>itip</keyword>
+  <keyword>iCalendar Transport-independent Interoperability Protocol</keyword>
+  <keyword>iCalendar Object Model</keyword>
+</bibitem><bibitem id="rfc5545" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>
+  <docidentifier type="IETF" primary="true">RFC 5545</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5545</docidentifier>
+  <docnumber>RFC5545</docnumber>
+  <date type="published">
+    <on>2009-09</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_d3ae7e19-3043-f2df-213c-b481be5ca247">This document defines the iCalendar data format for representing and exchanging calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information, independent of any particular calendar service or protocol. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5545</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calsify</keyword>
+  <keyword>calsched</keyword>
+  <keyword>calsch</keyword>
+  <keyword>caldav</keyword>
+  <keyword>calendar</keyword>
+  <keyword>calendaring</keyword>
+  <keyword>meeting</keyword>
+  <keyword>event</keyword>
+  <keyword>task</keyword>
+  <keyword>to-do</keyword>
+  <keyword>journal</keyword>
+  <keyword>appointment</keyword>
+  <keyword>agenda</keyword>
+  <keyword>schedule</keyword>
+  <keyword>scheduling</keyword>
+  <keyword>ical</keyword>
+  <keyword>icalendar</keyword>
+  <keyword>itip</keyword>
+  <keyword>imip</keyword>
+  <keyword>text/calendar</keyword>
+  <keyword>ischedule</keyword>
+  <keyword>xCalendar</keyword>
+</bibitem><bibitem id="rfc5546" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5546</uri>
+  <docidentifier type="IETF" primary="true">RFC 5546</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5546</docidentifier>
+  <docnumber>RFC5546</docnumber>
+  <date type="published">
+    <on>2009-12</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_95f2d15e-0964-aa8b-f2e6-59eb0492b10e">This document specifies a protocol that uses the iCalendar object specification to provide scheduling interoperability between different calendaring systems. This is done without reference to a specific transport protocol so as to allow multiple methods of communication between systems. Subsequent documents will define profiles of this protocol that use specific, interoperable methods of communication between systems.</p>
+
+    <p id="_960eb448-61a7-09d8-3ef0-a6594df6adfc">The iCalendar Transport-Independent Interoperability Protocol (iTIP) complements the iCalendar object specification by adding semantics for group scheduling methods commonly available in current calendaring systems. These scheduling methods permit two or more calendaring systems to perform transactions such as publishing, scheduling, rescheduling, responding to scheduling requests, negotiating changes, or canceling. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>5546</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>calendar</keyword>
+  <keyword>scheduling</keyword>
+</bibitem><bibitem id="draft" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title format="text/plain" language="en" script="Latn">xCal: The XML Format for iCalendar</title>
+
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-daboo-et-al-icalendar-in-xml-11</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-daboo-et-al-icalendar-in-xml-11</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.daboo-et-al-icalendar-in-xml</docidentifier>
+  <docnumber>I-D.daboo-et-al-icalendar-in-xml</docnumber>
+  <date type="published">
+    <on>2011-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Mike Douglass</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>RPI</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Cyrus Daboo</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Apple, Inc.</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en">Steven Lees</completename>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Microsoft</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>11</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_5b22470e-6bad-e5f8-077e-d2dad924ca74">This specification defines “xCal”, an XML format for iCalendar data. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series type="main">
+    
+<title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+
+    <number>draft-daboo-et-al-icalendar-in-xml-11</number>
+  </series>
+</bibitem>
+
+
+
+
+
+
+
+</references></bibliography>
+</csd-standard>

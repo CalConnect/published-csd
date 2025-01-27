@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">EDUCAUSE 2005 Overview of The Calendaring and Scheduling Consortium</title>
+<docidentifier primary="true" type="CalConnect">CC/A 0509:2005</docidentifier><docnumber>0509</docnumber><date type="published"><on>2005-10-11</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2005-10-11</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2005</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="A">administrative</doctype><flavor>cc</flavor><editorialgroup><committee>CALCONNECT</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_7fbaec4b-0250-84e7-0e43-81775debe8a4" obligation="normative">
+<p id="_cdc4fc6d-0ab8-7040-218a-aee9d6fd453d">© 2005 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_898c54e1-b92c-6504-361f-a11d8f2c8e63" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+</foreword></preface><sections>
+<clause id="_goals_of_the_consortium" obligation="normative">
+<title>Goals of the Consortium</title>
+<ol id="_8036dd66-315f-7daa-b1fb-b19ffe2823c6" type="arabic"><li><p id="_bfb7b85b-a998-32d9-86b4-aa6af53768c7">Promote Calendaring  Scheduling via a partnership between Vendors and Customers</p>
+</li>
+<li><p id="_f2618bdb-a36c-8d16-1b7f-76a6758b6101">Help drive the evolution of open standards for Calendaring  Scheduling (iCalendar, iMIP, iTIP, CalDAV)</p>
+</li>
+<li><p id="_bea977e7-f49c-042b-123a-76cdbf14a03a">Conduct interoperability testing</p>
+</li>
+<li><p id="_dd98b3fa-d629-e8d3-3741-8fd2995e3f50">Develop a shared vision for the Calendaring  Scheduling community</p>
+</li>
+</ol>
+</clause>
+
+<clause id="_academic_members" obligation="normative">
+<title>Academic Members</title>
+<ul id="_487ff02c-dc3a-8dbd-c995-f77c65f6f16c"><li><p id="_155a820e-bc55-5553-ca94-bdf7f5e82de4">Carnegie Mellon University</p>
+</li>
+<li><p id="_7001d1af-926a-ea63-b093-059b302da674">California State University Fresno</p>
+</li>
+<li><p id="_f1a83d25-d1aa-7778-fb04-75ea75b3d5b6">Dartmouth College</p>
+</li>
+<li><p id="_e890b0d7-e073-683f-717e-45ce1b4a7f27">Duke University</p>
+</li>
+<li><p id="_b35ab173-702d-e2a1-c170-054fd7f62a39">Harvard ASCS</p>
+</li>
+<li><p id="_e0173d12-9f95-884e-07b6-ad694aae486c">Massachusetts Institute of Technology</p>
+</li>
+<li><p id="_3c5fd3c3-0c32-66e9-d8f5-d389c3a30b22">NASA Jet Propulsion Laboratory (Cal Tech)</p>
+</li>
+<li><p id="_2f368ebf-4185-9b56-5c1a-703b1404981b">Rensselaer Polytechnic Institute</p>
+</li>
+<li><p id="_00bec981-7ec0-c558-91d5-486c29dbb32f">Stanford University</p>
+</li>
+<li><p id="_cdac4fd5-7469-fd85-ab54-8d951a6aa96e">University of California Berkeley</p>
+</li>
+<li><p id="_aa20686d-72a3-7f1c-470e-95b3b39c3dee">University of Washington</p>
+</li>
+<li><p id="_54c65086-70f9-3b05-0c08-d1cc7c5fc806">University of Wisconsin</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_vendors_and_open_source_implementers" obligation="normative">
+<title>Vendors and Open Source Implementers</title>
+<ul id="_5ee3b571-ad96-97a3-b44c-1f5dd4d49e5c"><li><p id="_3c973067-57d1-c568-5473-d2f6b0684b02">EVDB</p>
+</li>
+<li><p id="_74eb7dbb-b722-5bfd-74d8-cf620999bfb9">IBM</p>
+</li>
+<li><p id="_af4921c0-34a4-ef7f-2067-8058a3cd8ec1">Meeting Maker</p>
+</li>
+<li><p id="_bbe99f53-dce8-3d16-c5fc-f4ffd41865f9">Mozilla Foundation</p>
+</li>
+<li><p id="_70ac86aa-6748-b149-7435-3aec03a72f68">Novell</p>
+</li>
+<li><p id="_d204de2a-e695-1dcb-ab8c-073c8ec7602a">Open Source Applications Foundation</p>
+</li>
+<li><p id="_260641e1-b2a1-a19e-3795-180b55bff813">Oracle</p>
+</li>
+<li><p id="_11295727-9982-1d37-b5d8-b6264e091e0a">Symbian</p>
+</li>
+<li><p id="_62623761-4b47-a9f1-d117-b082f36c7b20">Trumba</p>
+</li>
+<li><p id="_cdc47f7e-5db2-4dea-4ac0-84989caca810">Yahoo!</p>
+</li>
+</ul>
+
+<p id="_0876ea46-c0db-b31b-62c5-c13f0195c982">If your vendor isn’t listed here, ask them why!</p>
+</clause>
+
+<clause id="_technical_committees" obligation="normative">
+<title>Technical Committees</title>
+<clause id="_authenticate" obligation="normative">
+<title>AUTHENTICATE</title>
+<p id="_129ca598-525f-1a67-f99a-f14ddab4ddf9">Better HTTP authentication in CalDAV.</p>
+</clause>
+
+<clause id="_caldav" obligation="normative">
+<title>CalDAV</title>
+<p id="_3551ba09-d4e7-eda8-c9db-4aec43daa6d9">Calendar access use cases and problems.</p>
+</clause>
+
+<clause id="_eventpub" obligation="normative">
+<title>EVENTPUB</title>
+<p id="_84cc9673-566d-b9f7-ca13-b9e017dd590d">Event publishing.</p>
+</clause>
+
+<clause id="_ioptest" obligation="normative">
+<title>IOPTEST</title>
+<p id="_e897f50e-132e-baed-8b88-04d7fd8e7dea">Interoperability testing  reporting. Test suites.</p>
+</clause>
+
+<clause id="_mobile" obligation="normative">
+<title>MOBILE</title>
+<p id="_6d3b565d-6e54-e8c6-06c6-4922a7482771">Issues for mobile devices.</p>
+</clause>
+
+<clause id="_realtime" obligation="normative">
+<title>REALTIME</title>
+<p id="_89d55527-98cf-1d49-3704-2b9c0c981c2f">Calendaring across organizational boundaries.</p>
+</clause>
+
+<clause id="_recurr" obligation="normative">
+<title>RECURR</title>
+<p id="_1fb41ec4-ae57-2d5e-e412-7c6270470513">Handling of recurrences.</p>
+</clause>
+
+<clause id="_timezone" obligation="normative">
+<title>TIMEZONE</title>
+<p id="_b223aa24-9d2b-9d7e-9578-975506a99bc8">Issues with timezone support. Define timezone registry.</p>
+</clause>
+
+<clause id="_usecase" obligation="normative">
+<title>USECASE</title>
+<p id="_9c34072a-8438-83fe-3e08-28b2ce5e0585">Real world use cases to be solved.</p>
+</clause>
+</clause>
+
+<clause id="_events" obligation="normative">
+<title>Events</title>
+<ol id="_8e2484b8-4c51-1e3b-8664-4fb6bd960880" type="arabic"><li><p id="_6208c9ac-22ab-1f87-07be-40ebbeca3198">Interops (Interoperability Testing)</p>
+<ul id="_edd53cde-052e-2e0f-8867-47ddfcfd8307"><li><p id="_b263e50b-1f45-0185-bb4f-5a89e24eea44">Participation open to members and non-members (significant discount for members)</p>
+</li>
+<li><p id="_293bf46d-fd19-376b-215f-1a0038a95fe8">Two day event usually co-located with Roundtable</p>
+</li>
+<li><p id="_b8639d07-f164-1c73-b908-8c3b6c999d7f">Results published to relevant standards org</p>
+</li>
+<li><p id="_ab152605-0461-47d8-a1e0-04e48f0d801c">Public version on Consortium website</p>
+</li>
+</ul>
+</li>
+<li><p id="_669da195-eaa8-fe15-b185-95573146ad89">Roundtables</p>
+<ul id="_f1a0e448-dbc4-c6c4-cc4c-ad8430d7f663"><li><p id="_5416a980-a71e-52ca-166e-316204eecf83">Three per year midway between IETF meetings</p>
+</li>
+<li><p id="_a0f4fb87-c368-d3d4-0ca1-8b5f72ab074a">Held in conjunction with Interops</p>
+</li>
+<li><p id="_1c809206-24e6-ad24-0caa-4b7694c38bf1">Technical committee working meetings</p>
+</li>
+<li><p id="_0e57e958-80ac-cbd5-8c5b-71ddc1398d51">Review and status of technical committees</p>
+</li>
+<li><p id="_4dac5463-a774-cd00-1a01-2a75fdcf0002">“All hands” plenary meeting of membership</p>
+</li>
+<li><p id="_2998e6c5-81a2-4982-340e-72c8c2f114f8">Consensus on direction, next steps of Consortium</p>
+</li>
+</ul>
+</li>
+</ol>
+</clause>
+
+<clause id="_how_to_get_involved" obligation="normative">
+<title>How to Get Involved</title>
+<ol id="_1bc6fc45-8379-676c-9efa-c42c3691744c" type="arabic"><li><p id="_1181da70-8d1c-6709-6124-b285dc20d383">Website: <link target="http://www.calconnect.org"/></p>
+</li>
+<li><p id="_d18ae39c-4c86-f57f-1ecd-4440adffb57d">Contact us: <link target="mailto:info@calconnect.org"/></p>
+</li>
+<li><p id="_cbdaa259-2d1c-6dca-a6cc-9e880375637c">Attend the next Roundtable as an observer: January 10-12, Provo, Utah</p>
+</li>
+<li><p id="_0de62775-ba7f-f189-09a2-bdd99fa25f96">Flyers with more information and business cards available at the front</p>
+</li>
+<li><p id="_0b6ae2ed-cc59-359e-3b7f-db4cc7dd6470">This presentation: <link target="http://www.calconnect.org/presentations/educause2005.ppt"/></p>
+</li>
+</ol>
+</clause>
+</sections>
+</csd-standard>

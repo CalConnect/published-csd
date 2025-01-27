@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Cal-WS Web Services API for Calendaring and Scheduling</title>
+<docidentifier primary="true" type="CalConnect">CC/S 1004:2010</docidentifier><docnumber>1004</docnumber><date type="published"><on>2010-05-19</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>0.3</edition><version><revision-date>2010-05-19</revision-date></version><language>en</language><script>Latn</script><status><stage>proposal</stage></status><copyright><from>2010</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1004:2010</docidentifier>
+  <date type="updated">
+    <on>2010</on>
+  </date>
+  <edition>0.1</edition>
+<amend change="modify"><description><p id="_88f61c49-95e7-4175-f768-a532b9dea99c">Changed datetime format in examples to match xCal.</p>
+
+<p id="_b5eebdd8-0d49-2e03-46dd-c87a5bad3a40">Added schema reference to xCal in examples.</p>
+
+<p id="_8af0f603-ce70-4335-f96e-d0c55346dfda">Updated section on requirements for extensions to xCal.</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1004:2010</docidentifier>
+  <date type="updated">
+    <on>2010</on>
+  </date>
+  <edition>0.2</edition>
+<amend change="modify"><description><p id="_286b08c2-5479-cb78-59bc-dd4849d6c78d">Introduced “CalWS” as working name to avoid confusion with OASIS document.</p>
+
+<p id="_907bb3b6-4cfa-849d-deb2-33b0f848f509">Updated discussion on precision, uncertainty, sequence</p>
+</description></amend></bibitem></relation><relation type="updatedBy"><bibitem schema-version="v1.2.9">
+  <docidentifier type="CalConnect">CC/S 1004:2010</docidentifier>
+  <date type="updated">
+    <on>2010</on>
+  </date>
+  <edition>0.3</edition>
+<amend change="modify"><description><p id="_00dde832-6acb-9a5f-fa1c-ab693f6f4328">Added “Other Protocols” section.</p>
+</description></amend></bibitem></relation><ext><doctype abbreviation="S">specification</doctype><flavor>cc</flavor><editorialgroup><committee>XML</committee></editorialgroup></ext></bibdata><metanorma-extension><clause id="_document_history" obligation="normative">
+<title>document history</title>
+<sourcecode id="_a541fbb7-925b-0995-62f5-d27333b87d77" lang="yaml">- date:
+  - type: updated
+    value: 2010
+  edition: 0.1
+  amend:
+    description: |
+      Changed datetime format in examples to match xCal.
+
+      Added schema reference to xCal in examples.
+
+      Updated section on requirements for extensions to xCal.
+- date:
+  - type: updated
+    value: 2010
+  edition: 0.2
+  amend:
+    description: |
+      Introduced "CalWS" as working name to avoid confusion with OASIS document.
+
+      Updated discussion on precision, uncertainty, sequence
+- date:
+  - type: updated
+    value: 2010
+  edition: 0.3
+  amend:
+    description: Added "Other Protocols" section.</sourcecode>
+
+</clause>
+<presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_8f20ccc1-635d-bf2f-404a-72507af81e77" obligation="normative">
+<p id="_dcdc0398-a59b-3ae3-7a62-8128124a3fad">© 2010 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_bff242ff-9444-a03f-7481-fbcbf6830c25" obligation="normative">
+<title>Warning for Drafts</title>
+<p id="_cc4d8c67-279a-85b4-0f49-fd97183ecc41">This document is not a CalConnect Standard. It is distributed for review and         comment, and is subject to change without notice and may not be referred to as         a Standard. Recipients of this draft are invited to submit, with their         comments, notification of any relevant patent rights of which they are aware         and to provide supporting documentation.</p>
+</clause>
+</license-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_c7808bdd-c2f6-fac5-cc5d-27feeeb6f628" obligation="informative">
+<title>Foreword</title>
+<p id="_7027bb23-cf3a-4153-c24a-939422306e6b">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public Review) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerreview.pdf"/>.</p>
+
+<p id="_20f2b660-3149-af9b-d6a6-657a6b24d48e">This Proposal is an <underline>in-progress working document</underline> which has been made available for a 30-day public review and comment period. Please offer any comments or suggestions to the CalConnect Public Review and Comment Mailing list. For information about this list and to subscribe please see</p>
+
+<p id="_3e8fd60c-14b2-8454-c847-f9a6a4690af7"><link target="http://www.calconnect.org/publicreviewdocuments.shtml"/>.</p>
+</foreword><introduction id="_introduction" obligation="informative">
+<title>Introduction</title>
+<p id="_69b98bd9-19dc-e8dc-5197-1f38a990368f">Define a web service that allows basic CRUD (create, read, update, delete) operations, query, and scheduling operations on a calendar and meets the requirements of uses cases related to the Smart Grid initiative.</p>
+</introduction></preface><sections>
+
+
+<clause id="_smart_grid_suppliers_and_consumers" obligation="normative">
+<title>Smart Grid Suppliers and Consumers</title>
+<p id="_122a7107-f530-ed38-e7be-167bd587b11b">Smart grid scenarios involve two main actors — a supplier and a consumer.</p>
+
+<clause id="_goals" obligation="normative">
+<title>Goals</title>
+<p id="_61e10be7-37fc-e6cc-b1d5-ac94199080d7">Assumption: A smart grid consumer wants to schedule consumption of grid capacity to meet needs while minimizing cost or total energy use.</p>
+
+<p id="_6948d43d-7be2-bfb2-262f-1f53d3179616">Assumption: A smart grid supplier wants to schedule the available supply of grid capacity to meet consumer demand while minimizing outages and unused capacity.</p>
+
+<p id="_0e51baac-aeaa-d929-5eb1-e8c1c753f844">To achieve the goals above, consumers and suppliers must be able to do different but related activities:</p>
+
+<table id="_16152bfa-9e62-6773-dd68-8b3e4b6366ec" unnumbered="true"><thead><tr><th valign="top" align="left">Consumer</th>
+<th colspan="2" valign="top" align="left">Supplier</th>
+</tr></thead>
+<tbody><tr><th valign="top" align="left">Anticipate demand</th>
+<td valign="top" align="left">Communicate future anticipated demand.</td>
+<td valign="top" align="left">Determine how much capacity consumers will demand at some point in the future.</td>
+</tr><tr><th valign="top" align="left">Anticipate capacity</th>
+<td valign="top" align="left">Determine available capacity and its cost now and in the future.</td>
+<td valign="top" align="left">Communicate available capacity and its cost now or in the future.</td>
+</tr><tr><th valign="top" align="left">Sell capacity</th>
+<td valign="top" align="left">Purchase a portion of grid capacity from a supplier (or another consumer) in advance.</td>
+<td valign="top" align="left">Sell a portion of grid capacity in advance.</td>
+</tr><tr><th valign="top" align="left">Re-sell or buy back capacity</th>
+<td valign="top" align="left">Sell back, re-sell, or give up rights to grid capacity.</td>
+<td valign="top" align="left">Buy back grid capacity from consumers.</td>
+</tr><tr><th valign="top" align="left">Avoid outages</th>
+<td valign="top" align="left">Gracefully adjust when less capacity is available than it needs.</td>
+<td valign="top" align="left">Force consumers at times to use less capacity to avoid outages.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_simple_interaction_model" obligation="normative">
+<title>Simple Interaction Model</title>
+<p id="_1111765f-37c1-6ed3-6a6e-370c1d68a8a9">For the purposes of this proposal, here is a simple model on the interactions between consumers and suppliers:</p>
+
+<table id="_e507e4ee-dda2-12b3-eaf8-a971747b7b36" unnumbered="true"><thead><tr><th valign="top" align="left">Interaction</th>
+<th valign="top" align="left">Initiated by</th>
+<th valign="top" align="left">Targeted to</th>
+<th valign="top" align="left">Purpose</th>
+</tr></thead>
+<tbody><tr><th valign="top" align="left">Ask</th>
+<td valign="top" align="left">Consumer</td>
+<td valign="top" align="left">Supplier</td>
+<td valign="top" align="left">Communicate demand and request an offer.</td>
+</tr><tr><th valign="top" align="left">Offer/Bid</th>
+<td valign="top" align="left">Supplier (or consumer)</td>
+<td valign="top" align="left">Consumer (or supplier)</td>
+<td valign="top" align="left">Offer available capacity for sale (or re-sale) and its cost for purchase.</td>
+</tr><tr><th valign="top" align="left">Purchase/Reject</th>
+<td valign="top" align="left">Consumer (or supplier)</td>
+<td valign="top" align="left">Supplier (or consumer)</td>
+<td valign="top" align="left">Decision to accept or reject the offer.</td>
+</tr><tr><th valign="top" align="left">Restriction</th>
+<td valign="top" align="left">Supplier</td>
+<td valign="top" align="left">Consumer</td>
+<td valign="top" align="left">Signal consumer to reduce consumption to avoid outage.</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+
+<clause id="_use_cases" obligation="normative">
+<title>Use Cases</title>
+<clause id="_publish_and_query_a_rate_schedule" obligation="normative">
+<title>Publish and query a rate schedule</title>
+<p id="_35e4c830-5d27-7dcc-1a00-86dd416842a8">A utility defines a rate schedule as a collection of “events” which include utility rates for a defined period of time. For example, different electricity rates can be set for peak and non-peak hours. The utility creates events in the rate schedule and makes it available to be queried by devices on the grid.</p>
+</clause>
+
+<clause id="_ask_for_bids_negowatts" obligation="normative">
+<title>Ask for Bids (negowatts)</title>
+<p id="_3d63447f-afa6-f37a-17df-c517e598f47c">Consumer will reduce its demand by not using power it has already purchased if it receives an acceptable offer.</p>
+
+<ul id="_dceb64a5-5d44-a32e-f0ed-a0f98597323b"><li><p id="_71c489e2-4771-1d65-8e27-525a0f501d85">Offers can be made between 3 and 4 this afternoon (event)</p>
+</li>
+<li><p id="_b045be4e-d815-9903-19e6-ff4a361e2437">Demand will be reduced between 4 and 4:30 p.m. this afternoon (event)</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_ask_for_bids_load_profile" obligation="normative">
+<title>Ask for Bids (load profile)</title>
+<p id="_df8d6675-1851-5d40-acc5-ff5e294e5957">Consumer wishes to buy power on a recurring basis with a specific usage profile.</p>
+
+<ul id="_b740245f-ecfa-ea8d-ea9a-a252d4308fd5"><li><p id="_7d2e824f-0744-4910-fa0b-2630e7521cc3">Offers can be made between 3 and 4 this afternoon (event)</p>
+</li>
+<li><p id="_ae116b5a-0e16-0694-b654-31a11c2a3475">Load profile of several consecutive 30 minute intervals, each requiring different power (sequence)</p>
+</li>
+<li><p id="_3928bce8-f361-e0b9-c70e-d9e5358a134b">Recurring schedule could be one of the following (recurring event)</p>
+<ul id="_784b4484-75c6-89d5-daa3-5aa59370a92e"><li><p id="_78928382-fc24-ef56-ccfa-ff3b3811fe2b">Weekday evenings at 6 p.m. starting May 1 for 6 weeks</p>
+</li>
+<li><p id="_0a29255d-d4cf-975a-420c-0cd751117ca8">Weekday mornings at 4 a.m. starting April 15 for 6 weeks</p>
+</li>
+<li><p id="_c87c1e87-d78f-a3c7-16a0-f714f38afbcb">Saturday mornings at 8 a.m. starting April 1 for 15 weeks</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+
+<clause id="_submit_bid" obligation="normative">
+<title>Submit Bid</title>
+<p id="_4d93049f-579d-d9c4-2426-5df71cd8f932">Supplier agrees to supply power under certain conditions.</p>
+
+<ul id="_96313b91-492f-4267-a322-384379e9ca3a"><li><p id="_0bd680eb-6939-64d2-6ec0-5dcef2aa2da7">Consumer must reply by Friday at 4:30 p.m. (datetime)</p>
+</li>
+<li><p id="_c70e6a36-5f2b-0447-bc48-30213962fed6">Supplier can provide power between 12 a.m. and 10 a.m. every day this week (recurring event)</p>
+</li>
+<li><p id="_b305f5dc-969e-2613-afb3-686816f16b7a">Supplier can respond within half a second (duration) for up to 20 minutes (duration)</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_other_protocols" obligation="normative">
+<title>Other Protocols</title>
+<p id="_ac6141ba-7cbe-7b3a-a557-da78cb274c41">In developing this protocol attention has been paid to protocols that already exist in the calendaring arena. Most appear to support a similar conceptual model but there are a number of detail differences.</p>
+
+<clause id="_caldav" obligation="normative">
+<title>CalDAV</title>
+<p id="_95fce1b1-7d27-3a87-a88f-def2cc4b00dc">CalDAV appears to be closely aligned to the requirements for this protocol:</p>
+
+<ul id="_ed26a1eb-5d67-5ef5-e70c-02a506d14a40"><li><p id="_1fbdf1aa-7bdd-2c72-f282-bffd6dbae6ee">It is XML based</p>
+</li>
+<li><p id="_f6ddf44f-ff6e-312e-9c71-d30d7e43285d">It is designed specifically for client/server calendaring interactions</p>
+</li>
+<li><p id="_fc1f3828-2500-191b-3b88-9d880b04f608">It can transport different content-types.</p>
+</li>
+<li><p id="_ca6a88fc-be78-901d-c8cb-ce2d7bdccc97">Handles CRUD, reporting and scheduling operations.</p>
+</li>
+</ul>
+
+<p id="_806b3663-8eb8-f1c2-2a95-4c73f814a197">CalDAV as it stands is not appropriate for use as a web service as it extends WebDAV and uses that protocol to provide authorization and access control.</p>
+
+<p id="_754df85c-896e-5ce0-cdb3-77f817e3fe28">However, the experience of designing and implementing CalDAV provides us with some important experience which can be applied to this protocol.</p>
+</clause>
+
+<clause id="_caldav_data_structures" obligation="normative">
+<title>CalDAV data structures</title>
+<p id="_6407888c-2d91-aa84-dbd4-5938c51b9343">CalDAV, building upon WebDAV, assumes a hierarchical structure of collections (corresponding to file-system folders) and resources (corresponding to file-system files). It applies some further constraints to that structure, certain collections are defined as calendar-collections and these can only contain calendar resources, events, tasks etc.</p>
+
+<p id="_9151c79f-84be-6db2-8a99-f31c79303d57">Resources and collections are targeted by a path structure allowing simple HTTP <tt>GET</tt> and <tt>PUT</tt> operations to access those resources.</p>
+</clause>
+
+<clause id="_caldav_crud" obligation="normative">
+<title>CalDAV CRUD</title>
+<p id="_e8ec2595-751b-b15d-947d-adc70278ce6f">The basic CRUD operations in CalDAV are provided by the HTTP <tt>PUT</tt>, <tt>GET</tt> and <tt>DELETE</tt> methods. The semantics are essentially the same as those for the basic HTTP methods.</p>
+</clause>
+
+<clause id="_caldav_collection_operations" obligation="normative">
+<title>CalDAV Collection operations</title>
+<p id="_8e49f4ae-7060-df59-8125-423496960191">CalDAV collections are created by the WebDAV <tt>MKCOL</tt> method which now allows the addition of a body to provide properties for the new collection. They are deleted by using the  <tt>DELETE</tt> method. Any contained resources and collections are deleted along with the collection.</p>
+
+<p id="_ff69bcfa-aaab-354d-e9a2-9d1406c80a16">WebDAV and CalDAV do not define the semantics of <tt>GET</tt> on a collection. Some CalDAV servers will deliver a complete iCalendar  <tt>VCALENDAR</tt> component containing all resources, others will return html allowing browsing of the structure.</p>
+</clause>
+
+<clause id="_caldav_reports" obligation="normative">
+<title>CalDAV reports</title>
+<p id="_b16ff325-5080-be21-108f-334f6b5e6ea6">CalDAV reports build upon the WebDAV report method and provide some basic querys and filtering. Reports can take some different forms:</p>
+
+<ul id="_a872cd23-e8d8-b0be-9345-7808c0d27696"><li><p id="_22634f3a-c5c6-3091-f913-f187a8e37ec7">Query and filter</p>
+<ul id="_6c3af8bb-fe69-8c8d-088f-204ecce8fe24"><li><p id="_e4a95a79-4059-039a-c282-407cd1a11551">Query matches for a number of constraints</p>
+</li>
+<li><p id="_d1e1cd16-fc84-a98b-b2c2-a4bc76b005e5">Filter specifies what properties to return</p>
+</li>
+</ul>
+</li>
+<li><p id="_de786c20-e3b9-f00f-0b6f-7a57f6cb3aaf">Multi-get</p>
+<ul id="_ec704f99-0a05-92c2-3247-237dca02713b"><li><p id="_eca3d911-4d99-c96f-a96d-7f9c2c0b6873">Specifies a number of target objects to return</p>
+</li>
+</ul>
+</li>
+<li><p id="_0c92ff98-e41d-45ec-1942-c6963d327291">Freebusy report</p>
+<ul id="_c64972b0-fa27-f44a-b058-5902df230b00"><li><p id="_93b11570-66c5-8b83-0cb5-a469a75079ec">This returns Freebusy information for the targeted resource. In general it is NOT the same as the Freebusy for a principal.</p>
+</li>
+</ul>
+</li>
+</ul>
+</clause>
+
+<clause id="_caldav_scheduling" obligation="normative">
+<title>CalDav Scheduling</title>
+<p id="_01229f55-b064-366d-e444-0df8aff41b42">From the client perspective scheduling is very simple. In essence, a calendar is considered the scheduling calendar collection and events placed in that collection which can be considered meetings (they have attendees) are automatically sent to the attendees. As responses come back to the organizer the meeting in the calendar is automatically updated and new copies broadcast to the attendees.</p>
+
+<p id="_c95100df-c8ec-8c32-0a4b-6c8123923ecc">An inbox is defined to hold the incoming messages and these messages act as notifications to the client that something has changed.</p>
+
+<p id="_e5c41167-e5ac-4e3c-c9d0-9ace2c77c24a">The messages sent conform in all cases to the iTip specification — RFC5546.</p>
+
+<clause id="_scheduling_freebusy_queries" obligation="normative">
+<title>Scheduling Freebusy Queries</title>
+<p id="_b1a5741d-e948-a88a-1ebf-f690b69780c4">These are obtained through a <tt>POST</tt> to the targeted principals outbox. The response is an iTip representation of the principals Freebusy status wrapped up in an xml body which also contains status information.</p>
+
+<p id="_6d460448-5e86-35ad-48d8-1849c1faf02f">Note that this Freebusy request is NOT targeted at any specific resource but rather at the recipient. The server is free to use any information that is appropriate to build a response, including workday information, external resources and so on.</p>
+</clause>
+</clause>
+
+<clause id="_caldav_access_control" obligation="normative">
+<title>CalDAV Access Control</title>
+<p id="_4a3600ef-fc4b-f418-3156-e1104096e91d">Access control is based on WebDAV Acl and currently requires that clients manipulate access control lists (ACLs) to set desired levels of access. CalDAV has extended the access rights to include a significant number of scheduling rights.</p>
+</clause>
+
+<clause id="_caldav_synchronization" obligation="normative">
+<title>CalDAV synchronization</title>
+<p id="_e3aa8353-d96b-6a27-9e30-55013b61ff70">The support for synchronization capabilities is a work in progress. WebDAV relies on ETags which have proved inadequate. A ctag has been defined as a vendor extension, supported by most servers, which allows clients to determine that a collection has been changed. Work is in progress on further DAV extensions to help synchronization.</p>
+</clause>
+
+<clause id="_implications_of_other_protocols_for_calws" obligation="normative">
+<title>Implications of other protocols for CalWS</title>
+<clause id="_structure" obligation="normative">
+<title>Structure</title>
+<p id="_300478e8-b357-f453-f85d-7078633eaa27">The DAV like hierarchical structure would seem appropriate. It allows references to entities and collections through a path which uniquely identifies each node.</p>
+</clause>
+
+<clause id="_reports" obligation="normative">
+<title>Reports</title>
+<p id="_dd462af4-4763-3b5b-f703-c641db84acfa">The ability to limit data by ranges and by properties in vital. Interoperability might be enhanced by the definition of an abstract calendaring query language.</p>
+</clause>
+
+<clause id="_scheduling" obligation="normative">
+<title>Scheduling</title>
+<p id="_1a4e97dd-5335-6320-05f3-c8daa8dc2550">The CalDAV implicit scheduling approach has many benefits, in particular, simplicity.</p>
+</clause>
+
+<clause id="_synchronization" obligation="normative">
+<title>Synchronization</title>
+<p id="_9238e381-f8aa-1333-e091-52891beb8ce7">Synchronization of calendars, or at least a part of a calendar, is of particular significance. Synchronization methods need to limit the amount of data that needs to be transferred.</p>
+</clause>
+
+<clause id="_access_control" obligation="normative">
+<title>Access Control</title>
+<p id="_51549199-af3c-908e-c7d1-a7b7f012d823">The ACL approach to access control has proved to be a problem both in implementation and use. It is confusing to the end user and most user interfaces simply don’t support it. An approach such as intentional access control (e.g. “make my calendar readable by that group”) allows servers to implement the sharing in any way they wish without needing to reveal acls.</p>
+</clause>
+
+<clause id="_capabilities" obligation="normative">
+<title>Capabilities</title>
+<p id="_9940c94e-461a-7b19-12f9-afe4708fe39d">It would be appropriate to build in some form of capabilities report from the start. This allows either end of a conversation to indicate what they support.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_representing_calendar_data" obligation="normative">
+<title>Representing Calendar Data</title>
+<clause id="_icalendar_in_xml_xcal" obligation="normative">
+<title>iCalendar in XML (xCal)</title>
+<p id="_5f8aee2f-a36d-9f91-0c49-57d546d0cd8c">Assumption: Whenever calendar items are specified in CalWS, the iCalendar in XML (xCal) format will be used.</p>
+
+<p id="_15f580d9-7813-3c1f-881c-41b29a0e195d">xCal defines the representation of common calendar concepts such as dates, datetimes, durations, and single or recurring events.</p>
+</clause>
+
+<clause id="_extensions_to_xcal" obligation="normative">
+<title>Extensions to xCal</title>
+<p id="_a1aa91a3-0330-036b-6303-a312eb32f19c">iCalendar was originally formulated to deal with interpersonal scheduling and as a result does not define some concepts that are relevant to smart-grid scheduling scenarios.</p>
+
+<p id="_7bcfc606-7969-1bd2-4f99-debd5e811b47">Assumption: In cases where xCal does not define important smart grid scheduling concepts, an XML extension will be defined in a CalWS namespace and mapped to an x-property or x-param in iCalendar.</p>
+
+<clause id="_precision" obligation="normative">
+<title>Precision</title>
+<p id="_b533ce60-2f02-fa20-0f68-d250f46d0e0c">Precision is defined as the number of significant digits used to express date times or durations.</p>
+
+<p id="_5a0d7667-c9fa-4a51-1ff6-1dcdc6c69da1">Issue: The minimum precision required for smart grid datetimes must be milliseconds, while ICalendar currently only supports seconds.</p>
+
+<p id="_03d6987a-4f25-71f7-c76b-90a59bd69f52">There is no way to extend the iCalendar value type <tt>DATE-TIME</tt> without breaking compatibility.</p>
+
+<p id="_fc247299-19ba-d27a-7689-4e6d0af5646e">Proposed: Use a TimeFraction Perhaps a <tt>FLOAT</tt> value specified in xCal for properties with date time or duration values:</p>
+
+<p id="_e5c739a3-9e7a-c6d5-8401-b41b98764d00"><tt>&lt;x-TimeFraction&gt;0.1245&lt;/x-TimeFraction&gt;</tt></p>
+</clause>
+
+<clause id="_uncertainty" obligation="normative">
+<title>Uncertainty</title>
+<p id="_77c7c64c-070f-f83f-2195-162240da57ef">Uncertainty is defined as a “plus or minus” value. Example: At such-and-such a time for so long, beginning (or ending) within “x” time units of the specified start (or end) time.</p>
+
+<p id="_87ec502f-7f95-64f0-f55c-8f64d4f96937">Issue: ICalendar only deals with exact times. Uncertainties can be applied to a start time or end time.</p>
+
+<p id="_ee49edea-681e-59aa-e793-f59f59706350">Proposed: Use a <tt>DURATION</tt> value specified in xCal for in a new Uncertainty x-property with date time values:</p>
+
+<p id="_0a3e1f1f-7c55-b64b-9a3b-6b0ebc1f4504"><tt>&lt;x-StartTimeUncertainty&gt;P3H20M&lt;/x-StartTimeUncertainty&gt;</tt></p>
+
+<p id="_b3670780-74f6-f5b7-ecdf-e444fab35163">Uncertainty needs to be expressed with a precision of milliseconds.</p>
+</clause>
+
+<clause id="_calendar" obligation="normative">
+<title>Calendar</title>
+<p id="_7013b3c8-8fa7-2f4d-bd3c-f82511779516">A calendar is defined as a set of related events with a common identifier. ICalendar defines events but it doesn’t attempt to define calendars. For example, it doesn’t define a name for the calendar or an id that be used to distinguish one calendar from another.</p>
+
+<p id="_4259dd3d-c376-8e32-099f-aee846db207e">Isn’t there a proposal to add a calendar identifier to iCalendar?</p>
+</clause>
+
+<clause id="_sequence" obligation="normative">
+<title>Sequence</title>
+<p id="_53a0164c-b42a-a9f5-4d7c-4e5490d5183c">An ordered set of durations with specified offsets without a definite start time. Example: Profile of power usage in 30 minute intervals.</p>
+
+<p id="_1ade19dc-da27-46d9-fae7-2e1c4c9cc9fb">Proposed: Use of a set of related <tt>VTODO</tt>s to specify a sequence of durations. Introduce a new reltype param to indicate the relation of the  <tt>VTODO</tt>s to each other.</p>
+</clause>
+
+<clause id="_response_time" obligation="normative">
+<title>Response time</title>
+<p id="_a6090a91-6afa-7af6-51b8-944ec4aa3a76">An action must be taken within some time defined by an event. Example: making or responding to an offer by some deadline. Example: delivering grid capacity within some duration after an agreed-upon start time.</p>
+</clause>
+
+<clause id="_constrained_event" obligation="normative">
+<title>Constrained event</title>
+<p id="_321485ef-d507-2432-0c94-e0adca5edcaa">Constrained event is defined as an event that occurs within some time range. Example: 20 minutes of power supplied sometime between midnight and 8 a.m.</p>
+</clause>
+</clause>
+
+<clause id="_scheduling_protocol_and_methods" obligation="normative">
+<title>Scheduling Protocol and Methods</title>
+<p id="_9ad616ac-0c9a-003e-d669-50fec36621e7">Assumption: If smart grid scenarios require scheduling, iTIP will be taken as the starting point for CalWS scheduling methods.</p>
+
+<p id="_ca4dd3b6-8668-e67b-b1c4-11f2d8831dbb">Question: Do smart grid use cases between consumers and suppliers really require scheduling methods, or just flexible descriptions of time?</p>
+
+<p id="_ca515b44-f097-6feb-ffea-05db8a7c6fc9">Several iTIP methods are involved in interpersonal scheduling — <tt>REQUEST</tt>, <tt>REPLY</tt>, <tt>COUNTER</tt>, <tt>CANCEL</tt>. These methods don’t seem suited to the smart grid use cases that would require</p>
+
+<ul id="_36d05086-07bc-22fb-6e94-6ce4b7f26157"><li><p id="_7a110b42-5bc2-776d-110d-0609498b672c">A set of events to be scheduled on an all-or-nothing basis.</p>
+</li>
+<li><p id="_42c0237d-70fb-e830-f688-00213c4444e3">One of several alternative recurring patterns to be chosen</p>
+</li>
+<li><p id="_59d8fe66-823b-a161-649c-07fa288c26e6">A constrained event of definite or variable duration take place at some unspecified time</p>
+</li>
+<li><p id="_f33e21e5-c5f8-7133-0379-d100978294d2">One party to propose an event to another party and require that they respond within a particular time window if they agree.</p>
+</li>
+<li><p id="_159bf3b2-9c18-10ac-bdc2-e6cb8b6f825c">Require another party to “confirm” their previous acceptance by some time, otherwise the original acceptance is not valid.</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_calws_requestsresponses" obligation="normative">
+<title>CalWS Requests/Responses</title>
+<clause id="_calling_pattern" obligation="normative">
+<title>Calling Pattern</title>
+<p id="_ef3abd46-6ce3-a3c6-d50d-bc43d11fe811">The general calling pattern for CalWS is</p>
+
+<ul id="_98a33c40-861d-a7dc-122b-3cc603171172"><li><p id="_cdbeeb10-1425-915a-720d-2dac7bfd6dfb">A client generates a CalWS request with a single CalWS method in it.</p>
+</li>
+<li><p id="_9aa35bf7-1791-2546-936f-a2869baf803b">The CalWS service generates a response.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_calws_request" obligation="normative">
+<title>CalWS Request</title>
+<clause id="_request_body" obligation="normative">
+<title>Request Body</title>
+<p id="_caddac4f-58c6-2c8e-3313-2f5961bfe53a">The body of the request contains the particular method (see <xref target="sec-methods"/> below) being called along with necessary data. In this example, the GetItem method is used:</p>
+
+<sourcecode id="_c058fcc7-3eb1-0681-0f53-9dcdd44d0f20" unnumbered="true">&lt;Body&gt;
+  &lt;GetItems&gt;
+    &lt;!--GetItems info&gt;
+  &lt;/GetItems&gt;
+&lt;/Body&gt;</sourcecode>
+
+</clause>
+
+<clause id="_calws_response" obligation="normative">
+<title>CalWS Response</title>
+<p id="_d23b1eb0-05c4-c44f-e27b-7ed4b5fe4765">The body of the response contains response data for each method called in the request. In this example, the GetItem method is used again. Note that each request method has “Response” appended to the method name for its corresponding response element:</p>
+
+<sourcecode id="_e83d259f-01ab-4cbd-689d-1bfe1adc8096" unnumbered="true">&lt;Body&gt;
+  &lt;GetItemResponse&gt;
+    &lt;!--GetItemResponse info&gt;
+  &lt;/GetItemResponse&gt;
+&lt;Body&gt;</sourcecode>
+
+</clause>
+</clause>
+</clause>
+
+<clause id="_authentication_and_authorization" obligation="normative">
+<title>Authentication and Authorization</title>
+<p id="_52471cd0-c5a2-ce9f-0982-46e40e39580a">Details surrounding authentication of CalWS requests and authorization of access to particular calendar resources is outside the scope of this document.</p>
+</clause>
+
+<clause id="sec-methods" obligation="normative">
+<title>Basic Methods</title>
+<clause id="_createcalendar" obligation="normative">
+<title>CreateCalendar</title>
+<p id="_336f5f22-e756-a8ab-3504-baeb33d7b544">Description: Creates a calendar with a unique id and optional display name and description.</p>
+
+<clause id="_createcalendar_request" obligation="normative">
+<title>CreateCalendar Request</title>
+<example id="_02403534-d4ec-59df-3de9-376b0445442c"><sourcecode id="_07e8cff4-aae8-cf53-72ef-926d40861a02" unnumbered="true">&lt;CreateCalendar&gt;
+  &lt;Calendar&gt;
+    &lt;DisplayName&gt;Utility Rate Schedule&lt;/DisplayName&gt;
+    &lt;Description&gt;Rate schedule for May 17, 2010&lt;/Description&gt;
+  &lt;/Calendar&gt;
+&lt;/CreateCalendar&gt;</sourcecode> </example>
+</clause>
+
+<clause id="_createcalendar_response" obligation="normative">
+<title>CreateCalendar Response</title>
+<example id="_c90e567a-ecc0-5195-78e7-6048b5baf02c"><sourcecode id="_dd141afc-2e74-a799-1059-4768f277b95c" unnumbered="true">&lt;CreateCalendarResponse&gt;
+  &lt;Calendar Id="12345"&gt;
+  &lt;/Calendar&gt;
+&lt;/CreateCalendarResponse&gt;</sourcecode> </example>
+</clause>
+</clause>
+
+<clause id="_deletecalendar" obligation="normative">
+<title>DeleteCalendar</title>
+<p id="_4a6eb4df-6823-f3f4-a782-db5a2b409587">Description: Deletes a calendar specified by a unique id.</p>
+</clause>
+
+<clause id="_updatecalendar" obligation="normative">
+<title>UpdateCalendar</title>
+<p id="_d93b3792-11ac-ef28-4909-fe03a0ae2199">Description: Updates display name or description for a calendar specified by a unique id.</p>
+</clause>
+
+<clause id="_createitem" obligation="normative">
+<title>CreateItem</title>
+<p id="_b9e200b3-fb6d-a2a5-0e6a-82525a5e1ac6">Description: Creates a calendar item on a specific calendar and using unique id specified for the calendar item.</p>
+
+<clause id="_createitem_request" obligation="normative">
+<title>CreateItem Request</title>
+<example id="_55cd6e90-b68f-997a-737c-dc937464d920"><sourcecode id="_0444f829-0157-13bb-ca17-8da70cabbb38" unnumbered="true">&lt;CreateItem&gt;
+  &lt;Calendar Id="12345"/&gt;
+  &lt;Items&gt;
+    &lt;!--Items represented as ICalendar in XML&gt;
+    &lt;icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+    &lt;vcalendar&gt;
+    &lt;properties&gt;
+      &lt;version&gt;&lt;text&gt;2.0&lt;/text&gt;&lt;/version&gt;
+    &lt;/properties&gt;
+    &lt;components&gt;
+      &lt;vevent&gt;
+      &lt;properties&gt;
+        &lt;dtstart&gt;20100517T080000Z&lt;/dtstart&gt;
+        &lt;dtend&gt;20100517T170000Z&lt;/dtend&gt;
+        &lt;summary&gt;
+          &lt;text&gt;Rate info May 17-21, 2010&lt;/text&gt;
+        &lt;/summary&gt;
+        &lt;uid&gt;
+          &lt;text&gt;4088E990AD89CB3DBB484909&lt;/text&gt;
+        &lt;/uid&gt;
+      &lt;/properties&gt;
+      &lt;/vevent&gt;
+    &lt;/components&gt;
+    &lt;/vcalendar&gt;
+    &lt;/icalendar&gt;
+  &lt;/Items&gt;
+&lt;/CreateItem&gt;</sourcecode> </example>
+</clause>
+
+<clause id="_createitem_response" obligation="normative">
+<title>CreateItem Response</title>
+<example id="_c3f08ec0-cb2f-d373-7a66-c3d1434bae84"><sourcecode id="_25b5a35d-2ddb-80e5-f20b-b51b45b23bcf" unnumbered="true">&lt;CreateItemResponse&gt;
+&lt;/CreateItemResponse&gt;</sourcecode> </example>
+</clause>
+</clause>
+
+<clause id="_getitems" obligation="normative">
+<title>GetItems</title>
+<p id="_b985939d-5c9d-8dcd-399a-a382fbfd3813">Description: Gets properties for one or more calendar items using a unique id specified for each calendar item.</p>
+
+<p id="_746a7e38-9e79-2a65-5b9e-0f3a4fd85519">A unique id must be specified for each calendar item to be retrieved.</p>
+
+<clause id="_getitems_request" obligation="normative">
+<title>GetItems Request</title>
+<example id="_8e85d7a0-eddb-d453-9ac7-edaeef755a39"><sourcecode id="_cd7a353f-0bf5-080a-79c2-7e92a364a060" unnumbered="true">&lt;GetItem&gt;
+  &lt;ItemIds&gt;
+    &lt;ItemId Id="56789"/&gt;
+    &lt;ItemId Id="56790"/&gt;
+  &lt;/ItemIds&gt;
+&lt;/GetItem&gt;</sourcecode> </example>
+</clause>
+
+<clause id="_getitems_response" obligation="normative">
+<title>GetItems Response</title>
+<review id="_7bafdb53-6d91-3c8d-3ffc-ff1f50c5ef0e" reviewer="(Unknown)" date="2025-01-25T00:00:00Z" type="todo"><p id="_c5c48f67-3a31-14ac-c44c-e1aaf2cedf52">Example</p>
+</review>
+<example id="_b7fb1601-21a7-beb8-6d32-10fe3e2b7a9a"><sourcecode id="_dc7e41ff-d16f-3673-491f-5eced9771e4e" unnumbered="true">&lt;GetItemsResponse&gt;
+&lt;/GetItemsResponse&gt;</sourcecode> </example>
+</clause>
+</clause>
+
+<clause id="_getitemsinrange" obligation="normative">
+<title>GetItemsInRange</title>
+<p id="_6e49dfb3-9cdb-1555-4e27-473db4d83bfa">Description: Gets calendar items from a specific calendar that fall within a specific time range. Results will include items where part of the event lies outside the time range.</p>
+
+<clause id="_getitemsinrange_request" obligation="normative">
+<title>GetItemsInRange Request</title>
+<example id="_fce6acf7-d7b2-359c-3170-be47c69bafd7"><sourcecode id="_bf496521-3f1a-ed18-ed80-a432b93baf2f" unnumbered="true">&lt;GetItemsInRange&gt;
+  &lt;Calendar Id="12345"/&gt;
+  &lt;Range&gt;
+    &lt;!--Range (May 17, 2010 8a-5p) represented as ICalendar in XML&gt;
+    &lt;icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0"&gt;
+    &lt;vcalendar&gt;
+    &lt;properties&gt;
+      &lt;version&gt;&lt;text&gt;2.0&lt;/text&gt;&lt;/version&gt;
+    &lt;/properties&gt;
+    &lt;components&gt;
+      &lt;vevent&gt;
+      &lt;properties&gt;
+        &lt;dtstart&gt;20100517T080000Z&lt;/dtstart&gt;
+        &lt;dtend&gt;20100517T170000Z&lt;/dtend&gt;
+      &lt;/properties&gt;
+      &lt;/vevent&gt;
+      &lt;/components&gt;
+      &lt;/vcalendar&gt;
+      &lt;/icalendar&gt;
+  &lt;/Range&gt;
+&lt;/GetItemsInRange&gt;</sourcecode> </example>
+</clause>
+
+<clause id="_getitemsinrange_response" obligation="normative">
+<title>GetItemsInRange Response</title>
+<example id="_3fdda7d8-6129-3809-eac4-e0fa11b1205f"><sourcecode id="_eef7927e-3f45-3099-bebe-bc8ccf1ab25e" unnumbered="true">&lt;GetItemsInRangeResponse&gt;
+  &lt;Calendar Id="12345"/&gt;
+  &lt;Items&gt;
+    &lt;!--Items in range represented as ICalendar in XML&gt;
+  &lt;/Items&gt;
+&lt;/GetItemsInRangeResponse&gt;</sourcecode> </example>
+</clause>
+</clause>
+
+<clause id="_deleteitem" obligation="normative">
+<title>DeleteItem</title>
+<p id="_4d5c5a1f-a62d-db9b-97b6-23065f3f1a09">Description: Deletes calendar items (identified by unique ids) from a specific calendar.</p>
+</clause>
+
+<clause id="_updateitem" obligation="normative">
+<title>UpdateItem</title>
+<p id="_93737440-6902-8a7f-997c-26884c877a05">Description: Updates calendar items (identified by unique ids) on a specific calendar.</p>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="xcal" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">xCal: The XML Format for iCalendar</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc6321</uri>
+  <docidentifier type="IETF" primary="true">RFC 6321</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6321</docidentifier>
+  <docnumber>RFC6321</docnumber>
+  <date type="published">
+    <on>2011-08</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Daboo</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">M. Douglass</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Lees</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_11f4d603-42dc-3a48-29c6-8a4f2d1958b5">This specification defines “xCal”, an XML format for iCalendar data. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>6321</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>extensible markup language</keyword>
+</bibitem><bibitem id="oasis">
+  <formattedref format="application/x-isodoc+xml">OASIS Working Draft — WS Calendar 1.0, <link target="http://www.oasis-open.org/apps/org/workgroup/ws-calendar/download.php/37135/WS-Calendar-1%200-spec-wd-02.pdf"/></formattedref>
+  <docidentifier type="metanorma">[2]</docidentifier>
+</bibitem><bibitem id="eis">
+  <formattedref format="application/x-isodoc+xml">EIS Alliance Customer Use Cases, <link target="https://www.eisalliance.org/forums/forumdisplay.php?7-EIS-Alliance-Public-Review-Use-Case-Version-2"/></formattedref>
+  <docidentifier type="metanorma">[3]</docidentifier>
+</bibitem>
+
+
+
+</references></bibliography>
+</csd-standard>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd-standard xmlns="https://www.metanorma.org/ns/csd" type="semantic" version="2.5.11" schema-version="v1.4.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Mobile Recurrence Interoperability Recommendations</title>
+<docidentifier primary="true" type="CalConnect">CC/R 0805:2008</docidentifier><docnumber>0805</docnumber><date type="published"><on>2008-07-29</on></date><contributor><role type="author"/><organization>
+<name>CalConnect</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Chris Dudding</completename></name>
+<affiliation><organization>
+<name>Symbian Ltd</name>
+</organization></affiliation></person></contributor><contributor><role type="editor"/><person>
+<name><completename>Mark Paterson</completename></name>
+<affiliation><organization>
+<name>Oracle Corporation</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>CalConnect</name>
+</organization></contributor><edition>1</edition><version><revision-date>2008-07-29</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2008</from><owner><organization>
+<name>CalConnect</name>
+</organization></owner></copyright><ext><doctype abbreviation="R">report</doctype><flavor>cc</flavor><editorialgroup><committee>MOBILE</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_907f9be5-eb56-eaba-9be2-d2f72bcb5dcb" obligation="normative">
+<p id="_97a3febc-f821-69e7-8ed2-9465d2853728">© 2008 The Calendaring and Scheduling Consortium, Inc.</p>
+</clause>
+</copyright-statement>
+
+<legal-statement>
+
+<clause id="_25111092-bb52-aa17-a74e-67a1728c9337" obligation="normative">
+<p id="_1b177cd1-dfac-efbd-cd50-3d98e7fda3e1">All rights reserved. Unless otherwise specified, no part of this         publication may be reproduced or utilized otherwise in any form or by any         means, electronic or mechanical, including photocopying, or posting on the         internet or an intranet, without prior written permission. Permission can         be requested from the address below.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_aa12568f-5e3d-2249-1f57-bc99369b9464" obligation="normative">
+<p id="boilerplate-name">The Calendaring and Scheduling Consortium, Inc.</p>
+
+<p id="boilerplate-address">4390 Chaffin Lane<br/> McKinleyville <br/> California 95519 <br/> United States of America <br/> <br/> <link target="mailto:copyright@calconnect.org"/><br/> <link target="https://www.calconnect.org">www.calconnect.org</link></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><foreword id="_1d540474-e714-7359-1d5d-f19ce392fc3c" obligation="informative">
+<title>Foreword</title>
+<p id="_8d780d65-a2a1-435e-dc72-f64cc248be93">This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public) Documents as located at</p>
+
+<p id="_4f0eb495-2a9f-8f78-df1a-4ee17888a77f"><link target="http://www.calconnect.org/documents/disclaimerpublic.pdf"/>.</p>
+
+<p id="_e2aaf0cb-7b62-9262-531c-f964124d51cf">This document describes interoperability problems observed in the implementation of recurring events in mobile devices and provides recommendations for how these issues can be avoided.</p>
+</foreword></preface><sections>
+<clause id="_executive_summary" obligation="normative">
+<title>Executive Summary</title>
+<p id="_bd88e2aa-676d-c6e4-404a-f0f6a9afa2b5">The ability to share calendar information among different applications and across network boundaries has become an important business need, as a growing number of organizations look for ways to leverage their investments in collaborative applications.</p>
+
+<p id="_bd7acf98-62f0-a1d9-4ef3-03be084de7b5">The Mobile Technical Committee (TC-MOBILE) of the Calendaring  Scheduling Consortium published the results of a mobile calendaring questionnaire in July 2006. Of concern were answers related to calendar synchronization. Synchronization was one of the main things users did, but it was also singled out as one of the main things that did not work well yet. This can be attributed, in a large part, to issues related to data object interoperability.</p>
+
+<p id="_35ae2e12-bd01-c8dc-629f-a056cc94564c">One of the main issues is that iCalendar has not been widely adopted within certain application spaces. Although adopted by all major time management solution vendors, there has been reluctance within the mobile industry to migrate from vCalendar (iCalendar’s predecessor) based solutions and to fully embrace iCalendar. To help persuade mobile vendors the Mobile Technical Committee (TC-MOBILE) of the Calendaring  Scheduling Consortium recently published a white paper titled: The Benefits of iCalendar for the Mobile Industry  <eref type="inline" bibitemid="mobileical" citeas="CC/Adv 0611:2006"/>.</p>
+
+<p id="_208c396b-b7e6-2849-a757-142c8113eba4">Even with iCalendar based solutions however significant issues often exist with recurring events. The Recurrence Technical Committee (TC-RECURR) of the Calendaring  Scheduling Consortium published a full set of problems and recommendations: iCalendar RECURRENCE PROBLEMS AND RECOMMENDATIONS  <eref type="inline" bibitemid="recurissues" citeas="CC/R 0604:2006"/>.</p>
+
+<p id="_01370e85-0b6c-00a3-1c9b-01795f620390">The Mobile Calendar Interoperability Test Suite <eref type="inline" bibitemid="testsuite" citeas="CC/S 0706:2008"/> describes a test suite to assess a mobile device’s capability to synchronize calendar data with a calendar store. The repeating events section of this test suite often reveals the interoperability issues regarding these types of events.</p>
+
+<p id="_ae00f6d3-3583-7b18-8b9e-d23da6e60600">This white paper further explores issues related to recurring events that are specific to the mobile space and recommends possible solutions for both client and server vendors.</p>
+</clause>
+
+<clause id="_problems_with_the_implementation_of_recurrences_on_mobile_devices" obligation="normative">
+<title>Problems with the implementation of Recurrences on Mobile Devices</title>
+<p id="_69515762-9070-98b9-6c79-15918395141d">Although mobile calendar synchronization solutions have matured over the past years, providing for the most part reliable mobile-side representations of user’s calendar information, severe problems can exist with synchronization of repeating events. Often the calendar on the device does not accurately reflect irregular or changing instances of repeating events on the server. This basic mismatch can then turn into corruption of the server data if these irregularities are sent back to the server for example in the case where an OMA Data Synchronization slow sync might be triggered.</p>
+
+<p id="_9f417bc9-9869-e711-b04b-a2fd9f34bd5f">There are several causes of mismatched device and server recurring events that are directly related to the way in which devices support  <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/> (in many cases  <eref type="inline" bibitemid="vcal" citeas="vCal"/>).</p>
+
+<ul id="_3b09599c-3cd4-e74a-ce72-8499b4740cce"><li><p id="_8ddd4c76-0c2a-1b4c-840b-5748a80fa0a0">Some devices do not support either sending or receiving <tt>RDATE</tt> or <tt>EXDATE</tt> although they support <tt>RRULE</tt>.</p>
+</li>
+<li><p id="_c8e6a16f-9aa3-413d-8336-c0cacbb4a9d3">Some devices support one or the other.</p>
+</li>
+<li><p id="_46830b91-777d-ece2-24d0-8b0bc2dd214c">Some devices don’t support any of the three.</p>
+</li>
+</ul>
+
+<p id="_a9bb8dbb-3b62-e8c4-3d45-148db9b5f9ff">For implementers that insist on continuing to use <eref type="inline" bibitemid="vcal" citeas="vCal"/> rather then <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/> there is the issue that  <eref type="inline" bibitemid="vcal" citeas="vCal"/> does not support the notion of making any changes to an instance of a recurring event other than rescheduling the start time and date; yet many events also change their  <tt>LOCATION</tt>. The use of the <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/> <tt>RECURRENCE-ID</tt> property would easily solve this issue but implementers need to be willing to move to  <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/>.</p>
+
+<p id="_c926765e-bc13-f481-3e81-d0d35ee9fb07">Even if an implementation supports <tt>RRULE</tt> the actual set of rules that the implementation can handle is normally far less then what is defined in  <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/>.</p>
+
+<p id="_7205456b-9df7-1c30-cd0a-59a5477de304">One large underlying problem surrounds the misinterpretation of the <tt>OPTIONAL</tt> nature of some properties in <eref type="inline" bibitemid="vcal" citeas="vCal"/> and <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/>. This has lead to the belief that supporting the full set of properties is not required, resulting in poor interoperability between products that support different sub-sets of properties.</p>
+
+<p id="_9a38354a-7780-1121-8c08-2510faa263c5">In order to deal with these interoperability problems there needs to be a proper understanding between client and server implementers on what should be supported. The next section defines three levels of support. The two sections following it provide recommendations on how both device implementations and server implementations should deal with each level.</p>
+</clause>
+
+<clause id="_recurrence_support_levels_for_mobile_devices" obligation="normative">
+<title>Recurrence Support Levels for Mobile Devices</title>
+<clause id="_level_0_device_provides_no_support_for_repeating_events" obligation="normative">
+<title>Level 0: Device provides no support for repeating events</title>
+<p id="_3f3e38a3-33c6-aa04-64be-c9f653761ccd">The easiest level of support for a mobile device to provide is not to support repeating events at all. Although this restricts the usability of the mobile calendar, clients that do not support repeating events are straightforward for server implementations to react to accordingly.</p>
+</clause>
+
+<clause id="_level_1_device_can_handle_recurrence_rules_i_e_supports_rrule" obligation="normative">
+<title>Level 1: Device can handle recurrence rules (i.e. supports <tt>RRULE</tt>)</title>
+<p id="_e7554ce6-a58c-0e5e-b438-3268be2d981c">If a mobile device allows a user to create a repeating event then it should support the following recurrence patterns:</p>
+
+<ol id="_5a6c0aad-ccdd-3f22-c3ff-441cf644c502" type="arabic"><li><p id="_30f3f735-e46b-c446-839d-b64ee95e1980">Daily, Weekly, Monthly by date, Yearly</p>
+</li>
+<li><p id="_a8cbb664-4039-4dd5-fd53-536ab645a039">Plus: Monthly by day</p>
+</li>
+<li><p id="_fedc2d85-ffc8-0ee6-a28b-63597cde5479">Plus: Weekdays</p>
+</li>
+<li><p id="_1a7f8cab-cba7-3211-51e0-cefa2f6dbb8c">Plus: Repeating every n weeks</p>
+</li>
+</ol>
+
+<p id="_8586eefe-718c-9dd0-0c52-748c08bac12c">These repeating events should be sent to the server using <tt>RRULE</tt> accordingly and the client should be able to accept these same `RRULE`s coming from the server.</p>
+</clause>
+
+<clause id="_level_2_device_can_handle_recurrence_rules_with_exceptions_and_extra_dates_i_e_supports_rrule_rdate_exdate_and_recurrence_id" obligation="normative">
+<title>Level 2: Device can handle recurrence rules with exceptions and extra dates (i.e. supports <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXDATE</tt> and <tt>RECURRENCE-ID</tt>)</title>
+<p id="_6a97ee33-e006-f0ad-fa6a-891b52196290">If a mobile device supports this level of support then users should be able to create repeating events as defined as part of Level 1 and in addition be able add exceptions and extra dates.</p>
+
+<p id="_25972043-640f-8fa0-14b3-9591ed167df0">These repeating events should be sent to the server using an appropriate combination of  <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXDATE</tt> and <tt>RECURRENCE-ID</tt> properties and the client should be able to accept these same combinations coming from the server.</p>
+</clause>
+</clause>
+
+<clause id="_recommendations_for_synchronization_clients_mobile_devices" obligation="normative">
+<title>Recommendations for Synchronization Clients (Mobile Devices)</title>
+<recommendation id="_fdfcb4b7-c8a8-d970-f664-923b0c9deb33" model="default"> <description><p id="_a79b8499-b222-e244-0feb-18c08ec5fe96">The starting point for solving interoperability issues is for all implementations to be based on  <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/>.</p></description>
+</recommendation>
+
+<recommendation id="_e48278e8-86bc-7d07-e8b9-1f7fc858be0c" model="default"> <description><p id="_55b07e18-4f7f-5aef-586d-c7a5344ef983">The level of recurrence support supported by your implementation should comply with one of the 3 levels defined in this paper</p></description>
+</recommendation>
+
+<recommendation id="_856f3ad5-8b91-af1a-f55e-e02fe9292f9c" model="default"> <description><p id="_46de7cbf-891c-7b32-3f57-110eb53fc107">The client’s calendar store should have Level 2 recurrence support to achieve the best interoperability.</p><p id="_6c3c832b-525c-e1d8-bf26-f9377b939d61">Level 0: OMA DS based solutions should not indicate support for any <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/> related recurrence properties within their device information object.</p><p id="_9731b78a-3ccb-a318-497f-edb65fb5dbf3">Level 1: OMA DS based solutions should indicate support for the <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/> <tt>RRULE</tt> property within their device information object and by doing so are indicating they support all of the recurrence patterns defined as required for this level of support.</p><p id="_8ccddfde-f5f7-32a3-cf57-6dc861b662fe">Level 2: OMA DS based solutions should indicate support for the <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/> <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXDATE</tt> and <tt>RECURRENCE-ID</tt> properties within their device information object and by doing so are indicating they support all of the recurrence patterns defined as required for this level of support as well as support for modified and delete exceptions as well as support for extra dates.</p></description>
+</recommendation>
+
+<p id="_53186d7f-cad5-2074-133b-782c76beff4a">By adhering to these recommendations server implementations can then reliably react to these 3 levels of support as defined in the following section. It is strongly encouraged that support for recurrence level 2 is provided in the client’s calendar store. This will ensure that the complex recurrences can received and displayed, even if the mobile user interface restricts the creation and modification of events to level 1 recurrences.</p>
+</clause>
+
+<clause id="_recommendations_for_synchronization_servers" obligation="normative">
+<title>Recommendations for Synchronization Servers</title>
+<recommendation id="_17dce4c3-f0ac-25cf-250c-83eb22b8c1f6" model="default"> <description><p id="_c40523b5-2115-d21a-d2d3-aec12b4aa100">The starting point for solving interoperability issues is for all implementations to be based on  <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/>.</p></description>
+</recommendation>
+
+<recommendation id="_660274ac-d9a3-f589-af26-3fee378504f5" model="default"> <description><p id="_43cf8d1f-5459-ad5d-e9f9-dc25f38fca4b">Your implementation must be able to react to the level of recurrence support reported by the client implementation connecting to your server as follows:</p><p id="_b377ae92-1e2b-ec2e-1641-b85c8f8d2af2">Level 0: All repeating events should be expanded and single instance events should be sent to the mobile device. This should not in any way affect the fact that server side the event is considered recurring. The mobile limitation should not degrade the level of support provided by the Calendar store.</p><p id="_01bbb1d6-ad6e-8c1f-1e15-4560a5f33838">A full set of test cases designed to assess a server’s ability to deal with a mobile device claiming level 0 support can be found in  <eref type="inline" bibitemid="testsuite" citeas="CC/S 0706:2008"/>.</p><p id="_ecb3096b-873c-5ac9-21de-36511c798696">Level 1: The server should be able to support receiving the <eref type="inline" bibitemid="ical" citeas="IETF RFC 2445"/> <tt>RRULE</tt> property from device implementations. Repeating events created on the server, which adheres to the patterns defined as required for level 1 support, should be sent to the device as an  <tt>RRULE</tt>. Any repeating event that is created with a pattern more advanced then those defined for level 1 support however should be expanded and single instance events should be sent to the mobile device (as is defined for level 0 support). Finally events that get edited on the server which were sent to the device using an  <tt>RRULE</tt> which now contain any form of exception or extra date should result in a delete being sent to the device to remove the repeating event and the newly edited event on the server should be expanded and single instance events should be sent to the mobile device (as is defined for level 0 support).</p><p id="_ddf8654d-dd06-572e-688e-f4826d6b5578">A full set of test cases designed to assess a server’s ability to deal with a mobile device claiming level 1 support can be found in  <eref type="inline" bibitemid="testsuite" citeas="CC/S 0706:2008"/>.</p><p id="_f1e5f593-0ce4-16b6-1833-89464c6dcd4e">Level 2: Support should be as defined for Level 1 except that if a user edits a repeating event on the device the server must be able to accept the appropriate combination of  <tt>RRULE</tt>, <tt>RDATE</tt>, <tt>EXDATE</tt> and <tt>RECURRENCE-ID</tt> that will result and if such an edit is done server side it should send the device the appropriate combination (rather than a delete and expanding the edited meeting as defined for level 1).</p><p id="_ef55ee35-4795-37d3-3ec6-0689c5d887c5">The server should not expand repeating events to single instance (non-repeating) events. The  <tt>RDATE</tt> property can be used represent advanced recurrence patterns beyond what is defined in level 1 support. This will ensure the instances are shown as a single recurrence set on the device.</p><p id="_4ada2678-bce6-aa3e-5bf6-29b388deb384">A full set of test cases designed to assess a server’s ability to deal with a mobile device claiming level 2 recurrence support can be found in <eref type="inline" bibitemid="testsuite" citeas="CC/S 0706:2008"/>.</p></description>
+</recommendation>
+</clause>
+
+<clause id="_conclusion" obligation="normative">
+<title>Conclusion</title>
+<p id="_60310f06-ec7e-40a2-4c45-2bc2f36d0d31">Significant interoperability issues often exist with recurring events. This is damaging user confidence in mobile calendar synchronization solutions. The support levels defined in this paper and the recommendations for both client and server implementations, if adhered to, should go a long way to helping address these interoperability issues.</p>
+
+<p id="_debf443e-1aaa-8f7d-5a60-0f745894cc89">By reacting to the levels of support per these recommendations server implementations can ensure that the user always sees an accurate representation of repeating events on their mobile device. The fact that an event is part of a recurrence may not make it to the mobile device in some cases but users will always have an accurate representation of their day.</p>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="mobileical" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">The Benefits of iCalendar for the Mobile Industry V1.0 (CD 0611)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">The Benefits of iCalendar for the Mobile Industry V1.0 (CD 0611)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0611%20The%20Benefits%20of%20iCalendar%20for%20the%20Mobile%20Industry%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/Adv 0611:2006</docidentifier>
+  <version>
+    <revision-date>2006-11-27</revision-date>
+  </version>
+  <abstract format="text/plain">This document, prepared by the Mobile Technical Committee, discusses the benefits and value of converting to the iCalendar specification from its early predecessor, vCalendar, still widely in use in the mobile and travel industries. The document draws upon results from the Mobile Calendaring Questionnaires conducted earlier this year by TC Mobile; see Mobile Calendaring Questionnaire V2 Results: CD 0609.</abstract>
+</bibitem><bibitem id="recurissues" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">iCalendar Recurrence Problems and Recommendations V1.0 (CD 0604)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">iCalendar Recurrence Problems and Recommendations V1.0 (CD 0604)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0604%20iCalendar%20Recurrence%20Problems%20and%20Recommendations%20V1.0.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/R 0604:2006</docidentifier>
+  <version>
+    <revision-date>2006-03-16</revision-date>
+  </version>
+  <abstract format="text/plain">This document contains information about recurrence implementation issues and recommendations on how to resolve these issues. We first explain what recurrences are, justify the need for recurrences, identify recurrence implementation problems and ambiguities, and then offer some guidelines and recommendations to solve these issues.</abstract>
+</bibitem><bibitem id="testsuite" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Mobile Calendar Interoperability Test Suite V1.1 (CD 0706)</title>
+
+  
+<title type="main" format="text/plain" language="en" script="Latn">Mobile Calendar Interoperability Test Suite V1.1 (CD 0706)</title>
+
+  <uri type="pdf">https://standards.calconnect.org/pubdocs/CD0706%20Mobile%20Calendar%20Interoperability%20Test%20Suite%20V1.1.pdf</uri>
+  <docidentifier type="CC" primary="true">CC/S 0706:2008</docidentifier>
+  <version>
+    <revision-date>2008-08-24</revision-date>
+  </version>
+</bibitem><bibitem id="ical" type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-25</fetched>
+  
+<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2445</uri>
+  <docidentifier type="IETF" primary="true">RFC 2445</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2445</docidentifier>
+  <docnumber>RFC2445</docnumber>
+  <date type="published">
+    <on>1998-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">F. Dawson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">D. Stenerson</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_a3c1bae1-6a92-fc4d-7b5c-714774ed7a93">This memo has been defined to provide the definition of a common format for openly exchanging calendaring and scheduling information across the Internet. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC5545</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2445</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>ICALENDAR</keyword>
+  <keyword>interoperable</keyword>
+  <keyword>mime</keyword>
+  <keyword>multipurpose internet mail extensions</keyword>
+</bibitem><bibitem id="vcal">
+  <formattedref format="application/x-isodoc+xml">“The Electronic Calendaring and Scheduling Exchange Format”, Internet Mail Consortium, <link target="http://www.imc.org/pdi/vcal-10.txt"/></formattedref>
+  <docidentifier>vCal</docidentifier>
+  
+</bibitem>
+
+
+
+
+
+</references></bibliography>
+</csd-standard>
